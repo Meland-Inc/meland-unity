@@ -11,6 +11,7 @@ meland client main project make by unity
 --- 
 ### develop
 #### environment
+- git use LFS :https://git-lfs.github.com/
 - unity 2021.3.0f1c1
 - vscode
   - extension: 

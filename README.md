@@ -21,4 +21,4 @@ meland client main project make by unity
     - [Unity Dev Pack](https://marketplace.visualstudio.com/items?itemName=fabriciohod.unity-dev-pack)
 #### startup
 - if you have not clone meland-unity, you can clone it by command:  ```git clone --recurse-submodules this_repository_url```
-- if you have cloned meland-unity,but not update git submodules, you can update it by command:  ```git submodule update --init```
+- if you have cloned meland-unity,but not update git submodules, you can update it by command:  ```git submodule update --init --recursive```

@@ -1,0 +1,4 @@
+[submodule "Assets/Thirdparty/UnityGameFramework"]
+	path = Assets/Thirdparty/UnityGameFramework
+	url = https://github.com/Meland-Inc/UnityGameFramework.git
+	branch = meland-main

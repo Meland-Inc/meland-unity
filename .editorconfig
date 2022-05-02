@@ -1,2 +1,79 @@
+# Rule definition reference
+# https://docs.microsoft.com/zh-cn/dotnet/fundamentals/code-analysis/style-rules/
+
 root=true
 [*.cs]
+
+dotnet_analyzer_diagnostic.severity = suggestion
+dotnet_analyzer_diagnostic.category-Maintainability.severity = error
+dotnet_analyzer_diagnostic.category-performance.severity = error
+dotnet_analyzer_diagnostic.category-Style.severity = warning
+
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
+# class struct Xxx
+dotnet_naming_symbols.types.applicable_kinds = class, struct
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_rule.types_rule.symbols  = types
+dotnet_naming_rule.types_rule.style = pascal_case_style
+dotnet_naming_rule.types_rule.severity = warning
+
+# interface  IXxx
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_style.interface_style.capitalization = pascal_case
+dotnet_naming_style.interface_style.required_prefix = I
+dotnet_naming_rule.interface_rule.symbols  = interface
+dotnet_naming_rule.interface_rule.style = interface_style
+dotnet_naming_rule.interface_rule.severity = warning
+
+# enum eXX
+dotnet_naming_symbols.enum.applicable_kinds = enum
+dotnet_naming_symbols.enum.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_style.enum_style.capitalization = pascal_case
+dotnet_naming_style.enum_style.required_prefix = e
+dotnet_naming_rule.enum_rule.symbols  = enum
+dotnet_naming_rule.enum_rule.style = enum_style
+dotnet_naming_rule.enum_rule.severity = warning
+
+# const XXX_YYY
+dotnet_naming_symbols.const.applicable_kinds = property,field
+dotnet_naming_symbols.const.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.const.required_modifiers = const
+dotnet_naming_style.const_style.capitalization = all_upper
+dotnet_naming_rule.const_rule.symbols  = const
+dotnet_naming_rule.const_rule.style = const_style
+dotnet_naming_rule.const_rule.severity = warning
+
+# public protected Xxx
+dotnet_naming_symbols.public_symbols.applicable_kinds = property,method,field,event,delegate
+dotnet_naming_symbols.public_symbols.applicable_accessibilities = public,protected
+dotnet_naming_rule.public_symbols_rule.symbols = public_symbols
+dotnet_naming_rule.public_symbols_rule.style = pascal_case_style
+dotnet_naming_rule.public_symbols_rule.severity = suggestion
+
+# private field _xxYy
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_style.private_fields_style.capitalization = camel_case
+dotnet_naming_style.private_fields_style.required_prefix = _
+dotnet_naming_rule.private_fields_rule.symbols  = private_fields
+dotnet_naming_rule.private_fields_rule.style = private_fields_style
+dotnet_naming_rule.private_fields_rule.severity = suggestion
+
+# private static field s_xxYy
+dotnet_naming_symbols.private_static_fields.applicable_kinds = field
+dotnet_naming_symbols.private_static_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_static_fields.required_modifiers = static
+dotnet_naming_style.private_static_fields_style.capitalization = camel_case
+dotnet_naming_style.private_static_fields_style.required_prefix = s_
+dotnet_naming_rule.private_static_fields_rule.symbols  = private_static_fields
+dotnet_naming_rule.private_static_fields_rule.style = private_static_fields_style
+dotnet_naming_rule.private_static_fields_rule.severity = suggestion
+
+# parameter xxYy
+dotnet_naming_symbols.param.applicable_kinds = parameter
+dotnet_naming_rule.param_rule.symbols  = param
+dotnet_naming_rule.param_rule.style = camel_case_style
+dotnet_naming_rule.param_rule.severity = suggestion

@@ -19,6 +19,12 @@ meland client main project make by unity
 - vscode
   - extension: 
     - [Unity Dev Pack](https://marketplace.visualstudio.com/items?itemName=fabriciohod.unity-dev-pack)
+    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+    - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+#### coding conventions
+- [main : C# code conventions](https://docs.microsoft.com/zh-cn/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+- [.net code conventions](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md?plain=1)
+- [editorconfig](/.editorconfig)
 #### startup
 - if you have not clone meland-unity, you can clone it by command:  ```git clone --recurse-submodules this_repository_url```
 - if you have cloned meland-unity,but not update git submodules, you can update it by command:  ```git submodule update --init --recursive```

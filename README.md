@@ -17,6 +17,7 @@ meland client main project make by unity
 - git use LFS :https://git-lfs.github.com/
 - unity 2021.3.1f1
 - vscode
+  - enable setting config : "Format On Save"
   - extension: 
     - [Unity Dev Pack](https://marketplace.visualstudio.com/items?itemName=fabriciohod.unity-dev-pack)
     - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)

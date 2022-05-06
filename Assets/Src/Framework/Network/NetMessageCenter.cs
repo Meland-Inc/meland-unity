@@ -22,11 +22,6 @@ public class NetMessageCenter : GameFrameworkComponent
         GFEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkCustomErrorEventArgs.EventId, OnNetworkCustomError);
     }
 
-    private void OnNetworkCustomError(object sender, GameEventArgs e)
-    {
-        throw new NotImplementedException();
-    }
-
     private void OnDestroy()
     {
 
@@ -96,29 +91,35 @@ public class NetMessageCenter : GameFrameworkComponent
 
     private void OnNetworkClosed(object sender, GameEventArgs e)
     {
-        UnityGameFramework.Runtime.NetworkClosedEventArgs arg = e as UnityGameFramework.Runtime.NetworkClosedEventArgs;
-        Log.Info($"OnNetworkClosed: {arg.NetworkChannel.Name}");
+        UnityGameFramework.Runtime.NetworkClosedEventArgs args = e as UnityGameFramework.Runtime.NetworkClosedEventArgs;
+        Log.Info($"OnNetworkClosed: {args.NetworkChannel.Name}");
     }
 
     private void OnNetworkMissHeartBeat(object sender, GameEventArgs e)
     {
-        UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs ne = (UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs)e;
+        UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs args = (UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs)e;
 
-        Log.Info($"Network channel '{ne.NetworkChannel.Name}' miss heart beat '{ne.MissCount}' times.");
+        Log.Info($"Network channel '{args.NetworkChannel.Name}' miss heart beat '{args.MissCount}' times.");
 
-        if (ne.MissCount < 2)
+        if (args.MissCount < 2)
         {
             return;
         }
 
-        ne.NetworkChannel.Close();
+        args.NetworkChannel.Close();
     }
 
     private void OnNetworkError(object sender, GameEventArgs e)
     {
         UnityGameFramework.Runtime.NetworkErrorEventArgs args = (UnityGameFramework.Runtime.NetworkErrorEventArgs)e;
-        Log.Warning("Network channel '{0}' error, error code is '{1}', error message is '{2}'.", args.NetworkChannel.Name, args.ErrorCode.ToString(), args.ErrorMessage);
+        Log.Warning($"Network channel '{args.NetworkChannel.Name}' error, error code is '{args.ErrorCode}', error message is '{args.ErrorMessage}'.");
 
         args.NetworkChannel.Close();
+    }
+
+    private void OnNetworkCustomError(object sender, GameEventArgs e)
+    {
+        UnityGameFramework.Runtime.NetworkCustomErrorEventArgs args = (UnityGameFramework.Runtime.NetworkCustomErrorEventArgs)e;
+        Log.Warning($"Network channel '{args.NetworkChannel.Name}' error, error data= '{args.CustomErrorData}'");
     }
 }

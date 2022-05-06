@@ -16,7 +16,7 @@ public class GameChannelHelper : SocketProtobufChannelHelper
         _ = source.Read(dataSpan);
         string str = Encoding.ASCII.GetString(dataSpan);
 
-        customErrorData = 0;
+        customErrorData = null;
 
         GameChannelPacketBase packet = new();
         packet.SetID(1);
@@ -31,7 +31,7 @@ public class GameChannelHelper : SocketProtobufChannelHelper
         _ = source.Read(data, 0, 4);
         int length = BitConverter.ToInt32(data, 0);
 
-        customErrorData = 0;
+        customErrorData = null;
 
         GameChannelPacketHeader head = new()
         {

@@ -1,4 +1,3 @@
-using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
@@ -8,11 +7,7 @@ public class LaunchProcedure : GameFramework.Procedure.ProcedureBase
     {
         base.OnEnter(procedureOwner);
 
-        Debug.Log("hello unity log");
         Log.Debug("hello GF debug");
-        Log.Info("hello GF Info");
-        Log.Warning("hello GF Warning");
-        Log.Error("hello GF Error");
-        Log.Fatal("hello GF Fatal");
+        BasicModule.NetMsgCenter.ConnectChannel(NetworkDefine.CHANNEL_NAME_GAME, "127.0.0.1", 9000);
     }
 }

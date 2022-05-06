@@ -113,7 +113,7 @@ public class GFEntry : MonoBehaviour
     }
 
     /// <summary>
-    /// 获取网络组件。
+    /// 获取网络组件。 业务层使用NetMessageCenter不用这个
     /// </summary>
     public static NetworkComponent Network
     {

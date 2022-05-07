@@ -44,7 +44,7 @@ public class GameSceneModel : DataModelBase
 
         _curGameScene = sceneName;
 
-        Message.GameSceneChanged?.Invoke(_curGameScene);
+        Message.GameSceneChanged.Invoke(_curGameScene);
     }
 
     public static string GetSceneAsset(string assetName)

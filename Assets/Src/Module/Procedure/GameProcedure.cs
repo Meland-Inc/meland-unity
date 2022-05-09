@@ -1,6 +1,7 @@
-using System;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
+using UnityEngine;
+using UnityGameFramework.Runtime;
 
 /// <summary>
 /// 正式在场景里游戏流程
@@ -31,31 +32,43 @@ public class GameProcedure : ProcedureBase
 
     private void ShowUI()
     {
-        throw new NotImplementedException();
+        //TODO:
     }
 
     private void HideUI()
     {
-        throw new NotImplementedException();
+        //TODO:
     }
 
-    private void CreateSceneEntity()
+    private async void CreateSceneEntity()
     {
-        throw new NotImplementedException();
+        //TODO:
+        string filePath = "Assets/RawResource/DSJ_ggdx_3_1_01.png";
+        try
+        {
+            Sprite asset = await GFEntry.Resource.AwaitLoadAsset<Sprite>(filePath);
+            GameObject go = new("loadSprite");
+            go.AddComponent<SpriteRenderer>().sprite = asset;
+            Log.Debug($"load success ={asset} name={filePath}");
+        }
+        catch (ResourceLoadException e)
+        {
+            Log.Debug($"load fail status={e.LoadStatus} msg={e.Message}");
+        }
     }
 
     private void DestroySceneEntity()
     {
-        throw new NotImplementedException();
+        //TODO:
     }
 
     private void RegisterPlayOperateSystem()
     {
-        throw new NotImplementedException();
+        //TODO:
     }
 
     private void UnregisterPlayOperateSystem()
     {
-        throw new NotImplementedException();
+        //TODO:
     }
 }

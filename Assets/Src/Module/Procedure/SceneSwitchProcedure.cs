@@ -20,7 +20,7 @@ public class SceneSwitchProcedure : ProcedureBase
         ShowLoadingUI();
 
         // 先切换到laoding场景中 loading场景好了才卸载之前的场景
-        GFEntry.Scene.LoadScene(GameSceneModel.GetSceneAsset(GameSceneModel.SCENE_RES_SCENE_LOADING));
+        GFEntry.Scene.LoadScene(Resource.GetSceneAssetPath(GameSceneModel.SCENE_RES_SCENE_LOADING));
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
@@ -29,7 +29,7 @@ public class SceneSwitchProcedure : ProcedureBase
 
         HideLoadingUI();
 
-        GFEntry.Scene.UnloadScene(GameSceneModel.GetSceneAsset(GameSceneModel.SCENE_RES_SCENE_LOADING));
+        GFEntry.Scene.UnloadScene(Resource.GetSceneAssetPath(GameSceneModel.SCENE_RES_SCENE_LOADING));
 
         base.OnLeave(procedureOwner, isShutdown);
     }
@@ -49,11 +49,11 @@ public class SceneSwitchProcedure : ProcedureBase
         GameSceneModel model = DataManager.GetModel<GameSceneModel>();
         string loadedScene = (e as LoadSceneSuccessEventArgs).SceneAssetName;
 
-        if (loadedScene == GameSceneModel.GetSceneAsset(GameSceneModel.SCENE_RES_SCENE_LOADING))
+        if (loadedScene == Resource.GetSceneAssetPath(GameSceneModel.SCENE_RES_SCENE_LOADING))
         {
             SwitchScene();
         }
-        else if (loadedScene == GameSceneModel.GetSceneAsset(model.CurSceneResName))
+        else if (loadedScene == Resource.GetSceneAssetPath(model.CurSceneResName))
         {
             _isSceneLoadFinish = true;
         }
@@ -91,6 +91,6 @@ public class SceneSwitchProcedure : ProcedureBase
 
         sceneModel.CurSceneResName = GameSceneModel.SCENE_RES_GAME;
         //加载新的
-        sceneCom.LoadScene(GameSceneModel.GetSceneAsset(sceneModel.CurSceneResName));
+        sceneCom.LoadScene(Resource.GetSceneAssetPath(sceneModel.CurSceneResName));
     }
 }

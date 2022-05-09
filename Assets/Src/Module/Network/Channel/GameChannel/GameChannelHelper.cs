@@ -27,6 +27,6 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
 
     public override void Shutdown()
     {
-        // throw new NotImplementedException();
+        //TODO:
     }
 }

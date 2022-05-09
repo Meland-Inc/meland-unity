@@ -43,13 +43,13 @@ public class GameProcedure : ProcedureBase
     private async void CreateSceneEntity()
     {
         //TODO:
-        string filePath = "Assets/RawResource/DSJ_ggdx_3_1_01.png";
         try
         {
-            Sprite asset = await GFEntry.Resource.AwaitLoadAsset<Sprite>(filePath);
+            string fileName = "DSJ_ggdx_3_1_01";
+            Sprite asset = await Resource.LoadSprite(fileName);
             GameObject go = new("loadSprite");
             go.AddComponent<SpriteRenderer>().sprite = asset;
-            Log.Debug($"load success ={asset} name={filePath}");
+            Log.Debug($"load success ={asset} name={fileName}");
         }
         catch (ResourceLoadException e)
         {

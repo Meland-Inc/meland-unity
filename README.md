@@ -1,3 +1,9 @@
+<!--
+ * @Author xiangqian
+ * @Description 
+ * @Date 2022-05-18 17:28:24
+ * @FilePath /README.md
+-->
 # meland-unity
 
 meland client main project make by unity  
@@ -13,6 +19,7 @@ meland client main project make by unity
 - [GameFramework](https://github.com/EllanJiang/GameFramework)
 - [Zenject](https://github.com/modesttree/Zenject)
 - [UniTask](https://github.com/Cysharp/UniTask)
+- [UnityWebSocket](https://github.com/psygames/UnityWebSocket)
 
 #### related git repository
 

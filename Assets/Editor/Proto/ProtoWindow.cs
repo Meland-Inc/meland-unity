@@ -28,15 +28,27 @@ public class ProtoWindow : EditorWindow
             if (GUILayout.Button("浏览", GUILayout.Width(50f)))
             {
                 _protoPath = EditorUtility.OpenFolderPanel("select path", _protoPath, "");
-                PlayerPrefs.SetString(Constant.ePlayerPrefsKey.PROTOS_FOLDER_PATH.ToString(), _protoPath);
-                PlayerPrefs.Save();
+                if (!string.IsNullOrEmpty(_protoPath))
+                {
+                    PlayerPrefs.SetString(Constant.ePlayerPrefsKey.PROTOS_FOLDER_PATH.ToString(), _protoPath);
+                    PlayerPrefs.Save();
+                }
             }
         }
         GUILayout.EndHorizontal();
 
         if (GUILayout.Button("开始转换"))
         {
-            ProtoHandler.Convert(_protoPath);
+            try
+            {
+                Debug.Log(".*proto文件: 开始转换");
+                new ProtoHandler().Handle(_protoPath);
+                Debug.Log(".*proto文件: 转换成功");
+            }
+            catch (System.Exception ex)
+            {
+                Debug.Log($".*proto文件: 失败 ${ex.Message}");
+            }
         }
     }
 }

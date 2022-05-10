@@ -2,16 +2,15 @@
 using System.Linq;
 using System.IO;
 using System.Text.RegularExpressions;
-using UnityEngine;
-using System.Globalization;
+using System;
 
-public static class ProtoHandler
+public class ProtoHandler
 {
     /// <summary>
     /// 转换开始
     /// </summary>
     /// <param name="protosPath"></param>
-    public static void Convert(string protosPath)
+    public void Handle(string protosPath)
     {
         _ = CreateComposeProto(protosPath);
         CreateCs();
@@ -25,7 +24,7 @@ public static class ProtoHandler
     /// </summary>
     /// <param name="content"></param>
     /// <returns></returns>
-    public static string HandleCompileError(string content)
+    public string HandleCompileError(string content)
     {
 
         // enum 结构匹配
@@ -51,38 +50,40 @@ public static class ProtoHandler
     /// </summary>
     /// <param name="fullPath"></param>
     /// <returns></returns>
-    public static string CreateComposeProto(string fullPath)
+    public string CreateComposeProto(string fullPath)
     {
+        if (!Directory.Exists(fullPath))
+        {
+            throw new System.Exception($"proto源文件路径不存在 ${fullPath}");
+        }
+
         string content = "";
         content += "syntax = 'proto3';\r\n";
         content += "package Bian;\r\n";
 
-        if (Directory.Exists(fullPath))
+        //获取指定路径下面的所有资源文件  
+        DirectoryInfo direction = new(fullPath);
+        FileInfo[] files = direction.GetFiles("*.proto", SearchOption.AllDirectories);
+
+        for (int i = 0; i < files.Length; i++)
         {
-            //获取指定路径下面的所有资源文件  
-            DirectoryInfo direction = new(fullPath);
-            FileInfo[] files = direction.GetFiles("*.proto", SearchOption.AllDirectories);
+            string eleContent = FileTool.ReadFile(files[i].FullName, System.Text.Encoding.UTF8);
 
-            for (int i = 0; i < files.Length; i++)
-            {
-                string eleContent = FileTool.ReadFile(files[i].FullName, System.Text.Encoding.UTF8);
+            eleContent = HandleCompileError(eleContent);
 
-                eleContent = HandleCompileError(eleContent);
+            string[] contents = eleContent
+            .Split("\n")
+            .Where(content => content.IndexOf("import") != 0)
+            .ToArray();
+            eleContent = string.Join('\n', contents);
 
-                string[] contents = eleContent
-                .Split("\n")
-                .Where(content => content.IndexOf("import") != 0)
-                .ToArray();
-                eleContent = string.Join('\n', contents);
+            eleContent = eleContent.Replace("syntax = 'proto3';", "");
+            eleContent = eleContent.Replace("syntax = \"proto3\";", "");
+            eleContent = eleContent.Replace("option go_package Bian;", "");
+            eleContent = eleContent.Replace("package Bian;", "");
 
-                eleContent = eleContent.Replace("syntax = 'proto3';", "");
-                eleContent = eleContent.Replace("syntax = \"proto3\";", "");
-                eleContent = eleContent.Replace("option go_package Bian;", "");
-                eleContent = eleContent.Replace("package Bian;", "");
-
-                content += "// ----- from " + files[i].Name + " ---- \n";
-                content += eleContent + "\n";
-            }
+            content += "// ----- from " + files[i].Name + " ---- \n";
+            content += eleContent + "\n";
         }
 
         FileTool.WriteFile(Constant.TempOutPbmessagePath, content, System.Text.Encoding.UTF8);
@@ -92,9 +93,25 @@ public static class ProtoHandler
     /// <summary>
     /// 生成 pbmessage.cs 文件
     /// </summary>
-    public static void CreateCs()
+    public void CreateCs()
     {
-        CommandTool.ProcessCommand(Constant.ProtocWindow, $"--proto_path={Constant.TempOutPbmessageDir} pbmessage.proto --csharp_out {Constant.PbmessageCsPath}");
+        string protoc = null;
+
+        if (CapabilitiesTool.isWindow())
+        {
+            protoc = Constant.ProtocWindow;
+        }
+        else if (CapabilitiesTool.isMac())
+        {
+            protoc = Constant.ProtocMac;
+        }
+
+        if (!File.Exists(protoc))
+        {
+            throw new Exception($"protoc 编译工具不存在 ${protoc}");
+        }
+
+        CommandTool.ProcessCommand(protoc, $"--proto_path={Constant.TempOutPbmessageDir} pbmessage.proto --csharp_out {Constant.PbmessageCsPath}");
     }
 
 

@@ -15,4 +15,10 @@ public static class CapabilitiesTool
         System.OperatingSystem osInfo = Environment.OSVersion;
         return osInfo.Platform == PlatformID.MacOSX;
     }
+
+    public static bool isUnix()
+    {
+        System.OperatingSystem osInfo = Environment.OSVersion;
+        return osInfo.Platform == PlatformID.Unix;
+    }
 }

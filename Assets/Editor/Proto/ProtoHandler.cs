@@ -105,6 +105,10 @@ public class ProtoHandler
         {
             protoc = Constant.ProtocMac;
         }
+        else if (CapabilitiesTool.isUnix())
+        {
+            protoc = Constant.ProtocUnix;
+        }
 
         if (!File.Exists(protoc))
         {

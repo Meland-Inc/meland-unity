@@ -29,6 +29,7 @@ public static class CommandTool
             info.StandardOutputEncoding = System.Text.Encoding.UTF8;
             info.StandardErrorEncoding = System.Text.Encoding.UTF8;
         }
+        UnityEngine.Debug.Log($"执行命令: {command} {info.Arguments}");
         //启动(或重用)此 Process 组件的 StartInfo 属性指定的进程资源，并将其与该组件关联。
         Process process = Process.Start(info);
         //StandardInput：获取用于写入应用程序输入的流。

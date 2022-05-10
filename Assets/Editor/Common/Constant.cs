@@ -20,6 +20,8 @@ public static class Constant
     public static string ProtocWindow = ProjectPath + $"{Spt}Packages{Spt}Google.Protobuf.Tools.3.20.1{Spt}tools{Spt}windows_x64{Spt}protoc.exe";
     // mac protoc 解析器
     public static string ProtocMac = ProjectPath + $"{Spt}Packages{Spt}Google.Protobuf.Tools.3.20.1{Spt}tools{Spt}macosx_x64{Spt}protoc";
+    // unix protoc 解析器
+    public static string ProtocUnix = ProjectPath + $"{Spt}Packages{Spt}Google.Protobuf.Tools.3.20.1{Spt}tools{Spt}linux_x64{Spt}protoc";
 
     // 用户预设key
     public enum ePlayerPrefsKey

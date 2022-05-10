@@ -6,6 +6,7 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
 
     public override void Initialize(INetworkChannel networkChannel)
     {
+        base.Initialize(networkChannel);
         Log.Debug("GameSocketChannelHelper.Initialize");
         networkChannel.RegisterHandler(SendHeartBreakAction.GetAction<SendHeartBreakAction>(null));
         networkChannel.RegisterHandler(RemoveMarkFromMinimapAction.GetAction<RemoveMarkFromMinimapAction>(null));
@@ -18,6 +19,7 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
 
     public override bool SendHeartBeat()
     {
+        _ = base.SendHeartBeat();
         SendHeartBreakAction.Req();
         return true;
     }

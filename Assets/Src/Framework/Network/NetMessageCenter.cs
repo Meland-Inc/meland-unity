@@ -86,8 +86,7 @@ public class NetMessageCenter : GameFrameworkComponent
 
         INetworkChannel channel = GFEntry.Network.CreateNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, ServiceType.Tcp, new GameChannelHelper());
         _channelMap.Add(NetworkDefine.CHANNEL_NAME_GAME, channel);
-
-        channel.HeartBeatInterval = 3; // 心跳间隔
+        channel.HeartBeatInterval = NetworkDefine.CHANEL_HEART_BRAT_INTERVAL; // 心跳间隔
     }
 
     private void OnNetworkConnected(object sender, GameEventArgs e)

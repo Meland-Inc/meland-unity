@@ -10,10 +10,18 @@ using UnityGameFramework.Runtime;
 public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHelper
 {
     public abstract int PacketHeaderLength { get; }
-    private readonly byte[] _bytes = new byte[1024 * 4];
+    private byte[] _packetBytes;        // 缓存包内容信息
+    private byte[] _packetHeaderBytes;  // 缓存包头信息
+
+    public virtual void Initialize(INetworkChannel networkChannel)
+    {
+        _packetBytes = new byte[1024 * 4];
+        _packetHeaderBytes = new byte[PacketHeaderLength];
+    }
+
     public virtual Packet DeserializePacket(IPacketHeader packetHeader, Stream source, out object customErrorData)
     {
-        Span<byte> dataSpan = new(_bytes, 0, (int)source.Length);
+        Span<byte> dataSpan = new(_packetBytes, 0, (int)source.Length);
         _ = source.Read(dataSpan);
 
         Bian.Envelope envelope = Bian.Envelope.Parser.ParseFrom(dataSpan);
@@ -27,10 +35,8 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHe
 
     public virtual IPacketHeader DeserializePacketHeader(Stream source, out object customErrorData)
     {
-
-        byte[] data = new byte[PacketHeaderLength];
-        _ = source.Read(data, 0, PacketHeaderLength);
-        int length = BitConverter.ToInt32(data, 0);
+        _ = source.Read(_packetHeaderBytes, 0, PacketHeaderLength);
+        int length = BitConverter.ToInt32(_packetHeaderBytes, 0);
 
         customErrorData = null;
 
@@ -40,8 +46,6 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHe
         };
         return head;
     }
-
-    public abstract void Initialize(INetworkChannel networkChannel);
 
     public abstract void PrepareForConnecting();
 

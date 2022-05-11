@@ -97,17 +97,13 @@ public class ProtoHandler
     {
         string protoc = null;
 
-        if (CapabilitiesTool.isWindow())
+        if (CapabilitiesTool.IsWindow())
         {
             protoc = Constant.ProtocWindow;
         }
-        else if (CapabilitiesTool.isMac())
+        else if (CapabilitiesTool.IsMac())
         {
             protoc = Constant.ProtocMac;
-        }
-        else if (CapabilitiesTool.isUnix())
-        {
-            protoc = Constant.ProtocUnix;
         }
 
         if (!File.Exists(protoc))

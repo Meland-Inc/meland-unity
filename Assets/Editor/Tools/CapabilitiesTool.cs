@@ -1,24 +1,26 @@
 using System;
+
+/// <summary>
+/// 
+/// PlatformID:
+/// https://docs.microsoft.com/en-us/dotnet/api/system.platformid?view=net-6.0
+/// 
+/// </summary>
 public static class CapabilitiesTool
 {
-    public static bool isWindow()
+    public static bool IsWindow()
     {
-        System.OperatingSystem osInfo = Environment.OSVersion;
-        return osInfo.Platform == PlatformID.Win32S
-        || osInfo.Platform == PlatformID.Win32Windows
-        || osInfo.Platform == PlatformID.Win32NT
-        || osInfo.Platform == PlatformID.WinCE;
+        OperatingSystem osInfo = Environment.OSVersion;
+        return osInfo.Platform is PlatformID.Win32S
+        or PlatformID.Win32Windows
+        or PlatformID.Win32NT
+        or PlatformID.WinCE;
     }
 
-    public static bool isMac()
+    public static bool IsMac()
     {
-        System.OperatingSystem osInfo = Environment.OSVersion;
-        return osInfo.Platform == PlatformID.MacOSX;
-    }
-
-    public static bool isUnix()
-    {
-        System.OperatingSystem osInfo = Environment.OSVersion;
+        OperatingSystem osInfo = Environment.OSVersion;
         return osInfo.Platform == PlatformID.Unix;
     }
+
 }

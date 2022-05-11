@@ -3,6 +3,7 @@ using System.Linq;
 using System.IO;
 using System.Text.RegularExpressions;
 using System;
+using UnityEngine;
 
 public class ProtoHandler
 {
@@ -12,8 +13,18 @@ public class ProtoHandler
     /// <param name="protosPath"></param>
     public void Handle(string protosPath)
     {
-        _ = CreateComposeProto(protosPath);
-        CreateCs();
+        try
+        {
+            Debug.Log(".*proto文件: 开始转换");
+            _ = CreateComposeProto(protosPath);
+            CreateCs();
+            Debug.Log(".*proto文件: 转换成功");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($".*proto文件:  转换失败 ${ex.Message}");
+        }
+
     }
 
     /// <summary>
@@ -87,6 +98,7 @@ public class ProtoHandler
         }
 
         FileTool.WriteFile(Constant.TempOutPbmessagePath, content, System.Text.Encoding.UTF8);
+        Debug.Log($".*proto文件: 创建临时文件 pbmessage.proto => {Constant.TempOutPbmessagePath}");
         return content;
     }
 
@@ -112,6 +124,8 @@ public class ProtoHandler
         }
 
         CommandTool.ProcessCommand(protoc, $"--proto_path={Constant.TempOutPbmessageDir} pbmessage.proto --csharp_out {Constant.PbmessageCsPath}");
+
+        Debug.Log($".*proto文件: 生成最终文件 Pbmessage.cs => {Constant.PbmessageCsPath}");
     }
 
 

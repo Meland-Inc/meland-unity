@@ -38,16 +38,7 @@ public class ProtoWindow : EditorWindow
 
         if (GUILayout.Button("开始转换"))
         {
-            try
-            {
-                Debug.Log(".*proto文件: 开始转换");
-                new ProtoHandler().Handle(_protoPath);
-                Debug.Log(".*proto文件: 转换成功");
-            }
-            catch (System.Exception ex)
-            {
-                Debug.Log($".*proto文件: 失败 ${ex.Message}");
-            }
+            new ProtoHandler().Handle(_protoPath);
         }
     }
 }

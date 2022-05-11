@@ -47,26 +47,19 @@ public static class FileTool
     /// <param name="encoding">编码格式</param>
     public static void WriteFile(string path, string content, System.Text.Encoding encoding)
     {
-        try
+        object obj = new();
+        EnsureDir(path);
+        if (!File.Exists(path))
         {
-            object obj = new();
-            EnsureDir(path);
-            if (!File.Exists(path))
-            {
-                FileStream fileStream = File.Create(path);
-                fileStream.Close();
-            }
-            lock (obj)
-            {
-                using StreamWriter streamWriter = new(path, false, encoding);
-                streamWriter.WriteLine(content);
-                streamWriter.Close();
-                streamWriter.Dispose();
-            }
+            FileStream fileStream = File.Create(path);
+            fileStream.Close();
         }
-        catch (System.Exception ex)
+        lock (obj)
         {
-            UnityEngine.Debug.Log($"写入文件{path}异常:{ex.Message}");
+            using StreamWriter streamWriter = new(path, false, encoding);
+            streamWriter.WriteLine(content);
+            streamWriter.Close();
+            streamWriter.Dispose();
         }
     }
 

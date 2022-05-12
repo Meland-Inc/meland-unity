@@ -16,7 +16,7 @@ public class ProtoHandler
         try
         {
             Debug.Log(".*proto文件: 开始转换");
-            _ = CreateComposeProto(protosPath);
+            CreatePreHandleProto(protosPath);
             CreateCs();
             Debug.Log(".*proto文件: 转换成功");
         }
@@ -57,21 +57,16 @@ public class ProtoHandler
     }
 
     /// <summary>
-    /// 把所有的子Proto文件，整合成一个大proto文件
+    /// 创建预处理的Protos文件 ： 遍历proto文件，处理enum重复问题,写入临时目录,准备convert处理
     /// </summary>
     /// <param name="fullPath"></param>
     /// <returns></returns>
-    public string CreateComposeProto(string fullPath)
+    private void CreatePreHandleProto(string fullPath)
     {
         if (!Directory.Exists(fullPath))
         {
             throw new System.Exception($"proto源文件路径不存在 ${fullPath}");
         }
-
-        string content = "";
-        content += "syntax = 'proto3';\r\n";
-        content += "package Bian;\r\n";
-
         //获取指定路径下面的所有资源文件  
         DirectoryInfo direction = new(fullPath);
         FileInfo[] files = direction.GetFiles("*.proto", SearchOption.AllDirectories);
@@ -79,33 +74,29 @@ public class ProtoHandler
         for (int i = 0; i < files.Length; i++)
         {
             string eleContent = FileTool.ReadFileText(files[i].FullName, System.Text.Encoding.UTF8);
-
             eleContent = HandleProtoEnumCompileError(eleContent);
 
-            string[] contents = eleContent
-            .Split("\n")
-            .Where(content => content.IndexOf("import") != 0)
-            .ToArray();
-            eleContent = string.Join('\n', contents);
-
+            string content = "";
+            content += "syntax = 'proto3';\r\n";
+            content += "package Bian;\r\n";
             eleContent = eleContent.Replace("syntax = 'proto3';", "");
             eleContent = eleContent.Replace("syntax = \"proto3\";", "");
             eleContent = eleContent.Replace("option go_package Bian;", "");
             eleContent = eleContent.Replace("package Bian;", "");
 
-            content += "// ----- from " + files[i].Name + " ---- \n";
             content += eleContent + "\n";
+
+            string outputFullFileName = $"{Constant.TempOutPbmessageDir}{Constant.Spt}{files[i].Name}";
+            FileTool.WriteFile(outputFullFileName, content, System.Text.Encoding.UTF8);
+            Debug.Log($".*proto文件: 创建临时文件 pbmessage.proto => {outputFullFileName}");
         }
 
-        FileTool.WriteFile(Constant.TempOutPbmessagePath, content, System.Text.Encoding.UTF8);
-        Debug.Log($".*proto文件: 创建临时文件 pbmessage.proto => {Constant.TempOutPbmessagePath}");
-        return content;
     }
 
     /// <summary>
     /// 生成 pbmessage.cs 文件
     /// </summary>
-    public void CreateCs()
+    private void CreateCs()
     {
         string protoc = null;
 
@@ -123,7 +114,7 @@ public class ProtoHandler
             throw new Exception($"protoc 编译工具不存在 ${protoc}");
         }
 
-        CommandTool.ProcessCommand(protoc, $"--proto_path={Constant.TempOutPbmessageDir} pbmessage.proto --csharp_out {Constant.PbmessageCsPath}");
+        CommandTool.ProcessCommand(protoc, $"--proto_path={Constant.TempOutPbmessageDir} {Constant.TempOutPbmessageDir}{Constant.Spt}*.proto --csharp_out {Constant.PbmessageCsPath}");
 
         Debug.Log($".*proto文件: 生成最终文件 Pbmessage.cs => {Constant.PbmessageCsPath}");
     }

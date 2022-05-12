@@ -43,18 +43,18 @@ public class GameProcedure : ProcedureBase
     private async void CreateSceneEntity()
     {
         //TODO:
-        try
-        {
-            string fileName = "DSJ_ggdx_3_1_01";
-            Sprite asset = await Resource.LoadSprite(fileName);
-            GameObject go = new("loadSprite");
-            go.AddComponent<SpriteRenderer>().sprite = asset;
-            Log.Debug($"load success ={asset} name={fileName}");
-        }
-        catch (ResourceLoadException e)
-        {
-            Log.Debug($"load fail status={e.LoadStatus} msg={e.Message}");
-        }
+        // try
+        // {
+        //     string fileName = "DSJ_ggdx_3_1_01";
+        //     Sprite asset = await Resource.LoadSprite(fileName);
+        //     GameObject go = new("loadSprite");
+        //     go.AddComponent<SpriteRenderer>().sprite = asset;
+        //     Log.Debug($"load success ={asset} name={fileName}");
+        // }
+        // catch (ResourceLoadException e)
+        // {
+        //     Log.Debug($"load fail status={e.LoadStatus} msg={e.Message}");
+        // }
     }
 
     private void DestroySceneEntity()

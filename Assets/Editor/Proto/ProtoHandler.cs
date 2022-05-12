@@ -35,7 +35,7 @@ public class ProtoHandler
     /// </summary>
     /// <param name="content"></param>
     /// <returns></returns>
-    public string HandleCompileError(string content)
+    public string HandleProtoEnumCompileError(string content)
     {
 
         // enum 结构匹配
@@ -78,9 +78,9 @@ public class ProtoHandler
 
         for (int i = 0; i < files.Length; i++)
         {
-            string eleContent = FileTool.ReadFile(files[i].FullName, System.Text.Encoding.UTF8);
+            string eleContent = FileTool.ReadFileText(files[i].FullName, System.Text.Encoding.UTF8);
 
-            eleContent = HandleCompileError(eleContent);
+            eleContent = HandleProtoEnumCompileError(eleContent);
 
             string[] contents = eleContent
             .Split("\n")

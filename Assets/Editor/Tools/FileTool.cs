@@ -8,7 +8,7 @@ public static class FileTool
     /// <param name="path">要读取的文件路径</param>
     /// <param name="encoding">编码格式</param>
     /// <returns>返回文件内容</returns>
-    public static string ReadFile(string path, System.Text.Encoding encoding)
+    public static string ReadFileText(string path, System.Text.Encoding encoding)
     {
         string result;
         if (!File.Exists(path))

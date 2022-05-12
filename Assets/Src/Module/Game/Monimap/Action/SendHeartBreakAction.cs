@@ -1,12 +1,13 @@
 
 
+using Bian;
 using UnityGameFramework.Runtime;
 
-public class SendHeartBreakAction : GameChannelNetMsgActionBase<Bian.PingRequest, Bian.PingResponse>
+public class SendHeartBreakAction : GameChannelNetMsgRActionBase<Bian.PingRequest, Bian.PingResponse>
 {
     public static void Req()
     {
-        Bian.PingRequest req = new();
+        Bian.PingRequest req = GetReq();
         SendAction<SendHeartBreakAction>(req);
     }
 
@@ -20,8 +21,9 @@ public class SendHeartBreakAction : GameChannelNetMsgActionBase<Bian.PingRequest
         return Bian.EnvelopeType.Ping;
     }
 
-    public override void Receive(Bian.PingResponse packet)
+    public override void Receive(PingResponse rsp, PingRequest req)
     {
-        Log.Debug("SendHeartBreakAction");
+        // throw new System.NotImplementedException();
+        Log.Debug("Receive");
     }
 }

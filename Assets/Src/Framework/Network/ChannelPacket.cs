@@ -18,4 +18,5 @@ public abstract class ChannelPacket<T> : Packet where T : class
     }
 
     public abstract void SetTransferDataSeqId(int id);
+    public abstract int GetTransferDataSeqId();
 }

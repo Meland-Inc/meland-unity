@@ -8,8 +8,9 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
     {
         base.Initialize(networkChannel);
         Log.Debug("GameSocketChannelHelper.Initialize");
-        networkChannel.RegisterHandler(SendHeartBreakAction.GetAction<SendHeartBreakAction>(null));
-        networkChannel.RegisterHandler(RemoveMarkFromMinimapAction.GetAction<RemoveMarkFromMinimapAction>(null));
+
+        // 注册通知类action
+        networkChannel.RegisterHandler(TRemoveMarkFromMinimapAction.GetAction<TRemoveMarkFromMinimapAction>());
     }
 
     public override void PrepareForConnecting()

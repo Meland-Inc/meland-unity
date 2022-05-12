@@ -50,6 +50,8 @@ public class NetMessageCenter : GameFrameworkComponent
 
         GameChannelPacket packet = action.GetReqPacket() as GameChannelPacket;
         packet.SetTransferDataSeqId(getIncrementalSeqId(action.ChannelName));
+        // 注册监听
+        channel.RegisterHandler(action);
         channel.Send(packet);
     }
 
@@ -95,6 +97,7 @@ public class NetMessageCenter : GameFrameworkComponent
         Log.Info($"OnNetworkConnected: {args.NetworkChannel.Name}");
 
         // test
+        // RemoveMarkFromMinimapAction.Req("1", "2");
         // RemoveMarkFromMinimapAction.Req("1", "2");
     }
 
@@ -146,7 +149,7 @@ public class NetMessageCenter : GameFrameworkComponent
         else
         {
             Random rd = new();
-            seqId = 100 + rd.Next(0, 1000);
+            seqId = rd.Next(NetworkDefine.CHANEL_RANDOM_MIN_SEQ_ID, NetworkDefine.CHANEL_RANDOM_MAX_SEQ_ID);
             _channelSeqIdMap.Add(channelName, seqId);
         }
         _channelSeqIdMap[channelName] = seqId;

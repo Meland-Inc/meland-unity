@@ -4,6 +4,11 @@
 public sealed class NetworkDefine
 {
     public const string CHANNEL_NAME_GAME = "game";
-    public const int CHANEL_HEART_BRAT_INTERVAL = 30;
+    // 心跳间隔 s
+    public const int CHANEL_HEART_BRAT_INTERVAL = 3;
+
+    // 为了与 Bian.envelopType 区分开，从 10W + 开始计数
+    public const int CHANEL_RANDOM_MIN_SEQ_ID = 100001;
+    public const int CHANEL_RANDOM_MAX_SEQ_ID = 101000;
 
 }

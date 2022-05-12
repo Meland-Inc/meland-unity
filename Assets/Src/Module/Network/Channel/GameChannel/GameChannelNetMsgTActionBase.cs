@@ -16,9 +16,9 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
         return action;
     }
 
-    public abstract Bian.EnvelopeType GetEnvelopeType();
+    protected abstract Bian.EnvelopeType GetEnvelopeType();
 
-    public abstract void Receive(TRsp rsp);
+    protected abstract void Receive(TRsp rsp);
 
     public void Handle(object sender, Packet packet)
     {

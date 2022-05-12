@@ -35,11 +35,11 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : INetMsgAction w
         _reqPacket = CreatePacket(req);
     }
 
-    public abstract string GetEnvelopeReqName();
+    protected abstract string GetEnvelopeReqName();
 
-    public abstract Bian.EnvelopeType GetEnvelopeType();
+    protected abstract Bian.EnvelopeType GetEnvelopeType();
 
-    private GameChannelPacket CreatePacket(TReq req)
+    protected GameChannelPacket CreatePacket(TReq req)
     {
         Bian.Envelope envelope = new();
         envelope.Type = GetEnvelopeType();
@@ -49,7 +49,7 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : INetMsgAction w
         return packet;
     }
 
-    public abstract void Receive(TRsp rsp, TReq req);
+    protected abstract void Receive(TRsp rsp, TReq req);
 
     public void Handle(object sender, Packet packet)
     {

@@ -11,17 +11,17 @@ public class SendHeartBreakAction : GameChannelNetMsgRActionBase<Bian.PingReques
         SendAction<SendHeartBreakAction>(req);
     }
 
-    public override string GetEnvelopeReqName()
+    protected override string GetEnvelopeReqName()
     {
         return "PingRequest";
     }
 
-    public override Bian.EnvelopeType GetEnvelopeType()
+    protected override Bian.EnvelopeType GetEnvelopeType()
     {
         return Bian.EnvelopeType.Ping;
     }
 
-    public override void Receive(PingResponse rsp, PingRequest req)
+    protected override void Receive(PingResponse rsp, PingRequest req)
     {
         // throw new System.NotImplementedException();
         Log.Debug("Receive");

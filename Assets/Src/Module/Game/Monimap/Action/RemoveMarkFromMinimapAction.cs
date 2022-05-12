@@ -11,17 +11,17 @@ public class RemoveMarkFromMinimapAction : GameChannelNetMsgRActionBase<Bian.Rem
         SendAction<RemoveMarkFromMinimapAction>(req);
     }
 
-    public override string GetEnvelopeReqName()
+    protected override string GetEnvelopeReqName()
     {
         return "RemoveMarkFromMinimapRequest";
     }
 
-    public override Bian.EnvelopeType GetEnvelopeType()
+    protected override Bian.EnvelopeType GetEnvelopeType()
     {
         return Bian.EnvelopeType.RemoveMarkFromMiniMap;
     }
 
-    public override void Receive(Bian.RemoveMarkFromMiniMapResponse rsp, Bian.RemoveMarkFromMiniMapRequest req)
+    protected override void Receive(Bian.RemoveMarkFromMiniMapResponse rsp, Bian.RemoveMarkFromMiniMapRequest req)
     {
         // todo 
         Log.Debug("Receive");

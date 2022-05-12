@@ -3,7 +3,7 @@
 /// </summary>
 public class TargetSameDirection : TransformTarget
 {
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (!TargetTsm)
         {

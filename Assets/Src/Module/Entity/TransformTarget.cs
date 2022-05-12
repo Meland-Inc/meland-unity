@@ -7,7 +7,7 @@ public class TransformTarget : MonoBehaviour
 {
     [SerializeField]
     private Transform _targetTsm;
-    protected Transform TargetTsm => _targetTsm;
+    public Transform TargetTsm => _targetTsm;
 
     public bool IsNeedAutoInitAfterStart = true;
 

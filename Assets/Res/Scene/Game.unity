@@ -3161,6 +3161,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8311523223022185998, guid: 183e6afe3c14e4ac59f4a96def264751, type: 3}
   m_PrefabInstance: {fileID: 142819247}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &143944480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 143944481}
+  m_Layer: 0
+  m_Name: element3d
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &143944481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143944480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.2, y: 0.8131728, z: 0.51317275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2007468087}
+  - {fileID: 2024119461}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &150030237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3605,6 +3638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183000682}
   - component: {fileID: 183000681}
+  - component: {fileID: 183000683}
   m_Layer: 0
   m_Name: DSJ_XinXiSD_HuaPen_1_1_04
   m_TagString: Untagged
@@ -3679,6 +3713,20 @@ Transform:
   m_Father: {fileID: 1082688564}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &183000683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183000680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297110d1d2c0c4d3eb3aa8dfd4f0e255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 0}
+  IsNeedAutoInitAfterStart: 1
 --- !u!1001 &188947859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7347,6 +7395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356172226}
   - component: {fileID: 356172227}
+  - component: {fileID: 356172228}
   m_Layer: 0
   m_Name: zxmt_cy_changqingshu1_CJ
   m_TagString: Untagged
@@ -7367,7 +7416,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082688564}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!212 &356172227
 SpriteRenderer:
@@ -7421,6 +7470,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &356172228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356172225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297110d1d2c0c4d3eb3aa8dfd4f0e255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 0}
+  IsNeedAutoInitAfterStart: 1
 --- !u!1001 &357013903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10841,6 +10904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504677951}
   - component: {fileID: 504677950}
+  - component: {fileID: 504677952}
   m_Layer: 0
   m_Name: DSJ_ShiQiSD_4_2_02
   m_TagString: Untagged
@@ -10915,6 +10979,20 @@ Transform:
   m_Father: {fileID: 1082688564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &504677952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504677949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297110d1d2c0c4d3eb3aa8dfd4f0e255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 0}
+  IsNeedAutoInitAfterStart: 1
 --- !u!1001 &510323794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13219,6 +13297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 641045392}
   - component: {fileID: 641045391}
+  - component: {fileID: 641045393}
   m_Layer: 0
   m_Name: DSJ_XinXiSD_3_1_01
   m_TagString: Untagged
@@ -13293,6 +13372,20 @@ Transform:
   m_Father: {fileID: 1082688564}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &641045393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641045390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297110d1d2c0c4d3eb3aa8dfd4f0e255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 0}
+  IsNeedAutoInitAfterStart: 1
 --- !u!1001 &641222134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21054,6 +21147,7 @@ GameObject:
   - component: {fileID: 999857682}
   - component: {fileID: 999857681}
   - component: {fileID: 999857680}
+  - component: {fileID: 999857683}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -21120,13 +21214,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999857679}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -1.12, y: 14.41, z: -12.08}
+  m_LocalPosition: {x: -2, y: 14.41, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &999857683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999857679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e7169bed8584a8887cbdb5406d5fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 1161673427}
+  IsNeedAutoInitAfterStart: 1
+  _offset: {x: 0, y: 1, z: 0}
+  IsLocalSpace: 0
 --- !u!1001 &1009437784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23121,6 +23231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082631726}
   - component: {fileID: 1082631725}
+  - component: {fileID: 1082631727}
   m_Layer: 0
   m_Name: DSJ_ShiQiSD_4_2_02 (1)
   m_TagString: Untagged
@@ -23195,6 +23306,20 @@ Transform:
   m_Father: {fileID: 1082688564}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &1082631727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082631724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297110d1d2c0c4d3eb3aa8dfd4f0e255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 0}
+  IsNeedAutoInitAfterStart: 1
 --- !u!1 &1082688563
 GameObject:
   m_ObjectHideFlags: 0
@@ -23227,8 +23352,6 @@ Transform:
   - {fileID: 183000682}
   - {fileID: 641045392}
   - {fileID: 1082631726}
-  - {fileID: 2007468087}
-  - {fileID: 2024119461}
   - {fileID: 1821739047}
   - {fileID: 356172226}
   - {fileID: 1228586667}
@@ -24244,7 +24367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8596302918390458318, guid: f4e855e23a1b843ae96aef49b4cc2527, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.2
+      value: -2.2999997
       objectReference: {fileID: 0}
     - target: {fileID: 8596302918390458318, guid: f4e855e23a1b843ae96aef49b4cc2527, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24284,6 +24407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e855e23a1b843ae96aef49b4cc2527, type: 3}
+--- !u!4 &1161673427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8596302918390458318, guid: f4e855e23a1b843ae96aef49b4cc2527, type: 3}
+  m_PrefabInstance: {fileID: 1161673426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1165585218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25720,6 +25848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228586667}
   - component: {fileID: 1228586668}
+  - component: {fileID: 1228586669}
   m_Layer: 0
   m_Name: zxmt_cy_changqingshu1_CJ (1)
   m_TagString: Untagged
@@ -25740,7 +25869,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082688564}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!212 &1228586668
 SpriteRenderer:
@@ -25794,6 +25923,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1228586669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228586666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297110d1d2c0c4d3eb3aa8dfd4f0e255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 0}
+  IsNeedAutoInitAfterStart: 1
 --- !u!1001 &1236984260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38861,6 +39004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821739047}
   - component: {fileID: 1821739048}
+  - component: {fileID: 1821739049}
   m_Layer: 0
   m_Name: DSJ_ShiQiSD_1_1_07
   m_TagString: Untagged
@@ -38881,7 +39025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082688564}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!212 &1821739048
 SpriteRenderer:
@@ -38935,6 +39079,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1821739049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821739046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297110d1d2c0c4d3eb3aa8dfd4f0e255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTsm: {fileID: 0}
+  IsNeedAutoInitAfterStart: 1
 --- !u!1001 &1822591070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44317,12 +44475,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007468086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.724, y: 0.643, z: -1.621}
+  m_LocalPosition: {x: 4.476, y: -0.17017281, z: -2.134173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082688564}
-  m_RootOrder: 4
+  m_Father: {fileID: 143944481}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2007468088
 BoxCollider:
@@ -44786,12 +44944,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024119460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.164, y: 1.273, z: -1.281}
+  m_LocalPosition: {x: 8.364, y: 0.45982718, z: -1.7941728}
   m_LocalScale: {x: 2.3646, y: 2.5634022, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082688564}
-  m_RootOrder: 5
+  m_Father: {fileID: 143944481}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2024119462
 BoxCollider:

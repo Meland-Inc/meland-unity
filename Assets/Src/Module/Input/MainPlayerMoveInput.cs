@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// 主角移动脚本 接受输入控制 以主相机为输入参照
 /// </summary>
-public class MainPlayerMoveMono : MonoBehaviour
+public class MainPlayerMoveInput : MonoBehaviour
 {
     /// <summary>
     /// 移动速度 u/s

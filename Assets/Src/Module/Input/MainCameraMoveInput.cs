@@ -85,7 +85,8 @@ public class MainCameraMoveInput : MonoBehaviour
             scroll = scroll > 0 ? 1 : -1;
             _targetEulerX = Math.Clamp(_targetEulerX + (scroll * VerticalRotateFactor), CameraEulerXMin, CameraEulerXMax);
         }
-        if (transform.eulerAngles.x == _targetEulerX)
+
+        if (MathUtil.FloatEquals(transform.eulerAngles.x, _targetEulerX))
         {
             return false;
         }

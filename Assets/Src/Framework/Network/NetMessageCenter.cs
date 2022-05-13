@@ -10,6 +10,7 @@ using UnityGameFramework.Runtime;
 public class NetMessageCenter : GameFrameworkComponent
 {
     private Dictionary<string, INetworkChannel> _channelMap;
+    private Dictionary<string, int> _channelSeqIdMap;
 
     private void Start()
     {
@@ -32,21 +33,26 @@ public class NetMessageCenter : GameFrameworkComponent
         GFEntry.Event.Unsubscribe(UnityGameFramework.Runtime.NetworkCustomErrorEventArgs.EventId, OnNetworkCustomError);
     }
 
-    public void SendMsg(INetMsgAction handler)
+    public void SendMsg(INetMsgAction action)
     {
-        ExecuteSend(handler);
+        ExecuteSend(action);
     }
 
-    private void ExecuteSend(INetMsgAction handler)
+    private void ExecuteSend(INetMsgAction action)
     {
-        if (!_channelMap.ContainsKey(handler.ChannelName))
+        if (!_channelMap.ContainsKey(action.ChannelName))
         {
-            Log.Error($"ExecuteSend channelName not found = {handler.ChannelName}");
+            Log.Error($"ExecuteSend channelName not found = {action.ChannelName}");
             return;
         }
 
-        INetworkChannel channel = _channelMap[handler.ChannelName];
-        channel.Send(handler.GetReqPacket());
+        INetworkChannel channel = _channelMap[action.ChannelName];
+
+        GameChannelPacket packet = action.GetReqPacket() as GameChannelPacket;
+        packet.SetTransferDataSeqId(getIncrementalSeqId(action.ChannelName));
+        // 注册监听
+        channel.RegisterHandler(action);
+        channel.Send(packet);
     }
 
     public void ConnectChannel(string channelName, string ip, int port)
@@ -78,15 +84,21 @@ public class NetMessageCenter : GameFrameworkComponent
     private void InitChannel()
     {
         _channelMap = new();
+        _channelSeqIdMap = new();
 
         INetworkChannel channel = GFEntry.Network.CreateNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, ServiceType.Tcp, new GameChannelHelper());
         _channelMap.Add(NetworkDefine.CHANNEL_NAME_GAME, channel);
+        channel.HeartBeatInterval = NetworkDefine.CHANEL_HEART_BRAT_INTERVAL; // 心跳间隔
     }
 
     private void OnNetworkConnected(object sender, GameEventArgs e)
     {
         UnityGameFramework.Runtime.NetworkConnectedEventArgs args = e as UnityGameFramework.Runtime.NetworkConnectedEventArgs;
         Log.Info($"OnNetworkConnected: {args.NetworkChannel.Name}");
+
+        // test
+        // RemoveMarkFromMinimapAction.Req("1", "2");
+        // RemoveMarkFromMinimapAction.Req("1", "2");
     }
 
     private void OnNetworkClosed(object sender, GameEventArgs e)
@@ -121,5 +133,25 @@ public class NetMessageCenter : GameFrameworkComponent
     {
         UnityGameFramework.Runtime.NetworkCustomErrorEventArgs args = (UnityGameFramework.Runtime.NetworkCustomErrorEventArgs)e;
         Log.Warning($"Network channel '{args.NetworkChannel.Name}' error, error data= '{args.CustomErrorData}'");
+    }
+
+    /// <summary>
+    /// 根据渠道获取发送消息的递增序列号
+    /// </summary>
+    /// <param name="channelName"></param>
+    /// <returns></returns>
+    private int getIncrementalSeqId(string channelName)
+    {
+        if (_channelSeqIdMap.TryGetValue(channelName, out int seqId))
+        {
+            seqId++;
+        }
+        else
+        {
+            _channelSeqIdMap.Add(channelName, NetworkDefine.CHANEL_MIN_SEQ_ID);
+        }
+        _channelSeqIdMap[channelName] = seqId;
+
+        return seqId;
     }
 }

@@ -131,3 +131,7 @@ $RECYCLE.BIN/
 ##############################################################################
 # meland
 .vscode
+/Packages
+/Assets/Packages
+/Assets/Editor/Temp
+/Assets/Editor/Temp.meta

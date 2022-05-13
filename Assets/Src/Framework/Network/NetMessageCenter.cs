@@ -148,9 +148,7 @@ public class NetMessageCenter : GameFrameworkComponent
         }
         else
         {
-            Random rd = new();
-            seqId = rd.Next(NetworkDefine.CHANEL_RANDOM_MIN_SEQ_ID, NetworkDefine.CHANEL_RANDOM_MAX_SEQ_ID);
-            _channelSeqIdMap.Add(channelName, seqId);
+            _channelSeqIdMap.Add(channelName, NetworkDefine.CHANEL_MIN_SEQ_ID);
         }
         _channelSeqIdMap[channelName] = seqId;
 

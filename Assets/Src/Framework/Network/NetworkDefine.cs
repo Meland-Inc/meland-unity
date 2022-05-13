@@ -7,7 +7,7 @@ public sealed class NetworkDefine
     // 心跳间隔 s
     public const int CHANEL_HEART_BRAT_INTERVAL = 30;
 
-    public const int CHANEL_RANDOM_MIN_SEQ_ID = 1;
-    public const int CHANEL_RANDOM_MAX_SEQ_ID = 1000;
+    // 序列号id 从1开始
+    public const int CHANEL_MIN_SEQ_ID = 1;
 
 }

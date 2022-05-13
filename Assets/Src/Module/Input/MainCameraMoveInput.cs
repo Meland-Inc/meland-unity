@@ -12,10 +12,12 @@ public class MainCameraMoveInput : MonoBehaviour
     public float VerticalRotateSpeed = 60f;//垂直旋转速度 欧拉角/s
     public float CameraEulerXMax = 80;//相机最大欧拉角X
     public float CameraEulerXMin = 15;//相机最小欧拉角X
+    public Vector3 RotateAnchorOffset = Vector3.zero;
 
     private FollowTarget _followLogic;
     private Vector3 _initEulerAngles;
     private Vector3 _initRelativePosition;
+    private float _initTargetDistance = -1;
     private float _targetEulerX;
     private void Start()
     {
@@ -26,6 +28,7 @@ public class MainCameraMoveInput : MonoBehaviour
         {
             _initEulerAngles = transform.eulerAngles;
             _initRelativePosition = transform.position - _followLogic.TargetTsm.position;
+            _initTargetDistance = Vector3.Distance(transform.position, _followLogic.TargetTsm.position);
         }
     }
 
@@ -73,7 +76,7 @@ public class MainCameraMoveInput : MonoBehaviour
             return false;
         }
 
-        transform.RotateAround(_followLogic.TargetTsm.position, Vector3.up, HorizontalRotateSpeed * eulerOffset.y * Time.deltaTime);
+        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, Vector3.up, HorizontalRotateSpeed * eulerOffset.y * Time.deltaTime);
         return true;
     }
 
@@ -101,7 +104,16 @@ public class MainCameraMoveInput : MonoBehaviour
             deltaEulerX = Math.Max(deltaEulerX, -VerticalRotateSpeed * Time.deltaTime);
         }
 
-        transform.RotateAround(_followLogic.TargetTsm.position, _followLogic.TargetTsm.right, deltaEulerX);
+        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, _followLogic.TargetTsm.right, deltaEulerX);
+
+        if (_initTargetDistance > 0)//有成功初始化过
+        {
+            Vector3 dir = transform.position - _followLogic.TargetTsm.position;
+            dir.Normalize();
+            dir *= _initTargetDistance / _initEulerAngles.x * transform.eulerAngles.x;
+            transform.position = _followLogic.TargetTsm.position + dir;
+        }
+
         return true;
     }
 

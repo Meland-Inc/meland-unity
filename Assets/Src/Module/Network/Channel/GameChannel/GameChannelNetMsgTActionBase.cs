@@ -8,7 +8,7 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
 {
     public string ChannelName => NetworkDefine.CHANNEL_NAME_GAME;
     // 网络消息包协议编号 (通知类型action只注册一次，并且没有SeqId，使用Envelop的Type区分)
-    public int Id => (int)GetEnvelopeType();
+    public virtual int Id => -(int)GetEnvelopeType();
     // 用于给GF.Network 使用的包
     public static TAction GetAction<TAction>() where TAction : GameChannelNetMsgTActionBase<TRsp>, new()
     {
@@ -18,9 +18,12 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
 
     protected abstract Bian.EnvelopeType GetEnvelopeType();
 
-    protected abstract void Receive(TRsp rsp);
+    protected virtual void Receive(TRsp rsp)
+    {
+        // 
+    }
 
-    public void Handle(object sender, Packet packet)
+    public virtual void Handle(object sender, Packet packet)
     {
         // 获取响应数据
         Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
@@ -29,7 +32,7 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
         Receive(resp);
     }
 
-    public Packet GetReqPacket()
+    public virtual Packet GetReqPacket()
     {
         return null;
     }

@@ -5,11 +5,10 @@ using GameFramework.Network;
 /// </summary>
 /// <typeparam name="TReq"></typeparam>
 /// <typeparam name="TRsp"></typeparam>
-public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : INetMsgAction where TReq : new()
+public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetMsgTActionBase<TRsp> where TReq : new()
 {
-    public string ChannelName => NetworkDefine.CHANNEL_NAME_GAME;
     // 网络消息包协议编号 (请求类型action可以被多次注册，需要区分每一次请求的id，所以使用SeqId)
-    public int Id => _reqPacket.GetTransferDataSeqId();
+    public override int Id => _reqPacket.GetTransferDataSeqId();
     // 用于给GF.Network 使用的包
     private GameChannelPacket _reqPacket;
     protected static void SendAction<TAction>(TReq req) where TAction : GameChannelNetMsgRActionBase<TReq, TRsp>, new()
@@ -25,7 +24,7 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : INetMsgAction w
 
     public static TAction GetAction<TAction>(TReq req) where TAction : GameChannelNetMsgRActionBase<TReq, TRsp>, new()
     {
-        TAction action = new();
+        TAction action = GetAction<TAction>();
         action.InitReqPacket(req);
         return action;
     }
@@ -36,8 +35,6 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : INetMsgAction w
     }
 
     protected abstract string GetEnvelopeReqName();
-
-    protected abstract Bian.EnvelopeType GetEnvelopeType();
 
     protected GameChannelPacket CreatePacket(TReq req)
     {
@@ -51,7 +48,7 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : INetMsgAction w
 
     protected abstract void Receive(TRsp rsp, TReq req);
 
-    public void Handle(object sender, Packet packet)
+    public override void Handle(object sender, Packet packet)
     {
         // 移除监听
         (sender as INetworkChannel).UnRegisterHandler(this);
@@ -68,7 +65,7 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : INetMsgAction w
 
     }
 
-    Packet INetMsgAction.GetReqPacket()
+    public override Packet GetReqPacket()
     {
         return _reqPacket;
     }

@@ -6,6 +6,6 @@ using GameFramework.Network;
 public interface INetMsgAction : IPacketHandler
 {
     string ChannelName { get; }
-    Packet GetReqPacket();
+    abstract Packet GetReqPacket();
 
 }

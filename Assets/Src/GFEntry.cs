@@ -10,6 +10,7 @@ using UnityGameFramework.Runtime;
 
 /// <summary>
 /// Game Framework 入口  使用game framework组件时直接使用这里变量 不要再去GameEntry.GetComponent 有性能问题
+/// 使用其中组件不要在其他基础组件的start中或者之前时序中使用 因为其中组件在start中初始化
 /// </summary>
 public class GFEntry : MonoBehaviour
 {
@@ -193,7 +194,7 @@ public class GFEntry : MonoBehaviour
         private set;
     }
 
-    private void Awake()
+    private void Start()
     {
         InitBuiltinComponents();
     }

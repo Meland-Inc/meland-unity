@@ -11,6 +11,6 @@ public class TRemoveMarkFromMinimapAction : GameChannelNetMsgTActionBase<Bian.Re
 
     protected override void Receive(RemoveMarkFromMiniMapResponse rsp)
     {
-        Log.Debug("Receive");
+        Log.Warning("<<< Receive TRemoveMarkFromMinimapAction");
     }
 }

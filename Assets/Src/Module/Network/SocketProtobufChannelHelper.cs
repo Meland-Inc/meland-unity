@@ -1,15 +1,80 @@
 using System;
-using System.IO;
 using GameFramework.Network;
 using Google.Protobuf;
 using UnityGameFramework.Runtime;
 
+#if !UNITY_WEBGL
+using System.IO;
+#endif
+
 /// <summary>
 /// 走socket io下protobuf解析的频道
 /// </summary>
-public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHelper
+#if UNITY_WEBGL
+public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelByteHelper
+#else
+public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelStreamHelper
+# endif
 {
     public abstract int PacketHeaderLength { get; }
+
+#if UNITY_WEBGL
+    public virtual void Initialize(INetworkChannel networkChannel)
+    {
+        //
+    }
+
+    public virtual Packet DeserializePacket(IPacketHeader packetHeader, byte[] source, out object customErrorData)
+    {
+        Bian.Envelope envelope = Bian.Envelope.Parser.ParseFrom(source);
+
+        customErrorData = null;
+        GameChannelPacket packet = new();
+        packet.SetTransferData(envelope);
+        return packet;
+    }
+
+    public virtual IPacketHeader DeserializePacketHeader(byte[] source, out object customErrorData)
+    {
+        int length = BitConverter.ToInt32(source, 0);
+
+        customErrorData = null;
+
+        GameChannelPacketHeader head = new()
+        {
+            ByteLength = length
+        };
+        return head;
+    }
+
+    public virtual bool Serialize<T>(T packet, out byte[] destination) where T : Packet
+    {
+        Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
+        int envelopLength = envelope.CalculateSize();
+        byte[] headerBytes = BitConverter.GetBytes(envelopLength);
+        if (PacketHeaderLength < 0 || (PacketHeaderLength > 0 && headerBytes.Length != PacketHeaderLength))
+        {
+            Log.Fatal($"protobuf Serialize head size error,cur={headerBytes.Length} expected={PacketHeaderLength}");
+            destination = null;
+            return false;
+        }
+
+        destination = new byte[PacketHeaderLength + envelopLength];
+        Span<byte> envelopBytes = new(destination, PacketHeaderLength, destination.Length - PacketHeaderLength);
+        envelope.WriteTo(envelopBytes);
+
+        //需要写入头
+        if (PacketHeaderLength > 0)
+        {
+            for (int i = 0; i < PacketHeaderLength; i++)
+            {
+                destination[i] = headerBytes[i];
+            }
+        }
+
+        return true;
+    }
+#else
     private byte[] _packetBytes;        // 缓存包内容信息
     private byte[] _packetHeaderBytes;  // 缓存包头信息
 
@@ -25,7 +90,6 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHe
         _ = source.Read(dataSpan);
 
         Bian.Envelope envelope = Bian.Envelope.Parser.ParseFrom(dataSpan);
-        Log.Info($"DeserializePacket envelope: {envelope}");
 
         customErrorData = null;
         GameChannelPacket packet = new();
@@ -47,14 +111,6 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHe
         return head;
     }
 
-    public abstract void PrepareForConnecting();
-
-    public virtual bool SendHeartBeat()
-    {
-        Log.Debug("GameSocketChannelHelper.SendHeartBeat");
-        return false;
-    }
-
     public virtual bool Serialize<T>(T packet, Stream destination) where T : Packet
     {
         Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
@@ -66,7 +122,7 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHe
         byte[] headerBytes = BitConverter.GetBytes(register);
 
         // 写入协议内容长度
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < PacketHeaderLength; i++)
         {
             destination.WriteByte(headerBytes[i]);
         }
@@ -78,6 +134,15 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelHe
         }
 
         return true;
+    }
+#endif
+
+    public abstract void PrepareForConnecting();
+
+    public virtual bool SendHeartBeat()
+    {
+        Log.Debug("GameSocketChannelHelper.SendHeartBeat");
+        return false;
     }
 
     public abstract void Shutdown();

@@ -84,8 +84,12 @@ public class NetMessageCenter : GameFrameworkComponent
     {
         _channelMap = new();
         _channelSeqIdMap = new();
-
+#if UNITY_WEBGL
+        INetworkChannel channel = new WebsocketNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, new GameChannelHelper());
+        GFEntry.Network.AddNetworkChannel(channel);
+#else
         INetworkChannel channel = GFEntry.Network.CreateNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, ServiceType.Tcp, new GameChannelHelper());
+#endif
         _channelMap.Add(NetworkDefine.CHANNEL_NAME_GAME, channel);
         channel.HeartBeatInterval = NetworkDefine.CHANEL_HEART_BRAT_INTERVAL; // 心跳间隔
     }

@@ -8,6 +8,7 @@ public class SendHeartBreakAction : GameChannelNetMsgRActionBase<Bian.PingReques
     public static void Req()
     {
         Bian.PingRequest req = GetReq();
+        Log.Warning(">>> Req SendHeartBreakAction");
         SendAction<SendHeartBreakAction>(req);
     }
 
@@ -24,6 +25,7 @@ public class SendHeartBreakAction : GameChannelNetMsgRActionBase<Bian.PingReques
     protected override void Receive(PingResponse rsp, PingRequest req)
     {
         // throw new System.NotImplementedException();
-        Log.Debug("Receive");
+        Log.Warning("<<< Receive SendHeartBreakAction");
+
     }
 }

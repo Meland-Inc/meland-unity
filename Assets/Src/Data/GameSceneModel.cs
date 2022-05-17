@@ -33,7 +33,7 @@ public class GameSceneModel : DataModelBase
     {
         if (string.IsNullOrEmpty(sceneName))
         {
-            Log.Error($"Scene name is invalid. => {sceneName}");
+            Log.Error($"Scene name is invalid. => {sceneName}", LogTag.SCENE);
             return;
         }
 

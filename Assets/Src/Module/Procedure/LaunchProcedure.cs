@@ -14,7 +14,7 @@ public class LaunchProcedure : ProcedureBase
     {
         base.OnEnter(procedureOwner);
 
-        Log.Debug("hello GF debug");
+        Log.Debug("hello GF debug", LogTag.OTHER);
         // BasicModule.NetMsgCenter.ConnectChannel(NetworkDefine.CHANNEL_NAME_GAME, "127.0.0.1", 9000);
 
         Message.GameSceneChanged += OnGameSceneChanged;

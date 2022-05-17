@@ -42,7 +42,7 @@ public class NetMessageCenter : GameFrameworkComponent
     {
         if (!_channelMap.ContainsKey(action.ChannelName))
         {
-            Log.Error($"ExecuteSend channelName not found = {action.ChannelName}");
+            Log.Error($"ExecuteSend channelName not found = {action.ChannelName}", LogTag.NETWORK);
             return;
         }
 
@@ -59,11 +59,11 @@ public class NetMessageCenter : GameFrameworkComponent
     {
         if (!_channelMap.ContainsKey(channelName))
         {
-            Log.Fatal($"ConnectChannel channelName not found = {channelName}");
+            Log.Fatal($"ConnectChannel channelName not found = {channelName}", LogTag.NETWORK);
             return;
         }
 
-        Log.Info($"ConnectChannel channelName = {channelName} ip = {ip} port = {port}");
+        Log.Info($"ConnectChannel channelName = {channelName} ip = {ip} port = {port}", LogTag.NETWORK);
         INetworkChannel channel = _channelMap[channelName];
         channel.Connect(System.Net.IPAddress.Parse(ip), port);
     }
@@ -72,11 +72,11 @@ public class NetMessageCenter : GameFrameworkComponent
     {
         if (!_channelMap.ContainsKey(channelName))
         {
-            Log.Fatal($"CloseChannel channelName not found = {channelName}");
+            Log.Fatal($"CloseChannel channelName not found = {channelName}", LogTag.NETWORK);
             return;
         }
 
-        Log.Info($"CloseChannel channelName = {channelName}");
+        Log.Info($"CloseChannel channelName = {channelName}", LogTag.NETWORK);
         INetworkChannel channel = _channelMap[channelName];
         channel.Close();
     }
@@ -94,7 +94,7 @@ public class NetMessageCenter : GameFrameworkComponent
     private void OnNetworkConnected(object sender, GameEventArgs e)
     {
         UnityGameFramework.Runtime.NetworkConnectedEventArgs args = e as UnityGameFramework.Runtime.NetworkConnectedEventArgs;
-        Log.Info($"OnNetworkConnected: {args.NetworkChannel.Name}");
+        Log.Info($"OnNetworkConnected: {args.NetworkChannel.Name}", LogTag.NETWORK);
 
         // test
         // RemoveMarkFromMinimapAction.Req("1", "2");
@@ -104,14 +104,14 @@ public class NetMessageCenter : GameFrameworkComponent
     private void OnNetworkClosed(object sender, GameEventArgs e)
     {
         UnityGameFramework.Runtime.NetworkClosedEventArgs args = e as UnityGameFramework.Runtime.NetworkClosedEventArgs;
-        Log.Info($"OnNetworkClosed: {args.NetworkChannel.Name}");
+        Log.Info($"OnNetworkClosed: {args.NetworkChannel.Name}", LogTag.NETWORK);
     }
 
     private void OnNetworkMissHeartBeat(object sender, GameEventArgs e)
     {
         UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs args = (UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs)e;
 
-        Log.Info($"Network channel '{args.NetworkChannel.Name}' miss heart beat '{args.MissCount}' times.");
+        Log.Info($"Network channel '{args.NetworkChannel.Name}' miss heart beat '{args.MissCount}' times.", LogTag.NETWORK);
 
         if (args.MissCount < 2)
         {
@@ -124,7 +124,7 @@ public class NetMessageCenter : GameFrameworkComponent
     private void OnNetworkError(object sender, GameEventArgs e)
     {
         UnityGameFramework.Runtime.NetworkErrorEventArgs args = (UnityGameFramework.Runtime.NetworkErrorEventArgs)e;
-        Log.Warning($"Network channel '{args.NetworkChannel.Name}' error, error code is '{args.ErrorCode}', error message is '{args.ErrorMessage}'.");
+        Log.Warning($"Network channel '{args.NetworkChannel.Name}' error, error code is '{args.ErrorCode}', error message is '{args.ErrorMessage}'.", LogTag.NETWORK);
 
         args.NetworkChannel.Close();
     }
@@ -132,7 +132,7 @@ public class NetMessageCenter : GameFrameworkComponent
     private void OnNetworkCustomError(object sender, GameEventArgs e)
     {
         UnityGameFramework.Runtime.NetworkCustomErrorEventArgs args = (UnityGameFramework.Runtime.NetworkCustomErrorEventArgs)e;
-        Log.Warning($"Network channel '{args.NetworkChannel.Name}' error, error data= '{args.CustomErrorData}'");
+        Log.Warning($"Network channel '{args.NetworkChannel.Name}' error, error data= '{args.CustomErrorData}'", LogTag.NETWORK);
     }
 
     /// <summary>

@@ -8,7 +8,7 @@ public static class FGUIExtension
     /// <param name="gcom"></param>
     /// <typeparam name="T">FGUILogicCpt的派生类</typeparam>
     /// <returns></returns>
-    public static T AddUILogicCpt<T>(this GComponent gcom) where T : FGUILogicCpt, new()
+    public static T AddUILogic<T>(this GComponent gcom) where T : FGUILogicCpt, new()
     {
         return gcom.displayObject.gameObject.AddComponent<T>();
     }
@@ -19,7 +19,7 @@ public static class FGUIExtension
     /// <param name="gcom"></param>
     /// <typeparam name="T">FGUILogicCpt的派生类</typeparam>
     /// <returns></returns>
-    public static T RemoveUILogicCpt<T>(this GComponent gcom) where T : FGUILogicCpt, new()
+    public static T RemoveUILogic<T>(this GComponent gcom) where T : FGUILogicCpt, new()
     {
         T cpt = gcom.displayObject.gameObject.AddComponent<T>();
         if (cpt == null)

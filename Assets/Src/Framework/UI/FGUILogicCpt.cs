@@ -94,38 +94,4 @@ public abstract class FGUILogicCpt : MonoBehaviour
     {
 
     }
-
-    //给子对象添加逻辑组件
-    public T AddUILogicCpt<T>(string childName) where T : FGUILogicCpt, new()
-    {
-        GComponent child = GCom.GetChild(childName).asCom;
-        if (child == null)
-        {
-            return null;
-        }
-        return AddUILogicCpt<T>(child);
-    }
-
-    public T AddUILogicCpt<T>(GComponent child) where T : FGUILogicCpt, new()
-    {
-        T cpt = child.displayObject.gameObject.AddComponent<T>();
-        return cpt;
-    }
-
-    public T RemoveUILogicCpt<T>(GComponent child) where T : FGUILogicCpt, new()
-    {
-        T cpt = child.displayObject.gameObject.AddComponent<T>();
-        if (cpt == null)
-        {
-            return null;
-        }
-        Destroy(cpt);
-        return cpt;
-    }
-
-    public T RemoveUILogicCpt<T>(string childName) where T : FGUILogicCpt, new()
-    {
-        GComponent child = GCom.GetChild(childName).asCom;
-        return RemoveUILogicCpt<T>(child);
-    }
 }

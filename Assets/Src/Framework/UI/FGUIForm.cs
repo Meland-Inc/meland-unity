@@ -169,13 +169,6 @@ public abstract class FGUIForm : UIFormLogic
         }
     }
 
-    public T AddSubForm<T>() where T : FGUIForm
-    {
-        GameObject go = new();
-        go.transform.SetParent(gameObject.transform);
-        return go.AddComponent<T>();
-    }
-
     public GObject AddFguiObject(GObject gobj)
     {
         return GCom.AddChild(gobj);
@@ -184,38 +177,5 @@ public abstract class FGUIForm : UIFormLogic
     public GObject AddFguiObjectAt(GObject gobj, int index)
     {
         return GCom.AddChildAt(gobj, index);
-    }
-
-    // 给子对象添加逻辑组件
-    public T AddUILogicCpt<T>(string childName) where T : FGUILogicCpt, new()
-    {
-        if (GCom.GetChild(childName) is GComponent child)
-        {
-            return AddUILogicCpt<T>(child);
-        }
-        return null;
-    }
-
-    public T AddUILogicCpt<T>(GComponent child) where T : FGUILogicCpt, new()
-    {
-        T cpt = child.displayObject.gameObject.AddComponent<T>();
-        return cpt;
-    }
-
-    public T RemoveUILogicCpt<T>(GComponent child) where T : FGUILogicCpt, new()
-    {
-        T cpt = child.displayObject.gameObject.AddComponent<T>();
-        if (cpt == null)
-        {
-            return null;
-        }
-        Destroy(cpt);
-        return cpt;
-    }
-
-    public T RemoveUILogicCpt<T>(string childName) where T : FGUILogicCpt, new()
-    {
-        GComponent child = GCom.GetChild(childName).asCom;
-        return RemoveUILogicCpt<T>(child);
     }
 }

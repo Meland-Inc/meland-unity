@@ -5,3 +5,4 @@
 [submodule "Assets/Thirdparty/Fairygui"]
 	path = Assets/Thirdparty/Fairygui
 	url = https://github.com/Meland-Inc/FairyGUI-unity.git
+	branch = meland-main

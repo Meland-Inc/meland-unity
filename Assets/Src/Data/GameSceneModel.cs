@@ -46,9 +46,4 @@ public class GameSceneModel : DataModelBase
 
         Message.GameSceneChanged.Invoke(_curGameScene);
     }
-
-    public static string GetSceneAsset(string assetName)
-    {
-        return Utility.Text.Format("Assets/Scenes/{0}.unity", assetName);
-    }
 }

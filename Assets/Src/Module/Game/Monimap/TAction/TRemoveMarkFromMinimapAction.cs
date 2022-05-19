@@ -16,7 +16,7 @@ public class TRemoveMarkFromMinimapAction : GameChannelNetMsgTActionBase<RemoveM
             return false;
         }
 
-        Log.Warning("<<< Receive TRemoveMarkFromMinimapAction");
+        MLog.Warning(eLogTag.network, "<<< Receive TRemoveMarkFromMinimapAction");
         return true;
     }
 }

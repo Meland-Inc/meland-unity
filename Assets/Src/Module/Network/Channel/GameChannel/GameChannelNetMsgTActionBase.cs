@@ -1,4 +1,5 @@
 using GameFramework.Network;
+using UnityGameFramework.Runtime;
 
 /// <summary>
 /// 通知类型Action
@@ -18,9 +19,22 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
 
     protected abstract Bian.EnvelopeType GetEnvelopeType();
 
-    protected virtual void Receive(TRsp rsp)
+    /// <summary>
+    /// 接收到消息
+    /// </summary>
+    /// <param name="errorCode">错误码 特殊错误码可以查看ErrorCode</param>
+    /// <param name="errorMsg"></param>
+    /// <param name="rsp"></param>
+    /// <returns>是否成功</returns>
+    protected virtual bool Receive(int errorCode, string errorMsg, TRsp rsp)
     {
-        // 
+        if (errorCode == ErrorCode.SUCCESS_CODE)
+        {
+            return true;
+        }
+
+        Log.Error($"{GetEnvelopeType()} Receive errorCode:{errorCode} errorMsg:{errorMsg}");
+        return false;
     }
 
     public virtual void Handle(object sender, Packet packet)
@@ -29,7 +43,7 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
         Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
         string propertyName = envelope.PayloadCase.ToString();
         TRsp resp = (TRsp)envelope.GetType().GetProperty(propertyName).GetValue(envelope, null);
-        Receive(resp);
+        _ = Receive(envelope.ErrorCode, envelope.ErrorMessage, resp);
     }
 
     public virtual Packet GetReqPacket()

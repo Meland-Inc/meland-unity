@@ -5,7 +5,7 @@ public class RemoveMarkFromMinimapAction : GameChannelNetMsgRActionBase<Bian.Rem
 {
     public static void Req(string tMapId, string tMarkId)
     {
-        Bian.RemoveMarkFromMiniMapRequest req = GetReq();
+        Bian.RemoveMarkFromMiniMapRequest req = GenerateReq();
         req.MapId = tMapId;
         req.MarkId = tMarkId;
         SendAction<RemoveMarkFromMinimapAction>(req);
@@ -21,9 +21,14 @@ public class RemoveMarkFromMinimapAction : GameChannelNetMsgRActionBase<Bian.Rem
         return Bian.EnvelopeType.RemoveMarkFromMiniMap;
     }
 
-    protected override void Receive(Bian.RemoveMarkFromMiniMapResponse rsp, Bian.RemoveMarkFromMiniMapRequest req)
+    protected override bool Receive(int errorCode, string errorMsg, Bian.RemoveMarkFromMiniMapResponse rsp, Bian.RemoveMarkFromMiniMapRequest req)
     {
-        // todo 
-        Log.Debug("Receive");
+        if (!base.Receive(errorCode, errorMsg, rsp, req))
+        {
+            return false;
+        }
+
+        Log.Debug("RemoveMarkFromMiniMapResponse: {0}", rsp.ToString());
+        return true;
     }
 }

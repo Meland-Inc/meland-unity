@@ -8,7 +8,7 @@ public class SendHeartBreakAction : GameChannelNetMsgRActionBase<PingRequest, Pi
     public static void Req()
     {
         PingRequest req = GenerateReq();
-        Log.Warning(">>> Req SendHeartBreakAction");
+        MLog.Warning(eLogTag.network, ">>> Req SendHeartBreakAction");
         SendAction<SendHeartBreakAction>(req);
     }
 
@@ -29,7 +29,7 @@ public class SendHeartBreakAction : GameChannelNetMsgRActionBase<PingRequest, Pi
             return false;
         }
 
-        Log.Warning("<<< Receive SendHeartBreakAction");
+        MLog.Warning(eLogTag.network, "<<< Receive SendHeartBreakAction");
         return true;
     }
 }

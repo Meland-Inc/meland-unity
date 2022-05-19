@@ -93,7 +93,7 @@ public class WebsocketNetworkChannel : INetworkChannel
             Log.Info($"web socket channel connect={url},channel={Name}");
             _socket = new WebSocket(url);
         }
-        catch (System.Exception)
+        catch (Exception)
         {
             NetworkChannelError?.Invoke(this, NetworkErrorCode.ConnectError, SocketError.Success, $"init socket fail,channel={Name}");
             throw;

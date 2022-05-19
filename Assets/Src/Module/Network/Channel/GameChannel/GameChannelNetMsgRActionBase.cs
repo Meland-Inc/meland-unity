@@ -88,4 +88,9 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
     {
         return _reqPacket;
     }
+
+    public override void InitSeqId(int id)
+    {
+        _reqPacket.SetTransferDataSeqId(id);
+    }
 }

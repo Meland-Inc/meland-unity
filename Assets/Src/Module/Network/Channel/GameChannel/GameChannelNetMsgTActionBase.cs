@@ -50,4 +50,9 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
     {
         return null;
     }
+
+    public virtual void InitSeqId(int id)
+    {
+        //empty
+    }
 }

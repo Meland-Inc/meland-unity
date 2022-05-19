@@ -7,5 +7,5 @@ public interface INetMsgAction : IPacketHandler
 {
     string ChannelName { get; }
     abstract Packet GetReqPacket();
-
+    abstract void InitSeqId(int id);
 }

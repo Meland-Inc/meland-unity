@@ -48,11 +48,10 @@ public class NetMessageCenter : GameFrameworkComponent
 
         INetworkChannel channel = _channelMap[action.ChannelName];
 
-        GameChannelPacket packet = action.GetReqPacket() as GameChannelPacket;
-        packet.SetTransferDataSeqId(getIncrementalSeqId(action.ChannelName));
+        action.InitSeqId(GetIncrementalSeqId(action.ChannelName));
         // 注册监听
         channel.RegisterHandler(action);
-        channel.Send(packet);
+        channel.Send(action.GetReqPacket());
     }
 
     public void ConnectChannel(string channelName, string ip, int port)
@@ -93,7 +92,10 @@ public class NetMessageCenter : GameFrameworkComponent
         Log.Info("init socket io");
         INetworkChannel channel = network.CreateNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, ServiceType.Tcp, new GameChannelHelper());
 #endif
+        INetworkChannel httpChannel = new WebHttpNetworkChannel(NetworkDefine.CHANEL_NAME_HTTP, new HttpChannelHelper());
+        network.AddNetworkChannel(httpChannel);
         _channelMap.Add(NetworkDefine.CHANNEL_NAME_GAME, channel);
+        _channelMap.Add(NetworkDefine.CHANEL_NAME_HTTP, httpChannel);
         channel.HeartBeatInterval = NetworkDefine.CHANEL_HEART_BRAT_INTERVAL; // 心跳间隔
     }
 
@@ -146,7 +148,7 @@ public class NetMessageCenter : GameFrameworkComponent
     /// </summary>
     /// <param name="channelName"></param>
     /// <returns></returns>
-    private int getIncrementalSeqId(string channelName)
+    private int GetIncrementalSeqId(string channelName)
     {
         if (_channelSeqIdMap.TryGetValue(channelName, out int seqId))
         {

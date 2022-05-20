@@ -25,7 +25,7 @@ public class MainPlayerModel : DataModelBase
 
     public void Awake()
     {
-        AccountData = gameObject.AddComponent<AccountData>();
+        AccountData = new AccountData();
     }
 
     /// <summary>

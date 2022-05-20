@@ -10,15 +10,15 @@ public class SceneEntityBaseData : MonoBehaviour
     private string _id;
 
     [SerializeField]
-    private eEntityType _svrType;
+    private eEntityType _type;
 
 
     public string ID => _id;
-    public eEntityType SvrType => _svrType;
+    public eEntityType Type => _type;
 
     public void Init(string id, eEntityType type)
     {
         _id = id;
-        _svrType = type;
+        _type = type;
     }
 }

@@ -15,6 +15,8 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
 
         // 注册通知类action
         networkChannel.RegisterHandler(TRemoveMarkFromMinimapAction.GetAction<TRemoveMarkFromMinimapAction>());
+        networkChannel.RegisterHandler(TInitMapElementAction.GetAction<TInitMapElementAction>());
+        networkChannel.RegisterHandler(TMapEntityUpdateAction.GetAction<TMapEntityUpdateAction>());
     }
 
     public override void PrepareForConnecting()

@@ -21,7 +21,7 @@ public class MainPlayerModel : DataModelBase
     /// <summary>
     /// 场景中的主角色 角色数据从这个上面拿 可能为null
     /// </summary>
-    public SceneEntity MainPlayerRole { get; private set; }
+    public SceneEntity Role { get; private set; }
 
     public void Awake()
     {
@@ -29,7 +29,7 @@ public class MainPlayerModel : DataModelBase
     }
 
     /// <summary>
-    /// 初始化角色数据
+    /// 初始化角色的数据 不管有没有场景角色 纯数据
     /// </summary>
     /// <param name="roleID"></param>
     public void InitRoleData(string roleID)
@@ -41,8 +41,8 @@ public class MainPlayerModel : DataModelBase
     /// 设置场景中的主角色 角色数据都从这个上面拿
     /// </summary>
     /// <param name="role"></param>
-    public void SetMainPlayerRole(SceneEntity role)
+    public void SetRole(SceneEntity role)
     {
-        MainPlayerRole = role;
+        Role = role;
     }
 }

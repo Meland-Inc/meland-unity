@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityGameFramework.Runtime;
 
 /// <summary>
-/// 游戏场景数据
+/// 场景数据
 /// </summary>
-public class GameSceneModel : DataModelBase
+public class SceneModel : DataModelBase
 {
     public const string SCENE_NAME_WORLD = "world";
 

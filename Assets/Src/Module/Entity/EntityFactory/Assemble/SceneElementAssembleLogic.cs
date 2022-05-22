@@ -3,8 +3,8 @@
 /// </summary>
 public class SceneElementAssembleLogic : IEntityTypeAssembleLogic
 {
-    public void AssembleSceneEntity(SceneEntity entity, eEntityType entityType)
+    public void AssembleSceneEntity(SceneEntity entity, Bian.EntityType entityType)
     {
-        //
+        _ = entity.Root.AddComponent<SceneElementSvrDataProcess>();
     }
 }

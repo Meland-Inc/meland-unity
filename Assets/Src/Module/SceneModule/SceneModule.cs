@@ -9,10 +9,15 @@ public class SceneModule : MonoBehaviour
     /// 场景实体管理 管理这和服务器交互的所有逻辑实体
     /// </summary>
     public static SceneEntityMgr EntityMgr;
+    /// <summary>
+    /// 场景渲染管理
+    /// </summary>
+    public static SceneRender SceneRender;
 
     private void Awake()
     {
         EntityMgr = AddModule<SceneEntityMgr>();
+        SceneRender = AddModule<SceneRender>();
     }
 
     private void OnDestroy()

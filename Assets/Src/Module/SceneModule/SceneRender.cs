@@ -6,7 +6,7 @@ using System;
 /// <summary>
 /// 场景渲染管理
 /// </summary>
-public class SceneRender : MonoBehaviour
+public class SceneRender : SceneModuleBase
 {
     /// <summary>
     /// 场景根节点
@@ -21,7 +21,7 @@ public class SceneRender : MonoBehaviour
         Root = new GameObject("Scene").transform;
         foreach (eSceneGroup group in Enum.GetValues(typeof(eSceneGroup)))
         {
-            _groupMap.Add(group, Root.CreateChildNode(group.ToString()));
+            _groupMap.Add(group, Root.gameObject.CreateChildNode(group.ToString()).transform);
         }
     }
 
@@ -74,7 +74,7 @@ public class SceneRender : MonoBehaviour
     /// <returns></returns>
     public Transform AddCustomGroupNode(string name, Transform parentNode)
     {
-        return parentNode.CreateChildNode(name);
+        return parentNode.gameObject.CreateChildNode(name).transform;
     }
 
     /// <summary>

@@ -1,4 +1,5 @@
 using System;
+using Bian;
 
 public static class Message
 {
@@ -7,6 +8,10 @@ public static class Message
     /// </summary>
     public static Action<string> GameSceneChanged = delegate { };
     public static Action<Bian.EnterMapResponse> EnterMapSuccess = delegate { };
+    /// <summary>
+    /// 回复了地图进入成功
+    /// </summary>
+    public static Action<EnterMapResponse> RspMapEnterFinish = delegate { };
     /// <summary>
     /// 场景实体加载完成
     /// </summary>

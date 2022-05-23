@@ -5,6 +5,13 @@ using UnityGameFramework.Runtime;
 
 public partial class SceneEntityMgr : MonoBehaviour
 {
+    public void NetInitMainRole(Player playerData, EntityLocation location)
+    {
+        DataManager.MainPlayer.InitRoleData(playerData.Id);
+        SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
+        sceneRole.Root.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
+    }
+
     public void NetAddUpdateEntity(RepeatedField<EntityWithLocation> entitys)
     {
         foreach (EntityWithLocation svrEntity in entitys)

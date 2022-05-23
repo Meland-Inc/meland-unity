@@ -1,4 +1,5 @@
 using System;
+using Bian;
 using GameFramework.Event;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
@@ -22,21 +23,23 @@ public class SceneLoadingProcedure : ProcedureBase
 
         GFEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, onLoadSceneSuccess);
         Message.SceneEntityLoadFinish += OnSceneEntityLoadFinish;
+        Message.RspMapEnterFinish += OnRspMapEnterFinish;
 
         ShowLoadingUI();
 
-        // 先切换到laoding场景中 loading场景好了才卸载之前的场景
-        GFEntry.Scene.LoadScene(Resource.GetSceneAssetPath(SceneModel.SCENE_RES_SCENE_LOADING));
+        // 先切换到loading场景中 loading场景好了才卸载之前的场景
+        GFEntry.Scene.LoadScene(Resource.GetSceneAssetPath(eSceneResName.SceneLoading.ToString()));
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
     {
         GFEntry.Event.Unsubscribe(LoadSceneSuccessEventArgs.EventId, onLoadSceneSuccess);
         Message.SceneEntityLoadFinish -= OnSceneEntityLoadFinish;
+        Message.RspMapEnterFinish -= OnRspMapEnterFinish;
 
         HideLoadingUI();
 
-        GFEntry.Scene.UnloadScene(Resource.GetSceneAssetPath(SceneModel.SCENE_RES_SCENE_LOADING));
+        GFEntry.Scene.UnloadScene(Resource.GetSceneAssetPath(eSceneResName.SceneLoading.ToString()));
 
         base.OnLeave(procedureOwner, isShutdown);
     }
@@ -61,7 +64,7 @@ public class SceneLoadingProcedure : ProcedureBase
         SceneModel model = DataManager.GetModel<SceneModel>();
         string loadedScene = (e as LoadSceneSuccessEventArgs).SceneAssetName;
 
-        if (loadedScene == Resource.GetSceneAssetPath(SceneModel.SCENE_RES_SCENE_LOADING))
+        if (loadedScene == Resource.GetSceneAssetPath(eSceneResName.SceneLoading.ToString()))
         {
             OnLoadingSceneLoaded();
         }
@@ -111,7 +114,7 @@ public class SceneLoadingProcedure : ProcedureBase
     private void LoadGameScene(SceneComponent sceneCom)
     {
         SceneModel sceneModel = DataManager.GetModel<SceneModel>();
-        sceneModel.CurSceneResName = SceneModel.SCENE_RES_GAME;
+        sceneModel.CurSceneResName = eSceneResName.Game.ToString();
         sceneCom.LoadScene(Resource.GetSceneAssetPath(sceneModel.CurSceneResName));
     }
 
@@ -123,5 +126,10 @@ public class SceneLoadingProcedure : ProcedureBase
         // _isSceneLoadFinish = true;
 
         EnterMapAction.Req();
+    }
+
+    private void OnRspMapEnterFinish(EnterMapResponse rsp)
+    {
+        SceneModule.EntityMgr.NetInitMainRole(rsp.Me, rsp.Location);
     }
 }

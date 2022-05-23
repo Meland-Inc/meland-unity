@@ -2,16 +2,10 @@ using UnityEngine;
 using UnityGameFramework.Runtime;
 
 /// <summary>
-/// 场景数据
+/// 场景数据 和当期服务器地图数据无关部分
 /// </summary>
 public class SceneModel : DataModelBase
 {
-    public const string SCENE_NAME_WORLD = "world";
-
-    public const string SCENE_RES_GAME = "Game";
-    public const string SCENE_RES_SCENE_LOADING = "SceneLoading";
-
-
     [SerializeField]
     private string _curGameScene;
     /// <summary>

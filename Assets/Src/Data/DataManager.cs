@@ -7,7 +7,18 @@ using UnityEngine;
 public static class DataManager
 {
     private static MainPlayerModel s_mainPlayer;
+    /// <summary>
+    /// 当前主角数据
+    /// </summary>
+    /// <typeparam name="MainPlayerModel"></typeparam>
+    /// <returns></returns>
     public static MainPlayerModel MainPlayer => s_mainPlayer = s_mainPlayer != null ? s_mainPlayer : GetModel<MainPlayerModel>();
+
+    private static MapModel s_map;
+    /// <summary>
+    /// 当前地图数据
+    /// </summary>
+    public static MapModel Map => s_map = s_map != null ? s_map : GetModel<MapModel>();
 
     private static GameObject s_dataRoot;
     private static readonly Dictionary<string, DataModelBase> s_modelMap = new();
@@ -32,8 +43,7 @@ public static class DataManager
             return (T)model;
         }
 
-        GameObject go = new(modelName);
-        go.transform.SetParent(s_dataRoot.transform);
+        GameObject go = s_dataRoot.CreateChildNode(modelName);
         model = go.AddComponent<T>();
         s_modelMap.Add(modelName, model);
         return (T)model;

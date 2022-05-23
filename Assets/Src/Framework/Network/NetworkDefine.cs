@@ -4,7 +4,7 @@ using System.Net.Http;
 /// <summary>
 /// 网络相关的一些定义
 /// </summary>
-public sealed class NetworkDefine
+public static class NetworkDefine
 {
     public const string CHANNEL_NAME_GAME = "game";
     public const string CHANEL_NAME_HTTP = "http";

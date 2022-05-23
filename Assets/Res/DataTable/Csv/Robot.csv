@@ -1,0 +1,4 @@
+id,名字,等级适配分组,机器类型,技能1的ID,技能2的ID,普通攻击,采集技能,默认皮肤ID,代码库ID,机器人列表代码块显示,背包格子数,燃料上限,机器人ICON,机器人slogan,机器人描述,皮肤1ID,皮肤2ID,皮肤3ID,皮肤4ID,是否显示在机器人列表,身体大小(半径像素),点亮半径,骨架资源,机器人默认AVATAR ID
+id,name,lvType,type,skill1Id,skill2Id,skillSequence,Acquisitionskills,robotSkinId,robotCodeBlockId,robotListCodeShow,bagGridNum,FuelCeiling,robotIcon,slogan,description,skin1,skin2,skin3,skin4,ifElseRobotList,bodyCapacity,lightRadius,armatureRes,robotAvatarId
+int,string,int,int,int,int,int[],int,int,int,int[],int,int,string,string,string,int,int,int,int,int,int,int,string,int[]
+9001,贝尔原型机,1,1,,,110001,110002,1001,1001,"10008,10028,10030,10031,10032,10033",20,2000,icon_robot_avatar_1,“我的诞生就是为帮助他人而生”,"阿尔法生物公司专为新手客户研制的“贝尔型""AI机器人，在世界中普遍存在，许多新手操纵机甲都是从它开始，贝尔号可帮助居民们从事各种繁琐的采集制造事务，此型号机甲为家政型机器，战斗属性较弱，所以注意操控他远离怪物哦！",1003,,,,1,30,220,xiaobeiRobot_armature,"13001,13004,13007,13010,13013"

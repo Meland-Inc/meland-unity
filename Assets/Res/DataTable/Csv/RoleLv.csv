@@ -1,0 +1,4 @@
+id,等级,升级经验,血量,生命恢复,普通攻击,攻击速度,防御,暴击,暴击伤害,命中,闪避,移动速度
+id,lv,exp,hp,hpRecovery,att,attSpd,def,critRate,critDmg,hitPoint,missPoint,moveSpeed
+int,int,int,int,int,int,int,int,int,int,int,int,int
+1,1,99999,200,3,50,100,20,50,500,100,98,300

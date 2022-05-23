@@ -1,0 +1,6 @@
+标记id,标记名,标记图标,斜视角材质,正视角材质
+id,name,icon,texture,rectTexture
+int,string,string,string,string
+1001,传送点,suibian_1_1_12,suibian_1_1_12,suibian_1_1_12_rect
+1002,ticketland,ticketland_MS,ticketland_MS,ticketland_MS
+1003,vipland,vipland_MS,vipland_MS,vipland_MS

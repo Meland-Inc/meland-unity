@@ -1,0 +1,4 @@
+实体cid,备注,作用力/s,默认方向
+cid,desc,force,dir
+int,string,int,int[]
+40000001,通用传送带,120,"1,0"

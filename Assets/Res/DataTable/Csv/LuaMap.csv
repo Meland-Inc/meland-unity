@@ -1,0 +1,14 @@
+索引id,关联的代码块id,可接受的最大参数值
+id,codeblockId,argsMax
+string,int,int
+GoFoward,20008,7
+Back,20009,7
+Turnleft,20010,7
+Turnright,20011,7
+whileTime,20012,7
+while,20013,7
+end,20014,7
+PickUp,40017,7
+PutDown,40018,7
+Destroy,40019,7
+wait,20002,7

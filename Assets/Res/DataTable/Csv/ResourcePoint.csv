@@ -1,0 +1,20 @@
+ID,刷新间隔时间(毫秒),范围(半径),"资源类型
+1. monster",资源 ID,巡逻半径,巡逻速度,是否在编辑器里显示,刷新点图标,刷新点名称,备注
+id,update_interval,radius,resource_type,resource_id,patrolRadius,patrolSpd,isShow,icon,name,null
+int,int,int,int,int[][],int,int,int,string,string,null
+990001,30000,0,1,"9900001,1",300,100,0,icon_monster_15,1 wild boars,3 wild boars
+990002,30000,60,1,"9900001,1;9900002,2",1360,200,0,icon_monster_15,1boars 2chicks,
+990003,30000,60,1,"9900002,3",150,100,0,icon_monster_13,3chicks,
+990004,30000,60,1,"9900003,3",800,200,0,icon_monster_14,3goat,
+990005,30000,0,1,"9900004,1",600,150,0,icon_monster_8,1bull,
+990006,30000,60,1,"9900005,2",2000,200,0,yuanshiren1_ic,2barbarian,
+990007,30000,60,1,"9900006,3",1500,200,0,icon_monster_16,3wolf,
+990008,30000,0,1,"9900007,1",150,50,0,MV01_bg_animal_02_AncientTyrannosaurus_ic,1dragon,
+990009,30000,60,1,"9900002,3",150,100,1,icon_monster_13,3chicks,
+990010,30000,90,1,"9900003,3",270,100,1,icon_monster_14,3goat,
+990011,30000,0,1,"9900001,1",300,100,1,icon_monster_15,1 wild boars,
+990012,30000,0,1,"9900004,1",300,100,1,icon_monster_8,1bull,
+990013,30000,60,1,"9900005,2",90,100,1,yuanshiren1_ic,2barbarian,
+990014,30000,0,1,"9900006,1",450,120,1,icon_monster_16,1wolf,
+990015,30000,0,1,"9900007,1",150,50,1,MV01_bg_animal_02_AncientTyrannosaurus_ic,1dragon,
+999991,5000,120,1,"9900001,1",1200,50,1,icon_monster_15,巡逻速度测试,

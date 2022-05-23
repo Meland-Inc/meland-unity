@@ -1,0 +1,5 @@
+PlaceableNFTskill_ID,技能名称,技能icon,影响半径,影响数值,描述,作用对象,技能效果
+id,skill_name,skill_icon,radius,value,desc,skill_target,skill_effect
+int,string,string,int[],string[],string,string,string
+1001,Sentry,skill_ic_sentry01,"3,3,3,3,3","2,3,5,8,12",Reduce the time for answering questions on your own land,enemy,time_reduce
+1002,Plunder,skill_ic_plunder01,"3,3,3,3,3","0.01,0.02,0.03,0.04,0.05",Increase enemy land challenge reward Ditamin,self,money_increase

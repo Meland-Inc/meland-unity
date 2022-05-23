@@ -1,0 +1,7 @@
+皮肤ID,皮肤名字,表现资源
+id,name,skinPath
+int,string,string
+1001,原型机,xiaobeiRobot
+1002,原型机皮肤2,bell
+1003,原型机皮肤3,bell
+1004,运输机器人,transportRobot

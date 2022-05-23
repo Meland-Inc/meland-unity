@@ -11,6 +11,7 @@ public enum eLogTag
     ui,
     login,
     runtime,
+    entity
 }
 
 /// <summary>

@@ -37,7 +37,7 @@ public partial class SceneEntityMgr : MonoBehaviour
             }
             catch (System.Exception)
             {
-                Log.Error($"NetAddUpdateEntity error =[{svrEntity.Id},{svrEntity.Type}]", LogTag.ENTITY);
+                MLog.Error(eLogTag.entity, $"NetAddUpdateEntity error =[{svrEntity.Id},{svrEntity.Type}]");
                 continue;
             }
         }
@@ -53,7 +53,7 @@ public partial class SceneEntityMgr : MonoBehaviour
             }
             catch (System.Exception)
             {
-                Log.Error($"NetRemoveEntity error =[{idInfo.Id},{idInfo.Type}]", LogTag.ENTITY);
+                MLog.Error(eLogTag.entity, $"NetRemoveEntity error =[{idInfo.Id},{idInfo.Type}]");
                 continue;
             }
         }

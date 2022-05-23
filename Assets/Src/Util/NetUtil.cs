@@ -34,4 +34,14 @@ public static class NetUtil
     {
         return new Vector3(xy.X, 0, -xy.Y) * SVR_POS_2_CLIENT_POS_SCALE;
     }
+
+    /// <summary>
+    /// 服务器的屏幕坐标系Y方向转客户端屏幕坐标系Y方向
+    /// </summary>
+    /// <param name="svrScreenY"></param>
+    /// <returns></returns>
+    public static float SvrScreenYToClient(float svrScreenY)
+    {
+        return GlobalDefine.IS_ADAPTIVE_OLD_DATA ? -svrScreenY : svrScreenY;
+    }
 }

@@ -1,7 +1,7 @@
+using System;
+using Bian;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
-using UnityEngine;
-using UnityGameFramework.Runtime;
 
 /// <summary>
 /// 正式在场景里游戏流程
@@ -12,6 +12,8 @@ public class GameProcedure : ProcedureBase
     {
         base.OnEnter(procedureOwner);
 
+        AddEvent();
+
         ShowUI();
 
         CreateSceneEntity();
@@ -21,6 +23,8 @@ public class GameProcedure : ProcedureBase
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
     {
+        RemoveEvent();
+
         HideUI();
 
         DestroySceneEntity();
@@ -28,6 +32,22 @@ public class GameProcedure : ProcedureBase
         UnregisterPlayOperateSystem();
 
         base.OnLeave(procedureOwner, isShutdown);
+    }
+
+    private void AddEvent()
+    {
+        Message.RspMapEnterFinish += OnRspMapEnterFinish;
+    }
+
+    private void RemoveEvent()
+    {
+        Message.RspMapEnterFinish -= OnRspMapEnterFinish;
+    }
+
+    private void OnRspMapEnterFinish(EnterMapResponse rsp)
+    {
+        //断线重连的情况
+        SceneModule.EntityMgr.NetInitMainRole(rsp.Me, rsp.Location);
     }
 
     private void ShowUI()

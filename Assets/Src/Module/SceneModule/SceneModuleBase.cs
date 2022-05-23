@@ -1,10 +1,10 @@
 using UnityEngine;
 
 /// <summary>
-/// 数据模型统一基类
+/// 场景功能模块基类
 /// </summary>
 [DisallowMultipleComponent]
-public class DataModelBase : MonoBehaviour
+public class SceneModuleBase : MonoBehaviour
 {
 
 }

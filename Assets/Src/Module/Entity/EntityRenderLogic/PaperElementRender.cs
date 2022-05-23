@@ -9,6 +9,16 @@ public class PaperElementRender : SceneEntityRenderBase
     public TargetSameDirection TargetSameDirection;
     public SpriteRenderer SpriteRenderer;
 
+    private void OnBecameVisible()
+    {
+        TargetSameDirection.enabled = true;
+    }
+
+    private void OnBecameInvisible()
+    {
+        TargetSameDirection.enabled = false;
+    }
+
     protected override void OnInit(object userData)
     {
         try

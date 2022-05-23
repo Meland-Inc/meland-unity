@@ -41,7 +41,7 @@ public partial class SceneEntityMgr : MonoBehaviour
     {
         if (_entityMap.ContainsKey(entityID))
         {
-            Log.Error($"Entity {entityID} already exist,type={entityType}", LogTag.ENTITY);
+            MLog.Error(eLogTag.entity, $"Entity {entityID} already exist,type={entityType}");
             RemoveSceneEntity(entityID);
         }
 
@@ -52,7 +52,7 @@ public partial class SceneEntityMgr : MonoBehaviour
         }
         catch (Exception e)
         {
-            Log.Error($"Entity {entityID} init failed,type={entityType},error={e}", LogTag.ENTITY);
+            MLog.Error(eLogTag.entity, $"Entity {entityID} init failed,type={entityType},error={e}");
         }
         _entityMap.Add(entityID, entity);
 
@@ -70,7 +70,7 @@ public partial class SceneEntityMgr : MonoBehaviour
     {
         if (!_entityMap.TryGetValue(entityID, out SceneEntity entity))
         {
-            Log.Error($"Entity {entityID} not exist", LogTag.ENTITY);
+            MLog.Error(eLogTag.entity, $"Entity {entityID} not exist");
             return;
         }
 
@@ -83,7 +83,7 @@ public partial class SceneEntityMgr : MonoBehaviour
         }
         catch (Exception e)
         {
-            Log.Error($"Entity {entityID} dispose failed,error={e}", LogTag.ENTITY);
+            MLog.Error(eLogTag.entity, $"Entity {entityID} dispose failed,error={e}");
         }
     }
 
@@ -97,7 +97,7 @@ public partial class SceneEntityMgr : MonoBehaviour
         SceneEntity oldRole = DataManager.MainPlayer.Role;
         if (oldRole != null)
         {
-            Log.Error($"add main role repeated,cur={oldRole.BaseData.ID} target={entityID}", LogTag.ENTITY);
+            MLog.Error(eLogTag.entity, $"add main role repeated,cur={oldRole.BaseData.ID} target={entityID}");
             RemoveMainPlayerRole();
         }
 

@@ -56,7 +56,6 @@ public class WebsocketNetworkChannel : INetworkChannel
         HeartBeatInterval = DEFAULT_HEART_BEAT_INTERVAL;
         SentPacketCount = 0;
         ReceivedPacketCount = 0;
-        RemoteAddress = string.Empty;
         HeartBeatElapseSeconds = 0f;
 
         NetworkChannelConnected = null;

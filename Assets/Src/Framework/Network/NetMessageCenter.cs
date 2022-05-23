@@ -15,21 +15,22 @@ public class NetMessageCenter : GameFrameworkComponent
     {
         InitChannel();
 
-        GFEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkConnectedEventArgs.EventId, OnNetworkConnected);
-        GFEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkClosedEventArgs.EventId, OnNetworkClosed);
-        GFEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs.EventId, OnNetworkMissHeartBeat);
-        GFEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkErrorEventArgs.EventId, OnNetworkError);
-        GFEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkCustomErrorEventArgs.EventId, OnNetworkCustomError);
+        EventComponent eventCom = GameEntry.GetComponent<EventComponent>();
+        eventCom.Subscribe(UnityGameFramework.Runtime.NetworkConnectedEventArgs.EventId, OnNetworkConnected);
+        eventCom.Subscribe(UnityGameFramework.Runtime.NetworkClosedEventArgs.EventId, OnNetworkClosed);
+        eventCom.Subscribe(UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs.EventId, OnNetworkMissHeartBeat);
+        eventCom.Subscribe(UnityGameFramework.Runtime.NetworkErrorEventArgs.EventId, OnNetworkError);
+        eventCom.Subscribe(UnityGameFramework.Runtime.NetworkCustomErrorEventArgs.EventId, OnNetworkCustomError);
     }
 
     private void OnDestroy()
     {
-
-        GFEntry.Event.Unsubscribe(UnityGameFramework.Runtime.NetworkConnectedEventArgs.EventId, OnNetworkConnected);
-        GFEntry.Event.Unsubscribe(UnityGameFramework.Runtime.NetworkClosedEventArgs.EventId, OnNetworkClosed);
-        GFEntry.Event.Unsubscribe(UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs.EventId, OnNetworkMissHeartBeat);
-        GFEntry.Event.Unsubscribe(UnityGameFramework.Runtime.NetworkErrorEventArgs.EventId, OnNetworkError);
-        GFEntry.Event.Unsubscribe(UnityGameFramework.Runtime.NetworkCustomErrorEventArgs.EventId, OnNetworkCustomError);
+        EventComponent eventCom = GameEntry.GetComponent<EventComponent>();
+        eventCom.Unsubscribe(UnityGameFramework.Runtime.NetworkConnectedEventArgs.EventId, OnNetworkConnected);
+        eventCom.Unsubscribe(UnityGameFramework.Runtime.NetworkClosedEventArgs.EventId, OnNetworkClosed);
+        eventCom.Unsubscribe(UnityGameFramework.Runtime.NetworkMissHeartBeatEventArgs.EventId, OnNetworkMissHeartBeat);
+        eventCom.Unsubscribe(UnityGameFramework.Runtime.NetworkErrorEventArgs.EventId, OnNetworkError);
+        eventCom.Unsubscribe(UnityGameFramework.Runtime.NetworkCustomErrorEventArgs.EventId, OnNetworkCustomError);
     }
 
     public void SendMsg(INetMsgAction action)
@@ -84,8 +85,14 @@ public class NetMessageCenter : GameFrameworkComponent
     {
         _channelMap = new();
         _channelSeqIdMap = new();
-
-        INetworkChannel channel = GFEntry.Network.CreateNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, ServiceType.Tcp, new GameChannelHelper());
+        NetworkComponent network = GameEntry.GetComponent<NetworkComponent>();
+#if UNITY_WEBGL
+        INetworkChannel channel = new WebsocketNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, new GameChannelHelper());
+        network.AddNetworkChannel(channel);
+#else
+        Log.Info("init socket io");
+        INetworkChannel channel = network.CreateNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, ServiceType.Tcp, new GameChannelHelper());
+#endif
         _channelMap.Add(NetworkDefine.CHANNEL_NAME_GAME, channel);
         channel.HeartBeatInterval = NetworkDefine.CHANEL_HEART_BRAT_INTERVAL; // 心跳间隔
     }

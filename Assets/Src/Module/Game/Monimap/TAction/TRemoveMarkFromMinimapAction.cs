@@ -2,15 +2,21 @@
 using Bian;
 using UnityGameFramework.Runtime;
 
-public class TRemoveMarkFromMinimapAction : GameChannelNetMsgTActionBase<Bian.RemoveMarkFromMiniMapResponse>
+public class TRemoveMarkFromMinimapAction : GameChannelNetMsgTActionBase<RemoveMarkFromMiniMapResponse>
 {
     protected override EnvelopeType GetEnvelopeType()
     {
-        return Bian.EnvelopeType.RemoveMarkFromMiniMap;
+        return EnvelopeType.RemoveMarkFromMiniMap;
     }
 
-    protected override void Receive(RemoveMarkFromMiniMapResponse rsp)
+    protected override bool Receive(int errorCode, string errorMsg, RemoveMarkFromMiniMapResponse rsp)
     {
-        Log.Debug("Receive");
+        if (!base.Receive(errorCode, errorMsg, rsp))
+        {
+            return false;
+        }
+
+        Log.Warning("<<< Receive TRemoveMarkFromMinimapAction");
+        return true;
     }
 }

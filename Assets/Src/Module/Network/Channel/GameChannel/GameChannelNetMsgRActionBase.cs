@@ -17,7 +17,11 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         BasicModule.NetMsgCenter.SendMsg(action);
     }
 
-    protected static TReq GetReq()
+    /// <summary>
+    /// 生成一个请求包
+    /// </summary>
+    /// <returns></returns>
+    protected static TReq GenerateReq()
     {
         return new TReq();
     }
@@ -46,7 +50,23 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         return packet;
     }
 
-    protected abstract void Receive(TRsp rsp, TReq req);
+    protected sealed override bool Receive(int errorCode, string errorMsg, TRsp rsp)
+    {
+        return base.Receive(errorCode, errorMsg, rsp);
+    }
+
+    /// <summary>
+    /// 接受到消息
+    /// </summary>
+    /// <param name="errorCode">错误码 特殊错误码可以查看ErrorCode</param>
+    /// <param name="errorMsg"></param>
+    /// <param name="rsp"></param>
+    /// <param name="req">当时请求的包</param>
+    /// <returns>是否成功</returns>
+    protected virtual bool Receive(int errorCode, string errorMsg, TRsp rsp, TReq req)
+    {
+        return Receive(errorCode, errorMsg, rsp);
+    }
 
     public override void Handle(object sender, Packet packet)
     {
@@ -61,8 +81,7 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
         string propertyName = envelope.PayloadCase.ToString();
         TRsp resp = (TRsp)envelope.GetType().GetProperty(propertyName).GetValue(envelope, null);
-        Receive(resp, req);
-
+        _ = Receive(envelope.ErrorCode, envelope.ErrorMessage, resp, req);
     }
 
     public override Packet GetReqPacket()

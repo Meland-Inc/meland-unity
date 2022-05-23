@@ -116,7 +116,7 @@ public class WebHttpNetworkChannel : INetworkChannel
             case UnityWebRequest.Result.ProtocolError:
                 break;
             case UnityWebRequest.Result.Success:
-                OnResponse(www.downloadHandler.text);
+                OnResponse(www);
                 break;
             case UnityWebRequest.Result.InProgress:
                 break;
@@ -125,18 +125,13 @@ public class WebHttpNetworkChannel : INetworkChannel
         }
     }
 
-    private void OnResponse(string strData)
+    private void OnResponse(UnityWebRequest www)
     {
-        HttpChannelRspPacket packet;
-        try
+        HttpChannelRspPacket packet = new()
         {
-            packet = JsonUtility.FromJson<HttpChannelRspPacket>(strData);
-        }
-        catch (Exception e)
-        {
-            Debug.LogError(e);
-            packet = new HttpChannelRspPacket();//empty packet
-        }
+            TextData = www.downloadHandler.text,
+            Url = www.url
+        };
         _receivePacketPool.Fire(this, packet);
     }
 
@@ -167,6 +162,14 @@ public class WebHttpNetworkChannel : INetworkChannel
     private UnityWebRequest RequestGet(HttpChannelReqPacket packet)
     {
         string url = packet.Url;
+        if (packet.Params != null)
+        {
+            url += "?";
+            foreach (KeyValuePair<string, string> item in packet.Params)
+            {
+                url += item.Key + "=" + item.Value + "&";
+            }
+        }
         UnityWebRequest www = UnityWebRequest.Get(url);
         return www;
     }

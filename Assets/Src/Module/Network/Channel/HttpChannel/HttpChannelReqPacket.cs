@@ -10,13 +10,7 @@ public class HttpChannelReqPacket : Packet
     public KeyValuePair<string, string>[] FormData;
     public KeyValuePair<string, string>[] Headers;
     public string DataStr;
-    public override int Id => _id;
-    private int _id;
-
-    public void SetID(int id)
-    {
-        _id = id;
-    }
+    public override int Id => Url.GetHashCode();
     public override void Clear()
     {
 

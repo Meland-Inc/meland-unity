@@ -17,7 +17,7 @@ public class WebsocketNetworkChannel : INetworkChannel
 
     public string LocalAddress => "None";
 
-    public string RemoteAddress { get; }
+    public string RemoteAddress => _socket != null ? _socket.Address : "None";
 
     public bool Connected => _socket != null && _socket.ReadyState == WebSocketState.Open;
 

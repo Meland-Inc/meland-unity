@@ -59,7 +59,7 @@ public class SceneSwitchProcedure : ProcedureBase
         }
         else
         {
-            Log.Fatal($"SceneSwitchProcedure::onLoadSceneSuccess: scene name error cur={model.CurSceneResName} load={loadedScene}", LogTag.SCENE);
+            MLog.Fatal(eLogTag.scene, $"SceneSwitchProcedure::onLoadSceneSuccess: scene name error cur={model.CurSceneResName} load={loadedScene}");
             _isSceneLoadFinish = true;
         }
     }

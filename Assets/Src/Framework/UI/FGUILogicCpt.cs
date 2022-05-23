@@ -23,36 +23,12 @@ public abstract class FGUILogicCpt : MonoBehaviour
     }
     public virtual void OnOpen()
     {
-        FGUILogicCpt[] cpts = gameObject.GetComponentsInChildren<FGUILogicCpt>();
-        if (cpts != null)
-        {
-            int len = cpts.Length;
-            for (int i = 0; i < len; i++)
-            {
-                if (cpts[i] == this)//GetComponentsInChildren会把当前gameObject上的FGUILogicCpt也获取到，这里要判断一下避免死循环
-                {
-                    continue;
-                }
-                cpts[i].OnOpen();
-            }
-        }
+        //
     }
 
     public virtual void OnClose()
     {
-        FGUILogicCpt[] cpts = gameObject.GetComponentsInChildren<FGUILogicCpt>();
-        if (cpts != null)
-        {
-            int len = cpts.Length;
-            for (int i = 0; i < len; i++)
-            {
-                if (cpts[i] == this)//GetComponentsInChildren会把当前gameObject上的FGUILogicCpt也获取到，这里要判断一下避免死循环
-                {
-                    continue;
-                }
-                cpts[i].OnClose();
-            }
-        }
+        //
     }
 
     public virtual void OnPause()

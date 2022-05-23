@@ -28,6 +28,8 @@ public class SceneEntityRenderBase : EntityLogic
             throw new System.Exception($"EntityLogic Can not find scene entity '{data.SceneEntityID}'.");
         }
 
+        gameObject.SetActive(true);
+
         SetSceneEntityInfo(sceneEntity);
         sceneEntity.SetSurface(Entity);
     }
@@ -39,6 +41,8 @@ public class SceneEntityRenderBase : EntityLogic
 
         RefSceneEntity = null;
         SceneEntityID = null;
+
+        gameObject.SetActive(false);
 
         base.OnRecycle();
     }

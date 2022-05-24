@@ -1,7 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using GameFramework.Network;
-public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction where TReq : new() where TRsp : class
+using HttpPacketDefine;
+using UnityEngine;
+
+public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction where TReq : new() where TRsp : HttpRspBase, new()
 {
     public int Id => _reqPacket.Id;
     public string ChannelName => NetworkDefine.CHANEL_NAME_HTTP;
@@ -57,13 +61,22 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
     public virtual void Handle(object sender, Packet packet)
     {
         (sender as INetworkChannel).UnRegisterHandler(this);
-        TRsp rsp = (packet as HttpChannelRspPacket).data as TRsp;
-        Receive(rsp, _req);
+        string textData = (packet as HttpChannelRspPacket).TextData;
+        TRsp rspPacket = JsonUtility.FromJson<TRsp>(textData);
+        try
+        {
+            Receive(rspPacket, _req);
+        }
+        catch (Exception e)
+        {
+            MLog.Error(eLogTag.network, e.Message);
+            Receive(null, _req);
+        }
     }
 
     public void InitSeqId(int id)
     {
-        _reqPacket.SetID(id);
+        // empty
     }
 
     protected abstract void Receive(TRsp rsp, TReq req);

@@ -14,7 +14,7 @@ public abstract class ChannelPacket<T> : Packet where T : class
 
     public override void Clear()
     {
-        TransferData = null;
+        //to do
     }
 
     public abstract void SetTransferDataSeqId(int id);

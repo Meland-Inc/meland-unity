@@ -80,12 +80,15 @@ namespace Bian {
             "ZXNvdXJjZXNGaWxlEhMKC3RlbXBsYXRlX2lkGAEgASgJEiwKDXRlbXBsYXRl",
             "X3R5cGUYAiABKA4yFS5CaWFuLk1hcFRlbXBsYXRlVHlwZRImCgxsZXNzb25N",
             "YXBSZXMYAyADKAsyEC5CaWFuLk1hcEFyZWFSZXMSJgoMTm9ybWFsTWFwUmVz",
-            "GAQgAygLMhAuQmlhbi5NYXBBcmVhUmVzKpMBCg1NYXBTYXZlU291cmNlEhcK",
-            "E01hcFNhdmVTb3VyY2VVbmtub3cQABIXChNNYXBTYXZlU291cmNlUGxheWVy",
-            "EAESGQoVTWFwU2F2ZVNvdXJjZUF1dG9TYXZlEAISFwoTTWFwU2F2ZVNvdXJj",
-            "ZVNpZ25VcBADEhwKGE1hcFNhdmVTb3VyY2VDbG9zZVNlcnZlchAEKkIKD01h",
-            "cFRlbXBsYXRlU2l6ZRIPCgtVbmtub3duU2l6ZRAAEgcKA0JpZxABEgoKBk1p",
-            "ZGRsZRACEgkKBVNtYWxsEAMqjwEKClRhZ01hcFR5cGUSHgoaVGFnTWFwVHlw",
+            "GAQgAygLMhAuQmlhbi5NYXBBcmVhUmVzKtkBCg1NYXBTYXZlU291cmNlEiUK",
+            "IU1hcFNhdmVTb3VyY2VfTWFwU2F2ZVNvdXJjZVVua25vdxAAEiUKIU1hcFNh",
+            "dmVTb3VyY2VfTWFwU2F2ZVNvdXJjZVBsYXllchABEicKI01hcFNhdmVTb3Vy",
+            "Y2VfTWFwU2F2ZVNvdXJjZUF1dG9TYXZlEAISJQohTWFwU2F2ZVNvdXJjZV9N",
+            "YXBTYXZlU291cmNlU2lnblVwEAMSKgomTWFwU2F2ZVNvdXJjZV9NYXBTYXZl",
+            "U291cmNlQ2xvc2VTZXJ2ZXIQBCqCAQoPTWFwVGVtcGxhdGVTaXplEh8KG01h",
+            "cFRlbXBsYXRlU2l6ZV9Vbmtub3duU2l6ZRAAEhcKE01hcFRlbXBsYXRlU2l6",
+            "ZV9CaWcQARIaChZNYXBUZW1wbGF0ZVNpemVfTWlkZGxlEAISGQoVTWFwVGVt",
+            "cGxhdGVTaXplX1NtYWxsEAMqjwEKClRhZ01hcFR5cGUSHgoaVGFnTWFwVHlw",
             "ZV9NYXBUZW1wbGF0ZVNlbGYQABIdChlUYWdNYXBUeXBlX01hcFRlbXBsYXRl",
             "TmV3EAESHQoZVGFnTWFwVHlwZV9NYXBUZW1wbGF0ZUhvdBACEiMKH1RhZ01h",
             "cFR5cGVfTWFwVGVtcGxhdGVSZWNvbW1lbmQQAypnCg9NYXBUZW1wbGF0ZVR5",
@@ -136,30 +139,30 @@ namespace Bian {
     /// <summary>
     /// 无效
     /// </summary>
-    [pbr::OriginalName("MapSaveSourceUnknow")] Unknow = 0,
+    [pbr::OriginalName("MapSaveSource_MapSaveSourceUnknow")] MapSaveSourceUnknow = 0,
     /// <summary>
     /// 玩家点击保存
     /// </summary>
-    [pbr::OriginalName("MapSaveSourcePlayer")] Player = 1,
+    [pbr::OriginalName("MapSaveSource_MapSaveSourcePlayer")] MapSaveSourcePlayer = 1,
     /// <summary>
     /// 服务器自动存储
     /// </summary>
-    [pbr::OriginalName("MapSaveSourceAutoSave")] AutoSave = 2,
+    [pbr::OriginalName("MapSaveSource_MapSaveSourceAutoSave")] MapSaveSourceAutoSave = 2,
     /// <summary>
     /// 玩家退出
     /// </summary>
-    [pbr::OriginalName("MapSaveSourceSignUp")] SignUp = 3,
+    [pbr::OriginalName("MapSaveSource_MapSaveSourceSignUp")] MapSaveSourceSignUp = 3,
     /// <summary>
     /// 关闭服务器强制保存
     /// </summary>
-    [pbr::OriginalName("MapSaveSourceCloseServer")] CloseServer = 4,
+    [pbr::OriginalName("MapSaveSource_MapSaveSourceCloseServer")] MapSaveSourceCloseServer = 4,
   }
 
   public enum MapTemplateSize {
-    [pbr::OriginalName("UnknownSize")] UnknownSize = 0,
-    [pbr::OriginalName("Big")] Big = 1,
-    [pbr::OriginalName("Middle")] Middle = 2,
-    [pbr::OriginalName("Small")] Small = 3,
+    [pbr::OriginalName("MapTemplateSize_UnknownSize")] UnknownSize = 0,
+    [pbr::OriginalName("MapTemplateSize_Big")] Big = 1,
+    [pbr::OriginalName("MapTemplateSize_Middle")] Middle = 2,
+    [pbr::OriginalName("MapTemplateSize_Small")] Small = 3,
   }
 
   /// <summary>

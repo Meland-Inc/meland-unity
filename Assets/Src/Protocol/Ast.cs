@@ -298,42 +298,51 @@ namespace Bian {
             "K0ludGVycHJldGVyU3RhdHVzX0ludGVycHJldGVyU3RhdHVzQmxvY2tpbmcQ",
             "AxIuCipJbnRlcnByZXRlclN0YXR1c19JbnRlcnByZXRlclN0YXR1c1N1c3Bl",
             "bmQQBBItCilJbnRlcnByZXRlclN0YXR1c19JbnRlcnByZXRlclN0YXR1c0Zp",
-            "bmlzaBAFKkMKDkNvZGVCbG9ja1N0YXRlEhYKEkNvZGVCbG9ja1N0YXRlU3Rv",
-            "cBAAEhkKFUNvZGVCbG9ja1N0YXRlUnVubmluZxABKpABChJDb2RlQmxvY2tU",
-            "YWJTdGF0dXMSHQoZQ29kZUJsb2NrVGFiU3RhdHVzRGlzcGxheRAAEiAKHENv",
-            "ZGVCbG9ja1RhYlN0YXR1c0FjdGl2YXRpb24QARIaChZDb2RlQmxvY2tUYWJT",
-            "dGF0dXNIaWRlEAISHQoZQ29kZUJsb2NrVGFiU3RhdHVzRGlzYWJsZRADKnoK",
-            "C0NvZGVUYWJUeXBlEiIKHkNvZGVUYWJUeXBlX0NvZGVUYWJUeXBlVW5rbm93",
-            "bhAAEiEKHUNvZGVUYWJUeXBlX0NvZGVUYWJUeXBlTm9ybWFsEAESJAogQ29k",
-            "ZVRhYlR5cGVfQ29kZVRhYlR5cGVRdWlja0NvZGUQAirLAQoQQ29kZVF1ZXN0",
-            "aW9uVHlwZRIsCihDb2RlUXVlc3Rpb25UeXBlX0NvZGVRdWVzdGlvblR5cGVV",
-            "bmtub3duEAASLQopQ29kZVF1ZXN0aW9uVHlwZV9Db2RlUXVlc3Rpb25UeXBl",
-            "U2hvd1RleHQQARItCilDb2RlUXVlc3Rpb25UeXBlX0NvZGVRdWVzdGlvblR5",
-            "cGVRdWVzdGlvbhACEisKJ0NvZGVRdWVzdGlvblR5cGVfQ29kZVF1ZXN0aW9u",
-            "VHlwZU9wdGlvbhADKrsBChRDb2RlUXVlc3Rpb25TaG93VHlwZRIeChpDb2Rl",
-            "UXVlc3Rpb25TaG93VHlwZVNjcmVlbhAAEh0KGUNvZGVRdWVzdGlvblNob3dU",
-            "eXBlU2NlbmUQARIbChdDb2RlUXVlc3Rpb25TaG93VHlwZVRvcBACEh0KGUNv",
-            "ZGVRdWVzdGlvblNob3dUeXBlU2hvdXQQAxIoCiRDb2RlUXVlc3Rpb25TaG93",
-            "VHlwZUhhcmR3YXJlUXVlc3Rpb24QBCqWAQoRT3BlcmF0ZUJ1YmJsZVR5cGUS",
-            "HQoZT3BlcmF0ZUJ1YmJsZVR5cGVfQWRkSXRlbRAAEh4KGk9wZXJhdGVCdWJi",
-            "bGVUeXBlX1Rha2VJdGVtEAESIQodT3BlcmF0ZUJ1YmJsZVR5cGVfUmVwbGFj",
-            "ZUl0ZW0QAhIfChtPcGVyYXRlQnViYmxlVHlwZV9DdXN0b21pemUQAyppChFP",
-            "cGVyYXRlQnViYmxlU2l6ZRIbChdPcGVyYXRlQnViYmxlU2l6ZV9TbWFsbBAA",
-            "EhwKGE9wZXJhdGVCdWJibGVTaXplX05vcm1hbBABEhkKFU9wZXJhdGVCdWJi",
-            "bGVTaXplX0JpZxACKmYKEE9wZXJhdGVCdWJibGVQb3MSGQoVT3BlcmF0ZUJ1",
-            "YmJsZVBvc19MaWZlEAASGwoXT3BlcmF0ZUJ1YmJsZVBvc19NaWRkbGUQARIa",
-            "ChZPcGVyYXRlQnViYmxlUG9zX1JpZ2h0EAIq8gMKD1JlY29nbml0aW9uTW9k",
-            "ZRIwCixSZWNvZ25pdGlvbk1vZGVfUmVjb2duaXRpb25fTW9kZV9UcHllX1Vu",
-            "a293bhAAEi0KKVJlY29nbml0aW9uTW9kZV9SZWNvZ25pdGlvbl9Nb2RlX1Rw",
-            "eWVfT25lEAESLQopUmVjb2duaXRpb25Nb2RlX1JlY29nbml0aW9uX01vZGVf",
-            "VHB5ZV9Ud28QAhIvCitSZWNvZ25pdGlvbk1vZGVfUmVjb2duaXRpb25fTW9k",
-            "ZV9UcHllX1RocmVlEAMSLgoqUmVjb2duaXRpb25Nb2RlX1JlY29nbml0aW9u",
-            "X01vZGVfVHB5ZV9Gb3VyEAQSLgoqUmVjb2duaXRpb25Nb2RlX1JlY29nbml0",
-            "aW9uX01vZGVfVHB5ZV9GaXZlEAUSLQopUmVjb2duaXRpb25Nb2RlX1JlY29n",
-            "bml0aW9uX01vZGVfVHB5ZV9TaXgQBhIvCitSZWNvZ25pdGlvbk1vZGVfUmVj",
-            "b2duaXRpb25fTW9kZV9UcHllX1NldmVuEAcSLworUmVjb2duaXRpb25Nb2Rl",
-            "X1JlY29nbml0aW9uX01vZGVfVHB5ZV9FaWdodBAIEi0KKVJlY29nbml0aW9u",
-            "TW9kZV9SZWNvZ25pdGlvbl9Nb2RlX1RweWVfQWxsEAliBnByb3RvMw=="));
+            "bmlzaBAFKmEKDkNvZGVCbG9ja1N0YXRlEiUKIUNvZGVCbG9ja1N0YXRlX0Nv",
+            "ZGVCbG9ja1N0YXRlU3RvcBAAEigKJENvZGVCbG9ja1N0YXRlX0NvZGVCbG9j",
+            "a1N0YXRlUnVubmluZxABKtwBChJDb2RlQmxvY2tUYWJTdGF0dXMSMAosQ29k",
+            "ZUJsb2NrVGFiU3RhdHVzX0NvZGVCbG9ja1RhYlN0YXR1c0Rpc3BsYXkQABIz",
+            "Ci9Db2RlQmxvY2tUYWJTdGF0dXNfQ29kZUJsb2NrVGFiU3RhdHVzQWN0aXZh",
+            "dGlvbhABEi0KKUNvZGVCbG9ja1RhYlN0YXR1c19Db2RlQmxvY2tUYWJTdGF0",
+            "dXNIaWRlEAISMAosQ29kZUJsb2NrVGFiU3RhdHVzX0NvZGVCbG9ja1RhYlN0",
+            "YXR1c0Rpc2FibGUQAyp6CgtDb2RlVGFiVHlwZRIiCh5Db2RlVGFiVHlwZV9D",
+            "b2RlVGFiVHlwZVVua25vd24QABIhCh1Db2RlVGFiVHlwZV9Db2RlVGFiVHlw",
+            "ZU5vcm1hbBABEiQKIENvZGVUYWJUeXBlX0NvZGVUYWJUeXBlUXVpY2tDb2Rl",
+            "EAIqywEKEENvZGVRdWVzdGlvblR5cGUSLAooQ29kZVF1ZXN0aW9uVHlwZV9D",
+            "b2RlUXVlc3Rpb25UeXBlVW5rbm93bhAAEi0KKUNvZGVRdWVzdGlvblR5cGVf",
+            "Q29kZVF1ZXN0aW9uVHlwZVNob3dUZXh0EAESLQopQ29kZVF1ZXN0aW9uVHlw",
+            "ZV9Db2RlUXVlc3Rpb25UeXBlUXVlc3Rpb24QAhIrCidDb2RlUXVlc3Rpb25U",
+            "eXBlX0NvZGVRdWVzdGlvblR5cGVPcHRpb24QAyqkAgoUQ29kZVF1ZXN0aW9u",
+            "U2hvd1R5cGUSMwovQ29kZVF1ZXN0aW9uU2hvd1R5cGVfQ29kZVF1ZXN0aW9u",
+            "U2hvd1R5cGVTY3JlZW4QABIyCi5Db2RlUXVlc3Rpb25TaG93VHlwZV9Db2Rl",
+            "UXVlc3Rpb25TaG93VHlwZVNjZW5lEAESMAosQ29kZVF1ZXN0aW9uU2hvd1R5",
+            "cGVfQ29kZVF1ZXN0aW9uU2hvd1R5cGVUb3AQAhIyCi5Db2RlUXVlc3Rpb25T",
+            "aG93VHlwZV9Db2RlUXVlc3Rpb25TaG93VHlwZVNob3V0EAMSPQo5Q29kZVF1",
+            "ZXN0aW9uU2hvd1R5cGVfQ29kZVF1ZXN0aW9uU2hvd1R5cGVIYXJkd2FyZVF1",
+            "ZXN0aW9uEAQq3gEKEU9wZXJhdGVCdWJibGVUeXBlEi8KK09wZXJhdGVCdWJi",
+            "bGVUeXBlX09wZXJhdGVCdWJibGVUeXBlX0FkZEl0ZW0QABIwCixPcGVyYXRl",
+            "QnViYmxlVHlwZV9PcGVyYXRlQnViYmxlVHlwZV9UYWtlSXRlbRABEjMKL09w",
+            "ZXJhdGVCdWJibGVUeXBlX09wZXJhdGVCdWJibGVUeXBlX1JlcGxhY2VJdGVt",
+            "EAISMQotT3BlcmF0ZUJ1YmJsZVR5cGVfT3BlcmF0ZUJ1YmJsZVR5cGVfQ3Vz",
+            "dG9taXplEAMqnwEKEU9wZXJhdGVCdWJibGVTaXplEi0KKU9wZXJhdGVCdWJi",
+            "bGVTaXplX09wZXJhdGVCdWJibGVTaXplX1NtYWxsEAASLgoqT3BlcmF0ZUJ1",
+            "YmJsZVNpemVfT3BlcmF0ZUJ1YmJsZVNpemVfTm9ybWFsEAESKwonT3BlcmF0",
+            "ZUJ1YmJsZVNpemVfT3BlcmF0ZUJ1YmJsZVNpemVfQmlnEAIqmQEKEE9wZXJh",
+            "dGVCdWJibGVQb3MSKgomT3BlcmF0ZUJ1YmJsZVBvc19PcGVyYXRlQnViYmxl",
+            "UG9zX0xpZmUQABIsCihPcGVyYXRlQnViYmxlUG9zX09wZXJhdGVCdWJibGVQ",
+            "b3NfTWlkZGxlEAESKwonT3BlcmF0ZUJ1YmJsZVBvc19PcGVyYXRlQnViYmxl",
+            "UG9zX1JpZ2h0EAIq8gMKD1JlY29nbml0aW9uTW9kZRIwCixSZWNvZ25pdGlv",
+            "bk1vZGVfUmVjb2duaXRpb25fTW9kZV9UcHllX1Vua293bhAAEi0KKVJlY29n",
+            "bml0aW9uTW9kZV9SZWNvZ25pdGlvbl9Nb2RlX1RweWVfT25lEAESLQopUmVj",
+            "b2duaXRpb25Nb2RlX1JlY29nbml0aW9uX01vZGVfVHB5ZV9Ud28QAhIvCitS",
+            "ZWNvZ25pdGlvbk1vZGVfUmVjb2duaXRpb25fTW9kZV9UcHllX1RocmVlEAMS",
+            "LgoqUmVjb2duaXRpb25Nb2RlX1JlY29nbml0aW9uX01vZGVfVHB5ZV9Gb3Vy",
+            "EAQSLgoqUmVjb2duaXRpb25Nb2RlX1JlY29nbml0aW9uX01vZGVfVHB5ZV9G",
+            "aXZlEAUSLQopUmVjb2duaXRpb25Nb2RlX1JlY29nbml0aW9uX01vZGVfVHB5",
+            "ZV9TaXgQBhIvCitSZWNvZ25pdGlvbk1vZGVfUmVjb2duaXRpb25fTW9kZV9U",
+            "cHllX1NldmVuEAcSLworUmVjb2duaXRpb25Nb2RlX1JlY29nbml0aW9uX01v",
+            "ZGVfVHB5ZV9FaWdodBAIEi0KKVJlY29nbml0aW9uTW9kZV9SZWNvZ25pdGlv",
+            "bl9Nb2RlX1RweWVfQWxsEAliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Bian.EntityProfileFieldReflection.Descriptor, global::Bian.TypeDefineReflection.Descriptor, global::Bian.MissionReflection.Descriptor, global::Bian.AudioReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.CodeStatus), typeof(global::Bian.EventType), typeof(global::Bian.ExprType), typeof(global::Bian.UnaryOp), typeof(global::Bian.BinaryOp), typeof(global::Bian.StatementType), typeof(global::Bian.FunctionScope), typeof(global::Bian.InterpreterStatus), typeof(global::Bian.CodeBlockState), typeof(global::Bian.CodeBlockTabStatus), typeof(global::Bian.CodeTabType), typeof(global::Bian.CodeQuestionType), typeof(global::Bian.CodeQuestionShowType), typeof(global::Bian.OperateBubbleType), typeof(global::Bian.OperateBubbleSize), typeof(global::Bian.OperateBubblePos), typeof(global::Bian.RecognitionMode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -578,8 +587,8 @@ namespace Bian {
   }
 
   public enum CodeBlockState {
-    [pbr::OriginalName("CodeBlockStateStop")] Stop = 0,
-    [pbr::OriginalName("CodeBlockStateRunning")] Running = 1,
+    [pbr::OriginalName("CodeBlockState_CodeBlockStateStop")] CodeBlockStateStop = 0,
+    [pbr::OriginalName("CodeBlockState_CodeBlockStateRunning")] CodeBlockStateRunning = 1,
   }
 
   /// <summary>
@@ -589,19 +598,19 @@ namespace Bian {
     /// <summary>
     /// 显示
     /// </summary>
-    [pbr::OriginalName("CodeBlockTabStatusDisplay")] Display = 0,
+    [pbr::OriginalName("CodeBlockTabStatus_CodeBlockTabStatusDisplay")] CodeBlockTabStatusDisplay = 0,
     /// <summary>
     /// 激活
     /// </summary>
-    [pbr::OriginalName("CodeBlockTabStatusActivation")] Activation = 1,
+    [pbr::OriginalName("CodeBlockTabStatus_CodeBlockTabStatusActivation")] CodeBlockTabStatusActivation = 1,
     /// <summary>
     /// 隐藏
     /// </summary>
-    [pbr::OriginalName("CodeBlockTabStatusHide")] Hide = 2,
+    [pbr::OriginalName("CodeBlockTabStatus_CodeBlockTabStatusHide")] CodeBlockTabStatusHide = 2,
     /// <summary>
     /// 禁用
     /// </summary>
-    [pbr::OriginalName("CodeBlockTabStatusDisable")] Disable = 3,
+    [pbr::OriginalName("CodeBlockTabStatus_CodeBlockTabStatusDisable")] CodeBlockTabStatusDisable = 3,
   }
 
   public enum CodeTabType {
@@ -639,72 +648,72 @@ namespace Bian {
     /// <summary>
     /// 普通对话
     /// </summary>
-    [pbr::OriginalName("CodeQuestionShowTypeScreen")] Screen = 0,
+    [pbr::OriginalName("CodeQuestionShowType_CodeQuestionShowTypeScreen")] CodeQuestionShowTypeScreen = 0,
     /// <summary>
     /// 场景对话
     /// </summary>
-    [pbr::OriginalName("CodeQuestionShowTypeScene")] Scene = 1,
+    [pbr::OriginalName("CodeQuestionShowType_CodeQuestionShowTypeScene")] CodeQuestionShowTypeScene = 1,
     /// <summary>
     /// 顶部对话
     /// </summary>
-    [pbr::OriginalName("CodeQuestionShowTypeTop")] Top = 2,
+    [pbr::OriginalName("CodeQuestionShowType_CodeQuestionShowTypeTop")] CodeQuestionShowTypeTop = 2,
     /// <summary>
     /// 大喊
     /// </summary>
-    [pbr::OriginalName("CodeQuestionShowTypeShout")] Shout = 3,
+    [pbr::OriginalName("CodeQuestionShowType_CodeQuestionShowTypeShout")] CodeQuestionShowTypeShout = 3,
     /// <summary>
     /// 硬件的问题
     /// </summary>
-    [pbr::OriginalName("CodeQuestionShowTypeHardwareQuestion")] HardwareQuestion = 4,
+    [pbr::OriginalName("CodeQuestionShowType_CodeQuestionShowTypeHardwareQuestion")] CodeQuestionShowTypeHardwareQuestion = 4,
   }
 
   public enum OperateBubbleType {
     /// <summary>
     /// 获取道具气泡
     /// </summary>
-    [pbr::OriginalName("OperateBubbleType_AddItem")] AddItem = 0,
+    [pbr::OriginalName("OperateBubbleType_OperateBubbleType_AddItem")] OperateBubbleTypeAddItem = 0,
     /// <summary>
     /// 给予道具气泡
     /// </summary>
-    [pbr::OriginalName("OperateBubbleType_TakeItem")] TakeItem = 1,
+    [pbr::OriginalName("OperateBubbleType_OperateBubbleType_TakeItem")] OperateBubbleTypeTakeItem = 1,
     /// <summary>
     /// 交换道具气泡
     /// </summary>
-    [pbr::OriginalName("OperateBubbleType_ReplaceItem")] ReplaceItem = 2,
+    [pbr::OriginalName("OperateBubbleType_OperateBubbleType_ReplaceItem")] OperateBubbleTypeReplaceItem = 2,
     /// <summary>
     /// 自定义气泡
     /// </summary>
-    [pbr::OriginalName("OperateBubbleType_Customize")] Customize = 3,
+    [pbr::OriginalName("OperateBubbleType_OperateBubbleType_Customize")] OperateBubbleTypeCustomize = 3,
   }
 
   public enum OperateBubbleSize {
     /// <summary>
     /// 气泡尺寸(小)
     /// </summary>
-    [pbr::OriginalName("OperateBubbleSize_Small")] Small = 0,
+    [pbr::OriginalName("OperateBubbleSize_OperateBubbleSize_Small")] OperateBubbleSizeSmall = 0,
     /// <summary>
     /// 气泡尺寸(中)
     /// </summary>
-    [pbr::OriginalName("OperateBubbleSize_Normal")] Normal = 1,
+    [pbr::OriginalName("OperateBubbleSize_OperateBubbleSize_Normal")] OperateBubbleSizeNormal = 1,
     /// <summary>
     /// 气泡尺寸(大)
     /// </summary>
-    [pbr::OriginalName("OperateBubbleSize_Big")] Big = 2,
+    [pbr::OriginalName("OperateBubbleSize_OperateBubbleSize_Big")] OperateBubbleSizeBig = 2,
   }
 
   public enum OperateBubblePos {
     /// <summary>
     /// 左
     /// </summary>
-    [pbr::OriginalName("OperateBubblePos_Life")] Life = 0,
+    [pbr::OriginalName("OperateBubblePos_OperateBubblePos_Life")] OperateBubblePosLife = 0,
     /// <summary>
     /// 中
     /// </summary>
-    [pbr::OriginalName("OperateBubblePos_Middle")] Middle = 1,
+    [pbr::OriginalName("OperateBubblePos_OperateBubblePos_Middle")] OperateBubblePosMiddle = 1,
     /// <summary>
     /// 右
     /// </summary>
-    [pbr::OriginalName("OperateBubblePos_Right")] Right = 2,
+    [pbr::OriginalName("OperateBubblePos_OperateBubblePos_Right")] OperateBubblePosRight = 2,
   }
 
   /// <summary>
@@ -9501,7 +9510,7 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble_type" field.</summary>
     public const int BubbleTypeFieldNumber = 1;
-    private global::Bian.OperateBubbleType bubbleType_ = global::Bian.OperateBubbleType.AddItem;
+    private global::Bian.OperateBubbleType bubbleType_ = global::Bian.OperateBubbleType.OperateBubbleTypeAddItem;
     /// <summary>
     /// 气泡类型
     /// </summary>
@@ -9516,7 +9525,7 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble_pos" field.</summary>
     public const int BubblePosFieldNumber = 2;
-    private global::Bian.OperateBubblePos bubblePos_ = global::Bian.OperateBubblePos.Life;
+    private global::Bian.OperateBubblePos bubblePos_ = global::Bian.OperateBubblePos.OperateBubblePosLife;
     /// <summary>
     /// 气泡显示位置
     /// </summary>
@@ -9531,7 +9540,7 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble_size" field.</summary>
     public const int BubbleSizeFieldNumber = 3;
-    private global::Bian.OperateBubbleSize bubbleSize_ = global::Bian.OperateBubbleSize.Small;
+    private global::Bian.OperateBubbleSize bubbleSize_ = global::Bian.OperateBubbleSize.OperateBubbleSizeSmall;
     /// <summary>
     /// 气泡尺寸
     /// </summary>
@@ -9617,9 +9626,9 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) hash ^= BubbleType.GetHashCode();
-      if (BubblePos != global::Bian.OperateBubblePos.Life) hash ^= BubblePos.GetHashCode();
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) hash ^= BubbleSize.GetHashCode();
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) hash ^= BubbleType.GetHashCode();
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) hash ^= BubblePos.GetHashCode();
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) hash ^= BubbleSize.GetHashCode();
       if (addItem_ != null) hash ^= AddItem.GetHashCode();
       if (takeItem_ != null) hash ^= TakeItem.GetHashCode();
       if (replaceItem_ != null) hash ^= ReplaceItem.GetHashCode();
@@ -9641,15 +9650,15 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         output.WriteRawTag(8);
         output.WriteEnum((int) BubbleType);
       }
-      if (BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         output.WriteRawTag(16);
         output.WriteEnum((int) BubblePos);
       }
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         output.WriteRawTag(24);
         output.WriteEnum((int) BubbleSize);
       }
@@ -9675,15 +9684,15 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         output.WriteRawTag(8);
         output.WriteEnum((int) BubbleType);
       }
-      if (BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         output.WriteRawTag(16);
         output.WriteEnum((int) BubblePos);
       }
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         output.WriteRawTag(24);
         output.WriteEnum((int) BubbleSize);
       }
@@ -9709,13 +9718,13 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BubbleType);
       }
-      if (BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BubblePos);
       }
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BubbleSize);
       }
       if (addItem_ != null) {
@@ -9739,13 +9748,13 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (other.BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         BubbleType = other.BubbleType;
       }
-      if (other.BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (other.BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         BubblePos = other.BubblePos;
       }
-      if (other.BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (other.BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         BubbleSize = other.BubbleSize;
       }
       if (other.addItem_ != null) {
@@ -15350,7 +15359,7 @@ namespace Bian {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 6;
-    private global::Bian.CodeBlockState status_ = global::Bian.CodeBlockState.Stop;
+    private global::Bian.CodeBlockState status_ = global::Bian.CodeBlockState.CodeBlockStateStop;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.CodeBlockState Status {
@@ -15406,7 +15415,7 @@ namespace Bian {
       if (IsGlobal != false) hash ^= IsGlobal.GetHashCode();
       hash ^= args_.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Status != global::Bian.CodeBlockState.Stop) hash ^= Status.GetHashCode();
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) hash ^= Status.GetHashCode();
       if (RelevanceConfId != 0) hash ^= RelevanceConfId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -15443,7 +15452,7 @@ namespace Bian {
         output.WriteRawTag(40);
         output.WriteInt32(Id);
       }
-      if (Status != global::Bian.CodeBlockState.Stop) {
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
@@ -15478,7 +15487,7 @@ namespace Bian {
         output.WriteRawTag(40);
         output.WriteInt32(Id);
       }
-      if (Status != global::Bian.CodeBlockState.Stop) {
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
@@ -15509,7 +15518,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Status != global::Bian.CodeBlockState.Stop) {
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (RelevanceConfId != 0) {
@@ -15540,7 +15549,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Status != global::Bian.CodeBlockState.Stop) {
+      if (other.Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         Status = other.Status;
       }
       if (other.RelevanceConfId != 0) {
@@ -16849,7 +16858,7 @@ namespace Bian {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 2;
-    private global::Bian.CodeBlockState status_ = global::Bian.CodeBlockState.Stop;
+    private global::Bian.CodeBlockState status_ = global::Bian.CodeBlockState.CodeBlockStateStop;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.CodeBlockState Status {
@@ -16884,7 +16893,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Status != global::Bian.CodeBlockState.Stop) hash ^= Status.GetHashCode();
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -16907,7 +16916,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Status != global::Bian.CodeBlockState.Stop) {
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
@@ -16925,7 +16934,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Status != global::Bian.CodeBlockState.Stop) {
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
@@ -16942,7 +16951,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Status != global::Bian.CodeBlockState.Stop) {
+      if (Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -16960,7 +16969,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Status != global::Bian.CodeBlockState.Stop) {
+      if (other.Status != global::Bian.CodeBlockState.CodeBlockStateStop) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -17109,7 +17118,7 @@ namespace Bian {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 3;
-    private global::Bian.CodeBlockTabStatus status_ = global::Bian.CodeBlockTabStatus.Display;
+    private global::Bian.CodeBlockTabStatus status_ = global::Bian.CodeBlockTabStatus.CodeBlockTabStatusDisplay;
     /// <summary>
     /// 状态(系统预留 CodeBlockTabStatusDisplay 给老数据使用)
     /// </summary>
@@ -17319,7 +17328,7 @@ namespace Bian {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Status != global::Bian.CodeBlockTabStatus.Display) hash ^= Status.GetHashCode();
+      if (Status != global::Bian.CodeBlockTabStatus.CodeBlockTabStatusDisplay) hash ^= Status.GetHashCode();
       hash ^= canUseCode_.GetHashCode();
       hash ^= drivers_.GetHashCode();
       hash ^= statementFragments_.GetHashCode();
@@ -17358,7 +17367,7 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (Status != global::Bian.CodeBlockTabStatus.Display) {
+      if (Status != global::Bian.CodeBlockTabStatus.CodeBlockTabStatusDisplay) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
@@ -17407,7 +17416,7 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (Status != global::Bian.CodeBlockTabStatus.Display) {
+      if (Status != global::Bian.CodeBlockTabStatus.CodeBlockTabStatusDisplay) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
@@ -17454,7 +17463,7 @@ namespace Bian {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Status != global::Bian.CodeBlockTabStatus.Display) {
+      if (Status != global::Bian.CodeBlockTabStatus.CodeBlockTabStatusDisplay) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       size += canUseCode_.CalculateSize(_repeated_canUseCode_codec);
@@ -17497,7 +17506,7 @@ namespace Bian {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Status != global::Bian.CodeBlockTabStatus.Display) {
+      if (other.Status != global::Bian.CodeBlockTabStatus.CodeBlockTabStatusDisplay) {
         Status = other.Status;
       }
       canUseCode_.Add(other.canUseCode_);
@@ -19464,7 +19473,7 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble_type" field.</summary>
     public const int BubbleTypeFieldNumber = 2;
-    private global::Bian.OperateBubbleType bubbleType_ = global::Bian.OperateBubbleType.AddItem;
+    private global::Bian.OperateBubbleType bubbleType_ = global::Bian.OperateBubbleType.OperateBubbleTypeAddItem;
     /// <summary>
     /// 气泡类型
     /// </summary>
@@ -19479,7 +19488,7 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble_pos" field.</summary>
     public const int BubblePosFieldNumber = 3;
-    private global::Bian.OperateBubblePos bubblePos_ = global::Bian.OperateBubblePos.Life;
+    private global::Bian.OperateBubblePos bubblePos_ = global::Bian.OperateBubblePos.OperateBubblePosLife;
     /// <summary>
     /// 气泡显示位置
     /// </summary>
@@ -19494,7 +19503,7 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble_size" field.</summary>
     public const int BubbleSizeFieldNumber = 4;
-    private global::Bian.OperateBubbleSize bubbleSize_ = global::Bian.OperateBubbleSize.Small;
+    private global::Bian.OperateBubbleSize bubbleSize_ = global::Bian.OperateBubbleSize.OperateBubbleSizeSmall;
     /// <summary>
     /// 气泡尺寸
     /// </summary>
@@ -19646,9 +19655,9 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) hash ^= BubbleType.GetHashCode();
-      if (BubblePos != global::Bian.OperateBubblePos.Life) hash ^= BubblePos.GetHashCode();
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) hash ^= BubbleSize.GetHashCode();
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) hash ^= BubbleType.GetHashCode();
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) hash ^= BubblePos.GetHashCode();
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) hash ^= BubbleSize.GetHashCode();
       if (addItem_ != null) hash ^= AddItem.GetHashCode();
       if (takeItem_ != null) hash ^= TakeItem.GetHashCode();
       if (replaceItem_ != null) hash ^= ReplaceItem.GetHashCode();
@@ -19678,15 +19687,15 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         output.WriteRawTag(16);
         output.WriteEnum((int) BubbleType);
       }
-      if (BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         output.WriteRawTag(24);
         output.WriteEnum((int) BubblePos);
       }
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         output.WriteRawTag(32);
         output.WriteEnum((int) BubbleSize);
       }
@@ -19732,15 +19741,15 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         output.WriteRawTag(16);
         output.WriteEnum((int) BubbleType);
       }
-      if (BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         output.WriteRawTag(24);
         output.WriteEnum((int) BubblePos);
       }
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         output.WriteRawTag(32);
         output.WriteEnum((int) BubbleSize);
       }
@@ -19785,13 +19794,13 @@ namespace Bian {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BubbleType);
       }
-      if (BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BubblePos);
       }
-      if (BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BubbleSize);
       }
       if (addItem_ != null) {
@@ -19830,13 +19839,13 @@ namespace Bian {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.BubbleType != global::Bian.OperateBubbleType.AddItem) {
+      if (other.BubbleType != global::Bian.OperateBubbleType.OperateBubbleTypeAddItem) {
         BubbleType = other.BubbleType;
       }
-      if (other.BubblePos != global::Bian.OperateBubblePos.Life) {
+      if (other.BubblePos != global::Bian.OperateBubblePos.OperateBubblePosLife) {
         BubblePos = other.BubblePos;
       }
-      if (other.BubbleSize != global::Bian.OperateBubbleSize.Small) {
+      if (other.BubbleSize != global::Bian.OperateBubbleSize.OperateBubbleSizeSmall) {
         BubbleSize = other.BubbleSize;
       }
       if (other.addItem_ != null) {

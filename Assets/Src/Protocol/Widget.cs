@@ -89,95 +89,130 @@ namespace Bian {
             "ZXRzGAIgAygLMgwuQmlhbi5XaWRnZXQiewoMQW5zd2VyUmVzdWx0EhEKCWVu",
             "dGl0eV9pZBgBIAEoCRITCgthbnN3ZXJlcl9pZBgCIAEoCRIVCg1hbnN3ZXJf",
             "b3B0aW9uGAMgAygFEhMKC2lzX2ZpbmlzaGVkGAQgASgIEhcKD2Fuc3dlcl90",
-            "aW1lX3NlYxgFIAEoBSqSAwoKV2lkZ2V0VHlwZRIVChFXaWRnZXRUeXBlVW5r",
-            "bm93bhAAEhIKDldpZGdldFR5cGVUZXh0EAESEwoPV2lkZ2V0VHlwZUNvbG9y",
-            "EAISFAoQV2lkZ2V0VHlwZU51bWJlchADEhQKEFdpZGdldFR5cGVPcHRpb24Q",
-            "BBIVChFXaWRnZXRUeXBlQm9vbGVhbhAFEhoKFldpZGdldFR5cGVFbnRpdHlT",
-            "ZWxlY3QQBhIUChBXaWRnZXRUeXBlQW5zd2VyEAcSEwoPV2lkZ2V0VHlwZU1v",
-            "ZGVsEAgSFwoTV2lkZ2V0VHlwZUxhcmdlVGV4dBAJEhUKEVdpZGdldFR5cGVG",
-            "YWxsaW5nEAoSFgoSV2lkZ2V0VHlwZUNvbVRpdGxlEAsSEgoOV2lkZ2V0VHlw",
-            "ZVNvcnQQDBITCg9XaWRnZXRUeXBlVmlkZW8QDRITCg9XaWRnZXRUeXBlSXNz",
-            "dWUQDhIYChRXaWRnZXRUeXBlQmxhY2tib2FyZBAPEhoKFldpZGdldFR5cGVT",
-            "Y2VuZU1vbml0b3IQECrPBgoOV2lkZ2V0RnVuY1R5cGUSGQoVV2lkZ2V0RnVu",
-            "Y1R5cGVVbmtub3duEAASFgoSV2lkZ2V0RnVuY1R5cGVOYW1lEAESFgoSV2lk",
-            "Z2V0RnVuY1R5cGVEZXNjEAISFwoTV2lkZ2V0RnVuY1R5cGVDb2xvchADEhgK",
-            "FFdpZGdldEZ1bmNUeXBlTnVtYmVyEAQSHAoYV2lkZ2V0RnVuY1R5cGVDYW5P",
-            "cGVyYXRlEAUSFgoSV2lkZ2V0RnVuY1R5cGVMb2NrEAYSGAoUV2lkZ2V0RnVu",
-            "Y1R5cGVPcHRpb24QBxIXChNXaWRnZXRGdW5jVHlwZVBvd2VyEAgSGAoUV2lk",
-            "Z2V0RnVuY1R5cGVGaWx0ZXIQCRIYChRXaWRnZXRGdW5jVHlwZUFuc3dlchAK",
-            "EhoKFldpZGdldEZ1bmNUeXBlUnVuT25PZmYQCxIbChdXaWRnZXRGdW5jVHlw",
-            "ZUVkaXRPbk9mZhAMEhcKE1dpZGdldEZ1bmNUeXBlTW9kZWwQDRIbChdXaWRn",
-            "ZXRGdW5jVHlwZUxhcmdlVGV4dBAOEhwKGFdpZGdldEZ1bmNUeXBlQ2FuRGVz",
-            "dHJveRAPEhkKFVdpZGdldEZ1bmNUeXBlV2Fsa0RpchAQEhkKFVdpZGdldEZ1",
-            "bmNUeXBlRmFsbGluZxAREhkKFVdpZGdldEZ1bmNUeXBlUGlsZU51bRASEhoK",
-            "FldpZGdldEZ1bmNUeXBlQ2FuQ2xpY2sQExIaChZXaWRnZXRGdW5jVHlwZUNv",
-            "bVRpdGxlEBQSGQoVV2lkZ2V0RnVuY1R5cGVDYW5FZGl0EBUSFgoSV2lkZ2V0",
-            "RnVuY1R5cGVTb3J0EBYSFwoTV2lkZ2V0RnVuY1R5cGVWaWRlbxAXEhcKE1dp",
-            "ZGdldEZ1bmNUeXBlSXNzdWUQGBIcChhXaWRnZXRGdW5jVHlwZUJsYWNrYm9h",
-            "cmQQGRIZChVXaWRnZXRGdW5jVHlwZUNhbk1vdmUQGhIeChpXaWRnZXRGdW5j",
-            "VHlwZVNjZW5lTW9uaXRvchAbEhoKFldpZGdldEZ1bmNUeXBlQ2FuQ2FycnkQ",
-            "HBIZChVXaWRnZXRGdW5jVHlwZUNhbkNvZGUQHRIXChNXaWRnZXRGdW5jVHlw",
-            "ZVRhYklkEB4q0AIKE1NwZWNpYWxCdWlsZFN1YlR5cGUSHgoaU3BlY2lhbEJ1",
-            "aWxkU3ViVHlwZVVua25vd24QABIeChpTcGVjaWFsQnVpbGRTdWJUeXBlU3Rv",
-            "cmFnZRABEh0KGVNwZWNpYWxCdWlsZFN1YlR5cGVOb3JtYWwQAhIdChlTcGVj",
-            "aWFsQnVpbGRTdWJUeXBlUHJvbXB0EAMSHgoaU3BlY2lhbEJ1aWxkU3ViVHlw",
-            "ZVNtZWx0ZXIQBBIcChhTcGVjaWFsQnVpbGRTdWJUeXBlUGxhbnQQBRIaChZT",
-            "cGVjaWFsQnVpbGRTdWJUeXBlUGV0EAYSJQohU3BlY2lhbEJ1aWxkU3ViVHlw",
-            "ZUVuZXJneUJ1aWxkaW5nEAcSHQoZU3BlY2lhbEJ1aWxkU3ViVHlwZUNvbW1v",
-            "bhAIEhsKF1NwZWNpYWxCdWlsZFN1YlR5cGVTZWxmEGUqVAoPV2lkZ2V0U29y",
-            "dE9yZGVyEiAKHFdpZGdldFNvcnRPcmRlclBvc2l0aXZlT3JkZXIQABIfChtX",
-            "aWRnZXRTb3J0T3JkZXJSZXZlcnNlT3JkZXIQASrmAgoOV2lkZ2V0U29ydFR5",
-            "cGUSHQoZV2lkZ2V0U29ydFR5cGVEaXlQcm9maWxlMRAAEh0KGVdpZGdldFNv",
-            "cnRUeXBlRGl5UHJvZmlsZTIQARIdChlXaWRnZXRTb3J0VHlwZURpeVByb2Zp",
-            "bGUzEAISHQoZV2lkZ2V0U29ydFR5cGVEaXlQcm9maWxlNBADEh0KGVdpZGdl",
-            "dFNvcnRUeXBlRGl5UHJvZmlsZTUQBBIdChlXaWRnZXRTb3J0VHlwZURpeVBy",
-            "b2ZpbGU2EAUSHQoZV2lkZ2V0U29ydFR5cGVEaXlQcm9maWxlNxAGEh0KGVdp",
-            "ZGdldFNvcnRUeXBlRGl5UHJvZmlsZTgQBxIdChlXaWRnZXRTb3J0VHlwZURp",
-            "eVByb2ZpbGU5EAgSHgoaV2lkZ2V0U29ydFR5cGVEaXlQcm9maWxlMTAQCRId",
-            "ChlXaWRnZXRTb3J0VHlwZUxlc3NvblNjb3JlEAoqqwEKF1dpZGdldFZpZGVv",
-            "VHJpZ2dlck1vZGVsEiIKHldpZGdldFZpZGVvVHJpZ2dlck1vZGVsQmVDbGlj",
-            "axAAEiQKIFdpZGdldFZpZGVvVHJpZ2dlck1vZGVsQ29sbGlzaW9uEAESJQoh",
-            "V2lkZ2V0VmlkZW9UcmlnZ2VyTW9kZWxSZWNlaXZlRW52EAISHwobV2lkZ2V0",
-            "VmlkZW9UcmlnZ2VyTW9kZWxDb2RlEAMqdQoUV2lkZ2V0VmlkZW9QbGF5UG93",
-            "ZXISGwoXV2lkZ2V0VmlkZW9QbGF5UG93ZXJBbGwQABIfChtXaWRnZXRWaWRl",
-            "b1BsYXlQb3dlclRlYWNoZXIQARIfChtXaWRnZXRWaWRlb1BsYXlQb3dlclN0",
-            "dWRlbnQQAip8ChNXaWRnZXRWaWRlb1Nob3dUeXBlEh0KGVdpZGdldFZpZGVv",
-            "U2hvd1R5cGVXaW5kb3cQABIjCh9XaWRnZXRWaWRlb1Nob3dUeXBlV2luZG93",
-            "U2NyZWVuEAESIQodV2lkZ2V0VmlkZW9TaG93VHlwZUZ1bGxTY3JlZW4QAipe",
-            "ChdXaWRnZXRJc3N1ZVRyaWdnZXJNb2RlbBIiCh5XaWRnZXRJc3N1ZVRyaWdn",
-            "ZXJNb2RlbEJlQ2xpY2sQABIfChtXaWRnZXRJc3N1ZVRyaWdnZXJNb2RlbENv",
-            "ZGUQASrRAQocV2lkZ2V0SXNzdWVUcmlnZ2VyQWN0aW9uVHlwZRIoCiRXaWRn",
-            "ZXRJc3N1ZVRyaWdnZXJBY3Rpb25UeXBlTm9BY3Rpb24QABIoCiRXaWRnZXRJ",
-            "c3N1ZVRyaWdnZXJBY3Rpb25UeXBlVGVsZXBvcnQQARIpCiVXaWRnZXRJc3N1",
-            "ZVRyaWdnZXJBY3Rpb25UeXBlQnJvYWRjYXN0EAISMgouV2lkZ2V0SXNzdWVU",
-            "cmlnZ2VyQWN0aW9uVHlwZVRlbGVwb3J0TGVzc29uQXJlYRADKjQKCVNjb3Jl",
-            "VHlwZRISCg5TY29yZVR5cGVJc3N1ZRAAEhMKD1Njb3JlVHlwZU9wdGlvbhAB",
-            "Kk8KEldpZGdldFRyaWdnZXJNb2RlbBIdChlXaWRnZXRUcmlnZ2VyTW9kZWxC",
-            "ZUNsaWNrEAASGgoWV2lkZ2V0VHJpZ2dlck1vZGVsQ29kZRABKm0KEldpZGdl",
-            "dFRyaWdnZXJQb3dlchIZChVXaWRnZXRUcmlnZ2VyUG93ZXJBbGwQABIdChlX",
-            "aWRnZXRUcmlnZ2VyUG93ZXJUZWFjaGVyEAESHQoZV2lkZ2V0VHJpZ2dlclBv",
-            "d2VyU3R1ZGVudBACKpgDCh5XaWRnZXRTY2VuZU1vbml0b3JUcmlnZ2VyTW9k",
-            "ZWwSSApEV2lkZ2V0U2NlbmVNb25pdG9yVHJpZ2dlck1vZGVsX1dpZGdldFNj",
-            "ZW5lTW9uaXRvclRyaWdnZXJNb2RlbEJlQ2xpY2sQABJKCkZXaWRnZXRTY2Vu",
-            "ZU1vbml0b3JUcmlnZ2VyTW9kZWxfV2lkZ2V0U2NlbmVNb25pdG9yVHJpZ2dl",
-            "ck1vZGVsQ29sbGlzaW9uEAESSwpHV2lkZ2V0U2NlbmVNb25pdG9yVHJpZ2dl",
-            "ck1vZGVsX1dpZGdldFNjZW5lTW9uaXRvclRyaWdnZXJNb2RlbEJlT3BlcmF0",
-            "ZWQQAhJMCkhXaWRnZXRTY2VuZU1vbml0b3JUcmlnZ2VyTW9kZWxfV2lkZ2V0",
-            "U2NlbmVNb25pdG9yVHJpZ2dlck1vZGVsVmlzdWFsUmFuZ2UQAxJFCkFXaWRn",
-            "ZXRTY2VuZU1vbml0b3JUcmlnZ2VyTW9kZWxfV2lkZ2V0U2NlbmVNb25pdG9y",
-            "VHJpZ2dlck1vZGVsQ29kZRAEKuMBCh1XaWRnZXRTY2VuZU1vbml0b3JDb250",
-            "ZW50VHlwZRJACjxXaWRnZXRTY2VuZU1vbml0b3JDb250ZW50VHlwZV9XaWRn",
-            "ZXRTY2VuZU1vbml0b3JDb250ZW50RW1wdHkQABJACjxXaWRnZXRTY2VuZU1v",
-            "bml0b3JDb250ZW50VHlwZV9XaWRnZXRTY2VuZU1vbml0b3JDb250ZW50Vmlk",
-            "ZW8QARI+CjpXaWRnZXRTY2VuZU1vbml0b3JDb250ZW50VHlwZV9XaWRnZXRT",
-            "Y2VuZU1vbml0b3JDb250ZW50V2ViEAIqNwoRV2lkZ2V0U3ViRnVuY1R5cGUS",
-            "IgoeV2lkZ2V0U3ViRnVuY1R5cGVfZnVuY191bmtub3duEAAqhAIKFVdpZGdl",
-            "dENvbXBsZXhEYXRhVHlwZRIjCh9XaWRnZXRDb21wbGV4RGF0YVR5cGVfYm9v",
-            "bF90eXBlEAASJAogV2lkZ2V0Q29tcGxleERhdGFUeXBlX2ludDMyX3R5cGUQ",
-            "ARIlCiFXaWRnZXRDb21wbGV4RGF0YVR5cGVfc3RyaW5nX3R5cGUQAhImCiJX",
-            "aWRnZXRDb21wbGV4RGF0YVR5cGVfYm9vbEFycl90eXBlEAMSJwojV2lkZ2V0",
-            "Q29tcGxleERhdGFUeXBlX2ludDMyQXJyX3R5cGUQBBIoCiRXaWRnZXRDb21w",
-            "bGV4RGF0YVR5cGVfc3RyaW5nQXJyX3R5cGUQBWIGcHJvdG8z"));
+            "aW1lX3NlYxgFIAEoBSrNBAoKV2lkZ2V0VHlwZRIgChxXaWRnZXRUeXBlX1dp",
+            "ZGdldFR5cGVVbmtub3duEAASHQoZV2lkZ2V0VHlwZV9XaWRnZXRUeXBlVGV4",
+            "dBABEh4KGldpZGdldFR5cGVfV2lkZ2V0VHlwZUNvbG9yEAISHwobV2lkZ2V0",
+            "VHlwZV9XaWRnZXRUeXBlTnVtYmVyEAMSHwobV2lkZ2V0VHlwZV9XaWRnZXRU",
+            "eXBlT3B0aW9uEAQSIAocV2lkZ2V0VHlwZV9XaWRnZXRUeXBlQm9vbGVhbhAF",
+            "EiUKIVdpZGdldFR5cGVfV2lkZ2V0VHlwZUVudGl0eVNlbGVjdBAGEh8KG1dp",
+            "ZGdldFR5cGVfV2lkZ2V0VHlwZUFuc3dlchAHEh4KGldpZGdldFR5cGVfV2lk",
+            "Z2V0VHlwZU1vZGVsEAgSIgoeV2lkZ2V0VHlwZV9XaWRnZXRUeXBlTGFyZ2VU",
+            "ZXh0EAkSIAocV2lkZ2V0VHlwZV9XaWRnZXRUeXBlRmFsbGluZxAKEiEKHVdp",
+            "ZGdldFR5cGVfV2lkZ2V0VHlwZUNvbVRpdGxlEAsSHQoZV2lkZ2V0VHlwZV9X",
+            "aWRnZXRUeXBlU29ydBAMEh4KGldpZGdldFR5cGVfV2lkZ2V0VHlwZVZpZGVv",
+            "EA0SHgoaV2lkZ2V0VHlwZV9XaWRnZXRUeXBlSXNzdWUQDhIjCh9XaWRnZXRU",
+            "eXBlX1dpZGdldFR5cGVCbGFja2JvYXJkEA8SJQohV2lkZ2V0VHlwZV9XaWRn",
+            "ZXRUeXBlU2NlbmVNb25pdG9yEBAqoAoKDldpZGdldEZ1bmNUeXBlEigKJFdp",
+            "ZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNUeXBlVW5rbm93bhAAEiUKIVdpZGdl",
+            "dEZ1bmNUeXBlX1dpZGdldEZ1bmNUeXBlTmFtZRABEiUKIVdpZGdldEZ1bmNU",
+            "eXBlX1dpZGdldEZ1bmNUeXBlRGVzYxACEiYKIldpZGdldEZ1bmNUeXBlX1dp",
+            "ZGdldEZ1bmNUeXBlQ29sb3IQAxInCiNXaWRnZXRGdW5jVHlwZV9XaWRnZXRG",
+            "dW5jVHlwZU51bWJlchAEEisKJ1dpZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNU",
+            "eXBlQ2FuT3BlcmF0ZRAFEiUKIVdpZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNU",
+            "eXBlTG9jaxAGEicKI1dpZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNUeXBlT3B0",
+            "aW9uEAcSJgoiV2lkZ2V0RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVQb3dlchAI",
+            "EicKI1dpZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNUeXBlRmlsdGVyEAkSJwoj",
+            "V2lkZ2V0RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVBbnN3ZXIQChIpCiVXaWRn",
+            "ZXRGdW5jVHlwZV9XaWRnZXRGdW5jVHlwZVJ1bk9uT2ZmEAsSKgomV2lkZ2V0",
+            "RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVFZGl0T25PZmYQDBImCiJXaWRnZXRG",
+            "dW5jVHlwZV9XaWRnZXRGdW5jVHlwZU1vZGVsEA0SKgomV2lkZ2V0RnVuY1R5",
+            "cGVfV2lkZ2V0RnVuY1R5cGVMYXJnZVRleHQQDhIrCidXaWRnZXRGdW5jVHlw",
+            "ZV9XaWRnZXRGdW5jVHlwZUNhbkRlc3Ryb3kQDxIoCiRXaWRnZXRGdW5jVHlw",
+            "ZV9XaWRnZXRGdW5jVHlwZVdhbGtEaXIQEBIoCiRXaWRnZXRGdW5jVHlwZV9X",
+            "aWRnZXRGdW5jVHlwZUZhbGxpbmcQERIoCiRXaWRnZXRGdW5jVHlwZV9XaWRn",
+            "ZXRGdW5jVHlwZVBpbGVOdW0QEhIpCiVXaWRnZXRGdW5jVHlwZV9XaWRnZXRG",
+            "dW5jVHlwZUNhbkNsaWNrEBMSKQolV2lkZ2V0RnVuY1R5cGVfV2lkZ2V0RnVu",
+            "Y1R5cGVDb21UaXRsZRAUEigKJFdpZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNU",
+            "eXBlQ2FuRWRpdBAVEiUKIVdpZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNUeXBl",
+            "U29ydBAWEiYKIldpZGdldEZ1bmNUeXBlX1dpZGdldEZ1bmNUeXBlVmlkZW8Q",
+            "FxImCiJXaWRnZXRGdW5jVHlwZV9XaWRnZXRGdW5jVHlwZUlzc3VlEBgSKwon",
+            "V2lkZ2V0RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVCbGFja2JvYXJkEBkSKAok",
+            "V2lkZ2V0RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVDYW5Nb3ZlEBoSLQopV2lk",
+            "Z2V0RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVTY2VuZU1vbml0b3IQGxIpCiVX",
+            "aWRnZXRGdW5jVHlwZV9XaWRnZXRGdW5jVHlwZUNhbkNhcnJ5EBwSKAokV2lk",
+            "Z2V0RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVDYW5Db2RlEB0SJgoiV2lkZ2V0",
+            "RnVuY1R5cGVfV2lkZ2V0RnVuY1R5cGVUYWJJZBAeKpgEChNTcGVjaWFsQnVp",
+            "bGRTdWJUeXBlEjIKLlNwZWNpYWxCdWlsZFN1YlR5cGVfU3BlY2lhbEJ1aWxk",
+            "U3ViVHlwZVVua25vd24QABIyCi5TcGVjaWFsQnVpbGRTdWJUeXBlX1NwZWNp",
+            "YWxCdWlsZFN1YlR5cGVTdG9yYWdlEAESMQotU3BlY2lhbEJ1aWxkU3ViVHlw",
+            "ZV9TcGVjaWFsQnVpbGRTdWJUeXBlTm9ybWFsEAISMQotU3BlY2lhbEJ1aWxk",
+            "U3ViVHlwZV9TcGVjaWFsQnVpbGRTdWJUeXBlUHJvbXB0EAMSMgouU3BlY2lh",
+            "bEJ1aWxkU3ViVHlwZV9TcGVjaWFsQnVpbGRTdWJUeXBlU21lbHRlchAEEjAK",
+            "LFNwZWNpYWxCdWlsZFN1YlR5cGVfU3BlY2lhbEJ1aWxkU3ViVHlwZVBsYW50",
+            "EAUSLgoqU3BlY2lhbEJ1aWxkU3ViVHlwZV9TcGVjaWFsQnVpbGRTdWJUeXBl",
+            "UGV0EAYSOQo1U3BlY2lhbEJ1aWxkU3ViVHlwZV9TcGVjaWFsQnVpbGRTdWJU",
+            "eXBlRW5lcmd5QnVpbGRpbmcQBxIxCi1TcGVjaWFsQnVpbGRTdWJUeXBlX1Nw",
+            "ZWNpYWxCdWlsZFN1YlR5cGVDb21tb24QCBIvCitTcGVjaWFsQnVpbGRTdWJU",
+            "eXBlX1NwZWNpYWxCdWlsZFN1YlR5cGVTZWxmEGUqdAoPV2lkZ2V0U29ydE9y",
+            "ZGVyEjAKLFdpZGdldFNvcnRPcmRlcl9XaWRnZXRTb3J0T3JkZXJQb3NpdGl2",
+            "ZU9yZGVyEAASLworV2lkZ2V0U29ydE9yZGVyX1dpZGdldFNvcnRPcmRlclJl",
+            "dmVyc2VPcmRlchABKosECg5XaWRnZXRTb3J0VHlwZRIsCihXaWRnZXRTb3J0",
+            "VHlwZV9XaWRnZXRTb3J0VHlwZURpeVByb2ZpbGUxEAASLAooV2lkZ2V0U29y",
+            "dFR5cGVfV2lkZ2V0U29ydFR5cGVEaXlQcm9maWxlMhABEiwKKFdpZGdldFNv",
+            "cnRUeXBlX1dpZGdldFNvcnRUeXBlRGl5UHJvZmlsZTMQAhIsCihXaWRnZXRT",
+            "b3J0VHlwZV9XaWRnZXRTb3J0VHlwZURpeVByb2ZpbGU0EAMSLAooV2lkZ2V0",
+            "U29ydFR5cGVfV2lkZ2V0U29ydFR5cGVEaXlQcm9maWxlNRAEEiwKKFdpZGdl",
+            "dFNvcnRUeXBlX1dpZGdldFNvcnRUeXBlRGl5UHJvZmlsZTYQBRIsCihXaWRn",
+            "ZXRTb3J0VHlwZV9XaWRnZXRTb3J0VHlwZURpeVByb2ZpbGU3EAYSLAooV2lk",
+            "Z2V0U29ydFR5cGVfV2lkZ2V0U29ydFR5cGVEaXlQcm9maWxlOBAHEiwKKFdp",
+            "ZGdldFNvcnRUeXBlX1dpZGdldFNvcnRUeXBlRGl5UHJvZmlsZTkQCBItCilX",
+            "aWRnZXRTb3J0VHlwZV9XaWRnZXRTb3J0VHlwZURpeVByb2ZpbGUxMBAJEiwK",
+            "KFdpZGdldFNvcnRUeXBlX1dpZGdldFNvcnRUeXBlTGVzc29uU2NvcmUQCiqL",
+            "AgoXV2lkZ2V0VmlkZW9UcmlnZ2VyTW9kZWwSOgo2V2lkZ2V0VmlkZW9Ucmln",
+            "Z2VyTW9kZWxfV2lkZ2V0VmlkZW9UcmlnZ2VyTW9kZWxCZUNsaWNrEAASPAo4",
+            "V2lkZ2V0VmlkZW9UcmlnZ2VyTW9kZWxfV2lkZ2V0VmlkZW9UcmlnZ2VyTW9k",
+            "ZWxDb2xsaXNpb24QARI9CjlXaWRnZXRWaWRlb1RyaWdnZXJNb2RlbF9XaWRn",
+            "ZXRWaWRlb1RyaWdnZXJNb2RlbFJlY2VpdmVFbnYQAhI3CjNXaWRnZXRWaWRl",
+            "b1RyaWdnZXJNb2RlbF9XaWRnZXRWaWRlb1RyaWdnZXJNb2RlbENvZGUQAyq0",
+            "AQoUV2lkZ2V0VmlkZW9QbGF5UG93ZXISMAosV2lkZ2V0VmlkZW9QbGF5UG93",
+            "ZXJfV2lkZ2V0VmlkZW9QbGF5UG93ZXJBbGwQABI0CjBXaWRnZXRWaWRlb1Bs",
+            "YXlQb3dlcl9XaWRnZXRWaWRlb1BsYXlQb3dlclRlYWNoZXIQARI0CjBXaWRn",
+            "ZXRWaWRlb1BsYXlQb3dlcl9XaWRnZXRWaWRlb1BsYXlQb3dlclN0dWRlbnQQ",
+            "Aiq4AQoTV2lkZ2V0VmlkZW9TaG93VHlwZRIxCi1XaWRnZXRWaWRlb1Nob3dU",
+            "eXBlX1dpZGdldFZpZGVvU2hvd1R5cGVXaW5kb3cQABI3CjNXaWRnZXRWaWRl",
+            "b1Nob3dUeXBlX1dpZGdldFZpZGVvU2hvd1R5cGVXaW5kb3dTY3JlZW4QARI1",
+            "CjFXaWRnZXRWaWRlb1Nob3dUeXBlX1dpZGdldFZpZGVvU2hvd1R5cGVGdWxs",
+            "U2NyZWVuEAIqjgEKF1dpZGdldElzc3VlVHJpZ2dlck1vZGVsEjoKNldpZGdl",
+            "dElzc3VlVHJpZ2dlck1vZGVsX1dpZGdldElzc3VlVHJpZ2dlck1vZGVsQmVD",
+            "bGljaxAAEjcKM1dpZGdldElzc3VlVHJpZ2dlck1vZGVsX1dpZGdldElzc3Vl",
+            "VHJpZ2dlck1vZGVsQ29kZRABKsUCChxXaWRnZXRJc3N1ZVRyaWdnZXJBY3Rp",
+            "b25UeXBlEkUKQVdpZGdldElzc3VlVHJpZ2dlckFjdGlvblR5cGVfV2lkZ2V0",
+            "SXNzdWVUcmlnZ2VyQWN0aW9uVHlwZU5vQWN0aW9uEAASRQpBV2lkZ2V0SXNz",
+            "dWVUcmlnZ2VyQWN0aW9uVHlwZV9XaWRnZXRJc3N1ZVRyaWdnZXJBY3Rpb25U",
+            "eXBlVGVsZXBvcnQQARJGCkJXaWRnZXRJc3N1ZVRyaWdnZXJBY3Rpb25UeXBl",
+            "X1dpZGdldElzc3VlVHJpZ2dlckFjdGlvblR5cGVCcm9hZGNhc3QQAhJPCktX",
+            "aWRnZXRJc3N1ZVRyaWdnZXJBY3Rpb25UeXBlX1dpZGdldElzc3VlVHJpZ2dl",
+            "ckFjdGlvblR5cGVUZWxlcG9ydExlc3NvbkFyZWEQAypICglTY29yZVR5cGUS",
+            "HAoYU2NvcmVUeXBlX1Njb3JlVHlwZUlzc3VlEAASHQoZU2NvcmVUeXBlX1Nj",
+            "b3JlVHlwZU9wdGlvbhABKnUKEldpZGdldFRyaWdnZXJNb2RlbBIwCixXaWRn",
+            "ZXRUcmlnZ2VyTW9kZWxfV2lkZ2V0VHJpZ2dlck1vZGVsQmVDbGljaxAAEi0K",
+            "KVdpZGdldFRyaWdnZXJNb2RlbF9XaWRnZXRUcmlnZ2VyTW9kZWxDb2RlEAEq",
+            "pgEKEldpZGdldFRyaWdnZXJQb3dlchIsCihXaWRnZXRUcmlnZ2VyUG93ZXJf",
+            "V2lkZ2V0VHJpZ2dlclBvd2VyQWxsEAASMAosV2lkZ2V0VHJpZ2dlclBvd2Vy",
+            "X1dpZGdldFRyaWdnZXJQb3dlclRlYWNoZXIQARIwCixXaWRnZXRUcmlnZ2Vy",
+            "UG93ZXJfV2lkZ2V0VHJpZ2dlclBvd2VyU3R1ZGVudBACKpgDCh5XaWRnZXRT",
+            "Y2VuZU1vbml0b3JUcmlnZ2VyTW9kZWwSSApEV2lkZ2V0U2NlbmVNb25pdG9y",
+            "VHJpZ2dlck1vZGVsX1dpZGdldFNjZW5lTW9uaXRvclRyaWdnZXJNb2RlbEJl",
+            "Q2xpY2sQABJKCkZXaWRnZXRTY2VuZU1vbml0b3JUcmlnZ2VyTW9kZWxfV2lk",
+            "Z2V0U2NlbmVNb25pdG9yVHJpZ2dlck1vZGVsQ29sbGlzaW9uEAESSwpHV2lk",
+            "Z2V0U2NlbmVNb25pdG9yVHJpZ2dlck1vZGVsX1dpZGdldFNjZW5lTW9uaXRv",
+            "clRyaWdnZXJNb2RlbEJlT3BlcmF0ZWQQAhJMCkhXaWRnZXRTY2VuZU1vbml0",
+            "b3JUcmlnZ2VyTW9kZWxfV2lkZ2V0U2NlbmVNb25pdG9yVHJpZ2dlck1vZGVs",
+            "VmlzdWFsUmFuZ2UQAxJFCkFXaWRnZXRTY2VuZU1vbml0b3JUcmlnZ2VyTW9k",
+            "ZWxfV2lkZ2V0U2NlbmVNb25pdG9yVHJpZ2dlck1vZGVsQ29kZRAEKuMBCh1X",
+            "aWRnZXRTY2VuZU1vbml0b3JDb250ZW50VHlwZRJACjxXaWRnZXRTY2VuZU1v",
+            "bml0b3JDb250ZW50VHlwZV9XaWRnZXRTY2VuZU1vbml0b3JDb250ZW50RW1w",
+            "dHkQABJACjxXaWRnZXRTY2VuZU1vbml0b3JDb250ZW50VHlwZV9XaWRnZXRT",
+            "Y2VuZU1vbml0b3JDb250ZW50VmlkZW8QARI+CjpXaWRnZXRTY2VuZU1vbml0",
+            "b3JDb250ZW50VHlwZV9XaWRnZXRTY2VuZU1vbml0b3JDb250ZW50V2ViEAIq",
+            "NwoRV2lkZ2V0U3ViRnVuY1R5cGUSIgoeV2lkZ2V0U3ViRnVuY1R5cGVfZnVu",
+            "Y191bmtub3duEAAqhAIKFVdpZGdldENvbXBsZXhEYXRhVHlwZRIjCh9XaWRn",
+            "ZXRDb21wbGV4RGF0YVR5cGVfYm9vbF90eXBlEAASJAogV2lkZ2V0Q29tcGxl",
+            "eERhdGFUeXBlX2ludDMyX3R5cGUQARIlCiFXaWRnZXRDb21wbGV4RGF0YVR5",
+            "cGVfc3RyaW5nX3R5cGUQAhImCiJXaWRnZXRDb21wbGV4RGF0YVR5cGVfYm9v",
+            "bEFycl90eXBlEAMSJwojV2lkZ2V0Q29tcGxleERhdGFUeXBlX2ludDMyQXJy",
+            "X3R5cGUQBBIoCiRXaWRnZXRDb21wbGV4RGF0YVR5cGVfc3RyaW5nQXJyX3R5",
+            "cGUQBWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.WidgetType), typeof(global::Bian.WidgetFuncType), typeof(global::Bian.SpecialBuildSubType), typeof(global::Bian.WidgetSortOrder), typeof(global::Bian.WidgetSortType), typeof(global::Bian.WidgetVideoTriggerModel), typeof(global::Bian.WidgetVideoPlayPower), typeof(global::Bian.WidgetVideoShowType), typeof(global::Bian.WidgetIssueTriggerModel), typeof(global::Bian.WidgetIssueTriggerActionType), typeof(global::Bian.ScoreType), typeof(global::Bian.WidgetTriggerModel), typeof(global::Bian.WidgetTriggerPower), typeof(global::Bian.WidgetSceneMonitorTriggerModel), typeof(global::Bian.WidgetSceneMonitorContentType), typeof(global::Bian.WidgetSubFuncType), typeof(global::Bian.WidgetComplexDataType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -211,198 +246,198 @@ namespace Bian {
   /// 控件类型
   /// </summary>
   public enum WidgetType {
-    [pbr::OriginalName("WidgetTypeUnknown")] Unknown = 0,
+    [pbr::OriginalName("WidgetType_WidgetTypeUnknown")] WidgetTypeUnknown = 0,
     /// <summary>
     ///文本
     /// </summary>
-    [pbr::OriginalName("WidgetTypeText")] Text = 1,
+    [pbr::OriginalName("WidgetType_WidgetTypeText")] WidgetTypeText = 1,
     /// <summary>
     ///色卡
     /// </summary>
-    [pbr::OriginalName("WidgetTypeColor")] Color = 2,
+    [pbr::OriginalName("WidgetType_WidgetTypeColor")] WidgetTypeColor = 2,
     /// <summary>
     ///数字,数值
     /// </summary>
-    [pbr::OriginalName("WidgetTypeNumber")] Number = 3,
+    [pbr::OriginalName("WidgetType_WidgetTypeNumber")] WidgetTypeNumber = 3,
     /// <summary>
     ///选择,过滤
     /// </summary>
-    [pbr::OriginalName("WidgetTypeOption")] Option = 4,
+    [pbr::OriginalName("WidgetType_WidgetTypeOption")] WidgetTypeOption = 4,
     /// <summary>
     ///bool
     /// </summary>
-    [pbr::OriginalName("WidgetTypeBoolean")] Boolean = 5,
+    [pbr::OriginalName("WidgetType_WidgetTypeBoolean")] WidgetTypeBoolean = 5,
     /// <summary>
     ///选项
     /// </summary>
-    [pbr::OriginalName("WidgetTypeEntitySelect")] EntitySelect = 6,
+    [pbr::OriginalName("WidgetType_WidgetTypeEntitySelect")] WidgetTypeEntitySelect = 6,
     /// <summary>
     ///问题
     /// </summary>
-    [pbr::OriginalName("WidgetTypeAnswer")] Answer = 7,
+    [pbr::OriginalName("WidgetType_WidgetTypeAnswer")] WidgetTypeAnswer = 7,
     /// <summary>
     ///外观模型
     /// </summary>
-    [pbr::OriginalName("WidgetTypeModel")] Model = 8,
+    [pbr::OriginalName("WidgetType_WidgetTypeModel")] WidgetTypeModel = 8,
     /// <summary>
     ///大文本
     /// </summary>
-    [pbr::OriginalName("WidgetTypeLargeText")] LargeText = 9,
+    [pbr::OriginalName("WidgetType_WidgetTypeLargeText")] WidgetTypeLargeText = 9,
     /// <summary>
     ///掉落物件
     /// </summary>
-    [pbr::OriginalName("WidgetTypeFalling")] Falling = 10,
+    [pbr::OriginalName("WidgetType_WidgetTypeFalling")] WidgetTypeFalling = 10,
     /// <summary>
     ///标题组合控件
     /// </summary>
-    [pbr::OriginalName("WidgetTypeComTitle")] ComTitle = 11,
+    [pbr::OriginalName("WidgetType_WidgetTypeComTitle")] WidgetTypeComTitle = 11,
     /// <summary>
     ///排行榜组合控件
     /// </summary>
-    [pbr::OriginalName("WidgetTypeSort")] Sort = 12,
+    [pbr::OriginalName("WidgetType_WidgetTypeSort")] WidgetTypeSort = 12,
     /// <summary>
     ///视频组合控件
     /// </summary>
-    [pbr::OriginalName("WidgetTypeVideo")] Video = 13,
+    [pbr::OriginalName("WidgetType_WidgetTypeVideo")] WidgetTypeVideo = 13,
     /// <summary>
     ///问题组合控件
     /// </summary>
-    [pbr::OriginalName("WidgetTypeIssue")] Issue = 14,
+    [pbr::OriginalName("WidgetType_WidgetTypeIssue")] WidgetTypeIssue = 14,
     /// <summary>
     ///黑板组合控件
     /// </summary>
-    [pbr::OriginalName("WidgetTypeBlackboard")] Blackboard = 15,
+    [pbr::OriginalName("WidgetType_WidgetTypeBlackboard")] WidgetTypeBlackboard = 15,
     /// <summary>
     ///场景显示器
     /// </summary>
-    [pbr::OriginalName("WidgetTypeSceneMonitor")] SceneMonitor = 16,
+    [pbr::OriginalName("WidgetType_WidgetTypeSceneMonitor")] WidgetTypeSceneMonitor = 16,
   }
 
   /// <summary>
   /// 控件功能类型
   /// </summary>
   public enum WidgetFuncType {
-    [pbr::OriginalName("WidgetFuncTypeUnknown")] Unknown = 0,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeUnknown")] WidgetFuncTypeUnknown = 0,
     /// <summary>
     ///名字
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeName")] Name = 1,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeName")] WidgetFuncTypeName = 1,
     /// <summary>
     ///描述
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeDesc")] Desc = 2,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeDesc")] WidgetFuncTypeDesc = 2,
     /// <summary>
     ///色卡
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeColor")] Color = 3,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeColor")] WidgetFuncTypeColor = 3,
     /// <summary>
     ///数字,数值
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeNumber")] Number = 4,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeNumber")] WidgetFuncTypeNumber = 4,
     /// <summary>
     ///是否可以交互（操作 e/扳手 图标）
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeCanOperate")] CanOperate = 5,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeCanOperate")] WidgetFuncTypeCanOperate = 5,
     /// <summary>
     ///锁(n/y)
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeLock")] Lock = 6,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeLock")] WidgetFuncTypeLock = 6,
     /// <summary>
     ///选项
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeOption")] Option = 7,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeOption")] WidgetFuncTypeOption = 7,
     /// <summary>
     ///控制权
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypePower")] Power = 8,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypePower")] WidgetFuncTypePower = 8,
     /// <summary>
     ///选择,过滤
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeFilter")] Filter = 9,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeFilter")] WidgetFuncTypeFilter = 9,
     /// <summary>
     ///问题
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeAnswer")] Answer = 10,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeAnswer")] WidgetFuncTypeAnswer = 10,
     /// <summary>
     ///开关(非编辑模式看的)
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeRunOnOff")] RunOnOff = 11,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeRunOnOff")] WidgetFuncTypeRunOnOff = 11,
     /// <summary>
     ///开关(编辑模式,默认设置数据,只能给building Owner)
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeEditOnOff")] EditOnOff = 12,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeEditOnOff")] WidgetFuncTypeEditOnOff = 12,
     /// <summary>
     ///外观模型
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeModel")] Model = 13,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeModel")] WidgetFuncTypeModel = 13,
     /// <summary>
     ///大文本
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeLargeText")] LargeText = 14,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeLargeText")] WidgetFuncTypeLargeText = 14,
     /// <summary>
     ///是否可以删除（操作）
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeCanDestroy")] CanDestroy = 15,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeCanDestroy")] WidgetFuncTypeCanDestroy = 15,
     /// <summary>
     ///通行方向
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeWalkDir")] WalkDir = 16,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeWalkDir")] WidgetFuncTypeWalkDir = 16,
     /// <summary>
     ///掉落物件
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeFalling")] Falling = 17,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeFalling")] WidgetFuncTypeFalling = 17,
     /// <summary>
     ///堆叠数量
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypePileNum")] PileNum = 18,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypePileNum")] WidgetFuncTypePileNum = 18,
     /// <summary>
     ///能否被点击
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeCanClick")] CanClick = 19,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeCanClick")] WidgetFuncTypeCanClick = 19,
     /// <summary>
     ///标题控件(icon,name,desc)&lt;pram: stringList>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeComTitle")] ComTitle = 20,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeComTitle")] WidgetFuncTypeComTitle = 20,
     /// <summary>
     ///能否被编辑
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeCanEdit")] CanEdit = 21,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeCanEdit")] WidgetFuncTypeCanEdit = 21,
     /// <summary>
     ///排行榜属性(name,num,顺序,排行标的)&lt;pram: WidgetSortData>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeSort")] Sort = 22,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeSort")] WidgetFuncTypeSort = 22,
     /// <summary>
     ///视频控件属性(视频配置信息和问题选项)&lt;pram: WidgetVideoData>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeVideo")] Video = 23,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeVideo")] WidgetFuncTypeVideo = 23,
     /// <summary>
     ///问题控件属性(问题,选项,积分)&lt;pram: WidgetIssueData>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeIssue")] Issue = 24,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeIssue")] WidgetFuncTypeIssue = 24,
     /// <summary>
     ///黑板属性控件
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeBlackboard")] Blackboard = 25,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeBlackboard")] WidgetFuncTypeBlackboard = 25,
     /// <summary>
     ///是否可拖动(可删除选项关闭后，才会出现这个选项)&lt;pram: WidgetIssueData>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeCanMove")] CanMove = 26,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeCanMove")] WidgetFuncTypeCanMove = 26,
     /// <summary>
     ///场景显示器控件属性&lt;pram: WidgetSceneMonitorData>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeSceneMonitor")] SceneMonitor = 27,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeSceneMonitor")] WidgetFuncTypeSceneMonitor = 27,
     /// <summary>
     /// 实体能否被搬运&lt;pram: bool>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeCanCarry")] CanCarry = 28,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeCanCarry")] WidgetFuncTypeCanCarry = 28,
     /// <summary>
     /// 实体能否快速编码&lt;pram: bool>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeCanCode")] CanCode = 29,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeCanCode")] WidgetFuncTypeCanCode = 29,
     /// <summary>
     /// 实体可快速编码幕布（默认第一个幕布）&lt;pram: Int32>
     /// </summary>
-    [pbr::OriginalName("WidgetFuncTypeTabId")] TabId = 30,
+    [pbr::OriginalName("WidgetFuncType_WidgetFuncTypeTabId")] WidgetFuncTypeTabId = 30,
   }
 
   /// <summary>
@@ -412,43 +447,43 @@ namespace Bian {
     /// <summary>
     ///无效
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypeUnknown")] Unknown = 0,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypeUnknown")] SpecialBuildSubTypeUnknown = 0,
     /// <summary>
     ///储物类
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypeStorage")] Storage = 1,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypeStorage")] SpecialBuildSubTypeStorage = 1,
     /// <summary>
     ///普通制作类
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypeNormal")] Normal = 2,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypeNormal")] SpecialBuildSubTypeNormal = 2,
     /// <summary>
     ///提示类
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypePrompt")] Prompt = 3,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypePrompt")] SpecialBuildSubTypePrompt = 3,
     /// <summary>
     ///熔炉类
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypeSmelter")] Smelter = 4,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypeSmelter")] SpecialBuildSubTypeSmelter = 4,
     /// <summary>
     ///种植类
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypePlant")] Plant = 5,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypePlant")] SpecialBuildSubTypePlant = 5,
     /// <summary>
     ///宠物
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypePet")] Pet = 6,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypePet")] SpecialBuildSubTypePet = 6,
     /// <summary>
     ///源码能量建筑物(源码能源装置)
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypeEnergyBuilding")] EnergyBuilding = 7,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypeEnergyBuilding")] SpecialBuildSubTypeEnergyBuilding = 7,
     /// <summary>
     ///通用功能物件
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypeCommon")] Common = 8,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypeCommon")] SpecialBuildSubTypeCommon = 8,
     /// <summary>
     ///玩家自身
     /// </summary>
-    [pbr::OriginalName("SpecialBuildSubTypeSelf")] Self = 101,
+    [pbr::OriginalName("SpecialBuildSubType_SpecialBuildSubTypeSelf")] SpecialBuildSubTypeSelf = 101,
   }
 
   /// <summary>
@@ -458,11 +493,11 @@ namespace Bian {
     /// <summary>
     ///正序
     /// </summary>
-    [pbr::OriginalName("WidgetSortOrderPositiveOrder")] PositiveOrder = 0,
+    [pbr::OriginalName("WidgetSortOrder_WidgetSortOrderPositiveOrder")] WidgetSortOrderPositiveOrder = 0,
     /// <summary>
     ///倒序
     /// </summary>
-    [pbr::OriginalName("WidgetSortOrderReverseOrder")] ReverseOrder = 1,
+    [pbr::OriginalName("WidgetSortOrder_WidgetSortOrderReverseOrder")] WidgetSortOrderReverseOrder = 1,
   }
 
   /// <summary>
@@ -472,47 +507,47 @@ namespace Bian {
     /// <summary>
     ///玩家自定义属性1
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile1")] DiyProfile1 = 0,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile1")] WidgetSortTypeDiyProfile1 = 0,
     /// <summary>
     ///玩家自定义属性2
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile2")] DiyProfile2 = 1,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile2")] WidgetSortTypeDiyProfile2 = 1,
     /// <summary>
     ///玩家自定义属性3
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile3")] DiyProfile3 = 2,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile3")] WidgetSortTypeDiyProfile3 = 2,
     /// <summary>
     ///玩家自定义属性4
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile4")] DiyProfile4 = 3,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile4")] WidgetSortTypeDiyProfile4 = 3,
     /// <summary>
     ///玩家自定义属性5
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile5")] DiyProfile5 = 4,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile5")] WidgetSortTypeDiyProfile5 = 4,
     /// <summary>
     ///玩家自定义属性6
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile6")] DiyProfile6 = 5,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile6")] WidgetSortTypeDiyProfile6 = 5,
     /// <summary>
     ///玩家自定义属性7
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile7")] DiyProfile7 = 6,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile7")] WidgetSortTypeDiyProfile7 = 6,
     /// <summary>
     ///玩家自定义属性8
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile8")] DiyProfile8 = 7,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile8")] WidgetSortTypeDiyProfile8 = 7,
     /// <summary>
     ///玩家自定义属性9
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile9")] DiyProfile9 = 8,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile9")] WidgetSortTypeDiyProfile9 = 8,
     /// <summary>
     ///玩家自定义属性10
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeDiyProfile10")] DiyProfile10 = 9,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeDiyProfile10")] WidgetSortTypeDiyProfile10 = 9,
     /// <summary>
     ///课程积分
     /// </summary>
-    [pbr::OriginalName("WidgetSortTypeLessonScore")] LessonScore = 10,
+    [pbr::OriginalName("WidgetSortType_WidgetSortTypeLessonScore")] WidgetSortTypeLessonScore = 10,
   }
 
   /// <summary>
@@ -522,19 +557,19 @@ namespace Bian {
     /// <summary>
     ///被点击点击
     /// </summary>
-    [pbr::OriginalName("WidgetVideoTriggerModelBeClick")] BeClick = 0,
+    [pbr::OriginalName("WidgetVideoTriggerModel_WidgetVideoTriggerModelBeClick")] WidgetVideoTriggerModelBeClick = 0,
     /// <summary>
     ///被碰撞
     /// </summary>
-    [pbr::OriginalName("WidgetVideoTriggerModelCollision")] Collision = 1,
+    [pbr::OriginalName("WidgetVideoTriggerModel_WidgetVideoTriggerModelCollision")] WidgetVideoTriggerModelCollision = 1,
     /// <summary>
     ///收到指定广播
     /// </summary>
-    [pbr::OriginalName("WidgetVideoTriggerModelReceiveEnv")] ReceiveEnv = 2,
+    [pbr::OriginalName("WidgetVideoTriggerModel_WidgetVideoTriggerModelReceiveEnv")] WidgetVideoTriggerModelReceiveEnv = 2,
     /// <summary>
     ///代码块触发
     /// </summary>
-    [pbr::OriginalName("WidgetVideoTriggerModelCode")] Code = 3,
+    [pbr::OriginalName("WidgetVideoTriggerModel_WidgetVideoTriggerModelCode")] WidgetVideoTriggerModelCode = 3,
   }
 
   /// <summary>
@@ -544,15 +579,15 @@ namespace Bian {
     /// <summary>
     ///所有人
     /// </summary>
-    [pbr::OriginalName("WidgetVideoPlayPowerAll")] All = 0,
+    [pbr::OriginalName("WidgetVideoPlayPower_WidgetVideoPlayPowerAll")] WidgetVideoPlayPowerAll = 0,
     /// <summary>
     ///老师( 教师 系统 机构 指导师)
     /// </summary>
-    [pbr::OriginalName("WidgetVideoPlayPowerTeacher")] Teacher = 1,
+    [pbr::OriginalName("WidgetVideoPlayPower_WidgetVideoPlayPowerTeacher")] WidgetVideoPlayPowerTeacher = 1,
     /// <summary>
     ///学生
     /// </summary>
-    [pbr::OriginalName("WidgetVideoPlayPowerStudent")] Student = 2,
+    [pbr::OriginalName("WidgetVideoPlayPower_WidgetVideoPlayPowerStudent")] WidgetVideoPlayPowerStudent = 2,
   }
 
   /// <summary>
@@ -562,15 +597,15 @@ namespace Bian {
     /// <summary>
     ///窗口化
     /// </summary>
-    [pbr::OriginalName("WidgetVideoShowTypeWindow")] Window = 0,
+    [pbr::OriginalName("WidgetVideoShowType_WidgetVideoShowTypeWindow")] WidgetVideoShowTypeWindow = 0,
     /// <summary>
     ///窗口全屏
     /// </summary>
-    [pbr::OriginalName("WidgetVideoShowTypeWindowScreen")] WindowScreen = 1,
+    [pbr::OriginalName("WidgetVideoShowType_WidgetVideoShowTypeWindowScreen")] WidgetVideoShowTypeWindowScreen = 1,
     /// <summary>
     ///桌面全屏
     /// </summary>
-    [pbr::OriginalName("WidgetVideoShowTypeFullScreen")] FullScreen = 2,
+    [pbr::OriginalName("WidgetVideoShowType_WidgetVideoShowTypeFullScreen")] WidgetVideoShowTypeFullScreen = 2,
   }
 
   /// <summary>
@@ -580,11 +615,11 @@ namespace Bian {
     /// <summary>
     ///被点击
     /// </summary>
-    [pbr::OriginalName("WidgetIssueTriggerModelBeClick")] BeClick = 0,
+    [pbr::OriginalName("WidgetIssueTriggerModel_WidgetIssueTriggerModelBeClick")] WidgetIssueTriggerModelBeClick = 0,
     /// <summary>
     ///代码块触发
     /// </summary>
-    [pbr::OriginalName("WidgetIssueTriggerModelCode")] Code = 1,
+    [pbr::OriginalName("WidgetIssueTriggerModel_WidgetIssueTriggerModelCode")] WidgetIssueTriggerModelCode = 1,
   }
 
   /// <summary>
@@ -594,19 +629,19 @@ namespace Bian {
     /// <summary>
     ///无
     /// </summary>
-    [pbr::OriginalName("WidgetIssueTriggerActionTypeNoAction")] NoAction = 0,
+    [pbr::OriginalName("WidgetIssueTriggerActionType_WidgetIssueTriggerActionTypeNoAction")] WidgetIssueTriggerActionTypeNoAction = 0,
     /// <summary>
     ///传送玩家到rc
     /// </summary>
-    [pbr::OriginalName("WidgetIssueTriggerActionTypeTeleport")] Teleport = 1,
+    [pbr::OriginalName("WidgetIssueTriggerActionType_WidgetIssueTriggerActionTypeTeleport")] WidgetIssueTriggerActionTypeTeleport = 1,
     /// <summary>
     ///广播
     /// </summary>
-    [pbr::OriginalName("WidgetIssueTriggerActionTypeBroadcast")] Broadcast = 2,
+    [pbr::OriginalName("WidgetIssueTriggerActionType_WidgetIssueTriggerActionTypeBroadcast")] WidgetIssueTriggerActionTypeBroadcast = 2,
     /// <summary>
     ///传送玩家到区域
     /// </summary>
-    [pbr::OriginalName("WidgetIssueTriggerActionTypeTeleportLessonArea")] TeleportLessonArea = 3,
+    [pbr::OriginalName("WidgetIssueTriggerActionType_WidgetIssueTriggerActionTypeTeleportLessonArea")] WidgetIssueTriggerActionTypeTeleportLessonArea = 3,
   }
 
   /// <summary>
@@ -616,22 +651,22 @@ namespace Bian {
     /// <summary>
     ///按题目积分
     /// </summary>
-    [pbr::OriginalName("ScoreTypeIssue")] Issue = 0,
+    [pbr::OriginalName("ScoreType_ScoreTypeIssue")] ScoreTypeIssue = 0,
     /// <summary>
     ///按选项积分
     /// </summary>
-    [pbr::OriginalName("ScoreTypeOption")] Option = 1,
+    [pbr::OriginalName("ScoreType_ScoreTypeOption")] ScoreTypeOption = 1,
   }
 
   public enum WidgetTriggerModel {
     /// <summary>
     ///被点击
     /// </summary>
-    [pbr::OriginalName("WidgetTriggerModelBeClick")] BeClick = 0,
+    [pbr::OriginalName("WidgetTriggerModel_WidgetTriggerModelBeClick")] WidgetTriggerModelBeClick = 0,
     /// <summary>
     ///代码块触发
     /// </summary>
-    [pbr::OriginalName("WidgetTriggerModelCode")] Code = 1,
+    [pbr::OriginalName("WidgetTriggerModel_WidgetTriggerModelCode")] WidgetTriggerModelCode = 1,
   }
 
   /// <summary>
@@ -641,15 +676,15 @@ namespace Bian {
     /// <summary>
     ///所有人
     /// </summary>
-    [pbr::OriginalName("WidgetTriggerPowerAll")] All = 0,
+    [pbr::OriginalName("WidgetTriggerPower_WidgetTriggerPowerAll")] WidgetTriggerPowerAll = 0,
     /// <summary>
     ///老师( 教师 系统 机构 指导师)
     /// </summary>
-    [pbr::OriginalName("WidgetTriggerPowerTeacher")] Teacher = 1,
+    [pbr::OriginalName("WidgetTriggerPower_WidgetTriggerPowerTeacher")] WidgetTriggerPowerTeacher = 1,
     /// <summary>
     ///学生
     /// </summary>
-    [pbr::OriginalName("WidgetTriggerPowerStudent")] Student = 2,
+    [pbr::OriginalName("WidgetTriggerPower_WidgetTriggerPowerStudent")] WidgetTriggerPowerStudent = 2,
   }
 
   /// <summary>
@@ -1685,7 +1720,7 @@ namespace Bian {
 
     /// <summary>Field number for the "order" field.</summary>
     public const int OrderFieldNumber = 3;
-    private global::Bian.WidgetSortOrder order_ = global::Bian.WidgetSortOrder.PositiveOrder;
+    private global::Bian.WidgetSortOrder order_ = global::Bian.WidgetSortOrder.WidgetSortOrderPositiveOrder;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.WidgetSortOrder Order {
@@ -1697,7 +1732,7 @@ namespace Bian {
 
     /// <summary>Field number for the "Type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Bian.WidgetSortType type_ = global::Bian.WidgetSortType.DiyProfile1;
+    private global::Bian.WidgetSortType type_ = global::Bian.WidgetSortType.WidgetSortTypeDiyProfile1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.WidgetSortType Type {
@@ -1735,8 +1770,8 @@ namespace Bian {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (SortNum != 0) hash ^= SortNum.GetHashCode();
-      if (Order != global::Bian.WidgetSortOrder.PositiveOrder) hash ^= Order.GetHashCode();
-      if (Type != global::Bian.WidgetSortType.DiyProfile1) hash ^= Type.GetHashCode();
+      if (Order != global::Bian.WidgetSortOrder.WidgetSortOrderPositiveOrder) hash ^= Order.GetHashCode();
+      if (Type != global::Bian.WidgetSortType.WidgetSortTypeDiyProfile1) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1763,11 +1798,11 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(SortNum);
       }
-      if (Order != global::Bian.WidgetSortOrder.PositiveOrder) {
+      if (Order != global::Bian.WidgetSortOrder.WidgetSortOrderPositiveOrder) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Order);
       }
-      if (Type != global::Bian.WidgetSortType.DiyProfile1) {
+      if (Type != global::Bian.WidgetSortType.WidgetSortTypeDiyProfile1) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -1789,11 +1824,11 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(SortNum);
       }
-      if (Order != global::Bian.WidgetSortOrder.PositiveOrder) {
+      if (Order != global::Bian.WidgetSortOrder.WidgetSortOrderPositiveOrder) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Order);
       }
-      if (Type != global::Bian.WidgetSortType.DiyProfile1) {
+      if (Type != global::Bian.WidgetSortType.WidgetSortTypeDiyProfile1) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -1813,10 +1848,10 @@ namespace Bian {
       if (SortNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SortNum);
       }
-      if (Order != global::Bian.WidgetSortOrder.PositiveOrder) {
+      if (Order != global::Bian.WidgetSortOrder.WidgetSortOrderPositiveOrder) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Order);
       }
-      if (Type != global::Bian.WidgetSortType.DiyProfile1) {
+      if (Type != global::Bian.WidgetSortType.WidgetSortTypeDiyProfile1) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
@@ -1837,10 +1872,10 @@ namespace Bian {
       if (other.SortNum != 0) {
         SortNum = other.SortNum;
       }
-      if (other.Order != global::Bian.WidgetSortOrder.PositiveOrder) {
+      if (other.Order != global::Bian.WidgetSortOrder.WidgetSortOrderPositiveOrder) {
         Order = other.Order;
       }
-      if (other.Type != global::Bian.WidgetSortType.DiyProfile1) {
+      if (other.Type != global::Bian.WidgetSortType.WidgetSortTypeDiyProfile1) {
         Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2674,7 +2709,7 @@ namespace Bian {
 
     /// <summary>Field number for the "trigger_model" field.</summary>
     public const int TriggerModelFieldNumber = 1;
-    private global::Bian.WidgetVideoTriggerModel triggerModel_ = global::Bian.WidgetVideoTriggerModel.BeClick;
+    private global::Bian.WidgetVideoTriggerModel triggerModel_ = global::Bian.WidgetVideoTriggerModel.WidgetVideoTriggerModelBeClick;
     /// <summary>
     ///视频控件触发方式
     /// </summary>
@@ -2689,7 +2724,7 @@ namespace Bian {
 
     /// <summary>Field number for the "show_type" field.</summary>
     public const int ShowTypeFieldNumber = 2;
-    private global::Bian.WidgetVideoShowType showType_ = global::Bian.WidgetVideoShowType.Window;
+    private global::Bian.WidgetVideoShowType showType_ = global::Bian.WidgetVideoShowType.WidgetVideoShowTypeWindow;
     /// <summary>
     ///视频展示模式
     /// </summary>
@@ -2704,7 +2739,7 @@ namespace Bian {
 
     /// <summary>Field number for the "play_power" field.</summary>
     public const int PlayPowerFieldNumber = 3;
-    private global::Bian.WidgetVideoPlayPower playPower_ = global::Bian.WidgetVideoPlayPower.All;
+    private global::Bian.WidgetVideoPlayPower playPower_ = global::Bian.WidgetVideoPlayPower.WidgetVideoPlayPowerAll;
     /// <summary>
     ///视频控件触发权限(学生 教师 系统 机构 指导师)
     /// </summary>
@@ -2789,9 +2824,9 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.BeClick) hash ^= TriggerModel.GetHashCode();
-      if (ShowType != global::Bian.WidgetVideoShowType.Window) hash ^= ShowType.GetHashCode();
-      if (PlayPower != global::Bian.WidgetVideoPlayPower.All) hash ^= PlayPower.GetHashCode();
+      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.WidgetVideoTriggerModelBeClick) hash ^= TriggerModel.GetHashCode();
+      if (ShowType != global::Bian.WidgetVideoShowType.WidgetVideoShowTypeWindow) hash ^= ShowType.GetHashCode();
+      if (PlayPower != global::Bian.WidgetVideoPlayPower.WidgetVideoPlayPowerAll) hash ^= PlayPower.GetHashCode();
       if (VideoUrl.Length != 0) hash ^= VideoUrl.GetHashCode();
       if (VideoName.Length != 0) hash ^= VideoName.GetHashCode();
       hash ^= options_.GetHashCode();
@@ -2813,15 +2848,15 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.BeClick) {
+      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.WidgetVideoTriggerModelBeClick) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TriggerModel);
       }
-      if (ShowType != global::Bian.WidgetVideoShowType.Window) {
+      if (ShowType != global::Bian.WidgetVideoShowType.WidgetVideoShowTypeWindow) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ShowType);
       }
-      if (PlayPower != global::Bian.WidgetVideoPlayPower.All) {
+      if (PlayPower != global::Bian.WidgetVideoPlayPower.WidgetVideoPlayPowerAll) {
         output.WriteRawTag(24);
         output.WriteEnum((int) PlayPower);
       }
@@ -2844,15 +2879,15 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.BeClick) {
+      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.WidgetVideoTriggerModelBeClick) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TriggerModel);
       }
-      if (ShowType != global::Bian.WidgetVideoShowType.Window) {
+      if (ShowType != global::Bian.WidgetVideoShowType.WidgetVideoShowTypeWindow) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ShowType);
       }
-      if (PlayPower != global::Bian.WidgetVideoPlayPower.All) {
+      if (PlayPower != global::Bian.WidgetVideoPlayPower.WidgetVideoPlayPowerAll) {
         output.WriteRawTag(24);
         output.WriteEnum((int) PlayPower);
       }
@@ -2875,13 +2910,13 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.BeClick) {
+      if (TriggerModel != global::Bian.WidgetVideoTriggerModel.WidgetVideoTriggerModelBeClick) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TriggerModel);
       }
-      if (ShowType != global::Bian.WidgetVideoShowType.Window) {
+      if (ShowType != global::Bian.WidgetVideoShowType.WidgetVideoShowTypeWindow) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ShowType);
       }
-      if (PlayPower != global::Bian.WidgetVideoPlayPower.All) {
+      if (PlayPower != global::Bian.WidgetVideoPlayPower.WidgetVideoPlayPowerAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlayPower);
       }
       if (VideoUrl.Length != 0) {
@@ -2903,13 +2938,13 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.TriggerModel != global::Bian.WidgetVideoTriggerModel.BeClick) {
+      if (other.TriggerModel != global::Bian.WidgetVideoTriggerModel.WidgetVideoTriggerModelBeClick) {
         TriggerModel = other.TriggerModel;
       }
-      if (other.ShowType != global::Bian.WidgetVideoShowType.Window) {
+      if (other.ShowType != global::Bian.WidgetVideoShowType.WidgetVideoShowTypeWindow) {
         ShowType = other.ShowType;
       }
-      if (other.PlayPower != global::Bian.WidgetVideoPlayPower.All) {
+      if (other.PlayPower != global::Bian.WidgetVideoPlayPower.WidgetVideoPlayPowerAll) {
         PlayPower = other.PlayPower;
       }
       if (other.VideoUrl.Length != 0) {
@@ -3288,7 +3323,7 @@ namespace Bian {
 
     /// <summary>Field number for the "trigger_action_type" field.</summary>
     public const int TriggerActionTypeFieldNumber = 1;
-    private global::Bian.WidgetIssueTriggerActionType triggerActionType_ = global::Bian.WidgetIssueTriggerActionType.NoAction;
+    private global::Bian.WidgetIssueTriggerActionType triggerActionType_ = global::Bian.WidgetIssueTriggerActionType.WidgetIssueTriggerActionTypeNoAction;
     /// <summary>
     ///触发后动作类型
     /// </summary>
@@ -3386,7 +3421,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.NoAction) hash ^= TriggerActionType.GetHashCode();
+      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.WidgetIssueTriggerActionTypeNoAction) hash ^= TriggerActionType.GetHashCode();
       if (dataCase_ == DataOneofCase.BroadcastContent) hash ^= BroadcastContent.GetHashCode();
       if (dataCase_ == DataOneofCase.TargetPos) hash ^= TargetPos.GetHashCode();
       if (dataCase_ == DataOneofCase.LessonAreaId) hash ^= LessonAreaId.GetHashCode();
@@ -3409,7 +3444,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.NoAction) {
+      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.WidgetIssueTriggerActionTypeNoAction) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TriggerActionType);
       }
@@ -3435,7 +3470,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.NoAction) {
+      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.WidgetIssueTriggerActionTypeNoAction) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TriggerActionType);
       }
@@ -3461,7 +3496,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.NoAction) {
+      if (TriggerActionType != global::Bian.WidgetIssueTriggerActionType.WidgetIssueTriggerActionTypeNoAction) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TriggerActionType);
       }
       if (dataCase_ == DataOneofCase.BroadcastContent) {
@@ -3485,7 +3520,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.TriggerActionType != global::Bian.WidgetIssueTriggerActionType.NoAction) {
+      if (other.TriggerActionType != global::Bian.WidgetIssueTriggerActionType.WidgetIssueTriggerActionTypeNoAction) {
         TriggerActionType = other.TriggerActionType;
       }
       switch (other.DataCase) {
@@ -3709,7 +3744,7 @@ namespace Bian {
 
     /// <summary>Field number for the "score_type" field.</summary>
     public const int ScoreTypeFieldNumber = 6;
-    private global::Bian.ScoreType scoreType_ = global::Bian.ScoreType.Issue;
+    private global::Bian.ScoreType scoreType_ = global::Bian.ScoreType.ScoreTypeIssue;
     /// <summary>
     ///积分模式(按题目积分||按选项积分)
     /// </summary>
@@ -3755,7 +3790,7 @@ namespace Bian {
       hash ^= answerIndex_.GetHashCode();
       if (Score != 0) hash ^= Score.GetHashCode();
       if (Audio.Length != 0) hash ^= Audio.GetHashCode();
-      if (ScoreType != global::Bian.ScoreType.Issue) hash ^= ScoreType.GetHashCode();
+      if (ScoreType != global::Bian.ScoreType.ScoreTypeIssue) hash ^= ScoreType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3788,7 +3823,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteString(Audio);
       }
-      if (ScoreType != global::Bian.ScoreType.Issue) {
+      if (ScoreType != global::Bian.ScoreType.ScoreTypeIssue) {
         output.WriteRawTag(48);
         output.WriteEnum((int) ScoreType);
       }
@@ -3816,7 +3851,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteString(Audio);
       }
-      if (ScoreType != global::Bian.ScoreType.Issue) {
+      if (ScoreType != global::Bian.ScoreType.ScoreTypeIssue) {
         output.WriteRawTag(48);
         output.WriteEnum((int) ScoreType);
       }
@@ -3841,7 +3876,7 @@ namespace Bian {
       if (Audio.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Audio);
       }
-      if (ScoreType != global::Bian.ScoreType.Issue) {
+      if (ScoreType != global::Bian.ScoreType.ScoreTypeIssue) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ScoreType);
       }
       if (_unknownFields != null) {
@@ -3870,7 +3905,7 @@ namespace Bian {
       if (other.Audio.Length != 0) {
         Audio = other.Audio;
       }
-      if (other.ScoreType != global::Bian.ScoreType.Issue) {
+      if (other.ScoreType != global::Bian.ScoreType.ScoreTypeIssue) {
         ScoreType = other.ScoreType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4015,7 +4050,7 @@ namespace Bian {
 
     /// <summary>Field number for the "trigger_model" field.</summary>
     public const int TriggerModelFieldNumber = 1;
-    private global::Bian.WidgetIssueTriggerModel triggerModel_ = global::Bian.WidgetIssueTriggerModel.BeClick;
+    private global::Bian.WidgetIssueTriggerModel triggerModel_ = global::Bian.WidgetIssueTriggerModel.WidgetIssueTriggerModelBeClick;
     /// <summary>
     /// 问题控件触发方式
     /// </summary>
@@ -4097,7 +4132,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.BeClick) hash ^= TriggerModel.GetHashCode();
+      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.WidgetIssueTriggerModelBeClick) hash ^= TriggerModel.GetHashCode();
       hash ^= triggerAction_.GetHashCode();
       hash ^= questions_.GetHashCode();
       if (IsTest != false) hash ^= IsTest.GetHashCode();
@@ -4119,7 +4154,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.BeClick) {
+      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.WidgetIssueTriggerModelBeClick) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TriggerModel);
       }
@@ -4139,7 +4174,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.BeClick) {
+      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.WidgetIssueTriggerModelBeClick) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TriggerModel);
       }
@@ -4159,7 +4194,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.BeClick) {
+      if (TriggerModel != global::Bian.WidgetIssueTriggerModel.WidgetIssueTriggerModelBeClick) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TriggerModel);
       }
       size += triggerAction_.CalculateSize(_repeated_triggerAction_codec);
@@ -4179,7 +4214,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.TriggerModel != global::Bian.WidgetIssueTriggerModel.BeClick) {
+      if (other.TriggerModel != global::Bian.WidgetIssueTriggerModel.WidgetIssueTriggerModelBeClick) {
         TriggerModel = other.TriggerModel;
       }
       triggerAction_.Add(other.triggerAction_);
@@ -4863,7 +4898,7 @@ namespace Bian {
 
     /// <summary>Field number for the "func_type" field.</summary>
     public const int FuncTypeFieldNumber = 1;
-    private global::Bian.WidgetFuncType funcType_ = global::Bian.WidgetFuncType.Unknown;
+    private global::Bian.WidgetFuncType funcType_ = global::Bian.WidgetFuncType.WidgetFuncTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.WidgetFuncType FuncType {
@@ -5117,7 +5152,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FuncType != global::Bian.WidgetFuncType.Unknown) hash ^= FuncType.GetHashCode();
+      if (FuncType != global::Bian.WidgetFuncType.WidgetFuncTypeUnknown) hash ^= FuncType.GetHashCode();
       if (SubFuncType != global::Bian.WidgetSubFuncType.FuncUnknown) hash ^= SubFuncType.GetHashCode();
       if (dataCase_ == DataOneofCase.ComboWidget) hash ^= ComboWidget.GetHashCode();
       if (dataCase_ == DataOneofCase.DataBool) hash ^= DataBool.GetHashCode();
@@ -5151,7 +5186,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FuncType != global::Bian.WidgetFuncType.Unknown) {
+      if (FuncType != global::Bian.WidgetFuncType.WidgetFuncTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) FuncType);
       }
@@ -5221,7 +5256,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FuncType != global::Bian.WidgetFuncType.Unknown) {
+      if (FuncType != global::Bian.WidgetFuncType.WidgetFuncTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) FuncType);
       }
@@ -5291,7 +5326,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FuncType != global::Bian.WidgetFuncType.Unknown) {
+      if (FuncType != global::Bian.WidgetFuncType.WidgetFuncTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FuncType);
       }
       if (SubFuncType != global::Bian.WidgetSubFuncType.FuncUnknown) {
@@ -5348,7 +5383,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.FuncType != global::Bian.WidgetFuncType.Unknown) {
+      if (other.FuncType != global::Bian.WidgetFuncType.WidgetFuncTypeUnknown) {
         FuncType = other.FuncType;
       }
       if (other.SubFuncType != global::Bian.WidgetSubFuncType.FuncUnknown) {

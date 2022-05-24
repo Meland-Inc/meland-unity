@@ -61,29 +61,34 @@ namespace Bian {
             "bGFuZF9ncm91cHMYBSADKAsyGi5CaWFuLkJpZ1dvcmxkVmlwTGFuZEdyb3Vw",
             "InwKEUVudGl0eU1hcFRlbXBsYXRlEhAKCG93bmVyX2lkGAEgASgJEhIKCm93",
             "bmVyX25hbWUYAiABKAkSEwoLdGVtcGxhdGVfaWQYAyABKAkSFQoNdGVtcGxh",
-            "dGVfbmFtZRgEIAEoCRIVCg10ZW1wbGF0ZV9pY29uGAUgASgJKv4BChNCaWdX",
-            "b3JsZFNlcnZlckV2ZW50Eh4KGkJpZ1dvcmxkU2VydmVyRXZlbnRfVW5rbm93",
-            "EAASIQodQmlnV29ybGRTZXJ2ZXJFdmVudF9DbGllbnRNc2cQARImCiFCaWdX",
-            "b3JsZFNlcnZlckV2ZW50X1BsYXllckFyZWFBZGQQkE4SKAojQmlnV29ybGRT",
-            "ZXJ2ZXJFdmVudF9UaWxlQXR0cmlidXRlVXAQkU4SKAojQmlnV29ybGRTZXJ2",
-            "ZXJFdmVudF9UaWxlRmlnaHRJbmZvVXAQkk4SKAojQmlnV29ybGRTZXJ2ZXJF",
-            "dmVudF9UaWxlVXNpbmdTa2lsbHMQk04qUAoTQmlnV29ybGRTa2lsbFRhcmdl",
-            "dBIbChdCaWdXb3JsZFNraWxsVGFyZ2V0U2VsZhAAEhwKGEJpZ1dvcmxkU2tp",
-            "bGxUYXJnZXRFbmVteRABKl4KE0JpZ1dvcmxkU2tpbGxFZmZlY3QSIQodQmln",
-            "V29ybGRTa2lsbEVmZmVjdFRpbWVSZWR1Y2UQABIkCiBCaWdXb3JsZFNraWxs",
-            "RWZmZWN0TW9uZXlJbmNyZWFzZRABKoYBCglORlRSYXJpdHkSFAoQTkZUUmFy",
-            "aXR5VW5rbm93bhAAEhMKD05GVFJhcml0eUNvbW1vbhABEhEKDU5GVFJhcml0",
-            "eVJhcmUQAhIRCg1ORlRSYXJpdHlFcGljEAMSEwoPTkZUUmFyaXR5TXl0aGlj",
-            "EAQSEwoPTkZUUmFyaXR5VW5pcXVlEAUqgwIKEUJpZ1dvcmxkTGFuZFN0YXRl",
-            "EjEKLUJpZ1dvcmxkTGFuZFN0YXRlX0JpZ1dvcmxkTGFuZFN0YXRlVW5vY2N1",
-            "cGllZBAAEi8KK0JpZ1dvcmxkTGFuZFN0YXRlX0JpZ1dvcmxkTGFuZFN0YXRl",
-            "T2ZmaWNpYWwQARIvCitCaWdXb3JsZExhbmRTdGF0ZV9CaWdXb3JsZExhbmRT",
-            "dGF0ZU9jY3VwaWVkEAISLQopQmlnV29ybGRMYW5kU3RhdGVfQmlnV29ybGRM",
-            "YW5kU3RhdGVUaWNrZXQQAxIqCiZCaWdXb3JsZExhbmRTdGF0ZV9CaWdXb3Js",
-            "ZExhbmRTdGF0ZVZpcBAEKnYKEkJpZ1dvcmxkRmlnaHRTdGF0ZRItCilCaWdX",
-            "b3JsZEZpZ2h0U3RhdGVfQmlnV29ybGRGaWdodFN0YXRlRnJlZRAAEjEKLUJp",
-            "Z1dvcmxkRmlnaHRTdGF0ZV9CaWdXb3JsZEZpZ2h0U3RhdGVGaWdodGluZxAB",
-            "YgZwcm90bzM="));
+            "dGVfbmFtZRgEIAEoCRIVCg10ZW1wbGF0ZV9pY29uGAUgASgJKvYCChNCaWdX",
+            "b3JsZFNlcnZlckV2ZW50EjIKLkJpZ1dvcmxkU2VydmVyRXZlbnRfQmlnV29y",
+            "bGRTZXJ2ZXJFdmVudF9Vbmtub3cQABI1CjFCaWdXb3JsZFNlcnZlckV2ZW50",
+            "X0JpZ1dvcmxkU2VydmVyRXZlbnRfQ2xpZW50TXNnEAESOgo1QmlnV29ybGRT",
+            "ZXJ2ZXJFdmVudF9CaWdXb3JsZFNlcnZlckV2ZW50X1BsYXllckFyZWFBZGQQ",
+            "kE4SPAo3QmlnV29ybGRTZXJ2ZXJFdmVudF9CaWdXb3JsZFNlcnZlckV2ZW50",
+            "X1RpbGVBdHRyaWJ1dGVVcBCRThI8CjdCaWdXb3JsZFNlcnZlckV2ZW50X0Jp",
+            "Z1dvcmxkU2VydmVyRXZlbnRfVGlsZUZpZ2h0SW5mb1VwEJJOEjwKN0JpZ1dv",
+            "cmxkU2VydmVyRXZlbnRfQmlnV29ybGRTZXJ2ZXJFdmVudF9UaWxlVXNpbmdT",
+            "a2lsbHMQk04qeAoTQmlnV29ybGRTa2lsbFRhcmdldBIvCitCaWdXb3JsZFNr",
+            "aWxsVGFyZ2V0X0JpZ1dvcmxkU2tpbGxUYXJnZXRTZWxmEAASMAosQmlnV29y",
+            "bGRTa2lsbFRhcmdldF9CaWdXb3JsZFNraWxsVGFyZ2V0RW5lbXkQASqGAQoT",
+            "QmlnV29ybGRTa2lsbEVmZmVjdBI1CjFCaWdXb3JsZFNraWxsRWZmZWN0X0Jp",
+            "Z1dvcmxkU2tpbGxFZmZlY3RUaW1lUmVkdWNlEAASOAo0QmlnV29ybGRTa2ls",
+            "bEVmZmVjdF9CaWdXb3JsZFNraWxsRWZmZWN0TW9uZXlJbmNyZWFzZRABKsIB",
+            "CglORlRSYXJpdHkSHgoaTkZUUmFyaXR5X05GVFJhcml0eVVua25vd24QABId",
+            "ChlORlRSYXJpdHlfTkZUUmFyaXR5Q29tbW9uEAESGwoXTkZUUmFyaXR5X05G",
+            "VFJhcml0eVJhcmUQAhIbChdORlRSYXJpdHlfTkZUUmFyaXR5RXBpYxADEh0K",
+            "GU5GVFJhcml0eV9ORlRSYXJpdHlNeXRoaWMQBBIdChlORlRSYXJpdHlfTkZU",
+            "UmFyaXR5VW5pcXVlEAUqgwIKEUJpZ1dvcmxkTGFuZFN0YXRlEjEKLUJpZ1dv",
+            "cmxkTGFuZFN0YXRlX0JpZ1dvcmxkTGFuZFN0YXRlVW5vY2N1cGllZBAAEi8K",
+            "K0JpZ1dvcmxkTGFuZFN0YXRlX0JpZ1dvcmxkTGFuZFN0YXRlT2ZmaWNpYWwQ",
+            "ARIvCitCaWdXb3JsZExhbmRTdGF0ZV9CaWdXb3JsZExhbmRTdGF0ZU9jY3Vw",
+            "aWVkEAISLQopQmlnV29ybGRMYW5kU3RhdGVfQmlnV29ybGRMYW5kU3RhdGVU",
+            "aWNrZXQQAxIqCiZCaWdXb3JsZExhbmRTdGF0ZV9CaWdXb3JsZExhbmRTdGF0",
+            "ZVZpcBAEKnYKEkJpZ1dvcmxkRmlnaHRTdGF0ZRItCilCaWdXb3JsZEZpZ2h0",
+            "U3RhdGVfQmlnV29ybGRGaWdodFN0YXRlRnJlZRAAEjEKLUJpZ1dvcmxkRmln",
+            "aHRTdGF0ZV9CaWdXb3JsZEZpZ2h0U3RhdGVGaWdodGluZxABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.BigWorldServerEvent), typeof(global::Bian.BigWorldSkillTarget), typeof(global::Bian.BigWorldSkillEffect), typeof(global::Bian.NFTRarity), typeof(global::Bian.BigWorldLandState), typeof(global::Bian.BigWorldFightState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,27 +115,27 @@ namespace Bian {
     /// <summary>
     /// 未知类型
     /// </summary>
-    [pbr::OriginalName("BigWorldServerEvent_Unknow")] Unknow = 0,
+    [pbr::OriginalName("BigWorldServerEvent_BigWorldServerEvent_Unknow")] BigWorldServerEventUnknow = 0,
     /// <summary>
     /// client msg
     /// </summary>
-    [pbr::OriginalName("BigWorldServerEvent_ClientMsg")] ClientMsg = 1,
+    [pbr::OriginalName("BigWorldServerEvent_BigWorldServerEvent_ClientMsg")] BigWorldServerEventClientMsg = 1,
     /// <summary>
     /// 添加玩家领地
     /// </summary>
-    [pbr::OriginalName("BigWorldServerEvent_PlayerAreaAdd")] PlayerAreaAdd = 10000,
+    [pbr::OriginalName("BigWorldServerEvent_BigWorldServerEvent_PlayerAreaAdd")] BigWorldServerEventPlayerAreaAdd = 10000,
     /// <summary>
     /// 地格归属信息更新
     /// </summary>
-    [pbr::OriginalName("BigWorldServerEvent_TileAttributeUp")] TileAttributeUp = 10001,
+    [pbr::OriginalName("BigWorldServerEvent_BigWorldServerEvent_TileAttributeUp")] BigWorldServerEventTileAttributeUp = 10001,
     /// <summary>
     /// 地格战斗信息更新
     /// </summary>
-    [pbr::OriginalName("BigWorldServerEvent_TileFightInfoUp")] TileFightInfoUp = 10002,
+    [pbr::OriginalName("BigWorldServerEvent_BigWorldServerEvent_TileFightInfoUp")] BigWorldServerEventTileFightInfoUp = 10002,
     /// <summary>
     /// 地格战斗技能信息
     /// </summary>
-    [pbr::OriginalName("BigWorldServerEvent_TileUsingSkills")] TileUsingSkills = 10003,
+    [pbr::OriginalName("BigWorldServerEvent_BigWorldServerEvent_TileUsingSkills")] BigWorldServerEventTileUsingSkills = 10003,
   }
 
   /// <summary>
@@ -138,16 +143,16 @@ namespace Bian {
   /// 作用对象
   /// </summary>
   public enum BigWorldSkillTarget {
-    [pbr::OriginalName("BigWorldSkillTargetSelf")] Self = 0,
-    [pbr::OriginalName("BigWorldSkillTargetEnemy")] Enemy = 1,
+    [pbr::OriginalName("BigWorldSkillTarget_BigWorldSkillTargetSelf")] BigWorldSkillTargetSelf = 0,
+    [pbr::OriginalName("BigWorldSkillTarget_BigWorldSkillTargetEnemy")] BigWorldSkillTargetEnemy = 1,
   }
 
   /// <summary>
   /// 技能效果
   /// </summary>
   public enum BigWorldSkillEffect {
-    [pbr::OriginalName("BigWorldSkillEffectTimeReduce")] TimeReduce = 0,
-    [pbr::OriginalName("BigWorldSkillEffectMoneyIncrease")] MoneyIncrease = 1,
+    [pbr::OriginalName("BigWorldSkillEffect_BigWorldSkillEffectTimeReduce")] BigWorldSkillEffectTimeReduce = 0,
+    [pbr::OriginalName("BigWorldSkillEffect_BigWorldSkillEffectMoneyIncrease")] BigWorldSkillEffectMoneyIncrease = 1,
   }
 
   /// <summary>
@@ -157,27 +162,27 @@ namespace Bian {
     /// <summary>
     /// 无
     /// </summary>
-    [pbr::OriginalName("NFTRarityUnknown")] Unknown = 0,
+    [pbr::OriginalName("NFTRarity_NFTRarityUnknown")] NftrarityUnknown = 0,
     /// <summary>
     /// 普通
     /// </summary>
-    [pbr::OriginalName("NFTRarityCommon")] Common = 1,
+    [pbr::OriginalName("NFTRarity_NFTRarityCommon")] NftrarityCommon = 1,
     /// <summary>
     /// 稀有
     /// </summary>
-    [pbr::OriginalName("NFTRarityRare")] Rare = 2,
+    [pbr::OriginalName("NFTRarity_NFTRarityRare")] NftrarityRare = 2,
     /// <summary>
     /// 史诗
     /// </summary>
-    [pbr::OriginalName("NFTRarityEpic")] Epic = 3,
+    [pbr::OriginalName("NFTRarity_NFTRarityEpic")] NftrarityEpic = 3,
     /// <summary>
     /// 神话
     /// </summary>
-    [pbr::OriginalName("NFTRarityMythic")] Mythic = 4,
+    [pbr::OriginalName("NFTRarity_NFTRarityMythic")] NftrarityMythic = 4,
     /// <summary>
     /// 唯一
     /// </summary>
-    [pbr::OriginalName("NFTRarityUnique")] Unique = 5,
+    [pbr::OriginalName("NFTRarity_NFTRarityUnique")] NftrarityUnique = 5,
   }
 
   /// <summary>
@@ -301,7 +306,7 @@ namespace Bian {
 
     /// <summary>Field number for the "target" field.</summary>
     public const int TargetFieldNumber = 3;
-    private global::Bian.BigWorldSkillTarget target_ = global::Bian.BigWorldSkillTarget.Self;
+    private global::Bian.BigWorldSkillTarget target_ = global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.BigWorldSkillTarget Target {
@@ -313,7 +318,7 @@ namespace Bian {
 
     /// <summary>Field number for the "effect" field.</summary>
     public const int EffectFieldNumber = 4;
-    private global::Bian.BigWorldSkillEffect effect_ = global::Bian.BigWorldSkillEffect.TimeReduce;
+    private global::Bian.BigWorldSkillEffect effect_ = global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.BigWorldSkillEffect Effect {
@@ -375,8 +380,8 @@ namespace Bian {
       int hash = 1;
       if (SkillId != 0) hash ^= SkillId.GetHashCode();
       if (SkillName.Length != 0) hash ^= SkillName.GetHashCode();
-      if (Target != global::Bian.BigWorldSkillTarget.Self) hash ^= Target.GetHashCode();
-      if (Effect != global::Bian.BigWorldSkillEffect.TimeReduce) hash ^= Effect.GetHashCode();
+      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) hash ^= Target.GetHashCode();
+      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) hash ^= Effect.GetHashCode();
       hash ^= valueList_.GetHashCode();
       hash ^= radiusList_.GetHashCode();
       if (_unknownFields != null) {
@@ -405,11 +410,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(SkillName);
       }
-      if (Target != global::Bian.BigWorldSkillTarget.Self) {
+      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Target);
       }
-      if (Effect != global::Bian.BigWorldSkillEffect.TimeReduce) {
+      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Effect);
       }
@@ -433,11 +438,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(SkillName);
       }
-      if (Target != global::Bian.BigWorldSkillTarget.Self) {
+      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Target);
       }
-      if (Effect != global::Bian.BigWorldSkillEffect.TimeReduce) {
+      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Effect);
       }
@@ -459,10 +464,10 @@ namespace Bian {
       if (SkillName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SkillName);
       }
-      if (Target != global::Bian.BigWorldSkillTarget.Self) {
+      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Target);
       }
-      if (Effect != global::Bian.BigWorldSkillEffect.TimeReduce) {
+      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Effect);
       }
       size += valueList_.CalculateSize(_repeated_valueList_codec);
@@ -485,10 +490,10 @@ namespace Bian {
       if (other.SkillName.Length != 0) {
         SkillName = other.SkillName;
       }
-      if (other.Target != global::Bian.BigWorldSkillTarget.Self) {
+      if (other.Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         Target = other.Target;
       }
-      if (other.Effect != global::Bian.BigWorldSkillEffect.TimeReduce) {
+      if (other.Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         Effect = other.Effect;
       }
       valueList_.Add(other.valueList_);
@@ -886,7 +891,7 @@ namespace Bian {
 
     /// <summary>Field number for the "placeable_rarity" field.</summary>
     public const int PlaceableRarityFieldNumber = 3;
-    private global::Bian.NFTRarity placeableRarity_ = global::Bian.NFTRarity.Unknown;
+    private global::Bian.NFTRarity placeableRarity_ = global::Bian.NFTRarity.NftrarityUnknown;
     /// <summary>
     /// nft 品质 第三方NFT 没有cid
     /// </summary>
@@ -956,7 +961,7 @@ namespace Bian {
       int hash = 1;
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       if (ObjectCid != 0) hash ^= ObjectCid.GetHashCode();
-      if (PlaceableRarity != global::Bian.NFTRarity.Unknown) hash ^= PlaceableRarity.GetHashCode();
+      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) hash ^= PlaceableRarity.GetHashCode();
       hash ^= tarLand_.GetHashCode();
       hash ^= skills_.GetHashCode();
       if (_unknownFields != null) {
@@ -985,7 +990,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (PlaceableRarity != global::Bian.NFTRarity.Unknown) {
+      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) PlaceableRarity);
       }
@@ -1009,7 +1014,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (PlaceableRarity != global::Bian.NFTRarity.Unknown) {
+      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) PlaceableRarity);
       }
@@ -1031,7 +1036,7 @@ namespace Bian {
       if (ObjectCid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectCid);
       }
-      if (PlaceableRarity != global::Bian.NFTRarity.Unknown) {
+      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlaceableRarity);
       }
       size += tarLand_.CalculateSize(_repeated_tarLand_codec);
@@ -1054,7 +1059,7 @@ namespace Bian {
       if (other.ObjectCid != 0) {
         ObjectCid = other.ObjectCid;
       }
-      if (other.PlaceableRarity != global::Bian.NFTRarity.Unknown) {
+      if (other.PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         PlaceableRarity = other.PlaceableRarity;
       }
       tarLand_.Add(other.tarLand_);
@@ -1605,7 +1610,7 @@ namespace Bian {
 
     /// <summary>Field number for the "wearable_rarity" field.</summary>
     public const int WearableRarityFieldNumber = 3;
-    private global::Bian.NFTRarity wearableRarity_ = global::Bian.NFTRarity.Unknown;
+    private global::Bian.NFTRarity wearableRarity_ = global::Bian.NFTRarity.NftrarityUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Bian.NFTRarity WearableRarity {
@@ -1642,7 +1647,7 @@ namespace Bian {
       int hash = 1;
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       if (ObjectCid != 0) hash ^= ObjectCid.GetHashCode();
-      if (WearableRarity != global::Bian.NFTRarity.Unknown) hash ^= WearableRarity.GetHashCode();
+      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) hash ^= WearableRarity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1669,7 +1674,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (WearableRarity != global::Bian.NFTRarity.Unknown) {
+      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) WearableRarity);
       }
@@ -1691,7 +1696,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (WearableRarity != global::Bian.NFTRarity.Unknown) {
+      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) WearableRarity);
       }
@@ -1711,7 +1716,7 @@ namespace Bian {
       if (ObjectCid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectCid);
       }
-      if (WearableRarity != global::Bian.NFTRarity.Unknown) {
+      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WearableRarity);
       }
       if (_unknownFields != null) {
@@ -1732,7 +1737,7 @@ namespace Bian {
       if (other.ObjectCid != 0) {
         ObjectCid = other.ObjectCid;
       }
-      if (other.WearableRarity != global::Bian.NFTRarity.Unknown) {
+      if (other.WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
         WearableRarity = other.WearableRarity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

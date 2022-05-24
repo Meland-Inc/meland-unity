@@ -24,11 +24,12 @@ namespace Bian {
     static OptionDefineReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNvcHRpb25fZGVmaW5lLnByb3RvEgRCaWFuKpoBCgpPcHRpb25UeXBlEhYK",
-            "Ek9wdGlvblR5cGVfVW5rbm93bhAAEhwKGE9wdGlvblR5cGVfVGFiSWRfZGVm",
-            "YXVsdBABEhkKFE9wdGlvblR5cGVfUG93ZXJfQWxsEOkHEh8KGk9wdGlvblR5",
-            "cGVfUG93ZXJfQWxsUGxheWVyEOoHEhoKFU9wdGlvblR5cGVfUG93ZXJfU2Vs",
-            "ZhDrB2IGcHJvdG8z"));
+            "ChNvcHRpb25fZGVmaW5lLnByb3RvEgRCaWFuKtEBCgpPcHRpb25UeXBlEiEK",
+            "HU9wdGlvblR5cGVfT3B0aW9uVHlwZV9Vbmtub3duEAASJwojT3B0aW9uVHlw",
+            "ZV9PcHRpb25UeXBlX1RhYklkX2RlZmF1bHQQARIkCh9PcHRpb25UeXBlX09w",
+            "dGlvblR5cGVfUG93ZXJfQWxsEOkHEioKJU9wdGlvblR5cGVfT3B0aW9uVHlw",
+            "ZV9Qb3dlcl9BbGxQbGF5ZXIQ6gcSJQogT3B0aW9uVHlwZV9PcHRpb25UeXBl",
+            "X1Bvd2VyX1NlbGYQ6wdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.OptionType), }, null, null));
@@ -41,23 +42,23 @@ namespace Bian {
   /// 选择类宏定义
   /// </summary>
   public enum OptionType {
-    [pbr::OriginalName("OptionType_Unknown")] Unknown = 0,
+    [pbr::OriginalName("OptionType_OptionType_Unknown")] OptionTypeUnknown = 0,
     /// <summary>
     ///可编码幕布默认id
     /// </summary>
-    [pbr::OriginalName("OptionType_TabId_default")] TabIdDefault = 1,
+    [pbr::OriginalName("OptionType_OptionType_TabId_default")] OptionTypeTabIdDefault = 1,
     /// <summary>
     ///所有单位
     /// </summary>
-    [pbr::OriginalName("OptionType_Power_All")] PowerAll = 1001,
+    [pbr::OriginalName("OptionType_OptionType_Power_All")] OptionTypePowerAll = 1001,
     /// <summary>
     ///所有玩家
     /// </summary>
-    [pbr::OriginalName("OptionType_Power_AllPlayer")] PowerAllPlayer = 1002,
+    [pbr::OriginalName("OptionType_OptionType_Power_AllPlayer")] OptionTypePowerAllPlayer = 1002,
     /// <summary>
     ///自己
     /// </summary>
-    [pbr::OriginalName("OptionType_Power_Self")] PowerSelf = 1003,
+    [pbr::OriginalName("OptionType_OptionType_Power_Self")] OptionTypePowerSelf = 1003,
   }
 
   #endregion

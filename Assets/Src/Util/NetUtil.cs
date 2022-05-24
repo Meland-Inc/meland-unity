@@ -44,4 +44,18 @@ public static class NetUtil
     {
         return GlobalDefine.IS_ADAPTIVE_OLD_DATA ? -svrScreenY : svrScreenY;
     }
+
+    //将服务器rc转换成客户端坐标
+    public static (float x, float z) RCToXZ(float r, float c)
+    {
+        if (GlobalDefine.IS_ADAPTIVE_OLD_DATA)
+        {
+            return (c, SvrScreenYToClient(r));
+        }
+        else
+        {
+            MLog.Fatal(eLogTag.map, "not support rc already");
+            return (c, r);
+        }
+    }
 }

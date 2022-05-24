@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityGameFramework.Runtime;
 using System;
 
 /// <summary>
@@ -106,4 +105,8 @@ public enum eSceneGroup : uint
     /// 战斗角色
     /// </summary>
     fightRole = 1 << 3,
+    /// <summary>
+    /// 地表
+    /// </summary>
+    terrain = 1 << 4,
 }

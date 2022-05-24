@@ -72,7 +72,7 @@ public class SceneEntity
 
     public void SetRootParent(Transform parent)
     {
-        Root.transform.SetParent(parent, false);
+        Transform.SetParent(parent, false);
     }
 
     /// <summary>

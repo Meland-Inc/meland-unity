@@ -64,7 +64,11 @@ public class NetMessageCenter : GameFrameworkComponent
 
         MLog.Info(eLogTag.network, $"ConnectChannel channelName = {channelName} ip = {ip} port = {port}");
         INetworkChannel channel = _channelMap[channelName];
+#if UNITY_WEBGL
+        channel.Connect(ip);
+#else
         channel.Connect(System.Net.IPAddress.Parse(ip), port);
+#endif
     }
 
     public void CloseChannel(string channelName)

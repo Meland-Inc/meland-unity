@@ -39,9 +39,9 @@ public class ProtoHandler
     {
 
         // enum 结构匹配
-        Regex enumStructRegex = new(@"enum +\w+ +\{[\s\S\n]*?\}");
+        Regex enumStructRegex = new(@"enum +\w+ *\{[\s\S\n]*?\}");
         // enum 名称匹配
-        Regex enumNameRegex = new(@"enum +(\w+) +\{");
+        Regex enumNameRegex = new(@"enum +(\w+) *\{");
         MatchCollection matchs = enumStructRegex.Matches(content);
         foreach (Match match in matchs)
         {

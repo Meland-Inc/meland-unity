@@ -8,6 +8,9 @@ public class MapModel : DataModelBase
 {
     [SerializeField]
     private Rect _range;
+    /// <summary>
+    /// 地图的范围 Rect原点在左下角 和场景一致
+    /// </summary>
     public Rect Range => _range;
 
     [SerializeField]
@@ -20,15 +23,22 @@ public class MapModel : DataModelBase
     /// <param name="svrMapData"></param>
     public void InitSvrData(Map svrMapData)
     {
-        InitMapRangeSize(svrMapData.MapWidth, svrMapData.MapHeight);
+        InitMapRangeSize((int)svrMapData.MapWidth, (int)svrMapData.MapHeight);
 
         _mapId = svrMapData.Id;
 
-        MapChunkModule chunkModule = SceneModule.Root.AddComponent<MapChunkModule>();
-        chunkModule.InitSvrChunkData(svrMapData);
+        if (svrMapData.StaticData != null && svrMapData.StaticData.Using)
+        {
+            MapChunkModule chunkModule = SceneModule.Root.AddComponent<MapChunkModule>();
+            chunkModule.InitSvrChunkData(svrMapData.StaticData);
+        }
+        else
+        {
+            MLog.Error(eLogTag.map, "map static chunk is null or not using");
+        }
     }
 
-    private void InitMapRangeSize(float width, float height)
+    private void InitMapRangeSize(int width, int height)
     {
         Rect range = new()
         {

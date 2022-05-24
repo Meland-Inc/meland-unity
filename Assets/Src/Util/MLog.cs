@@ -10,6 +10,7 @@ public enum eLogTag
     scene,
     ui,
     login,
+    map,//服务器具体地图
     entity
 }
 

@@ -25,4 +25,5 @@ public enum eLoadPriority : int
     Normal = 2000,
     SceneElement,
     High = 3000,
+    Terrain,
 }

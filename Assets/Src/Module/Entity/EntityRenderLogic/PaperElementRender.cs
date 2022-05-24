@@ -36,6 +36,12 @@ public class PaperElementRender : SceneEntityRenderBase
         LoadSprite(data.ExtraAsset);
     }
 
+    protected override void OnRecycle()
+    {
+        //TODO:卸载资源
+        base.OnRecycle();
+    }
+
     private async void LoadSprite(string spriteName)
     {
         Sprite sprite = await Resource.LoadSprite(spriteName);

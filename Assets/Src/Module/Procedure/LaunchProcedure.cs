@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class LaunchProcedure : ProcedureBase
 {
-    private string _needLoadSceneName;
+    private bool _needLogin = false;
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
@@ -17,9 +17,7 @@ public class LaunchProcedure : ProcedureBase
         MLog.Debug(eLogTag.unknown, "hello GF debug");
         // BasicModule.NetMsgCenter.ConnectChannel(NetworkDefine.CHANNEL_NAME_GAME, "127.0.0.1", 9000);
 
-        Message.GameSceneChanged += OnGameSceneChanged;
-
-        DataManager.GetModel<GameSceneModel>().ChangeToScene(GameSceneModel.SCENE_NAME_WORLD);
+        _needLogin = true;
     }
 
     [System.Obsolete]
@@ -34,16 +32,11 @@ public class LaunchProcedure : ProcedureBase
     {
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
-        if (string.IsNullOrEmpty(_needLoadSceneName))
+        if (_needLogin)
         {
-            return;
+            ChangeState<LoginProcedure>(procedureOwner);
         }
 
         ChangeState<ProcedurePreload>(procedureOwner);
-    }
-
-    private void OnGameSceneChanged(string sceneName)
-    {
-        _needLoadSceneName = sceneName;
     }
 }

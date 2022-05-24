@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
-public class FGUIManagerCenter : GameFrameworkComponent
+public class UICenter : GameFrameworkComponent
 {
     public const string FORM_ASSET_PREFIX = "Assets/Res/Prefab/UI/";
     private Dictionary<eFormID, string> _dicFormAsset;

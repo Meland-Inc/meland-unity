@@ -213,12 +213,22 @@ public class WebHttpNetworkChannel : INetworkChannel
 
     public void Connect(IPAddress ipAddress, int port)
     {
-        //empty method
+        throw new GameFrameworkException("HttpChannel can not connect.");
     }
 
     public void Connect(IPAddress ipAddress, int port, object userData)
     {
-        //empty method
+        throw new GameFrameworkException("HttpChannel can not connect.");
+    }
+
+    public void Connect(string ipAddress)
+    {
+        throw new GameFrameworkException("HttpChannel can not connect.");
+    }
+
+    public void Connect(string targetAddress, object userData)
+    {
+        throw new GameFrameworkException("HttpChannel can not connect.");
     }
 
     public void Shutdown()

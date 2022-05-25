@@ -6,6 +6,9 @@ using UnityEngine;
 /// </summary>
 public static class DataManager
 {
+    private static MainPlayerModel s_mainPlayer;
+    public static MainPlayerModel MainPlayer => s_mainPlayer = s_mainPlayer != null ? s_mainPlayer : GetModel<MainPlayerModel>();
+
     private static GameObject s_dataRoot;
     private static readonly Dictionary<string, DataModelBase> s_modelMap = new();
 

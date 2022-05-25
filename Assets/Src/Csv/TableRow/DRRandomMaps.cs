@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.154
+// 生成时间：2022-05-25 14:56:28.721
 //------------------------------------------------------------
 
 using GameFramework;
@@ -148,18 +148,18 @@ public class DRRandomMaps : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Terrain_1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Terrain_2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Terrain_3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Terrain_4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Terrain_5 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Broad_width = DataTableExtension.ParseInt(columnStrings[index++]);
-        Ids_1 = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        Ids_2 = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        Ids_3 = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        Ids_4 = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        Ids_5 = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Terrain_1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Terrain_2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Terrain_3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Terrain_4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Terrain_5 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Broad_width = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Ids_1 = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Ids_2 = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Ids_3 = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Ids_4 = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Ids_5 = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
 
         return true;
     }

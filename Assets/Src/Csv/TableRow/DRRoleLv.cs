@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.185
+// 生成时间：2022-05-25 14:56:28.740
 //------------------------------------------------------------
 
 using GameFramework;
@@ -138,18 +138,18 @@ public class DRRoleLv : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Lv = DataTableExtension.ParseInt(columnStrings[index++]);
-        Exp = DataTableExtension.ParseInt(columnStrings[index++]);
-        Hp = DataTableExtension.ParseInt(columnStrings[index++]);
-        HpRecovery = DataTableExtension.ParseInt(columnStrings[index++]);
-        Att = DataTableExtension.ParseInt(columnStrings[index++]);
-        AttSpd = DataTableExtension.ParseInt(columnStrings[index++]);
-        Def = DataTableExtension.ParseInt(columnStrings[index++]);
-        CritRate = DataTableExtension.ParseInt(columnStrings[index++]);
-        CritDmg = DataTableExtension.ParseInt(columnStrings[index++]);
-        HitPoint = DataTableExtension.ParseInt(columnStrings[index++]);
-        MissPoint = DataTableExtension.ParseInt(columnStrings[index++]);
-        MoveSpeed = DataTableExtension.ParseInt(columnStrings[index++]);
+        Lv = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Exp = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Hp = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        HpRecovery = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Att = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        AttSpd = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Def = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CritRate = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CritDmg = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        HitPoint = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MissPoint = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MoveSpeed = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

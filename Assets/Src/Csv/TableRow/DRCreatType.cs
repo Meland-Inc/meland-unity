@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.911
+// 生成时间：2022-05-25 14:56:28.490
 //------------------------------------------------------------
 
 using GameFramework;
@@ -331,36 +331,36 @@ public class DRCreatType : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         index++;
-        Func1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm1 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm2 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm3 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm4 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func5 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type5 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm5 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func6 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type6 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm6 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func7 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type7 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm7 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func8 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type8 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm8 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func9 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type9 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm9 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Func10 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type10 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Parm10 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
+        Func1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm1 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm2 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm3 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm4 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func5 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type5 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm5 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func6 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type6 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm6 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func7 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type7 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm7 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func8 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type8 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm8 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func9 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type9 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm9 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Func10 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type10 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Parm10 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
 
         return true;
     }

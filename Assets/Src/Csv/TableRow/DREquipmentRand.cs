@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.073
+// 生成时间：2022-05-25 14:56:28.644
 //------------------------------------------------------------
 
 using GameFramework;
@@ -69,10 +69,10 @@ public class DREquipmentRand : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        AttUpMin = DataTableExtension.ParseInt(columnStrings[index++]);
-        AttUpMax = DataTableExtension.ParseInt(columnStrings[index++]);
-        AttChance = DataTableExtension.ParseInt(columnStrings[index++]);
-        ItemQuality = DataTableExtension.ParseInt(columnStrings[index++]);
+        AttUpMin = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        AttUpMax = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        AttChance = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ItemQuality = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.902
+// 生成时间：2022-05-25 14:56:28.477
 //------------------------------------------------------------
 
 using GameFramework;
@@ -417,50 +417,50 @@ public class DRCodeblockCus : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        OrderArr = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        SourceId = DataTableExtension.ParseInt(columnStrings[index++]);
+        OrderArr = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        SourceId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         CodeblockDesc = columnStrings[index++];
         index++;
         FuncCallName = columnStrings[index++];
         ActionName = columnStrings[index++];
         Unit = columnStrings[index++];
-        Price = DataTableExtension.ParseInt(columnStrings[index++]);
+        Price = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Category = columnStrings[index++];
-        Default = DataTableExtension.ParseBool(columnStrings[index++]);
+        Default = DataTableParseUtil.ParseBool(columnStrings[index++]);
         Type = columnStrings[index++];
-        Permission = DataTableExtension.ParseInt(columnStrings[index++]);
-        Struct = DataTableExtension.ParseInt(columnStrings[index++]);
+        Permission = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Struct = DataTableParseUtil.ParseInt(columnStrings[index++]);
         PromptIcon = columnStrings[index++];
         Template1 = columnStrings[index++];
-        HiddenStr = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args1 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args2 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args3 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args4 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args5 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args6 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args7 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args8 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args9 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args10 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args11 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args12 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args13 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args14 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args15 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args16 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args17 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args18 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args19 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args20 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args21 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args22 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args23 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args24 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        Args25 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
+        HiddenStr = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args1 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args2 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args3 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args4 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args5 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args6 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args7 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args8 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args9 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args10 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args11 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args12 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args13 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args14 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args15 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args16 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args17 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args18 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args19 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args20 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args21 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args22 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args23 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args24 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        Args25 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
         Template2 = columnStrings[index++];
-        Sort = DataTableExtension.ParseInt(columnStrings[index++]);
-        PublicUseful = DataTableExtension.ParseBool(columnStrings[index++]);
+        Sort = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        PublicUseful = DataTableParseUtil.ParseBool(columnStrings[index++]);
 
         return true;
     }

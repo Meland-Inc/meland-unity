@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.112
+// 生成时间：2022-05-25 14:56:28.671
 //------------------------------------------------------------
 
 using GameFramework;
@@ -86,10 +86,10 @@ public class DRMailTemplate : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
         Description = columnStrings[index++];
-        Top = DataTableExtension.ParseInt(columnStrings[index++]);
-        Initial = DataTableExtension.ParseInt(columnStrings[index++]);
-        Duration = DataTableExtension.ParseInt(columnStrings[index++]);
-        RewardGifId = DataTableExtension.ParseInt(columnStrings[index++]);
+        Top = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Initial = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Duration = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RewardGifId = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

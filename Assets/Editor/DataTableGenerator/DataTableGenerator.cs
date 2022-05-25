@@ -157,7 +157,7 @@ namespace Meland.Editor.DataTableTools
                 }
                 else
                 {
-                    _ = stringBuilder.AppendFormat("        {0} = DataTableExtension.{1}(columnStrings[index++]);", dataTableProcessor.GetFirstLetterToUpperName(i), dataTableProcessor.GetExtensionParseKey(i)).AppendLine();
+                    _ = stringBuilder.AppendFormat("        {0} = DataTableParseUtil.{1}(columnStrings[index++]);", dataTableProcessor.GetFirstLetterToUpperName(i), dataTableProcessor.GetExtensionParseKey(i)).AppendLine();
                 }
             }
 

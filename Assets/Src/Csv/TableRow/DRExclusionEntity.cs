@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.075
+// 生成时间：2022-05-25 14:56:28.645
 //------------------------------------------------------------
 
 using GameFramework;
@@ -93,12 +93,12 @@ public class DRExclusionEntity : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Cid = DataTableExtension.ParseInt(columnStrings[index++]);
-        ExTypeNotBuild = DataTableExtension.ParseInt(columnStrings[index++]);
+        Cid = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ExTypeNotBuild = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ExNotBuildCids = columnStrings[index++];
-        ExTypeDel = DataTableExtension.ParseInt(columnStrings[index++]);
+        ExTypeDel = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ExDelCids = columnStrings[index++];
-        ExTypeMove = DataTableExtension.ParseInt(columnStrings[index++]);
+        ExTypeMove = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ExMoveCids = columnStrings[index++];
 
         return true;

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.198
+// 生成时间：2022-05-25 14:56:28.751
 //------------------------------------------------------------
 
 using GameFramework;
@@ -58,9 +58,9 @@ public class DRTemplatePass : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         MapTemplateName = columnStrings[index++];
-        DungeonId = DataTableExtension.ParseInt(columnStrings[index++]);
+        DungeonId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
-        Score = DataTableExtension.ParseInt(columnStrings[index++]);
+        Score = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

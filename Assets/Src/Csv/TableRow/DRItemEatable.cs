@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.101
+// 生成时间：2022-05-25 14:56:28.662
 //------------------------------------------------------------
 
 using GameFramework;
@@ -68,10 +68,10 @@ public class DRItemEatable : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         index++;
-        Cd = DataTableExtension.ParseInt(columnStrings[index++]);
-        CallFunc = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Args = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        CdType = DataTableExtension.ParseInt(columnStrings[index++]);
+        Cd = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CallFunc = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Args = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        CdType = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

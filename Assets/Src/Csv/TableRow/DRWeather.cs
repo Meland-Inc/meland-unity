@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.202
+// 生成时间：2022-05-25 14:56:28.754
 //------------------------------------------------------------
 
 using GameFramework;
@@ -138,19 +138,19 @@ public class DRWeather : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        WeatherType = DataTableExtension.ParseInt(columnStrings[index++]);
+        WeatherType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
         AmiRes = columnStrings[index++];
-        AmiType = DataTableExtension.ParseBool(columnStrings[index++]);
+        AmiType = DataTableParseUtil.ParseBool(columnStrings[index++]);
         WeatherIcon = columnStrings[index++];
         EffectIcon = columnStrings[index++];
         EffectDesc = columnStrings[index++];
         FullDesc = columnStrings[index++];
-        TempChange = DataTableExtension.ParseInt(columnStrings[index++]);
-        ThirstyChange = DataTableExtension.ParseInt(columnStrings[index++]);
-        HungryChange = DataTableExtension.ParseInt(columnStrings[index++]);
-        BuffId = DataTableExtension.ParseInt(columnStrings[index++]);
-        Interval = DataTableExtension.ParseInt(columnStrings[index++]);
+        TempChange = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ThirstyChange = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        HungryChange = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BuffId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Interval = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

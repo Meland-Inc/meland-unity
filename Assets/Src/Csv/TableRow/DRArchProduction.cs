@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.883
+// 生成时间：2022-05-25 14:56:28.461
 //------------------------------------------------------------
 
 using GameFramework;
@@ -121,17 +121,17 @@ public class DRArchProduction : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         index++;
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        WorkbenchFrom = DataTableExtension.ParseInt(columnStrings[index++]);
-        NeedFuel = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        FormulaIds = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        StorageNum = DataTableExtension.ParseInt(columnStrings[index++]);
-        BuningRatio = DataTableExtension.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        WorkbenchFrom = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        NeedFuel = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        FormulaIds = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        StorageNum = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BuningRatio = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
-        MaxChars = DataTableExtension.ParseInt(columnStrings[index++]);
+        MaxChars = DataTableParseUtil.ParseInt(columnStrings[index++]);
         DefaultContent = columnStrings[index++];
-        DisplayTime = DataTableExtension.ParseInt(columnStrings[index++]);
-        TriggerRange = DataTableExtension.ParseInt(columnStrings[index++]);
+        DisplayTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TriggerRange = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.037
+// 生成时间：2022-05-25 14:56:28.602
 //------------------------------------------------------------
 
 using GameFramework;
@@ -312,33 +312,33 @@ public class DREntityMaterial : DataRowBase
         index++;
         Icon = columnStrings[index++];
         Desc = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        SubType = DataTableExtension.ParseInt(columnStrings[index++]);
-        PreArticleType = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Area = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        WalkDir = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        Texture = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SubType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        PreArticleType = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Area = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        WalkDir = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Texture = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         SupplyTexture = columnStrings[index++];
-        HpLimit = DataTableExtension.ParseInt(columnStrings[index++]);
-        FallingRecipeId = DataTableExtension.ParseInt(columnStrings[index++]);
-        ToolType = DataTableExtension.ParseInt(columnStrings[index++]);
+        HpLimit = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        FallingRecipeId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ToolType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         HitEffect = columnStrings[index++];
         HitMusic = columnStrings[index++];
-        ObjectDef = DataTableExtension.ParseInt(columnStrings[index++]);
-        DropExp = DataTableExtension.ParseInt(columnStrings[index++]);
+        ObjectDef = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DropExp = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
-        TerrainType = DataTableExtension.ParseInt(columnStrings[index++]);
-        SlowMotion = DataTableExtension.ParseInt(columnStrings[index++]);
-        SceneEffectAnchor = DataTableExtension.ParseInt(columnStrings[index++]);
-        LightRadius = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsCover = DataTableExtension.ParseBool(columnStrings[index++]);
-        BodyCapacity = DataTableExtension.ParseInt(columnStrings[index++]);
-        NoShowCode = DataTableExtension.ParseBool(columnStrings[index++]);
-        Camp = DataTableExtension.ParseInt(columnStrings[index++]);
-        Life = DataTableExtension.ParseInt(columnStrings[index++]);
-        Sort = DataTableExtension.ParseInt(columnStrings[index++]);
-        IdleEffect = DataTableExtension.ParseInt(columnStrings[index++]);
-        DeathEffect = DataTableExtension.ParseInt(columnStrings[index++]);
+        TerrainType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SlowMotion = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SceneEffectAnchor = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LightRadius = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsCover = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        BodyCapacity = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        NoShowCode = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        Camp = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Life = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Sort = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IdleEffect = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DeathEffect = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

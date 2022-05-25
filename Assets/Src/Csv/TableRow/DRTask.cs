@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.195
+// 生成时间：2022-05-25 14:56:28.748
 //------------------------------------------------------------
 
 using GameFramework;
@@ -181,17 +181,17 @@ public class DRTask : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
-        Description = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        ShortDescription = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        FinishTargetType = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        FinishTargetId = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        FinishTargetCont = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        RewardId = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsAutoFinish = DataTableExtension.ParseBool(columnStrings[index++]);
-        StartPlayerLevel = DataTableExtension.ParseInt(columnStrings[index++]);
-        PreTaskId = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        IsCyclicTasks = DataTableExtension.ParseBool(columnStrings[index++]);
+        Description = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        ShortDescription = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        FinishTargetType = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        FinishTargetId = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        FinishTargetCont = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        RewardId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsAutoFinish = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        StartPlayerLevel = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        PreTaskId = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        IsCyclicTasks = DataTableParseUtil.ParseBool(columnStrings[index++]);
         TeachingPlan = columnStrings[index++];
 
         return true;

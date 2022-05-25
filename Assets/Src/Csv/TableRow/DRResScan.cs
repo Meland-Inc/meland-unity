@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.156
+// 生成时间：2022-05-25 14:56:28.723
 //------------------------------------------------------------
 
 using GameFramework;
@@ -75,8 +75,8 @@ public class DRResScan : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        ScanType = DataTableExtension.ParseInt(columnStrings[index++]);
-        ScanId = DataTableExtension.ParseInt(columnStrings[index++]);
+        ScanType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ScanId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ScanIndex = columnStrings[index++];
         Category = columnStrings[index++];
         UrlType = columnStrings[index++];

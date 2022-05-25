@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.174
+// 生成时间：2022-05-25 14:56:28.735
 //------------------------------------------------------------
 
 using GameFramework;
@@ -221,27 +221,27 @@ public class DRRobotLv : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Lv = DataTableExtension.ParseInt(columnStrings[index++]);
-        LvType = DataTableExtension.ParseInt(columnStrings[index++]);
-        Exp = DataTableExtension.ParseInt(columnStrings[index++]);
-        Satiety = DataTableExtension.ParseInt(columnStrings[index++]);
-        Craving = DataTableExtension.ParseInt(columnStrings[index++]);
-        Hp = DataTableExtension.ParseInt(columnStrings[index++]);
-        Att = DataTableExtension.ParseInt(columnStrings[index++]);
-        Def = DataTableExtension.ParseInt(columnStrings[index++]);
-        FireAtt = DataTableExtension.ParseInt(columnStrings[index++]);
-        IceAtt = DataTableExtension.ParseInt(columnStrings[index++]);
-        ThunderAtt = DataTableExtension.ParseInt(columnStrings[index++]);
-        PoisonAtt = DataTableExtension.ParseInt(columnStrings[index++]);
-        DarkAtt = DataTableExtension.ParseInt(columnStrings[index++]);
-        FireDef = DataTableExtension.ParseInt(columnStrings[index++]);
-        IceDef = DataTableExtension.ParseInt(columnStrings[index++]);
-        ThunderDef = DataTableExtension.ParseInt(columnStrings[index++]);
-        PoisonDef = DataTableExtension.ParseInt(columnStrings[index++]);
-        DarkDef = DataTableExtension.ParseInt(columnStrings[index++]);
-        MissRate = DataTableExtension.ParseInt(columnStrings[index++]);
-        CritRate = DataTableExtension.ParseInt(columnStrings[index++]);
-        MoveSpeed = DataTableExtension.ParseInt(columnStrings[index++]);
+        Lv = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LvType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Exp = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Satiety = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Craving = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Hp = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Att = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Def = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        FireAtt = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IceAtt = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ThunderAtt = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        PoisonAtt = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DarkAtt = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        FireDef = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IceDef = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ThunderDef = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        PoisonDef = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DarkDef = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MissRate = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CritRate = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MoveSpeed = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

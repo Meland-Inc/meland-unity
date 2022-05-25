@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.915
+// 生成时间：2022-05-25 14:56:28.495
 //------------------------------------------------------------
 
 using GameFramework;
@@ -103,11 +103,11 @@ public class DREduResource : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
-        SourceType = DataTableExtension.ParseInt(columnStrings[index++]);
-        SourceId = DataTableExtension.ParseInt(columnStrings[index++]);
-        ResourceGroupTag = DataTableExtension.ParseInt(columnStrings[index++]);
+        SourceType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SourceId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ResourceGroupTag = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Desc = columnStrings[index++];
-        ResourceTag = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        ResourceTag = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         Preview1 = columnStrings[index++];
         Preview2 = columnStrings[index++];
 

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.208
+// 生成时间：2022-05-25 14:56:28.760
 //------------------------------------------------------------
 
 using GameFramework;
@@ -93,7 +93,7 @@ public class DRhelp : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        UseSystem = DataTableExtension.ParseInt(columnStrings[index++]);
+        UseSystem = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Picture1 = columnStrings[index++];
         Text1 = columnStrings[index++];
         Picture2 = columnStrings[index++];

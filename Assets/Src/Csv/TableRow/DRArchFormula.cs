@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.881
+// 生成时间：2022-05-25 14:56:28.459
 //------------------------------------------------------------
 
 using GameFramework;
@@ -394,44 +394,44 @@ public class DRArchFormula : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
         Desc = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        UnlockType = DataTableExtension.ParseInt(columnStrings[index++]);
-        UnlockCondition = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time = DataTableExtension.ParseInt(columnStrings[index++]);
-        ProductId = DataTableExtension.ParseInt(columnStrings[index++]);
-        ProductType = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId5 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum5 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId6 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum6 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId7 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum7 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId8 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum8 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId9 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum9 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId10 = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemNum10 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time0 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time0Object = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time1Object = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time2Object = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Time3Object = DataTableExtension.ParseInt(columnStrings[index++]);
-        RewardId = DataTableExtension.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        UnlockType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        UnlockCondition = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ProductId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ProductType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId5 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum5 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId6 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum6 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId7 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum7 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId8 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum8 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId9 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum9 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId10 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemNum10 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time0 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time0Object = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time1Object = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time2Object = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Time3Object = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RewardId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Source = columnStrings[index++];
         SourceText = columnStrings[index++];
-        Sort = DataTableExtension.ParseInt(columnStrings[index++]);
+        Sort = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

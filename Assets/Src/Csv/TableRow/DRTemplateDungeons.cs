@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.197
+// 生成时间：2022-05-25 14:56:28.749
 //------------------------------------------------------------
 
 using GameFramework;
@@ -186,20 +186,20 @@ public class DRTemplateDungeons : DataRowBase
         DungeonName = columnStrings[index++];
         DungeonLevDes = columnStrings[index++];
         DungeonPointDes = columnStrings[index++];
-        BaseReward = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        SupReward = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        SupRewardUnlockDes = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        SupRewardTipDes = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        FinalReward = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        BaseReward = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        SupReward = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        SupRewardUnlockDes = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        SupRewardTipDes = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        FinalReward = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         FinalDes = columnStrings[index++];
         FinalClearDes = columnStrings[index++];
         FinalRewardImage = columnStrings[index++];
-        BigRewardLev = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        MaxLevel = DataTableExtension.ParseInt(columnStrings[index++]);
-        MaxVipClearLv = DataTableExtension.ParseInt(columnStrings[index++]);
-        LevUpPoint = DataTableExtension.ParseInt(columnStrings[index++]);
+        BigRewardLev = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        MaxLevel = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MaxVipClearLv = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LevUpPoint = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Url = columnStrings[index++];
-        DunCdKeyFlag = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
+        DunCdKeyFlag = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
         index++;
         index++;
         index++;

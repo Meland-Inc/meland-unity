@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.875
+// 生成时间：2022-05-25 14:56:28.453
 //------------------------------------------------------------
 
 using GameFramework;
@@ -101,12 +101,12 @@ public class DRAchievement : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        LinkId = DataTableExtension.ParseInt(columnStrings[index++]);
-        Number = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        AchieveReward = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        AchieveName = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        AchieveDiscribe = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LinkId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Number = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        AchieveReward = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        AchieveName = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        AchieveDiscribe = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
 
         return true;
     }

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.182
+// 生成时间：2022-05-25 14:56:28.737
 //------------------------------------------------------------
 
 using GameFramework;
@@ -141,17 +141,17 @@ public class DRRole : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         RoleName = columnStrings[index++];
-        RoleSex = DataTableExtension.ParseInt(columnStrings[index++]);
-        RoleAssetID = DataTableExtension.ParseInt(columnStrings[index++]);
-        RoleDefaultAvatar = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        RoleDefaultSkill = DataTableExtension.ParseInt(columnStrings[index++]);
-        CollectSkill = DataTableExtension.ParseInt(columnStrings[index++]);
-        OpenChestSkill = DataTableExtension.ParseInt(columnStrings[index++]);
-        BodyCapacity = DataTableExtension.ParseInt(columnStrings[index++]);
-        LightRadius = DataTableExtension.ParseInt(columnStrings[index++]);
+        RoleSex = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RoleAssetID = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RoleDefaultAvatar = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        RoleDefaultSkill = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CollectSkill = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        OpenChestSkill = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BodyCapacity = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LightRadius = DataTableParseUtil.ParseInt(columnStrings[index++]);
         GrasslandRunSound = columnStrings[index++];
         PickUpSound = columnStrings[index++];
-        RoleIcon = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        RoleIcon = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
 
         return true;
     }

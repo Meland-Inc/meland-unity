@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.206
+// 生成时间：2022-05-25 14:56:28.757
 //------------------------------------------------------------
 
 using GameFramework;
@@ -57,9 +57,9 @@ public class DRcd : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Cd_type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Value = DataTableExtension.ParseInt(columnStrings[index++]);
-        Need_sync = DataTableExtension.ParseBool(columnStrings[index++]);
+        Cd_type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Value = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Need_sync = DataTableParseUtil.ParseBool(columnStrings[index++]);
         index++;
 
         return true;

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.099
+// 生成时间：2022-05-25 14:56:28.660
 //------------------------------------------------------------
 
 using GameFramework;
@@ -50,7 +50,7 @@ public class DRItemArgument : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         index++;
         Gm = columnStrings[index++];
-        Args = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        Args = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
 
         return true;
     }

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.192
+// 生成时间：2022-05-25 14:56:28.745
 //------------------------------------------------------------
 
 using GameFramework;
@@ -294,33 +294,33 @@ public class DRSkill : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         index++;
         SkillName = columnStrings[index++];
-        InfluenceTargetType = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        SkillCD = DataTableExtension.ParseInt(columnStrings[index++]);
+        InfluenceTargetType = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        SkillCD = DataTableParseUtil.ParseInt(columnStrings[index++]);
         SkillIcon = columnStrings[index++];
-        EffectEnemy = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        EffectSelf = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        AccuTime = DataTableExtension.ParseInt(columnStrings[index++]);
+        EffectEnemy = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        EffectSelf = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        AccuTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
         AccuAct = columnStrings[index++];
-        AccuEff = DataTableExtension.ParseInt(columnStrings[index++]);
-        AccuBreakable = DataTableExtension.ParseBool(columnStrings[index++]);
+        AccuEff = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        AccuBreakable = DataTableParseUtil.ParseBool(columnStrings[index++]);
         AccuTab = columnStrings[index++];
-        ReleaseAct = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        ReleaseEff = DataTableExtension.ParseInt(columnStrings[index++]);
-        ReleaseTime = DataTableExtension.ParseInt(columnStrings[index++]);
-        ForwardReleaseTime = DataTableExtension.ParseInt(columnStrings[index++]);
-        RangeTips = DataTableExtension.ParseBool(columnStrings[index++]);
-        SkillRange = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        SkillDistance = DataTableExtension.ParseInt(columnStrings[index++]);
-        TargetPointType = DataTableExtension.ParseBool(columnStrings[index++]);
-        AttackCanMove = DataTableExtension.ParseBool(columnStrings[index++]);
-        AnimRotate = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsAutoUse = DataTableExtension.ParseBool(columnStrings[index++]);
-        IfBullet = DataTableExtension.ParseBool(columnStrings[index++]);
-        BulletFlyDistance = DataTableExtension.ParseInt(columnStrings[index++]);
-        BulletFlySpeed = DataTableExtension.ParseInt(columnStrings[index++]);
+        ReleaseAct = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        ReleaseEff = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ReleaseTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ForwardReleaseTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RangeTips = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        SkillRange = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        SkillDistance = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TargetPointType = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        AttackCanMove = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        AnimRotate = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsAutoUse = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        IfBullet = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        BulletFlyDistance = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BulletFlySpeed = DataTableParseUtil.ParseInt(columnStrings[index++]);
         BulletAvatar = columnStrings[index++];
-        IfBulletFollow = DataTableExtension.ParseBool(columnStrings[index++]);
-        IfBulletPass = DataTableExtension.ParseBool(columnStrings[index++]);
+        IfBulletFollow = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        IfBulletPass = DataTableParseUtil.ParseBool(columnStrings[index++]);
 
         return true;
     }

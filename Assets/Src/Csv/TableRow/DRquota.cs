@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.212
+// 生成时间：2022-05-25 14:56:28.763
 //------------------------------------------------------------
 
 using GameFramework;
@@ -57,9 +57,9 @@ public class DRquota : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Quota_subtype = DataTableExtension.ParseInt(columnStrings[index++]);
-        Clean_type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Need_sync = DataTableExtension.ParseBool(columnStrings[index++]);
+        Quota_subtype = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Clean_type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Need_sync = DataTableParseUtil.ParseBool(columnStrings[index++]);
         index++;
 
         return true;

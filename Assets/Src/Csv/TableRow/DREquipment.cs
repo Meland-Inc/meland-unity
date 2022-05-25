@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.072
+// 生成时间：2022-05-25 14:56:28.643
 //------------------------------------------------------------
 
 using GameFramework;
@@ -211,27 +211,27 @@ public class DREquipment : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        GearType = DataTableExtension.ParseInt(columnStrings[index++]);
+        GearType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
-        GearDurabilityMax = DataTableExtension.ParseInt(columnStrings[index++]);
+        GearDurabilityMax = DataTableParseUtil.ParseInt(columnStrings[index++]);
         KeyIcon = columnStrings[index++];
-        GearAvatar = DataTableExtension.ParseInt(columnStrings[index++]);
-        GivenSkillId = DataTableExtension.ParseInt(columnStrings[index++]);
+        GearAvatar = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        GivenSkillId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Null = columnStrings[index++];
-        GearAddHp = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddHpRec = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddAtt = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddAttSpd = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddDef = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddCritRate = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddCritDmg = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddHitPoint = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddMissPoint = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        GearAddSpeed = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
+        GearAddHp = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddHpRec = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddAtt = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddAttSpd = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddDef = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddCritRate = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddCritDmg = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddHitPoint = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddMissPoint = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        GearAddSpeed = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
         EquipMusic = columnStrings[index++];
         AttackSound = columnStrings[index++];
-        LightRadiusAdd = DataTableExtension.ParseInt(columnStrings[index++]);
-        RepairNeed = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
+        LightRadiusAdd = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RepairNeed = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
 
         return true;
     }

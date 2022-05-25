@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-20 10:05:57
- * @LastEditTime: 2022-05-23 15:06:57
+ * @LastEditTime: 2022-05-25 14:54:36
  * @LastEditors: xiang huan
  * @Description: 
  * @FilePath: /meland-unity/Assets/Src/Csv/BinaryReaderExtension.cs
@@ -58,14 +58,14 @@ public static class BinaryReaderExtension
     public static T[] ReadArray<T>(this BinaryReader binaryReader)
     {
         string arrayStr = binaryReader.ReadString();
-        T[] values = DataTableExtension.ParseArray<T>(arrayStr);
+        T[] values = DataTableParseUtil.ParseArray<T>(arrayStr);
         return values;
     }
 
     public static T[][] ReadArrayList<T>(this BinaryReader binaryReader)
     {
         string arrayStr = binaryReader.ReadString();
-        T[][] values = DataTableExtension.ParseArrayList<T>(arrayStr);
+        T[][] values = DataTableParseUtil.ParseArrayList<T>(arrayStr);
         return values;
     }
 }

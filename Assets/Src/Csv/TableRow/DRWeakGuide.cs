@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.201
+// 生成时间：2022-05-25 14:56:28.753
 //------------------------------------------------------------
 
 using GameFramework;
@@ -173,20 +173,20 @@ e.g. :100,100。*/
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Desc = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
         GuideTips = columnStrings[index++];
-        Duration = DataTableExtension.ParseInt(columnStrings[index++]);
+        Duration = DataTableParseUtil.ParseInt(columnStrings[index++]);
         HideMethod = columnStrings[index++];
-        Pos = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        Pos = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         ClickUI = columnStrings[index++];
         HolderUI = columnStrings[index++];
-        ClickOffset = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        PreConds = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        TriggerConds = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Args = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
+        ClickOffset = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        PreConds = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        TriggerConds = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Args = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
         FinishCond = columnStrings[index++];
-        Overdue = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        OverdueArgs = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
+        Overdue = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        OverdueArgs = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
 
         return true;
     }

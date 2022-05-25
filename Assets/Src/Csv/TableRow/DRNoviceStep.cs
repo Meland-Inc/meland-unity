@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.133
+// 生成时间：2022-05-25 14:56:28.700
 //------------------------------------------------------------
 
 using GameFramework;
@@ -303,31 +303,31 @@ public class DRNoviceStep : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Description = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsForce = DataTableExtension.ParseBool(columnStrings[index++]);
-        CanSkip = DataTableExtension.ParseBool(columnStrings[index++]);
-        IsShowMask = DataTableExtension.ParseBool(columnStrings[index++]);
-        CanMove = DataTableExtension.ParseBool(columnStrings[index++]);
-        Delay = DataTableExtension.ParseInt(columnStrings[index++]);
-        NextTipsDelay = DataTableExtension.ParseInt(columnStrings[index++]);
-        ClickLocation = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        ClickTargetType = DataTableExtension.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsForce = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        CanSkip = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        IsShowMask = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        CanMove = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        Delay = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        NextTipsDelay = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ClickLocation = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        ClickTargetType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ClickSceneTips = columnStrings[index++];
-        Direction = DataTableExtension.ParseInt(columnStrings[index++]);
+        Direction = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ClickUITips = columnStrings[index++];
         UiPath = columnStrings[index++];
-        DialogPos = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        DialogPos = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         SelfName = columnStrings[index++];
         OtherName = columnStrings[index++];
         SelfIcon = columnStrings[index++];
         OtherIcon = columnStrings[index++];
-        Speech = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        DataType = DataTableExtension.ParseInt(columnStrings[index++]);
-        ItemIds = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        ItemsNum = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        EntityId = DataTableExtension.ParseInt(columnStrings[index++]);
-        EntityType = DataTableExtension.ParseInt(columnStrings[index++]);
-        EntityLocation = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        Speech = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        DataType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ItemIds = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        ItemsNum = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        EntityId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        EntityType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        EntityLocation = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
 
         return true;
     }

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.155
+// 生成时间：2022-05-25 14:56:28.722
 //------------------------------------------------------------
 
 using GameFramework;
@@ -159,17 +159,17 @@ public class DRRecipes : DataRowBase
         Icon = columnStrings[index++];
         Name = columnStrings[index++];
         Desc = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Level = DataTableExtension.ParseInt(columnStrings[index++]);
-        RecipesSort = DataTableExtension.ParseInt(columnStrings[index++]);
-        UnlockType = DataTableExtension.ParseInt(columnStrings[index++]);
-        UnlockCondition = DataTableExtension.ParseInt(columnStrings[index++]);
-        ProductId = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        ProductQuality = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        QualityPro = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        SourceText = DataTableExtension.ParseInt(columnStrings[index++]);
-        MatItemId = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        UseDitamin = DataTableExtension.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Level = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RecipesSort = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        UnlockType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        UnlockCondition = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ProductId = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        ProductQuality = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        QualityPro = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        SourceText = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MatItemId = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        UseDitamin = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

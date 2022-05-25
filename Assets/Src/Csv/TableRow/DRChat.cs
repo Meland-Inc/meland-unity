@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.891
+// 生成时间：2022-05-25 14:56:28.468
 //------------------------------------------------------------
 
 using GameFramework;
@@ -77,10 +77,10 @@ public class DRChat : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         index++;
         ChannelRGB = columnStrings[index++];
-        TalkCD = DataTableExtension.ParseInt(columnStrings[index++]);
-        MaxTips = DataTableExtension.ParseInt(columnStrings[index++]);
-        TalkNeedGold = DataTableExtension.ParseInt(columnStrings[index++]);
-        IfBubble = DataTableExtension.ParseBool(columnStrings[index++]);
+        TalkCD = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MaxTips = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TalkNeedGold = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IfBubble = DataTableParseUtil.ParseBool(columnStrings[index++]);
 
         return true;
     }

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.888
+// 生成时间：2022-05-25 14:56:28.465
 //------------------------------------------------------------
 
 using GameFramework;
@@ -103,7 +103,7 @@ public class DRAvatar : DataRowBase
         ResouceBoy = columnStrings[index++];
         ResouceBoyIcon = columnStrings[index++];
         ResouceRobot = columnStrings[index++];
-        AvatarType = DataTableExtension.ParseInt(columnStrings[index++]);
+        AvatarType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
 
         return true;

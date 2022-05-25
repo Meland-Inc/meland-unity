@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.038
+// 生成时间：2022-05-25 14:56:28.603
 //------------------------------------------------------------
 
 using GameFramework;
@@ -58,8 +58,8 @@ public class DREntitySceneForce : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Desc = columnStrings[index++];
-        Force = DataTableExtension.ParseInt(columnStrings[index++]);
-        Dir = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        Force = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Dir = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
 
         return true;
     }

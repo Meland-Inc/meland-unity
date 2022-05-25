@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.207
+// 生成时间：2022-05-25 14:56:28.759
 //------------------------------------------------------------
 
 using GameFramework;
@@ -66,10 +66,10 @@ public class DRcondition : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Condition_type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Compare_type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Compare_value = DataTableExtension.ParseInt(columnStrings[index++]);
-        Params = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        Condition_type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Compare_type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Compare_value = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Params = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         index++;
 
         return true;

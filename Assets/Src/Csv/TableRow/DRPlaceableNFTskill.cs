@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.151
+// 生成时间：2022-05-25 14:56:28.718
 //------------------------------------------------------------
 
 using GameFramework;
@@ -95,8 +95,8 @@ public class DRPlaceableNFTskill : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         Skill_name = columnStrings[index++];
         Skill_icon = columnStrings[index++];
-        Radius = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Value = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        Radius = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Value = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         Desc = columnStrings[index++];
         Skill_target = columnStrings[index++];
         Skill_effect = columnStrings[index++];

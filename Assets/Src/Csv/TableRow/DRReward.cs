@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.168
+// 生成时间：2022-05-25 14:56:28.732
 //------------------------------------------------------------
 
 using GameFramework;
@@ -159,20 +159,20 @@ public class DRReward : DataRowBase
         index++;
         index++;
         index++;
-        Item1ObjectId = DataTableExtension.ParseInt(columnStrings[index++]);
-        Item1Quality = DataTableExtension.ParseInt(columnStrings[index++]);
-        Item2ObjectId = DataTableExtension.ParseInt(columnStrings[index++]);
-        Item2Quality = DataTableExtension.ParseInt(columnStrings[index++]);
-        Item3ObjectId = DataTableExtension.ParseInt(columnStrings[index++]);
-        Item3Quality = DataTableExtension.ParseInt(columnStrings[index++]);
-        Item4ObjectId = DataTableExtension.ParseInt(columnStrings[index++]);
-        Item4Quality = DataTableExtension.ParseInt(columnStrings[index++]);
-        Exp = DataTableExtension.ParseInt(columnStrings[index++]);
-        Currency1  = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Currency2 = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Currency3 = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Currency4 = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Currency5 = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        Item1ObjectId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Item1Quality = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Item2ObjectId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Item2Quality = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Item3ObjectId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Item3Quality = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Item4ObjectId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Item4Quality = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Exp = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Currency1  = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Currency2 = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Currency3 = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Currency4 = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Currency5 = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
 
         return true;
     }

@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.128
+// 生成时间：2022-05-25 14:56:28.696
 //------------------------------------------------------------
 
 using GameFramework;
@@ -202,25 +202,25 @@ public class DRNPCtalk : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        NextTalkTeam = DataTableExtension.ParseInt(columnStrings[index++]);
-        Content = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Accept1TaskTalk = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Accept2TaskTalk = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Accept3TaskTalk = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        IsBubble = DataTableExtension.ParseInt(columnStrings[index++]);
-        TalkOptionNum = DataTableExtension.ParseInt(columnStrings[index++]);
-        Option1 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        ToTalkId1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        TaskMark1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        LinkTask1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Option2 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        ToTalkId2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        TaskMark2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        LinkTask2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Option3 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        ToTalkId3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        TaskMark3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        LinkTask3 = DataTableExtension.ParseInt(columnStrings[index++]);
+        NextTalkTeam = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Content = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Accept1TaskTalk = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Accept2TaskTalk = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Accept3TaskTalk = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        IsBubble = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TalkOptionNum = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Option1 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        ToTalkId1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TaskMark1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LinkTask1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Option2 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        ToTalkId2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TaskMark2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LinkTask2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Option3 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        ToTalkId3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TaskMark3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LinkTask3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

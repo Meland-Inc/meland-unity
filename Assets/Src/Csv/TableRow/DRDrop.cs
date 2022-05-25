@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.914
+// 生成时间：2022-05-25 14:56:28.493
 //------------------------------------------------------------
 
 using GameFramework;
@@ -40,7 +40,7 @@ public class DRDrop : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         index++;
-        DropList = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
+        DropList = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
 
         return true;
     }

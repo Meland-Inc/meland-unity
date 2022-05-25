@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.188
+// 生成时间：2022-05-25 14:56:28.742
 //------------------------------------------------------------
 
 using GameFramework;
@@ -178,20 +178,20 @@ public class DRScene : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         Scene = columnStrings[index++];
         SceneCell = columnStrings[index++];
-        SceneMusic = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        SceneMusic = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         Remark = columnStrings[index++];
         OtherName = columnStrings[index++];
-        WeatherType = DataTableExtension.ParseInt(columnStrings[index++]);
+        WeatherType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         WeatherMusic = columnStrings[index++];
-        SceneSpecialEffect = DataTableExtension.ParseInt(columnStrings[index++]);
-        PlayerTalkMan = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        PlayerTalkWomen = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        NoOperationTime = DataTableExtension.ParseInt(columnStrings[index++]);
-        CoolingTime = DataTableExtension.ParseInt(columnStrings[index++]);
-        DailyUpper = DataTableExtension.ParseInt(columnStrings[index++]);
-        WeatherStartRate = DataTableExtension.ParseInt(columnStrings[index++]);
-        WeatherEndRate = DataTableExtension.ParseInt(columnStrings[index++]);
-        DefaultTemp = DataTableExtension.ParseInt(columnStrings[index++]);
+        SceneSpecialEffect = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        PlayerTalkMan = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        PlayerTalkWomen = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        NoOperationTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CoolingTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DailyUpper = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        WeatherStartRate = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        WeatherEndRate = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DefaultTemp = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

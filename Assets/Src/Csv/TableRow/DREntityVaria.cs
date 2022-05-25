@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.066
+// 生成时间：2022-05-25 14:56:28.641
 //------------------------------------------------------------
 
 using GameFramework;
@@ -306,31 +306,31 @@ public class DREntityVaria : DataRowBase
         Name = columnStrings[index++];
         Icon = columnStrings[index++];
         Desc = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        SubType = DataTableExtension.ParseInt(columnStrings[index++]);
-        Texture = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SubType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Texture = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         SupplyTexture = columnStrings[index++];
-        WalkLow = DataTableExtension.ParseInt(columnStrings[index++]);
-        WalkHigh = DataTableExtension.ParseInt(columnStrings[index++]);
-        HighEdge = DataTableExtension.ParseInt(columnStrings[index++]);
-        Area = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        WalkDir = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        Shape = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        IsMultiPicture = DataTableExtension.ParseBool(columnStrings[index++]);
-        BuildAble = DataTableExtension.ParseInt(columnStrings[index++]);
-        BuildHigh = DataTableExtension.ParseInt(columnStrings[index++]);
-        ArchType = DataTableExtension.ParseInt(columnStrings[index++]);
-        ArchId = DataTableExtension.ParseInt(columnStrings[index++]);
-        StateAcceptIds = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Extension = DataTableExtension.ParseInt(columnStrings[index++]);
-        TerrainType = DataTableExtension.ParseInt(columnStrings[index++]);
-        SlowMotion = DataTableExtension.ParseInt(columnStrings[index++]);
-        SceneEffectAnchor = DataTableExtension.ParseInt(columnStrings[index++]);
-        LightRadius = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsCover = DataTableExtension.ParseBool(columnStrings[index++]);
-        NoShowCode = DataTableExtension.ParseBool(columnStrings[index++]);
-        IdleEffect = DataTableExtension.ParseInt(columnStrings[index++]);
-        DeathEffect = DataTableExtension.ParseInt(columnStrings[index++]);
+        WalkLow = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        WalkHigh = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        HighEdge = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Area = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        WalkDir = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Shape = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        IsMultiPicture = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        BuildAble = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BuildHigh = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ArchType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ArchId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        StateAcceptIds = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Extension = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TerrainType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SlowMotion = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SceneEffectAnchor = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LightRadius = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsCover = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        NoShowCode = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        IdleEffect = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DeathEffect = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

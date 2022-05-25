@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.107
+// 生成时间：2022-05-25 14:56:28.667
 //------------------------------------------------------------
 
 using GameFramework;
@@ -184,22 +184,22 @@ public class DRLessonMode : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
-        TeacherDefaultState = DataTableExtension.ParseBool(columnStrings[index++]);
-        DemoViewModeUI = DataTableExtension.ParseBool(columnStrings[index++]);
-        LockScreenUI = DataTableExtension.ParseBool(columnStrings[index++]);
-        StudentGuideUI = DataTableExtension.ParseBool(columnStrings[index++]);
-        StudentManageUI = DataTableExtension.ParseBool(columnStrings[index++]);
-        StudentTransfer = DataTableExtension.ParseBool(columnStrings[index++]);
-        Bgm = DataTableExtension.ParseBool(columnStrings[index++]);
-        SoundEffect = DataTableExtension.ParseBool(columnStrings[index++]);
-        PathFinding = DataTableExtension.ParseBool(columnStrings[index++]);
-        RockerMove = DataTableExtension.ParseBool(columnStrings[index++]);
-        WindowMode = DataTableExtension.ParseBool(columnStrings[index++]);
+        TeacherDefaultState = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        DemoViewModeUI = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        LockScreenUI = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        StudentGuideUI = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        StudentManageUI = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        StudentTransfer = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        Bgm = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        SoundEffect = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        PathFinding = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        RockerMove = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        WindowMode = DataTableParseUtil.ParseBool(columnStrings[index++]);
         CameraMode = columnStrings[index++];
         OperateMode = columnStrings[index++];
-        SceneUnlock = DataTableExtension.ParseBool(columnStrings[index++]);
-        MapEntrace = DataTableExtension.ParseBool(columnStrings[index++]);
-        LessonManageUI = DataTableExtension.ParseBool(columnStrings[index++]);
+        SceneUnlock = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        MapEntrace = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        LessonManageUI = DataTableParseUtil.ParseBool(columnStrings[index++]);
 
         return true;
     }

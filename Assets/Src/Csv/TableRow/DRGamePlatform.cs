@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.076
+// 生成时间：2022-05-25 14:56:28.646
 //------------------------------------------------------------
 
 using GameFramework;
@@ -102,14 +102,14 @@ public class DRGamePlatform : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        ShowType = DataTableExtension.ParseInt(columnStrings[index++]);
+        ShowType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         RootDirectory = columnStrings[index++];
         Game = columnStrings[index++];
         Picture1 = columnStrings[index++];
         Text1 = columnStrings[index++];
         GameName = columnStrings[index++];
-        RoleId = DataTableExtension.ParseInt(columnStrings[index++]);
-        GameId = DataTableExtension.ParseInt(columnStrings[index++]);
+        RoleId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        GameId = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

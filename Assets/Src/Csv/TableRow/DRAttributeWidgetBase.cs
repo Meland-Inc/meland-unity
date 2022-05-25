@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.884
+// 生成时间：2022-05-25 14:56:28.462
 //------------------------------------------------------------
 
 using GameFramework;
@@ -301,36 +301,36 @@ public class DRAttributeWidgetBase : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         index++;
-        Child1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam1 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam2 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam3 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam4 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child5 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam5 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc5 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child6 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam6 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc6 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child7 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam7 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc7 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child8 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam8 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc8 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child9 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam9 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc9 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Child10 = DataTableExtension.ParseInt(columnStrings[index++]);
-        ChildParam10 = DataTableExtension.ParseArrayList<string>(columnStrings[index++]);
-        ChildFunc10 = DataTableExtension.ParseInt(columnStrings[index++]);
+        Child1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam1 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam2 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam3 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam4 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child5 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam5 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc5 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child6 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam6 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc6 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child7 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam7 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc7 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child8 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam8 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc8 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child9 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam9 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc9 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Child10 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ChildParam10 = DataTableParseUtil.ParseArrayList<string>(columnStrings[index++]);
+        ChildFunc10 = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

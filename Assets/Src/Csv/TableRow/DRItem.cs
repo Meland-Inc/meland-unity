@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.097
+// 生成时间：2022-05-25 14:56:28.659
 //------------------------------------------------------------
 
 using GameFramework;
@@ -249,29 +249,29 @@ public class DRItem : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
         index++;
-        ObjectBagType = DataTableExtension.ParseInt(columnStrings[index++]);
+        ObjectBagType = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Desc = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        InitObjectQuantity = DataTableExtension.ParseInt(columnStrings[index++]);
-        BackpackItemLimit = DataTableExtension.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        InitObjectQuantity = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BackpackItemLimit = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Icon = columnStrings[index++];
-        Quality = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        CanTrade = DataTableExtension.ParseBool(columnStrings[index++]);
-        CanSell = DataTableExtension.ParseBool(columnStrings[index++]);
-        CanDrop = DataTableExtension.ParseBool(columnStrings[index++]);
-        IsFuel = DataTableExtension.ParseBool(columnStrings[index++]);
-        BagShowType = DataTableExtension.ParseInt(columnStrings[index++]);
-        UseDrop = DataTableExtension.ParseInt(columnStrings[index++]);
-        UseLv = DataTableExtension.ParseInt(columnStrings[index++]);
-        NoShowCode = DataTableExtension.ParseBool(columnStrings[index++]);
-        UserType = DataTableExtension.ParseInt(columnStrings[index++]);
-        AttWidget = DataTableExtension.ParseInt(columnStrings[index++]);
-        CodeBlockId = DataTableExtension.ParseInt(columnStrings[index++]);
-        SubjectGroup = DataTableExtension.ParseInt(columnStrings[index++]);
-        Binding = DataTableExtension.ParseInt(columnStrings[index++]);
-        ObjectBagShowType = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        Quality = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        CanTrade = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        CanSell = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        CanDrop = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        IsFuel = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        BagShowType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        UseDrop = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        UseLv = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        NoShowCode = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        UserType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        AttWidget = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CodeBlockId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SubjectGroup = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Binding = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ObjectBagShowType = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         RectIcon = columnStrings[index++];
-        CanMint = DataTableExtension.ParseInt(columnStrings[index++]);
+        CanMint = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

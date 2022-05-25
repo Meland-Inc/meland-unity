@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.087
+// 生成时间：2022-05-25 14:56:28.649
 //------------------------------------------------------------
 
 using GameFramework;
@@ -84,10 +84,10 @@ public class DRGameValue : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Value = DataTableExtension.ParseInt(columnStrings[index++]);
+        Value = DataTableParseUtil.ParseInt(columnStrings[index++]);
         StrValue = columnStrings[index++];
-        ValueArray = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        StrValueArray = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        ValueArray = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        StrValueArray = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         Note1 = columnStrings[index++];
         Note2 = columnStrings[index++];
 

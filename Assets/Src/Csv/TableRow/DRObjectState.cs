@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.149
+// 生成时间：2022-05-25 14:56:28.716
 //------------------------------------------------------------
 
 using GameFramework;
@@ -203,16 +203,16 @@ public class DRObjectState : DataRowBase
         TransitionAniResName = columnStrings[index++];
         TransitionAniName = columnStrings[index++];
         SpecialTextureRes = columnStrings[index++];
-        ObjectId = DataTableExtension.ParseInt(columnStrings[index++]);
+        ObjectId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         AnimName = columnStrings[index++];
-        WalkDir = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        TriggerConditions = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        TriggerArg = DataTableExtension.ParseInt(columnStrings[index++]);
+        WalkDir = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        TriggerConditions = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        TriggerArg = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ShowName = columnStrings[index++];
-        LightRadius = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsDefault = DataTableExtension.ParseInt(columnStrings[index++]);
-        NextStateIds = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsNoticeServer = DataTableExtension.ParseInt(columnStrings[index++]);
+        LightRadius = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsDefault = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        NextStateIds = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsNoticeServer = DataTableParseUtil.ParseInt(columnStrings[index++]);
         RectTexture = columnStrings[index++];
 
         return true;

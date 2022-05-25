@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.150
+// 生成时间：2022-05-25 14:56:28.717
 //------------------------------------------------------------
 
 using GameFramework;
@@ -48,7 +48,7 @@ public class DRPaoMaDeng : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Triggerlv = DataTableExtension.ParseInt(columnStrings[index++]);
+        Triggerlv = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Text1 = columnStrings[index++];
 
         return true;

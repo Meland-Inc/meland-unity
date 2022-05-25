@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.012
+// 生成时间：2022-05-25 14:56:28.579
 //------------------------------------------------------------
 
 using GameFramework;
@@ -322,38 +322,38 @@ public class DREntity : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
-        SubjectGroup = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        ObjectBagType = DataTableExtension.ParseInt(columnStrings[index++]);
-        EntityTag = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        SubjectGroup = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ObjectBagType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        EntityTag = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         Icon = columnStrings[index++];
         Desc = columnStrings[index++];
-        Texture = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        Texture = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
         SupplyTexture = columnStrings[index++];
         AnimeName = columnStrings[index++];
-        Area = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        BuildHigh = DataTableExtension.ParseInt(columnStrings[index++]);
-        AttWidget = DataTableExtension.ParseInt(columnStrings[index++]);
-        CodeBlockId = DataTableExtension.ParseInt(columnStrings[index++]);
-        WalkLow = DataTableExtension.ParseInt(columnStrings[index++]);
-        WalkHigh = DataTableExtension.ParseInt(columnStrings[index++]);
-        HighEdge = DataTableExtension.ParseInt(columnStrings[index++]);
-        WalkDir = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        IsTerrain = DataTableExtension.ParseBool(columnStrings[index++]);
-        IdleEffect = DataTableExtension.ParseInt(columnStrings[index++]);
-        SceneEffectAnchor = DataTableExtension.ParseInt(columnStrings[index++]);
+        Area = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        BuildHigh = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        AttWidget = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        CodeBlockId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        WalkLow = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        WalkHigh = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        HighEdge = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        WalkDir = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        IsTerrain = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        IdleEffect = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SceneEffectAnchor = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
-        LightEffect = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        LightOffset  = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        DropId = DataTableExtension.ParseInt(columnStrings[index++]);
-        ObjectBagShowType = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        LightEffect = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        LightOffset  = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        DropId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ObjectBagShowType = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         RectIcon = columnStrings[index++];
-        RectTexture = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        RectBuildHigh = DataTableExtension.ParseInt(columnStrings[index++]);
-        RectWalkLow = DataTableExtension.ParseInt(columnStrings[index++]);
-        RectWalkHigh = DataTableExtension.ParseInt(columnStrings[index++]);
-        RectSceneEffectAnchor = DataTableExtension.ParseInt(columnStrings[index++]);
-        RectLightOffset = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        RectTexture = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        RectBuildHigh = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RectWalkLow = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RectWalkHigh = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RectSceneEffectAnchor = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RectLightOffset = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
 
         return true;
     }

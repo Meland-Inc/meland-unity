@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.211
+// 生成时间：2022-05-25 14:56:28.762
 //------------------------------------------------------------
 
 using GameFramework;
@@ -211,25 +211,25 @@ public class DRhitBubble : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         HitedType = columnStrings[index++];
-        LinkId = DataTableExtension.ParseInt(columnStrings[index++]);
+        LinkId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Linkname = columnStrings[index++];
-        TriggeredRange = DataTableExtension.ParseInt(columnStrings[index++]);
-        FoundBubble = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Bubble0 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Bubble1 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Bubble2 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Bubble3 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Bubble4 = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Probability = DataTableExtension.ParseInt(columnStrings[index++]);
-        MonsterNoblood = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        MonsterDiebubble = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        PlayerNoblood = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        MonsterTaunt = DataTableExtension.ParseArray<string>(columnStrings[index++]);
-        Uplevel = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        BubbleUpper = DataTableExtension.ParseInt(columnStrings[index++]);
-        BubbleCD = DataTableExtension.ParseInt(columnStrings[index++]);
+        TriggeredRange = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        FoundBubble = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Bubble0 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Bubble1 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Bubble2 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Bubble3 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Bubble4 = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Probability = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        MonsterNoblood = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        MonsterDiebubble = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        PlayerNoblood = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        MonsterTaunt = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Uplevel = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        BubbleUpper = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BubbleCD = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ExpressionRes = columnStrings[index++];
-        ExpressionTime = DataTableExtension.ParseInt(columnStrings[index++]);
+        ExpressionTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }

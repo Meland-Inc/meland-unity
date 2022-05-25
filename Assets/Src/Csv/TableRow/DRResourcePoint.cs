@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.157
+// 生成时间：2022-05-25 14:56:28.724
 //------------------------------------------------------------
 
 using GameFramework;
@@ -112,13 +112,13 @@ public class DRResourcePoint : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Update_interval = DataTableExtension.ParseInt(columnStrings[index++]);
-        Radius = DataTableExtension.ParseInt(columnStrings[index++]);
-        Resource_type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Resource_id = DataTableExtension.ParseArrayList<int>(columnStrings[index++]);
-        PatrolRadius = DataTableExtension.ParseInt(columnStrings[index++]);
-        PatrolSpd = DataTableExtension.ParseInt(columnStrings[index++]);
-        IsShow = DataTableExtension.ParseInt(columnStrings[index++]);
+        Update_interval = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Radius = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Resource_type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Resource_id = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        PatrolRadius = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        PatrolSpd = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IsShow = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Icon = columnStrings[index++];
         Name = columnStrings[index++];
         index++;

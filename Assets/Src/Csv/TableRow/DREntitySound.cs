@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.041
+// 生成时间：2022-05-25 14:56:28.606
 //------------------------------------------------------------
 
 using GameFramework;
@@ -85,10 +85,10 @@ public class DREntitySound : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
         SourceName = columnStrings[index++];
         Format = columnStrings[index++];
-        Time = DataTableExtension.ParseInt(columnStrings[index++]);
+        Time = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Desc = columnStrings[index++];
 
         return true;

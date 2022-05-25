@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:47.890
+// 生成时间：2022-05-25 14:56:28.466
 //------------------------------------------------------------
 
 using GameFramework;
@@ -122,12 +122,12 @@ public class DRBuff : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        BuffEffect = DataTableExtension.ParseInt(columnStrings[index++]);
-        BuffGroupId = DataTableExtension.ParseInt(columnStrings[index++]);
-        BuffPriority = DataTableExtension.ParseInt(columnStrings[index++]);
-        BuffPara = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        TotleTime = DataTableExtension.ParseInt(columnStrings[index++]);
-        TriggerInterval = DataTableExtension.ParseInt(columnStrings[index++]);
+        BuffEffect = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BuffGroupId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BuffPriority = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BuffPara = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        TotleTime = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        TriggerInterval = DataTableParseUtil.ParseInt(columnStrings[index++]);
         BuffName = columnStrings[index++];
         BuffDesc = columnStrings[index++];
         BuffIcon = columnStrings[index++];

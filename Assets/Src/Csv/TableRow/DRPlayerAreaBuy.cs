@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.152
+// 生成时间：2022-05-25 14:56:28.720
 //------------------------------------------------------------
 
 using GameFramework;
@@ -48,8 +48,8 @@ public class DRPlayerAreaBuy : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
-        Times = DataTableExtension.ParseInt(columnStrings[index++]);
-        Cost_id = DataTableExtension.ParseInt(columnStrings[index++]);
+        Times = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Cost_id = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
 
         return true;

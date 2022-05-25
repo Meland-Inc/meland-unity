@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.121
+// 生成时间：2022-05-25 14:56:28.679
 //------------------------------------------------------------
 
 using GameFramework;
@@ -123,15 +123,15 @@ public class DRNPC : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         NpcName = columnStrings[index++];
-        NpcMap = DataTableExtension.ParseInt(columnStrings[index++]);
-        Location = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        NpcMap = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Location = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         NPCsceneRemark = columnStrings[index++];
-        ChatDialogID = DataTableExtension.ParseInt(columnStrings[index++]);
+        ChatDialogID = DataTableParseUtil.ParseInt(columnStrings[index++]);
         HalfAvatar = columnStrings[index++];
         NpcAvatar = columnStrings[index++];
         Npctype = columnStrings[index++];
-        IfNpcShow = DataTableExtension.ParseBool(columnStrings[index++]);
-        DefaultDialog = DataTableExtension.ParseArray<string>(columnStrings[index++]);
+        IfNpcShow = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        DefaultDialog = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
 
         return true;
     }

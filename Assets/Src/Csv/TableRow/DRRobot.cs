@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-23 15:59:48.169
+// 生成时间：2022-05-25 14:56:28.733
 //------------------------------------------------------------
 
 using GameFramework;
@@ -247,29 +247,29 @@ public class DRRobot : DataRowBase
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
         Name = columnStrings[index++];
-        LvType = DataTableExtension.ParseInt(columnStrings[index++]);
-        Type = DataTableExtension.ParseInt(columnStrings[index++]);
-        Skill1Id = DataTableExtension.ParseInt(columnStrings[index++]);
-        Skill2Id = DataTableExtension.ParseInt(columnStrings[index++]);
-        SkillSequence = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        Acquisitionskills = DataTableExtension.ParseInt(columnStrings[index++]);
-        RobotSkinId = DataTableExtension.ParseInt(columnStrings[index++]);
-        RobotCodeBlockId = DataTableExtension.ParseInt(columnStrings[index++]);
-        RobotListCodeShow = DataTableExtension.ParseArray<int>(columnStrings[index++]);
-        BagGridNum = DataTableExtension.ParseInt(columnStrings[index++]);
-        FuelCeiling = DataTableExtension.ParseInt(columnStrings[index++]);
+        LvType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Skill1Id = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Skill2Id = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        SkillSequence = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        Acquisitionskills = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RobotSkinId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RobotCodeBlockId = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        RobotListCodeShow = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        BagGridNum = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        FuelCeiling = DataTableParseUtil.ParseInt(columnStrings[index++]);
         RobotIcon = columnStrings[index++];
         Slogan = columnStrings[index++];
         Description = columnStrings[index++];
-        Skin1 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Skin2 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Skin3 = DataTableExtension.ParseInt(columnStrings[index++]);
-        Skin4 = DataTableExtension.ParseInt(columnStrings[index++]);
-        IfElseRobotList = DataTableExtension.ParseInt(columnStrings[index++]);
-        BodyCapacity = DataTableExtension.ParseInt(columnStrings[index++]);
-        LightRadius = DataTableExtension.ParseInt(columnStrings[index++]);
+        Skin1 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Skin2 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Skin3 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Skin4 = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        IfElseRobotList = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        BodyCapacity = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        LightRadius = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ArmatureRes = columnStrings[index++];
-        RobotAvatarId = DataTableExtension.ParseArray<int>(columnStrings[index++]);
+        RobotAvatarId = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
 
         return true;
     }

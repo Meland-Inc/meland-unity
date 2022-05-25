@@ -15,6 +15,11 @@ public class SceneModule : MonoBehaviour
         EntityMgr = AddModule<SceneEntityMgr>();
     }
 
+    private void OnDestroy()
+    {
+        EntityMgr = null;
+    }
+
     //添加场景内全局功能模块
     private T AddModule<T>() where T : MonoBehaviour
     {

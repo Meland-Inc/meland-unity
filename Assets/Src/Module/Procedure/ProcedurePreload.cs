@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-05-25 10:39:47
+ * @LastEditTime: 2022-05-25 14:31:15
  * @LastEditors: xiang huan
  * @Description: 游戏资源加载
  * @FilePath: /meland-unity/Assets/Src/Module/Procedure/ProcedurePreload.cs
@@ -66,7 +66,7 @@ public class ProcedurePreload : ProcedureBase
 #if DEBUG
         string dataTableAssetName = AssetUtil.GetDataTableAssetPath(dataTableName, false);
 #else
-        string dataTableAssetName = AssetUtil.GetDataTableAsset(dataTableName, true);
+        string dataTableAssetName = AssetUtil.GetDataTableAssetPath(dataTableName, true);
 #endif
         _loadedFlag.Add(dataTableAssetName, false);
         GFEntry.DataTable.LoadDataTable(dataTableName, dataTableAssetName, this);

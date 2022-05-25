@@ -39,7 +39,7 @@ public class LaunchProcedure : ProcedureBase
             return;
         }
 
-        ChangeState<SceneSwitchProcedure>(procedureOwner);
+        ChangeState<ProcedurePreload>(procedureOwner);
     }
 
     private void OnGameSceneChanged(string sceneName)

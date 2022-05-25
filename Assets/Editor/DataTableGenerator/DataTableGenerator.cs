@@ -18,6 +18,7 @@ namespace Meland.Editor.DataTableTools
     public sealed class DataTableGenerator
     {
         private const string DATA_TABLE_PATH = "Assets/Res/DataTable/Bytes";
+        public static string DATA_TABLE_CSV_PATH = "Assets/Res/DataTable/Csv";
         private const string CSHARP_CODE_PATH = "Assets/Src/Csv/TableRow";
         private const string CSHARP_CODE_TEMPLATE_FILE_NAME = "Assets/Editor/DataTableGenerator/Template/DataTableCodeTemplate.txt";
         public static string DATA_TABLE_CONFIG_TEMPLATE_NAME = "Assets/Editor/DataTableGenerator/Template/DataTableConfigTemplate.txt";
@@ -37,7 +38,7 @@ namespace Meland.Editor.DataTableTools
 
             if (string.IsNullOrEmpty(dataTableName))
             {
-                throw new ArgumentException($"'{nameof(dataTableName)}' cannot be null or empty.", nameof(dataTableName));
+                return false;
             }
 
             return true;

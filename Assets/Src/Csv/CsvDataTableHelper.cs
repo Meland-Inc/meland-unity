@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-20 10:05:57
- * @LastEditTime: 2022-05-22 21:16:43
+ * @LastEditTime: 2022-05-25 10:33:49
  * @LastEditors: xiang huan
  * @Description: 
  * @FilePath: /meland-unity/Assets/Src/Csv/CsvDataTableHelper.cs
@@ -19,6 +19,7 @@ using System.Text;
 public class CsvDataTableHelper : DefaultDataTableHelper
 {
     private static readonly string BytesAssetExtension = ".bytes";
+    public static int DATA_TABLE_START_ROW = 3;
     /// <summary>
     /// 读取数据表。
     /// </summary>
@@ -58,7 +59,7 @@ public class CsvDataTableHelper : DefaultDataTableHelper
         try
         {
             string[] rows = CSVSerializer.ParseCSVRow(dataTableString);
-            for (int i = 3; i < rows.Length; i++)
+            for (int i = DATA_TABLE_START_ROW; i < rows.Length; i++)
             {
                 if (!dataTable.AddDataRow(rows[i], userData))
                 {

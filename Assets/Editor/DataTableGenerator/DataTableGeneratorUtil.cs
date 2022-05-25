@@ -19,7 +19,6 @@ namespace Meland.Editor.DataTableTools
     {
         public static string SVNCsvPath { get; private set; }
         public static string SVNConfigPath { get; private set; }
-        public static string DATA_TABLE_CSV_PATH = "Assets/Res/DataTable/Csv";
 
         public static void SetPath(string configPath)
         {
@@ -33,7 +32,11 @@ namespace Meland.Editor.DataTableTools
 
         public static void UpdateCsv()
         {
-            string csvPath = Utility.Path.GetRegularPath(DATA_TABLE_CSV_PATH);
+            string csvPath = Utility.Path.GetRegularPath(DataTableGenerator.DATA_TABLE_CSV_PATH);
+            if (!Directory.Exists(csvPath))
+            {
+                _ = Directory.CreateDirectory(csvPath);
+            }
             DirectoryInfo direction = new(SVNCsvPath);
             FileInfo[] files = direction.GetFiles("*.csv", SearchOption.AllDirectories);
             for (int i = 0; i < files.Length; i++)
@@ -44,7 +47,7 @@ namespace Meland.Editor.DataTableTools
         }
         public static void GenerateDataTables()
         {
-            string csvPath = Utility.Path.GetRegularPath(DATA_TABLE_CSV_PATH);
+            string csvPath = Utility.Path.GetRegularPath(DataTableGenerator.DATA_TABLE_CSV_PATH);
             DirectoryInfo direction = new(csvPath);
             FileInfo[] files = direction.GetFiles("*.csv", SearchOption.AllDirectories);
             List<string> tableNames = new();

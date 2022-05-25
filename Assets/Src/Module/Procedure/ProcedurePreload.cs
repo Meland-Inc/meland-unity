@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-05-23 13:43:56
+ * @LastEditTime: 2022-05-25 10:39:47
  * @LastEditors: xiang huan
  * @Description: 游戏资源加载
  * @FilePath: /meland-unity/Assets/Src/Module/Procedure/ProcedurePreload.cs
@@ -48,7 +48,7 @@ public class ProcedurePreload : ProcedureBase
                 return;
             }
         }
-        ChangeState<GameProcedure>(procedureOwner);
+        ChangeState<SceneSwitchProcedure>(procedureOwner);
 
     }
 
@@ -64,7 +64,7 @@ public class ProcedurePreload : ProcedureBase
     private void LoadDataTable(string dataTableName)
     {
 #if DEBUG
-        string dataTableAssetName = AssetUtil.GetDataTableAsset(dataTableName, false);
+        string dataTableAssetName = AssetUtil.GetDataTableAssetPath(dataTableName, false);
 #else
         string dataTableAssetName = AssetUtil.GetDataTableAsset(dataTableName, true);
 #endif
@@ -92,7 +92,7 @@ public class ProcedurePreload : ProcedureBase
             return;
         }
         _loadedFlag[ne.DataTableAssetName] = true;
-        //Log.Error("Can not load data table '{0}' from '{1}' with error message '{2}'.", ne.DataTableAssetName, ne.DataTableAssetName, ne.ErrorMessage);
+        Log.Error("Can not load data table '{0}' from '{1}' with error message '{2}'.", ne.DataTableAssetName, ne.DataTableAssetName, ne.ErrorMessage);
     }
 }
 

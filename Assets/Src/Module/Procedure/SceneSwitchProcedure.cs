@@ -40,7 +40,7 @@ public class SceneSwitchProcedure : ProcedureBase
 
         if (_isSceneLoadFinish)
         {
-            ChangeState<ProcedurePreload>(procedureOwner);
+            ChangeState<GameProcedure>(procedureOwner);
         }
     }
 

@@ -1,15 +1,14 @@
-using System;
-public enum eFormID : byte//主界面窗口ID
+public enum eUIGroup
 {
-    main = 0,
+    Form,
+    Tooltip,
+    Toast,
+    Dialog,
+    Alert,
+    Log
 }
 
-public class UIGroups
+public enum eFUIPackage
 {
-    public const string FORM = "Form";
-    public const string TOOL_TIP = "Tooltip";
-    public const string TOAST = "toast";
-    public const string DIALOG = "Dialog";
-    public const string ALERT = "Alert";
-    public const string LOG = "Log";
+    Common,
 }

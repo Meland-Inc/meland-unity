@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
+using FairyGUI;
 public class UICenter : GameFrameworkComponent
 {
     public const string FORM_ASSET_PREFIX = "Assets/Res/Prefab/UI/";
-    private Dictionary<eFormID, string> _dicFormAsset;
-    private Dictionary<eFormID, int> _dicFormCacheID;
+    private Dictionary<string, int> _dicFormCacheID;
     private void Start()
     {
-        InitFormAssetConfig();
         _dicFormCacheID = new();
+        InitConfig();
+        InitPackage();
     }
     public static void InitConfig()
     {
@@ -17,40 +18,44 @@ public class UICenter : GameFrameworkComponent
 
     public static void InitPackage()
     {
-        //add default package
+        // _ = UIPackage.AddPackage(eFUIPackage.Common.ToString());
     }
 
-    private void InitFormAssetConfig()
+    public string GetFormAsset<T>() where T : FGUIForm, new()
     {
-        _dicFormAsset = new()
-        {
-            { eFormID.main,  "FormTest" }
-        };
+        return GetFormAsset(typeof(T).Name);
     }
 
-    public string GetFormAsset(eFormID formID)
+    public string GetFormAsset(string formName)
     {
-        if (_dicFormAsset.TryGetValue(formID, out string value))
-        {
-            return string.Format("{0}{1}.prefab", FORM_ASSET_PREFIX, value);
-        }
-
-        return "";
+        return $"{FORM_ASSET_PREFIX}{formName}.prefab";
     }
 
-    public int GetFormCacheID(eFormID formID)
+    public int GetFormCacheID<T>() where T : FGUIForm, new()
     {
-        if (_dicFormCacheID.TryGetValue(formID, out int value))
+        return GetFormCacheID(typeof(T).Name);
+    }
+
+    public int GetFormCacheID(string assetName)
+    {
+        if (_dicFormCacheID.TryGetValue(assetName, out int value))
         {
             return value;
         }
 
+        MLog.Error(eLogTag.ui, "can't find form cache id,assetName: " + assetName);
         return -1;
     }
 
-    public void SetFormCacheID(eFormID formID, int serialID)
+
+    public void SetFormCacheID<T>(int serialID) where T : FGUIForm, new()
     {
-        _dicFormCacheID.Add(formID, serialID);
+        SetFormCacheID(typeof(T).Name, serialID);
+    }
+
+    public void SetFormCacheID(string formName, int serialID)
+    {
+        _dicFormCacheID.Add(formName, serialID);
     }
 }
 

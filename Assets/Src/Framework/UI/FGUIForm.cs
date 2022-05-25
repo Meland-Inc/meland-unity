@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityGameFramework.Runtime;
 using FairyGUI;
 using System;
-
+/// <summary>
+/// fgui窗体基类，所有fgui窗体都要继承这个类
+/// </summary>
 [RequireComponent(typeof(UIPanel))]
 public abstract class FGUIForm : UIFormLogic
 {
@@ -20,8 +22,16 @@ public abstract class FGUIForm : UIFormLogic
         GCom = uiPanel.ui;
         if (GCom == null)
         {
-            Debug.Log("FguiView is null,please set package name and component name in the plane");
+            MLog.Error(eLogTag.ui, "GCom is null,please set package name and component name in the panel");
         }
+
+        uiPanel.fitScreen = FitScreenMode;
+        uiPanel.SetHitTestMode(HitTestMode);
+        uiPanel.container.fairyBatching = Batching;
+        uiPanel.container.renderMode = RenderMode;
+        GCom.SetSize(Screen.width, Screen.height);
+        GCom.width = Screen.width;
+        GCom.height = Screen.height;
     }
 
     protected override void OnRecycle()

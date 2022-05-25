@@ -4,7 +4,7 @@ using FairyGUI;
 public abstract class FGUILogicCpt : MonoBehaviour
 {
     protected GComponent GCom;
-    protected virtual void Awake()
+    protected void Awake()
     {
         DisplayObjectInfo info = GetComponent<DisplayObjectInfo>();
         if (info)
@@ -13,14 +13,26 @@ public abstract class FGUILogicCpt : MonoBehaviour
         }
         else
         {
-            Debug.LogError("can't not find fgui display view");
+            MLog.Error(eLogTag.ui, "can't not find fgui display view");
         }
+        OnAdd();
     }
 
-    protected virtual void OnDestroy()
+    protected void OnDestroy()
     {
-        Debug.Log("on ui logic destroy");
+        OnRemove();
     }
+
+    protected virtual void OnAdd()
+    {
+
+    }
+
+    protected virtual void OnRemove()
+    {
+
+    }
+
     public virtual void OnOpen()
     {
         //

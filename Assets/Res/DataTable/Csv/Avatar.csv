@@ -1,0 +1,321 @@
+id,资源女1,显示女资源icon,资源男,显示男资源icon,资源机器人,"avatar资源类别
+1.头发 
+2.上衣 
+3.手套 
+4.裤子 
+5.脸型 
+6.眼睛 
+7.嘴巴 
+8.眉毛 
+9.机器人手臂
+10.机器人身体
+11.机器人头盔
+12.机器人腿部
+13.机器人背包
+14.鞋子",备注
+id,resouceGirl,resouceGirlIcon,resouceBoy,resouceBoyIcon,resouceRobot,avatarType,null
+int,string,string,string,string,string,int,null
+10015,,,boy_single_hair_default,icon_boy_hair_1,,1,头发
+10016,,,boy_single_hair_default1,icon_boy_hair_2,,1,头发
+10017,,,boy_single_hair_default2,icon_boy_hair_3,,1,头发
+10018,,,boy_single_hair_default3,icon_boy_hair_4,,1,头发
+10019,,,boy_single_hair_default4,icon_boy_hair_5,,1,头发
+10020,,,boy_single_hair_default5,icon_boy_hair_6,,1,头发
+10021,,,boy_single_face_default,icon_boy_face_1,,5,脸型
+10022,,,boy_single_face_default1,icon_boy_face_2,,5,脸型
+10023,,,boy_single_face_default2,icon_boy_face_3,,5,脸型
+10024,,,boy_single_face_default3,icon_boy_face_4,,5,脸型
+10025,,,boy_single_face_default4,icon_boy_face_5,,5,脸型
+10026,,,boy_single_brow_default,icon_boy_brow_1,,8,眉毛
+10027,,,boy_single_brow_default1,icon_boy_brow_2,,8,眉毛
+10028,,,boy_single_brow_default2,icon_boy_brow_3,,8,眉毛
+10029,,,boy_single_brow_default3,icon_boy_brow_6,,8,眉毛
+10030,,,boy_single_brow_default4,icon_boy_brow_4,,8,眉毛
+10031,,,boy_single_brow_default5,icon_boy_brow_5,,8,眉毛
+10032,,,boy_single_coat_default,,,2,衣服
+10033,,,boy_single_coat_default1,icon_boy_coat_1,,2,衣服
+10034,,,boy_single_coat_default2,icon_boy_coat_2,,2,衣服
+10035,,,boy_single_coat_default3,icon_boy_coat_3,,2,衣服
+10036,,,boy_single_coat_default4,icon_boy_coat_4,,2,衣服
+10037,,,boy_single_coat_default5,icon_boy_coat_5,,2,衣服
+10038,,,boy_single_glove_default,,,3,手套
+10039,,,boy_single_glove_default1,icon_boy_glove_1,,3,手套
+10040,,,boy_single_glove_default2,icon_boy_glove_2,,3,手套
+10041,,,boy_single_glove_default3,icon_boy_glove_3,,3,手套
+10042,,,boy_single_glove_default4,icon_boy_glove_4,,3,手套
+10043,,,boy_single_glove_default5,icon_boy_glove_5,,3,手套
+10044,,,boy_single_pants_default,,,4,裤子
+10045,,,boy_single_pants_default1,icon_boy_pants_1,,4,裤子
+10046,,,boy_single_pants_default2,icon_boy_pants_2,,4,裤子
+10047,,,boy_single_pants_default3,icon_boy_pants_3,,4,裤子
+10048,,,boy_single_pants_default4,icon_boy_pants_4,,4,裤子
+10049,,,boy_single_pants_default5,icon_boy_pants_5,,4,裤子
+10050,,,boy_single_eye_default,icon_boy_eye_1,,6,眼睛
+10051,,,boy_single_eye_default1,icon_boy_eye_2,,6,眼睛
+10052,,,boy_single_eye_default2,icon_boy_eye_3,,6,眼睛
+10053,,,boy_single_eye_default3,icon_boy_eye_4,,6,眼睛
+10054,,,boy_single_eye_default4,icon_boy_eye_5,,6,眼睛
+10055,,,boy_single_eye_default5,icon_boy_eye_6,,6,眼睛
+10056,,,boy_single_mouth_default,icon_boy_mouth_1,,7,嘴巴
+10057,,,boy_single_mouth_default1,icon_boy_mouth_2,,7,嘴巴
+10058,,,boy_single_mouth_default2,icon_boy_mouth_3,,7,嘴巴
+10059,,,boy_single_mouth_default3,icon_boy_mouth_4,,7,嘴巴
+10060,,,boy_single_mouth_default4,icon_boy_mouth_5,,7,嘴巴
+10061,,,boy_single_mouth_default5,icon_boy_mouth_6,,7,嘴巴
+10062,girl_single_hair_default6,,boy_single_hair_default6,,,1,皮头盔
+10063,girl_single_hair_default7,,boy_single_hair_default7,,,1,铁头盔
+10064,girl_single_hair_default8,,boy_single_hair_default8,,,1,金头盔
+10065,girl_single_coat_default7,,boy_single_coat_default6,,,2,皮衣服
+10066,girl_single_coat_default8,,boy_single_coat_default7,,,2,铁衣服
+10067,girl_single_coat_default9,,boy_single_coat_default8,,,2,金衣服
+10068,girl_single_glove_default6,,boy_single_glove_default6,,,3,皮手套
+10069,girl_single_glove_default7,,boy_single_glove_default7,,,3,铁手套
+10070,girl_single_glove_default8,,boy_single_glove_default8,,,3,金手套
+10071,girl_single_pants_default7,,boy_single_pants_default6,,,4,皮裤子
+10072,girl_single_pants_default8,,boy_single_pants_default7,,,4,铁裤子
+10073,girl_single_pants_default9,,boy_single_pants_default8,,,4,金裤子
+10074,,,boy_single_hair_default9,icon_boy_hair_7,,1,头发
+10075,girl_single_hair_defaultT1,,boy_single_hair_defaultT1,icon_boy_hair_7,,1,建造头盔
+10076,,,boy_single_coat_default9,icon_boy_hair_7,,2,衣服
+10077,,,boy_single_face_default5,icon_boy_hair_7,,5,脸型
+10078,,,boy_single_glove_default9,icon_boy_hair_7,,3,手套
+10079,,,boy_single_pants_default9,icon_boy_hair_7,,4,裤子
+10080,,,boy_single_face_default5,icon_boy_hair_7,,6,
+10081,,,boy_single_face_default5,icon_boy_hair_7,,7,
+10082,,,boy_single_face_default5,icon_boy_hair_7,,8,
+11001,general_single_weapon_01,,general_single_weapon_01,,,,木剑
+11002,general_single_weapon_02,,general_single_weapon_02,,,,木弓
+11003,general_single_weapon_03,,general_single_weapon_03,,,,石弓
+11004,general_single_weapon_04,,general_single_weapon_04,,,,铁弓
+11005,general_single_weapon_05,,general_single_weapon_05,,,,木斧
+11006,general_single_weapon_06,,general_single_weapon_06,,,,木镐
+11007,general_single_weapon_025,,general_single_weapon_025,,,,直尺
+11008,general_single_weapon_08,,general_single_weapon_08,,,,棒球棍
+11009,general_single_weapon_024,,general_single_weapon_024,,,,铅笔
+11010,general_single_weapon_010,,general_single_weapon_010,,,,石斧
+11011,general_single_weapon_011,,general_single_weapon_011,,,,石镐
+11012,general_single_weapon_012,,general_single_weapon_012,,,,源码枪
+11013,general_single_weapon_013,,general_single_weapon_013,,,,铁斧
+11014,general_single_weapon_015,,general_single_weapon_015,,,,石剑
+11015,general_single_weapon_016,,general_single_weapon_016,,,,古代源码刀
+11016,general_single_weapon_017,,general_single_weapon_017,,,,铁剑
+11017,general_single_weapon_018,,general_single_weapon_018,,,,铁搞
+11018,general_single_weapon_019,,general_single_weapon_019,,,,奥金剑
+11019,general_single_weapon_020,,general_single_weapon_020,,,,奥金弓
+11020,general_single_weapon_021,,general_single_weapon_021,,,,奥金斧
+11021,general_single_weapon_022,,general_single_weapon_022,,,,奥金搞
+11022,general_single_weapon_023,,general_single_weapon_023,,,,源码建造枪
+11023,general_single_weapon_026,,general_single_weapon_026,,,,鱼竿
+11024,general_single_weapon_023,,general_single_weapon_023,,,,源码删除枪
+11025,general_single_weapon_dagger_01_sheepHorn,,general_single_weapon_dagger_01_sheepHorn,,,,Sheep Horn Dagger（羊角匕首）
+11026,general_single_weapon_dagger_02_boarTusk,,general_single_weapon_dagger_02_boarTusk,,,,Boar Tusk Dagger（猪牙匕首）
+11027,general_single_weapon_spear_01_oxHorn,,general_single_weapon_spear_01_oxHorn,,,,OX Horn Spear（牛角矛）
+11028,general_single_weapon_sword_02_dinosaurBone,,general_single_weapon_sword_02_dinosaurBone,,,,Dinosaur Bone Sword（龙骨剑）
+12001,girl_single_hair_default,icon_girl_hair_2,,,,1,头发
+12002,girl_single_hair_default1,icon_girl_hair_1,,,,1,头发
+12003,girl_single_hair_default2,icon_girl_hair_3,,,,1,头发
+12004,girl_single_hair_default3,icon_girl_hair_4,,,,1,头发
+12005,girl_single_hair_default4,icon_girl_hair_5,,,,1,头发
+12006,girl_single_hair_default5,icon_girl_hair_6,,,,1,头发
+12007,girl_single_face_default,icon_girl_face_1,,,,5,脸型
+12008,girl_single_face_default1,icon_girl_face_2,,,,5,脸型
+12009,girl_single_face_default2,icon_girl_face_3,,,,5,脸型
+12010,girl_single_face_default3,icon_girl_face_4,,,,5,脸型
+12011,girl_single_face_default4,icon_girl_face_5,,,,5,脸型
+12012,girl_single_brow_default,icon_girl_brow_1,,,,8,眉毛
+12013,girl_single_brow_default1,icon_girl_brow_2,,,,8,眉毛
+12014,girl_single_brow_default2,icon_girl_brow_3,,,,8,眉毛
+12015,girl_single_brow_default3,icon_girl_brow_4,,,,8,眉毛
+12016,girl_single_brow_default4,icon_girl_brow_5,,,,8,眉毛
+12017,girl_single_brow_default5,icon_girl_brow_6,,,,8,眉毛
+12018,girl_single_coat_default,,,,,2,衣服
+12019,girl_single_coat_default1,icon_girl_coat_1,,,,2,衣服
+12020,girl_single_coat_default2,icon_girl_coat_2,,,,2,衣服
+12021,girl_single_coat_default3,icon_girl_coat_3,,,,2,衣服
+12022,girl_single_coat_default4,icon_girl_coat_4,,,,2,衣服
+12023,girl_single_coat_default5,icon_girl_coat_5,,,,2,衣服
+12024,girl_single_coat_default6,icon_girl_coat_6,,,,2,衣服
+12025,girl_single_glove_default,,,,,3,手套
+12026,girl_single_glove_default1,icon_girl_glove_1 ,,,,3,手套
+12027,girl_single_glove_default2,icon_girl_glove_2,,,,3,手套
+12028,girl_single_glove_default3,icon_girl_glove_3,,,,3,手套
+12029,girl_single_glove_default4,icon_girl_glove_4,,,,3,手套
+12030,girl_single_glove_default5,icon_girl_glove_5,,,,3,手套
+12031,girl_single_pants_default,,,,,4,裤子
+12032,girl_single_pants_default1,icon_girl_pants_1,,,,4,裤子
+12033,girl_single_pants_default2,icon_girl_pants_2,,,,4,裤子
+12034,girl_single_pants_default3,icon_girl_pants_3,,,,4,裤子
+12035,girl_single_pants_default4,icon_girl_pants_4,,,,4,裤子
+12036,girl_single_pants_default5,icon_girl_pants_5,,,,4,裤子
+12037,girl_single_pants_default6,icon_girl_pants_6,,,,4,裤子
+12038,girl_single_eye_default,icon_girl_eye_1,,,,6,眼睛
+12039,girl_single_eye_default1,icon_girl_eye_2,,,,6,眼睛
+12040,girl_single_eye_default2,icon_girl_eye_3,,,,6,眼睛
+12041,girl_single_eye_default3,icon_girl_eye_4,,,,6,眼睛
+12042,girl_single_eye_default4,icon_girl_eye_5,,,,6,眼睛
+12043,girl_single_eye_default5,icon_girl_eye_6,,,,6,眼睛
+12044,girl_single_mouth_default,icon_girl_month_1,,,,7,嘴巴
+12045,girl_single_mouth_default1,icon_girl_month_2,,,,7,嘴巴
+12046,girl_single_mouth_default2,icon_girl_month_3,,,,7,嘴巴
+12047,girl_single_mouth_default3,icon_girl_month_4,,,,7,嘴巴
+12048,girl_single_mouth_default4,icon_girl_month_5,,,,7,嘴巴
+12049,girl_single_mouth_default5,icon_girl_month_6,,,,7,嘴巴
+13001,,,,,xiaobeiRobot_single_arm_default1,9,机器人手臂-初始
+13002,,,,,xiaobeiRobot_single_arm_default2,9,机器人手臂-钢
+13003,,,,,xiaobeiRobot_single_arm_default3,9,机器人手臂-合金
+13004,,,,,xiaobeiRobot_single_body_default1,10,机器人身体-初始
+13005,,,,,xiaobeiRobot_single_body_default2,10,机器人身体-钢
+13006,,,,,xiaobeiRobot_single_body_default3,10,机器人身体-合金
+13007,,,,,xiaobeiRobot_single_head_default1,11,机器人头盔-初始
+13008,,,,,xiaobeiRobot_single_head_default2,11,机器人头盔-钢
+13009,,,,,xiaobeiRobot_single_head_default3,11,机器人头盔-合金
+13010,,,,,xiaobeiRobot_single_leg_default1,12,机器人腿部-初始
+13011,,,,,xiaobeiRobot_single_leg_default2,12,机器人腿部-钢
+13012,,,,,xiaobeiRobot_single_leg_default3,12,机器人腿部-合金
+13013,,,,,xiaobeiRobot_single_bag_default1,13,机器人背包-初始
+13014,,,,,xiaobeiRobot_single_bag_default2,13,机器人背包-钢
+13015,,,,,xiaobeiRobot_single_bag_default3,13,机器人背包-合金
+100000,,,boy_single_face_default,icon_boy_face,,5,男_面部
+100001,,,boy_single_face_default1,icon_boy_face1,,5,男_面部
+100002,,,boy_single_face_default2,icon_boy_face2,,5,男_面部
+100003,,,boy_single_face_default3,icon_boy_face3,,5,男_面部
+100004,,,boy_single_face_default4,icon_boy_face4,,5,男_面部
+100005,,,boy_single_face_default5,icon_boy_face5,,5,男_面部
+100006,,,boy_single_face_default6,icon_boy_face6,,5,男_面部
+100007,,,boy_single_face_default7,icon_boy_face7,,5,男_面部
+100008,,,boy_single_face_default8,icon_boy_face8,,5,男_面部
+101000,,,boy_single_hair_default,,,1,男_发型
+101001,,,boy_single_hair_default1,icon_boy_hair_1,,1,男_发型
+101002,,,boy_single_hair_default2,icon_boy_hair_2,,1,男_发型
+101003,,,boy_single_hair_default3,icon_boy_hair_3,,1,男_发型
+101004,,,boy_single_hair_default4,icon_boy_hair_4,,1,男_发型
+101005,,,boy_single_hair_special1,,,1,男_发型防护服
+101006,girl_single_hair_defaultT4,,boy_single_hair_defaultT4,,,1,熊猫头套
+101007,boy_single_hair_defaultT6,,boy_single_hair_defaultT6,,,1,教师套装·头发
+102000,,,boy_single_coat_default,,,2,男_衣服
+102001,,,boy_single_coat_default1,icon_boy_coat_1,,2,男_衣服
+102002,,,boy_single_coat_default2,icon_boy_coat_2,,2,男_衣服
+102003,,,boy_single_coat_default3,icon_boy_coat_3,,2,男_衣服
+102004,,,boy_single_coat_default4,icon_boy_coat_4,,2,男_衣服
+102005,,,boy_single_coat_special1,,,2,男_衣服防护服
+102006,girl_single_coat_defaultT4,,boy_single_coat_defaultT4,,,2,熊猫上衣
+102007,boy_single_coat_defaultT6,,boy_single_coat_defaultT6,,,2,教师套装·外套
+103000,,,boy_single_pants_default,,,4,男_裤子
+103001,,,boy_single_pants_default1,icon_boy_pants_1,,4,男_裤子
+103002,,,boy_single_pants_default2,icon_boy_pants_2,,4,男_裤子
+103003,,,boy_single_pants_default3,icon_boy_pants_3,,4,男_裤子
+103004,,,boy_single_pants_default4,icon_boy_pants_4,,4,男_裤子
+103005,,,boy_single_pants_special1,,,4,男_裤子防护服
+103006,girl_single_pants_defaultT4,,boy_single_pants_defaultT4,,,4,熊猫裤子
+103007,boy_single_pants_defaultT6,,boy_single_pants_defaultT6,,,4,教师套装·裤子
+104000,,,boy_single_shoes_default,,,14,男_鞋子
+104001,,,boy_single_shoes_default1,icon_boy_shoes_1,,14,男_鞋子
+104002,,,boy_single_shoes_default2,icon_boy_shoes_2,,14,男_鞋子
+104003,,,boy_single_shoes_default3,icon_boy_shoes_3,,14,男_鞋子
+104004,,,boy_single_shoes_default4,icon_boy_shoes_4,,14,男_鞋子
+104005,,,boy_single_shoes_special1,,,14,男_鞋子防护服
+104006,girl_single_shoes_defaultT4,,boy_single_shoes_defaultT4,,,14,熊猫鞋子
+104007,boy_single_shoes_defaultT6,,boy_single_shoes_defaultT6,,,14,教师套装·鞋子
+105000,,,boy_single_glove_default,icon_boy_glove,,3,男_手套
+105001,,,boy_single_glove_default1,icon_boy_glove_1,,3,男_手套
+105002,,,boy_single_glove_special1,,,3,男_手套防护服
+105003,girl_single_glove_defaultT4,,boy_single_glove_defaultT4,,,3,熊猫手套
+210001,,,boy_single_coat_default,icon_boy_coat_1,,2,新主角上衣
+210002,,,boy_single_coat_default10,icon_boy_coat_2,,2,新主角上衣
+210003,,,boy_single_coat_default11,icon_boy_coat_3,,2,新主角上衣
+210004,,,boy_single_coat_default12,icon_boy_coat_4,,2,新主角上衣
+210005,,,boy_single_coat_default13,icon_boy_coat_5,,2,新主角上衣
+210006,,,boy_single_coat_default14,icon_boy_coat_5,,2,新主角上衣
+220001,,,boy_single_glove_default,icon_boy_glove_1,,3,新主角手套
+220002,,,boy_single_glove_default10,icon_boy_glove_2,,3,新主角手套
+220003,,,boy_single_glove_default11,icon_boy_glove_3,,3,新主角手套
+220004,,,boy_single_glove_default12,icon_boy_glove_3,,3,新主角手套
+230001,,,boy_single_pants_default,icon_boy_pants_1,,4,新主角裤子
+230002,,,boy_single_pants_default10,icon_boy_pants_2,,4,新主角裤子
+230003,,,boy_single_pants_default11,icon_boy_pants_3,,4,新主角裤子
+230004,,,boy_single_pants_default12,icon_boy_pants_4,,4,新主角裤子
+230005,,,boy_single_pants_default13,icon_boy_pants_5,,4,新主角裤子
+230006,,,boy_single_pants_default14,icon_boy_pants_5,,4,新主角裤子
+240001,,,boy_single_face_default,icon_boy_face_1,,5,新主角脸和五官
+200000,girl_single_face_default,icon_girl_face,,,,5,女_面部
+200001,girl_single_face_default1,icon_girl_face1,,,,5,女_面部
+200002,girl_single_face_default2,icon_girl_face2,,,,5,女_面部
+200003,girl_single_face_default3,icon_girl_face3,,,,5,女_面部
+200004,girl_single_face_default4,icon_girl_face4,,,,5,女_面部
+200005,girl_single_face_default5,icon_girl_face5,,,,5,女_面部
+200006,girl_single_face_default6,icon_girl_face6,,,,5,女_面部
+200007,girl_single_face_default7,icon_girl_face7,,,,5,女_面部
+200008,girl_single_face_default8,icon_girl_face8,,,,5,女_面部
+200009,girl_single_face_default9,icon_girl_face9,,,,5,女_面部
+201000,girl_single_hair_default,,,,,1,女_头发
+201001,girl_single_hair_default1,icon_girl_hair_1,,,,1,女_头发
+201002,girl_single_hair_default2,icon_girl_hair_2,,,,1,女_头发
+201003,girl_single_hair_default3,icon_girl_hair_3,,,,1,女_头发
+201004,girl_single_hair_default4,icon_girl_hair_4,,,,1,女_头发
+201005,girl_single_hair_default5,icon_girl_hair_5,,,,1,女_头发
+201006,girl_single_hair_default6,icon_girl_hair_6,,,,1,女_头发
+201007,girl_single_hair_special1,,,,,1,女_头发防护服
+202000,girl_single_coat_default,,,,,2,女_衣服
+202001,girl_single_coat_default1,icon_girl_coat_1,,,,2,女_衣服
+202002,girl_single_coat_default2,icon_girl_coat_2,,,,2,女_衣服
+202003,girl_single_coat_default3,icon_girl_coat_3,,,,2,女_衣服
+202004,girl_single_coat_default4,icon_girl_coat_4,,,,2,女_衣服
+202005,girl_single_coat_default5,icon_girl_coat_5,,,,2,女_衣服
+202006,girl_single_coat_default6,icon_girl_coat_6,,,,2,女_衣服
+202007,girl_single_coat_special1,,,,,2,女_衣服防护服
+203000,girl_single_pants_default,,,,,4,女_裤子
+203001,girl_single_pants_default1,icon_girl_pants_1,,,,4,女_裤子
+203002,girl_single_pants_default2,icon_girl_pants_2,,,,4,女_裤子
+203003,girl_single_pants_default3,icon_girl_pants_3,,,,4,女_裤子
+203004,girl_single_pants_default4,icon_girl_pants_4,,,,4,女_裤子
+203005,girl_single_pants_default5,icon_girl_pants_5,,,,4,女_裤子
+203006,girl_single_pants_default6,icon_girl_pants_6,,,,4,女_裤子
+203007,girl_single_pants_special1,,,,,4,女_裤子防护服
+204000,girl_single_shoes_default,,,,,14,女_鞋子
+204001,girl_single_shoes_default1,icon_girl_shoes_1,,,,14,女_鞋子
+204002,girl_single_shoes_default2,icon_girl_shoes_2,,,,14,女_鞋子
+204003,girl_single_shoes_default3,icon_girl_shoes_3,,,,14,女_鞋子
+204004,girl_single_shoes_default4,icon_girl_shoes_4,,,,14,女_鞋子
+204005,girl_single_shoes_default5,icon_girl_shoes_5,,,,14,女_鞋子
+204006,girl_single_shoes_default6,icon_girl_shoes_6,,,,14,女_鞋子
+204007,girl_single_shoes_special1,,,,,14,女_鞋子防护服
+205000,girl_single_glove_default,icon_girl_glove,,,,3,女_手套
+205001,girl_single_glove_default1,icon_girl_glove_1 ,,,,3,女_手套
+205002,girl_single_glove_special1,,,,,3,女_手套防护服
+301001,girl_single_hair_01_animalSkin,,boy_single_hair_01_animalSkin,,,1,Animal Skin Hat（兽皮帽）
+301002,girl_single_coat_01_animalSkin,,boy_single_coat_01_animalSkin,,,2,Animal Skin Clothes（兽皮衣服）
+301003,girl_single_pants_01_animalSkin,,boy_single_pants_01_animalSkin,,,4,Animal Skin Pants（兽皮裤子）
+301004,girl_single_shoes_01_animalSkin,,boy_single_shoes_01_animalSkin,,,14,Animal Skin Shoes（兽皮鞋子）
+301005,girl_single_glove_01_animalSkin,,boy_single_glove_01_animalSkin,,,3,Animal Skin Gloves（兽皮手套）
+890010,girl_single_hair_pt1,,boy_single_hair_pt1,,,1,Stuff Hair
+890011,girl_single_coat_pt1,,boy_single_coat_pt1,,,2,Stuff Clothes
+890012,girl_single_pants_pt1,,boy_single_pants_pt1,,,4,Stuff Pants
+890013,girl_single_shoes_pt1,,boy_single_shoes_pt1,,,14,Stuff Shoes
+890014,girl_single_hair_pt2,,boy_single_hair_pt2,,,1,Punk Hair
+890015,girl_single_coat_pt2,,boy_single_coat_pt2,,,2,Punk Clothes
+890016,girl_single_pants_pt2,,boy_single_pants_pt2,,,4,Punk Pants
+890017,girl_single_shoes_pt2,,boy_single_shoes_pt2,,,14,Punk Shoes
+890018,girl_single_hair_pt3,,boy_single_hair_pt3,,,1,Tactical Hair
+890019,girl_single_coat_pt3,,boy_single_coat_pt3,,,2,Tactical Clothes
+890020,girl_single_pants_pt3,,boy_single_pants_pt3,,,4,Tactical Pants
+890021,girl_single_shoes_pt3,,boy_single_shoes_pt3,,,14,Tactical Shoes
+890022,girl_single_hair_jl1,,boy_single_hair_jl1,,,1,Mars Hair
+890023,girl_single_coat_jl1,,boy_single_coat_jl1,,,2,Mars Clothes
+890024,girl_single_pants_jl1,,boy_single_pants_jl1,,,4,Mars Pants
+890025,girl_single_shoes_jl1,,boy_single_shoes_jl1,,,14,Mars Shoes
+890026,girl_single_hair_jl2,,boy_single_hair_jl2,,,1,Pioneer Hair
+890027,girl_single_coat_jl2,,boy_single_coat_jl2,,,2,Pioneer Clothes
+890028,girl_single_pants_jl2,,boy_single_pants_jl2,,,4,Pioneer Pants
+890029,girl_single_shoes_jl2,,boy_single_shoes_jl2,,,14,Pioneer Shoes
+890030,girl_single_hair_ss1,,boy_single_hair_ss1,,,1,DJ Hair
+890031,girl_single_coat_ss1,,boy_single_coat_ss1,,,2,DJ Clothes
+890032,girl_single_pants_ss1,,boy_single_pants_ss1,,,4,DJ Pants
+890033,girl_single_shoes_ss1,,boy_single_shoes_ss1,,,14,DJ Shoes
+890034,girl_single_hair_cs1,,boy_single_hair_cs1,,,1,Function Hair
+890035,girl_single_coat_cs1,,boy_single_coat_cs1,,,2,Function Clothes
+890036,girl_single_pants_cs1,,boy_single_pants_cs1,,,4,Function Pants
+890037,girl_single_shoes_cs1,,boy_single_shoes_cs1,,,14,Function Shoes
+890038,girl_single_hair_sh1,,boy_single_hair_sh1,,,1,Meta Hair
+890039,girl_single_coat_sh1,,boy_single_coat_sh1,,,2,Meta Clothes
+890040,girl_single_pants_sh1,,boy_single_pants_sh1,,,4,Meta Pants
+890041,girl_single_shoes_sh1,,boy_single_shoes_sh1,,,14,Meta Shoes

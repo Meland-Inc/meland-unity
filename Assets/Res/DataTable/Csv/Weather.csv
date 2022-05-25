@@ -1,0 +1,9 @@
+天气ID,天气类型,备注,动画资源,动画类型,天气图标,影响图标,影响文字,完整描述,温度的变化量,饥渴值变化量,饥饿值变化量,BUFF_ID,添加BUFF的间隔时间(毫秒)
+id,weatherType,null,amiRes,amiType,weatherIcon,effectIcon,effectDesc,fullDesc,tempChange,thirstyChange,hungryChange,buffId,interval
+int,int,null,string,bool,string,string,string,string,int,int,int,int,int
+1001,0,晴天,,,icon_weather_sun,,天晴了,晴天,0,0,0,,
+1002,1,下雨,frame_rain,1,icon_weather_rain,icon_weather_water,+2,下雨：角色会缓慢恢复饥渴度,0,3,0,,
+1003,2,下雪,frame_snow,1,icon_weather_snow,icon_weather_walk,-30%,下雪：角色移动速度降低30%,0,0,0,1103,10000
+1004,3,风沙,,0,icon_weather_wind,icon_weather_water,-1,风沙：角色口渴速度加快,0,-1,0,,
+1005,4,火炎,,,icon_weather_fire,icon_weather_health,-50,风沙：角色每10秒会受到50点伤害,0,0,0,1101,10000
+1006,5,瘴气,,,icon_weather_gas,icon_weather_health,-100,风沙：角色每10秒会受到100点伤害,0,0,0,1102,10000

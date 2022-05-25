@@ -1,0 +1,30 @@
+yÁÇî(MV01_ca_blueprint_01_grilledChickenThighRecipe: Grilled Chicken Thigh	çƒ¤é¸¡è…¿‘N
+61000015,11100
+61000020,1
+wÂÇî'MV01_ca_blueprint_02_grilledChickenWingRecipe: Grilled Chicken Wing	çƒ¤é¸¡ç¿…’N
+61000016,11100
+61000021,1mÃÇî!MV01_ca_blueprint_03_roastChickenRecipe: Roast Chicken	çƒ¤æ•´é¸¡”NÃ’‹
+61000017,11100
+61000022,1(^ÄÇîMV01_ca_blueprint_04_barbecueRecipe: Barbecueçƒ¤è‚‰“N
+61000018,11100
+61000025,2ÅÇî%MV01_ca_blueprint_05_recoveryMeatballRecipe: Recovery Meatballå¤è‹è‚‰ä¸¸•NÅ’‹
+61000019,11100 61000025,5;61000022,1;61000033,12’ÉÜô$MV01_ca_blueprint_06_sheepHornDaggerRecipe: LV.1 Sheep Horn Dagger1çº§ç¾Šè§’åŒ•é¦–é…æ–¹±ê
+71010001,1110061000023,16;61000024,16ØÊÜô#MV01_ca_blueprint_07_boarTuskDaggerRecipe: LV.1 Boar Tusk Dagger1çº§çŒªç‰™åŒ•é¦–é…æ–¹³ê
+71010002,1110061000029,20;61000030,20è•ËÜô MV01_ca_blueprint_08_oxHornSpearRecipe: LV.1 Bull Horn Spear1çº§ç‰›è§’çŸ›é…æ–¹²ê
+71010003,12100#61000027,20;61000028,20;61000026,20 ·ÌÜô&MV01_ca_blueprint_09_dinosaurBoneSword Recipe: LV.2 Dinosaur Bone Sword2çº§é¾™éª¨å‰‘é…æ–¹´êÉ’‹
+71010004,13,4,520,70,10/61000032,24;61000026,26;61000029,26;61000031,28Ğ¢ÍÜô$MV01_ca_blueprint_06_sheepHornDaggerRecipe: LV.2 Sheep Horn Dagger2çº§ç¾Šè§’åŒ•é¦–é…æ–¹±êÆ’‹
+71010001,12,3,4,5
+68,13,11,861000023,26;61000024,26èœÎÜô#MV01_ca_blueprint_07_boarTuskDaggerRecipe: LV.2 Boar Tusk Dagger2çº§çŒªç‰™åŒ•é¦–é…æ–¹³êÇ’‹
+71010002,12,3,441,37,2261000029,30;61000030,30À¡ÏÜô MV01_ca_blueprint_08_oxHornSpearRecipe: LV.2 Bull Horn Spear2çº§ç‰›è§’çŸ›é…æ–¹²êÈ’‹
+71010003,13,4,548,28,24#61000027,30;61000028,30;61000026,30°	«ĞÜô&MV01_ca_blueprint_09_dinosaurBoneSword Recipe: LV.1 Dinosaur Bone Sword1çº§é¾™éª¨å‰‘é…æ–¹´ê
+71010004,12100/61000032,18;61000026,18;61000029,18;61000031,20°	®±äô&MV01_ca_blueprint_10_animalSkinClothesRecipe: LV.2 Hide Clothes2çº§å…½çš®è¡£æœé…æ–¹Å¸Ê’‹
+71020002,12,360,40/61000023,35;61000026,16;61000029,14;61000031,14°	ª²äô$MV01_ca_blueprint_11_animalSkinPantsRecipe: LV.2 Hide Pants2çº§å…½çš®è£¤å­é…æ–¹Ä¸Ë’‹
+71020003,12,360,40/61000023,30;61000026,16;61000029,10;61000031,10Ìš³äô"MV01_ca_blueprint_12_animalSkinHatRecipe: LV.2 Hide Hat2çº§å…½çš®å¸½å­é…æ–¹Ã¸Ì’‹
+71020001,12,360,40#61000023,18;61000026,12;61000029,30èˆ´äô%MV01_ca_blueprint_13_animalSkinGlovesRecipe: LV.2 Hide Gloves2çº§å…½çš®æ‰‹å¥—é…æ–¹Á¸Í’‹
+71020005,12,360,4061000023,26 ’µäô$MV01_ca_blueprint_14_animalSkinShoesRecipe: LV.2 Hide Shoes2çº§å…½çš®é‹å­é…æ–¹Â¸Î’‹
+71020004,12,360,4061000023,36;61000026,30„§¶äô&MV01_ca_blueprint_10_animalSkinClothesRecipe: LV.1 Hide Clothes1çº§å…½çš®è¡£æœé…æ–¹Å¸
+71020002,11100/61000023,25;61000026,12;61000029,10;61000031,10„¡·äô$MV01_ca_blueprint_11_animalSkinPantsRecipe: LV.1 Hide Pants1çº§å…½çš®è£¤å­é…æ–¹Ä¸
+71020003,11100-61000023,20;61000026,12;61000029,6;61000031,6 ’¸äô"MV01_ca_blueprint_12_animalSkinHatRecipe: LV.1 Hide Hat1çº§å…½çš®å¸½å­é…æ–¹Ã¸
+71020001,11100"61000023,12;61000026,8;61000029,20¼¹äô%MV01_ca_blueprint_13_animalSkinGlovesRecipe: LV.1 Hide Gloves1çº§å…½çš®æ‰‹å¥—é…æ–¹Á¸
+71020005,1110061000023,16ô‹ºäô$MV01_ca_blueprint_14_animalSkinShoesRecipe: LV.1 Hide Shoes1çº§å…½çš®é‹å­é…æ–¹Â¸
+71020004,1110061000023,24;61000026,20Ø

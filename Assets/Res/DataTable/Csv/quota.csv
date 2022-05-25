@@ -1,0 +1,4 @@
+计数类型,计数子类型,清理类型,是否需要同步给前端,备注
+quota_type,quota_subtype,clean_type,need_sync,
+int,int,int,bool,
+0,1,30,,

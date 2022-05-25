@@ -1,0 +1,75 @@
+关联代码块id,代码块描述,python名字,python结构,python描述
+id,codeblockDesc,pythonname,pyStructure,pyDesc
+int,string,string,string,string
+10011,显示文本持续N秒,ShowText,"ShowText('Hello World',1)","显示文本
+ShowText(values:object,duration:second)"
+10012,文本变量,String,String(number),String(number)
+10040,随机,Random,"Random(min,max)",
+10044,与,and,and,
+10045,或,or,or,
+10046,非,not,not,
+10047,连接,Concat,"Concat(text1,text2)",
+10049,长度,Len,Len(text),
+10050,取余,Mod,Mod(),
+10051,四舍五入,Round,Round(),
+10052,操作数,Calculate,Calculate(),
+10053,等待N秒,Wait,Wait(),
+10058,wait…until,WaitUtil,WaitUtil(),
+10059,repeat…until,repeatUntil,"repeatUntil():
+  # todo",
+10072,开始,Start,Start(),
+10074,发送广播,Broadcast,Broadcast(),
+10075,接收广播并执行,Listen,"def Listen(Broadcast):
+    if Broadcast == '':
+        # todo",
+10094,当实体被操作时,WhenOperate,"def WhenOperate(entity, operator):
+    if entity == 'self':
+        # todo",
+10110,传送到像素坐标,SendTo,SendTo(),
+10111,控制代码块 退出循环,break,break(),
+10113,检测代码块-碰撞检测,IsOverlay,"IsOverlay(entity1,entity2)",
+10124,物件显示/隐藏,SetVisible,SetVisible(),
+10125,指代实体自己的椭圆代码块,Self,Self(),
+10129,"X, Y坐标",Location,"Location(X,Y)",
+10130,当作为克隆体启动时,WhenAsClone,def WhenAsClone(),
+10131,克隆一个实体,CloneSelf,CloneSelf(),
+10132,删除自己的克隆体,DeleteSelf,DeleteSelf(),
+10142,指代主角自己的代码块,Player,Player(),
+10143,当（实体）坐标改变时,WhenPositionChange,def WhenPositionChange(Entity),
+10146,当%%被点击时,WhenClick,"def WhenClick(entity, player):
+    if entity == 'self':
+        # todo",
+10148,实体传送代码块,EntitySendTo,EntitySendTo(),
+10149,当主角在物件上时,WhenMoveOn,def WhenMoveOn(),
+10150,当主角离开物件时,WhenMoveOut,def WhenMoveAway(),
+10160,自定义函数-创建,def function,"def functionName():
+  #todo",
+10161,返回值,return,return(),
+10169,添加元素到列表的末尾,ListAppend,ListAppend(),
+10170,插入元素到列表的某一项,ListInsert,ListInsert(),
+10171,删除列表的某一项,ListDelete,ListDelete(),
+10172,替换列表的某一项,ListReplace,ListReplace(),
+10173,复制列表到另一个列表,ListCopy,ListCopy(),
+10174,查询列表的某一项元素,ListData,ListData(),
+10175,查询列表的长度,ListLen,ListLen(),
+10176,查询列表某一个元素的位置,ListFitstIndex,ListFitstIndex(),
+10177,列表中是否包含某一项,ListIsInclude,ListIsInclude(),
+10185,下一个动画,NextAni,NextAni(),
+10186,切换到第X个动画,SetAni,SetAni(),
+10187,检测代码块-动画判断,IsPlayAni,IsPlayAni(),
+10192,当按下键盘键时,WhenPressKey,"def WhenPressKey(player,key):
+    if key == '':
+        # todo",
+10194,当玩家进入房间时,WhenEnterMap,def WhenEnterMap(),
+10211,属性下拉框,EntityProperty,EntityProperty(),
+10214,实体是不是什么类型,IsEntityBelongType,IsEntityBelongType(),
+10241,实体移动,MoveDrection,MoveDrection(),
+10242,碰撞事件,WhenCollide,"def WhenCollide(trigger,entity):
+    if entity == 'self':
+        age = 1",
+10249,清空列表代码块,ListClear,ListClear(),
+10300,设置属性开关代码块,SetPropertySwitch,SetPropertySwitch(),
+10600,entity的效果代码块,PlaySound,SetEffect(),
+10605,坐标上的实体,EntityOn,EntityOn(),
+21001,sc快速编码专用开始代码块,QuickStart,"def QuickStart():
+    # todo",

@@ -22,6 +22,7 @@ public static class Constant
     // 用户预设key
     public enum ePlayerPrefsKey
     {
-        PROTOS_FOLDER_PATH
+        PROTOS_FOLDER_PATH,
+        SVN_CONFING_FOLDER_PATH
     }
 }

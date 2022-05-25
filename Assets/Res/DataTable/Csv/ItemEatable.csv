@@ -1,0 +1,159 @@
+id,备注,"使用CD
+毫秒",调用方法,调用方法参数,cd组
+id,null,cd,callFunc,args,cdType
+int,null,int,string[],int[],int
+2040040,土豆,100,addHungryPoint,5,2040040
+2040041,胡萝卜,100,addHungryPoint,5,2040041
+2040042,西瓜,100,"addHungryPoint,addHP","5,50",2040042
+2040043,芦苇,100,addHungryPoint,1,2040043
+2040044,香蕉,100,"addHungryPoint,addHP","5,40",2040044
+2040046,禽肉,100,"addHp,addHungryPoint","-20,5",2040046
+2040049,兽肉,100,"addHp,addHungryPoint","-20,5",2040049
+2040018,小麦种子,100,"addHp,addHungryPoint","1,1",2040018
+2040019,水稻种子,100,"addHp,addHungryPoint","1,1",2040019
+2040020,土豆种子,100,"addHp,addHungryPoint","1,1",2040020
+2040021,胡萝卜种子,100,"addHp,addHungryPoint","1,1",2040021
+2040022,西瓜种子,100,"addHp,addHungryPoint","1,1",2040022
+2040023,芦苇种子,100,"addHp,addHungryPoint","1,1",2040023
+2040024,香蕉种子,100,"addHp,addHungryPoint","1,1",2040024
+2040025,红桃皇后花瓣,100,addHp,10,2040025
+2040026,德馨花瓣,100,addHp,10,2040026
+2040027,星辰花瓣,100,addHp,10,2040027
+2040028,思索花瓣,100,addHp,10,2040028
+2040029,魔鬼花瓣,100,addHp,10,2040029
+2040030,紫色天国花瓣,100,addHp,10,2040030
+2040031,银剑菊花瓣,100,addHp,10,2040031
+2040032,黄芯花瓣,100,addHp,10,2040032
+2040033,小雪球花蕊,100,addHp,10,2040033
+2040034,红浆果,100,addHp,20,2040034
+2040035,仙人掌块,100,addHungryPoint,10,2040035
+2040038,小麦,100,addHungryPoint,10,2040038
+2040039,水稻,100,addHungryPoint,10,2040039
+2040016,冰块,100,addHp,-10,2040016
+8000006,纤维,100,addWorkbenchFuel,10,2040001
+8000002,树枝,100,addWorkbenchFuel,10,8000002
+8000005,原木,100,addWorkbenchFuel,10,8000005
+2040004,白桦原木,100,addWorkbenchFuel,10,2040004
+2040006,黑橡树原木,100,addWorkbenchFuel,10,2040006
+2040007,青云杉原木,100,addWorkbenchFuel,10,2040007
+2040008,雪海松原木,100,addWorkbenchFuel,10,2040008
+2040048,大便,100,addHp,-2000,2040048
+8000004,源码晶石,100,addFuel,10,8000004
+2050012,源码晶体,100,addFuel,100,2050012
+2040071,构造器能源,100,addWorkbenchFuel,3600,2040071
+8000008,木炭,100,addWorkbenchFuel,100,8000008
+2060004,烤胡萝卜,100,addHp,100,2060004
+2060005,烤土豆,100,addHungryPoint,15,2060005
+2060006,烤兽肉,100,addHungryPoint,30,2060006
+2060007,烤禽肉,100,addHungryPoint,30,2060007
+2060008,烤蟹肉,100,addFatiguePoint,500,2060008
+2060009,面包,100,"addHungryPoint,addHP","20,100",2060009
+2060010,烹制兽肉,100,"addHungryPoint,addHP","30,100",2060010
+2060011,烹制禽肉,100,"addHungryPoint,addHP","30,100",2060011
+2060012,烹制胡萝卜,100,"addHungryPoint,addHP","20,100",2060012
+2060013,烹制土豆,100,"addHungryPoint,addHP","20,100",2060013
+2060014,蟹排,100,addFatiguePoint,1000,2060014
+2060015,蟹黄酱,100,addFatiguePoint,1000,2060015
+2060016,米饭,100,"addHungryPoint,addHP","20,100",2060016
+2060017,高级烹制胡萝卜,100,"addHungryPoint,addHP","20,180",2060017
+2060018,高级烹制土豆,100,"addHungryPoint,addHP","20,180",2060018
+2060019,精制面包,100,"addHungryPoint,addHP","20,180",2060019
+2060020,精制米饭,100,"addHungryPoint,addHP","20,180",2060020
+2060021,高级烹制兽肉,100,"addHungryPoint,addHP","45,220",2060021
+2060022,高级烹制禽肉,100,"addHungryPoint,addHP","45,220",2060022
+2060023,高级蟹黄酱,100,addFatiguePoint,1500,2060023
+2060034,源码修复能源,100,addHp,200,2060034
+2050038,兽皮水袋(100%),100,addHungryPoint,100,2050037
+2050041,兽皮水袋(80%),100,addHungryPoint,100,2050037
+2050042,兽皮水袋(60%),100,addHungryPoint,100,2050037
+2050043,兽皮水袋(40%),100,addHungryPoint,100,2050037
+2050044,兽皮水袋(20%),100,addHungryPoint,100,2050037
+2050045,蓝色蘑菇,100,"addHungryPoint,addHp","10,-100",2050045
+2040072,椰子,100,"addHungryPoint,addHp","10,10",2040072
+2040073,银剑菊花（整株）,100,addHungryPoint,1,2040073
+2040074,龟甲叶,100,addHungryPoint,1,2040074
+2040075,红柳叶,100,addHungryPoint,1,2040075
+2040076,紫灌叶,100,addHungryPoint,1,2040076
+2040077,空心种子,100,addHungryPoint,1,2040077
+2040078,狼毫草种子,100,addHungryPoint,1,2040078
+2040079,龙爪草种子,100,addHungryPoint,1,2040079
+2040080,黄芯种子,100,addHungryPoint,1,2040080
+2040081,小雪球种子,100,addHungryPoint,1,2040081
+2040082,银剑菊种子,100,addHungryPoint,1,2040082
+2040083,红桃皇后种子,100,addHungryPoint,1,2040083
+2040084,德馨花种子,100,addHungryPoint,1,2040084
+2040085,星辰花种子,100,addHungryPoint,1,2040085
+2040086,思索花种子,100,addHungryPoint,1,2040086
+2040087,魔鬼花种子,100,addHungryPoint,1,2040087
+2040088,紫色天国种子,100,addHungryPoint,1,2040088
+61000001,Grilled Chicken Thigh Blueprint,100,unlockRecipe,10200001,
+61000002,Grilled Chicken Wing Blueprint,100,unlockRecipe,10200002,
+61000003,Roast Chicken Blueprint,100,unlockRecipe,10200003,
+61000004,Barbecue Blueprint,100,unlockRecipe,10200004,
+61000005,Recovery Meatball Blueprint,100,unlockRecipe,10200005,
+61000006,Recipe: LV.2 Sheep Horn Dagger,100,unlockRecipe,10301005,
+61000007,Recipe: LV.2 Boar Tusk Dagger,100,unlockRecipe,10301006,
+61000008,Recipe: LV.2 Bull Horn Spear,100,unlockRecipe,10301007,
+61000009,Recipe: LV.2 Dinosaur Bone Sword,100,unlockRecipe,10301004,
+61000010,Recipe: LV.2 Hide Clothes,100,unlockRecipe,10302001,
+61000011,Recipe: LV.2 Hide Pants,100,unlockRecipe,10302002,
+61000012,Recipe: LV.2 Hide Hat,100,unlockRecipe,10302003,
+61000013,Recipe: LV.2 Hide Gloves,100,unlockRecipe,10302004,
+61000014,Recipe: LV.2 Hide Shoes,100,unlockRecipe,10302005,
+61000015,Grilled Chicken Thigh,500,addHp,40,61000015
+61000016,Grilled Chicken Wing,500,addHp,60,61000015
+61000017,Roast Chicken,500,addHp,120,61000015
+61000018,Barbecue,500,addHp,100,61000015
+61000019,Recovery Meatball,500,addHp,200,61000015
+61010001,testBuff,500,addBuff,1201,61010001
+80000001,Sentry,100,addEntity,50009001,
+80000002,Sentry,100,addEntity,50009002,
+80000003,Sentry,100,addEntity,50009003,
+80000004,Looter,100,addEntity,50009004,
+80000005,Looter,100,addEntity,50009005,
+80000006,Looter,100,addEntity,50009006,
+80000012,VIP Land Portal,100,addEntity,50009007,
+80000013,VIP Land Portal,100,addEntity,50009007,
+80000014,VIP Land Portal,100,addEntity,50009007,
+80000015,VIP Land Portal,100,addEntity,50009007,
+80000016,VIP Land Portal,100,addEntity,50009007,
+80000017,VIP Land Portal,100,addEntity,50009007,
+80000018,VIP Land Portal,100,addEntity,50009007,
+80000019,VIP Land Portal,100,addEntity,50009007,
+80000020,VIP Land Portal,100,addEntity,50009007,
+80000021,VIP Land Portal,100,addEntity,50009007,
+80000022,VIP Land Portal,100,addEntity,50009007,
+80000023,VIP Land Portal,100,addEntity,50009007,
+80000024,VIP Land Portal,100,addEntity,50009007,
+80000025,VIP Land Portal,100,addEntity,50009007,
+80000026,VIP Land Portal,100,addEntity,50009007,
+80000027,VIP Land Portal,100,addEntity,50009007,
+80000028,VIP Land Portal,100,addEntity,50009007,
+80000029,VIP Land Portal,100,addEntity,50009007,
+80000030,VIP Land Portal,100,addEntity,50009007,
+80000031,VIP Land Portal,100,addEntity,50009007,
+80000032,VIP Land Portal,100,addEntity,50009007,
+80000033,VIP Land Portal,100,addEntity,50009007,
+80000034,VIP Land Portal,100,addEntity,50009007,
+80000035,VIP Land Portal,100,addEntity,50009007,
+80000036,VIP Land Portal,100,addEntity,50009007,
+80000037,VIP Land Portal,100,addEntity,50009007,
+80000038,VIP Land Portal,100,addEntity,50009007,
+80000039,VIP Land Portal,100,addEntity,50009007,
+80000040,VIP Land Portal,100,addEntity,50009007,
+80000041,VIP Land Portal,100,addEntity,50009007,
+80000042,VIP Land Portal,100,addEntity,50009007,
+80000043,VIP Land Portal,100,addEntity,50009007,
+80000044,VIP Land Portal,100,addEntity,50009007,
+80000045,VIP Land Portal,100,addEntity,50009007,
+80000046,VIP Land Portal,100,addEntity,50009007,
+81000001,Gold Trophy for Creator,100,addEntity,50009008,
+81000002,Silver Trophy for Creator,100,addEntity,50009009,
+81000003,Bronze Trophy for Creator,100,addEntity,50009010,
+81000004,Creator Crystal Trophy,100,addEntity,50009011,
+81000005,Simple Love Ornament,100,addEntity,50009012,
+81000006,Ordinary Love Ornament,100,addEntity,50009013,
+81000007,Delicate Love Ornament,100,addEntity,50009014,
+81000008,Super Love Ornament,100,addEntity,50009015,
+81000009,Best Weapon Trophy,100,addEntity,50009016,
+80009999,Placeholder,100,addEntity,50009999,

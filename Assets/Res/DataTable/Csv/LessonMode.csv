@@ -1,0 +1,8 @@
+ID,课程模式名,教师上课默认状态,演示/查看模式UI,锁屏UI,学生指引UI,学生管理UI,学生传送,音乐,音效,点击寻路,摇杆移动,窗口化,镜头模式,操作模式,场景解锁开关,地图入口开关,流程管理UI
+id,name,teacherDefaultState,demoViewModeUI,lockScreenUI,studentGuideUI,studentManageUI,studentTransfer,bgm,soundEffect,pathFinding,rockerMove,windowMode,cameraMode,operateMode,sceneUnlock,mapEntrace,lessonManageUI
+int,string,bool,bool,bool,bool,bool,bool,bool,bool,bool,bool,bool,string,string,bool,bool,bool
+1001,鲸幂2.0线下上课,1,0,0,0,0,0,0,1,1,0,0,mobile,mobile,0,0,0
+1002,编程2.0双师上课（共同地图）,1,1,1,1,1,1,0,1,1,0,0,pc,pc,0,0,1
+1003,编程2.0双师上课（每人一张地图）,1,0,1,1,1,1,0,1,1,0,1,pc,pc,1,0,1
+1004,小贝DIY课程（每人一张地图）,1,0,1,1,1,1,0,1,1,0,0,pc,pc,1,0,1
+1005,ICW上课配置,1,0,1,0,1,1,0,1,1,0,0,pc,pc,1,0,1

@@ -1,0 +1,4 @@
+条件id,条件类型,比较类型1,比较参数,附加参数,备注
+cid,condition_type,compare_type,compare_value,params,null
+int,int,int,int,int[],null
+1,0,1,30,,等级大于30

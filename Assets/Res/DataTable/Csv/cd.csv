@@ -1,0 +1,4 @@
+条件id,cd类型,值1,是否需要同步给前端,备注
+cid,cd_type,value,need_sync,null
+int,int,int,bool,null
+1,0,1000,1,

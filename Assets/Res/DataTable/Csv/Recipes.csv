@@ -1,0 +1,26 @@
+图鉴ID,图鉴ICON,图鉴名字,图鉴备注,图鉴分类(客户端用),图鉴等级,排序优先,解锁类型,解锁条件1,合成物,合成物品质,品质概率,合成途径描述,合成素材,使用Ditamin数量
+id,icon,name,desc,type,level,recipesSort,unlockType,unlockCondition,productId,productQuality,qualityPro,sourceText,matItemId,useDitamin
+int,string,string,string,int,int,int,int,int,int[][],int[][],int[][],int,int[][],int
+10200001,MV01_ca_blueprint_01_grilledChickenThigh,Recipe: Grilled Chicken Thigh,烤鸡腿,2,1,10001,1,1,"61000015,1",1,100,1,"61000020,1",10
+10200002,MV01_ca_blueprint_02_grilledChickenWing,Recipe: Grilled Chicken Wing,烤鸡翅,2,1,10002,1,1,"61000016,1",1,100,1,"61000021,1",20
+10200003,MV01_ca_blueprint_03_roastChicken,Recipe: Roast Chicken,烤整鸡,2,1,10004,2,61000003,"61000017,1",1,100,1,"61000022,1",40
+10200004,MV01_ca_blueprint_04_barbecue,Recipe: Barbecue,烤肉,2,1,10003,1,1,"61000018,1",1,100,1,"61000025,2",20
+10200005,MV01_ca_blueprint_05_recoveryMeatball,Recipe: Recovery Meatball,复苏肉丸,2,1,10005,2,61000005,"61000019,1",1,100,1,"61000025,5;61000022,1;61000033,1",50
+10301001,MV01_ca_blueprint_06_sheepHornDagger,Recipe: LV.1 Sheep Horn Dagger,1级羊角匕首配方,3,1,30001,1,1,"71010001,1",1,100,1,"61000023,16;61000024,16",600
+10301002,MV01_ca_blueprint_07_boarTuskDagger,Recipe: LV.1 Boar Tusk Dagger,1级猪牙匕首配方,3,1,30003,1,1,"71010002,1",1,100,1,"61000029,20;61000030,20",1000
+10301003,MV01_ca_blueprint_08_oxHornSpear,Recipe: LV.1 Bull Horn Spear,1级牛角矛配方,3,1,30002,1,1,"71010003,1",2,100,1,"61000027,20;61000028,20;61000026,20",800
+10301004,MV01_ca_blueprint_09_dinosaurBoneSword,Recipe: LV.2 Dinosaur Bone Sword,2级龙骨剑配方,3,2,30004,2,61000009,"71010004,1","3,4,5","20,70,10",1,"61000032,24;61000026,26;61000029,26;61000031,28",2000
+10301005,MV01_ca_blueprint_06_sheepHornDagger,Recipe: LV.2 Sheep Horn Dagger,2级羊角匕首配方,3,2,30001,2,61000006,"71010001,1","2,3,4,5","68,13,11,8",1,"61000023,26;61000024,26",1000
+10301006,MV01_ca_blueprint_07_boarTuskDagger,Recipe: LV.2 Boar Tusk Dagger,2级猪牙匕首配方,3,2,30003,2,61000007,"71010002,1","2,3,4","41,37,22",1,"61000029,30;61000030,30",1600
+10301007,MV01_ca_blueprint_08_oxHornSpear,Recipe: LV.2 Bull Horn Spear,2级牛角矛配方,3,2,30002,2,61000008,"71010003,1","3,4,5","48,28,24",1,"61000027,30;61000028,30;61000026,30",1200
+10301008,MV01_ca_blueprint_09_dinosaurBoneSword,Recipe: LV.1 Dinosaur Bone Sword,1级龙骨剑配方,3,1,30004,1,1,"71010004,1",2,100,1,"61000032,18;61000026,18;61000029,18;61000031,20",1200
+10302001,MV01_ca_blueprint_10_animalSkinClothes,Recipe: LV.2 Hide Clothes,2级兽皮衣服配方,3,2,40005,2,61000010,"71020002,1","2,3","60,40",1,"61000023,35;61000026,16;61000029,14;61000031,14",1200
+10302002,MV01_ca_blueprint_11_animalSkinPants,Recipe: LV.2 Hide Pants,2级兽皮裤子配方,3,2,40004,2,61000011,"71020003,1","2,3","60,40",1,"61000023,30;61000026,16;61000029,10;61000031,10",1100
+10302003,MV01_ca_blueprint_12_animalSkinHat,Recipe: LV.2 Hide Hat,2级兽皮帽子配方,3,2,40003,2,61000012,"71020001,1","2,3","60,40",1,"61000023,18;61000026,12;61000029,30",1000
+10302004,MV01_ca_blueprint_13_animalSkinGloves,Recipe: LV.2 Hide Gloves,2级兽皮手套配方,3,2,40001,2,61000013,"71020005,1","2,3","60,40",1,"61000023,26",800
+10302005,MV01_ca_blueprint_14_animalSkinShoes,Recipe: LV.2 Hide Shoes,2级兽皮鞋子配方,3,2,40002,2,61000014,"71020004,1","2,3","60,40",1,"61000023,36;61000026,30",900
+10302006,MV01_ca_blueprint_10_animalSkinClothes,Recipe: LV.1 Hide Clothes,1级兽皮衣服配方,3,1,40005,1,1,"71020002,1",1,100,1,"61000023,25;61000026,12;61000029,10;61000031,10",900
+10302007,MV01_ca_blueprint_11_animalSkinPants,Recipe: LV.1 Hide Pants,1级兽皮裤子配方,3,1,40004,1,1,"71020003,1",1,100,1,"61000023,20;61000026,12;61000029,6;61000031,6",800
+10302008,MV01_ca_blueprint_12_animalSkinHat,Recipe: LV.1 Hide Hat,1级兽皮帽子配方,3,1,40003,1,1,"71020001,1",1,100,1,"61000023,12;61000026,8;61000029,20",700
+10302009,MV01_ca_blueprint_13_animalSkinGloves,Recipe: LV.1 Hide Gloves,1级兽皮手套配方,3,1,40001,1,1,"71020005,1",1,100,1,"61000023,16",500
+10302010,MV01_ca_blueprint_14_animalSkinShoes,Recipe: LV.1 Hide Shoes,1级兽皮鞋子配方,3,1,40002,1,1,"71020004,1",1,100,1,"61000023,24;61000026,20",600

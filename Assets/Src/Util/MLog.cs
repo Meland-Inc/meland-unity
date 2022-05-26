@@ -11,7 +11,8 @@ public enum eLogTag
     ui,
     login,
     map,//服务器具体地图
-    entity
+    entity,
+    procedure//流程相关
 }
 
 /// <summary>

@@ -96,7 +96,7 @@ public class NetMessageCenter : GameFrameworkComponent
         Log.Info("init socket io");
         INetworkChannel channel = network.CreateNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, ServiceType.Tcp, new GameChannelHelper());
 #endif
-        INetworkChannel httpChannel = new WebHttpNetworkChannel(NetworkDefine.CHANEL_NAME_HTTP, new HttpChannelHelper());
+        INetworkChannel httpChannel = new HttpNetworkChannel(NetworkDefine.CHANEL_NAME_HTTP, new HttpChannelHelper());
         network.AddNetworkChannel(httpChannel);
         _channelMap.Add(NetworkDefine.CHANEL_NAME_HTTP, httpChannel);
         _channelMap.Add(NetworkDefine.CHANNEL_NAME_GAME, channel);

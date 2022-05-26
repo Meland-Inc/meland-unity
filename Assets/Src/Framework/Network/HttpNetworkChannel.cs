@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using System.Collections.Generic;
 
-public class WebHttpNetworkChannel : INetworkChannel
+public class HttpNetworkChannel : INetworkChannel
 {
     private readonly INetworkChannelHelper _networkChannelHelper;
     private readonly EventPool<Packet> _receivePacketPool;
@@ -45,7 +45,7 @@ public class WebHttpNetworkChannel : INetworkChannel
     public GameFrameworkAction<INetworkChannel, int> NetworkChannelMissHeartBeat { get; set; }
     public GameFrameworkAction<INetworkChannel, NetworkErrorCode, SocketError, string> NetworkChannelError { get; set; }
     public GameFrameworkAction<INetworkChannel, object> NetworkChannelCustomError { get; set; }
-    public WebHttpNetworkChannel(string name, INetworkChannelHelper helper)
+    public HttpNetworkChannel(string name, INetworkChannelHelper helper)
     {
         Name = name;
         _networkChannelHelper = helper;

@@ -9,7 +9,7 @@ public class LoginAuthData
     {
         LoginAuthData data = new()
         {
-            TimeStamp = (TimeUtil.GetTimeStamp() * TimeDefine.MS_2_S).ToString(),
+            TimeStamp = (TimeUtil.GetTimeStamp() / TimeDefine.S_2_MS).ToString(),
             DataHash = LoginDefine.DataHash,
             PrivateKey = LoginDefine.PrivateKey
         };

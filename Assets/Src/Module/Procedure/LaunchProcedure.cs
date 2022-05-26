@@ -15,7 +15,6 @@ public class LaunchProcedure : ProcedureBase
 
         MLog.Debug(eLogTag.unknown, "hello GF debug");
         // BasicModule.NetMsgCenter.ConnectChannel(NetworkDefine.CHANNEL_NAME_GAME, "127.0.0.1", 9000);
-        ChangeState<LoginProcedure>(procedureOwner);
     }
 
     [System.Obsolete]

@@ -2,7 +2,6 @@ using UnityGameFramework.Runtime;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
 using GameFramework.Event;
-using HttpPacketDefine;
 
 public class LoginProcedure : ProcedureBase
 {
@@ -19,7 +18,7 @@ public class LoginProcedure : ProcedureBase
         Message.EnterMapSuccess += OnEnterMapSuccess;
         Message.GameSceneChanged += OnGameSceneChanged;
 
-        _ = GFEntry.UI.OpenUIForm(eFormID.login);
+        _ = GFEntry.UI.OpenUIForm<FormLogin>();
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
@@ -31,7 +30,7 @@ public class LoginProcedure : ProcedureBase
         Message.EnterMapSuccess -= OnEnterMapSuccess;
         Message.GameSceneChanged -= OnGameSceneChanged;
 
-        GFEntry.UI.CloseUIForm(eFormID.login);
+        GFEntry.UI.CloseUIForm<FormLogin>();
 
         base.OnLeave(procedureOwner, isShutdown);
     }

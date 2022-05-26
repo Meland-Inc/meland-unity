@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-20 14:20:27
- * @LastEditTime: 2022-05-25 10:40:28
- * @LastEditors: xiang huan
+ * @LastEditTime 2022-05-26 09:28:35
+ * @LastEditors Please set LastEditors
  * @Description: 资源工具类
- * @FilePath: /meland-unity/Assets/Src/Util/AssetUtil.cs
+ * @FilePath /Assets/Src/Util/AssetUtil.cs
  * 
  */
 
@@ -15,8 +15,8 @@ public static class AssetUtil
     public static string GetDataTableAssetPath(string assetName, bool fromBytes)
     {
         string path = fromBytes
-            ? Path.Combine(Resource.PATH_DATA_TABLE, "Bytes", $"{assetName}.bytes")
-            : Path.Combine(Resource.PATH_DATA_TABLE, "Csv", $"{assetName}.csv");
+            ? Path.Combine(ResourceDefine.PATH_DATA_TABLE, "Bytes", $"{assetName}.bytes")
+            : Path.Combine(ResourceDefine.PATH_DATA_TABLE, "Csv", $"{assetName}.csv");
         return path;
     }
 }

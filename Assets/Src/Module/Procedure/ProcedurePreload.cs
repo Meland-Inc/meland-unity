@@ -1,10 +1,10 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-05-26 15:01:35
- * @LastEditors: mangit
+ * @LastEditTime 2022-05-26 16:56:39
+ * @LastEditors Please set LastEditors
  * @Description: 游戏资源加载
- * @FilePath: /Assets/Src/Module/Procedure/ProcedurePreload.cs
+ * @FilePath /Assets/Src/Module/Procedure/ProcedurePreload.cs
  * 
  */
 

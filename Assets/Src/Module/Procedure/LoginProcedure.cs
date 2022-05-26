@@ -43,7 +43,7 @@ public class LoginProcedure : ProcedureBase
             return;
         }
 
-        ChangeState<SceneSwitchProcedure>(procedureOwner);
+        ChangeState<SceneLoadingProcedure>(procedureOwner);
     }
 
     private void OnNetworkConnected(object sender, GameEventArgs e)

@@ -1,4 +1,3 @@
-using System;
 using Bian;
 using GameFramework.Event;
 using GameFramework.Fsm;
@@ -11,10 +10,13 @@ using UnityGameFramework.Runtime;
 public class SceneLoadingProcedure : ProcedureBase
 {
     private bool _isSceneLoadFinish;
+    private eSceneName _needLoadSceneName;
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
         base.OnEnter(procedureOwner);
+        _needLoadSceneName = (eSceneName)procedureOwner.GetData<VarInt32>("nextSceneName").Value;
+        _ = procedureOwner.RemoveData("nextSceneName");
 
         GFEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, onLoadSceneSuccess);
         Message.SceneEntityLoadFinish += OnSceneEntityLoadFinish;
@@ -23,7 +25,7 @@ public class SceneLoadingProcedure : ProcedureBase
         ShowLoadingUI();
 
         // 先切换到loading场景中 loading场景好了才卸载之前的场景
-        GFEntry.Scene.LoadScene(Resource.GetSceneAssetPath(eSceneResName.SceneLoading.ToString()));
+        GFEntry.Scene.LoadScene(SceneDefine.SceneResPath[eSceneName.sceneLoading]);
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
@@ -34,7 +36,7 @@ public class SceneLoadingProcedure : ProcedureBase
 
         HideLoadingUI();
 
-        GFEntry.Scene.UnloadScene(Resource.GetSceneAssetPath(eSceneResName.SceneLoading.ToString()));
+        GFEntry.Scene.UnloadScene(SceneDefine.SceneResPath[eSceneName.sceneLoading]);
 
         base.OnLeave(procedureOwner, isShutdown);
     }
@@ -59,11 +61,11 @@ public class SceneLoadingProcedure : ProcedureBase
         SceneModel model = DataManager.GetModel<SceneModel>();
         string loadedScene = (e as LoadSceneSuccessEventArgs).SceneAssetName;
 
-        if (loadedScene == Resource.GetSceneAssetPath(eSceneResName.SceneLoading.ToString()))
+        if (loadedScene == SceneDefine.SceneResPath[eSceneName.sceneLoading])
         {
             OnLoadingSceneLoaded();
         }
-        else if (loadedScene == Resource.GetSceneAssetPath(model.CurSceneResName))
+        else if (loadedScene == SceneDefine.SceneResPath[_needLoadSceneName])
         {
             OnGameSceneLoaded();
         }
@@ -92,23 +94,13 @@ public class SceneLoadingProcedure : ProcedureBase
         SceneModel sceneModel = DataManager.GetModel<SceneModel>();
 
         //老的需要卸载
-        if (!string.IsNullOrEmpty(sceneModel.CurSceneResName))
+        if (sceneModel.CurGameMainScene != eSceneName.none)
         {
-            GFEntry.Scene.UnloadScene(Resource.GetSceneAssetPath(sceneModel.CurSceneResName));
-            sceneModel.CurSceneResName = null;
+            GFEntry.Scene.UnloadScene(SceneDefine.SceneResPath[sceneModel.CurGameMainScene]);
+            sceneModel.ChangeToGameMainScene(eSceneName.none);
         }
 
-        LoadGameScene();
-    }
-
-    /// <summary>
-    /// 开始加载游戏场景
-    /// </summary>
-    private void LoadGameScene()
-    {
-        SceneModel sceneModel = DataManager.GetModel<SceneModel>();
-        sceneModel.CurSceneResName = eSceneResName.Game.ToString();
-        GFEntry.Scene.LoadScene(Resource.GetSceneAssetPath(sceneModel.CurSceneResName));
+        GFEntry.Scene.LoadScene(SceneDefine.SceneResPath[_needLoadSceneName]);
     }
 
     /// <summary>
@@ -116,9 +108,10 @@ public class SceneLoadingProcedure : ProcedureBase
     /// </summary>
     private void OnGameSceneLoaded()
     {
-        _isSceneLoadFinish = true;
+        SceneModel sceneModel = DataManager.GetModel<SceneModel>();
+        sceneModel.ChangeToGameMainScene(_needLoadSceneName);
 
-        // EnterMapAction.Req();
+        EnterMapAction.Req();
     }
 
     private void OnRspMapEnterFinish(EnterMapResponse rsp)

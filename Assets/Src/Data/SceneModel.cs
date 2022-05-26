@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityGameFramework.Runtime;
 
 /// <summary>
 /// 场景数据 和当期服务器地图数据无关部分
@@ -7,36 +6,25 @@ using UnityGameFramework.Runtime;
 public class SceneModel : DataModelBase
 {
     [SerializeField]
-    private string _curGameScene;
+    private eSceneName _curGameMainScene = eSceneName.none;
     /// <summary>
-    /// 当前游戏场景 可能是大世界 也可能是地图模板id
+    /// 当前游戏主场景 不是每个场景Name中的所有枚举 只是各游戏主场景 比如还有登陆 副本等
     /// </summary>
-    public string CurGameScene => _curGameScene;
+    public eSceneName CurGameMainScene => _curGameMainScene;
 
     /// <summary>
-    /// 当前场景资源名 多个场景可能共用同一个场景资源名
-    /// </summary>
-    public string CurSceneResName;
-
-    /// <summary>
-    /// 改变到某个场景
+    /// 改变到某个游戏主场景
     /// </summary>
     /// <param name="sceneName"></param>
-    public void ChangeToScene(string sceneName)
+    public void ChangeToGameMainScene(eSceneName sceneName)
     {
-        if (string.IsNullOrEmpty(sceneName))
-        {
-            MLog.Error(eLogTag.scene, $"Scene name is invalid. => {sceneName}");
-            return;
-        }
-
-        if (_curGameScene == sceneName)
+        if (_curGameMainScene == sceneName)
         {
             return;
         }
 
-        _curGameScene = sceneName;
+        _curGameMainScene = sceneName;
 
-        Message.GameSceneChanged.Invoke(_curGameScene);
+        Message.GameMainSceneChanged.Invoke(_curGameMainScene);
     }
 }

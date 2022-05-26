@@ -8,6 +8,7 @@ public enum eLogTag
     unknown,
     network,
     scene,
+    ui,
 }
 
 /// <summary>

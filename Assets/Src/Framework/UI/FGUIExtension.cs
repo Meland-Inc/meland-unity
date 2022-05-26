@@ -29,4 +29,64 @@ public static class FGUIExtension
         Object.Destroy(cpt);
         return cpt;
     }
+
+    /// <summary>
+    /// 根据逻辑类名来获取子组件并添加组件
+    /// 注意，child的名字一定要和逻辑类名一致！！！
+    /// </summary>
+    /// <param name="gcom"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T AddSubUILogic<T>(this GComponent gcom) where T : FGUILogicCpt, new()
+    {
+        return gcom.AddSubUILogic<T>(typeof(T).Name);
+    }
+
+    /// <summary>
+    /// 根据逻辑类名来获取子组件并移除组件
+    /// 注意，child的名字一定要和逻辑类名一致！！！
+    /// </summary>
+    /// <param name="gcom"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T RemoveSubUILogic<T>(this GComponent gcom) where T : FGUILogicCpt, new()
+    {
+        return gcom.RemoveSubUILogic<T>(typeof(T).Name);
+    }
+
+    /// <summary>
+    /// 根据child name添加逻辑组件
+    /// </summary>
+    /// <param name="gcom"></param>
+    /// <param name="childName"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T AddSubUILogic<T>(this GComponent gcom, string childName) where T : FGUILogicCpt, new()
+    {
+        if (gcom.GetChild(childName) is not GComponent child)
+        {
+            MLog.Error(eLogTag.ui, $"child {childName} is null");
+            return null;
+        }
+
+        return child.AddUILogic<T>();
+    }
+
+    /// <summary>
+    /// 根据child name移除逻辑组件
+    /// </summary>
+    /// <param name="gcom"></param>
+    /// <param name="childName"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T RemoveSubUILogic<T>(this GComponent gcom, string childName) where T : FGUILogicCpt, new()
+    {
+        if (gcom.GetChild(childName) is not GComponent child)
+        {
+            MLog.Error(eLogTag.ui, $"child {childName} is null");
+            return null;
+        }
+
+        return child.RemoveUILogic<T>();
+    }
 }

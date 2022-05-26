@@ -36,7 +36,7 @@ public class GameProcedure : ProcedureBase
 
     private void AddEvent()
     {
-        Message.RspMapEnterFinish += OnRspMapEnterFinish;
+        Message.RspMapEnterFinish += OnRspMapEnterFinish;//断线重连 重新收到enterMap时的处理
     }
 
     private void RemoveEvent()

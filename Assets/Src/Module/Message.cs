@@ -4,10 +4,9 @@ using Bian;
 public static class Message
 {
     /// <summary>
-    /// 场景改变了
+    /// 游戏主场景改变了 切场景过程中会先改变到none状态 也会发这个消息
     /// </summary>
-    public static Action<string> GameSceneChanged = delegate { };
-    public static Action<Bian.EnterMapResponse> EnterMapSuccess = delegate { };
+    public static Action<eSceneName> GameMainSceneChanged = delegate { };
     /// <summary>
     /// 回复了地图进入成功
     /// </summary>

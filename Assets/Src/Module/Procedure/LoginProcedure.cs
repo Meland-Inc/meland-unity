@@ -5,7 +5,8 @@ using GameFramework.Event;
 
 public class LoginProcedure : ProcedureBase
 {
-    private string _needLoadSceneName;
+    private bool _signalSigninPlayerSuccess = false;
+
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
         Log.Info("enter login procedure", eLogTag.login);
@@ -15,8 +16,6 @@ public class LoginProcedure : ProcedureBase
 
         Message.GetPlayerSuccess += OnGetPlayerSuccess;
         Message.SigninPlayerSuccess += OnSigninPlayerSuccess;
-        Message.EnterMapSuccess += OnEnterMapSuccess;
-        Message.GameSceneChanged += OnGameSceneChanged;
 
         //_ = GFEntry.UI.OpenUIForm<FormLogin>();
         Runtime.LoginAction.Req();
@@ -28,8 +27,6 @@ public class LoginProcedure : ProcedureBase
         eventCom.Unsubscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
         Message.GetPlayerSuccess -= OnGetPlayerSuccess;
         Message.SigninPlayerSuccess -= OnSigninPlayerSuccess;
-        Message.EnterMapSuccess -= OnEnterMapSuccess;
-        Message.GameSceneChanged -= OnGameSceneChanged;
 
         //GFEntry.UI.CloseUIForm<FormLogin>();
 
@@ -39,11 +36,13 @@ public class LoginProcedure : ProcedureBase
     protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
-        if (string.IsNullOrEmpty(_needLoadSceneName))
+
+        if (!_signalSigninPlayerSuccess)
         {
             return;
         }
 
+        procedureOwner.SetData<VarInt32>("nextSceneName", (int)eSceneName.world);
         ChangeState<SceneLoadingProcedure>(procedureOwner);
     }
 
@@ -66,17 +65,6 @@ public class LoginProcedure : ProcedureBase
     private void OnSigninPlayerSuccess(Bian.SigninPlayerResponse rsp)
     {
         Log.Info("signin player success,start to enter map", eLogTag.login);
-        EnterMapAction.Req();
-    }
-
-    private void OnEnterMapSuccess(Bian.EnterMapResponse rsp)
-    {
-        Log.Info("enter map success,start to enter game scene", eLogTag.login);
-        DataManager.GetModel<GameSceneModel>().ChangeToScene(GameSceneModel.SCENE_NAME_WORLD);
-    }
-
-    private void OnGameSceneChanged(string sceneName)
-    {
-        _needLoadSceneName = sceneName;
+        _signalSigninPlayerSuccess = true;
     }
 }

@@ -1,10 +1,10 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-05-25 14:31:15
- * @LastEditors: xiang huan
+ * @LastEditTime: 2022-05-26 15:01:35
+ * @LastEditors: mangit
  * @Description: 游戏资源加载
- * @FilePath: /meland-unity/Assets/Src/Module/Procedure/ProcedurePreload.cs
+ * @FilePath: /Assets/Src/Module/Procedure/ProcedurePreload.cs
  * 
  */
 
@@ -48,8 +48,8 @@ public class ProcedurePreload : ProcedureBase
                 return;
             }
         }
-        ChangeState<SceneSwitchProcedure>(procedureOwner);
 
+        ChangeState<LoginProcedure>(procedureOwner);
     }
 
     private void PreloadResources()

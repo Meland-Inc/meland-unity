@@ -9,6 +9,7 @@ public enum eLogTag
     network,
     scene,
     ui,
+    login
 }
 
 /// <summary>

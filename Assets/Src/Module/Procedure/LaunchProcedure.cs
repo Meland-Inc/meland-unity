@@ -8,7 +8,6 @@ using UnityEngine;
 /// </summary>
 public class LaunchProcedure : ProcedureBase
 {
-    private string _needLoadSceneName;
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
@@ -16,10 +15,6 @@ public class LaunchProcedure : ProcedureBase
 
         MLog.Debug(eLogTag.unknown, "hello GF debug");
         // BasicModule.NetMsgCenter.ConnectChannel(NetworkDefine.CHANNEL_NAME_GAME, "127.0.0.1", 9000);
-
-        Message.GameSceneChanged += OnGameSceneChanged;
-
-        DataManager.GetModel<GameSceneModel>().ChangeToScene(GameSceneModel.SCENE_NAME_WORLD);
     }
 
     [System.Obsolete]
@@ -34,16 +29,6 @@ public class LaunchProcedure : ProcedureBase
     {
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
-        if (string.IsNullOrEmpty(_needLoadSceneName))
-        {
-            return;
-        }
-
         ChangeState<ProcedurePreload>(procedureOwner);
-    }
-
-    private void OnGameSceneChanged(string sceneName)
-    {
-        _needLoadSceneName = sceneName;
     }
 }

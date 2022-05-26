@@ -79,21 +79,33 @@ public class WebsocketNetworkChannel : INetworkChannel
 
     public void Connect(IPAddress ipAddress, int port, object userData)
     {
+
+        string url = $"{ipAddress}:{port}{userData ?? ""}";
+        url = UrlUtil.GetWebsocketFullUrl(url);
+        Log.Info($"web socket channel connect={url},channel={Name}");
+        Connect(url, userData);
+    }
+
+    public void Connect(string targetAddress)
+    {
+        Connect(targetAddress, null);
+    }
+
+    public void Connect(string targetAddress, object userData)
+    {
         if (_socket != null)
         {
             Close();
             _socket = null;
         }
 
+        _userData = userData;
         try
         {
-            _userData = userData;
-            string url = $"{ipAddress}:{port}{userData ?? ""}";
-            url = UrlUtil.GetWebsocketFullUrl(url);
-            Log.Info($"web socket channel connect={url},channel={Name}");
-            _socket = new WebSocket(url);
+            Log.Info($"web socket channel connect={targetAddress},channel={Name}");
+            _socket = new WebSocket(targetAddress);
         }
-        catch (System.Exception)
+        catch (Exception)
         {
             NetworkChannelError?.Invoke(this, NetworkErrorCode.ConnectError, SocketError.Success, $"init socket fail,channel={Name}");
             throw;

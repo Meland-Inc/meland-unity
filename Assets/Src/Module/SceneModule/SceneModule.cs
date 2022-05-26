@@ -4,7 +4,8 @@ using UnityGameFramework.Runtime;
 /// <summary>
 /// 场景相关各全局功能模块 本模块及其逻辑模块都会随场景创建销毁的生命周期
 /// </summary>
-public class SceneModule : SceneModuleBase
+[DisallowMultipleComponent]
+public class SceneModule : MonoBehaviour
 {
     /// <summary>
     /// 根 获取添加模块都在这个上面

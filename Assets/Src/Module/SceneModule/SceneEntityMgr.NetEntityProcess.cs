@@ -1,8 +1,7 @@
-using UnityEngine;
 using Bian;
 using Google.Protobuf.Collections;
 
-public partial class SceneEntityMgr : MonoBehaviour
+public partial class SceneEntityMgr : SceneModuleBase
 {
     public void NetInitMainRole(Player playerData, EntityLocation location)
     {

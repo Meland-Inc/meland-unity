@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// 场景实体基础数据
 /// </summary>
-public class SceneEntityBaseData : Component
+public class SceneEntityBaseData : MonoBehaviour
 {
 
     [SerializeField]

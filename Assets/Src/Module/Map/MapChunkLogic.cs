@@ -39,13 +39,26 @@ public class MapChunkLogic
 
                 foreach (BlockObj obj in block.Objs)
                 {
-                    // EntityCell cell=  obj.ObjId;
-                    // if (!cell.isTerrain)
-                    // {
-                    //     continue;
-                    // }
 
-                    RenderOneTerrain(entityMgr, obj, x, z);
+                    DREntity dr = GFEntry.DataTable.GetDataTable<DREntity>().GetDataRow(obj.ObjId);
+                    if (dr == null)
+                    {
+                        MLog.Error(eLogTag.entity, $"MapChunkLogic not find entity dr error =[{obj.ObjId}],pos=[{block.R},{block.C}]");
+                        continue;
+                    }
+
+                    if (!dr.IsTerrain)
+                    {
+                        continue;
+                    }
+
+                    if (dr.RectTexture == null || dr.RectTexture.Length == 0)
+                    {
+                        MLog.Error(eLogTag.entity, $"MapChunkLogic not find rect texture =[{obj.ObjId}],pos=[{block.R},{block.C}]");
+                        continue;
+                    }
+
+                    RenderOneTerrain(entityMgr, dr.RectTexture[0], x, z);
                     break;
                 };
             }
@@ -66,9 +79,8 @@ public class MapChunkLogic
         }
     }
 
-    private void RenderOneTerrain(EntityComponent entityMgr, BlockObj terrainData, float x, float z)
+    private void RenderOneTerrain(EntityComponent entityMgr, string textureAsset, float x, float z)
     {
-        string textureAsset = "";//TODO:图片
         string prefabAsset = Path.Combine(ResourceDefine.PATH_MAP_ELEMENT, EntityDefine.TERRAIN_UNIT_PREFAB_ASSET);
         TerrainRenderTempData data = new()
         {

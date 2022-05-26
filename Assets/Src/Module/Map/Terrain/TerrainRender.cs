@@ -22,6 +22,7 @@ public class TerrainRender : EntityLogic
     {
         //TODO:卸载资源
         gameObject.SetActive(false);
+        SpriteRenderer.sprite = null;
         base.OnRecycle();
     }
 

@@ -39,6 +39,7 @@ public class PaperElementRender : SceneEntityRenderBase
     protected override void OnRecycle()
     {
         //TODO:卸载资源
+        SpriteRenderer.sprite = null;
         base.OnRecycle();
     }
 

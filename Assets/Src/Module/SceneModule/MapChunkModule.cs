@@ -37,6 +37,8 @@ public class MapChunkModule : SceneModuleBase
             return;
         }
 
+        MLog.Info(eLogTag.map, $"开始加载场景静态数据 file={staticData.ChunkFile}");
+
         byte[] chunkFile;
         try
         {
@@ -98,6 +100,8 @@ public class MapChunkModule : SceneModuleBase
         {
             return;
         }
+
+        MLog.Info(eLogTag.map, $"地图块模块超过安全区 需要重新激活地图块");
 
         //重新计算范围
         _safeArea = CalculateExtendArea(curArea, s_safeAreaExtendRange);

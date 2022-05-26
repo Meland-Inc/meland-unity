@@ -1,12 +1,13 @@
 using UnityEngine;
 using Bian;
 using Google.Protobuf.Collections;
-using UnityGameFramework.Runtime;
 
 public partial class SceneEntityMgr : MonoBehaviour
 {
     public void NetInitMainRole(Player playerData, EntityLocation location)
     {
+        MLog.Info(eLogTag.entity, $"NetInitMainRole id={playerData.Id} [{location.Pos.X} {location.Pos.Y} {location.Z}]");
+
         DataManager.MainPlayer.InitRoleData(playerData.Id);
         SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
         sceneRole.Root.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
@@ -14,6 +15,8 @@ public partial class SceneEntityMgr : MonoBehaviour
 
     public void NetAddUpdateEntity(RepeatedField<EntityWithLocation> entitys)
     {
+        MLog.Info(eLogTag.entity, $"NetAddUpdateEntity count={entitys.Count}");
+
         foreach (EntityWithLocation svrEntity in entitys)
         {
             try
@@ -45,6 +48,8 @@ public partial class SceneEntityMgr : MonoBehaviour
 
     public void NetRemoveEntity(RepeatedField<EntityId> entityIds)
     {
+        MLog.Info(eLogTag.entity, $"NetRemoveEntity count={entityIds.Count}");
+
         foreach (EntityId idInfo in entityIds)
         {
             try

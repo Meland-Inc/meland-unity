@@ -70,6 +70,8 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
 
     public override void Handle(object sender, Packet packet)
     {
+        BasicModule.NetMsgCenter.OnReceiveMsg(this);
+
         // 移除监听
         (sender as INetworkChannel).UnRegisterHandler(this);
 

@@ -9,7 +9,7 @@ public class LoginProcedure : ProcedureBase
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
-        Log.Info("enter login procedure", eLogTag.login);
+        MLog.Info(eLogTag.login, "enter login procedure");
         base.OnEnter(procedureOwner);
         EventComponent eventCom = GameEntry.GetComponent<EventComponent>();
         eventCom.Subscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
@@ -49,7 +49,7 @@ public class LoginProcedure : ProcedureBase
     private void OnNetworkConnected(object sender, GameEventArgs e)
     {
         NetworkConnectedEventArgs args = e as NetworkConnectedEventArgs;
-        Log.Info($"OnNetworkConnected: {args.NetworkChannel.Name}", eLogTag.network);
+        MLog.Info(eLogTag.network, $"OnNetworkConnected: {args.NetworkChannel.Name}");
         if (args.NetworkChannel.Name == NetworkDefine.CHANNEL_NAME_GAME)
         {
             BasicModule.LoginCenter.GetPlayerInfo();
@@ -58,13 +58,13 @@ public class LoginProcedure : ProcedureBase
 
     private void OnGetPlayerSuccess(GetPlayerHttpRsp rsp)
     {
-        Log.Info("get player success,start to sign in player", eLogTag.login);
+        MLog.Info(eLogTag.login, "get player success,start to sign in player");
         SigninPlayerAction.Req(rsp.Info.Id);
     }
 
     private void OnSigninPlayerSuccess(Bian.SigninPlayerResponse rsp)
     {
-        Log.Info("signin player success,start to enter map", eLogTag.login);
+        MLog.Info(eLogTag.login, "signin player success,start to enter map");
         _signalSigninPlayerSuccess = true;
     }
 }

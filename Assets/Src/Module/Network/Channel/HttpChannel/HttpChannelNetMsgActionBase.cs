@@ -9,6 +9,7 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
 {
     public int Id => _reqPacket.Id;
     public string ChannelName => NetworkDefine.CHANEL_NAME_HTTP;
+    public string Name => Api;
     private HttpChannelReqPacket _reqPacket;
     private TReq _req;
     protected virtual HttpMethod Method => HttpMethod.Get;
@@ -60,6 +61,8 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
 
     public virtual void Handle(object sender, Packet packet)
     {
+        BasicModule.NetMsgCenter.OnReceiveMsg(this);
+
         (sender as INetworkChannel).UnRegisterHandler(this);
         string textData = (packet as HttpChannelRspPacket).TextData;
         TRsp rspPacket = JsonUtility.FromJson<TRsp>(textData);

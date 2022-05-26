@@ -15,6 +15,7 @@ public class SceneLoadingProcedure : ProcedureBase
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
+        MLog.Info(eLogTag.procedure, "enter scene loading procedure");
         base.OnEnter(procedureOwner);
         if (Camera.main)
         {
@@ -58,6 +59,7 @@ public class SceneLoadingProcedure : ProcedureBase
 
     private void OnSceneEntityLoadFinish()
     {
+        MLog.Info(eLogTag.procedure, "scene loading procedure OnSceneEntityLoadFinish");
         _isSceneLoadFinish = true;
     }
 
@@ -76,7 +78,7 @@ public class SceneLoadingProcedure : ProcedureBase
         }
         else
         {
-            MLog.Fatal(eLogTag.scene, $"SceneSwitchProcedure::onLoadSceneSuccess: scene name error cur={model.CurSceneResName} load={loadedScene}");
+            MLog.Fatal(eLogTag.scene, $"SceneSwitchProcedure::onLoadSceneSuccess: scene name error cur={model.CurGameMainScene} load={loadedScene}");
             throw new System.Exception($"Game scene load error");
         }
     }
@@ -96,6 +98,7 @@ public class SceneLoadingProcedure : ProcedureBase
     /// </summary>
     private void OnLoadingSceneLoaded()
     {
+        MLog.Info(eLogTag.procedure, "scene loading procedure OnLoadingSceneLoaded");
         SceneModel sceneModel = DataManager.GetModel<SceneModel>();
 
         //老的需要卸载
@@ -113,6 +116,7 @@ public class SceneLoadingProcedure : ProcedureBase
     /// </summary>
     private void OnGameSceneLoaded()
     {
+        MLog.Info(eLogTag.procedure, "scene loading procedure OnGameSceneLoaded");
         SceneModel sceneModel = DataManager.GetModel<SceneModel>();
         sceneModel.ChangeToGameMainScene(_needLoadSceneName);
 

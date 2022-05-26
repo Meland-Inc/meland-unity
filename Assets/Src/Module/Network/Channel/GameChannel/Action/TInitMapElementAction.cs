@@ -21,6 +21,7 @@ public class TInitMapElementAction : GameChannelNetMsgTActionBase<TInitMapElemen
 
         if (rsp.Final)
         {
+            MLog.Info(eLogTag.entity, "场景物件初始化完成");
             Message.SceneEntityLoadFinish.Invoke();
         }
 

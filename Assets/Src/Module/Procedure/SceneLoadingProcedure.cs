@@ -89,28 +89,26 @@ public class SceneLoadingProcedure : ProcedureBase
     /// </summary>
     private void OnLoadingSceneLoaded()
     {
-        SceneComponent sceneCom = GFEntry.Scene;
         SceneModel sceneModel = DataManager.GetModel<SceneModel>();
 
         //老的需要卸载
         if (!string.IsNullOrEmpty(sceneModel.CurSceneResName))
         {
-            sceneCom.UnloadScene(sceneModel.CurSceneResName);
+            GFEntry.Scene.UnloadScene(Resource.GetSceneAssetPath(sceneModel.CurSceneResName));
             sceneModel.CurSceneResName = null;
         }
 
-        LoadGameScene(sceneCom);
+        LoadGameScene();
     }
 
     /// <summary>
     /// 开始加载游戏场景
     /// </summary>
-    /// <param name="sceneCom"></param>
-    private void LoadGameScene(SceneComponent sceneCom)
+    private void LoadGameScene()
     {
         SceneModel sceneModel = DataManager.GetModel<SceneModel>();
         sceneModel.CurSceneResName = eSceneResName.Game.ToString();
-        sceneCom.LoadScene(Resource.GetSceneAssetPath(sceneModel.CurSceneResName));
+        GFEntry.Scene.LoadScene(Resource.GetSceneAssetPath(sceneModel.CurSceneResName));
     }
 
     /// <summary>
@@ -118,9 +116,9 @@ public class SceneLoadingProcedure : ProcedureBase
     /// </summary>
     private void OnGameSceneLoaded()
     {
-        // _isSceneLoadFinish = true;
+        _isSceneLoadFinish = true;
 
-        EnterMapAction.Req();
+        // EnterMapAction.Req();
     }
 
     private void OnRspMapEnterFinish(EnterMapResponse rsp)

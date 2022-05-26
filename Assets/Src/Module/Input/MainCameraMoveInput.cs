@@ -89,7 +89,7 @@ public class MainCameraMoveInput : MonoBehaviour
             _targetEulerX = Math.Clamp(_targetEulerX + (scroll * VerticalRotateFactor), CameraEulerXMin, CameraEulerXMax);
         }
 
-        if (MathUtil.FloatEquals(transform.eulerAngles.x, _targetEulerX))
+        if (Mathf.Approximately(transform.eulerAngles.x, _targetEulerX))
         {
             return false;
         }

@@ -93,7 +93,7 @@ public class MapChunkModule : SceneModuleBase
     /// </summary>
     private void CheckMap()
     {
-        Rect curArea = new();//TODO:
+        Rect curArea = GetCurCameraArea();
         if (_safeArea != null && _safeArea.Contains(curArea))
         {
             return;
@@ -104,6 +104,20 @@ public class MapChunkModule : SceneModuleBase
         _curActiveDataArea = CalculateExtendArea(_safeArea, s_activeAreaExtendRange);
 
         ActiveRangeChunk(_curActiveDataArea);
+    }
+
+    private static Rect GetCurCameraArea()
+    {
+        Rect area = new();
+        Ray ray = new(Camera.main.transform.position, Camera.main.transform.forward);
+        if (Mathf.Approximately(ray.direction.x, 0))
+        {
+            MLog.Fatal(eLogTag.map, "相机不能和水平面平行");
+        }
+        Vector3 point = MathUtil.GetPlaneInteractivePoint(ray, 0);
+        area.center = new Vector2(point.x, point.z);
+        area.size = new Vector2(SceneDefine.SCENE_VIEW_WIDTH, SceneDefine.SCENE_VIEW_HEIGHT);//现在按照相机最大范围来计算
+        return area;
     }
 
     /// <summary>

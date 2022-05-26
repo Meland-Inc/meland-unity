@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime 2022-05-26 16:56:39
+ * @LastEditTime 2022-05-26 16:59:42
  * @LastEditors Please set LastEditors
  * @Description: 游戏资源加载
  * @FilePath /Assets/Src/Module/Procedure/ProcedurePreload.cs
@@ -32,6 +32,8 @@ public class ProcedurePreload : ProcedureBase
 
     protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
     {
+        Object.Destroy(Camera.main.gameObject);
+
         GFEntry.Event.Unsubscribe(LoadDataTableSuccessEventArgs.EventId, OnLoadDataTableSuccess);
         GFEntry.Event.Unsubscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
         base.OnLeave(procedureOwner, isShutdown);

@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 using Bian;
 
 /// <summary>
 /// 场景实体管理 管理着和服务器同步的所有实体
 /// </summary>
-[DisallowMultipleComponent]
-public partial class SceneEntityMgr : MonoBehaviour
+public partial class SceneEntityMgr : SceneModuleBase
 {
     /// <summary>
     /// 场景所有实体 包括了主角

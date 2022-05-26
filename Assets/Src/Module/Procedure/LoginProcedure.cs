@@ -57,7 +57,7 @@ public class LoginProcedure : ProcedureBase
         }
     }
 
-    private void OnGetPlayerSuccess(GetPlayerRsp rsp)
+    private void OnGetPlayerSuccess(GetPlayerHttpRsp rsp)
     {
         Log.Info("get player success,start to sign in player", eLogTag.login);
         SigninPlayerAction.Req(rsp.Info.Id);

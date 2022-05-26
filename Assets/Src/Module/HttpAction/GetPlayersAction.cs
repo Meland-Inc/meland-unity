@@ -1,18 +1,36 @@
 ﻿using HttpPacketDefine;
-using UnityEngine;
 
-public class GetPlayersAction : AccountHttpActionBase<GetPlayerReq, GetPlayerRsp>
+public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, GetPlayerHttpRsp>
 {
     protected override string Api => "getplayer";
 
-    protected override void Receive(GetPlayerRsp rsp, GetPlayerReq req)
+    protected override void Receive(GetPlayerHttpRsp rsp, EmptyHttpReq req)
     {
         Message.GetPlayerSuccess?.Invoke(rsp);
     }
 
     public static void Req()
     {
-        GetPlayerReq req = GetReq();
+        EmptyHttpReq req = GetReq();
         SendAction<GetPlayersAction>(req);
     }
+}
+
+public class GetPlayerHttpRsp : HttpRspBase
+{
+    public int Code;
+    public string Msg;
+    public GetPlayerHttpRspInfo Info;
+}
+
+[System.Serializable]
+public class GetPlayerHttpRspInfo
+{
+    public int AccountId;
+    public string Id;
+    public string Feature;
+    public string Gender;
+    public string Name;
+    public string RoleIcon;
+    public int RoleId;
 }

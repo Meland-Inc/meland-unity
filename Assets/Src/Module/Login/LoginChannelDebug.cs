@@ -16,7 +16,7 @@ public class LoginChannelDebug : LoginChannelBase
 
     private string GetToken()
     {
-        LoginAutoData data = LoginAutoData.Create();
+        LoginAuthData data = LoginAuthData.Create();
         return $"{data.Token} {data.DataHash} {UserID} {data.TimeStamp}";
     }
 

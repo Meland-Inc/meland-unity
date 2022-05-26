@@ -8,7 +8,6 @@ using UnityEngine;
 /// </summary>
 public class LaunchProcedure : ProcedureBase
 {
-    private bool _needLogin = false;
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
@@ -16,8 +15,7 @@ public class LaunchProcedure : ProcedureBase
 
         MLog.Debug(eLogTag.unknown, "hello GF debug");
         // BasicModule.NetMsgCenter.ConnectChannel(NetworkDefine.CHANNEL_NAME_GAME, "127.0.0.1", 9000);
-
-        _needLogin = true;
+        ChangeState<LoginProcedure>(procedureOwner);
     }
 
     [System.Obsolete]
@@ -31,11 +29,6 @@ public class LaunchProcedure : ProcedureBase
     protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
-
-        if (_needLogin)
-        {
-            ChangeState<LoginProcedure>(procedureOwner);
-        }
 
         ChangeState<ProcedurePreload>(procedureOwner);
     }

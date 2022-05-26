@@ -55,7 +55,7 @@ public class LoginCenter : GameFrameworkComponent
 
     public string GetGameWSUrl()
     {
-        LoginAutoData data = LoginAutoData.Create();
+        LoginAuthData data = LoginAuthData.Create();
         return $"ws://{URLConfig.WS_ADDRESS}?token={data.Token}&data_hash={data.DataHash}&userId={LoginChannel.UserID}&timestamp={data.TimeStamp}&channel=bian_lesson";
     }
 

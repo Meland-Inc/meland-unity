@@ -111,7 +111,6 @@ public class WebsocketNetworkChannel : INetworkChannel
             throw;
         }
 
-        _socket = new WebSocket(targetAddress);
         _socket.OnOpen += OnSocketOpen;
         _socket.OnMessage += OnSocketMessage;
         _socket.OnClose += OnSocketClose;

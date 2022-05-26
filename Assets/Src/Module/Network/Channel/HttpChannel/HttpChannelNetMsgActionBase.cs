@@ -76,7 +76,7 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
 
     public void InitSeqId(int id)
     {
-        throw new Exception("can't call this func");
+        //empty
     }
 
     protected abstract void Receive(TRsp rsp, TReq req);

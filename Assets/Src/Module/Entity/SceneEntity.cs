@@ -50,7 +50,11 @@ public class SceneEntity
 
     public void Dispose()
     {
-        //
+        if (Surface)
+        {
+            GFEntry.Entity.HideEntity(Surface.Id);
+            SetSurface(null);
+        }
     }
 
     /// <summary>

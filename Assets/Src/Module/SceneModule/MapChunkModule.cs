@@ -48,14 +48,14 @@ public class MapChunkModule : SceneModuleBase
         }
         catch (Exception)
         {
-            MLog.Fatal(eLogTag.map, "map static chunk ChunkFile download fail");
+            MLog.Error(eLogTag.map, "map static chunk ChunkFile download fail");
             Destroy(this);
             return;
         }
 
         if (chunkFile == null || chunkFile.Length <= 0)
         {
-            MLog.Fatal(eLogTag.map, "map static chunk ChunkFile file is empty");
+            MLog.Error(eLogTag.map, "map static chunk ChunkFile file is empty");
             Destroy(this);
             return;
         }
@@ -77,7 +77,7 @@ public class MapChunkModule : SceneModuleBase
         }
         catch (Exception e)
         {
-            MLog.Fatal(eLogTag.map, $"map static chunk ChunkFile parse fail ={e}");
+            MLog.Error(eLogTag.map, $"map static chunk ChunkFile parse fail ={e}");
             Destroy(this);
             return;
         }

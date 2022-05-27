@@ -46,7 +46,9 @@ public static class SceneEntityFactory
     {
         SceneEntity entity = CreateSceneEntity(entityID, EntityType.EntityTypePlayer);
         entity.SetRootName($"mainPlayerRole_{entityID}");
+
         //主角特殊逻辑
+        _ = entity.Root.AddComponent<MainPlayerMoveInput>();
         return entity;
     }
 }

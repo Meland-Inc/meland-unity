@@ -9,7 +9,7 @@ public static class NetUtil
     /// <summary>
     /// 服务器坐标到客户端坐标转换系数
     /// </summary>
-    public static readonly float SVR_POS_2_CLIENT_POS_SCALE = 1 / 12f;
+    public static readonly float SVR_POS_2_CLIENT_POS_SCALE = 1 / 60f;
     /// <summary>
     /// 老数据中地表抬高的高度
     /// </summary>
@@ -69,7 +69,7 @@ public static class NetUtil
         }
         else
         {
-            MLog.Fatal(eLogTag.map, "not support rc already");
+            MLog.Error(eLogTag.map, "not support rc already");
             return (c, r);
         }
     }

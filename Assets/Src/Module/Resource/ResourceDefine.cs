@@ -11,6 +11,7 @@ public static class ResourceDefine
     public static readonly string PATH_FONT = Path.Combine(PATH_ROOT, "Font");
     public static readonly string PATH_MAP_ELEMENT = Path.Combine(PATH_ROOT, "Prefab/MapElement");
     public static readonly string PATH_EFFECT = Path.Combine(PATH_ROOT, "Prefab/Effect");
+    public static readonly string PATH_ROLE = Path.Combine(PATH_ROOT, "Prefab/Role");
     public static readonly string PATH_TEXTURE = Path.Combine(PATH_ROOT, "Texture");
     public static readonly string PATH_SPRITE = Path.Combine(PATH_ROOT, "Sprite");
     public static readonly string PATH_DRAGON_BONES = Path.Combine(PATH_ROOT, "DragonBones");
@@ -24,6 +25,7 @@ public enum eLoadPriority : int
     Low = 1000,
     Normal = 2000,
     SceneElement,
+    PlayerRole,
     High = 3000,
     Terrain,
 }

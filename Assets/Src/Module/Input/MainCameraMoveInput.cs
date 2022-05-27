@@ -104,7 +104,7 @@ public class MainCameraMoveInput : MonoBehaviour
             deltaEulerX = Math.Max(deltaEulerX, -VerticalRotateSpeed * Time.deltaTime);
         }
 
-        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, _followLogic.TargetTsm.right, deltaEulerX);
+        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, transform.right, deltaEulerX);
 
         if (_initTargetDistance > 0)//有成功初始化过
         {

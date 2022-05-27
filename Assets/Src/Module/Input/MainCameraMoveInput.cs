@@ -26,10 +26,18 @@ public class MainCameraMoveInput : MonoBehaviour
 
         if (_followLogic.TargetTsm)
         {
-            _initEulerAngles = transform.eulerAngles;
-            _initRelativePosition = transform.position - _followLogic.TargetTsm.position;
-            _initTargetDistance = Vector3.Distance(transform.position, _followLogic.TargetTsm.position);
+            OnSetFollowTarget();
         }
+    }
+
+    /// <summary>
+    /// 设置跟随目标后 需要做一些数据记录初始化
+    /// </summary>
+    public void OnSetFollowTarget()
+    {
+        _initEulerAngles = transform.eulerAngles;
+        _initRelativePosition = transform.position - _followLogic.TargetTsm.position;
+        _initTargetDistance = Vector3.Distance(transform.position, _followLogic.TargetTsm.position);
     }
 
     private void Update()

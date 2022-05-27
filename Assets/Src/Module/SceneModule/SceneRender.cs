@@ -34,7 +34,7 @@ public class SceneRender : SceneModuleBase
     {
         if (!_groupMap.TryGetValue(group, out Transform groupNode))
         {
-            MLog.Fatal(eLogTag.scene, "Scene render get group can not find group.");
+            MLog.Error(eLogTag.scene, "Scene render get group can not find group.");
             return null;
         }
 
@@ -50,7 +50,7 @@ public class SceneRender : SceneModuleBase
     {
         if (!_groupMap.TryGetValue(group, out Transform groupRoot))
         {
-            MLog.Fatal(eLogTag.scene, "Scene render can not find group.");
+            MLog.Error(eLogTag.scene, "Scene render can not find group.");
             return;
         }
 

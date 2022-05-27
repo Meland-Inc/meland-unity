@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using Bian;
-using System;
 
 /// <summary>
 /// 场景实体 和服务器对应的实体逻辑
@@ -55,6 +54,9 @@ public class SceneEntity
             GFEntry.Entity.HideEntity(Surface.Id);
             SetSurface(null);
         }
+
+        Object.Destroy(Root);
+        Root = null;
     }
 
     /// <summary>

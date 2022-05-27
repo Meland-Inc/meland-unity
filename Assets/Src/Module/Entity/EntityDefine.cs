@@ -1,6 +1,10 @@
 public class EntityDefine
 {
     /// <summary>
+    /// 默认玩家移动速度
+    /// </summary>
+    public const float DEFINE_PLAYER_MOVE_SPEED = 5f;
+    /// <summary>
     /// 纸片物件的共用预制体
     /// </summary>
     public const string PAPER_SCENE_ELEMENT_PREFAB_ASSET = "PaperSceneElement.prefab";
@@ -8,6 +12,10 @@ public class EntityDefine
     /// 地表块共用预制件
     /// </summary>
     public const string TERRAIN_UNIT_PREFAB_ASSET = "TerrainUnit.prefab";
+    /// <summary>
+    /// 玩家预制件
+    /// </summary>
+    public const string PLAYER_ROLE_PREFAB_ASSET = "PlayerRole.prefab";
 
     /// <summary>
     /// GF entity 的分组 物件组

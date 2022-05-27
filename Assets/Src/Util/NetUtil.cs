@@ -26,12 +26,27 @@ public static class NetUtil
     }
 
     /// <summary>
+    /// 服务器方向向量转客户端
+    /// </summary>
+    /// <param name="xy"></param>
+    /// <returns></returns>
+    public static Vector3 SvrDirToClient(VectorXY xy)
+    {
+        return xy == null ? Vector3.back : SvrVectorXYToClient(xy);
+    }
+
+    /// <summary>
     /// 服务器XY二维转到客户端坐标
     /// </summary>
     /// <param name="xy"></param>
     /// <returns></returns>
     public static Vector3 SvrVectorXYToClient(VectorXY xy)
     {
+        if (xy == null)
+        {
+            return Vector3.zero;
+        }
+
         return new Vector3(xy.X, 0, -xy.Y) * SVR_POS_2_CLIENT_POS_SCALE;
     }
 

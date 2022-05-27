@@ -17,4 +17,8 @@ public class EntityDefine
     /// GF entity 的分组 地表
     /// </summary>
     public const string GF_ENTITY_GROUP_TERRAIN = "terrain";
+    /// <summary>
+    /// GF entity 的分组 角色
+    /// </summary>
+    public const string GF_ENTITY_GROUP_ROLE = "role";
 }

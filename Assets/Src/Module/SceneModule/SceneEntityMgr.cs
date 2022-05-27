@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using Bian;
+using UnityEngine;
 
 /// <summary>
 /// 场景实体管理 管理着和服务器同步的所有实体
 /// </summary>
+[DisallowMultipleComponent]
 public partial class SceneEntityMgr : SceneModuleBase
 {
     /// <summary>

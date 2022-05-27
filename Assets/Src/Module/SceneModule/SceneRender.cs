@@ -5,6 +5,7 @@ using System;
 /// <summary>
 /// 场景渲染管理
 /// </summary>
+[DisallowMultipleComponent]
 public class SceneRender : SceneModuleBase
 {
     /// <summary>

@@ -40,11 +40,12 @@ public class SceneEntity
             name = "SceneEntity" + GetHashCode();
         }
         Root = new GameObject(name);
+        BaseData = Root.AddComponent<SceneEntityBaseData>();
     }
 
     public void Init()
     {
-        //
+        BaseData.Reset();
     }
 
     public void Dispose()
@@ -90,6 +91,6 @@ public class SceneEntity
     /// <param name="dir"></param>
     public void DirectSetSvrDir(VectorXY dir)
     {
-        Transform.forward = NetUtil.SvrVectorXYToClient(dir);
+        Transform.forward = NetUtil.SvrDirToClient(dir);
     }
 }

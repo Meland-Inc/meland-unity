@@ -14,6 +14,6 @@ public class NetInputMove : MonoBehaviour
     public void ForcePosition(EntityLocation location, VectorXY dir)
     {
         transform.position = NetUtil.SvrLocToClient(location);
-        transform.forward = NetUtil.SvrVectorXYToClient(dir);
+        transform.forward = NetUtil.SvrDirToClient(dir);
     }
 }

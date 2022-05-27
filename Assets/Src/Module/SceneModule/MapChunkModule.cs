@@ -9,6 +9,7 @@ using UnityEngine;
 /// <summary>
 /// 地图chunk模块 这里面的所有Rect都是按照地图的坐标系俯视角来的 左下角为原点
 /// </summary>
+[DisallowMultipleComponent]
 public class MapChunkModule : SceneModuleBase
 {
     //安全区域对当前区域扩展范围 上下左右

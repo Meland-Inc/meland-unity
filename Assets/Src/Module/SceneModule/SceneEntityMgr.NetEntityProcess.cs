@@ -23,6 +23,7 @@ public partial class SceneEntityMgr : SceneModuleBase
         sceneRole.Root.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
 
         sceneRole.Root.GetComponent<MainPlayerMoveInput>().MoveSpeed = sceneRole.Root.GetComponent<EntityMoveData>().Speed;
+        sceneRole.Root.GetComponent<MoveNetRequest>().enabled = true;
 
         Camera.main.transform.position = sceneRole.Transform.position + SceneDefine.MainCameraInitFollowMainRoleOffset;
         Camera.main.GetComponent<FollowTarget>().SetTargetTsm(sceneRole.Transform);

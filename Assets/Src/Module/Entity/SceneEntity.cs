@@ -44,11 +44,12 @@ public class SceneEntity
 
     public void Init()
     {
-        BaseData.Reset();
     }
 
     public void Dispose()
     {
+        BaseData.Reset();
+
         if (Surface)
         {
             GFEntry.Entity.HideEntity(Surface.Id);

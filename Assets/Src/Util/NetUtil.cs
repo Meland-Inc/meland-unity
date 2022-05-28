@@ -11,6 +11,10 @@ public static class NetUtil
     /// </summary>
     public static readonly float SVR_POS_2_CLIENT_POS_SCALE = 1 / 60f;
     /// <summary>
+    /// 客户端坐标转服务器坐标转换系数
+    /// </summary>
+    public static readonly float CLIENT_POS_2_SVR_POS_SCALE = 1 / SVR_POS_2_CLIENT_POS_SCALE;
+    /// <summary>
     /// 老数据中地表抬高的高度
     /// </summary>
     public static readonly float TERRAIN_OFFSET_Y = 75f;
@@ -23,6 +27,26 @@ public static class NetUtil
     public static Vector3 SvrLocToClient(EntityLocation location)
     {
         return new Vector3(location.Pos.X, location.Z - TERRAIN_OFFSET_Y, -location.Pos.Y) * SVR_POS_2_CLIENT_POS_SCALE;
+    }
+
+    /// <summary>
+    /// 客户端坐标转服务器location
+    /// </summary>
+    /// <param name="clientPos"></param>
+    /// <returns></returns>
+    public static EntityLocation ClientPosToSvrLoc(Vector3 clientPos)
+    {
+        return new EntityLocation()
+        {
+            MapId = 0,
+            Pos = new VectorXY()
+            {
+                X = (int)(clientPos.x * CLIENT_POS_2_SVR_POS_SCALE),
+                Y = (int)(-clientPos.z * CLIENT_POS_2_SVR_POS_SCALE)
+            },
+            Z = (int)((clientPos.y * CLIENT_POS_2_SVR_POS_SCALE) + TERRAIN_OFFSET_Y),
+            Zindex = 1
+        };
     }
 
     /// <summary>

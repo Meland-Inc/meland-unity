@@ -43,7 +43,8 @@ public class MapChunkModule : SceneModuleBase
         byte[] chunkFile;
         try
         {
-            UnityWebRequest result = await UnityWebRequest.Get(staticData.ChunkFile).SendWebRequest();
+            string url = $"https://gateway-ipfs.melandworld.com/ipfs/{staticData.ChunkFile.Split("://")[1]}";
+            UnityWebRequest result = await UnityWebRequest.Get(url).SendWebRequest();
             chunkFile = result.downloadHandler.data;
         }
         catch (Exception)
@@ -120,8 +121,8 @@ public class MapChunkModule : SceneModuleBase
             MLog.Error(eLogTag.map, "相机不能和水平面平行");
         }
         Vector3 point = MathUtil.GetPlaneInteractivePoint(ray, 0);
-        area.center = new Vector2(point.x, point.z);
         area.size = new Vector2(SceneDefine.SCENE_VIEW_WIDTH, SceneDefine.SCENE_VIEW_HEIGHT);//现在按照相机最大范围来计算
+        area.center = new Vector2(point.x, point.z);
         return area;
     }
 
@@ -194,9 +195,9 @@ public class MapChunkModule : SceneModuleBase
         {
             int leftBottomChunkX = (int)(needActiveArea.xMin / MapDefine.CHUNK_WIDTH) * MapDefine.CHUNK_WIDTH;//算出左下角的chunk坐标（chunk坐标为chunk的左上角）
             int leftBottomChunkY = (int)(needActiveArea.yMin / MapDefine.CHUNK_HEIGHT) * MapDefine.CHUNK_HEIGHT;
-            for (int x = 0; x <= leftBottomChunkX + needActiveArea.width; x += MapDefine.CHUNK_WIDTH)
+            for (int x = leftBottomChunkX; x <= leftBottomChunkX + needActiveArea.width; x += MapDefine.CHUNK_WIDTH)
             {
-                for (int y = 0; y <= leftBottomChunkY + needActiveArea.height; y += MapDefine.CHUNK_HEIGHT)
+                for (int y = leftBottomChunkY; y <= leftBottomChunkY + needActiveArea.height; y += MapDefine.CHUNK_HEIGHT)
                 {
                     ulong key = MathUtil.TwoIntToUlong(x, y);
                     _ = activeChunkIndex.Add(key);
@@ -216,10 +217,10 @@ public class MapChunkModule : SceneModuleBase
     private Rect CalculateExtendArea(Rect rect, (float, float, float, float) extendRange)
     {
         Rect extendRect = rect;
-        rect.yMax += extendRange.Item1;
-        rect.yMin -= extendRange.Item2;
-        rect.xMin -= extendRange.Item3;
-        rect.xMax += extendRange.Item4;
+        extendRect.yMax += extendRange.Item1;
+        extendRect.yMin -= extendRange.Item2;
+        extendRect.xMin -= extendRange.Item3;
+        extendRect.xMax += extendRange.Item4;
         return extendRect;
     }
 }

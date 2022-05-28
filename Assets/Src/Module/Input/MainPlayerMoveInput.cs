@@ -50,5 +50,6 @@ public class MainPlayerMoveInput : MonoBehaviour
         moveDir.Normalize();
         moveDir *= MoveSpeed * Time.deltaTime;
         transform.position = transform.position + moveDir;
+        transform.forward = moveDir;
     }
 }

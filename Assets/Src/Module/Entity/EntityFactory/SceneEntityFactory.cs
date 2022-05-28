@@ -49,6 +49,7 @@ public static class SceneEntityFactory
 
         //主角特殊逻辑
         _ = entity.Root.AddComponent<MainPlayerMoveInput>();
+        entity.Root.AddComponent<MoveNetRequest>().enabled = false;
         return entity;
     }
 }

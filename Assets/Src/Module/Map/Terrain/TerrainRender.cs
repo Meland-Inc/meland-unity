@@ -29,7 +29,7 @@ public class TerrainRender : EntityLogic
 
     private async void LoadSprite(string spriteName)
     {
-        Sprite sprite = await Resource.LoadSprite(spriteName);
+        Sprite sprite = await Resource.LoadSprite(spriteName, 5000);
         SpriteRenderer.sprite = sprite;
     }
 }

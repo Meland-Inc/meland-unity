@@ -58,9 +58,11 @@ public class SceneLoadingProcedure : ProcedureBase
         }
     }
 
-    private void OnSceneEntityLoadFinish()
+    private async void OnSceneEntityLoadFinish()
     {
         MLog.Info(eLogTag.procedure, "scene loading procedure OnSceneEntityLoadFinish");
+
+        await UniTask.Delay(1000);
         _isSceneLoadFinish = true;
     }
 

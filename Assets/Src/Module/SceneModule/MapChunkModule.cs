@@ -13,15 +13,16 @@ using UnityEngine;
 public class MapChunkModule : SceneModuleBase
 {
     //安全区域对当前区域扩展范围 上下左右
-    private static readonly (float, float, float, float) s_safeAreaExtendRange = (SceneDefine.SCENE_VIEW_HEIGHT / 2, SceneDefine.SCENE_VIEW_HEIGHT / 2, SceneDefine.SCENE_VIEW_WIDTH / 2, SceneDefine.SCENE_VIEW_WIDTH / 2);
+    private static readonly (float, float, float, float) s_safeAreaExtendRange = (1, 1, 1, 1);
     //激活区域对安全区域扩展范围 上下左右
-    private static readonly (float, float, float, float) s_activeAreaExtendRange = (SceneDefine.SCENE_VIEW_HEIGHT / 2, SceneDefine.SCENE_VIEW_HEIGHT / 2, SceneDefine.SCENE_VIEW_WIDTH / 2, SceneDefine.SCENE_VIEW_WIDTH / 2);
+    private static readonly (float, float, float, float) s_activeAreaExtendRange = (SceneDefine.SCENE_VIEW_HEIGHT / 3, SceneDefine.SCENE_VIEW_HEIGHT / 3, SceneDefine.SCENE_VIEW_WIDTH / 3, SceneDefine.SCENE_VIEW_WIDTH / 3);
 
     //所有的服务器静态chunk数据 key为位置xy的ulong key
     private readonly Dictionary<ulong, MapChunk> _svrAllChunkRawDataMap = new();
     private readonly Dictionary<ulong, MapChunkLogic> _curActiveChunkLogicList = new();
-    private Rect _safeArea;//安全区域 超过这个区域需要检查缓存新数据
-    private Rect _curActiveDataArea;//当前激活缓存的数据区域
+    private Rect _curArea;//当前视野区域
+    private Rect _safeArea;//安全区域 超过这个区域需要检查缓存新数据 在安全区域内怎么移动都不会有反应
+    private Rect _curActiveDataArea;//当前激活缓存的数据区域 该区域覆盖的所有chunk数据都会激活
 
 
     private void Awake()
@@ -92,13 +93,37 @@ public class MapChunkModule : SceneModuleBase
         CheckMap();
     }
 
+    private void OnDrawGizmos()
+    {
+        if (!TestDefine.IS_SHOW_MAP_CHUNK)
+        {
+            return;
+        }
+
+        if (_safeArea == null)
+        {
+            return;
+        }
+
+        TestUtil.GizmosDrawSceneRect(_curArea, Color.red);
+        TestUtil.GizmosDrawSceneRect(_safeArea, Color.green);
+        TestUtil.GizmosDrawSceneRect(_curActiveDataArea, Color.blue);
+
+        Gizmos.color = Color.red;
+        foreach (MapChunkLogic chunkLogic in _curActiveChunkLogicList.Values)
+        {
+            (float x, float z) = NetUtil.RCToXZ(chunkLogic.RefSvrChunkData.OriginR, chunkLogic.RefSvrChunkData.OriginC);
+            Gizmos.DrawSphere(new Vector3(x, 0, z), 1f);
+        }
+    }
+
     /// <summary>
     /// 检查地图
     /// </summary>
     private void CheckMap()
     {
-        Rect curArea = GetCurCameraArea();
-        if (_safeArea != null && _safeArea.Contains(curArea))
+        _curArea = GetCurCameraArea();
+        if (_safeArea != null && _safeArea.Contains(_curArea))
         {
             return;
         }
@@ -106,7 +131,7 @@ public class MapChunkModule : SceneModuleBase
         MLog.Info(eLogTag.map, $"地图块模块超过安全区 需要重新激活地图块");
 
         //重新计算范围
-        _safeArea = CalculateExtendArea(curArea, s_safeAreaExtendRange);
+        _safeArea = CalculateExtendArea(_curArea, s_safeAreaExtendRange);
         _curActiveDataArea = CalculateExtendArea(_safeArea, s_activeAreaExtendRange);
 
         ActiveRangeChunk(_curActiveDataArea);
@@ -193,13 +218,23 @@ public class MapChunkModule : SceneModuleBase
 
         if (GlobalDefine.IS_ADAPTIVE_OLD_DATA)
         {
-            int leftBottomChunkX = (int)(needActiveArea.xMin / MapDefine.CHUNK_WIDTH) * MapDefine.CHUNK_WIDTH;//算出左下角的chunk坐标（chunk坐标为chunk的左上角）
-            int leftBottomChunkY = (int)(needActiveArea.yMin / MapDefine.CHUNK_HEIGHT) * MapDefine.CHUNK_HEIGHT;
-            for (int x = leftBottomChunkX; x <= leftBottomChunkX + needActiveArea.width; x += MapDefine.CHUNK_WIDTH)
+            Vector3Int leftBottom = new()
             {
-                for (int y = leftBottomChunkY; y <= leftBottomChunkY + needActiveArea.height; y += MapDefine.CHUNK_HEIGHT)
+                x = (int)(needActiveArea.xMin / MapDefine.CHUNK_WIDTH) * MapDefine.CHUNK_WIDTH,
+                y = 0,
+                z = (int)(needActiveArea.yMin / MapDefine.CHUNK_HEIGHT) * MapDefine.CHUNK_HEIGHT
+            };
+            Vector3Int rightTop = new()
+            {
+                x = (int)(needActiveArea.xMax / MapDefine.CHUNK_WIDTH) * MapDefine.CHUNK_WIDTH,
+                y = 0,
+                z = (int)(needActiveArea.yMax / MapDefine.CHUNK_HEIGHT) * MapDefine.CHUNK_HEIGHT
+            };
+            for (int x = leftBottom.x; x <= rightTop.x; x += MapDefine.CHUNK_WIDTH)
+            {
+                for (int z = leftBottom.z; z <= rightTop.z; z += MapDefine.CHUNK_HEIGHT)
                 {
-                    ulong key = MathUtil.TwoIntToUlong(x, y);
+                    ulong key = MathUtil.TwoIntToUlong(x, z);
                     _ = activeChunkIndex.Add(key);
                 }
             }

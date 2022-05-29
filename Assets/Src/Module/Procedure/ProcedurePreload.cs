@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime 2022-05-26 20:16:55
+ * @LastEditTime 2022-05-29 16:32:21
  * @LastEditors Please set LastEditors
  * @Description: 游戏资源加载
  * @FilePath /Assets/Src/Module/Procedure/ProcedurePreload.cs
@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+using GameFramework.Resource;
 
 
 public class ProcedurePreload : ProcedureBase
@@ -27,7 +28,8 @@ public class ProcedurePreload : ProcedureBase
         GFEntry.Event.Subscribe(LoadDataTableSuccessEventArgs.EventId, OnLoadDataTableSuccess);
         GFEntry.Event.Subscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
         _loadedFlag.Clear();
-        PreloadResources();
+
+        ResourcesInit();
     }
 
     protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -52,6 +54,25 @@ public class ProcedurePreload : ProcedureBase
         }
 
         ChangeState<LoginProcedure>(procedureOwner);
+    }
+
+    /// <summary>
+    /// 资源初始化 加载使用之前需要初始化
+    /// </summary>
+    private void ResourcesInit()
+    {
+        if (GFEntry.Base.EditorResourceMode)
+        {
+            PreloadResources();
+        }
+        else if (GFEntry.Resource.ResourceMode == ResourceMode.Package)
+        {
+            GFEntry.Resource.InitResources(PreloadResources);
+        }
+        else
+        {
+            MLog.Fatal(eLogTag.resource, "ResourceMode not support");
+        }
     }
 
     private void PreloadResources()

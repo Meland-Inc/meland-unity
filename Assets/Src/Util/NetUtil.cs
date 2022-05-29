@@ -50,6 +50,21 @@ public static class NetUtil
     }
 
     /// <summary>
+    /// 客户端位置转成服务器位置 返回结构使用的客户端结构 但是是服务器坐标系
+    /// </summary>
+    /// <param name="clientPos"></param>
+    /// <returns></returns>
+    public static Vector3 ClientPosToSvrPos(Vector3 clientPos)
+    {
+        return new Vector3()
+        {
+            x = (int)(clientPos.x * CLIENT_POS_2_SVR_POS_SCALE),
+            y = (int)(-clientPos.z * CLIENT_POS_2_SVR_POS_SCALE),
+            z = (int)((clientPos.y * CLIENT_POS_2_SVR_POS_SCALE) + TERRAIN_OFFSET_Y)
+        };
+    }
+
+    /// <summary>
     /// 服务器方向向量转客户端
     /// </summary>
     /// <param name="xy"></param>

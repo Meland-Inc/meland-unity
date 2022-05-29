@@ -12,7 +12,9 @@ public enum eLogTag
     login,
     map,//服务器具体地图
     entity,
-    procedure//流程相关
+    procedure,//流程相关
+    test,
+    resource
 }
 
 /// <summary>

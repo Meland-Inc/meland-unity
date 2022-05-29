@@ -735,7 +735,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     Android: ENABLE_LOG
-    Standalone: ENABLE_LOG;VUPLEX_CCU;VUPLEX_STANDALONE
+    Standalone: ENABLE_LOG;WEBSOCKET;VUPLEX_CCU;VUPLEX_STANDALONE
     WebGL: ENABLE_LOG;VUPLEX_CCU;VUPLEX_STANDALONE
     Windows Store Apps: ENABLE_LOG
     iPhone: ENABLE_LOG

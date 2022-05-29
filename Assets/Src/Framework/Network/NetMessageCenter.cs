@@ -82,7 +82,7 @@ public class NetMessageCenter : GameFrameworkComponent
 
         MLog.Info(eLogTag.network, $"ConnectChannel channelName = {channelName} ip = {ip} port = {port}");
         INetworkChannel channel = _channelMap[channelName];
-#if UNITY_WEBGL
+#if UNITY_WEBGL || WEBSOCKET
         channel.Connect(ip);
 #else
         channel.Connect(System.Net.IPAddress.Parse(ip), port);
@@ -107,7 +107,7 @@ public class NetMessageCenter : GameFrameworkComponent
         _channelMap = new();
         _channelSeqIdMap = new();
         NetworkComponent network = GameEntry.GetComponent<NetworkComponent>();
-#if UNITY_WEBGL
+#if UNITY_WEBGL || WEBSOCKET
         INetworkChannel channel = new WebsocketNetworkChannel(NetworkDefine.CHANNEL_NAME_GAME, new GameChannelHelper());
         network.AddNetworkChannel(channel);
 #else

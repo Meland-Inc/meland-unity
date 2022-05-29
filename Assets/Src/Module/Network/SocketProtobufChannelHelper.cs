@@ -3,14 +3,14 @@ using GameFramework.Network;
 using Google.Protobuf;
 using UnityGameFramework.Runtime;
 
-#if !UNITY_WEBGL
+#if !UNITY_WEBGL && !WEBSOCKET
 using System.IO;
 #endif
 
 /// <summary>
 /// 走socket io下protobuf解析的频道
 /// </summary>
-#if UNITY_WEBGL
+#if UNITY_WEBGL || WEBSOCKET
 public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelByteHelper
 #else
 public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelStreamHelper
@@ -18,7 +18,7 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelSt
 {
     public abstract int PacketHeaderLength { get; }
 
-#if UNITY_WEBGL
+#if UNITY_WEBGL || WEBSOCKET
     public virtual void Initialize(INetworkChannel networkChannel)
     {
         //

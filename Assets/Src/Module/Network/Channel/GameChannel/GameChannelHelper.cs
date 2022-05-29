@@ -2,12 +2,11 @@ using GameFramework.Network;
 using UnityGameFramework.Runtime;
 public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
 {
-#if UNITY_WEBGL
+#if UNITY_WEBGL || WEBSOCKET
     public override int PacketHeaderLength => 0;
 #else
     public override int PacketHeaderLength => 4;
 #endif
-
     public override void Initialize(INetworkChannel networkChannel)
     {
         base.Initialize(networkChannel);

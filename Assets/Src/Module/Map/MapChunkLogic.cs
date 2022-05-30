@@ -92,7 +92,7 @@ public class MapChunkLogic
         string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.TERRAIN_UNIT_PREFAB_ASSET);
         TerrainRenderTempData data = new()
         {
-            Position = new UnityEngine.Vector3(x, 0f, z),
+            Position = new Vector3(x, 0f, z),
             TextureAsset = textureAsset
         };
         int entityID = GetTerrainEntityID((int)x, (int)z);

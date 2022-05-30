@@ -7,13 +7,14 @@ using UnityEngine;
 /// </summary>
 public class TerrainRender : EntityLogic
 {
-    public SpriteRenderer SpriteRenderer;
+    public MeshRenderer MeshRenderer;
+
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
         TerrainRenderTempData data = userData as TerrainRenderTempData;
-        gameObject.SetActive(true);
+        MeshRenderer.enabled = false;//先隐藏 否则图片还没加载出来前是白色
         transform.position = data.Position;
         SceneModule.SceneRender.AddToGroup(transform, eSceneGroup.terrain);
         LoadSprite(Path.Combine("Terrain", data.TextureAsset));
@@ -23,13 +24,14 @@ public class TerrainRender : EntityLogic
     {
         //TODO:卸载资源
         gameObject.SetActive(false);
-        SpriteRenderer.sprite = null;
+        MeshRenderer.material.mainTexture = null;
         base.OnRecycle();
     }
 
     private async void LoadSprite(string spriteName)
     {
-        Sprite sprite = await Asset.LoadSprite(spriteName, 5000);
-        SpriteRenderer.sprite = sprite;
+        Texture2D sprite = await Asset.LoadAsset<Texture2D>(Path.Combine(AssetDefine.PATH_SPRITE, $"{spriteName}.png"));
+        MeshRenderer.material.mainTexture = sprite;
+        MeshRenderer.enabled = true;
     }
 }

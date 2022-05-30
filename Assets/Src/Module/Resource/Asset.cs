@@ -71,4 +71,13 @@ public static class Asset
     {
         return await GFEntry.Resource.AwaitLoadAsset<GameObject>(Path.Combine(AssetDefine.PATH_MAP_ELEMENT, $"{assetPath}.prefab"), priority);
     }
+
+    /// <summary>
+    /// 完整路径加载一个资源
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public static async UniTask<T> LoadAsset<T>(string assetPath, int priority = 0) where T : class
+    {
+        return await GFEntry.Resource.AwaitLoadAsset<T>(assetPath, priority);
+    }
 }

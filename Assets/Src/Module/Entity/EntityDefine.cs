@@ -11,7 +11,7 @@ public class EntityDefine
     /// <summary>
     /// 地表块共用预制件
     /// </summary>
-    public const string TERRAIN_UNIT_PREFAB_ASSET = "TerrainUnit.prefab";
+    public const string TERRAIN_UNIT_PREFAB_ASSET = "TerrainUnitModel.prefab";
     /// <summary>
     /// 玩家预制件
     /// </summary>

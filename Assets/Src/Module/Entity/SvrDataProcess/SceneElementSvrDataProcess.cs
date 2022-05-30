@@ -40,7 +40,7 @@ public class SceneElementSvrDataProcess : EntitySvrDataProcess
             return;
         }
 
-        string prefabAsset = Path.Combine(ResourceDefine.PATH_MAP_ELEMENT, EntityDefine.PAPER_SCENE_ELEMENT_PREFAB_ASSET);
+        string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.PAPER_SCENE_ELEMENT_PREFAB_ASSET);
         EntityRenderTempData data = new()
         {
             SceneEntityID = svrEntity.Id,

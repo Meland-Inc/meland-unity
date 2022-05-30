@@ -89,7 +89,7 @@ public class MapChunkLogic
 
     private void RenderOneTerrain(EntityComponent entityMgr, string textureAsset, float x, float z)
     {
-        string prefabAsset = Path.Combine(ResourceDefine.PATH_MAP_ELEMENT, EntityDefine.TERRAIN_UNIT_PREFAB_ASSET);
+        string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.TERRAIN_UNIT_PREFAB_ASSET);
         TerrainRenderTempData data = new()
         {
             Position = new UnityEngine.Vector3(x, 0f, z),

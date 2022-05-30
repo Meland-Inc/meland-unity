@@ -1,6 +1,6 @@
 using System.IO;
 
-public static class ResourceDefine
+public static class AssetDefine
 {
     public const string PATH_ROOT = "Assets/Res";
     public static readonly string PATH_CONFIG = Path.Combine(PATH_ROOT, "Config");

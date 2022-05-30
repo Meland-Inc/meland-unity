@@ -12,7 +12,7 @@ public class MapChunkLogic
 {
     public ulong Key { get; }
     private readonly int _cacheMapWidth;//地图宽 缓存加速性能
-    private HashSet<int> _curShowTerrainIDs = new();// 当前显示的地表块ID
+    private readonly HashSet<int> _curShowTerrainIDs = new();// 当前显示的地表块ID
     /// <summary>
     /// 引用的服务器数据
     /// </summary>

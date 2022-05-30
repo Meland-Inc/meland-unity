@@ -18,7 +18,7 @@ public class PlayerRoleSvrDataProcess : EntitySvrDataProcess
             gameObject.GetComponent<EntityMoveData>().Speed = svrPlayer.Profile.MoveSpeed * NetUtil.SVR_POS_2_CLIENT_POS_SCALE;
         }
 
-        string prefabAsset = Path.Combine(ResourceDefine.PATH_ROLE, EntityDefine.PLAYER_ROLE_PREFAB_ASSET);
+        string prefabAsset = Path.Combine(AssetDefine.PATH_ROLE, EntityDefine.PLAYER_ROLE_PREFAB_ASSET);
         EntityRenderTempData data = new()
         {
             SceneEntityID = svrEntity.Id,

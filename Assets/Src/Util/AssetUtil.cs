@@ -15,8 +15,8 @@ public static class AssetUtil
     public static string GetDataTableAssetPath(string assetName, bool fromBytes)
     {
         string path = fromBytes
-            ? Path.Combine(ResourceDefine.PATH_DATA_TABLE, "Bytes", $"{assetName}.bytes")
-            : Path.Combine(ResourceDefine.PATH_DATA_TABLE, "Csv", $"{assetName}.csv");
+            ? Path.Combine(AssetDefine.PATH_DATA_TABLE, "Bytes", $"{assetName}.bytes")
+            : Path.Combine(AssetDefine.PATH_DATA_TABLE, "Csv", $"{assetName}.csv");
         return path;
     }
 }

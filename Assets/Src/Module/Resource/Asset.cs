@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 游戏加载及路径相关
 /// </summary>
-public static class Resource
+public static class Asset
 {
     /// <summary>
     /// 获取场景资源完整路径
@@ -14,7 +14,7 @@ public static class Resource
     /// <returns></returns>
     public static string GetSceneAssetPath(string assetPath)
     {
-        return Path.Combine(ResourceDefine.PATH_SCENE, $"{assetPath}.unity");
+        return Path.Combine(AssetDefine.PATH_SCENE, $"{assetPath}.unity");
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ public static class Resource
     /// <returns></returns>
     public static async UniTask<string> LoadConfig(string assetPath, int priority = 0)
     {
-        return await GFEntry.Resource.AwaitLoadAsset<string>(Path.Combine(ResourceDefine.PATH_CONFIG, $"{assetPath}.bin"), priority);
+        return await GFEntry.Resource.AwaitLoadAsset<string>(Path.Combine(AssetDefine.PATH_CONFIG, $"{assetPath}.bin"), priority);
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ public static class Resource
     /// <returns></returns>
     public static async UniTask<Sprite> LoadSprite(string assetPath, int priority = 0)
     {
-        return await GFEntry.Resource.AwaitLoadAsset<Sprite>(Path.Combine(ResourceDefine.PATH_SPRITE, $"{assetPath}.png"), priority);
+        return await GFEntry.Resource.AwaitLoadAsset<Sprite>(Path.Combine(AssetDefine.PATH_SPRITE, $"{assetPath}.png"), priority);
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public static class Resource
     /// <returns></returns>
     public static async UniTask<GameObject> LoadDragonBones(string assetPath, int priority = 0)
     {
-        return await GFEntry.Resource.AwaitLoadAsset<GameObject>(Path.Combine(ResourceDefine.PATH_DRAGON_BONES, $"{assetPath}.db"), priority);
+        return await GFEntry.Resource.AwaitLoadAsset<GameObject>(Path.Combine(AssetDefine.PATH_DRAGON_BONES, $"{assetPath}.db"), priority);
     }
 
     /// <summary>
@@ -58,7 +58,7 @@ public static class Resource
     /// <returns></returns>
     public static async UniTask<GameObject> LoadEffect(string assetPath, int priority = 0)
     {
-        return await GFEntry.Resource.AwaitLoadAsset<GameObject>(Path.Combine(ResourceDefine.PATH_EFFECT, $"{assetPath}.prefab"), priority);
+        return await GFEntry.Resource.AwaitLoadAsset<GameObject>(Path.Combine(AssetDefine.PATH_EFFECT, $"{assetPath}.prefab"), priority);
     }
 
     /// <summary>
@@ -69,6 +69,6 @@ public static class Resource
     /// <returns></returns>
     public static async UniTask<GameObject> LoadMapElement(string assetPath, int priority = 0)
     {
-        return await GFEntry.Resource.AwaitLoadAsset<GameObject>(Path.Combine(ResourceDefine.PATH_MAP_ELEMENT, $"{assetPath}.prefab"), priority);
+        return await GFEntry.Resource.AwaitLoadAsset<GameObject>(Path.Combine(AssetDefine.PATH_MAP_ELEMENT, $"{assetPath}.prefab"), priority);
     }
 }

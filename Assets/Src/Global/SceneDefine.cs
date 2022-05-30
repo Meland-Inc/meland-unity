@@ -12,9 +12,9 @@ public static class SceneDefine
     /// <returns></returns>
     public static readonly Dictionary<eSceneName, string> SceneResPath = new()
     {
-        {eSceneName.launch, Resource.GetSceneAssetPath("Launch")},
-        {eSceneName.sceneLoading, Resource.GetSceneAssetPath("SceneLoading")},
-        {eSceneName.world, Resource.GetSceneAssetPath("World")},
+        {eSceneName.launch, Asset.GetSceneAssetPath("Launch")},
+        {eSceneName.sceneLoading, Asset.GetSceneAssetPath("SceneLoading")},
+        {eSceneName.world, Asset.GetSceneAssetPath("World")},
     };
 
     /// <summary>

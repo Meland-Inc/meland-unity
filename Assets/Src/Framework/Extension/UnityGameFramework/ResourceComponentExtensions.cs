@@ -5,7 +5,7 @@ using UnityGameFramework.Runtime;
 /// <summary>
 /// GF里面的Resource资源模块的扩展
 /// </summary>
-public static class ResourceExtensions
+public static class ResourceComponentExtensions
 {
     /// <summary>
     /// 使用await方式的简易加载资源 如果需要使用回调方式或者需要检测update状态请使用LoadAsset
@@ -26,7 +26,7 @@ public static class ResourceExtensions
         },
         (string assetName, LoadResourceStatus status, string errorMessage, object userData) =>
         {
-            throw new ResourceLoadException(assetName, status, errorMessage, userData);
+            throw new AssetLoadException(assetName, status, errorMessage, userData);
         });
         resourceComponent.LoadAsset(assetPath, typeof(T), priority, loadCB);
         await UniTask.WaitUntil(() => isLoadedSuccess);

@@ -1,3 +1,4 @@
+using System.Collections;
 using System;
 using System.Collections.Generic;
 using Bian;
@@ -157,13 +158,13 @@ public class MapChunkModule : SceneModuleBase
     /// <param name="curActiveDataArea"></param>
     private void ActiveRangeChunk(Rect needActiveArea)
     {
-        HashSet<ulong> allActiveChunkIndex = CalculateActiveChunkIndex(needActiveArea);
+        (HashSet<ulong> indexSet, ulong[] sortedIndex) = CalculateActiveChunkIndex(needActiveArea);
 
         //删除chunk
         List<ulong> needRemoveIndexList = new();
         foreach (KeyValuePair<ulong, MapChunkLogic> parent in _curActiveChunkLogicList)
         {
-            if (!allActiveChunkIndex.Contains(parent.Key))
+            if (!indexSet.Contains(parent.Key))
             {
                 needRemoveIndexList.Add(parent.Key);
             }
@@ -184,7 +185,7 @@ public class MapChunkModule : SceneModuleBase
         }
 
         //添加chunk
-        foreach (ulong index in allActiveChunkIndex)
+        foreach (ulong index in sortedIndex)
         {
             //没变化的
             if (_curActiveChunkLogicList.ContainsKey(index))
@@ -208,14 +209,16 @@ public class MapChunkModule : SceneModuleBase
     }
 
     /// <summary>
-    /// 计算激活chunk的所有index
+    /// 计算激活chunk的所有index 有一定的排序性能损失
     /// </summary>
+    /// <param name="indexSet"></param>
     /// <param name="needActiveArea"></param>
-    /// <returns></returns>
-    private HashSet<ulong> CalculateActiveChunkIndex(Rect needActiveArea)
+    /// <returns>indexSet用来查询 sortedIndex是以中心最近开始排序的</returns>
+    private (HashSet<ulong> indexSet, ulong[] sortedIndex) CalculateActiveChunkIndex(Rect needActiveArea)
     {
-        HashSet<ulong> activeChunkIndex = new();
+        HashSet<ulong> indexSet = new();
 
+        List<Vector3Int> chunkIndexList = new();
         if (GlobalDefine.IS_ADAPTIVE_OLD_DATA)
         {
             Vector3Int leftBottom = new()
@@ -234,13 +237,32 @@ public class MapChunkModule : SceneModuleBase
             {
                 for (int z = leftBottom.z; z <= rightTop.z; z += MapDefine.CHUNK_HEIGHT)
                 {
-                    ulong key = MathUtil.TwoIntToUlong(x, z);
-                    _ = activeChunkIndex.Add(key);
+                    chunkIndexList.Add(new Vector3Int(x, 0, z));
+                    // ulong key = MathUtil.TwoIntToUlong(x, z);
+                    // _ = indexSet.Add(key);
                 }
             }
+
+            Vector3Int sortCenter = (leftBottom + rightTop) / 2;
+
+            chunkIndexList.Sort((a, b) =>
+            {
+                //不用距离计算 简单使用这种方式加快计算 计算周围格子的计算方式
+                return Math.Abs(a.x - sortCenter.x) + Math.Abs(a.z - sortCenter.z)
+                    - (Math.Abs(b.x - sortCenter.x) + Math.Abs(b.z - sortCenter.z));
+            });
         }
 
-        return activeChunkIndex;
+        ulong[] sortedList = new ulong[chunkIndexList.Count];
+        for (int i = 0; i < chunkIndexList.Count; i++)
+        {
+            Vector3Int index = chunkIndexList[i];
+            ulong key = MathUtil.TwoIntToUlong(index.x, index.z);
+            sortedList[i] = key;
+            _ = indexSet.Add(key);
+        }
+
+        return (indexSet, sortedList);
     }
 
     /// <summary>

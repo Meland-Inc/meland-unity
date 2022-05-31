@@ -15,6 +15,7 @@ public static class AssetDefine
     public static readonly string PATH_TEXTURE = Path.Combine(PATH_ROOT, "Texture");
     public static readonly string PATH_SPRITE = Path.Combine(PATH_ROOT, "Sprite");
     public static readonly string PATH_DRAGON_BONES = Path.Combine(PATH_ROOT, "DragonBones");
+    public static readonly string PATH_UI = Path.Combine(PATH_ROOT, "Fairygui");
 }
 
 /// <summary>

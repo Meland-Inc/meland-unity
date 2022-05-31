@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 10:09:05
- * @LastEditTime: 2022-05-31 15:13:44
+ * @LastEditTime: 2022-06-01 04:40:36
  * @LastEditors: xiang huan
  * @Description: 白鹭通讯
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretMsgNetwork.cs
@@ -42,6 +42,7 @@ public class EgretMsgNetwork
         {
             Egret.Message message = (packet as EgretGamePacket).TransferData;
             string messageJson = JsonUtility.ToJson(message);
+            MLog.Info(eLogTag.egret, $">>> {packet.Id}  msg = {messageJson}");
             _canvasWebView.WebView.PostMessage(messageJson);
         }
         catch (Exception)
@@ -55,10 +56,12 @@ public class EgretMsgNetwork
     {
         try
         {
+
             Egret.Message message = JsonUtility.FromJson<Egret.Message>(e.Value);
             EgretGamePacket packet = new();
             packet.SetTransferData(message);
             packet.DataJson = e.Value;
+            MLog.Info(eLogTag.egret, $"<<< {packet.Id}  msg = {e.Value}");
             if (packet != null)
             {
                 _receivePacketPool.Fire(this, packet);

@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:45:03
- * @LastEditTime: 2022-05-31 15:21:01
+ * @LastEditTime: 2022-06-01 04:28:44
  * @LastEditors: xiang huan
  * @Description: 请求登入
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/Action/LoginAction.cs
@@ -29,8 +29,10 @@ namespace Egret
             {
                 return false;
             }
+            BasicModule.EgretGameCenter.EnableMode(EgretDefine.eEgretEnableMode.Login, false);
             BasicModule.LoginCenter.SetUserID(rsp.UserId);
             BasicModule.LoginCenter.ConnectGameServer();
+
             return true;
         }
     }

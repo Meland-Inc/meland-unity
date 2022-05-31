@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 09:24:00
- * @LastEditTime: 2022-05-31 21:17:35
+ * @LastEditTime: 2022-06-01 04:29:40
  * @LastEditors: xiang huan
  * @Description: 白鹭游戏模块
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretGameCenter.cs
@@ -80,21 +80,22 @@ public class EgretGameCenter : GameFrameworkComponent
         _canvasWebView.NativeOnScreenKeyboardEnabled = true;
         _canvasWebView.LogConsoleMessages = true;
         _canvasWebView.DragMode = DragMode.DragWithinPage;
-        _canvasWebView.Visible = false;
+        _canvasWebView.Visible = true;
+        EnableMode(EgretDefine.eEgretEnableMode.Login, true);
         _canvasWebView.WebView.UrlChanged += UrlChanged;
         SetUpHardwareKeyboard();
         _egretMsgNetwork = new(_canvasWebView);
     }
     private void UrlChanged(object sender, UrlChangedEventArgs eventArgs)
     {
-        if (URLConfig.EGRET_GAME_ADDRESS.Equals(eventArgs.Url))
-        {
-            EnableMode(EgretDefine.eEgretEnableMode.Login, false);
-        }
-        else
-        {
-            EnableMode(EgretDefine.eEgretEnableMode.Login, true);
-        }
+        // if (URLConfig.EGRET_GAME_ADDRESS.Equals(eventArgs.Url))
+        // {
+        //     EnableMode(EgretDefine.eEgretEnableMode.Login, false);
+        // }
+        // else
+        // {
+        //     EnableMode(EgretDefine.eEgretEnableMode.Login, true);
+        // }
     }
     private void SetUpHardwareKeyboard()
     {

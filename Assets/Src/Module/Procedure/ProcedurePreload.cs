@@ -84,7 +84,7 @@ public class ProcedurePreload : ProcedureBase
 
     private void LoadDataTable(string dataTableName)
     {
-#if DEBUG
+#if UNITY_EDITOR
         string dataTableAssetName = AssetUtil.GetDataTableAssetPath(dataTableName, false);
 #else
         string dataTableAssetName = AssetUtil.GetDataTableAssetPath(dataTableName, true);

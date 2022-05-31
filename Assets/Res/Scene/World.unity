@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 999857681}
   - component: {fileID: 999857680}
   - component: {fileID: 999857683}
+  - component: {fileID: 999857685}
   - component: {fileID: 999857684}
   m_Layer: 0
   m_Name: Main Camera
@@ -234,15 +235,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 999857679}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2d14e897bcd424fbadb4d962550fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &999857685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999857679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62cedbafec4cb40f7b86f21eeb21535d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalRotateSpeed: 60
-  VerticalRotateFactor: 10
-  VerticalRotateSpeed: 60
-  CameraEulerXMax: 60
-  CameraEulerXMin: 30
-  RotateAnchorOffset: {x: 0, y: 2, z: 0}
+  HorizontalRotateOffset: {x: 0, y: 30, z: 0}
+  HorizontalRotateEase: 6
+  HorizontalRotateTweenTime: 0.3
+  VerticalRotateMaxAngles: 60
+  VerticalRotateMaxDistance: 25
+  VerticalRotateMinAngles: 30
+  VerticalRotateMinDistance: 12
+  VerticalRotateOffset: {x: 5, y: 0, z: 0}
+  VerticalRotateEase: 6
+  VerticalRotateTweenTime: 0.3
 --- !u!1 &1501747989
 GameObject:
   m_ObjectHideFlags: 0

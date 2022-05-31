@@ -7,6 +7,11 @@ public class FollowTarget : TransformTarget
 {
     [SerializeField]
     private Vector3 _offset = Vector3.up;
+    /// <summary>
+    /// 跟随偏移量 配合是否本地坐标空间达到效果
+    /// </summary>
+    /// <value></value>
+    public Vector3 Offset { get => _offset; set => _offset = value; }
 
     /// <summary>
     /// 是否在目标的本地空间 例如一个宠物一直跟随主角 如果设置本地 主角旋转宠物位置也会变 如果不是本地 主角旋转宠物位移不变
@@ -14,10 +19,14 @@ public class FollowTarget : TransformTarget
     public bool IsLocalSpace = false;
 
     /// <summary>
-    /// 跟随偏移量 配合是否本地坐标空间达到效果
+    /// 跟随的距离 也可以修改
     /// </summary>
     /// <value></value>
-    public Vector3 Offset { get => _offset; set => _offset = value; }
+    public float FollowDistance
+    {
+        get => _offset.magnitude;
+        set => _offset = _offset.normalized * value;
+    }
 
     private void LateUpdate()
     {
@@ -26,14 +35,10 @@ public class FollowTarget : TransformTarget
             return;
         }
 
-        if (IsLocalSpace)
-        {
-            transform.position = TargetTsm.TransformPoint(Offset);
-        }
-        else
-        {
-            transform.position = TargetTsm.position + Offset;
-        }
+        transform.position =
+            IsLocalSpace
+            ? TargetTsm.TransformPoint(Offset)
+            : TargetTsm.position + Offset;
     }
 
     /// <summary>
@@ -46,13 +51,9 @@ public class FollowTarget : TransformTarget
             return;
         }
 
-        if (IsLocalSpace)
-        {
-            _offset = TargetTsm.InverseTransformPoint(transform.position);
-        }
-        else
-        {
-            _offset = transform.position - TargetTsm.position;
-        }
+        _offset =
+            IsLocalSpace
+            ? TargetTsm.InverseTransformPoint(transform.position)
+            : transform.position - TargetTsm.position;
     }
 }

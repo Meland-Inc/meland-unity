@@ -14,7 +14,8 @@ public enum eLogTag
     entity,
     procedure,//流程相关
     test,
-    resource
+    resource,
+    egret,
 }
 
 /// <summary>

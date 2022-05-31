@@ -18,6 +18,10 @@ public class SceneLoadingProcedure : ProcedureBase
     {
         MLog.Info(eLogTag.procedure, "enter scene loading procedure");
         base.OnEnter(procedureOwner);
+        if (Camera.main)
+        {
+            Object.Destroy(Camera.main.gameObject);
+        }
         _needLoadSceneName = (eSceneName)procedureOwner.GetData<VarInt32>("nextSceneName").Value;
         _ = procedureOwner.RemoveData("nextSceneName");
 

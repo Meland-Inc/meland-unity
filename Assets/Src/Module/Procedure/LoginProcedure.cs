@@ -17,7 +17,8 @@ public class LoginProcedure : ProcedureBase
         Message.GetPlayerSuccess += OnGetPlayerSuccess;
         Message.SigninPlayerSuccess += OnSigninPlayerSuccess;
 
-        _ = GFEntry.UI.OpenUIForm<FormLogin>();
+        //_ = GFEntry.UI.OpenUIForm<FormLogin>();
+        Egret.LoginAction.Req();
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
@@ -27,7 +28,7 @@ public class LoginProcedure : ProcedureBase
         Message.GetPlayerSuccess -= OnGetPlayerSuccess;
         Message.SigninPlayerSuccess -= OnSigninPlayerSuccess;
 
-        GFEntry.UI.CloseUIForm<FormLogin>();
+        //GFEntry.UI.CloseUIForm<FormLogin>();
 
         base.OnLeave(procedureOwner, isShutdown);
     }

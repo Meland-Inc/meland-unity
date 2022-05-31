@@ -307,6 +307,7 @@
       <Asset Guid="2262e9c9a65d648f5b846bab136da973" ResourceName="SpriteElement" />
       <Asset Guid="2284149d3f05a420db3c0cfa168e2874" ResourceName="SpriteElement" />
       <Asset Guid="229143a16ad0649e4a05db1b0c240289" ResourceName="SpriteElement" />
+      <Asset Guid="22a71bc4629f54d1b9e74709cc139291" ResourceName="UI" />
       <Asset Guid="22be045ed407943478d6ca80335f5712" ResourceName="SpriteElement" />
       <Asset Guid="22e2a2523f0e644609e9d713d29491df" ResourceName="SpriteTerrain" />
       <Asset Guid="2320d530d1baa4f07beff26d91395d1d" ResourceName="SpriteElement" />
@@ -584,6 +585,7 @@
       <Asset Guid="421c3195445b5498b892a78f76efe646" ResourceName="SpriteElement" />
       <Asset Guid="4227c2e1ec2fe429c86d2a04d5dada45" ResourceName="DataTable" />
       <Asset Guid="423507940b8ba4987838c25a3e3c204c" ResourceName="SpriteElement" />
+      <Asset Guid="424a150b010ec4efc9a7ab5d6357cfb2" ResourceName="UI" />
       <Asset Guid="42840c93c46e34e4ebf6164be159302a" ResourceName="SpriteElement" />
       <Asset Guid="42be471bbfdb04ba09641d3d03bcf224" ResourceName="SpriteElement" />
       <Asset Guid="42ea184089bb448a7a86134248963253" ResourceName="SpriteElement" />
@@ -1337,6 +1339,7 @@
       <Asset Guid="979102aa5d4f444208c0da229e363c74" ResourceName="SpriteElement" />
       <Asset Guid="979dd8bb426eb4e7abf8edcff2193f41" ResourceName="SpriteElement" />
       <Asset Guid="97a97b4d714a74b27ab1de5a683fae2f" ResourceName="SpriteElement" />
+      <Asset Guid="97d1ab7503f024b3581bfbacb137abad" ResourceName="Prefab" />
       <Asset Guid="97d20b7897ae847c884ed560bbcb37d6" ResourceName="SpriteElement" />
       <Asset Guid="97f1a0aa0523045a5a0d3dda822aa834" ResourceName="SpriteTerrain" />
       <Asset Guid="97fe9020fe65f4ec2860a736e20e9933" ResourceName="SpriteElement" />

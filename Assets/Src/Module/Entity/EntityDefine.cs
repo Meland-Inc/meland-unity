@@ -3,7 +3,7 @@ public class EntityDefine
     /// <summary>
     /// 默认玩家移动速度
     /// </summary>
-    public const float DEFINE_PLAYER_MOVE_SPEED = 5f;
+    public const float DEFINE_PLAYER_MOVE_SPEED = 3f;
     /// <summary>
     /// 纸片物件的共用预制体
     /// </summary>

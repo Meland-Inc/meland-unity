@@ -2,7 +2,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime 2022-06-01 04:02:55
+ * @LastEditTime 2022-06-01 04:05:32
  * @LastEditors Please set LastEditors
  * @Description: 游戏资源加载
  * @FilePath /Assets/Src/Module/Procedure/ProcedurePreload.cs
@@ -96,7 +96,7 @@ public class ProcedurePreload : ProcedureBase
 
     private void LoadDataTable(string dataTableName)
     {
-#if DEBUG
+#if UNITY_EDITOR
         string dataTableAssetName = AssetUtil.GetDataTableAssetPath(dataTableName, false);
 #else
         string dataTableAssetName = AssetUtil.GetDataTableAssetPath(dataTableName, true);

@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using DG.Tweening;
 
 /// <summary>
 /// 主相机上的移动输入
@@ -7,27 +7,25 @@ using UnityEngine;
 [RequireComponent(typeof(FollowTarget))]
 public class MainCameraMoveInput : MonoBehaviour
 {
-    public float HorizontalRotateSpeed = 60f;//水平面旋转速度 欧拉角/s
-    public float VerticalRotateFactor = 10;//垂直旋转因子
-    public float VerticalRotateSpeed = 60f;//垂直旋转速度 欧拉角/s
-    public float CameraEulerXMax = 80;//相机最大欧拉角X
-    public float CameraEulerXMin = 15;//相机最小欧拉角X
-    public Vector3 RotateAnchorOffset = Vector3.zero;
+    public Vector3 HorizontalRotateOffset = new(0, 30f, 0);//水平旋转偏移 欧拉角
+    public Ease HorizontalRotateEase = Ease.OutQuad;//水平旋转缓动
+    public float HorizontalRotateTweenTime = 0.3f;//水平旋转缓动时间
+
+
+    public float VerticalRotateMaxAngles = 60f;
+    public float VerticalRotateMaxDistance = 25f;
+    public float VerticalRotateMinAngles = 30f;
+    public float VerticalRotateMinDistance = 12f;
+    public Vector3 VerticalRotateOffset = new(5f, 0, 0);//水平旋转偏移 欧拉角
+    public Ease VerticalRotateEase = Ease.OutQuad;//水平旋转缓动
+    public float VerticalRotateTweenTime = 0.3f;//水平旋转缓动时间
 
     private FollowTarget _followLogic;
-    private Vector3 _initEulerAngles;
-    private Vector3 _initRelativePosition;
-    private float _initTargetDistance = -1;
-    private float _targetEulerX;
+    private int _isRotateTweening = 0;//是否正在旋转缓动中 -1代表在水平旋转 1代表在垂直旋转
+
     private void Start()
     {
         _followLogic = GetComponent<FollowTarget>();
-        _targetEulerX = transform.eulerAngles.x;
-
-        if (_followLogic.TargetTsm)
-        {
-            OnSetFollowTarget();
-        }
 
         Message.MainPlayerRoleInitFinish += OnMainPlayerRoleInitFinish;
     }
@@ -42,17 +40,6 @@ public class MainCameraMoveInput : MonoBehaviour
         SceneEntity mainRole = DataManager.MainPlayer.Role;
         transform.position = mainRole.Transform.position + SceneDefine.MainCameraInitFollowMainRoleOffset;
         GetComponent<FollowTarget>().SetTargetTsm(mainRole.Transform);
-        OnSetFollowTarget();
-    }
-
-    /// <summary>
-    /// 设置跟随目标后 需要做一些数据记录初始化
-    /// </summary>
-    private void OnSetFollowTarget()
-    {
-        _initEulerAngles = transform.eulerAngles;
-        _initRelativePosition = transform.position - _followLogic.TargetTsm.position;
-        _initTargetDistance = Vector3.Distance(transform.position, _followLogic.TargetTsm.position);
     }
 
     private void Update()
@@ -62,99 +49,71 @@ public class MainCameraMoveInput : MonoBehaviour
             return;
         }
 
-        bool changed = false;
-        if (InputHorizontalRotate())
-        {
-            changed = true;
-        }
-        if (InputVerticalRotate())
-        {
-            changed = true;
-        }
-        if (InputReset())
-        {
-            changed = true;
-        }
+        bool changed = InputVerticalRotate();
 
-        if (changed)
+        if (!changed)
         {
-            _followLogic.Offset = transform.position - _followLogic.TargetTsm.position;//修正跟随偏移值
+            _ = InputHorizontalRotate();
         }
     }
 
     private bool InputHorizontalRotate()
     {
-        Vector3 eulerOffset = Vector3.zero;
-        if (Input.GetKey(KeyCode.Q))
-        {
-            eulerOffset += new Vector3(0, 1, 0);
-        }
-        if (Input.GetKey(KeyCode.E))
-        {
-            eulerOffset += new Vector3(0, -1, 0);
-        }
-
-        if (eulerOffset == Vector3.zero)
+        if (_isRotateTweening is not 0 and > 0)
         {
             return false;
         }
 
-        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, Vector3.up, HorizontalRotateSpeed * eulerOffset.y * Time.deltaTime);
+        int dir = 0;
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            dir = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            dir = -1;
+        }
+
+        if (dir == 0)
+        {
+            return false;
+        }
+
+        _isRotateTweening = -1;
+        _ = transform.DORotate(transform.eulerAngles + (dir * HorizontalRotateOffset), HorizontalRotateTweenTime, RotateMode.Fast).SetEase(HorizontalRotateEase).OnComplete(() =>
+        {
+            _isRotateTweening = 0;
+        });
+
         return true;
     }
 
     private bool InputVerticalRotate()
     {
+        if (_isRotateTweening is not 0 and < 0)
+        {
+            return false;
+        }
+
         float scroll = Input.mouseScrollDelta.y;
-        if (scroll != 0)
-        {
-            scroll = scroll > 0 ? 1 : -1;
-            _targetEulerX = Math.Clamp(_targetEulerX + (scroll * VerticalRotateFactor), CameraEulerXMin, CameraEulerXMax);
-        }
 
-        if (Mathf.Approximately(transform.eulerAngles.x, _targetEulerX))
+        if (Mathf.Approximately(scroll, 0f))
         {
             return false;
         }
+        scroll = scroll > 0 ? 1 : -1;
 
-        float deltaEulerX = _targetEulerX - transform.eulerAngles.x;
-        if (deltaEulerX > 0)
+        float eulerX = Mathf.Clamp(transform.eulerAngles.x + (scroll * VerticalRotateOffset.x), VerticalRotateMinAngles, VerticalRotateMaxAngles);
+        _isRotateTweening = 1;
+        _ = transform.DORotate(new Vector3(eulerX, transform.eulerAngles.y, transform.eulerAngles.z), VerticalRotateTweenTime, RotateMode.Fast).SetEase(VerticalRotateEase).OnUpdate(() =>
         {
-            deltaEulerX = Math.Min(deltaEulerX, VerticalRotateSpeed * Time.deltaTime);
-        }
-        else
+            float curEulerX = transform.eulerAngles.x;
+            float curDistance = Mathf.Lerp(VerticalRotateMinDistance, VerticalRotateMaxDistance, (curEulerX - VerticalRotateMinAngles) / (VerticalRotateMaxAngles - VerticalRotateMinAngles));
+            _followLogic.FollowDistance = curDistance;
+        }).OnComplete(() =>
         {
-            deltaEulerX = Math.Max(deltaEulerX, -VerticalRotateSpeed * Time.deltaTime);
-        }
-
-        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, transform.right, deltaEulerX);
-
-        if (_initTargetDistance > 0)//有成功初始化过
-        {
-            Vector3 dir = transform.position - _followLogic.TargetTsm.position;
-            dir.Normalize();
-            dir *= _initTargetDistance / _initEulerAngles.x * transform.eulerAngles.x;
-            transform.position = _followLogic.TargetTsm.position + dir;
-        }
-
+            _isRotateTweening = 0;
+        });
         return true;
-    }
-
-    private bool InputReset()
-    {
-        if (_initEulerAngles == null)
-        {
-            return false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            transform.eulerAngles = _initEulerAngles;
-            transform.position = _followLogic.TargetTsm.position + _initRelativePosition;
-            _targetEulerX = transform.eulerAngles.x;
-            return true;
-        }
-
-        return false;
     }
 }

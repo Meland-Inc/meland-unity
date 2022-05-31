@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-06-01 02:27:57
+ * @LastEditTime: 2022-06-01 02:57:11
  * @LastEditors: xiang huan
  * @Description: 游戏资源加载
  * @FilePath: /meland-unity/Assets/Src/Module/Procedure/ProcedurePreload.cs
@@ -34,7 +34,6 @@ public class ProcedurePreload : ProcedureBase
 
     protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
     {
-        Object.Destroy(Camera.main.gameObject);
         GFEntry.Event.Unsubscribe(LoadDataTableSuccessEventArgs.EventId, OnLoadDataTableSuccess);
         GFEntry.Event.Unsubscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
         base.OnLeave(procedureOwner, isShutdown);

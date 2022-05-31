@@ -1,13 +1,15 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 11:00:53
- * @LastEditTime: 2022-05-30 10:34:52
+ * @LastEditTime: 2022-05-31 15:15:08
  * @LastEditors: xiang huan
  * @Description: 通知类action
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretMsgTActionBase.cs
  * 
  */
 using GameFramework.Network;
+using UnityEngine;
+
 public abstract class EgretMsgTActionBase<TRsp> : IEgretMsgAction where TRsp : Egret.Message
 {
     public virtual int Id => -(int)GetEnvelopeType();
@@ -19,15 +21,16 @@ public abstract class EgretMsgTActionBase<TRsp> : IEgretMsgAction where TRsp : E
 
     protected abstract EgretDefine.eEgretEnvelopeType GetEnvelopeType();
 
-    protected virtual bool Receive(TRsp rsp)
+    protected virtual bool Receive(int errorCode, string errorMsg, TRsp rsp)
     {
         return true;
     }
 
     public virtual void Handle(object sender, Packet packet)
     {
-        TRsp message = (packet as EgretGamePacket).TransferData as TRsp;
-        _ = Receive(message);
+
+        TRsp message = JsonUtility.FromJson<TRsp>((packet as EgretGamePacket).DataJson);
+        _ = Receive(message.ErrorCode, message.ErrorMsg, message);
     }
 
     public virtual Packet GetReqPacket()

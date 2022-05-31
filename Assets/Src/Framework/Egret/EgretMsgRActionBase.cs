@@ -1,14 +1,15 @@
-using System;
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:03:58
- * @LastEditTime: 2022-05-30 10:34:21
+ * @LastEditTime: 2022-05-31 15:15:28
  * @LastEditors: xiang huan
  * @Description: 请求类aciton
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretMsgRActionBase.cs
  * 
  */
 using GameFramework.Network;
+using UnityEngine;
+
 public abstract class EgretMsgRActionBase<TReq, TRsp> : EgretMsgTActionBase<TRsp> where TReq : Egret.Message, new() where TRsp : Egret.Message
 {
     public override int Id => _reqPacket.GetTransferDataSeqId();
@@ -47,14 +48,14 @@ public abstract class EgretMsgRActionBase<TReq, TRsp> : EgretMsgTActionBase<TRsp
         return packet;
     }
 
-    protected sealed override bool Receive(TRsp rsp)
+    protected sealed override bool Receive(int errorCode, string errorMsg, TRsp rsp)
     {
-        return base.Receive(rsp);
+        return base.Receive(errorCode, errorMsg, rsp);
     }
 
-    protected virtual bool Receive(TRsp rsp, TReq req)
+    protected virtual bool Receive(int errorCode, string errorMsg, TRsp rsp, TReq req)
     {
-        return Receive(rsp);
+        return Receive(errorCode, errorMsg, rsp);
     }
 
     public override void Handle(object sender, Packet packet)
@@ -63,8 +64,8 @@ public abstract class EgretMsgRActionBase<TReq, TRsp> : EgretMsgTActionBase<TRsp
         (sender as EgretMsgNetwork).UnRegisterHandler(this);
         // 获取请求数据
         TReq req = _reqPacket.TransferData as TReq;
-        TRsp resp = (packet as EgretGamePacket).TransferData as TRsp;
-        _ = Receive(resp, req);
+        TRsp resp = JsonUtility.FromJson<TRsp>((packet as EgretGamePacket).DataJson);
+        _ = Receive(resp.ErrorCode, resp.ErrorMsg, resp, req);
     }
 
     public override Packet GetReqPacket()

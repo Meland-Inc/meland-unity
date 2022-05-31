@@ -1,12 +1,14 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 09:24:00
- * @LastEditTime: 2022-05-29 17:09:35
+ * @LastEditTime: 2022-05-31 21:17:35
  * @LastEditors: xiang huan
  * @Description: 白鹭游戏模块
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretGameCenter.cs
  * 
  */
+using System.Collections.Generic;
+using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -18,11 +20,19 @@ public class EgretGameCenter : GameFrameworkComponent
     private CanvasWebViewPrefab _canvasWebView;
     HardwareKeyboardListener _hardwareKeyboardListener;
     private EgretMsgNetwork _egretMsgNetwork;
-
-
+    private bool _isEgretReady;
+    private readonly List<IEgretMsgAction> _sendMsgActionList = new();
+    private Dictionary<EgretDefine.eEgretEnableMode, bool> _enableModeMap = new();
+    protected override void Awake()
+    {
+        base.Awake();
+#if DEBUG
+        Web.EnableRemoteDebugging();
+#endif
+    }
     private void Start()
     {
-        _ = initWebViewAsync();
+        _ = InitWebViewAsync();
     }
 
     private void OnDestroy()
@@ -46,12 +56,16 @@ public class EgretGameCenter : GameFrameworkComponent
         }
     }
 
-    private async UniTask initWebViewAsync()
+    private async UniTask InitWebViewAsync()
     {
         if (_canvasWebView != null)
         {
             return;
         }
+        _isEgretReady = false;
+        _sendMsgActionList.Clear();
+        _enableModeMap.Clear();
+
         _canvasWebView = CanvasWebViewPrefab.Instantiate();
         GameObject canvas = GameObject.Find("Canvas");
         _canvasWebView.transform.parent = canvas.transform;
@@ -61,25 +75,26 @@ public class EgretGameCenter : GameFrameworkComponent
         rectTransform.offsetMax = Vector2.zero;
         _canvasWebView.transform.localScale = Vector3.one;
         await _canvasWebView.WaitUntilInitialized();
-        _canvasWebView.WebView.LoadUrl("http://play.melandworld.com/index_planet?developMode=1");
+        _canvasWebView.WebView.LoadUrl(URLConfig.EGRET_GAME_ADDRESS);
         _canvasWebView.Native2DModeEnabled = true;
         _canvasWebView.NativeOnScreenKeyboardEnabled = true;
         _canvasWebView.LogConsoleMessages = true;
-        // _canvasWebView.WebView.LoadProgressChanged += async (sender, eventArgs) =>
-        // {
-        //     if (eventArgs.Type == ProgressChangeType.Finished)
-        //     {
-        //         var headerText = await _canvasWebView.WebView.ExecuteJavaScript(@"
-        //             document.body.style.backgroundColor='transparent';
-        //             var headHTML = document.getElementsByTagName('head')[0].innerHTML;
-        //             headHTML += < meta name = 'transparent' content = 'true' >;
-        //             document.getElementsByTagName('head')[0].innerHTML = headHTML;
-        //         ");
-        //         Debug.Log("H1 text: " + headerText);
-        //     }
-        // };
+        _canvasWebView.DragMode = DragMode.DragWithinPage;
+        _canvasWebView.Visible = false;
+        _canvasWebView.WebView.UrlChanged += UrlChanged;
         SetUpHardwareKeyboard();
         _egretMsgNetwork = new(_canvasWebView);
+    }
+    private void UrlChanged(object sender, UrlChangedEventArgs eventArgs)
+    {
+        if (URLConfig.EGRET_GAME_ADDRESS.Equals(eventArgs.Url))
+        {
+            EnableMode(EgretDefine.eEgretEnableMode.Login, false);
+        }
+        else
+        {
+            EnableMode(EgretDefine.eEgretEnableMode.Login, true);
+        }
     }
     private void SetUpHardwareKeyboard()
     {
@@ -103,7 +118,51 @@ public class EgretGameCenter : GameFrameworkComponent
     }
     public void SendEgretMsg(IEgretMsgAction action)
     {
-        _egretMsgNetwork.ExecuteSend(action);
+        if (_isEgretReady)
+        {
+            _egretMsgNetwork.ExecuteSend(action);
+        }
+        else
+        {
+            _sendMsgActionList.Add(action);
+        }
+    }
+
+    public void EgretReady()
+    {
+        _isEgretReady = true;
+        SendMsgActionList();
+    }
+
+    private void SendMsgActionList()
+    {
+        foreach (IEgretMsgAction action in _sendMsgActionList)
+        {
+            _egretMsgNetwork.ExecuteSend(action);
+        }
+        _sendMsgActionList.Clear();
+    }
+
+    public void EnableMode(EgretDefine.eEgretEnableMode mode, bool enable)
+    {
+        if (_enableModeMap.ContainsKey(mode))
+        {
+            _enableModeMap[mode] = enable;
+        }
+        else
+        {
+            _enableModeMap.Add(mode, enable);
+        }
+        bool visible = false;
+        foreach (KeyValuePair<EgretDefine.eEgretEnableMode, bool> item in _enableModeMap)
+        {
+            if (item.Value)
+            {
+                visible = item.Value;
+                break;
+            }
+        }
+        _canvasWebView.Visible = visible;
     }
 
 }

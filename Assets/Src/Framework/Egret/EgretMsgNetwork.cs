@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 10:09:05
- * @LastEditTime: 2022-05-28 20:09:52
+ * @LastEditTime: 2022-05-31 15:13:44
  * @LastEditors: xiang huan
  * @Description: 白鹭通讯
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretMsgNetwork.cs
@@ -58,6 +58,7 @@ public class EgretMsgNetwork
             Egret.Message message = JsonUtility.FromJson<Egret.Message>(e.Value);
             EgretGamePacket packet = new();
             packet.SetTransferData(message);
+            packet.DataJson = e.Value;
             if (packet != null)
             {
                 _receivePacketPool.Fire(this, packet);

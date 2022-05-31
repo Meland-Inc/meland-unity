@@ -27,7 +27,6 @@ public partial class SceneEntityMgr : SceneModuleBase
 
         Camera.main.transform.position = sceneRole.Transform.position + SceneDefine.MainCameraInitFollowMainRoleOffset;
         Camera.main.GetComponent<FollowTarget>().SetTargetTsm(sceneRole.Transform);
-        Camera.main.GetComponent<MainCameraMoveInput>().OnSetFollowTarget();
     }
 
     public void NetAddUpdateEntity(RepeatedField<EntityWithLocation> entitys)

@@ -13,6 +13,7 @@ public class UICenter : GameFrameworkComponent
     }
     public static void InitConfig()
     {
+        DontDestroyOnLoad(Stage.inst.GetRenderCamera().gameObject);
         //init config
     }
 

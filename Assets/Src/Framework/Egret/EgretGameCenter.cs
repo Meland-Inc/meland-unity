@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 09:24:00
- * @LastEditTime: 2022-06-01 04:29:40
+ * @LastEditTime: 2022-06-02 15:06:53
  * @LastEditors: xiang huan
  * @Description: 白鹭游戏模块
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretGameCenter.cs
@@ -164,6 +164,8 @@ public class EgretGameCenter : GameFrameworkComponent
             }
         }
         _canvasWebView.Visible = visible;
+        Input.imeCompositionMode = visible ? IMECompositionMode.On : IMECompositionMode.Auto;
+        _hardwareKeyboardListener.enabled = visible;
     }
 
 }

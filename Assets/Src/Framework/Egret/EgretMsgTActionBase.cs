@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 11:00:53
- * @LastEditTime: 2022-05-31 15:15:08
+ * @LastEditTime: 2022-06-06 14:50:16
  * @LastEditors: xiang huan
  * @Description: 通知类action
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretMsgTActionBase.cs
@@ -10,7 +10,7 @@
 using GameFramework.Network;
 using UnityEngine;
 
-public abstract class EgretMsgTActionBase<TRsp> : IEgretMsgAction where TRsp : Egret.Message
+public abstract class EgretMsgTActionBase<TRsp> : IEgretMsgAction where TRsp : EgretMessage
 {
     public virtual int Id => -(int)GetEnvelopeType();
     public static TAction GetAction<TAction>() where TAction : EgretMsgTActionBase<TRsp>, new()
@@ -42,4 +42,13 @@ public abstract class EgretMsgTActionBase<TRsp> : IEgretMsgAction where TRsp : E
     {
         //empty
     }
+}
+public class EgretMessage
+{
+    public int SeqId;
+    public int Type;
+    public int ErrorCode;
+    public string ErrorMsg;
+
+    public static object EgretReady { get; internal set; }
 }

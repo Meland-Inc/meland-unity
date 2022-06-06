@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:45:03
- * @LastEditTime: 2022-05-31 15:21:01
+ * @LastEditTime: 2022-06-06 14:43:41
  * @LastEditors: xiang huan
  * @Description: 请求登入
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/Action/LoginAction.cs
@@ -10,11 +10,11 @@
 
 namespace Egret
 {
-    public class LoginAction : EgretMsgRActionBase<Message, LoginResponse>
+    public class LoginAction : EgretMsgRActionBase<EgretMessage, LoginResponse>
     {
         public static void Req()
         {
-            Message req = GenerateReq();
+            EgretMessage req = GenerateReq();
             SendAction<LoginAction>(req);
         }
 
@@ -23,7 +23,7 @@ namespace Egret
             return EgretDefine.eEgretEnvelopeType.Login;
         }
 
-        protected override bool Receive(int errorCode, string errorMsg, LoginResponse rsp, Message req)
+        protected override bool Receive(int errorCode, string errorMsg, LoginResponse rsp, EgretMessage req)
         {
             if (errorCode != EgretDefine.SUCCESS_CODE)
             {
@@ -34,4 +34,10 @@ namespace Egret
             return true;
         }
     }
+
+    public class LoginResponse : EgretMessage
+    {
+        public string UserId;
+    }
+
 }

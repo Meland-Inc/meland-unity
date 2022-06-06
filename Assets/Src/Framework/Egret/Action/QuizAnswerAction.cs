@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:45:03
- * @LastEditTime: 2022-05-30 22:20:19
+ * @LastEditTime: 2022-06-06 14:43:39
  * @LastEditors: xiang huan
  * @Description: 请求答题
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/Action/QuizAnswerAction.cs
@@ -10,7 +10,7 @@
 
 namespace Egret
 {
-    public class QuizAnswerAction : EgretMsgRActionBase<QuizAnswerRequest, Message>
+    public class QuizAnswerAction : EgretMsgRActionBase<QuizAnswerRequest, EgretMessage>
     {
         public static void Req(int row, int col)
         {
@@ -25,7 +25,7 @@ namespace Egret
             return EgretDefine.eEgretEnvelopeType.QuizAnswer;
         }
 
-        protected override bool Receive(int errorCode, string errorMsg, Message rsp, QuizAnswerRequest req)
+        protected override bool Receive(int errorCode, string errorMsg, EgretMessage rsp, QuizAnswerRequest req)
         {
             if (errorCode != EgretDefine.SUCCESS_CODE)
             {
@@ -33,5 +33,11 @@ namespace Egret
             }
             return true;
         }
+    }
+
+    public class QuizAnswerRequest : EgretMessage
+    {
+        public int Row;
+        public int Col;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 09:24:00
- * @LastEditTime: 2022-06-06 11:40:13
+ * @LastEditTime: 2022-06-06 14:47:45
  * @LastEditors: xiang huan
  * @Description: 白鹭游戏模块
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretGameCenter.cs
@@ -29,6 +29,7 @@ public class EgretGameCenter : GameFrameworkComponent
 #if DEBUG
         Web.EnableRemoteDebugging();
 #endif
+        Message.EgretReady += EgretReady;
     }
     private void Start()
     {
@@ -37,6 +38,7 @@ public class EgretGameCenter : GameFrameworkComponent
 
     private void OnDestroy()
     {
+        Message.EgretReady -= EgretReady;
         if (_canvasWebView)
         {
             _canvasWebView.Destroy();
@@ -128,10 +130,13 @@ public class EgretGameCenter : GameFrameworkComponent
         }
     }
 
-    public void EgretReady()
+    public void EgretReady(bool isReady)
     {
-        _isEgretReady = true;
-        SendMsgActionList();
+        _isEgretReady = isReady;
+        if (_isEgretReady)
+        {
+            SendMsgActionList();
+        }
     }
 
     private void SendMsgActionList()

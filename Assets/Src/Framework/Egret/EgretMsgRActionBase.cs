@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:03:58
- * @LastEditTime: 2022-05-31 15:15:28
+ * @LastEditTime: 2022-06-06 14:48:11
  * @LastEditors: xiang huan
  * @Description: 请求类aciton
  * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretMsgRActionBase.cs
@@ -10,7 +10,7 @@
 using GameFramework.Network;
 using UnityEngine;
 
-public abstract class EgretMsgRActionBase<TReq, TRsp> : EgretMsgTActionBase<TRsp> where TReq : Egret.Message, new() where TRsp : Egret.Message
+public abstract class EgretMsgRActionBase<TReq, TRsp> : EgretMsgTActionBase<TRsp> where TReq : EgretMessage, new() where TRsp : EgretMessage
 {
     public override int Id => _reqPacket.GetTransferDataSeqId();
     private EgretGamePacket _reqPacket;

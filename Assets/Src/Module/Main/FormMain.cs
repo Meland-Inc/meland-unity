@@ -14,14 +14,14 @@ public class FormMain : FGUIForm
         FairyGUI.GTextInput roomInput = GCom.GetChild("roomInput").asTextInput;
 
         FairyGUI.GButton btnAnswer = GCom.GetChild("btnAnswer").asButton;
-        btnAnswer.AddEventListener("onTouchEnd", () =>
+        btnAnswer.onTouchEnd.Add(() =>
         {
             int row = int.Parse(rowInput.text);
             int col = int.Parse(colInput.text);
             Egret.QuizAnswerAction.Req(row, col);
         });
         FairyGUI.GButton btnRoom = GCom.GetChild("btnRoom").asButton;
-        btnRoom.AddEventListener("onTouchEnd", () =>
+        btnRoom.onTouchEnd.Add(() =>
         {
             Egret.QuizCreateRoomAction.Req(roomInput.text);
         });

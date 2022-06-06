@@ -98,9 +98,15 @@ public class NetMessageCenter : GameFrameworkComponent
 #endif
         INetworkChannel httpChannel = new HttpNetworkChannel(NetworkDefine.CHANEL_NAME_HTTP, new HttpChannelHelper());
         network.AddNetworkChannel(httpChannel);
+
+        INetworkChannel runtimeChannel = new RuntimeNetworkChannel(NetworkDefine.CHANEL_NAME_RUNTIME, new RuntimeNetworkHelper());
+        network.AddNetworkChannel(runtimeChannel);
         _channelMap.Add(NetworkDefine.CHANEL_NAME_HTTP, httpChannel);
         _channelMap.Add(NetworkDefine.CHANNEL_NAME_GAME, channel);
+        _channelMap.Add(NetworkDefine.CHANEL_NAME_RUNTIME, runtimeChannel);
         channel.HeartBeatInterval = NetworkDefine.CHANEL_HEART_BRAT_INTERVAL; // 心跳间隔
+
+
     }
 
     private void OnNetworkConnected(object sender, GameEventArgs e)

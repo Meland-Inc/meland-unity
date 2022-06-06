@@ -19,7 +19,7 @@ public class LoginProcedure : ProcedureBase
         Message.GameSceneChanged += OnGameSceneChanged;
 
         //_ = GFEntry.UI.OpenUIForm<FormLogin>();
-        Egret.LoginAction.Req();
+        Runtime.LoginAction.Req();
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)

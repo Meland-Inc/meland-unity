@@ -13,13 +13,13 @@ public class BasicModule : MonoBehaviour
     public static UICenter UICenter;
     public static LoginCenter LoginCenter;
 
-    public static EgretGameCenter EgretGameCenter;
+    public static RuntimeGameCenter RuntimeGameCenter;
 
     private void Start()
     {
         NetMsgCenter = GameEntry.GetComponent<NetMessageCenter>();
         UICenter = GameEntry.GetComponent<UICenter>();
         LoginCenter = GameEntry.GetComponent<LoginCenter>();
-        EgretGameCenter = GameEntry.GetComponent<EgretGameCenter>();
+        RuntimeGameCenter = GameEntry.GetComponent<RuntimeGameCenter>();
     }
 }

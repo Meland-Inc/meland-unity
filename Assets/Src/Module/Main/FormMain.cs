@@ -18,12 +18,12 @@ public class FormMain : FGUIForm
         {
             int row = int.Parse(rowInput.text);
             int col = int.Parse(colInput.text);
-            Egret.QuizAnswerAction.Req(row, col);
+            Runtime.QuizAnswerAction.Req(row, col);
         });
         FairyGUI.GButton btnRoom = GCom.GetChild("btnRoom").asButton;
         btnRoom.onTouchEnd.Add(() =>
         {
-            Egret.QuizCreateRoomAction.Req(roomInput.text);
+            Runtime.QuizCreateRoomAction.Req(roomInput.text);
         });
     }
 }

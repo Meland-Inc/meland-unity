@@ -1,13 +1,13 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 11:51:43
- * @LastEditTime: 2022-06-06 14:50:37
+ * @LastEditTime: 2022-06-06 17:21:27
  * @LastEditors: xiang huan
- * @Description: 白鹭通讯包
- * @FilePath: /meland-unity/Assets/Src/Framework/Egret/EgretGamePacket.cs
+ * @Description: runtime通讯包
+ * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimePacket.cs
  * 
  */
-public class EgretGamePacket : ChannelPacket<EgretMessage>
+public class RuntimePacket : ChannelPacket<RuntimeMessage>
 {
     // 此值与handler id 需要一致，接收到响应的时候，用来匹配对应的handler处理
     // 而Handler有两种，一种是请求式R-Action,一种是通知式T-Action

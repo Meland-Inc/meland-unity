@@ -10,7 +10,7 @@ public enum eLogTag
     scene,
     ui,
     login,
-    egret,
+    runtime,
 }
 
 /// <summary>

@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 191125340}
   - component: {fileID: 191125341}
   m_Layer: 0
-  m_Name: EgretGameCenter
+  m_Name: RuntimeGameCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

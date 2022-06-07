@@ -17,6 +17,12 @@ public static class AssetDefine
     public static readonly string PATH_SPRITE = Path.Combine(PATH_ROOT, "Sprite");
     public static readonly string PATH_DRAGON_BONES = Path.Combine(PATH_ROOT, "DragonBones");
     public static readonly string PATH_UI = Path.Combine(PATH_ROOT, "Fairygui");
+
+    public const string SUFFIX_TEXTURE = ".png";
+    public const string SUFFIX_SCENE = ".unity";
+    public const string SUFFIX_PREFAB = ".prefab";
+    public const string SUFFIX_MUSIC = ".mp3";
+    public const string SUFFIX_SOUND_EFFECT = ".wav";
 }
 
 /// <summary>

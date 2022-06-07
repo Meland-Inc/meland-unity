@@ -13,6 +13,10 @@ public class BasicModule : MonoBehaviour
     public static NetMessageCenter NetMsgCenter;
     public static UICenter UICenter;
     public static LoginCenter LoginCenter;
+    /// <summary>
+    /// 资源加载器
+    /// </summary>
+    public static AssetLoader Asset;
 
     public static RuntimeGameCenter RuntimeGameCenter;
 
@@ -22,5 +26,6 @@ public class BasicModule : MonoBehaviour
         UICenter = GameEntry.GetComponent<UICenter>();
         LoginCenter = GameEntry.GetComponent<LoginCenter>();
         RuntimeGameCenter = GameEntry.GetComponent<RuntimeGameCenter>();
+        Asset = GameEntry.GetComponent<AssetLoader>();
     }
 }

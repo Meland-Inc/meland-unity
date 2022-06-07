@@ -9,29 +9,41 @@ public class TerrainRender : EntityLogic
 {
     public MeshRenderer MeshRenderer;
 
+    private string _texturePath;
+
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
         TerrainRenderTempData data = userData as TerrainRenderTempData;
-        MeshRenderer.enabled = false;//先隐藏 否则图片还没加载出来前是白色
         transform.position = data.Position;
         SceneModule.SceneRender.AddToGroup(transform, eSceneGroup.terrain);
-        LoadSprite(Path.Combine("Terrain", data.TextureAsset));
+
+        _texturePath = Path.Combine(AssetDefine.PATH_SPRITE, "Terrain", data.TextureAsset + AssetDefine.SUFFIX_TEXTURE);
+        MeshRenderer.enabled = false;//先隐藏 否则图片还没加载出来前是白色
+
+        LoadTexture();
     }
 
     protected override void OnRecycle()
     {
-        //TODO:卸载资源
+        UnloadTexture();
+
         gameObject.SetActive(false);
-        MeshRenderer.material.mainTexture = null;
+        _texturePath = default;
         base.OnRecycle();
     }
 
-    private async void LoadSprite(string spriteName)
+    private async void LoadTexture()
     {
-        Texture2D sprite = await Asset.LoadAsset<Texture2D>(Path.Combine(AssetDefine.PATH_SPRITE, $"{spriteName}.png"));
-        MeshRenderer.material.mainTexture = sprite;
+        Texture2D texture = await BasicModule.Asset.LoadAsset<Texture2D>(_texturePath, GetHashCode());
+        MeshRenderer.material.mainTexture = texture;
         MeshRenderer.enabled = true;
+    }
+
+    private void UnloadTexture()
+    {
+        BasicModule.Asset.UnloadAsset<Texture2D>(_texturePath, GetHashCode());
+        MeshRenderer.material.mainTexture = null;
     }
 }

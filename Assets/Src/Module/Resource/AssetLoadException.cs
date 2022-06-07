@@ -10,17 +10,12 @@ public class AssetLoadException : Exception
     /// 加载状态 基本也是error code的意思
     /// </summary>
     public readonly LoadResourceStatus LoadStatus;
-    // public readonly string ErrorMsg;
     public readonly string AssetName;
-    /// <summary>
-    /// 加载时传进去的用户自定义数据
-    /// </summary>
-    public readonly object UserData;
-    public AssetLoadException(string assetName, LoadResourceStatus status, string errorMessage, object userData) : base(errorMessage)
+    public readonly Type AssetType;
+    public AssetLoadException(string assetName, Type assetType, LoadResourceStatus status, string errorMessage) : base(errorMessage)
     {
         AssetName = assetName;
+        AssetType = assetType;
         LoadStatus = status;
-        // Message = errorMessage;
-        UserData = userData;
     }
 }

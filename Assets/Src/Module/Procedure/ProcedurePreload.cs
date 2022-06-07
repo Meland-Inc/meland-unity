@@ -1,14 +1,14 @@
-﻿using System;
-/*
+﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime 2022-06-23 15:57:59
+ * @LastEditTime 2022-06-23 16:07:32
  * @LastEditors Please set LastEditors
  * @Description: 游戏资源加载
  * @FilePath /Assets/Src/Module/Procedure/ProcedurePreload.cs
  * 
  */
 
+using System;
 using GameFramework.Event;
 using GameFramework.Procedure;
 using System.Collections.Generic;
@@ -69,17 +69,18 @@ public class ProcedurePreload : ProcedureBase
     /// </summary>
     private void ResourcesInit()
     {
+        ResourceComponent gfRes = GameEntry.GetComponent<ResourceComponent>();
         if (GFEntry.Base.EditorResourceMode)
         {
             PreloadResources();
         }
-        else if (GFEntry.Resource.ResourceMode == ResourceMode.Package)
+        else if (gfRes.ResourceMode == ResourceMode.Package)
         {
-            GFEntry.Resource.InitResources(PreloadResources);
+            gfRes.InitResources(PreloadResources);
         }
         else
         {
-            MLog.Fatal(eLogTag.resource, "ResourceMode not support");
+            MLog.Fatal(eLogTag.asset, "ResourceMode not support");
         }
     }
 
@@ -137,7 +138,7 @@ public class ProcedurePreload : ProcedureBase
             string assetPrefix = Path.Combine(AssetDefine.PATH_UI, $"{name}");
             try
             {
-                TextAsset asset = await Asset.LoadAsset<TextAsset>($"{assetPrefix}_fui.bytes");
+                TextAsset asset = await BasicModule.Asset.LoadAsset<TextAsset>($"{assetPrefix}_fui.bytes", GetHashCode());
                 _ = UIPackage.AddPackage(asset.bytes, assetPrefix, LoadRes);
                 _loadedUICount++;
             }
@@ -153,7 +154,7 @@ public class ProcedurePreload : ProcedureBase
     {
         try
         {
-            object asset = await Asset.LoadAsset<object>(name + extension);
+            object asset = await BasicModule.Asset.LoadAsset<object>(name + extension, GetHashCode());
             item.owner.SetItemAsset(item, asset, DestroyMethod.Unload);
             MLog.Info(eLogTag.ui, $"load ui res {name} success");
         }

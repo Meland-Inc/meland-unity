@@ -19,7 +19,7 @@ public class Avatar2D : MonoBehaviour
     /// </summary>
     /// <value></value>
     public bool IsValid { get => _isValid; }
-    private bool _loadAvatar;//加载方式
+    private string _loadAssetPath;//加载资源的路径 为空说明不是加载的
 
     [SerializeField]
     private GameObject _root;
@@ -31,12 +31,15 @@ public class Avatar2D : MonoBehaviour
 
     private void OnDestroy()
     {
-        //TODO:卸载资源
+        if (!string.IsNullOrEmpty(_loadAssetPath))
+        {
+            BasicModule.Asset.UnloadAsset<SkeletonDataAsset>(_loadAssetPath, GetHashCode());
+        }
     }
 
     public void Init()
     {
-        _loadAvatar = false;
+        _loadAssetPath = null;
         _root = gameObject;
         FindComponent();
 
@@ -45,7 +48,7 @@ public class Avatar2D : MonoBehaviour
 
     public void Init(string assetPath, Action<Avatar2D> finishCB)
     {
-        _loadAvatar = true;
+        _loadAssetPath = assetPath;
         LoadAvatar(assetPath, finishCB);
     }
 
@@ -59,7 +62,7 @@ public class Avatar2D : MonoBehaviour
     {
         try
         {
-            SkeletonDataAsset asset = await GFEntry.Resource.AwaitLoadAsset<SkeletonDataAsset>(assetPath);
+            SkeletonDataAsset asset = await BasicModule.Asset.LoadAsset<SkeletonDataAsset>(assetPath, GetHashCode());
             SkeletonAnimation animation = SkeletonAnimation.NewSkeletonAnimationGameObject(asset);
             _root = animation.gameObject;
             _root.transform.SetParent(transform, false);
@@ -72,7 +75,7 @@ public class Avatar2D : MonoBehaviour
         }
         catch (AssetLoadException e)
         {
-            MLog.Error(eLogTag.resource, $"load 2d avatar asset error,path={assetPath} error={e}");
+            MLog.Error(eLogTag.asset, $"load 2d avatar asset error,path={assetPath} error={e}");
         }
     }
 

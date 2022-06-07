@@ -141,15 +141,6 @@ public class GFEntry : MonoBehaviour
     }
 
     /// <summary>
-    /// 获取资源组件。
-    /// </summary>
-    public static ResourceComponent Resource
-    {
-        get;
-        private set;
-    }
-
-    /// <summary>
     /// 获取场景组件。
     /// </summary>
     public static SceneComponent Scene
@@ -214,7 +205,6 @@ public class GFEntry : MonoBehaviour
         Localization = GameEntry.GetComponent<LocalizationComponent>();
         Network = GameEntry.GetComponent<NetworkComponent>();
         ObjectPool = GameEntry.GetComponent<ObjectPoolComponent>();
-        Resource = GameEntry.GetComponent<ResourceComponent>();
         Scene = GameEntry.GetComponent<SceneComponent>();
         Setting = GameEntry.GetComponent<SettingComponent>();
         Sound = GameEntry.GetComponent<SoundComponent>();

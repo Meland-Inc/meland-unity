@@ -21,6 +21,12 @@ public class SceneEntityRenderBase : EntityLogic
         base.OnInit(userData);
 
         EntityRenderTempData data = userData as EntityRenderTempData;
+        if (data == null)
+        {
+            MLog.Error(eLogTag.entity, "EntityRenderTempData is null or type error");
+            return;
+        }
+
         SceneEntity sceneEntity = SceneModule.EntityMgr.GetSceneEntity(data.SceneEntityID);
         if (sceneEntity == null)
         {

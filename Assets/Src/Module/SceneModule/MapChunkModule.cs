@@ -114,9 +114,9 @@ public class MapChunkModule : SceneModuleBase
     {
         Rect area = new();
         Ray ray = new(Camera.main.transform.position, Camera.main.transform.forward);
-        if (Mathf.Approximately(ray.direction.x, 0))
+        if (Mathf.Approximately(ray.direction.y, 0))
         {
-            MLog.Fatal(eLogTag.map, "相机不能和水平面平行");
+            MLog.Error(eLogTag.map, "相机不能和水平面平行");
         }
         Vector3 point = MathUtil.GetPlaneInteractivePoint(ray, 0);
         area.center = new Vector2(point.x, point.z);

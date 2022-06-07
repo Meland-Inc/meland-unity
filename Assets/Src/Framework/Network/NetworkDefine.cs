@@ -8,6 +8,7 @@ public sealed class NetworkDefine
 {
     public const string CHANNEL_NAME_GAME = "game";
     public const string CHANEL_NAME_HTTP = "http";
+    public const string CHANEL_NAME_RUNTIME = "runtime";
     // 心跳间隔 s
     public const int CHANEL_HEART_BRAT_INTERVAL = 30;
 

@@ -18,7 +18,8 @@ public class LoginProcedure : ProcedureBase
         Message.EnterMapSuccess += OnEnterMapSuccess;
         Message.GameSceneChanged += OnGameSceneChanged;
 
-        _ = GFEntry.UI.OpenUIForm<FormLogin>();
+        //_ = GFEntry.UI.OpenUIForm<FormLogin>();
+        Runtime.LoginAction.Req();
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
@@ -30,7 +31,7 @@ public class LoginProcedure : ProcedureBase
         Message.EnterMapSuccess -= OnEnterMapSuccess;
         Message.GameSceneChanged -= OnGameSceneChanged;
 
-        GFEntry.UI.CloseUIForm<FormLogin>();
+        //GFEntry.UI.CloseUIForm<FormLogin>();
 
         base.OnLeave(procedureOwner, isShutdown);
     }

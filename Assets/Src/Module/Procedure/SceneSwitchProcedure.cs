@@ -3,6 +3,7 @@ using GameFramework.Event;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
 using UnityGameFramework.Runtime;
+using UnityEngine;
 
 /// <summary>
 /// 场景切换流程
@@ -14,6 +15,10 @@ public class SceneSwitchProcedure : ProcedureBase
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
         base.OnEnter(procedureOwner);
+        if (Camera.main)
+        {
+            Object.Destroy(Camera.main.gameObject);
+        }
 
         GFEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, onLoadSceneSuccess);
 

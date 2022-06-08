@@ -52,6 +52,24 @@ public class NetMessageCenter : GameFrameworkComponent
         // 注册监听
         channel.RegisterHandler(action);
         channel.Send(action.GetReqPacket());
+
+        MLog.Info(eLogTag.network, $">>> {action.Name} channel= {action.ChannelName}");
+    }
+
+    /// <summary>
+    /// 接受到一个包 具体处理逻辑各Action内部已经处理  这里只是采样一下
+    /// </summary>
+    /// <param name="action"></param>
+    public void OnReceiveMsg(INetMsgAction action)
+    {
+        try
+        {
+            MLog.Info(eLogTag.network, $"<<< {action.Name} channel= {action.ChannelName}");
+        }
+        catch (System.Exception e)
+        {
+            MLog.Error(eLogTag.network, $"NetMessageCenter OnReceiveMsg error = {e}");
+        }
     }
 
     public void ConnectChannel(string channelName, string ip, int port)

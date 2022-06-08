@@ -1,4 +1,5 @@
 using UnityEngine;
+using Bian;
 
 /// <summary>
 /// 场景实体基础数据
@@ -10,15 +11,17 @@ public class SceneEntityBaseData : MonoBehaviour
     private string _id;
 
     [SerializeField]
-    private eEntityType _svrType;
+    private EntityType _type;
+
 
 
     public string ID => _id;
-    public eEntityType SvrType => _svrType;
+    public EntityType Type => _type;
 
-    public void Init(string id, eEntityType type)
+
+    public void Init(string id, EntityType type)
     {
         _id = id;
-        _svrType = type;
+        _type = type;
     }
 }

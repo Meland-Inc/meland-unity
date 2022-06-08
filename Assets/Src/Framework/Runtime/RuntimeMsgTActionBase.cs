@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 11:00:53
- * @LastEditTime: 2022-06-06 17:19:39
- * @LastEditors: xiang huan
+ * @LastEditTime 2022-06-08 13:51:20
+ * @LastEditors Please set LastEditors
  * @Description: 通知类action
- * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimeMsgTActionBase.cs
+ * @FilePath /Assets/Src/Framework/Runtime/RuntimeMsgTActionBase.cs
  * 
  */
 using GameFramework.Network;
@@ -14,6 +14,9 @@ public abstract class RuntimeMsgTActionBase<TRsp> : INetMsgAction where TRsp : R
 {
     public string ChannelName => NetworkDefine.CHANEL_NAME_RUNTIME;
     public virtual int Id => -(int)GetEnvelopeType();
+
+    public string Name => GetEnvelopeType().ToString();
+
     public static TAction GetAction<TAction>() where TAction : RuntimeMsgTActionBase<TRsp>, new()
     {
         TAction action = new();

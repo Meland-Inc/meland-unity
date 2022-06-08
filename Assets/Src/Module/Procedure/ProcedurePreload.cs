@@ -1,17 +1,15 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-05-26 15:01:35
- * @LastEditors: mangit
+ * @LastEditTime 2022-05-26 20:16:55
+ * @LastEditors Please set LastEditors
  * @Description: 游戏资源加载
- * @FilePath: /Assets/Src/Module/Procedure/ProcedurePreload.cs
+ * @FilePath /Assets/Src/Module/Procedure/ProcedurePreload.cs
  * 
  */
 
-using GameFramework;
 using GameFramework.Event;
 using GameFramework.Procedure;
-using GameFramework.Resource;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -23,7 +21,9 @@ public class ProcedurePreload : ProcedureBase
     private readonly Dictionary<string, bool> _loadedFlag = new();
     protected override void OnEnter(ProcedureOwner procedureOwner)
     {
+        MLog.Info(eLogTag.procedure, "enter preload procedure");
         base.OnEnter(procedureOwner);
+
         GFEntry.Event.Subscribe(LoadDataTableSuccessEventArgs.EventId, OnLoadDataTableSuccess);
         GFEntry.Event.Subscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
         _loadedFlag.Clear();
@@ -32,6 +32,8 @@ public class ProcedurePreload : ProcedureBase
 
     protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
     {
+        Object.Destroy(Camera.main.gameObject);
+
         GFEntry.Event.Unsubscribe(LoadDataTableSuccessEventArgs.EventId, OnLoadDataTableSuccess);
         GFEntry.Event.Unsubscribe(LoadDataTableFailureEventArgs.EventId, OnLoadDataTableFailure);
         base.OnLeave(procedureOwner, isShutdown);

@@ -1,20 +1,15 @@
-using UnityGameFramework.Runtime;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
-using UnityEngine;
 
 /// <summary>
 /// 启动流程
 /// </summary>
 public class LaunchProcedure : ProcedureBase
 {
-
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
+        MLog.Info(eLogTag.procedure, "enter launch procedure");
         base.OnEnter(procedureOwner);
-
-        MLog.Debug(eLogTag.unknown, "hello GF debug");
-        // BasicModule.NetMsgCenter.ConnectChannel(NetworkDefine.CHANNEL_NAME_GAME, "127.0.0.1", 9000);
     }
 
     protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)

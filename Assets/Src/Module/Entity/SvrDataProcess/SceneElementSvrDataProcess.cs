@@ -27,25 +27,31 @@ public class SceneElementSvrDataProcess : EntitySvrDataProcess
             return;
         }
 
-        if (dr.RectTexture == null || dr.RectTexture.Length == 0)
-        {
-            MLog.Error(eLogTag.entity, $"SceneElementSvrDataProcess not find rect texture =[{svrEntity.Id},{svrEntity.Type}]");
-            return;
-        }
+        EntityConfigData configData = gameObject.AddComponent<EntityConfigData>();
+        configData.InitEntityConfig(dr);
 
-        string textureName = dr.RectTexture[0];//TODO:多张图片是需要随机吗？
-        if (string.IsNullOrEmpty(textureName))
-        {
-            MLog.Error(eLogTag.entity, $"SceneElementSvrDataProcess texture empty,=[{svrEntity.Id},{svrEntity.Type}] cid={mapObject.Cid} RectTexture.length={dr.RectTexture.Length} ");
-            return;
-        }
-
-        string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.PAPER_SCENE_ELEMENT_PREFAB_ASSET);
         EntityRenderTempData data = new()
         {
             SceneEntityID = svrEntity.Id,
-            ExtraAsset = Path.Combine("Element", textureName)
+            ExtraAsset = null
         };
-        GFEntry.Entity.ShowEntity<PaperElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, data);
+
+        if (dr.AssetType == (int)DREntityDefine.eAssetType.Model3D)
+        {
+            GFEntry.Entity.ShowEntity<ModelElementRender>(svrEntity.Id.GetHashCode(), configData.AssetFullPath, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, data);
+        }
+        else
+        {
+            if (dr.IsHorizontal)
+            {
+                string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.HORIZONTAL_ELEMENT_PREFAB_ASSET);
+                GFEntry.Entity.ShowEntity<HorizontalElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, data);
+            }
+            else
+            {
+                string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.PAPER_ELEMENT_PREFAB_ASSET);
+                GFEntry.Entity.ShowEntity<PaperElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, data);
+            }
+        }
     }
 }

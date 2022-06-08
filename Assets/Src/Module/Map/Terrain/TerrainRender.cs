@@ -36,9 +36,16 @@ public class TerrainRender : EntityLogic
 
     private async void LoadTexture()
     {
-        Texture2D texture = await BasicModule.Asset.LoadAsset<Texture2D>(_texturePath, GetHashCode());
-        MeshRenderer.material.mainTexture = texture;
-        MeshRenderer.enabled = true;
+        try
+        {
+            Texture2D texture = await BasicModule.Asset.LoadAsset<Texture2D>(_texturePath, GetHashCode());
+            MeshRenderer.material.mainTexture = texture;
+            MeshRenderer.enabled = true;
+        }
+        catch (AssetLoadException e)
+        {
+            MLog.Error(eLogTag.asset, $"TerrainRender laod error ={_texturePath} error={e}");
+        }
     }
 
     private void UnloadTexture()

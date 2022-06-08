@@ -7,6 +7,15 @@ public static class GlobalDefine
     /// 适配老数据
     /// </summary>
     public static readonly bool IS_ADAPTIVE_OLD_DATA = true;
+
+    /// <summary>
+    /// 坐标单位转换成像素
+    /// </summary>
+    public static readonly float POS_UNIT_TO_PIX = 100;
+    /// <summary>
+    /// 像素转换成坐标单位
+    /// </summary>
+    public static readonly float PIX_TO_POS_UNIT = 1 / POS_UNIT_TO_PIX;
 }
 
 /**八方向  不要乱改值  改了需要将菱形和矩形ALL更新 */

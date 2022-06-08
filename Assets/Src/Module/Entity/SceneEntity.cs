@@ -109,7 +109,8 @@ public class SceneEntity
     {
         Transform.forward = NetUtil.SvrDirToClient(dir);
     }
-    public T GetComponent<T>() where T : Component
+
+    public T GetComponent<T>()
     {
         return _root.GetComponent<T>();
     }
@@ -119,7 +120,7 @@ public class SceneEntity
         return _root.AddComponent<T>();
     }
 
-    public bool TryGetComponent<T>(out T component) where T : Component
+    public bool TryGetComponent<T>(out T component)
     {
         return _root.TryGetComponent(out component);
     }

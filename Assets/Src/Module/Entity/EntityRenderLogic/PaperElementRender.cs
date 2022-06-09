@@ -45,7 +45,7 @@ public class PaperElementRender : SceneEntityRenderBase
 
     private async void LoadSprite(string spriteName)
     {
-        Sprite sprite = await Resource.LoadSprite(spriteName);
+        Sprite sprite = await Asset.LoadSprite(spriteName);
         SpriteRenderer.sprite = sprite;
     }
 }

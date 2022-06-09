@@ -1,5 +1,6 @@
 using Bian;
 using Google.Protobuf.Collections;
+using UnityEngine;
 
 public partial class SceneEntityMgr : SceneModuleBase
 {
@@ -10,6 +11,21 @@ public partial class SceneEntityMgr : SceneModuleBase
         DataManager.MainPlayer.InitRoleData(playerData.Id);
         SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
         sceneRole.Root.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
+
+        EntityWithLocation svrEntity = new()//封装一个统一包 服务器本来用统一的更好
+        {
+            Player = playerData,
+            Location = location,
+            Id = playerData.Id,
+            Type = EntityType.EntityTypePlayer
+
+        };
+        sceneRole.Root.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
+
+        sceneRole.Root.GetComponent<MainPlayerMoveInput>().MoveSpeed = sceneRole.Root.GetComponent<EntityMoveData>().Speed;
+        sceneRole.Root.GetComponent<MoveNetRequest>().enabled = true;
+
+        Message.MainPlayerRoleInitFinish.Invoke();
     }
 
     public void NetAddUpdateEntity(RepeatedField<EntityWithLocation> entitys)

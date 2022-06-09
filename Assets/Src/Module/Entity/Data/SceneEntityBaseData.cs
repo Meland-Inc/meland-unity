@@ -24,4 +24,10 @@ public class SceneEntityBaseData : MonoBehaviour
         _id = id;
         _type = type;
     }
+
+    public void Reset()
+    {
+        _id = string.Empty;
+        _type = EntityType.EntityTypeAll;
+    }
 }

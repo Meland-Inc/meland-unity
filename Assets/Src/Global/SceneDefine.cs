@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using UnityEngine;
+
 /// <summary>
 /// 客户端场景定义
 /// </summary>
@@ -23,6 +25,8 @@ public static class SceneDefine
     /// 场景设计视野高度
     /// </summary>
     public const int SCENE_VIEW_HEIGHT = 17;
+
+    public static readonly Vector3 MainCameraInitFollowMainRoleOffset = new(0.3f, 14.41f, -13.7f);//主相机跟随主角的初始偏移量
 }
 
 /// <summary>

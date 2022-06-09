@@ -26,10 +26,33 @@ public class MainCameraMoveInput : MonoBehaviour
 
         if (_followLogic.TargetTsm)
         {
-            _initEulerAngles = transform.eulerAngles;
-            _initRelativePosition = transform.position - _followLogic.TargetTsm.position;
-            _initTargetDistance = Vector3.Distance(transform.position, _followLogic.TargetTsm.position);
+            OnSetFollowTarget();
         }
+
+        Message.MainPlayerRoleInitFinish += OnMainPlayerRoleInitFinish;
+    }
+
+    private void OnDestroy()
+    {
+        Message.MainPlayerRoleInitFinish -= OnMainPlayerRoleInitFinish;
+    }
+
+    private void OnMainPlayerRoleInitFinish()
+    {
+        SceneEntity mainRole = DataManager.MainPlayer.Role;
+        transform.position = mainRole.Transform.position + SceneDefine.MainCameraInitFollowMainRoleOffset;
+        GetComponent<FollowTarget>().SetTargetTsm(mainRole.Transform);
+        OnSetFollowTarget();
+    }
+
+    /// <summary>
+    /// 设置跟随目标后 需要做一些数据记录初始化
+    /// </summary>
+    private void OnSetFollowTarget()
+    {
+        _initEulerAngles = transform.eulerAngles;
+        _initRelativePosition = transform.position - _followLogic.TargetTsm.position;
+        _initTargetDistance = Vector3.Distance(transform.position, _followLogic.TargetTsm.position);
     }
 
     private void Update()
@@ -104,7 +127,7 @@ public class MainCameraMoveInput : MonoBehaviour
             deltaEulerX = Math.Max(deltaEulerX, -VerticalRotateSpeed * Time.deltaTime);
         }
 
-        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, _followLogic.TargetTsm.right, deltaEulerX);
+        transform.RotateAround(_followLogic.TargetTsm.position + RotateAnchorOffset, transform.right, deltaEulerX);
 
         if (_initTargetDistance > 0)//有成功初始化过
         {

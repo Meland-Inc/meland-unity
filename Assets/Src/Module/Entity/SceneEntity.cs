@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using Bian;
-using System;
 
 /// <summary>
 /// 场景实体 和服务器对应的实体逻辑
@@ -40,16 +39,25 @@ public class SceneEntity
             name = "SceneEntity" + GetHashCode();
         }
         Root = new GameObject(name);
+        BaseData = Root.AddComponent<SceneEntityBaseData>();
     }
 
     public void Init()
     {
-        //
     }
 
     public void Dispose()
     {
-        //
+        BaseData.Reset();
+
+        if (Surface)
+        {
+            GFEntry.Entity.HideEntity(Surface.Id);
+            SetSurface(null);
+        }
+
+        Object.Destroy(Root);
+        Root = null;
     }
 
     /// <summary>
@@ -90,6 +98,6 @@ public class SceneEntity
     /// <param name="dir"></param>
     public void DirectSetSvrDir(VectorXY dir)
     {
-        Transform.forward = NetUtil.SvrVectorXYToClient(dir);
+        Transform.forward = NetUtil.SvrDirToClient(dir);
     }
 }

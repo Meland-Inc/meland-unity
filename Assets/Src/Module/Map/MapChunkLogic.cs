@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using Bian;
 using UnityGameFramework.Runtime;
+using UnityEngine;
 
 /// <summary>
 /// 地图chunk逻辑 包含了创建静态地图物件和销毁管理的数据能力
@@ -12,6 +13,11 @@ public class MapChunkLogic
     public ulong Key { get; }
     private readonly int _cacheMapWidth;//地图宽 缓存加速性能
     private HashSet<int> _curShowTerrainIDs = new();// 当前显示的地表块ID
+    /// <summary>
+    /// 引用的服务器数据
+    /// </summary>
+    /// <value></value>
+    public MapChunk RefSvrChunkData { get; private set; }
     public MapChunkLogic(ulong key)
     {
         Key = key;
@@ -20,6 +26,7 @@ public class MapChunkLogic
 
     public void Init(MapChunk svrChunk)
     {
+        RefSvrChunkData = svrChunk;
         EntityComponent entityMgr = GFEntry.Entity;
         foreach (BlockSettings block in svrChunk.Blocks)
         {
@@ -77,6 +84,7 @@ public class MapChunkLogic
         {
             entityMgr.HideEntity(terrainID);
         }
+        RefSvrChunkData = null;
     }
 
     private void RenderOneTerrain(EntityComponent entityMgr, string textureAsset, float x, float z)

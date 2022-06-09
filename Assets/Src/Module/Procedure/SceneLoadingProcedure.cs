@@ -1,4 +1,5 @@
 using Bian;
+using Cysharp.Threading.Tasks;
 using GameFramework.Event;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
@@ -57,9 +58,11 @@ public class SceneLoadingProcedure : ProcedureBase
         }
     }
 
-    private void OnSceneEntityLoadFinish()
+    private async void OnSceneEntityLoadFinish()
     {
         MLog.Info(eLogTag.procedure, "scene loading procedure OnSceneEntityLoadFinish");
+
+        await UniTask.Delay(1000);
         _isSceneLoadFinish = true;
     }
 
@@ -78,7 +81,7 @@ public class SceneLoadingProcedure : ProcedureBase
         }
         else
         {
-            MLog.Fatal(eLogTag.scene, $"SceneSwitchProcedure::onLoadSceneSuccess: scene name error cur={model.CurGameMainScene} load={loadedScene}");
+            MLog.Error(eLogTag.scene, $"SceneSwitchProcedure::onLoadSceneSuccess: scene name error cur={model.CurGameMainScene} load={loadedScene}");
             throw new System.Exception($"Game scene load error");
         }
     }
@@ -114,11 +117,14 @@ public class SceneLoadingProcedure : ProcedureBase
     /// <summary>
     /// 游戏场景加载完成
     /// </summary>
-    private void OnGameSceneLoaded()
+    private async void OnGameSceneLoaded()
     {
         MLog.Info(eLogTag.procedure, "scene loading procedure OnGameSceneLoaded");
         SceneModel sceneModel = DataManager.GetModel<SceneModel>();
         sceneModel.ChangeToGameMainScene(_needLoadSceneName);
+
+        // //TODO:等一帧主摄像机准备好 貌似更稳妥 需要确认
+        await UniTask.DelayFrame(1);
 
         EnterMapAction.Req();
     }

@@ -27,7 +27,7 @@ public class PaperElementRender : SceneEntityRenderBase
         }
         catch (System.Exception e)
         {
-            Log.Error(e.Message);
+            MLog.Error(eLogTag.entity, $"PaperElementRender init error={e}");
             return;
         }
 

@@ -1,3 +1,4 @@
+using System.IO;
 using UnityGameFramework.Runtime;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ public class TerrainRender : EntityLogic
         gameObject.SetActive(true);
         transform.position = data.Position;
         SceneModule.SceneRender.AddToGroup(transform, eSceneGroup.terrain);
-        LoadSprite(data.TextureAsset);
+        LoadSprite(Path.Combine("Terrain", data.TextureAsset));
     }
 
     protected override void OnRecycle()
@@ -28,7 +29,7 @@ public class TerrainRender : EntityLogic
 
     private async void LoadSprite(string spriteName)
     {
-        Sprite sprite = await Resource.LoadSprite(spriteName);
+        Sprite sprite = await Resource.LoadSprite(spriteName, 5000);
         SpriteRenderer.sprite = sprite;
     }
 }

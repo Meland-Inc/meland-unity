@@ -11,10 +11,10 @@ public static class SceneEntityFactory
     private static readonly Dictionary<EntityType, IEntityTypeAssembleLogic> s_assembleLogic = new()
     {
         { EntityType.EntityTypeMapObject, new SceneElementAssembleLogic() },
+        { EntityType.EntityTypeSpecialBuild, new SceneElementAssembleLogic() },
         { EntityType.EntityTypePlayer, new PlayerRoleAssembleLogic() },
         { EntityType.EntityTypeMonster, new MonsterAssembleLogic() },
         { EntityType.EntityTypePuppet, new PuppetAssembleLogic() },
-
     };
 
     /// <summary>
@@ -32,8 +32,7 @@ public static class SceneEntityFactory
         }
 
         SceneEntity entity = new($"{entityType}_{entityID}");
-        SceneEntityBaseData baseData = entity.Root.AddComponent<SceneEntityBaseData>();
-        baseData.Init(entityID, entityType);
+        entity.BaseData.Init(entityID, entityType);
         assembleLogic.AssembleSceneEntity(entity, entityType);
         return entity;
     }
@@ -47,7 +46,10 @@ public static class SceneEntityFactory
     {
         SceneEntity entity = CreateSceneEntity(entityID, EntityType.EntityTypePlayer);
         entity.SetRootName($"mainPlayerRole_{entityID}");
+
         //主角特殊逻辑
+        _ = entity.Root.AddComponent<MainPlayerMoveInput>();
+        entity.Root.AddComponent<MoveNetRequest>().enabled = false;
         return entity;
     }
 }

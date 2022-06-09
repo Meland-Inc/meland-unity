@@ -28,12 +28,27 @@ public class MainCameraMoveInput : MonoBehaviour
         {
             OnSetFollowTarget();
         }
+
+        Message.MainPlayerRoleInitFinish += OnMainPlayerRoleInitFinish;
+    }
+
+    private void OnDestroy()
+    {
+        Message.MainPlayerRoleInitFinish -= OnMainPlayerRoleInitFinish;
+    }
+
+    private void OnMainPlayerRoleInitFinish()
+    {
+        SceneEntity mainRole = DataManager.MainPlayer.Role;
+        transform.position = mainRole.Transform.position + SceneDefine.MainCameraInitFollowMainRoleOffset;
+        GetComponent<FollowTarget>().SetTargetTsm(mainRole.Transform);
+        OnSetFollowTarget();
     }
 
     /// <summary>
     /// 设置跟随目标后 需要做一些数据记录初始化
     /// </summary>
-    public void OnSetFollowTarget()
+    private void OnSetFollowTarget()
     {
         _initEulerAngles = transform.eulerAngles;
         _initRelativePosition = transform.position - _followLogic.TargetTsm.position;

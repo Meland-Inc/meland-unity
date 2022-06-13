@@ -31,8 +31,8 @@ public enum eLoadPriority : int
     Terrain,
 }
 
-public enum SoundGroupType : string
+public enum SoundGroupType
 {
-    Music = "Music",
-    Sound = "Sound",
+    Music,
+    Sound,
 }

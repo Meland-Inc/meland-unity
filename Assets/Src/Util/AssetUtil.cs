@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-20 14:20:27
- * @LastEditTime: 2022-06-13 19:33:32
- * @LastEditors: xiang huan
+ * @LastEditTime 2022-06-21 21:16:40
+ * @LastEditors Please set LastEditors
  * @Description: 资源工具类
- * @FilePath: /meland-unity/Assets/Src/Util/AssetUtil.cs
+ * @FilePath /Assets/Src/Util/AssetUtil.cs
  * 
  */
 

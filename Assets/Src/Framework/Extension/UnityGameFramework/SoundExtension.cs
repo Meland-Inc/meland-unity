@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-06-13 09:41:53
+ * @LastEditTime: 2022-06-13 09:58:36
  * @LastEditors: xiang huan
  * @Description: 声音扩展
  * @FilePath: /meland-unity/Assets/Src/Framework/Extension/UnityGameFramework/SoundExtension.cs
@@ -70,7 +70,7 @@ public static class SoundExtension
         playSoundParams.FadeInSeconds = fadeIn;
         playSoundParams.VolumeInSoundGroup = volume;
         playSoundParams.SpatialBlend = spatialBlend;
-        return soundComponent.PlaySound(soundAssetName, SoundGroupType.Sound, eLoadPriority.Normal, playSoundParams, bindingEntity != null ? bindingEntity : null, userData);
+        return soundComponent.PlaySound(soundAssetName, SoundGroupType.Sound, eLoadPriority.Normal, playSoundParams, bindingEntity, userData);
     }
 
     /// <summary>
@@ -83,7 +83,7 @@ public static class SoundExtension
     /// <returns>标识id</returns>
     public static int? PlaySound(this SoundComponent soundComponent, string soundAssetName, PlaySoundParams playSoundParams, Entity bindingEntity = null, object userData = null)
     {
-        return soundComponent.PlaySound(soundAssetName, SoundGroupType.Sound, eLoadPriority.Normal, playSoundParams, bindingEntity != null ? bindingEntity : null, userData);
+        return soundComponent.PlaySound(soundAssetName, SoundGroupType.Sound, eLoadPriority.Normal, playSoundParams, bindingEntity, userData);
     }
 
     /// <summary>

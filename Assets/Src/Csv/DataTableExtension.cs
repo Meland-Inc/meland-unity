@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-20 10:05:57
- * @LastEditTime: 2022-05-25 14:55:04
+ * @LastEditTime: 2022-06-13 11:55:47
  * @LastEditors: xiang huan
  * @Description: 
  * @FilePath: /meland-unity/Assets/Src/Csv/DataTableExtension.cs
@@ -43,7 +43,7 @@ public static class DataTableExtension
 
         string name = splitNames.Length > 1 ? splitNames[1] : null;
         DataTableBase dataTable = dataTableComponent.CreateDataTable(dataRowType, name);
-        dataTable.ReadData(dataTableAssetName, 100, userData);
+        dataTable.ReadData(dataTableAssetName, (int)eLoadPriority.High, userData);
     }
 }
 

@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-20 14:20:27
- * @LastEditTime 2022-05-26 09:28:35
- * @LastEditors Please set LastEditors
+ * @LastEditTime: 2022-06-13 09:36:09
+ * @LastEditors: xiang huan
  * @Description: 资源工具类
- * @FilePath /Assets/Src/Util/AssetUtil.cs
+ * @FilePath: /meland-unity/Assets/Src/Util/AssetUtil.cs
  * 
  */
 
@@ -17,6 +17,12 @@ public static class AssetUtil
         string path = fromBytes
             ? Path.Combine(AssetDefine.PATH_DATA_TABLE, "Bytes", $"{assetName}.bytes")
             : Path.Combine(AssetDefine.PATH_DATA_TABLE, "Csv", $"{assetName}.csv");
+        return path;
+    }
+
+    public static string GetMusicPath(string assetName)
+    {
+        string path = Path.Combine(Resource.PATH_MUSIC, $"{assetName}.mp3");
         return path;
     }
 }

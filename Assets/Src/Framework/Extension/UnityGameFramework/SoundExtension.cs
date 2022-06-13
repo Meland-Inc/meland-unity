@@ -1,7 +1,7 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime: 2022-06-07 16:56:43
+ * @LastEditTime: 2022-06-13 09:41:53
  * @LastEditors: xiang huan
  * @Description: 声音扩展
  * @FilePath: /meland-unity/Assets/Src/Framework/Extension/UnityGameFramework/SoundExtension.cs
@@ -32,7 +32,7 @@ public static class SoundExtension
         playSoundParams.VolumeInSoundGroup = 1f;
         playSoundParams.FadeInSeconds = FADE_VOLUME_DURATION;
         playSoundParams.SpatialBlend = 0f;
-        s_musicSerialId = soundComponent.PlaySound(soundAssetName, MConstant.SoundGroupType.MUSIC, MConstant.AssetPriority.MUSIC_ASSET, playSoundParams, null, userData);
+        s_musicSerialId = soundComponent.PlaySound(soundAssetName, SoundGroupType.Music, eLoadPriority.Normal, playSoundParams, null, userData);
         return s_musicSerialId;
     }
     /// <summary>
@@ -70,7 +70,7 @@ public static class SoundExtension
         playSoundParams.FadeInSeconds = fadeIn;
         playSoundParams.VolumeInSoundGroup = volume;
         playSoundParams.SpatialBlend = spatialBlend;
-        return soundComponent.PlaySound(soundAssetName, MConstant.SoundGroupType.SOUND, MConstant.AssetPriority.SOUND_ASSET, playSoundParams, bindingEntity != null ? bindingEntity : null, userData);
+        return soundComponent.PlaySound(soundAssetName, SoundGroupType.Sound, eLoadPriority.Normal, playSoundParams, bindingEntity != null ? bindingEntity : null, userData);
     }
 
     /// <summary>
@@ -83,7 +83,7 @@ public static class SoundExtension
     /// <returns>标识id</returns>
     public static int? PlaySound(this SoundComponent soundComponent, string soundAssetName, PlaySoundParams playSoundParams, Entity bindingEntity = null, object userData = null)
     {
-        return soundComponent.PlaySound(soundAssetName, MConstant.SoundGroupType.SOUND, MConstant.AssetPriority.SOUND_ASSET, playSoundParams, bindingEntity != null ? bindingEntity : null, userData);
+        return soundComponent.PlaySound(soundAssetName, SoundGroupType.Sound, eLoadPriority.Normal, playSoundParams, bindingEntity != null ? bindingEntity : null, userData);
     }
 
     /// <summary>

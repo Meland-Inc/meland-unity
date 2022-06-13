@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 public static class AssetDefine
@@ -28,4 +29,10 @@ public enum eLoadPriority : int
     PlayerRole,
     High = 3000,
     Terrain,
+}
+
+public enum SoundGroupType : string
+{
+    Music = "Music",
+    Sound = "Sound",
 }

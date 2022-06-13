@@ -43,7 +43,7 @@ public static class DataTableExtension
 
         string name = splitNames.Length > 1 ? splitNames[1] : null;
         DataTableBase dataTable = dataTableComponent.CreateDataTable(dataRowType, name);
-        dataTable.ReadData(dataTableAssetName, MConstant.AssetPriority.DATA_TABLE_ASSET, userData);
+        dataTable.ReadData(dataTableAssetName, eLoadPriority.High, userData);
     }
 }
 

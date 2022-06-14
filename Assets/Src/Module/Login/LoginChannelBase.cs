@@ -1,20 +1,11 @@
+
 public abstract class LoginChannelBase : ILoginChannel
 {
     public abstract LoginDefine.eLoginChannel Channel { get; }
 
-    public virtual string Token { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-    public virtual string UserID { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-
-    public void CreatePlayer(string playerName)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void GetPlayerInfo()
-    {
-        GetPlayersAction.Req();
-    }
-
+    public virtual string Token { get; protected set; }
+    public virtual string UserID { get; protected set; }
+    public System.Action OnLoginSuccess { get; set; } = delegate { };
     public void LoginWithAccount(string account, string password)
     {
         throw new System.NotImplementedException();
@@ -30,13 +21,10 @@ public abstract class LoginChannelBase : ILoginChannel
         throw new System.NotImplementedException();
     }
 
-    public void Logout()
-    {
-        throw new System.NotImplementedException();
-    }
+    public abstract void Logout();
 
-    public void Register(string account, string userName, string password)
-    {
-        throw new System.NotImplementedException();
-    }
+    public abstract void Register(string account, string userName, string password);
+
+    public abstract void Start();
+    public abstract void End();
 }

@@ -11,4 +11,5 @@ public enum eUIGroup
 public enum eFUIPackage
 {
     Common,
+    CreateRole,
 }

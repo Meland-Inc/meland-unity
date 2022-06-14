@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-20 14:20:27
- * @LastEditTime: 2022-06-13 09:36:09
- * @LastEditors: xiang huan
+ * @LastEditTime: 2022-06-14 15:14:21
+ * @LastEditors: mangit
  * @Description: 资源工具类
- * @FilePath: /meland-unity/Assets/Src/Util/AssetUtil.cs
+ * @FilePath: /Assets/Src/Util/AssetUtil.cs
  * 
  */
 
@@ -22,7 +22,7 @@ public static class AssetUtil
 
     public static string GetMusicPath(string assetName)
     {
-        string path = Path.Combine(Resource.PATH_MUSIC, $"{assetName}.mp3");
+        string path = Path.Combine(AssetDefine.PATH_MUSIC, $"{assetName}.mp3");
         return path;
     }
 }

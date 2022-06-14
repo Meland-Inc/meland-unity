@@ -9,26 +9,30 @@ using System;
 public abstract class FGUIForm : UIFormLogic
 {
     protected GComponent GCom;
+    protected UIPanel UIPanel;
     protected virtual bool Batching => true;//该界面是否开启批次合并
     protected virtual HitTestMode HitTestMode => HitTestMode.Default;//点击模式
     protected virtual RenderMode RenderMode => RenderMode.ScreenSpaceOverlay;//渲染模式
     protected virtual FitScreen FitScreenMode => FitScreen.FitSize;
 
+    protected bool Recycled { get; private set; } = false;
+
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
+        Recycled = false;
         gameObject.layer = LayerMask.NameToLayer("UI");
-        UIPanel uiPanel = GetComponent<UIPanel>();
-        GCom = uiPanel.ui;
+        UIPanel = GetComponent<UIPanel>();
+        GCom = UIPanel.ui;
         if (GCom == null)
         {
             MLog.Error(eLogTag.ui, "GCom is null,please set package name and component name in the panel");
         }
 
-        uiPanel.fitScreen = FitScreenMode;
-        uiPanel.SetHitTestMode(HitTestMode);
-        uiPanel.container.fairyBatching = Batching;
-        uiPanel.container.renderMode = RenderMode;
+        UIPanel.fitScreen = FitScreenMode;
+        UIPanel.SetHitTestMode(HitTestMode);
+        UIPanel.container.fairyBatching = Batching;
+        UIPanel.container.renderMode = RenderMode;
         GCom.SetSize(Screen.width, Screen.height);
         GCom.width = Screen.width;
         GCom.height = Screen.height;
@@ -36,6 +40,7 @@ public abstract class FGUIForm : UIFormLogic
 
     protected override void OnRecycle()
     {
+        Recycled = true;
         base.OnRecycle();
     }
 
@@ -46,6 +51,8 @@ public abstract class FGUIForm : UIFormLogic
         {
             cpt.OnOpen();
         });
+        OnStageResize();
+        GCom.onSizeChanged.Add(OnStageResize);
     }
 
     protected override void OnClose(bool isShutdown, object userData)
@@ -54,6 +61,7 @@ public abstract class FGUIForm : UIFormLogic
         {
             cpt.OnClose();
         });
+        GCom.onSizeChanged.Remove(OnStageResize);
         base.OnClose(isShutdown, userData);
     }
 
@@ -120,6 +128,20 @@ public abstract class FGUIForm : UIFormLogic
         });
     }
 
+    private void OnStageResize()
+    {
+        //     ForeachChildrenCpt((FGUILogicCpt cpt) =>
+        //    {
+        //        cpt.OnStateResize(GCom.width, GCom.height);
+        //    });
+        OnResize(GCom.width, GCom.height);
+    }
+
+    protected virtual void OnResize(float w, float h)
+    {
+        //
+    }
+
     protected override void InternalSetVisible(bool visible)
     {
         base.InternalSetVisible(visible);
@@ -151,5 +173,95 @@ public abstract class FGUIForm : UIFormLogic
     public GObject AddFguiObjectAt(GObject gobj, int index)
     {
         return GCom.AddChildAt(gobj, index);
+    }
+
+    public void Close()
+    {
+        UICenter.CloseUIForm(UIForm.SerialId);
+    }
+
+    protected GObject GetChild(string name)
+    {
+        return GCom.GetChild(name);
+    }
+
+    protected GObject GetChildAt(int index)
+    {
+        return GCom.GetChildAt(index);
+    }
+
+    protected GButton GetButton(string name)
+    {
+        return GCom.GetChild(name) as GButton;
+    }
+
+    protected GLabel GetLabel(string name)
+    {
+        return GCom.GetChild(name) as GLabel;
+    }
+
+    protected GProgressBar GetProgressBar(string name)
+    {
+        return GCom.GetChild(name) as GProgressBar;
+    }
+
+    protected GSlider GetSlider(string name)
+    {
+        return GCom.GetChild(name) as GSlider;
+    }
+
+    protected GComboBox GetComboBox(string name)
+    {
+        return GCom.GetChild(name) as GComboBox;
+    }
+
+    protected GList GetList(string name)
+    {
+        return GCom.GetChild(name) as GList;
+    }
+
+    protected GGraph GetGraph(string name)
+    {
+        return GCom.GetChild(name) as GGraph;
+    }
+
+    protected GImage GetImage(string name)
+    {
+        return GCom.GetChild(name) as GImage;
+    }
+
+    protected MLoader GetLoader(string name)
+    {
+        return GCom.GetChild(name) as MLoader;
+    }
+
+    protected GLoader3D GetLoader3D(string name)
+    {
+        return GCom.GetChild(name) as GLoader3D;
+    }
+
+    protected GGroup GetGroup(string name)
+    {
+        return GCom.GetChild(name) as GGroup;
+    }
+
+    protected GComponent GetCom(string name)
+    {
+        return GCom.GetChild(name) as GComponent;
+    }
+
+    protected GTextField GetTextField(string name)
+    {
+        return GCom.GetChild(name) as GTextField;
+    }
+
+    protected GTextInput GetTextInput(string name)
+    {
+        return GCom.GetChild(name) as GTextInput;
+    }
+
+    protected Controller GetController(string name)
+    {
+        return GCom.GetController(name);
     }
 }

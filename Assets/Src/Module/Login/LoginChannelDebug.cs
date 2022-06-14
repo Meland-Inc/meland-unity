@@ -1,18 +1,7 @@
 public class LoginChannelDebug : LoginChannelBase
 {
     public override LoginDefine.eLoginChannel Channel => LoginDefine.eLoginChannel.DEBUG;
-    public override string Token
-    {
-        get => GetToken();
-        set => SetToken(value);
-    }
-    public override string UserID
-    {
-        get => GetUserID();
-        set => SetUserID(value);
-    }
-    private string _token;
-    private string _userID;
+    public override string Token => GetToken();
 
     private string GetToken()
     {
@@ -20,18 +9,30 @@ public class LoginChannelDebug : LoginChannelBase
         return $"{data.Token} {data.DataHash} {UserID} {data.TimeStamp}";
     }
 
-    private void SetToken(string token)
+    public override void Logout()
     {
-        _token = token;
+        throw new System.NotImplementedException();
     }
 
-    private void SetUserID(string id)
+    public override void Register(string account, string userName, string password)
     {
-        _userID = id;
+        throw new System.NotImplementedException();
     }
 
-    private string GetUserID()
+    public override void Start()
     {
-        return _userID;
+        _ = UICenter.OpenUIForm<FormLoginDebug>(this);
+    }
+
+    public override void End()
+    {
+        MLog.Info(eLogTag.login, "On debug login channel end");
+    }
+
+    public void ConfirmLogin(string userID)
+    {
+        UserID = userID;
+        OnLoginSuccess.Invoke();
+        UICenter.CloseUIForm<FormLoginDebug>();
     }
 }

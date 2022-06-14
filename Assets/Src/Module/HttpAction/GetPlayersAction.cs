@@ -6,12 +6,15 @@ public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, GetPlayerHtt
 
     protected override void Receive(GetPlayerHttpRsp rsp, EmptyHttpReq req)
     {
-        Message.GetPlayerSuccess?.Invoke(rsp);
+        if (rsp.Code == 0)
+        {
+            BasicModule.LoginCenter.OnCheckRoleInfo(rsp.Info);
+        }
     }
 
     public static void Req()
     {
-        EmptyHttpReq req = GetReq();
+        EmptyHttpReq req = GenerateReq();
         SendAction<GetPlayersAction>(req);
     }
 }

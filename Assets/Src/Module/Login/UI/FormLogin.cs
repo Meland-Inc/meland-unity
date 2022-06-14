@@ -14,7 +14,7 @@ public class FormLogin : FGUIForm
         {
             return;
         }
-        BasicModule.LoginCenter.SetUserID(userID);
-        BasicModule.LoginCenter.ConnectGameServer();
+        // BasicModule.LoginCenter.SetUserID(userID);
+        // BasicModule.LoginCenter.ConnectGameServer();
     }
 }

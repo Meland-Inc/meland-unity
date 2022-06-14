@@ -17,13 +17,6 @@ public static class Message
 
     #endregion
 
-    #region  登陆
-
-    public static Action<GetPlayerHttpRsp> GetPlayerSuccess = delegate { };
-    public static Action<Bian.SigninPlayerResponse> SigninPlayerSuccess = delegate { };
-
-    #endregion
-
     #region  runtime
 
     public static Action<bool> WebReady = delegate { };

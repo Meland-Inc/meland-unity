@@ -1,3 +1,5 @@
+using System.Data;
+using System.Web;
 using System.Net.Http;
 using System;
 using System.Net;
@@ -130,7 +132,7 @@ public class HttpNetworkChannel : INetworkChannel
         HttpChannelRspPacket packet = new()
         {
             TextData = www.downloadHandler.text,
-            Url = www.url
+            Url = www.url.Split('?')[0],//去掉参数
         };
         _receivePacketPool.Fire(this, packet);
     }
@@ -164,32 +166,34 @@ public class HttpNetworkChannel : INetworkChannel
         string url = packet.Url;
         if (packet.Params != null)
         {
-            url += "?";
+            if (url.IndexOf('?') == -1)
+            {
+                url += "?";
+            }
             foreach (KeyValuePair<string, string> item in packet.Params)
             {
                 url += item.Key + "=" + item.Value + "&";
             }
         }
-        UnityWebRequest www = UnityWebRequest.Get(url);
+        UnityWebRequest www = UnityWebRequest.Get(HttpUtility.UrlPathEncode(url));
         return www;
     }
 
     private UnityWebRequest RequestPost(HttpChannelReqPacket packet)
     {
-        WWWForm form = new();
-        if (packet.FormData != null)
+        if (packet.FormData == null)
         {
-            foreach (KeyValuePair<string, string> item in packet.FormData)
-            {
-                form.AddField(item.Key, item.Value);
-            }
+            return UnityWebRequest.Post(packet.Url, packet.StrData);
         }
-        return UnityWebRequest.Post(packet.Url, form);
+        else
+        {
+            return UnityWebRequest.Post(packet.Url, packet.FormData);
+        }
     }
 
     private UnityWebRequest RequestPut(HttpChannelReqPacket packet)
     {
-        UnityWebRequest www = UnityWebRequest.Put(packet.Url, packet.DataStr);
+        UnityWebRequest www = UnityWebRequest.Put(packet.Url, packet.StrData);
         return www;
     }
 

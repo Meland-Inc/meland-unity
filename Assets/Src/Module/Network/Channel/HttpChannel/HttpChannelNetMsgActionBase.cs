@@ -1,3 +1,4 @@
+using System.Reflection;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -11,11 +12,11 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
     public string ChannelName => NetworkDefine.CHANEL_NAME_HTTP;
     public string Name => Api;
     private HttpChannelReqPacket _reqPacket;
-    private TReq _req;
+    protected TReq ReqData;
     protected virtual HttpMethod Method => HttpMethod.Get;
-    protected virtual string DataStr => "";
     protected abstract string ApiRoot { get; }
     protected abstract string Api { get; }
+    protected virtual bool UseFormData => false;
     public static TAction GetAction<TAction>() where TAction : HttpChannelNetMsgActionBase<TReq, TRsp>, new()
     {
         TAction action = new();
@@ -29,14 +30,14 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
         BasicModule.NetMsgCenter.SendMsg(action);
     }
 
-    protected static TReq GetReq()
+    protected static TReq GenerateReq()
     {
         return new TReq();
     }
 
     private void InitReqPacket(TReq req)
     {
-        _req = req;
+        ReqData = req;
         _reqPacket = CreatePacket();
     }
 
@@ -51,11 +52,17 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
         {
             Url = ApiRoot + Api,//设置请求的url
             Method = Method,//设置请求方法
-            DataStr = DataStr,//设置请求参数
             Headers = GetHeaders(),//设置头部信息
             Params = GetParams(),//设置参数
-            FormData = GetFormData(),//设置表单数据
         };
+        if (UseFormData)
+        {
+            packet.FormData = GetFormData();
+        }
+        else
+        {
+            packet.StrData = GetStrData();
+        }
         return packet;
     }
 
@@ -68,12 +75,12 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
         TRsp rspPacket = JsonUtility.FromJson<TRsp>(textData);
         try
         {
-            Receive(rspPacket, _req);
+            Receive(rspPacket, ReqData);
         }
         catch (Exception e)
         {
             MLog.Error(eLogTag.network, e.Message);
-            Receive(null, _req);
+            Receive(null, ReqData);
         }
     }
 
@@ -91,11 +98,28 @@ public abstract class HttpChannelNetMsgActionBase<TReq, TRsp> : INetMsgAction wh
 
     protected virtual KeyValuePair<string, string>[] GetParams()
     {
-        return null;
+        FieldInfo[] fields = ReqData.GetType().GetFields();
+        KeyValuePair<string, string>[] paramData = new KeyValuePair<string, string>[fields.Length];
+        for (int i = 0; i < fields.Length; i++)
+        {
+            paramData[i] = new KeyValuePair<string, string>(fields[i].Name, fields[i].GetValue(ReqData).ToString());
+        }
+        return paramData;
     }
 
-    protected virtual KeyValuePair<string, string>[] GetFormData()
+    protected virtual WWWForm GetFormData()
     {
-        return null;
+        WWWForm form = new();
+        FieldInfo[] fields = ReqData.GetType().GetFields();
+        for (int i = 0; i < fields.Length; i++)
+        {
+            form.AddField(fields[i].Name, fields[i].GetValue(ReqData).ToString());
+        }
+        return form;
+    }
+
+    protected virtual string GetStrData()
+    {
+        return JsonUtility.ToJson(ReqData);
     }
 }

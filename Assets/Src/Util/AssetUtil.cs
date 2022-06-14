@@ -1,14 +1,15 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-20 14:20:27
- * @LastEditTime 2022-06-15 15:33:04
- * @LastEditors Please set LastEditors
+ * @LastEditTime: 2022-06-13 19:33:32
+ * @LastEditors: xiang huan
  * @Description: 资源工具类
- * @FilePath /Assets/Src/Util/AssetUtil.cs
+ * @FilePath: /meland-unity/Assets/Src/Util/AssetUtil.cs
  * 
  */
 
 using System.IO;
+using UnityEngine;
 
 public static class AssetUtil
 {

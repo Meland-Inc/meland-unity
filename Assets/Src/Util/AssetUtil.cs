@@ -1,10 +1,9 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-20 14:20:27
- * @LastEditTime 2022-06-22 09:47:00
- * @LastEditors Please set LastEditors
+ * @LastEditors: mangit
  * @Description: 资源工具类
- * @FilePath /Assets/Src/Util/AssetUtil.cs
+ * @FilePath: /Assets/Src/Util/AssetUtil.cs
  * 
  */
 

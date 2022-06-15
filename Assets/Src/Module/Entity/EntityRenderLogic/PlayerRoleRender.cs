@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerRoleRender : SceneEntityRenderBase
 {
     public TargetSameDirection TargetSameDirection;
+    private Avatar2D _avatar2D;
 
     private void OnBecameVisible()
     {
@@ -27,10 +28,15 @@ public class PlayerRoleRender : SceneEntityRenderBase
         }
 
         TargetSameDirection.SetTargetTsm(Camera.main.transform);
+        _avatar2D = gameObject.AddComponent<Avatar2D>();
+        _avatar2D.Init();
     }
 
     protected override void OnRecycle()
     {
+        Destroy(_avatar2D);
+        _avatar2D = null;
+
         base.OnRecycle();
     }
 }

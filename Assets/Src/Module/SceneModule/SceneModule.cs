@@ -20,6 +20,7 @@ public class SceneModule : MonoBehaviour
     /// 场景渲染管理
     /// </summary>
     public static SceneRender SceneRender;
+    public static WorldMap.WorldMapModule WorldMap;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class SceneModule : MonoBehaviour
 
         EntityMgr = Root.AddComponent<SceneEntityMgr>();
         SceneRender = Root.AddComponent<SceneRender>();
+        WorldMap = Root.AddComponent<WorldMap.WorldMapModule>();
     }
 
     private void OnDestroy()
@@ -41,5 +43,6 @@ public class SceneModule : MonoBehaviour
         Root = null;
         EntityMgr = null;
         SceneRender = null;
+        WorldMap = null;
     }
 }

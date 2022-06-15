@@ -17,6 +17,7 @@ public enum eLogTag
     test,
     resource,
     createRole,
+    worldMap,
 }
 
 /// <summary>

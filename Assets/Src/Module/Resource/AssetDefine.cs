@@ -18,6 +18,7 @@ public static class AssetDefine
     public static readonly string PATH_DRAGON_BONES = Path.Combine(PATH_ROOT, "DragonBones");
     public static readonly string PATH_AVATAR_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Avatar");
     public static readonly string PATH_ROLE_NAME = Path.Combine(PATH_ROOT, "Text/RoleName");
+    public static readonly string PATH_WORLD_MAP = Path.Combine(PATH_ROOT, "Sprite/WorldMap");
 }
 
 /// <summary>

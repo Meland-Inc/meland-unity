@@ -19,6 +19,8 @@ public static class DataManager
     /// 当前地图数据
     /// </summary>
     public static MapModel Map => s_map = s_map != null ? s_map : GetModel<MapModel>();
+    private static WorldMapData s_worldMap;
+    public static WorldMapData WorldMap => s_worldMap = s_worldMap != null ? s_worldMap : GetModel<WorldMapData>();
 
     private static GameObject s_dataRoot;
     private static readonly Dictionary<string, DataModelBase> s_modelMap = new();

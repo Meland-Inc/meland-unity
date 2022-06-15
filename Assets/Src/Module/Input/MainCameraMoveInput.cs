@@ -59,7 +59,7 @@ public class MainCameraMoveInput : MonoBehaviour
 
     private bool InputHorizontalRotate()
     {
-        if (_isRotateTweening is not 0 and > 0)
+        if (_isRotateTweening > 0)
         {
             return false;
         }
@@ -90,7 +90,7 @@ public class MainCameraMoveInput : MonoBehaviour
 
     private bool InputVerticalRotate()
     {
-        if (_isRotateTweening is not 0 and < 0)
+        if (_isRotateTweening < 0)
         {
             return false;
         }

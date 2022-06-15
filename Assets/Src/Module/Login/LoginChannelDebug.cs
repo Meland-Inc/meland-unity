@@ -21,7 +21,8 @@ public class LoginChannelDebug : LoginChannelBase
 
     public override void Start()
     {
-        _ = UICenter.OpenUIForm<FormLoginDebug>(this);
+        // _ = UICenter.OpenUIForm<FormLoginDebug>(this);
+        _ = UICenter.OpenUIForm<FormWorldMap>(this);
     }
 
     public override void End()

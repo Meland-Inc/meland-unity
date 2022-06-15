@@ -89,4 +89,26 @@ public static class FGUIExtension
 
         return child.RemoveUILogic<T>();
     }
+
+    public static Vector2 LocalToLocal(this GObject gobj, GObject target, Vector2 offset)
+    {
+        Vector2 globalV = gobj.LocalToGlobal(offset);
+        return target.GlobalToLocal(globalV);
+    }
+
+    public static T GetUILogic<T>(this GComponent gcom) where T : FGUILogicCpt, new()
+    {
+        return gcom.displayObject.gameObject.GetComponent<T>();
+    }
+
+    public static T GetSubUILogic<T>(this GComponent gcom, string childName) where T : FGUILogicCpt, new()
+    {
+        if (gcom.GetChild(childName) is not GComponent child)
+        {
+            MLog.Error(eLogTag.ui, $"child {childName} is null");
+            return null;
+        }
+
+        return child.GetUILogic<T>();
+    }
 }

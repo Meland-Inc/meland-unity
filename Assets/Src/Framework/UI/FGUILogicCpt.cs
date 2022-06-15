@@ -3,7 +3,7 @@ using UnityEngine;
 using FairyGUI;
 public abstract class FGUILogicCpt : MonoBehaviour
 {
-    protected GComponent GCom;
+    public GComponent GCom { get; private set; }
     protected void Awake()
     {
         DisplayObjectInfo info = GetComponent<DisplayObjectInfo>();
@@ -79,6 +79,11 @@ public abstract class FGUILogicCpt : MonoBehaviour
     }
 
     public virtual void InternalSetVisible(bool visible)
+    {
+
+    }
+
+    public virtual void OnStateResize(float w, float h)
     {
 
     }

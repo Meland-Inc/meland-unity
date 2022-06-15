@@ -18,8 +18,8 @@ public class Avatar2D : MonoBehaviour
     /// 是否有效 代表已经有avatar形象
     /// </summary>
     /// <value></value>
-    public bool IsValid { get => _isValid; }
-    private string _loadAssetPath;//加载资源的路径 为空说明不是加载的
+    public bool IsValid => _isValid;
+    private string _loadAssetPath;//非空代表走的资源加载的avatar
 
     [SerializeField]
     private GameObject _root;
@@ -27,13 +27,14 @@ public class Avatar2D : MonoBehaviour
     /// 真正显示avatar对象的根容器 可能是自己 也可能是生成出来的spine对象
     /// </summary>
     /// <value></value>
-    public GameObject Root { get => _root; }
+    public GameObject Root => _root;
 
     private void OnDestroy()
     {
         if (!string.IsNullOrEmpty(_loadAssetPath))
         {
             BasicModule.Asset.UnloadAsset<SkeletonDataAsset>(_loadAssetPath, GetHashCode());
+            _loadAssetPath = null;
         }
     }
 
@@ -48,7 +49,6 @@ public class Avatar2D : MonoBehaviour
 
     public void Init(string assetPath, Action<Avatar2D> finishCB)
     {
-        _loadAssetPath = assetPath;
         LoadAvatar(assetPath, finishCB);
     }
 
@@ -60,9 +60,16 @@ public class Avatar2D : MonoBehaviour
     /// <returns></returns>
     private async void LoadAvatar(string assetPath, Action<Avatar2D> finishCB)
     {
+        if (string.IsNullOrEmpty(assetPath))
+        {
+            MLog.Error(eLogTag.entity, "LoadAvatar assetPath is empty");
+            return;
+        }
+
         try
         {
-            SkeletonDataAsset asset = await BasicModule.Asset.LoadAsset<SkeletonDataAsset>(assetPath, GetHashCode());
+            _loadAssetPath = assetPath;
+            SkeletonDataAsset asset = await BasicModule.Asset.LoadAsset<SkeletonDataAsset>(assetPath, GetHashCode(), (int)eLoadPriority.Low);
             SkeletonAnimation animation = SkeletonAnimation.NewSkeletonAnimationGameObject(asset);
             _root = animation.gameObject;
             _root.transform.SetParent(transform, false);

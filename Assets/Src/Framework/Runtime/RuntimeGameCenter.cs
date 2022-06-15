@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 09:24:00
- * @LastEditTime 2022-06-15 16:59:57
- * @LastEditors Please set LastEditors
+ * @LastEditTime: 2022-06-15 20:13:27
+ * @LastEditors: xiang huan
  * @Description: runtime游戏模块
- * @FilePath /Assets/Src/Framework/Runtime/RuntimeGameCenter.cs
+ * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimeGameCenter.cs
  * 
  */
 using System.Collections.Generic;
@@ -70,7 +70,6 @@ public class RuntimeGameCenter : GameFrameworkComponent
             _canvasWebView.LogConsoleMessages = true;
             _canvasWebView.DragMode = DragMode.DragWithinPage;
             _canvasWebView.Visible = true;
-            EnableMode(RuntimeDefine.eEgretEnableMode.Login, true);
             _canvasWebView.WebView.UrlChanged += UrlChanged;
             _canvasWebView.WebView.MessageEmitted += OnMessageEmitted;
             SetUpHardwareKeyboard();

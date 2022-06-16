@@ -24,23 +24,23 @@ namespace Bian {
     static ResourcePointReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRyZXNvdXJjZV9wb2ludC5wcm90bxIEQmlhbiIpCglPYmpJZFJhdGUSDgoG",
-            "b2JqX2lkGAEgASgFEgwKBHJhdGUYAiABKAUi1wEKFVJlc291cmNlUG9pbnRT",
-            "ZXR0aW5ncxIKCgJpZBgBIAEoBRIlCgR0eXBlGAMgASgOMhcuQmlhbi5SZXNv",
-            "dXJjZVBvaW50VHlwZRIOCgZyYWRpdXMYBCABKAUSFwoPdXBkYXRlX2ludGVy",
-            "dmFsGAUgASgFEhYKDmdlbmVyYXRlX2xpbWl0GAYgASgFEhMKC3VwcGVyX2xp",
-            "bWl0GAcgASgFEiEKCGNvbnRlbnRzGAggAygLMg8uQmlhbi5PYmpJZFJhdGUS",
-            "EgoKdG90YWxfcmF0ZRgJIAEoBSraAQoRUmVzb3VyY2VQb2ludFR5cGUSLgoq",
-            "UmVzb3VyY2VQb2ludFR5cGVfUmVzb3VyY2VQb2ludFR5cGVVbmtub3duEAAS",
-            "LgoqUmVzb3VyY2VQb2ludFR5cGVfUmVzb3VyY2VQb2ludFR5cGVNb25zdGVy",
-            "EAESLworUmVzb3VyY2VQb2ludFR5cGVfUmVzb3VyY2VQb2ludFR5cGVNYXRl",
-            "cmlhbBACEjQKMFJlc291cmNlUG9pbnRUeXBlX1Jlc291cmNlUG9pbnRUeXBl",
-            "RmFsbGluZ09iamVjdBADYgZwcm90bzM="));
+            "ChRyZXNvdXJjZV9wb2ludC5wcm90bxIEQmlhbiInCgtSZXNvdXJjZU9iahIL",
+            "CgNjaWQYASABKAUSCwoDbnVtGAIgASgFIsoBChVSZXNvdXJjZVBvaW50U2V0",
+            "dGluZ3MSCgoCaWQYASABKAUSJQoEdHlwZRgCIAEoDjIXLkJpYW4uUmVzb3Vy",
+            "Y2VQb2ludFR5cGUSDgoGcmFkaXVzGAMgASgFEhcKD3VwZGF0ZV9pbnRlcnZh",
+            "bBgEIAEoBRIoCg1yZXNvdXJjZV9saXN0GAUgAygLMhEuQmlhbi5SZXNvdXJj",
+            "ZU9iahIVCg1wYXRyb2xfcmFkaXVzGAYgASgFEhQKDHBhdHJvbF9zcGVlZBgH",
+            "IAEoBSraAQoRUmVzb3VyY2VQb2ludFR5cGUSLgoqUmVzb3VyY2VQb2ludFR5",
+            "cGVfUmVzb3VyY2VQb2ludFR5cGVVbmtub3duEAASLgoqUmVzb3VyY2VQb2lu",
+            "dFR5cGVfUmVzb3VyY2VQb2ludFR5cGVNb25zdGVyEAESLworUmVzb3VyY2VQ",
+            "b2ludFR5cGVfUmVzb3VyY2VQb2ludFR5cGVNYXRlcmlhbBACEjQKMFJlc291",
+            "cmNlUG9pbnRUeXBlX1Jlc291cmNlUG9pbnRUeXBlRmFsbGluZ09iamVjdBAD",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.ResourcePointType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjIdRate), global::Bian.ObjIdRate.Parser, new[]{ "ObjId", "Rate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourcePointSettings), global::Bian.ResourcePointSettings.Parser, new[]{ "Id", "Type", "Radius", "UpdateInterval", "GenerateLimit", "UpperLimit", "Contents", "TotalRate" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourceObj), global::Bian.ResourceObj.Parser, new[]{ "Cid", "Num" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourcePointSettings), global::Bian.ResourcePointSettings.Parser, new[]{ "Id", "Type", "Radius", "UpdateInterval", "ResourceList", "PatrolRadius", "PatrolSpeed" }, null, null, null, null)
           }));
     }
     #endregion
@@ -69,16 +69,16 @@ namespace Bian {
   #endregion
 
   #region Messages
-  public sealed partial class ObjIdRate : pb::IMessage<ObjIdRate>
+  public sealed partial class ResourceObj : pb::IMessage<ResourceObj>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ObjIdRate> _parser = new pb::MessageParser<ObjIdRate>(() => new ObjIdRate());
+    private static readonly pb::MessageParser<ResourceObj> _parser = new pb::MessageParser<ResourceObj>(() => new ResourceObj());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ObjIdRate> Parser { get { return _parser; } }
+    public static pb::MessageParser<ResourceObj> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,7 +94,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ObjIdRate() {
+    public ResourceObj() {
       OnConstruction();
     }
 
@@ -102,59 +102,59 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ObjIdRate(ObjIdRate other) : this() {
-      objId_ = other.objId_;
-      rate_ = other.rate_;
+    public ResourceObj(ResourceObj other) : this() {
+      cid_ = other.cid_;
+      num_ = other.num_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ObjIdRate Clone() {
-      return new ObjIdRate(this);
+    public ResourceObj Clone() {
+      return new ResourceObj(this);
     }
 
-    /// <summary>Field number for the "obj_id" field.</summary>
-    public const int ObjIdFieldNumber = 1;
-    private int objId_;
+    /// <summary>Field number for the "cid" field.</summary>
+    public const int CidFieldNumber = 1;
+    private int cid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ObjId {
-      get { return objId_; }
+    public int Cid {
+      get { return cid_; }
       set {
-        objId_ = value;
+        cid_ = value;
       }
     }
 
-    /// <summary>Field number for the "rate" field.</summary>
-    public const int RateFieldNumber = 2;
-    private int rate_;
+    /// <summary>Field number for the "num" field.</summary>
+    public const int NumFieldNumber = 2;
+    private int num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Rate {
-      get { return rate_; }
+    public int Num {
+      get { return num_; }
       set {
-        rate_ = value;
+        num_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as ObjIdRate);
+      return Equals(other as ResourceObj);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ObjIdRate other) {
+    public bool Equals(ResourceObj other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ObjId != other.ObjId) return false;
-      if (Rate != other.Rate) return false;
+      if (Cid != other.Cid) return false;
+      if (Num != other.Num) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,8 +162,8 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ObjId != 0) hash ^= ObjId.GetHashCode();
-      if (Rate != 0) hash ^= Rate.GetHashCode();
+      if (Cid != 0) hash ^= Cid.GetHashCode();
+      if (Num != 0) hash ^= Num.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,13 +182,13 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ObjId != 0) {
+      if (Cid != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(ObjId);
+        output.WriteInt32(Cid);
       }
-      if (Rate != 0) {
+      if (Num != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(Rate);
+        output.WriteInt32(Num);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -200,13 +200,13 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ObjId != 0) {
+      if (Cid != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(ObjId);
+        output.WriteInt32(Cid);
       }
-      if (Rate != 0) {
+      if (Num != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(Rate);
+        output.WriteInt32(Num);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -218,11 +218,11 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ObjId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjId);
+      if (Cid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Cid);
       }
-      if (Rate != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Rate);
+      if (Num != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Num);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,15 +232,15 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ObjIdRate other) {
+    public void MergeFrom(ResourceObj other) {
       if (other == null) {
         return;
       }
-      if (other.ObjId != 0) {
-        ObjId = other.ObjId;
+      if (other.Cid != 0) {
+        Cid = other.Cid;
       }
-      if (other.Rate != 0) {
-        Rate = other.Rate;
+      if (other.Num != 0) {
+        Num = other.Num;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -258,11 +258,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ObjId = input.ReadInt32();
+            Cid = input.ReadInt32();
             break;
           }
           case 16: {
-            Rate = input.ReadInt32();
+            Num = input.ReadInt32();
             break;
           }
         }
@@ -281,11 +281,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ObjId = input.ReadInt32();
+            Cid = input.ReadInt32();
             break;
           }
           case 16: {
-            Rate = input.ReadInt32();
+            Num = input.ReadInt32();
             break;
           }
         }
@@ -336,10 +336,9 @@ namespace Bian {
       type_ = other.type_;
       radius_ = other.radius_;
       updateInterval_ = other.updateInterval_;
-      generateLimit_ = other.generateLimit_;
-      upperLimit_ = other.upperLimit_;
-      contents_ = other.contents_.Clone();
-      totalRate_ = other.totalRate_;
+      resourceList_ = other.resourceList_.Clone();
+      patrolRadius_ = other.patrolRadius_;
+      patrolSpeed_ = other.patrolSpeed_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -362,7 +361,7 @@ namespace Bian {
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 3;
+    public const int TypeFieldNumber = 2;
     private global::Bian.ResourcePointType type_ = global::Bian.ResourcePointType.ResourcePointTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -374,7 +373,7 @@ namespace Bian {
     }
 
     /// <summary>Field number for the "radius" field.</summary>
-    public const int RadiusFieldNumber = 4;
+    public const int RadiusFieldNumber = 3;
     private int radius_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -386,7 +385,7 @@ namespace Bian {
     }
 
     /// <summary>Field number for the "update_interval" field.</summary>
-    public const int UpdateIntervalFieldNumber = 5;
+    public const int UpdateIntervalFieldNumber = 4;
     private int updateInterval_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -397,50 +396,38 @@ namespace Bian {
       }
     }
 
-    /// <summary>Field number for the "generate_limit" field.</summary>
-    public const int GenerateLimitFieldNumber = 6;
-    private int generateLimit_;
+    /// <summary>Field number for the "resource_list" field.</summary>
+    public const int ResourceListFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Bian.ResourceObj> _repeated_resourceList_codec
+        = pb::FieldCodec.ForMessage(42, global::Bian.ResourceObj.Parser);
+    private readonly pbc::RepeatedField<global::Bian.ResourceObj> resourceList_ = new pbc::RepeatedField<global::Bian.ResourceObj>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int GenerateLimit {
-      get { return generateLimit_; }
+    public pbc::RepeatedField<global::Bian.ResourceObj> ResourceList {
+      get { return resourceList_; }
+    }
+
+    /// <summary>Field number for the "patrol_radius" field.</summary>
+    public const int PatrolRadiusFieldNumber = 6;
+    private int patrolRadius_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PatrolRadius {
+      get { return patrolRadius_; }
       set {
-        generateLimit_ = value;
+        patrolRadius_ = value;
       }
     }
 
-    /// <summary>Field number for the "upper_limit" field.</summary>
-    public const int UpperLimitFieldNumber = 7;
-    private int upperLimit_;
+    /// <summary>Field number for the "patrol_speed" field.</summary>
+    public const int PatrolSpeedFieldNumber = 7;
+    private int patrolSpeed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int UpperLimit {
-      get { return upperLimit_; }
+    public int PatrolSpeed {
+      get { return patrolSpeed_; }
       set {
-        upperLimit_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "contents" field.</summary>
-    public const int ContentsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Bian.ObjIdRate> _repeated_contents_codec
-        = pb::FieldCodec.ForMessage(66, global::Bian.ObjIdRate.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ObjIdRate> contents_ = new pbc::RepeatedField<global::Bian.ObjIdRate>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjIdRate> Contents {
-      get { return contents_; }
-    }
-
-    /// <summary>Field number for the "total_rate" field.</summary>
-    public const int TotalRateFieldNumber = 9;
-    private int totalRate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TotalRate {
-      get { return totalRate_; }
-      set {
-        totalRate_ = value;
+        patrolSpeed_ = value;
       }
     }
 
@@ -463,10 +450,9 @@ namespace Bian {
       if (Type != other.Type) return false;
       if (Radius != other.Radius) return false;
       if (UpdateInterval != other.UpdateInterval) return false;
-      if (GenerateLimit != other.GenerateLimit) return false;
-      if (UpperLimit != other.UpperLimit) return false;
-      if(!contents_.Equals(other.contents_)) return false;
-      if (TotalRate != other.TotalRate) return false;
+      if(!resourceList_.Equals(other.resourceList_)) return false;
+      if (PatrolRadius != other.PatrolRadius) return false;
+      if (PatrolSpeed != other.PatrolSpeed) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -478,10 +464,9 @@ namespace Bian {
       if (Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) hash ^= Type.GetHashCode();
       if (Radius != 0) hash ^= Radius.GetHashCode();
       if (UpdateInterval != 0) hash ^= UpdateInterval.GetHashCode();
-      if (GenerateLimit != 0) hash ^= GenerateLimit.GetHashCode();
-      if (UpperLimit != 0) hash ^= UpperLimit.GetHashCode();
-      hash ^= contents_.GetHashCode();
-      if (TotalRate != 0) hash ^= TotalRate.GetHashCode();
+      hash ^= resourceList_.GetHashCode();
+      if (PatrolRadius != 0) hash ^= PatrolRadius.GetHashCode();
+      if (PatrolSpeed != 0) hash ^= PatrolSpeed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -505,29 +490,25 @@ namespace Bian {
         output.WriteInt32(Id);
       }
       if (Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
       if (Radius != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt32(Radius);
       }
       if (UpdateInterval != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteInt32(UpdateInterval);
       }
-      if (GenerateLimit != 0) {
+      resourceList_.WriteTo(output, _repeated_resourceList_codec);
+      if (PatrolRadius != 0) {
         output.WriteRawTag(48);
-        output.WriteInt32(GenerateLimit);
+        output.WriteInt32(PatrolRadius);
       }
-      if (UpperLimit != 0) {
+      if (PatrolSpeed != 0) {
         output.WriteRawTag(56);
-        output.WriteInt32(UpperLimit);
-      }
-      contents_.WriteTo(output, _repeated_contents_codec);
-      if (TotalRate != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(TotalRate);
+        output.WriteInt32(PatrolSpeed);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -544,29 +525,25 @@ namespace Bian {
         output.WriteInt32(Id);
       }
       if (Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
       if (Radius != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt32(Radius);
       }
       if (UpdateInterval != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteInt32(UpdateInterval);
       }
-      if (GenerateLimit != 0) {
+      resourceList_.WriteTo(ref output, _repeated_resourceList_codec);
+      if (PatrolRadius != 0) {
         output.WriteRawTag(48);
-        output.WriteInt32(GenerateLimit);
+        output.WriteInt32(PatrolRadius);
       }
-      if (UpperLimit != 0) {
+      if (PatrolSpeed != 0) {
         output.WriteRawTag(56);
-        output.WriteInt32(UpperLimit);
-      }
-      contents_.WriteTo(ref output, _repeated_contents_codec);
-      if (TotalRate != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(TotalRate);
+        output.WriteInt32(PatrolSpeed);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -590,15 +567,12 @@ namespace Bian {
       if (UpdateInterval != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(UpdateInterval);
       }
-      if (GenerateLimit != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GenerateLimit);
+      size += resourceList_.CalculateSize(_repeated_resourceList_codec);
+      if (PatrolRadius != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PatrolRadius);
       }
-      if (UpperLimit != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UpperLimit);
-      }
-      size += contents_.CalculateSize(_repeated_contents_codec);
-      if (TotalRate != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalRate);
+      if (PatrolSpeed != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PatrolSpeed);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -624,15 +598,12 @@ namespace Bian {
       if (other.UpdateInterval != 0) {
         UpdateInterval = other.UpdateInterval;
       }
-      if (other.GenerateLimit != 0) {
-        GenerateLimit = other.GenerateLimit;
+      resourceList_.Add(other.resourceList_);
+      if (other.PatrolRadius != 0) {
+        PatrolRadius = other.PatrolRadius;
       }
-      if (other.UpperLimit != 0) {
-        UpperLimit = other.UpperLimit;
-      }
-      contents_.Add(other.contents_);
-      if (other.TotalRate != 0) {
-        TotalRate = other.TotalRate;
+      if (other.PatrolSpeed != 0) {
+        PatrolSpeed = other.PatrolSpeed;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -653,32 +624,28 @@ namespace Bian {
             Id = input.ReadInt32();
             break;
           }
-          case 24: {
+          case 16: {
             Type = (global::Bian.ResourcePointType) input.ReadEnum();
             break;
           }
-          case 32: {
+          case 24: {
             Radius = input.ReadInt32();
             break;
           }
-          case 40: {
+          case 32: {
             UpdateInterval = input.ReadInt32();
             break;
           }
+          case 42: {
+            resourceList_.AddEntriesFrom(input, _repeated_resourceList_codec);
+            break;
+          }
           case 48: {
-            GenerateLimit = input.ReadInt32();
+            PatrolRadius = input.ReadInt32();
             break;
           }
           case 56: {
-            UpperLimit = input.ReadInt32();
-            break;
-          }
-          case 66: {
-            contents_.AddEntriesFrom(input, _repeated_contents_codec);
-            break;
-          }
-          case 72: {
-            TotalRate = input.ReadInt32();
+            PatrolSpeed = input.ReadInt32();
             break;
           }
         }
@@ -700,32 +667,28 @@ namespace Bian {
             Id = input.ReadInt32();
             break;
           }
-          case 24: {
+          case 16: {
             Type = (global::Bian.ResourcePointType) input.ReadEnum();
             break;
           }
-          case 32: {
+          case 24: {
             Radius = input.ReadInt32();
             break;
           }
-          case 40: {
+          case 32: {
             UpdateInterval = input.ReadInt32();
             break;
           }
+          case 42: {
+            resourceList_.AddEntriesFrom(ref input, _repeated_resourceList_codec);
+            break;
+          }
           case 48: {
-            GenerateLimit = input.ReadInt32();
+            PatrolRadius = input.ReadInt32();
             break;
           }
           case 56: {
-            UpperLimit = input.ReadInt32();
-            break;
-          }
-          case 66: {
-            contents_.AddEntriesFrom(ref input, _repeated_contents_codec);
-            break;
-          }
-          case 72: {
-            TotalRate = input.ReadInt32();
+            PatrolSpeed = input.ReadInt32();
             break;
           }
         }

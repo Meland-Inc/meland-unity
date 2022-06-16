@@ -24,21 +24,16 @@ namespace Bian {
     static FallingObjectReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRmYWxsaW5nX29iamVjdC5wcm90bxIEQmlhbhoLbW9kZWwucHJvdG8iUAoU",
-            "RmFsbGluZ09iamVjdFJlY2lwZXQSCgoCaWQYASABKAUSLAoFYm94ZXMYAiAD",
-            "KAsyHS5CaWFuLkZhbGxpbmdPYmplY3RSZWNpcGV0Qm94IoABChdGYWxsaW5n",
-            "T2JqZWN0UmVjaXBldEJveBIKCgJpZBgBIAEoBRITCgtwb3NzaWJpbGl0eRgC",
-            "IAEoBRIsCgdvYmplY3RzGAMgAygLMhsuQmlhbi5GYWxsaW5nT2JqZWN0U2V0",
-            "dGluZ3MSFgoOdG90YWxfc3ViX3JhdGUYBCABKAUidwoVRmFsbGluZ09iamVj",
-            "dFNldHRpbmdzEiQKBm9iamVjdBgBIAEoCzIULkJpYW4uT2JqZWN0U2V0dGlu",
-            "Z3MSEQoJb2JqZWN0X2lkGAIgASgFEhAKCHF1YW50aXR5GAMgASgFEhMKC3Bv",
-            "c3NpYmlsaXR5GAQgASgFYgZwcm90bzM="));
+            "ChRmYWxsaW5nX29iamVjdC5wcm90bxIEQmlhbiJSChRGYWxsaW5nT2JqZWN0",
+            "UmVjaXBldBIKCgJpZBgBIAEoBRIuCglkcm9wX2xpc3QYAiADKAsyGy5CaWFu",
+            "LkZhbGxpbmdPYmplY3RTZXR0aW5ncyJeChVGYWxsaW5nT2JqZWN0U2V0dGlu",
+            "Z3MSEgoKb2JqZWN0X2NpZBgBIAEoBRILCgNudW0YAiABKAUSEwoLcG9zc2li",
+            "aWxpdHkYAyABKAUSDwoHcXVhbGl0eRgEIAEoBWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.ModelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObjectRecipet), global::Bian.FallingObjectRecipet.Parser, new[]{ "Id", "Boxes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObjectRecipetBox), global::Bian.FallingObjectRecipetBox.Parser, new[]{ "Id", "Possibility", "Objects", "TotalSubRate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObjectSettings), global::Bian.FallingObjectSettings.Parser, new[]{ "Object", "ObjectId", "Quantity", "Possibility" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObjectRecipet), global::Bian.FallingObjectRecipet.Parser, new[]{ "Id", "DropList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObjectSettings), global::Bian.FallingObjectSettings.Parser, new[]{ "ObjectCid", "Num", "Possibility", "Quality" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,7 +78,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FallingObjectRecipet(FallingObjectRecipet other) : this() {
       id_ = other.id_;
-      boxes_ = other.boxes_.Clone();
+      dropList_ = other.dropList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -105,18 +100,18 @@ namespace Bian {
       }
     }
 
-    /// <summary>Field number for the "boxes" field.</summary>
-    public const int BoxesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.FallingObjectRecipetBox> _repeated_boxes_codec
-        = pb::FieldCodec.ForMessage(18, global::Bian.FallingObjectRecipetBox.Parser);
-    private readonly pbc::RepeatedField<global::Bian.FallingObjectRecipetBox> boxes_ = new pbc::RepeatedField<global::Bian.FallingObjectRecipetBox>();
+    /// <summary>Field number for the "drop_list" field.</summary>
+    public const int DropListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Bian.FallingObjectSettings> _repeated_dropList_codec
+        = pb::FieldCodec.ForMessage(18, global::Bian.FallingObjectSettings.Parser);
+    private readonly pbc::RepeatedField<global::Bian.FallingObjectSettings> dropList_ = new pbc::RepeatedField<global::Bian.FallingObjectSettings>();
     /// <summary>
     /// 宝箱列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.FallingObjectRecipetBox> Boxes {
-      get { return boxes_; }
+    public pbc::RepeatedField<global::Bian.FallingObjectSettings> DropList {
+      get { return dropList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,7 +130,7 @@ namespace Bian {
         return true;
       }
       if (Id != other.Id) return false;
-      if(!boxes_.Equals(other.boxes_)) return false;
+      if(!dropList_.Equals(other.dropList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -144,7 +139,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      hash ^= boxes_.GetHashCode();
+      hash ^= dropList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,7 +162,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      boxes_.WriteTo(output, _repeated_boxes_codec);
+      dropList_.WriteTo(output, _repeated_dropList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -182,7 +177,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      boxes_.WriteTo(ref output, _repeated_boxes_codec);
+      dropList_.WriteTo(ref output, _repeated_dropList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -196,7 +191,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      size += boxes_.CalculateSize(_repeated_boxes_codec);
+      size += dropList_.CalculateSize(_repeated_dropList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -212,7 +207,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      boxes_.Add(other.boxes_);
+      dropList_.Add(other.dropList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -233,7 +228,7 @@ namespace Bian {
             break;
           }
           case 18: {
-            boxes_.AddEntriesFrom(input, _repeated_boxes_codec);
+            dropList_.AddEntriesFrom(input, _repeated_dropList_codec);
             break;
           }
         }
@@ -256,305 +251,7 @@ namespace Bian {
             break;
           }
           case 18: {
-            boxes_.AddEntriesFrom(ref input, _repeated_boxes_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class FallingObjectRecipetBox : pb::IMessage<FallingObjectRecipetBox>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<FallingObjectRecipetBox> _parser = new pb::MessageParser<FallingObjectRecipetBox>(() => new FallingObjectRecipetBox());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<FallingObjectRecipetBox> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.FallingObjectReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FallingObjectRecipetBox() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FallingObjectRecipetBox(FallingObjectRecipetBox other) : this() {
-      id_ = other.id_;
-      possibility_ = other.possibility_;
-      objects_ = other.objects_.Clone();
-      totalSubRate_ = other.totalSubRate_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FallingObjectRecipetBox Clone() {
-      return new FallingObjectRecipetBox(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
-    /// <summary>
-    /// 宝箱 id (box1, box2, ...)
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "possibility" field.</summary>
-    public const int PossibilityFieldNumber = 2;
-    private int possibility_;
-    /// <summary>
-    /// 宝箱触发万份比例
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Possibility {
-      get { return possibility_; }
-      set {
-        possibility_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "objects" field.</summary>
-    public const int ObjectsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.FallingObjectSettings> _repeated_objects_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.FallingObjectSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.FallingObjectSettings> objects_ = new pbc::RepeatedField<global::Bian.FallingObjectSettings>();
-    /// <summary>
-    /// 宝箱掉落物品设置
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.FallingObjectSettings> Objects {
-      get { return objects_; }
-    }
-
-    /// <summary>Field number for the "total_sub_rate" field.</summary>
-    public const int TotalSubRateFieldNumber = 4;
-    private int totalSubRate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TotalSubRate {
-      get { return totalSubRate_; }
-      set {
-        totalSubRate_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as FallingObjectRecipetBox);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(FallingObjectRecipetBox other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Possibility != other.Possibility) return false;
-      if(!objects_.Equals(other.objects_)) return false;
-      if (TotalSubRate != other.TotalSubRate) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (Possibility != 0) hash ^= Possibility.GetHashCode();
-      hash ^= objects_.GetHashCode();
-      if (TotalSubRate != 0) hash ^= TotalSubRate.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Possibility != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Possibility);
-      }
-      objects_.WriteTo(output, _repeated_objects_codec);
-      if (TotalSubRate != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(TotalSubRate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Possibility != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Possibility);
-      }
-      objects_.WriteTo(ref output, _repeated_objects_codec);
-      if (TotalSubRate != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(TotalSubRate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
-      if (Possibility != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Possibility);
-      }
-      size += objects_.CalculateSize(_repeated_objects_codec);
-      if (TotalSubRate != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSubRate);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(FallingObjectRecipetBox other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
-      if (other.Possibility != 0) {
-        Possibility = other.Possibility;
-      }
-      objects_.Add(other.objects_);
-      if (other.TotalSubRate != 0) {
-        TotalSubRate = other.TotalSubRate;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Possibility = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            objects_.AddEntriesFrom(input, _repeated_objects_codec);
-            break;
-          }
-          case 32: {
-            TotalSubRate = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Possibility = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            objects_.AddEntriesFrom(ref input, _repeated_objects_codec);
-            break;
-          }
-          case 32: {
-            TotalSubRate = input.ReadInt32();
+            dropList_.AddEntriesFrom(ref input, _repeated_dropList_codec);
             break;
           }
         }
@@ -581,7 +278,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.FallingObjectReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Bian.FallingObjectReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -601,10 +298,10 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FallingObjectSettings(FallingObjectSettings other) : this() {
-      object_ = other.object_ != null ? other.object_.Clone() : null;
-      objectId_ = other.objectId_;
-      quantity_ = other.quantity_;
+      objectCid_ = other.objectCid_;
+      num_ = other.num_;
       possibility_ = other.possibility_;
+      quality_ = other.quality_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -614,57 +311,35 @@ namespace Bian {
       return new FallingObjectSettings(this);
     }
 
-    /// <summary>Field number for the "object" field.</summary>
-    public const int ObjectFieldNumber = 1;
-    private global::Bian.ObjectSettings object_;
-    /// <summary>
-    /// 关联的物品
-    /// ObjectSettings object = 1;
-    /// </summary>
+    /// <summary>Field number for the "object_cid" field.</summary>
+    public const int ObjectCidFieldNumber = 1;
+    private int objectCid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectSettings Object {
-      get { return object_; }
+    public int ObjectCid {
+      get { return objectCid_; }
       set {
-        object_ = value;
+        objectCid_ = value;
       }
     }
 
-    /// <summary>Field number for the "object_id" field.</summary>
-    public const int ObjectIdFieldNumber = 2;
-    private int objectId_;
-    /// <summary>
-    /// 关联的物品 id
-    /// </summary>
+    /// <summary>Field number for the "num" field.</summary>
+    public const int NumFieldNumber = 2;
+    private int num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ObjectId {
-      get { return objectId_; }
+    public int Num {
+      get { return num_; }
       set {
-        objectId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "quantity" field.</summary>
-    public const int QuantityFieldNumber = 3;
-    private int quantity_;
-    /// <summary>
-    /// 数量
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Quantity {
-      get { return quantity_; }
-      set {
-        quantity_ = value;
+        num_ = value;
       }
     }
 
     /// <summary>Field number for the "possibility" field.</summary>
-    public const int PossibilityFieldNumber = 4;
+    public const int PossibilityFieldNumber = 3;
     private int possibility_;
     /// <summary>
-    /// 出现概率
+    /// 宝箱触发万份比例
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -672,6 +347,21 @@ namespace Bian {
       get { return possibility_; }
       set {
         possibility_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "quality" field.</summary>
+    public const int QualityFieldNumber = 4;
+    private int quality_;
+    /// <summary>
+    /// 品质  1~5
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Quality {
+      get { return quality_; }
+      set {
+        quality_ = value;
       }
     }
 
@@ -690,10 +380,10 @@ namespace Bian {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Object, other.Object)) return false;
-      if (ObjectId != other.ObjectId) return false;
-      if (Quantity != other.Quantity) return false;
+      if (ObjectCid != other.ObjectCid) return false;
+      if (Num != other.Num) return false;
       if (Possibility != other.Possibility) return false;
+      if (Quality != other.Quality) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -701,10 +391,10 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (object_ != null) hash ^= Object.GetHashCode();
-      if (ObjectId != 0) hash ^= ObjectId.GetHashCode();
-      if (Quantity != 0) hash ^= Quantity.GetHashCode();
+      if (ObjectCid != 0) hash ^= ObjectCid.GetHashCode();
+      if (Num != 0) hash ^= Num.GetHashCode();
       if (Possibility != 0) hash ^= Possibility.GetHashCode();
+      if (Quality != 0) hash ^= Quality.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -723,21 +413,21 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (object_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Object);
+      if (ObjectCid != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ObjectCid);
       }
-      if (ObjectId != 0) {
+      if (Num != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(ObjectId);
-      }
-      if (Quantity != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Quantity);
+        output.WriteInt32(Num);
       }
       if (Possibility != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt32(Possibility);
+      }
+      if (Quality != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Quality);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -749,21 +439,21 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (object_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Object);
+      if (ObjectCid != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ObjectCid);
       }
-      if (ObjectId != 0) {
+      if (Num != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(ObjectId);
-      }
-      if (Quantity != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Quantity);
+        output.WriteInt32(Num);
       }
       if (Possibility != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt32(Possibility);
+      }
+      if (Quality != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Quality);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -775,17 +465,17 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (object_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Object);
+      if (ObjectCid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectCid);
       }
-      if (ObjectId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectId);
-      }
-      if (Quantity != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
+      if (Num != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Num);
       }
       if (Possibility != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Possibility);
+      }
+      if (Quality != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quality);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -799,20 +489,17 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.object_ != null) {
-        if (object_ == null) {
-          Object = new global::Bian.ObjectSettings();
-        }
-        Object.MergeFrom(other.Object);
+      if (other.ObjectCid != 0) {
+        ObjectCid = other.ObjectCid;
       }
-      if (other.ObjectId != 0) {
-        ObjectId = other.ObjectId;
-      }
-      if (other.Quantity != 0) {
-        Quantity = other.Quantity;
+      if (other.Num != 0) {
+        Num = other.Num;
       }
       if (other.Possibility != 0) {
         Possibility = other.Possibility;
+      }
+      if (other.Quality != 0) {
+        Quality = other.Quality;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -829,23 +516,20 @@ namespace Bian {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (object_ == null) {
-              Object = new global::Bian.ObjectSettings();
-            }
-            input.ReadMessage(Object);
+          case 8: {
+            ObjectCid = input.ReadInt32();
             break;
           }
           case 16: {
-            ObjectId = input.ReadInt32();
+            Num = input.ReadInt32();
             break;
           }
           case 24: {
-            Quantity = input.ReadInt32();
+            Possibility = input.ReadInt32();
             break;
           }
           case 32: {
-            Possibility = input.ReadInt32();
+            Quality = input.ReadInt32();
             break;
           }
         }
@@ -863,23 +547,20 @@ namespace Bian {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (object_ == null) {
-              Object = new global::Bian.ObjectSettings();
-            }
-            input.ReadMessage(Object);
+          case 8: {
+            ObjectCid = input.ReadInt32();
             break;
           }
           case 16: {
-            ObjectId = input.ReadInt32();
+            Num = input.ReadInt32();
             break;
           }
           case 24: {
-            Quantity = input.ReadInt32();
+            Possibility = input.ReadInt32();
             break;
           }
           case 32: {
-            Possibility = input.ReadInt32();
+            Quality = input.ReadInt32();
             break;
           }
         }

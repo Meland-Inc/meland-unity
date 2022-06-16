@@ -1,4 +1,3 @@
-using System.Reflection;
 using System.Collections.Generic;
 using System.Net.Http;
 using HttpPacketDefine;
@@ -44,7 +43,7 @@ public class CreateRoleAction : AccountHttpActionBase<CreatePlayerReq, AccountRs
             // eyebrow = features[i++],
             shoes = features[eRoleFeaturePart.shoes],
         };
-        req.feature = JsonUtility.ToJson(playerFeature, true);
+        req.feature = JsonUtility.ToJson(playerFeature);
         req.osType = (int)OSType.OstypeMac;//todo:
         SendAction<CreateRoleAction>(req);
     }

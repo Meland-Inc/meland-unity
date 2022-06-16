@@ -1,6 +1,8 @@
+using System;
+
 namespace HttpPacketDefine
 {
-    [System.Serializable]
+    [Serializable]
     public abstract class HttpRspBase
     {
 
@@ -35,6 +37,7 @@ namespace HttpPacketDefine
 
     }
 
+    [Serializable]
     public class CreatePlayerRspInfo
     {
         public string Id;
@@ -45,6 +48,7 @@ namespace HttpPacketDefine
         public string Feature;
     }
 
+    [Serializable]
     public class RoleFeature
     {
         public int hair;

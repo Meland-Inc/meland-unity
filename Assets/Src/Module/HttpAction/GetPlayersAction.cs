@@ -1,10 +1,10 @@
 ﻿using HttpPacketDefine;
 
-public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, GetPlayerHttpRsp>
+public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, AccountRsp<GetPlayerHttpRspInfo>>
 {
     protected override string Api => "getplayer";
 
-    protected override void Receive(GetPlayerHttpRsp rsp, EmptyHttpReq req)
+    protected override void Receive(AccountRsp<GetPlayerHttpRspInfo> rsp, EmptyHttpReq req)
     {
         if (rsp.Code == 0)
         {
@@ -17,13 +17,6 @@ public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, GetPlayerHtt
         EmptyHttpReq req = GenerateReq();
         SendAction<GetPlayersAction>(req);
     }
-}
-
-public class GetPlayerHttpRsp : HttpRspBase
-{
-    public int Code;
-    public string Msg;
-    public GetPlayerHttpRspInfo Info;
 }
 
 [System.Serializable]

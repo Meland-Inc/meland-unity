@@ -53,7 +53,7 @@ namespace Bian {
             "bmcSCwoDY2lkGAEgASgFEhkKEWV4X3R5cGVfbm90X2J1aWxkGAIgASgFEhkK",
             "EWV4X2NpZHNfbm90X2J1aWxkGAMgASgJEhMKC2V4X3R5cGVfZGVsGAQgASgF",
             "EhMKC2V4X2NpZHNfZGVsGAUgASgJEhQKDGV4X3R5cGVfbW92ZRgGIAEoBRIU",
-            "CgxleF9jaWRzX21vdmUYByABKAkiiA8KEkNvbmZpZ0RhdGFTZXR0aW5ncxIt",
+            "CgxleF9jaWRzX21vdmUYByABKAki2w4KEkNvbmZpZ0RhdGFTZXR0aW5ncxIt",
             "Cg93aWRnZXRfc2V0dGluZ3MYASADKAsyFC5CaWFuLldpZGdldFNldHRpbmdz",
             "Ei0KD29iamVjdF9zZXR0aW5ncxgCIAMoCzIULkJpYW4uT2JqZWN0U2V0dGlu",
             "Z3MSMwoRb2JqX2dlYXJfc2V0dGluZ3MYAyADKAsyGC5CaWFuLk9iamVjdEdl",
@@ -69,8 +69,7 @@ namespace Bian {
             "IAMoCzINLkJpYW4uQ29kZUxpYhI1ChVwbGF5ZXJfbGV2ZWxfc2V0dGluZ3MY",
             "DSADKAsyFi5CaWFuLkVudGl0eUx2U2V0dGluZ3MSKQoNcm9sZV9zZXR0aW5n",
             "cxgOIAMoCzISLkJpYW4uUm9sZVNldHRpbmdzEikKDWNoYXRfc2V0dGluZ3MY",
-            "DyADKAsyEi5CaWFuLkNoYXRTZXR0aW5ncxIrCg5hdHRyaWJ1dGVfcmFuZBgQ",
-            "IAMoCzITLkJpYW4uQXR0cmlidXRlUmFuZBI6ChZzcGVjaWFsX2J1aWxkX3Nl",
+            "DyADKAsyEi5CaWFuLkNoYXRTZXR0aW5ncxI6ChZzcGVjaWFsX2J1aWxkX3Nl",
             "dHRpbmdzGBEgAygLMhouQmlhbi5TcGVjaWFsQnVpbGRTZXR0aW5ncxI4ChVh",
             "cmNoX2Zvcm11bGFfc2V0dGluZ3MYEiADKAsyGS5CaWFuLkFyY2hGb3JtdWxh",
             "U2V0dGluZ3MSLgoUc3Bhd25fcG9pbnRfc2V0dGluZ3MYEyADKAsyEC5CaWFu",
@@ -109,7 +108,7 @@ namespace Bian {
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CodeResource), global::Bian.CodeResource.Parser, new[]{ "CodeCid", "Category", "CanIndex", "CanIndexType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourcesTag), global::Bian.ResourcesTag.Parser, new[]{ "TarCodeRes", "TarWidgetType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ExclusionEntitySetting), global::Bian.ExclusionEntitySetting.Parser, new[]{ "Cid", "ExTypeNotBuild", "ExCidsNotBuild", "ExTypeDel", "ExCidsDel", "ExTypeMove", "ExCidsMove" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ConfigDataSettings), global::Bian.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "AttributeRand", "SpecialBuildSettings", "ArchFormulaSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "TaskSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ConfigDataSettings), global::Bian.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "SpecialBuildSettings", "ArchFormulaSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "TaskSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3210,7 +3209,6 @@ namespace Bian {
       playerLevelSettings_ = other.playerLevelSettings_.Clone();
       roleSettings_ = other.roleSettings_.Clone();
       chatSettings_ = other.chatSettings_.Clone();
-      attributeRand_ = other.attributeRand_.Clone();
       specialBuildSettings_ = other.specialBuildSettings_.Clone();
       archFormulaSettings_ = other.archFormulaSettings_.Clone();
       spawnPointSettings_ = other.spawnPointSettings_.Clone();
@@ -3408,22 +3406,14 @@ namespace Bian {
       get { return chatSettings_; }
     }
 
-    /// <summary>Field number for the "attribute_rand" field.</summary>
-    public const int AttributeRandFieldNumber = 16;
-    private static readonly pb::FieldCodec<global::Bian.AttributeRand> _repeated_attributeRand_codec
-        = pb::FieldCodec.ForMessage(130, global::Bian.AttributeRand.Parser);
-    private readonly pbc::RepeatedField<global::Bian.AttributeRand> attributeRand_ = new pbc::RepeatedField<global::Bian.AttributeRand>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.AttributeRand> AttributeRand {
-      get { return attributeRand_; }
-    }
-
     /// <summary>Field number for the "special_build_settings" field.</summary>
     public const int SpecialBuildSettingsFieldNumber = 17;
     private static readonly pb::FieldCodec<global::Bian.SpecialBuildSettings> _repeated_specialBuildSettings_codec
         = pb::FieldCodec.ForMessage(138, global::Bian.SpecialBuildSettings.Parser);
     private readonly pbc::RepeatedField<global::Bian.SpecialBuildSettings> specialBuildSettings_ = new pbc::RepeatedField<global::Bian.SpecialBuildSettings>();
+    /// <summary>
+    /// repeated AttributeRand          attribute_rand = 16;
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Bian.SpecialBuildSettings> SpecialBuildSettings {
@@ -3703,7 +3693,6 @@ namespace Bian {
       if(!playerLevelSettings_.Equals(other.playerLevelSettings_)) return false;
       if(!roleSettings_.Equals(other.roleSettings_)) return false;
       if(!chatSettings_.Equals(other.chatSettings_)) return false;
-      if(!attributeRand_.Equals(other.attributeRand_)) return false;
       if(!specialBuildSettings_.Equals(other.specialBuildSettings_)) return false;
       if(!archFormulaSettings_.Equals(other.archFormulaSettings_)) return false;
       if(!spawnPointSettings_.Equals(other.spawnPointSettings_)) return false;
@@ -3749,7 +3738,6 @@ namespace Bian {
       hash ^= playerLevelSettings_.GetHashCode();
       hash ^= roleSettings_.GetHashCode();
       hash ^= chatSettings_.GetHashCode();
-      hash ^= attributeRand_.GetHashCode();
       hash ^= specialBuildSettings_.GetHashCode();
       hash ^= archFormulaSettings_.GetHashCode();
       hash ^= spawnPointSettings_.GetHashCode();
@@ -3806,7 +3794,6 @@ namespace Bian {
       playerLevelSettings_.WriteTo(output, _repeated_playerLevelSettings_codec);
       roleSettings_.WriteTo(output, _repeated_roleSettings_codec);
       chatSettings_.WriteTo(output, _repeated_chatSettings_codec);
-      attributeRand_.WriteTo(output, _repeated_attributeRand_codec);
       specialBuildSettings_.WriteTo(output, _repeated_specialBuildSettings_codec);
       archFormulaSettings_.WriteTo(output, _repeated_archFormulaSettings_codec);
       spawnPointSettings_.WriteTo(output, _repeated_spawnPointSettings_codec);
@@ -3858,7 +3845,6 @@ namespace Bian {
       playerLevelSettings_.WriteTo(ref output, _repeated_playerLevelSettings_codec);
       roleSettings_.WriteTo(ref output, _repeated_roleSettings_codec);
       chatSettings_.WriteTo(ref output, _repeated_chatSettings_codec);
-      attributeRand_.WriteTo(ref output, _repeated_attributeRand_codec);
       specialBuildSettings_.WriteTo(ref output, _repeated_specialBuildSettings_codec);
       archFormulaSettings_.WriteTo(ref output, _repeated_archFormulaSettings_codec);
       spawnPointSettings_.WriteTo(ref output, _repeated_spawnPointSettings_codec);
@@ -3910,7 +3896,6 @@ namespace Bian {
       size += playerLevelSettings_.CalculateSize(_repeated_playerLevelSettings_codec);
       size += roleSettings_.CalculateSize(_repeated_roleSettings_codec);
       size += chatSettings_.CalculateSize(_repeated_chatSettings_codec);
-      size += attributeRand_.CalculateSize(_repeated_attributeRand_codec);
       size += specialBuildSettings_.CalculateSize(_repeated_specialBuildSettings_codec);
       size += archFormulaSettings_.CalculateSize(_repeated_archFormulaSettings_codec);
       size += spawnPointSettings_.CalculateSize(_repeated_spawnPointSettings_codec);
@@ -3963,7 +3948,6 @@ namespace Bian {
       playerLevelSettings_.Add(other.playerLevelSettings_);
       roleSettings_.Add(other.roleSettings_);
       chatSettings_.Add(other.chatSettings_);
-      attributeRand_.Add(other.attributeRand_);
       specialBuildSettings_.Add(other.specialBuildSettings_);
       archFormulaSettings_.Add(other.archFormulaSettings_);
       spawnPointSettings_.Add(other.spawnPointSettings_);
@@ -4065,10 +4049,6 @@ namespace Bian {
           }
           case 122: {
             chatSettings_.AddEntriesFrom(input, _repeated_chatSettings_codec);
-            break;
-          }
-          case 130: {
-            attributeRand_.AddEntriesFrom(input, _repeated_attributeRand_codec);
             break;
           }
           case 138: {
@@ -4239,10 +4219,6 @@ namespace Bian {
           }
           case 122: {
             chatSettings_.AddEntriesFrom(ref input, _repeated_chatSettings_codec);
-            break;
-          }
-          case 130: {
-            attributeRand_.AddEntriesFrom(ref input, _repeated_attributeRand_codec);
             break;
           }
           case 138: {

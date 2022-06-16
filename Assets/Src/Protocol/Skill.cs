@@ -24,51 +24,79 @@ namespace Bian {
     static SkillReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgtza2lsbC5wcm90bxIEQmlhbhoKYnVmZi5wcm90byJGChJTa2lsbFJhbmdl",
-            "U2V0dGluZ3MSIgoEdHlwZRgBIAEoDjIULkJpYW4uU2tpbGxSYW5nZVR5cGUS",
-            "DAoEYXJncxgCIAMoBSJHCgtTa2lsbEVmZmVjdBIqCgtlZmZlY3RfdHlwZRgB",
-            "IAEoDjIVLkJpYW4uU2tpbGxFZmZlY3RUeXBlEgwKBGFyZ3MYAiADKAUisgMK",
-            "DVNraWxsU2V0dGluZ3MSCgoCaWQYASABKAUSKgoLdGFyZ2V0X3R5cGUYAiAB",
-            "KA4yFS5CaWFuLlNraWxsVGFyZ2V0VHlwZRIQCghkaXN0YW5jZRgDIAEoBRIY",
-            "ChBhY2NtdWxhdGlvbl90aW1lGAQgASgFEh8KF2JlZm9yZV9hdHRhY2tfcm9s",
-            "bF90aW1lGAUgASgFEhQKDHJlbGVhc2VfdGltZRgGIAEoBRIXCg9hdHRhY2th",
-            "YmxlX21hc2sYByABKAUSMAoOcmFuZ2Vfc2V0dGluZ3MYCCABKAsyGC5CaWFu",
-            "LlNraWxsUmFuZ2VTZXR0aW5ncxImCgtlZmZlY3Rfc2VsZhgJIAMoCzIRLkJp",
-            "YW4uU2tpbGxFZmZlY3QSJwoMZWZmZWN0X2VuZW15GAogAygLMhEuQmlhbi5T",
-            "a2lsbEVmZmVjdBImCgpidWZmc19zZWxmGAsgAygLMhIuQmlhbi5CdWZmU2V0",
-            "dGluZ3MSJwoLYnVmZnNfZW5lbXkYDCADKAsyEi5CaWFuLkJ1ZmZTZXR0aW5n",
-            "cxIZChFjYW5fYnJlYWtfcHJlcGFyZRgNIAEoCCppCg9Ta2lsbFRhcmdldFR5",
-            "cGUSJwojU2tpbGxUYXJnZXRUeXBlX1NraWxsVGFyZ2V0VHlwZUZyZWUQABIt",
-            "CilTa2lsbFRhcmdldFR5cGVfU2tpbGxUYXJnZXRUeXBlV2l0aFRhcmdldBAB",
-            "KqQCChVTa2lsbEF0dGFja1RhcmdldFR5cGUSNgoyU2tpbGxBdHRhY2tUYXJn",
-            "ZXRUeXBlX1NraWxsQXR0YWNrVGFyZ2V0VHlwZVVua25vd24QABI2CjJTa2ls",
-            "bEF0dGFja1RhcmdldFR5cGVfU2tpbGxBdHRhY2tUYXJnZXRUeXBlTW9uc3Rl",
-            "chABEjIKLlNraWxsQXR0YWNrVGFyZ2V0VHlwZV9Ta2lsbEF0dGFja1Rhcmdl",
-            "dFR5cGVIb2UQAhIyCi5Ta2lsbEF0dGFja1RhcmdldFR5cGVfU2tpbGxBdHRh",
-            "Y2tUYXJnZXRUeXBlQXhlEAMSMwovU2tpbGxBdHRhY2tUYXJnZXRUeXBlX1Nr",
-            "aWxsQXR0YWNrVGFyZ2V0VHlwZUhhbmQQBCqyAwoOU2tpbGxSYW5nZVR5cGUS",
-            "KAokU2tpbGxSYW5nZVR5cGVfU2tpbGxSYW5nZVR5cGVVbmtub3duEAASJQoh",
-            "U2tpbGxSYW5nZVR5cGVfU2tpbGxSYW5nZVR5cGVMaW5lEAESJwojU2tpbGxS",
-            "YW5nZVR5cGVfU2tpbGxSYW5nZVR5cGVDaXJjbGUQAhIpCiVTa2lsbFJhbmdl",
-            "VHlwZV9Ta2lsbFJhbmdlVHlwZVNlY3RvcjYwEAMSKQolU2tpbGxSYW5nZVR5",
-            "cGVfU2tpbGxSYW5nZVR5cGVTZWN0b3I5MBAEEioKJlNraWxsUmFuZ2VUeXBl",
-            "X1NraWxsUmFuZ2VUeXBlU2VjdG9yMTIwEAUSKgomU2tpbGxSYW5nZVR5cGVf",
-            "U2tpbGxSYW5nZVR5cGVTZWN0b3IxODAQBhIlCiFTa2lsbFJhbmdlVHlwZV9T",
-            "a2lsbFJhbmdlVHlwZVJlY3QQBxInCiNTa2lsbFJhbmdlVHlwZV9Ta2lsbFJh",
-            "bmdlVHlwZVNlY3RvchAIEigKJFNraWxsUmFuZ2VUeXBlX1NraWxsUmFuZ2VU",
-            "eXBlUmhvbWJ1cxAJKoACCg9Ta2lsbEVmZmVjdFR5cGUSIwofU2tpbGxFZmZl",
-            "Y3RUeXBlX1NraWxsRWZmZWN0Tm9uZRAAEiYKIlNraWxsRWZmZWN0VHlwZV9T",
-            "a2lsbEVmZmVjdEFkZGJ1ZmYQARIlCiFTa2lsbEVmZmVjdFR5cGVfU2tpbGxF",
-            "ZmZlY3RBdHRhY2sQAhIkCiBTa2lsbEVmZmVjdFR5cGVfU2tpbGxFZmZlY3RB",
-            "ZGRIcBADEigKJFNraWxsRWZmZWN0VHlwZV9Ta2lsbEVmZmVjdEFkZEh1bmdy",
-            "eRAEEikKJVNraWxsRWZmZWN0VHlwZV9Ta2lsbEVmZmVjdEFkZFRoaXJzdHkQ",
-            "BWIGcHJvdG8z"));
+            "Cgtza2lsbC5wcm90bxIEQmlhbhoKYnVmZi5wcm90bxoLbW9kZWwucHJvdG8i",
+            "RgoSU2tpbGxSYW5nZVNldHRpbmdzEiIKBHR5cGUYASABKA4yFC5CaWFuLlNr",
+            "aWxsUmFuZ2VUeXBlEgwKBGFyZ3MYAiADKAUiRwoLU2tpbGxFZmZlY3QSKgoL",
+            "ZWZmZWN0X3R5cGUYASABKA4yFS5CaWFuLlNraWxsRWZmZWN0VHlwZRIMCgRh",
+            "cmdzGAIgAygFIrIDCg1Ta2lsbFNldHRpbmdzEgoKAmlkGAEgASgFEioKC3Rh",
+            "cmdldF90eXBlGAIgASgOMhUuQmlhbi5Ta2lsbFRhcmdldFR5cGUSEAoIZGlz",
+            "dGFuY2UYAyABKAUSGAoQYWNjbXVsYXRpb25fdGltZRgEIAEoBRIfChdiZWZv",
+            "cmVfYXR0YWNrX3JvbGxfdGltZRgFIAEoBRIUCgxyZWxlYXNlX3RpbWUYBiAB",
+            "KAUSFwoPYXR0YWNrYWJsZV9tYXNrGAcgASgFEjAKDnJhbmdlX3NldHRpbmdz",
+            "GAggASgLMhguQmlhbi5Ta2lsbFJhbmdlU2V0dGluZ3MSJgoLZWZmZWN0X3Nl",
+            "bGYYCSADKAsyES5CaWFuLlNraWxsRWZmZWN0EicKDGVmZmVjdF9lbmVteRgK",
+            "IAMoCzIRLkJpYW4uU2tpbGxFZmZlY3QSJgoKYnVmZnNfc2VsZhgLIAMoCzIS",
+            "LkJpYW4uQnVmZlNldHRpbmdzEicKC2J1ZmZzX2VuZW15GAwgAygLMhIuQmlh",
+            "bi5CdWZmU2V0dGluZ3MSGQoRY2FuX2JyZWFrX3ByZXBhcmUYDSABKAgiWgoK",
+            "RGFtYWdlRGF0YRIkCglkbWdfc3RhdGUYASABKA4yES5CaWFuLkRhbWFnZVN0",
+            "YXRlEhMKC2N1cnJlbnRfaW50GAIgASgFEhEKCWRlbHRhX2ludBgDIAEoBSJo",
+            "ChREYW1hZ2VFZmZlY3RCZWF0QmFjaxIlCgdjdXJfbG9jGAEgASgLMhQuQmlh",
+            "bi5FbnRpdHlMb2NhdGlvbhIpCgtiYWNrX3RvX3BvcxgCIAEoCzIULkJpYW4u",
+            "RW50aXR5TG9jYXRpb24i3wEKDERhbWFnZUVmZmVjdBIoCgplZmZlY3RUeXBl",
+            "GAEgASgOMhQuQmlhbi5EYW1hZ2VFZmZlY3RJZBISCgpleHBpcmVkX2F0GAIg",
+            "ASgFEhMKCWludF92YWx1ZRgKIAEoBUgAEhMKCXN0cl92YWx1ZRgLIAEoCUgA",
+            "EjUKD2JlYXRfYmFja192YWx1ZRgMIAEoCzIaLkJpYW4uRGFtYWdlRWZmZWN0",
+            "QmVhdEJhY2tIABIoCgxkYW1hZ2VfdmFsdWUYDSABKAsyEC5CaWFuLkRhbWFn",
+            "ZURhdGFIAEIGCgRkYXRhImQKDEVudGl0eURhbWFnZRIeCgZlbnRpdHkYASAB",
+            "KAsyDi5CaWFuLkVudGl0eUlkEhAKCHNraWxsX2lkGAIgASgFEiIKBmVmZmVj",
+            "dBgDIAMoCzISLkJpYW4uRGFtYWdlRWZmZWN0KmkKD1NraWxsVGFyZ2V0VHlw",
+            "ZRInCiNTa2lsbFRhcmdldFR5cGVfU2tpbGxUYXJnZXRUeXBlRnJlZRAAEi0K",
+            "KVNraWxsVGFyZ2V0VHlwZV9Ta2lsbFRhcmdldFR5cGVXaXRoVGFyZ2V0EAEq",
+            "pAIKFVNraWxsQXR0YWNrVGFyZ2V0VHlwZRI2CjJTa2lsbEF0dGFja1Rhcmdl",
+            "dFR5cGVfU2tpbGxBdHRhY2tUYXJnZXRUeXBlVW5rbm93bhAAEjYKMlNraWxs",
+            "QXR0YWNrVGFyZ2V0VHlwZV9Ta2lsbEF0dGFja1RhcmdldFR5cGVNb25zdGVy",
+            "EAESMgouU2tpbGxBdHRhY2tUYXJnZXRUeXBlX1NraWxsQXR0YWNrVGFyZ2V0",
+            "VHlwZUhvZRACEjIKLlNraWxsQXR0YWNrVGFyZ2V0VHlwZV9Ta2lsbEF0dGFj",
+            "a1RhcmdldFR5cGVBeGUQAxIzCi9Ta2lsbEF0dGFja1RhcmdldFR5cGVfU2tp",
+            "bGxBdHRhY2tUYXJnZXRUeXBlSGFuZBAEKrIDCg5Ta2lsbFJhbmdlVHlwZRIo",
+            "CiRTa2lsbFJhbmdlVHlwZV9Ta2lsbFJhbmdlVHlwZVVua25vd24QABIlCiFT",
+            "a2lsbFJhbmdlVHlwZV9Ta2lsbFJhbmdlVHlwZUxpbmUQARInCiNTa2lsbFJh",
+            "bmdlVHlwZV9Ta2lsbFJhbmdlVHlwZUNpcmNsZRACEikKJVNraWxsUmFuZ2VU",
+            "eXBlX1NraWxsUmFuZ2VUeXBlU2VjdG9yNjAQAxIpCiVTa2lsbFJhbmdlVHlw",
+            "ZV9Ta2lsbFJhbmdlVHlwZVNlY3RvcjkwEAQSKgomU2tpbGxSYW5nZVR5cGVf",
+            "U2tpbGxSYW5nZVR5cGVTZWN0b3IxMjAQBRIqCiZTa2lsbFJhbmdlVHlwZV9T",
+            "a2lsbFJhbmdlVHlwZVNlY3RvcjE4MBAGEiUKIVNraWxsUmFuZ2VUeXBlX1Nr",
+            "aWxsUmFuZ2VUeXBlUmVjdBAHEicKI1NraWxsUmFuZ2VUeXBlX1NraWxsUmFu",
+            "Z2VUeXBlU2VjdG9yEAgSKAokU2tpbGxSYW5nZVR5cGVfU2tpbGxSYW5nZVR5",
+            "cGVSaG9tYnVzEAkqgAIKD1NraWxsRWZmZWN0VHlwZRIjCh9Ta2lsbEVmZmVj",
+            "dFR5cGVfU2tpbGxFZmZlY3ROb25lEAASJgoiU2tpbGxFZmZlY3RUeXBlX1Nr",
+            "aWxsRWZmZWN0QWRkYnVmZhABEiUKIVNraWxsRWZmZWN0VHlwZV9Ta2lsbEVm",
+            "ZmVjdEF0dGFjaxACEiQKIFNraWxsRWZmZWN0VHlwZV9Ta2lsbEVmZmVjdEFk",
+            "ZEhwEAMSKAokU2tpbGxFZmZlY3RUeXBlX1NraWxsRWZmZWN0QWRkSHVuZ3J5",
+            "EAQSKQolU2tpbGxFZmZlY3RUeXBlX1NraWxsRWZmZWN0QWRkVGhpcnN0eRAF",
+            "KqIDCg5EYW1hZ2VFZmZlY3RJZBIoCiREYW1hZ2VFZmZlY3RJZF9EYW1hZ2VF",
+            "ZmZlY3RJZFVua25vd24QABImCiFEYW1hZ2VFZmZlY3RJZF9EYW1hZ2VFZmZl",
+            "Y3RJZDEwMDEQ6QcSJgohRGFtYWdlRWZmZWN0SWRfRGFtYWdlRWZmZWN0SWQx",
+            "MDAyEOoHEiYKIURhbWFnZUVmZmVjdElkX0RhbWFnZUVmZmVjdElkMTAwMxDr",
+            "BxImCiFEYW1hZ2VFZmZlY3RJZF9EYW1hZ2VFZmZlY3RJZDEwMDQQ7AcSJgoh",
+            "RGFtYWdlRWZmZWN0SWRfRGFtYWdlRWZmZWN0SWQxMDA1EO0HEiYKIURhbWFn",
+            "ZUVmZmVjdElkX0RhbWFnZUVmZmVjdElkMTAwNhDuBxImCiFEYW1hZ2VFZmZl",
+            "Y3RJZF9EYW1hZ2VFZmZlY3RJZDEwMDcQ7wcSJgohRGFtYWdlRWZmZWN0SWRf",
+            "RGFtYWdlRWZmZWN0SWQxMDA4EPAHEiYKIURhbWFnZUVmZmVjdElkX0RhbWFn",
+            "ZUVmZmVjdElkMTAwORDxBypyCgtEYW1hZ2VTdGF0ZRIhCh1EYW1hZ2VTdGF0",
+            "ZV9EYW1hZ2VTdGF0ZU5vcm1hbBAAEh8KG0RhbWFnZVN0YXRlX0RhbWFnZVN0",
+            "YXRlQ3JpdBABEh8KG0RhbWFnZVN0YXRlX0RhbWFnZVN0YXRlTWlzcxADYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.BuffReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.SkillTargetType), typeof(global::Bian.SkillAttackTargetType), typeof(global::Bian.SkillRangeType), typeof(global::Bian.SkillEffectType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Bian.BuffReflection.Descriptor, global::Bian.ModelReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.SkillTargetType), typeof(global::Bian.SkillAttackTargetType), typeof(global::Bian.SkillRangeType), typeof(global::Bian.SkillEffectType), typeof(global::Bian.DamageEffectId), typeof(global::Bian.DamageState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SkillRangeSettings), global::Bian.SkillRangeSettings.Parser, new[]{ "Type", "Args" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SkillEffect), global::Bian.SkillEffect.Parser, new[]{ "EffectType", "Args" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SkillSettings), global::Bian.SkillSettings.Parser, new[]{ "Id", "TargetType", "Distance", "AccmulationTime", "BeforeAttackRollTime", "ReleaseTime", "AttackableMask", "RangeSettings", "EffectSelf", "EffectEnemy", "BuffsSelf", "BuffsEnemy", "CanBreakPrepare" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SkillSettings), global::Bian.SkillSettings.Parser, new[]{ "Id", "TargetType", "Distance", "AccmulationTime", "BeforeAttackRollTime", "ReleaseTime", "AttackableMask", "RangeSettings", "EffectSelf", "EffectEnemy", "BuffsSelf", "BuffsEnemy", "CanBreakPrepare" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.DamageData), global::Bian.DamageData.Parser, new[]{ "DmgState", "CurrentInt", "DeltaInt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.DamageEffectBeatBack), global::Bian.DamageEffectBeatBack.Parser, new[]{ "CurLoc", "BackToPos" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.DamageEffect), global::Bian.DamageEffect.Parser, new[]{ "EffectType", "ExpiredAt", "IntValue", "StrValue", "BeatBackValue", "DamageValue" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityDamage), global::Bian.EntityDamage.Parser, new[]{ "Entity", "SkillId", "Effect" }, null, null, null, null)
           }));
     }
     #endregion
@@ -181,13 +209,68 @@ namespace Bian {
     /// </summary>
     [pbr::OriginalName("SkillEffectType_SkillEffectAddHp")] SkillEffectAddHp = 3,
     /// <summary>
-    /// 增加饥饿度
+    /// 增加饥饿度(deprecated)
     /// </summary>
     [pbr::OriginalName("SkillEffectType_SkillEffectAddHungry")] SkillEffectAddHungry = 4,
     /// <summary>
-    /// 增加饥渴度
+    /// 增加饥渴度(deprecated)
     /// </summary>
     [pbr::OriginalName("SkillEffectType_SkillEffectAddThirsty")] SkillEffectAddThirsty = 5,
+  }
+
+  public enum DamageEffectId {
+    [pbr::OriginalName("DamageEffectId_DamageEffectIdUnknown")] DamageEffectIdUnknown = 0,
+    /// <summary>
+    /// 普通攻击效果
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1001")] DamageEffectId1001 = 1001,
+    /// <summary>
+    /// 普通攻击效果（采集木头类）
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1002")] DamageEffectId1002 = 1002,
+    /// <summary>
+    /// 普通攻击效果（采集石头类）
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1003")] DamageEffectId1003 = 1003,
+    /// <summary>
+    /// 普通攻击效果（用手采集类）
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1004")] DamageEffectId1004 = 1004,
+    /// <summary>
+    /// 持续伤害效果
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1005")] DamageEffectId1005 = 1005,
+    /// <summary>
+    /// 持续加血效果
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1006")] DamageEffectId1006 = 1006,
+    /// <summary>
+    /// 一次性加血效果
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1007")] DamageEffectId1007 = 1007,
+    /// <summary>
+    /// 减速效果
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1008")] DamageEffectId1008 = 1008,
+    /// <summary>
+    /// 击退效果
+    /// </summary>
+    [pbr::OriginalName("DamageEffectId_DamageEffectId1009")] DamageEffectId1009 = 1009,
+  }
+
+  public enum DamageState {
+    /// <summary>
+    /// 普通伤害
+    /// </summary>
+    [pbr::OriginalName("DamageState_DamageStateNormal")] DamageStateNormal = 0,
+    /// <summary>
+    /// 暴击伤害
+    /// </summary>
+    [pbr::OriginalName("DamageState_DamageStateCrit")] DamageStateCrit = 1,
+    /// <summary>
+    /// 未命中
+    /// </summary>
+    [pbr::OriginalName("DamageState_DamageStateMiss")] DamageStateMiss = 3,
   }
 
   #endregion
@@ -1262,6 +1345,1222 @@ namespace Bian {
           }
           case 104: {
             CanBreakPrepare = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DamageData : pb::IMessage<DamageData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DamageData> _parser = new pb::MessageParser<DamageData>(() => new DamageData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DamageData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Bian.SkillReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageData(DamageData other) : this() {
+      dmgState_ = other.dmgState_;
+      currentInt_ = other.currentInt_;
+      deltaInt_ = other.deltaInt_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageData Clone() {
+      return new DamageData(this);
+    }
+
+    /// <summary>Field number for the "dmg_state" field.</summary>
+    public const int DmgStateFieldNumber = 1;
+    private global::Bian.DamageState dmgState_ = global::Bian.DamageState.DamageStateNormal;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.DamageState DmgState {
+      get { return dmgState_; }
+      set {
+        dmgState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "current_int" field.</summary>
+    public const int CurrentIntFieldNumber = 2;
+    private int currentInt_;
+    /// <summary>
+    /// 当前数值
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CurrentInt {
+      get { return currentInt_; }
+      set {
+        currentInt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delta_int" field.</summary>
+    public const int DeltaIntFieldNumber = 3;
+    private int deltaInt_;
+    /// <summary>
+    /// 变更数值 delta = current - 原来 (&lt;0为伤害, >0回血)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DeltaInt {
+      get { return deltaInt_; }
+      set {
+        deltaInt_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DamageData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DamageData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DmgState != other.DmgState) return false;
+      if (CurrentInt != other.CurrentInt) return false;
+      if (DeltaInt != other.DeltaInt) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DmgState != global::Bian.DamageState.DamageStateNormal) hash ^= DmgState.GetHashCode();
+      if (CurrentInt != 0) hash ^= CurrentInt.GetHashCode();
+      if (DeltaInt != 0) hash ^= DeltaInt.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DmgState != global::Bian.DamageState.DamageStateNormal) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DmgState);
+      }
+      if (CurrentInt != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(CurrentInt);
+      }
+      if (DeltaInt != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(DeltaInt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DmgState != global::Bian.DamageState.DamageStateNormal) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DmgState);
+      }
+      if (CurrentInt != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(CurrentInt);
+      }
+      if (DeltaInt != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(DeltaInt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DmgState != global::Bian.DamageState.DamageStateNormal) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DmgState);
+      }
+      if (CurrentInt != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurrentInt);
+      }
+      if (DeltaInt != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeltaInt);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DamageData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DmgState != global::Bian.DamageState.DamageStateNormal) {
+        DmgState = other.DmgState;
+      }
+      if (other.CurrentInt != 0) {
+        CurrentInt = other.CurrentInt;
+      }
+      if (other.DeltaInt != 0) {
+        DeltaInt = other.DeltaInt;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DmgState = (global::Bian.DamageState) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            CurrentInt = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            DeltaInt = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DmgState = (global::Bian.DamageState) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            CurrentInt = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            DeltaInt = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DamageEffectBeatBack : pb::IMessage<DamageEffectBeatBack>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DamageEffectBeatBack> _parser = new pb::MessageParser<DamageEffectBeatBack>(() => new DamageEffectBeatBack());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DamageEffectBeatBack> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Bian.SkillReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageEffectBeatBack() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageEffectBeatBack(DamageEffectBeatBack other) : this() {
+      curLoc_ = other.curLoc_ != null ? other.curLoc_.Clone() : null;
+      backToPos_ = other.backToPos_ != null ? other.backToPos_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageEffectBeatBack Clone() {
+      return new DamageEffectBeatBack(this);
+    }
+
+    /// <summary>Field number for the "cur_loc" field.</summary>
+    public const int CurLocFieldNumber = 1;
+    private global::Bian.EntityLocation curLoc_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.EntityLocation CurLoc {
+      get { return curLoc_; }
+      set {
+        curLoc_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "back_to_pos" field.</summary>
+    public const int BackToPosFieldNumber = 2;
+    private global::Bian.EntityLocation backToPos_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.EntityLocation BackToPos {
+      get { return backToPos_; }
+      set {
+        backToPos_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DamageEffectBeatBack);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DamageEffectBeatBack other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CurLoc, other.CurLoc)) return false;
+      if (!object.Equals(BackToPos, other.BackToPos)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (curLoc_ != null) hash ^= CurLoc.GetHashCode();
+      if (backToPos_ != null) hash ^= BackToPos.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (curLoc_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CurLoc);
+      }
+      if (backToPos_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BackToPos);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (curLoc_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CurLoc);
+      }
+      if (backToPos_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BackToPos);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (curLoc_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurLoc);
+      }
+      if (backToPos_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackToPos);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DamageEffectBeatBack other) {
+      if (other == null) {
+        return;
+      }
+      if (other.curLoc_ != null) {
+        if (curLoc_ == null) {
+          CurLoc = new global::Bian.EntityLocation();
+        }
+        CurLoc.MergeFrom(other.CurLoc);
+      }
+      if (other.backToPos_ != null) {
+        if (backToPos_ == null) {
+          BackToPos = new global::Bian.EntityLocation();
+        }
+        BackToPos.MergeFrom(other.BackToPos);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (curLoc_ == null) {
+              CurLoc = new global::Bian.EntityLocation();
+            }
+            input.ReadMessage(CurLoc);
+            break;
+          }
+          case 18: {
+            if (backToPos_ == null) {
+              BackToPos = new global::Bian.EntityLocation();
+            }
+            input.ReadMessage(BackToPos);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (curLoc_ == null) {
+              CurLoc = new global::Bian.EntityLocation();
+            }
+            input.ReadMessage(CurLoc);
+            break;
+          }
+          case 18: {
+            if (backToPos_ == null) {
+              BackToPos = new global::Bian.EntityLocation();
+            }
+            input.ReadMessage(BackToPos);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DamageEffect : pb::IMessage<DamageEffect>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DamageEffect> _parser = new pb::MessageParser<DamageEffect>(() => new DamageEffect());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DamageEffect> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Bian.SkillReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageEffect() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageEffect(DamageEffect other) : this() {
+      effectType_ = other.effectType_;
+      expiredAt_ = other.expiredAt_;
+      switch (other.DataCase) {
+        case DataOneofCase.IntValue:
+          IntValue = other.IntValue;
+          break;
+        case DataOneofCase.StrValue:
+          StrValue = other.StrValue;
+          break;
+        case DataOneofCase.BeatBackValue:
+          BeatBackValue = other.BeatBackValue.Clone();
+          break;
+        case DataOneofCase.DamageValue:
+          DamageValue = other.DamageValue.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DamageEffect Clone() {
+      return new DamageEffect(this);
+    }
+
+    /// <summary>Field number for the "effectType" field.</summary>
+    public const int EffectTypeFieldNumber = 1;
+    private global::Bian.DamageEffectId effectType_ = global::Bian.DamageEffectId.DamageEffectIdUnknown;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.DamageEffectId EffectType {
+      get { return effectType_; }
+      set {
+        effectType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expired_at" field.</summary>
+    public const int ExpiredAtFieldNumber = 2;
+    private int expiredAt_;
+    /// <summary>
+    /// 效果过期时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ExpiredAt {
+      get { return expiredAt_; }
+      set {
+        expiredAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "int_value" field.</summary>
+    public const int IntValueFieldNumber = 10;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int IntValue {
+      get { return dataCase_ == DataOneofCase.IntValue ? (int) data_ : 0; }
+      set {
+        data_ = value;
+        dataCase_ = DataOneofCase.IntValue;
+      }
+    }
+
+    /// <summary>Field number for the "str_value" field.</summary>
+    public const int StrValueFieldNumber = 11;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StrValue {
+      get { return dataCase_ == DataOneofCase.StrValue ? (string) data_ : ""; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        dataCase_ = DataOneofCase.StrValue;
+      }
+    }
+
+    /// <summary>Field number for the "beat_back_value" field.</summary>
+    public const int BeatBackValueFieldNumber = 12;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.DamageEffectBeatBack BeatBackValue {
+      get { return dataCase_ == DataOneofCase.BeatBackValue ? (global::Bian.DamageEffectBeatBack) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.BeatBackValue;
+      }
+    }
+
+    /// <summary>Field number for the "damage_value" field.</summary>
+    public const int DamageValueFieldNumber = 13;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.DamageData DamageValue {
+      get { return dataCase_ == DataOneofCase.DamageValue ? (global::Bian.DamageData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.DamageValue;
+      }
+    }
+
+    private object data_;
+    /// <summary>Enum of possible cases for the "data" oneof.</summary>
+    public enum DataOneofCase {
+      None = 0,
+      IntValue = 10,
+      StrValue = 11,
+      BeatBackValue = 12,
+      DamageValue = 13,
+    }
+    private DataOneofCase dataCase_ = DataOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataOneofCase DataCase {
+      get { return dataCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearData() {
+      dataCase_ = DataOneofCase.None;
+      data_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DamageEffect);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DamageEffect other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EffectType != other.EffectType) return false;
+      if (ExpiredAt != other.ExpiredAt) return false;
+      if (IntValue != other.IntValue) return false;
+      if (StrValue != other.StrValue) return false;
+      if (!object.Equals(BeatBackValue, other.BeatBackValue)) return false;
+      if (!object.Equals(DamageValue, other.DamageValue)) return false;
+      if (DataCase != other.DataCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EffectType != global::Bian.DamageEffectId.DamageEffectIdUnknown) hash ^= EffectType.GetHashCode();
+      if (ExpiredAt != 0) hash ^= ExpiredAt.GetHashCode();
+      if (dataCase_ == DataOneofCase.IntValue) hash ^= IntValue.GetHashCode();
+      if (dataCase_ == DataOneofCase.StrValue) hash ^= StrValue.GetHashCode();
+      if (dataCase_ == DataOneofCase.BeatBackValue) hash ^= BeatBackValue.GetHashCode();
+      if (dataCase_ == DataOneofCase.DamageValue) hash ^= DamageValue.GetHashCode();
+      hash ^= (int) dataCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EffectType != global::Bian.DamageEffectId.DamageEffectIdUnknown) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) EffectType);
+      }
+      if (ExpiredAt != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ExpiredAt);
+      }
+      if (dataCase_ == DataOneofCase.IntValue) {
+        output.WriteRawTag(80);
+        output.WriteInt32(IntValue);
+      }
+      if (dataCase_ == DataOneofCase.StrValue) {
+        output.WriteRawTag(90);
+        output.WriteString(StrValue);
+      }
+      if (dataCase_ == DataOneofCase.BeatBackValue) {
+        output.WriteRawTag(98);
+        output.WriteMessage(BeatBackValue);
+      }
+      if (dataCase_ == DataOneofCase.DamageValue) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DamageValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EffectType != global::Bian.DamageEffectId.DamageEffectIdUnknown) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) EffectType);
+      }
+      if (ExpiredAt != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ExpiredAt);
+      }
+      if (dataCase_ == DataOneofCase.IntValue) {
+        output.WriteRawTag(80);
+        output.WriteInt32(IntValue);
+      }
+      if (dataCase_ == DataOneofCase.StrValue) {
+        output.WriteRawTag(90);
+        output.WriteString(StrValue);
+      }
+      if (dataCase_ == DataOneofCase.BeatBackValue) {
+        output.WriteRawTag(98);
+        output.WriteMessage(BeatBackValue);
+      }
+      if (dataCase_ == DataOneofCase.DamageValue) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DamageValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (EffectType != global::Bian.DamageEffectId.DamageEffectIdUnknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EffectType);
+      }
+      if (ExpiredAt != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ExpiredAt);
+      }
+      if (dataCase_ == DataOneofCase.IntValue) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntValue);
+      }
+      if (dataCase_ == DataOneofCase.StrValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StrValue);
+      }
+      if (dataCase_ == DataOneofCase.BeatBackValue) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BeatBackValue);
+      }
+      if (dataCase_ == DataOneofCase.DamageValue) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DamageValue);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DamageEffect other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EffectType != global::Bian.DamageEffectId.DamageEffectIdUnknown) {
+        EffectType = other.EffectType;
+      }
+      if (other.ExpiredAt != 0) {
+        ExpiredAt = other.ExpiredAt;
+      }
+      switch (other.DataCase) {
+        case DataOneofCase.IntValue:
+          IntValue = other.IntValue;
+          break;
+        case DataOneofCase.StrValue:
+          StrValue = other.StrValue;
+          break;
+        case DataOneofCase.BeatBackValue:
+          if (BeatBackValue == null) {
+            BeatBackValue = new global::Bian.DamageEffectBeatBack();
+          }
+          BeatBackValue.MergeFrom(other.BeatBackValue);
+          break;
+        case DataOneofCase.DamageValue:
+          if (DamageValue == null) {
+            DamageValue = new global::Bian.DamageData();
+          }
+          DamageValue.MergeFrom(other.DamageValue);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EffectType = (global::Bian.DamageEffectId) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            ExpiredAt = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            IntValue = input.ReadInt32();
+            break;
+          }
+          case 90: {
+            StrValue = input.ReadString();
+            break;
+          }
+          case 98: {
+            global::Bian.DamageEffectBeatBack subBuilder = new global::Bian.DamageEffectBeatBack();
+            if (dataCase_ == DataOneofCase.BeatBackValue) {
+              subBuilder.MergeFrom(BeatBackValue);
+            }
+            input.ReadMessage(subBuilder);
+            BeatBackValue = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Bian.DamageData subBuilder = new global::Bian.DamageData();
+            if (dataCase_ == DataOneofCase.DamageValue) {
+              subBuilder.MergeFrom(DamageValue);
+            }
+            input.ReadMessage(subBuilder);
+            DamageValue = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            EffectType = (global::Bian.DamageEffectId) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            ExpiredAt = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            IntValue = input.ReadInt32();
+            break;
+          }
+          case 90: {
+            StrValue = input.ReadString();
+            break;
+          }
+          case 98: {
+            global::Bian.DamageEffectBeatBack subBuilder = new global::Bian.DamageEffectBeatBack();
+            if (dataCase_ == DataOneofCase.BeatBackValue) {
+              subBuilder.MergeFrom(BeatBackValue);
+            }
+            input.ReadMessage(subBuilder);
+            BeatBackValue = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Bian.DamageData subBuilder = new global::Bian.DamageData();
+            if (dataCase_ == DataOneofCase.DamageValue) {
+              subBuilder.MergeFrom(DamageValue);
+            }
+            input.ReadMessage(subBuilder);
+            DamageValue = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class EntityDamage : pb::IMessage<EntityDamage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EntityDamage> _parser = new pb::MessageParser<EntityDamage>(() => new EntityDamage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EntityDamage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Bian.SkillReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityDamage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityDamage(EntityDamage other) : this() {
+      entity_ = other.entity_ != null ? other.entity_.Clone() : null;
+      skillId_ = other.skillId_;
+      effect_ = other.effect_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityDamage Clone() {
+      return new EntityDamage(this);
+    }
+
+    /// <summary>Field number for the "entity" field.</summary>
+    public const int EntityFieldNumber = 1;
+    private global::Bian.EntityId entity_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.EntityId Entity {
+      get { return entity_; }
+      set {
+        entity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "skill_id" field.</summary>
+    public const int SkillIdFieldNumber = 2;
+    private int skillId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SkillId {
+      get { return skillId_; }
+      set {
+        skillId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "effect" field.</summary>
+    public const int EffectFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Bian.DamageEffect> _repeated_effect_codec
+        = pb::FieldCodec.ForMessage(26, global::Bian.DamageEffect.Parser);
+    private readonly pbc::RepeatedField<global::Bian.DamageEffect> effect_ = new pbc::RepeatedField<global::Bian.DamageEffect>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Bian.DamageEffect> Effect {
+      get { return effect_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EntityDamage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EntityDamage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Entity, other.Entity)) return false;
+      if (SkillId != other.SkillId) return false;
+      if(!effect_.Equals(other.effect_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (entity_ != null) hash ^= Entity.GetHashCode();
+      if (SkillId != 0) hash ^= SkillId.GetHashCode();
+      hash ^= effect_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (entity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Entity);
+      }
+      if (SkillId != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SkillId);
+      }
+      effect_.WriteTo(output, _repeated_effect_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (entity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Entity);
+      }
+      if (SkillId != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SkillId);
+      }
+      effect_.WriteTo(ref output, _repeated_effect_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (entity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Entity);
+      }
+      if (SkillId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SkillId);
+      }
+      size += effect_.CalculateSize(_repeated_effect_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EntityDamage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.entity_ != null) {
+        if (entity_ == null) {
+          Entity = new global::Bian.EntityId();
+        }
+        Entity.MergeFrom(other.Entity);
+      }
+      if (other.SkillId != 0) {
+        SkillId = other.SkillId;
+      }
+      effect_.Add(other.effect_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (entity_ == null) {
+              Entity = new global::Bian.EntityId();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 16: {
+            SkillId = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            effect_.AddEntriesFrom(input, _repeated_effect_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (entity_ == null) {
+              Entity = new global::Bian.EntityId();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 16: {
+            SkillId = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            effect_.AddEntriesFrom(ref input, _repeated_effect_codec);
             break;
           }
         }

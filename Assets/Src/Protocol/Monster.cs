@@ -25,54 +25,24 @@ namespace Bian {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg1tb25zdGVyLnByb3RvEgRCaWFuGgttb2RlbC5wcm90bxoMd2lkZ2V0LnBy",
-            "b3RvIrgFCg9Nb25zdGVyU2V0dGluZ3MSEQoJY29uZmlnX2lkGAEgASgFEh8K",
-            "BHR5cGUYAiABKA4yES5CaWFuLk1vbnN0ZXJUeXBlEgwKBG5hbWUYAyABKAkS",
-            "GAoEY2FtcBgEIAEoDjIKLkJpYW4uQ2FtcBIPCgdpc19ib3NzGAUgASgIEiYK",
-            "CGF0dF90eXBlGAYgASgOMhQuQmlhbi5Nb25zdGVyQXR0VHlwZRIZChFsb2Nr",
-            "X2VuZW15X3JhZGl1cxgHIAEoBRIsCgtwYXRyb2xfdHlwZRgIIAEoDjIXLkJp",
-            "YW4uTW9uc3RlclBhdHJvbFR5cGUSFQoNcGF0cm9sX3JhZGl1cxgJIAEoBRIW",
-            "Cg5za2lsbF9zZXF1ZW5jZRgKIAMoCRITCgt0ZW1wbGF0ZV9pZBgLIAEoBRIl",
-            "Cgdwcm9maWxlGAwgASgLMhQuQmlhbi5Nb25zdGVyUHJvZmlsZRInCgl0ZW1w",
-            "bGF0ZXMYDSADKAsyFC5CaWFuLk1vbnN0ZXJQcm9maWxlEhMKC2JvZHlfcmFk",
-            "aXVzGA4gASgFEgwKBGxpZmUYDyABKAUSJgoLYmVsb25nX3R5cGUYECABKA4y",
-            "ES5CaWFuLkVCZWxvbmdUeXBlEhQKDG1heF9tb3ZlX3BlchgRIAEoBRIqChBw",
-            "cmVfYXJ0aWNsZV90eXBlGBIgAygOMhAuQmlhbi5PYmplY3RUeXBlEhEKCWF0",
-            "dFdpZGdldBgTIAEoBRIdCgd3aWRnZXRzGBQgAygLMgwuQmlhbi5XaWRnZXQS",
-            "DgoGZnJhbWVzGBUgAygFEhAKCGNvZGVfbGliGBYgASgFEiUKBWFuaW1zGBcg",
-            "ASgLMhYuQmlhbi5FbnRpdHlBbmltYXRpb25zEisKDmVudGl0eV9wcmVsb2Fk",
-            "GBggASgLMhMuQmlhbi5FbnRpdHlQcmVsb2FkIoABCg5Nb25zdGVyUHJvZmls",
-            "ZRIrCg5lbnRpdHlfcHJvZmlsZRgBIAEoCzITLkJpYW4uRW50aXR5UHJvZmls",
-            "ZRIUCgxmb2xsb3dfc3BlZWQYAiABKAUSGQoRZmFsbGluZ19yZWNpcGVfaWQY",
-            "AyABKAUSEAoIZHJvcF9leHAYBCABKAUqSQoLRUJlbG9uZ1R5cGUSHQoZRUJl",
-            "bG9uZ1R5cGVfRUJlbG9uZ0tpbGxlchAAEhsKF0VCZWxvbmdUeXBlX0VCZWxv",
-            "bmdIYXRlEAFiBnByb3RvMw=="));
+            "b3RvIusCCg9Nb25zdGVyU2V0dGluZ3MSCwoDY2lkGAEgASgFEgwKBG5hbWUY",
+            "AiABKAkSEwoLYm9keV9yYWRpdXMYAyABKAUSJgoIYXR0X3R5cGUYBCABKA4y",
+            "FC5CaWFuLk1vbnN0ZXJBdHRUeXBlEhkKEWxvY2tfZW5lbXlfcmFkaXVzGAUg",
+            "ASgFEhMKC2NvbWJhdF9kaXN0GAYgASgFEg8KB2Ryb3BfaWQYByABKAUSFgoO",
+            "c2tpbGxfc2VxdWVuY2UYCCADKAUSJAoHcHJvZmlsZRgKIAEoCzITLkJpYW4u",
+            "RW50aXR5UHJvZmlsZRIdCgd3aWRnZXRzGFogAygLMgwuQmlhbi5XaWRnZXQS",
+            "DgoGZnJhbWVzGFsgAygFEiUKBWFuaW1zGFwgASgLMhYuQmlhbi5FbnRpdHlB",
+            "bmltYXRpb25zEisKDmVudGl0eV9wcmVsb2FkGF0gASgLMhMuQmlhbi5FbnRp",
+            "dHlQcmVsb2FkYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Bian.ModelReflection.Descriptor, global::Bian.WidgetReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.EBelongType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MonsterSettings), global::Bian.MonsterSettings.Parser, new[]{ "ConfigId", "Type", "Name", "Camp", "IsBoss", "AttType", "LockEnemyRadius", "PatrolType", "PatrolRadius", "SkillSequence", "TemplateId", "Profile", "Templates", "BodyRadius", "Life", "BelongType", "MaxMovePer", "PreArticleType", "AttWidget", "Widgets", "Frames", "CodeLib", "Anims", "EntityPreload" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MonsterProfile), global::Bian.MonsterProfile.Parser, new[]{ "EntityProfile", "FollowSpeed", "FallingRecipeId", "DropExp" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MonsterSettings), global::Bian.MonsterSettings.Parser, new[]{ "Cid", "Name", "BodyRadius", "AttType", "LockEnemyRadius", "CombatDist", "DropId", "SkillSequence", "Profile", "Widgets", "Frames", "Anims", "EntityPreload" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
-  #region Enums
-  /// <summary>
-  ///归属类型
-  /// </summary>
-  public enum EBelongType {
-    /// <summary>
-    ///归属于最后一刀
-    /// </summary>
-    [pbr::OriginalName("EBelongType_EBelongKiller")] EbelongKiller = 0,
-    /// <summary>
-    ///归属于仇恨最高的对象
-    /// </summary>
-    [pbr::OriginalName("EBelongType_EBelongHate")] EbelongHate = 1,
-  }
-
-  #endregion
-
   #region Messages
   /// <summary>
   /// 怪物配置.
@@ -111,28 +81,17 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonsterSettings(MonsterSettings other) : this() {
-      configId_ = other.configId_;
-      type_ = other.type_;
+      cid_ = other.cid_;
       name_ = other.name_;
-      camp_ = other.camp_;
-      isBoss_ = other.isBoss_;
+      bodyRadius_ = other.bodyRadius_;
       attType_ = other.attType_;
       lockEnemyRadius_ = other.lockEnemyRadius_;
-      patrolType_ = other.patrolType_;
-      patrolRadius_ = other.patrolRadius_;
+      combatDist_ = other.combatDist_;
+      dropId_ = other.dropId_;
       skillSequence_ = other.skillSequence_.Clone();
-      templateId_ = other.templateId_;
       profile_ = other.profile_ != null ? other.profile_.Clone() : null;
-      templates_ = other.templates_.Clone();
-      bodyRadius_ = other.bodyRadius_;
-      life_ = other.life_;
-      belongType_ = other.belongType_;
-      maxMovePer_ = other.maxMovePer_;
-      preArticleType_ = other.preArticleType_.Clone();
-      attWidget_ = other.attWidget_;
       widgets_ = other.widgets_.Clone();
       frames_ = other.frames_.Clone();
-      codeLib_ = other.codeLib_;
       anims_ = other.anims_ != null ? other.anims_.Clone() : null;
       entityPreload_ = other.entityPreload_ != null ? other.entityPreload_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -144,38 +103,23 @@ namespace Bian {
       return new MonsterSettings(this);
     }
 
-    /// <summary>Field number for the "config_id" field.</summary>
-    public const int ConfigIdFieldNumber = 1;
-    private int configId_;
+    /// <summary>Field number for the "cid" field.</summary>
+    public const int CidFieldNumber = 1;
+    private int cid_;
     /// <summary>
     /// 配置 id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ConfigId {
-      get { return configId_; }
+    public int Cid {
+      get { return cid_; }
       set {
-        configId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 2;
-    private global::Bian.MonsterType type_ = global::Bian.MonsterType.MonsterTypeUnknown;
-    /// <summary>
-    /// 类型
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterType Type {
-      get { return type_; }
-      set {
-        type_ = value;
+        cid_ = value;
       }
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 3;
+    public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
     /// 名字
@@ -189,156 +133,8 @@ namespace Bian {
       }
     }
 
-    /// <summary>Field number for the "camp" field.</summary>
-    public const int CampFieldNumber = 4;
-    private global::Bian.Camp camp_ = global::Bian.Camp.CampNeutral;
-    /// <summary>
-    /// 怪物阵营
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Camp Camp {
-      get { return camp_; }
-      set {
-        camp_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_boss" field.</summary>
-    public const int IsBossFieldNumber = 5;
-    private bool isBoss_;
-    /// <summary>
-    /// 是否为 boss
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsBoss {
-      get { return isBoss_; }
-      set {
-        isBoss_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "att_type" field.</summary>
-    public const int AttTypeFieldNumber = 6;
-    private global::Bian.MonsterAttType attType_ = global::Bian.MonsterAttType.MonsterAttTypeUnknown;
-    /// <summary>
-    /// 怪物 AI
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterAttType AttType {
-      get { return attType_; }
-      set {
-        attType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "lock_enemy_radius" field.</summary>
-    public const int LockEnemyRadiusFieldNumber = 7;
-    private int lockEnemyRadius_;
-    /// <summary>
-    /// 锁敌范围 (像素)
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int LockEnemyRadius {
-      get { return lockEnemyRadius_; }
-      set {
-        lockEnemyRadius_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "patrol_type" field.</summary>
-    public const int PatrolTypeFieldNumber = 8;
-    private global::Bian.MonsterPatrolType patrolType_ = global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown;
-    /// <summary>
-    /// 巡逻类型
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterPatrolType PatrolType {
-      get { return patrolType_; }
-      set {
-        patrolType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "patrol_radius" field.</summary>
-    public const int PatrolRadiusFieldNumber = 9;
-    private int patrolRadius_;
-    /// <summary>
-    /// 巡逻范围 (像素)
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int PatrolRadius {
-      get { return patrolRadius_; }
-      set {
-        patrolRadius_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "skill_sequence" field.</summary>
-    public const int SkillSequenceFieldNumber = 10;
-    private static readonly pb::FieldCodec<string> _repeated_skillSequence_codec
-        = pb::FieldCodec.ForString(82);
-    private readonly pbc::RepeatedField<string> skillSequence_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// 技能释放序列
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> SkillSequence {
-      get { return skillSequence_; }
-    }
-
-    /// <summary>Field number for the "template_id" field.</summary>
-    public const int TemplateIdFieldNumber = 11;
-    private int templateId_;
-    /// <summary>
-    /// 模板id(怪物属性自适应类型)
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TemplateId {
-      get { return templateId_; }
-      set {
-        templateId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "profile" field.</summary>
-    public const int ProfileFieldNumber = 12;
-    private global::Bian.MonsterProfile profile_;
-    /// <summary>
-    /// 怪物entity配置(实体怪物属性存放地)
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterProfile Profile {
-      get { return profile_; }
-      set {
-        profile_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "templates" field.</summary>
-    public const int TemplatesFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::Bian.MonsterProfile> _repeated_templates_codec
-        = pb::FieldCodec.ForMessage(106, global::Bian.MonsterProfile.Parser);
-    private readonly pbc::RepeatedField<global::Bian.MonsterProfile> templates_ = new pbc::RepeatedField<global::Bian.MonsterProfile>();
-    /// <summary>
-    /// 模板配置(成长属性,非成长的怪物用templates[0])
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.MonsterProfile> Templates {
-      get { return templates_; }
-    }
-
     /// <summary>Field number for the "body_radius" field.</summary>
-    public const int BodyRadiusFieldNumber = 14;
+    public const int BodyRadiusFieldNumber = 3;
     private int bodyRadius_;
     /// <summary>
     /// 身体半径(像素)
@@ -352,84 +148,96 @@ namespace Bian {
       }
     }
 
-    /// <summary>Field number for the "life" field.</summary>
-    public const int LifeFieldNumber = 15;
-    private int life_;
-    /// <summary>
-    /// 生存周期(配置单位 秒)
-    /// </summary>
+    /// <summary>Field number for the "att_type" field.</summary>
+    public const int AttTypeFieldNumber = 4;
+    private global::Bian.MonsterAttType attType_ = global::Bian.MonsterAttType.MonsterAttTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Life {
-      get { return life_; }
+    public global::Bian.MonsterAttType AttType {
+      get { return attType_; }
       set {
-        life_ = value;
+        attType_ = value;
       }
     }
 
-    /// <summary>Field number for the "belong_type" field.</summary>
-    public const int BelongTypeFieldNumber = 16;
-    private global::Bian.EBelongType belongType_ = global::Bian.EBelongType.EbelongKiller;
+    /// <summary>Field number for the "lock_enemy_radius" field.</summary>
+    public const int LockEnemyRadiusFieldNumber = 5;
+    private int lockEnemyRadius_;
     /// <summary>
-    /// 归属类型
+    /// 锁敌范围
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EBelongType BelongType {
-      get { return belongType_; }
+    public int LockEnemyRadius {
+      get { return lockEnemyRadius_; }
       set {
-        belongType_ = value;
+        lockEnemyRadius_ = value;
       }
     }
 
-    /// <summary>Field number for the "max_move_per" field.</summary>
-    public const int MaxMovePerFieldNumber = 17;
-    private int maxMovePer_;
+    /// <summary>Field number for the "combat_dist" field.</summary>
+    public const int CombatDistFieldNumber = 6;
+    private int combatDist_;
     /// <summary>
-    ///每次最大移动距离(非配置数据)
+    /// 脱战距离
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MaxMovePer {
-      get { return maxMovePer_; }
+    public int CombatDist {
+      get { return combatDist_; }
       set {
-        maxMovePer_ = value;
+        combatDist_ = value;
       }
     }
 
-    /// <summary>Field number for the "pre_article_type" field.</summary>
-    public const int PreArticleTypeFieldNumber = 18;
-    private static readonly pb::FieldCodec<global::Bian.ObjectType> _repeated_preArticleType_codec
-        = pb::FieldCodec.ForEnum(146, x => (int) x, x => (global::Bian.ObjectType) x);
-    private readonly pbc::RepeatedField<global::Bian.ObjectType> preArticleType_ = new pbc::RepeatedField<global::Bian.ObjectType>();
+    /// <summary>Field number for the "drop_id" field.</summary>
+    public const int DropIdFieldNumber = 7;
+    private int dropId_;
     /// <summary>
-    /// 前置物件类型列表
+    /// 掉落配置ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjectType> PreArticleType {
-      get { return preArticleType_; }
+    public int DropId {
+      get { return dropId_; }
+      set {
+        dropId_ = value;
+      }
     }
 
-    /// <summary>Field number for the "attWidget" field.</summary>
-    public const int AttWidgetFieldNumber = 19;
-    private int attWidget_;
+    /// <summary>Field number for the "skill_sequence" field.</summary>
+    public const int SkillSequenceFieldNumber = 8;
+    private static readonly pb::FieldCodec<int> _repeated_skillSequence_codec
+        = pb::FieldCodec.ForInt32(66);
+    private readonly pbc::RepeatedField<int> skillSequence_ = new pbc::RepeatedField<int>();
     /// <summary>
-    ///属性控件Id
+    ///技能列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int AttWidget {
-      get { return attWidget_; }
+    public pbc::RepeatedField<int> SkillSequence {
+      get { return skillSequence_; }
+    }
+
+    /// <summary>Field number for the "profile" field.</summary>
+    public const int ProfileFieldNumber = 10;
+    private global::Bian.EntityProfile profile_;
+    /// <summary>
+    /// 战斗属性信息
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.EntityProfile Profile {
+      get { return profile_; }
       set {
-        attWidget_ = value;
+        profile_ = value;
       }
     }
 
     /// <summary>Field number for the "widgets" field.</summary>
-    public const int WidgetsFieldNumber = 20;
+    public const int WidgetsFieldNumber = 90;
     private static readonly pb::FieldCodec<global::Bian.Widget> _repeated_widgets_codec
-        = pb::FieldCodec.ForMessage(162, global::Bian.Widget.Parser);
+        = pb::FieldCodec.ForMessage(722, global::Bian.Widget.Parser);
     private readonly pbc::RepeatedField<global::Bian.Widget> widgets_ = new pbc::RepeatedField<global::Bian.Widget>();
     /// <summary>
     /// 控件配置
@@ -441,9 +249,9 @@ namespace Bian {
     }
 
     /// <summary>Field number for the "frames" field.</summary>
-    public const int FramesFieldNumber = 21;
+    public const int FramesFieldNumber = 91;
     private static readonly pb::FieldCodec<int> _repeated_frames_codec
-        = pb::FieldCodec.ForInt32(170);
+        = pb::FieldCodec.ForInt32(730);
     private readonly pbc::RepeatedField<int> frames_ = new pbc::RepeatedField<int>();
     /// <summary>
     /// 关键帧(造型)
@@ -454,23 +262,8 @@ namespace Bian {
       get { return frames_; }
     }
 
-    /// <summary>Field number for the "code_lib" field.</summary>
-    public const int CodeLibFieldNumber = 22;
-    private int codeLib_;
-    /// <summary>
-    ///可用代码块id
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CodeLib {
-      get { return codeLib_; }
-      set {
-        codeLib_ = value;
-      }
-    }
-
     /// <summary>Field number for the "anims" field.</summary>
-    public const int AnimsFieldNumber = 23;
+    public const int AnimsFieldNumber = 92;
     private global::Bian.EntityAnimations anims_;
     /// <summary>
     /// 动画
@@ -485,7 +278,7 @@ namespace Bian {
     }
 
     /// <summary>Field number for the "entity_preload" field.</summary>
-    public const int EntityPreloadFieldNumber = 24;
+    public const int EntityPreloadFieldNumber = 93;
     private global::Bian.EntityPreload entityPreload_;
     /// <summary>
     /// 实体预制数据
@@ -514,28 +307,17 @@ namespace Bian {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ConfigId != other.ConfigId) return false;
-      if (Type != other.Type) return false;
+      if (Cid != other.Cid) return false;
       if (Name != other.Name) return false;
-      if (Camp != other.Camp) return false;
-      if (IsBoss != other.IsBoss) return false;
+      if (BodyRadius != other.BodyRadius) return false;
       if (AttType != other.AttType) return false;
       if (LockEnemyRadius != other.LockEnemyRadius) return false;
-      if (PatrolType != other.PatrolType) return false;
-      if (PatrolRadius != other.PatrolRadius) return false;
+      if (CombatDist != other.CombatDist) return false;
+      if (DropId != other.DropId) return false;
       if(!skillSequence_.Equals(other.skillSequence_)) return false;
-      if (TemplateId != other.TemplateId) return false;
       if (!object.Equals(Profile, other.Profile)) return false;
-      if(!templates_.Equals(other.templates_)) return false;
-      if (BodyRadius != other.BodyRadius) return false;
-      if (Life != other.Life) return false;
-      if (BelongType != other.BelongType) return false;
-      if (MaxMovePer != other.MaxMovePer) return false;
-      if(!preArticleType_.Equals(other.preArticleType_)) return false;
-      if (AttWidget != other.AttWidget) return false;
       if(!widgets_.Equals(other.widgets_)) return false;
       if(!frames_.Equals(other.frames_)) return false;
-      if (CodeLib != other.CodeLib) return false;
       if (!object.Equals(Anims, other.Anims)) return false;
       if (!object.Equals(EntityPreload, other.EntityPreload)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -545,28 +327,17 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ConfigId != 0) hash ^= ConfigId.GetHashCode();
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) hash ^= Type.GetHashCode();
+      if (Cid != 0) hash ^= Cid.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Camp != global::Bian.Camp.CampNeutral) hash ^= Camp.GetHashCode();
-      if (IsBoss != false) hash ^= IsBoss.GetHashCode();
+      if (BodyRadius != 0) hash ^= BodyRadius.GetHashCode();
       if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) hash ^= AttType.GetHashCode();
       if (LockEnemyRadius != 0) hash ^= LockEnemyRadius.GetHashCode();
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) hash ^= PatrolType.GetHashCode();
-      if (PatrolRadius != 0) hash ^= PatrolRadius.GetHashCode();
+      if (CombatDist != 0) hash ^= CombatDist.GetHashCode();
+      if (DropId != 0) hash ^= DropId.GetHashCode();
       hash ^= skillSequence_.GetHashCode();
-      if (TemplateId != 0) hash ^= TemplateId.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
-      hash ^= templates_.GetHashCode();
-      if (BodyRadius != 0) hash ^= BodyRadius.GetHashCode();
-      if (Life != 0) hash ^= Life.GetHashCode();
-      if (BelongType != global::Bian.EBelongType.EbelongKiller) hash ^= BelongType.GetHashCode();
-      if (MaxMovePer != 0) hash ^= MaxMovePer.GetHashCode();
-      hash ^= preArticleType_.GetHashCode();
-      if (AttWidget != 0) hash ^= AttWidget.GetHashCode();
       hash ^= widgets_.GetHashCode();
       hash ^= frames_.GetHashCode();
-      if (CodeLib != 0) hash ^= CodeLib.GetHashCode();
       if (anims_ != null) hash ^= Anims.GetHashCode();
       if (entityPreload_ != null) hash ^= EntityPreload.GetHashCode();
       if (_unknownFields != null) {
@@ -587,85 +358,47 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ConfigId != 0) {
+      if (Cid != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(ConfigId);
-      }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Type);
+        output.WriteInt32(Cid);
       }
       if (Name.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Camp);
-      }
-      if (IsBoss != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsBoss);
+      if (BodyRadius != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(BodyRadius);
       }
       if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteEnum((int) AttType);
       }
       if (LockEnemyRadius != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteInt32(LockEnemyRadius);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) PatrolType);
+      if (CombatDist != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CombatDist);
       }
-      if (PatrolRadius != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(PatrolRadius);
+      if (DropId != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(DropId);
       }
       skillSequence_.WriteTo(output, _repeated_skillSequence_codec);
-      if (TemplateId != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(TemplateId);
-      }
       if (profile_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(82);
         output.WriteMessage(Profile);
-      }
-      templates_.WriteTo(output, _repeated_templates_codec);
-      if (BodyRadius != 0) {
-        output.WriteRawTag(112);
-        output.WriteInt32(BodyRadius);
-      }
-      if (Life != 0) {
-        output.WriteRawTag(120);
-        output.WriteInt32(Life);
-      }
-      if (BelongType != global::Bian.EBelongType.EbelongKiller) {
-        output.WriteRawTag(128, 1);
-        output.WriteEnum((int) BelongType);
-      }
-      if (MaxMovePer != 0) {
-        output.WriteRawTag(136, 1);
-        output.WriteInt32(MaxMovePer);
-      }
-      preArticleType_.WriteTo(output, _repeated_preArticleType_codec);
-      if (AttWidget != 0) {
-        output.WriteRawTag(152, 1);
-        output.WriteInt32(AttWidget);
       }
       widgets_.WriteTo(output, _repeated_widgets_codec);
       frames_.WriteTo(output, _repeated_frames_codec);
-      if (CodeLib != 0) {
-        output.WriteRawTag(176, 1);
-        output.WriteInt32(CodeLib);
-      }
       if (anims_ != null) {
-        output.WriteRawTag(186, 1);
+        output.WriteRawTag(226, 5);
         output.WriteMessage(Anims);
       }
       if (entityPreload_ != null) {
-        output.WriteRawTag(194, 1);
+        output.WriteRawTag(234, 5);
         output.WriteMessage(EntityPreload);
       }
       if (_unknownFields != null) {
@@ -678,85 +411,47 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ConfigId != 0) {
+      if (Cid != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(ConfigId);
-      }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Type);
+        output.WriteInt32(Cid);
       }
       if (Name.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Camp);
-      }
-      if (IsBoss != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsBoss);
+      if (BodyRadius != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(BodyRadius);
       }
       if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteEnum((int) AttType);
       }
       if (LockEnemyRadius != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteInt32(LockEnemyRadius);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) PatrolType);
+      if (CombatDist != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CombatDist);
       }
-      if (PatrolRadius != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(PatrolRadius);
+      if (DropId != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(DropId);
       }
       skillSequence_.WriteTo(ref output, _repeated_skillSequence_codec);
-      if (TemplateId != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(TemplateId);
-      }
       if (profile_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(82);
         output.WriteMessage(Profile);
-      }
-      templates_.WriteTo(ref output, _repeated_templates_codec);
-      if (BodyRadius != 0) {
-        output.WriteRawTag(112);
-        output.WriteInt32(BodyRadius);
-      }
-      if (Life != 0) {
-        output.WriteRawTag(120);
-        output.WriteInt32(Life);
-      }
-      if (BelongType != global::Bian.EBelongType.EbelongKiller) {
-        output.WriteRawTag(128, 1);
-        output.WriteEnum((int) BelongType);
-      }
-      if (MaxMovePer != 0) {
-        output.WriteRawTag(136, 1);
-        output.WriteInt32(MaxMovePer);
-      }
-      preArticleType_.WriteTo(ref output, _repeated_preArticleType_codec);
-      if (AttWidget != 0) {
-        output.WriteRawTag(152, 1);
-        output.WriteInt32(AttWidget);
       }
       widgets_.WriteTo(ref output, _repeated_widgets_codec);
       frames_.WriteTo(ref output, _repeated_frames_codec);
-      if (CodeLib != 0) {
-        output.WriteRawTag(176, 1);
-        output.WriteInt32(CodeLib);
-      }
       if (anims_ != null) {
-        output.WriteRawTag(186, 1);
+        output.WriteRawTag(226, 5);
         output.WriteMessage(Anims);
       }
       if (entityPreload_ != null) {
-        output.WriteRawTag(194, 1);
+        output.WriteRawTag(234, 5);
         output.WriteMessage(EntityPreload);
       }
       if (_unknownFields != null) {
@@ -769,20 +464,14 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ConfigId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ConfigId);
-      }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (Cid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Cid);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Camp);
-      }
-      if (IsBoss != false) {
-        size += 1 + 1;
+      if (BodyRadius != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BodyRadius);
       }
       if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AttType);
@@ -790,41 +479,18 @@ namespace Bian {
       if (LockEnemyRadius != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(LockEnemyRadius);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PatrolType);
+      if (CombatDist != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CombatDist);
       }
-      if (PatrolRadius != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PatrolRadius);
+      if (DropId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DropId);
       }
       size += skillSequence_.CalculateSize(_repeated_skillSequence_codec);
-      if (TemplateId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TemplateId);
-      }
       if (profile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Profile);
       }
-      size += templates_.CalculateSize(_repeated_templates_codec);
-      if (BodyRadius != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BodyRadius);
-      }
-      if (Life != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Life);
-      }
-      if (BelongType != global::Bian.EBelongType.EbelongKiller) {
-        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) BelongType);
-      }
-      if (MaxMovePer != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(MaxMovePer);
-      }
-      size += preArticleType_.CalculateSize(_repeated_preArticleType_codec);
-      if (AttWidget != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(AttWidget);
-      }
       size += widgets_.CalculateSize(_repeated_widgets_codec);
       size += frames_.CalculateSize(_repeated_frames_codec);
-      if (CodeLib != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(CodeLib);
-      }
       if (anims_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Anims);
       }
@@ -843,20 +509,14 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.ConfigId != 0) {
-        ConfigId = other.ConfigId;
-      }
-      if (other.Type != global::Bian.MonsterType.MonsterTypeUnknown) {
-        Type = other.Type;
+      if (other.Cid != 0) {
+        Cid = other.Cid;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Camp != global::Bian.Camp.CampNeutral) {
-        Camp = other.Camp;
-      }
-      if (other.IsBoss != false) {
-        IsBoss = other.IsBoss;
+      if (other.BodyRadius != 0) {
+        BodyRadius = other.BodyRadius;
       }
       if (other.AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
         AttType = other.AttType;
@@ -864,44 +524,21 @@ namespace Bian {
       if (other.LockEnemyRadius != 0) {
         LockEnemyRadius = other.LockEnemyRadius;
       }
-      if (other.PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
-        PatrolType = other.PatrolType;
+      if (other.CombatDist != 0) {
+        CombatDist = other.CombatDist;
       }
-      if (other.PatrolRadius != 0) {
-        PatrolRadius = other.PatrolRadius;
+      if (other.DropId != 0) {
+        DropId = other.DropId;
       }
       skillSequence_.Add(other.skillSequence_);
-      if (other.TemplateId != 0) {
-        TemplateId = other.TemplateId;
-      }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.MonsterProfile();
+          Profile = new global::Bian.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
-      templates_.Add(other.templates_);
-      if (other.BodyRadius != 0) {
-        BodyRadius = other.BodyRadius;
-      }
-      if (other.Life != 0) {
-        Life = other.Life;
-      }
-      if (other.BelongType != global::Bian.EBelongType.EbelongKiller) {
-        BelongType = other.BelongType;
-      }
-      if (other.MaxMovePer != 0) {
-        MaxMovePer = other.MaxMovePer;
-      }
-      preArticleType_.Add(other.preArticleType_);
-      if (other.AttWidget != 0) {
-        AttWidget = other.AttWidget;
-      }
       widgets_.Add(other.widgets_);
       frames_.Add(other.frames_);
-      if (other.CodeLib != 0) {
-        CodeLib = other.CodeLib;
-      }
       if (other.anims_ != null) {
         if (anims_ == null) {
           Anims = new global::Bian.EntityAnimations();
@@ -930,106 +567,62 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ConfigId = input.ReadInt32();
+            Cid = input.ReadInt32();
             break;
           }
-          case 16: {
-            Type = (global::Bian.MonsterType) input.ReadEnum();
-            break;
-          }
-          case 26: {
+          case 18: {
             Name = input.ReadString();
             break;
           }
+          case 24: {
+            BodyRadius = input.ReadInt32();
+            break;
+          }
           case 32: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            IsBoss = input.ReadBool();
-            break;
-          }
-          case 48: {
             AttType = (global::Bian.MonsterAttType) input.ReadEnum();
             break;
           }
-          case 56: {
+          case 40: {
             LockEnemyRadius = input.ReadInt32();
             break;
           }
+          case 48: {
+            CombatDist = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            DropId = input.ReadInt32();
+            break;
+          }
+          case 66:
           case 64: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
-            break;
-          }
-          case 72: {
-            PatrolRadius = input.ReadInt32();
-            break;
-          }
-          case 82: {
             skillSequence_.AddEntriesFrom(input, _repeated_skillSequence_codec);
             break;
           }
-          case 88: {
-            TemplateId = input.ReadInt32();
-            break;
-          }
-          case 98: {
+          case 82: {
             if (profile_ == null) {
-              Profile = new global::Bian.MonsterProfile();
+              Profile = new global::Bian.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
-          case 106: {
-            templates_.AddEntriesFrom(input, _repeated_templates_codec);
-            break;
-          }
-          case 112: {
-            BodyRadius = input.ReadInt32();
-            break;
-          }
-          case 120: {
-            Life = input.ReadInt32();
-            break;
-          }
-          case 128: {
-            BelongType = (global::Bian.EBelongType) input.ReadEnum();
-            break;
-          }
-          case 136: {
-            MaxMovePer = input.ReadInt32();
-            break;
-          }
-          case 146:
-          case 144: {
-            preArticleType_.AddEntriesFrom(input, _repeated_preArticleType_codec);
-            break;
-          }
-          case 152: {
-            AttWidget = input.ReadInt32();
-            break;
-          }
-          case 162: {
+          case 722: {
             widgets_.AddEntriesFrom(input, _repeated_widgets_codec);
             break;
           }
-          case 170:
-          case 168: {
+          case 730:
+          case 728: {
             frames_.AddEntriesFrom(input, _repeated_frames_codec);
             break;
           }
-          case 176: {
-            CodeLib = input.ReadInt32();
-            break;
-          }
-          case 186: {
+          case 738: {
             if (anims_ == null) {
               Anims = new global::Bian.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
           }
-          case 194: {
+          case 746: {
             if (entityPreload_ == null) {
               EntityPreload = new global::Bian.EntityPreload();
             }
@@ -1052,425 +645,66 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ConfigId = input.ReadInt32();
+            Cid = input.ReadInt32();
             break;
           }
-          case 16: {
-            Type = (global::Bian.MonsterType) input.ReadEnum();
-            break;
-          }
-          case 26: {
+          case 18: {
             Name = input.ReadString();
             break;
           }
+          case 24: {
+            BodyRadius = input.ReadInt32();
+            break;
+          }
           case 32: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            IsBoss = input.ReadBool();
-            break;
-          }
-          case 48: {
             AttType = (global::Bian.MonsterAttType) input.ReadEnum();
             break;
           }
-          case 56: {
+          case 40: {
             LockEnemyRadius = input.ReadInt32();
             break;
           }
+          case 48: {
+            CombatDist = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            DropId = input.ReadInt32();
+            break;
+          }
+          case 66:
           case 64: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
-            break;
-          }
-          case 72: {
-            PatrolRadius = input.ReadInt32();
-            break;
-          }
-          case 82: {
             skillSequence_.AddEntriesFrom(ref input, _repeated_skillSequence_codec);
             break;
           }
-          case 88: {
-            TemplateId = input.ReadInt32();
-            break;
-          }
-          case 98: {
+          case 82: {
             if (profile_ == null) {
-              Profile = new global::Bian.MonsterProfile();
+              Profile = new global::Bian.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
-          case 106: {
-            templates_.AddEntriesFrom(ref input, _repeated_templates_codec);
-            break;
-          }
-          case 112: {
-            BodyRadius = input.ReadInt32();
-            break;
-          }
-          case 120: {
-            Life = input.ReadInt32();
-            break;
-          }
-          case 128: {
-            BelongType = (global::Bian.EBelongType) input.ReadEnum();
-            break;
-          }
-          case 136: {
-            MaxMovePer = input.ReadInt32();
-            break;
-          }
-          case 146:
-          case 144: {
-            preArticleType_.AddEntriesFrom(ref input, _repeated_preArticleType_codec);
-            break;
-          }
-          case 152: {
-            AttWidget = input.ReadInt32();
-            break;
-          }
-          case 162: {
+          case 722: {
             widgets_.AddEntriesFrom(ref input, _repeated_widgets_codec);
             break;
           }
-          case 170:
-          case 168: {
+          case 730:
+          case 728: {
             frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
             break;
           }
-          case 176: {
-            CodeLib = input.ReadInt32();
-            break;
-          }
-          case 186: {
+          case 738: {
             if (anims_ == null) {
               Anims = new global::Bian.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
           }
-          case 194: {
+          case 746: {
             if (entityPreload_ == null) {
               EntityPreload = new global::Bian.EntityPreload();
             }
             input.ReadMessage(EntityPreload);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class MonsterProfile : pb::IMessage<MonsterProfile>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<MonsterProfile> _parser = new pb::MessageParser<MonsterProfile>(() => new MonsterProfile());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<MonsterProfile> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MonsterReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MonsterProfile() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MonsterProfile(MonsterProfile other) : this() {
-      entityProfile_ = other.entityProfile_ != null ? other.entityProfile_.Clone() : null;
-      followSpeed_ = other.followSpeed_;
-      fallingRecipeId_ = other.fallingRecipeId_;
-      dropExp_ = other.dropExp_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MonsterProfile Clone() {
-      return new MonsterProfile(this);
-    }
-
-    /// <summary>Field number for the "entity_profile" field.</summary>
-    public const int EntityProfileFieldNumber = 1;
-    private global::Bian.EntityProfile entityProfile_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile EntityProfile {
-      get { return entityProfile_; }
-      set {
-        entityProfile_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "follow_speed" field.</summary>
-    public const int FollowSpeedFieldNumber = 2;
-    private int followSpeed_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int FollowSpeed {
-      get { return followSpeed_; }
-      set {
-        followSpeed_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "falling_recipe_id" field.</summary>
-    public const int FallingRecipeIdFieldNumber = 3;
-    private int fallingRecipeId_;
-    /// <summary>
-    /// 死亡掉落配方id
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int FallingRecipeId {
-      get { return fallingRecipeId_; }
-      set {
-        fallingRecipeId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "drop_exp" field.</summary>
-    public const int DropExpFieldNumber = 4;
-    private int dropExp_;
-    /// <summary>
-    /// 死亡掉落Exp
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int DropExp {
-      get { return dropExp_; }
-      set {
-        dropExp_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as MonsterProfile);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(MonsterProfile other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(EntityProfile, other.EntityProfile)) return false;
-      if (FollowSpeed != other.FollowSpeed) return false;
-      if (FallingRecipeId != other.FallingRecipeId) return false;
-      if (DropExp != other.DropExp) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (entityProfile_ != null) hash ^= EntityProfile.GetHashCode();
-      if (FollowSpeed != 0) hash ^= FollowSpeed.GetHashCode();
-      if (FallingRecipeId != 0) hash ^= FallingRecipeId.GetHashCode();
-      if (DropExp != 0) hash ^= DropExp.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (entityProfile_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(EntityProfile);
-      }
-      if (FollowSpeed != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(FollowSpeed);
-      }
-      if (FallingRecipeId != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(FallingRecipeId);
-      }
-      if (DropExp != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(DropExp);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (entityProfile_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(EntityProfile);
-      }
-      if (FollowSpeed != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(FollowSpeed);
-      }
-      if (FallingRecipeId != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(FallingRecipeId);
-      }
-      if (DropExp != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(DropExp);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (entityProfile_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntityProfile);
-      }
-      if (FollowSpeed != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FollowSpeed);
-      }
-      if (FallingRecipeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FallingRecipeId);
-      }
-      if (DropExp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DropExp);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(MonsterProfile other) {
-      if (other == null) {
-        return;
-      }
-      if (other.entityProfile_ != null) {
-        if (entityProfile_ == null) {
-          EntityProfile = new global::Bian.EntityProfile();
-        }
-        EntityProfile.MergeFrom(other.EntityProfile);
-      }
-      if (other.FollowSpeed != 0) {
-        FollowSpeed = other.FollowSpeed;
-      }
-      if (other.FallingRecipeId != 0) {
-        FallingRecipeId = other.FallingRecipeId;
-      }
-      if (other.DropExp != 0) {
-        DropExp = other.DropExp;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (entityProfile_ == null) {
-              EntityProfile = new global::Bian.EntityProfile();
-            }
-            input.ReadMessage(EntityProfile);
-            break;
-          }
-          case 16: {
-            FollowSpeed = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            FallingRecipeId = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            DropExp = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (entityProfile_ == null) {
-              EntityProfile = new global::Bian.EntityProfile();
-            }
-            input.ReadMessage(EntityProfile);
-            break;
-          }
-          case 16: {
-            FollowSpeed = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            FallingRecipeId = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            DropExp = input.ReadInt32();
             break;
           }
         }

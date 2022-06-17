@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 09:24:00
- * @LastEditTime: 2022-06-06 19:31:22
+ * @LastEditTime: 2022-06-15 20:13:27
  * @LastEditors: xiang huan
  * @Description: runtime游戏模块
  * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimeGameCenter.cs
@@ -69,7 +69,7 @@ public class RuntimeGameCenter : GameFrameworkComponent
             _canvasWebView.NativeOnScreenKeyboardEnabled = true;
             _canvasWebView.LogConsoleMessages = true;
             _canvasWebView.DragMode = DragMode.DragWithinPage;
-            _canvasWebView.Visible = false;
+            _canvasWebView.Visible = true;
             _canvasWebView.WebView.UrlChanged += UrlChanged;
             _canvasWebView.WebView.MessageEmitted += OnMessageEmitted;
             SetUpHardwareKeyboard();

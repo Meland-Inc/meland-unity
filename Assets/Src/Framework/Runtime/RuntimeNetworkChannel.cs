@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 10:09:05
- * @LastEditTime: 2022-06-06 20:04:11
- * @LastEditors: xiang huan
+ * @LastEditTime 2022-06-15 16:58:33
+ * @LastEditors Please set LastEditors
  * @Description: runtime通讯
- * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimeNetworkChannel.cs
+ * @FilePath /Assets/Src/Framework/Runtime/RuntimeNetworkChannel.cs
  * 
  */
 using System;
@@ -69,6 +69,7 @@ public class RuntimeNetworkChannel : INetworkChannel
         {
             RuntimeMessage message = (packet as RuntimePacket).TransferData;
             string messageJson = JsonUtility.ToJson(message);
+            MLog.Info(eLogTag.runtime, $">>> {packet.Id}  msg = {messageJson}");
             BasicModule.RuntimeGameCenter.SendMsg(messageJson);
             SentPacketCount++;
         }
@@ -87,6 +88,7 @@ public class RuntimeNetworkChannel : INetworkChannel
             RuntimePacket packet = new();
             packet.SetTransferData(message);
             packet.DataJson = msg;
+            MLog.Info(eLogTag.runtime, $"<<< {packet.Id}  msg = {msg}");
             if (packet != null)
             {
                 _receivePacketPool.Fire(this, packet);

@@ -33,7 +33,7 @@ meland client main project make by unity
 #### environment
 
 - git use LFS :<https://git-lfs.github.com/>
-- unity 2021.3.1f1
+- unity 2021.3.1f1 or 2021.3.1f1c1
 - vscode
   - enable setting config : "Format On Save"
   - extension:
@@ -50,5 +50,11 @@ meland client main project make by unity
 
 #### startup
 
-- if you have not clone meland-unity, you can clone it by command:  ```git clone --recurse-submodules this_repository_url```
-- if you have cloned meland-unity,but not update git submodules, you can update it by command:  ```git submodule update --init --recursive```
+- clone repository
+  - if you have not clone meland-unity, you can clone it by command:  ```git clone --recurse-submodules this_repository_url```
+  - if you have cloned meland-unity,but not update git submodules, you can update it by command:  ```git submodule update --init --recursive```
+- open with unity
+- click NuGet->Restore Packages on unity menu
+- open Lauch scene ,on Assets/Res/Scene/Lauch
+- click 'play' to run the game
+- glad you joined

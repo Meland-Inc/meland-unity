@@ -1,3 +1,4 @@
+using System;
 using GameFramework.Network;
 
 /// <summary>
@@ -38,7 +39,10 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         _reqPacket = CreatePacket(req);
     }
 
-    protected abstract string GetEnvelopeReqName();
+    protected virtual string GetEnvelopeReqName()
+    {
+        return typeof(TReq).Name;
+    }
 
     protected GameChannelPacket CreatePacket(TReq req)
     {
@@ -79,7 +83,6 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         Bian.Envelope reqEnvelope = _reqPacket.TransferData;
         TReq req = (TReq)reqEnvelope.GetType().GetProperty(GetEnvelopeReqName()).GetValue(reqEnvelope);
 
-        // 获取响应数据
         Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
         string propertyName = envelope.PayloadCase.ToString();
         try

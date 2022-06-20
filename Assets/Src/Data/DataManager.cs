@@ -19,6 +19,8 @@ public static class DataManager
     /// 当前地图数据
     /// </summary>
     public static MapModel Map => s_map = s_map != null ? s_map : GetModel<MapModel>();
+    private static BackpackModel s_backpack;
+    public static BackpackModel Backpack => s_backpack = s_backpack != null ? s_backpack : GetModel<BackpackModel>();
 
     private static TerritoryModel s_territory;
     /// <summary>

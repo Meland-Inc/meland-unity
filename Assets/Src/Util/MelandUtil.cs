@@ -1,3 +1,4 @@
+using System;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -40,5 +41,10 @@ public static class MelandUtil
     public static bool IsChinese(char c)
     {
         return c is >= (char)0x4E00 and <= (char)0x9FA5; // 根据字符取汉字
+    }
+
+    public static T ToEnum<T>(this string str)
+    {
+        return (T)Enum.Parse(typeof(T), str);
     }
 }

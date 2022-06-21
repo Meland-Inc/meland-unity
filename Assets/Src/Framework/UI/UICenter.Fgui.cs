@@ -1,7 +1,7 @@
 using System;
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-17 16:36:36
+ * @LastEditTime: 2022-06-21 14:29:49
  * @LastEditors: mangit
  * @Description: fairygui 处理中心
  * @Date: 2022-06-16 20:48:53
@@ -14,6 +14,8 @@ public partial class UICenter
     private readonly FguiExtensionCfg[] _extensionCfg = new FguiExtensionCfg[]
     {
         new (eFUIPackage.Backpack, FGUIDefine.NFT_ITEM_RES,typeof( BpNftItemRenderer)),
+        new (eFUIPackage.Backpack, FGUIDefine.NFT_EQUIP_ITEM_RES,typeof( BpNftItemRenderer)),
+        new (eFUIPackage.Backpack, FGUIDefine.EQUIPMENT_SLOT_RES,typeof( EquipmentSlot)),
     };
     public static void InitPackage()
     {

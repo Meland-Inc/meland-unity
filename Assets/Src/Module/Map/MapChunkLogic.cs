@@ -3,7 +3,6 @@ using System;
 using System.IO;
 using Bian;
 using UnityGameFramework.Runtime;
-using UnityEngine;
 
 /// <summary>
 /// 地图chunk逻辑 包含了创建静态地图物件和销毁管理的数据能力
@@ -11,6 +10,8 @@ using UnityEngine;
 public class MapChunkLogic
 {
     public ulong Key { get; }
+    private readonly int _startX;
+    private readonly int _startZ;
     private readonly int _cacheMapWidth;//地图宽 缓存加速性能
     private readonly HashSet<int> _curShowTerrainIDs = new();// 当前显示的地表块ID
     /// <summary>
@@ -21,14 +22,56 @@ public class MapChunkLogic
     public MapChunkLogic(ulong key)
     {
         Key = key;
+        (int a, int b) = MathUtil.UlongToTwoInt(key);
+        _startX = a;
+        _startZ = b;
         _cacheMapWidth = (int)MathF.Round(DataManager.GetModel<MapModel>().Range.width);
     }
 
     public void Init(MapChunk svrChunk)
     {
         RefSvrChunkData = svrChunk;
+
+        AddGridData(_startX, _startZ);
+        RenderTerrain();
+    }
+
+    public void Dispose()
+    {
+        RemoveGridData(_startX, _startZ);
+        DisposeRenderTerrain();
+        RefSvrChunkData = null;
+    }
+
+
+    private void AddGridData(int startX, int startZ)
+    {
+        MapModel mapData = DataManager.Map;
+        for (int x = startX; x < MapDefine.CHUNK_WIDTH; x++)
+        {
+            for (int z = startZ; z < MapDefine.CHUNK_HEIGHT; z++)
+            {
+                mapData.AddGridData(x, z);
+            }
+        }
+    }
+
+    private void RemoveGridData(int startX, int startZ)
+    {
+        MapModel mapData = DataManager.Map;
+        for (int x = startX; x < MapDefine.CHUNK_WIDTH; x++)
+        {
+            for (int z = startZ; z < MapDefine.CHUNK_HEIGHT; z++)
+            {
+                mapData.RemoveGridData(x, z);
+            }
+        }
+    }
+
+    private void RenderTerrain()
+    {
         EntityComponent entityMgr = GFEntry.Entity;
-        foreach (BlockSettings block in svrChunk.Blocks)
+        foreach (BlockSettings block in RefSvrChunkData.Blocks)
         {
             try
             {
@@ -77,14 +120,13 @@ public class MapChunkLogic
         }
     }
 
-    public void Dispose()
+    private void DisposeRenderTerrain()
     {
         EntityComponent entityMgr = GFEntry.Entity;
         foreach (int terrainID in _curShowTerrainIDs)
         {
             entityMgr.HideEntity(terrainID);
         }
-        RefSvrChunkData = null;
     }
 
     private void RenderOneTerrain(EntityComponent entityMgr, string textureAsset, float x, float z)

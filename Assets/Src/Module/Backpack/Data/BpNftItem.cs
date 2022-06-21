@@ -1,14 +1,13 @@
-using System.IO;
-using System.Collections.Generic;
-using System;
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-20 17:17:08
  * @LastEditors: mangit
  * @Description: NFT 道具数据基类
  * @Date: 2022-06-16 15:29:26
  * @FilePath: /Assets/Src/Module/Backpack/Data/BpNftItem.cs
  */
+using System.IO;
+using System.Collections.Generic;
+using System;
 using Bian;
 using NFT;
 using UnityEngine;
@@ -57,7 +56,7 @@ public class BpNftItem : BpItemData
 
     protected virtual eNFTQuality GetQuality()
     {
-        string qualityStr = GetAttribute(eNFTTraitType.Rarity.ToString());
+        string qualityStr = GetAttribute(eNFTTraitType.Quality.ToString());
         if (!string.IsNullOrEmpty(qualityStr))
         {
             return qualityStr.ToEnum<eNFTQuality>();

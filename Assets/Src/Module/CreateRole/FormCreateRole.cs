@@ -239,7 +239,7 @@ public class FormCreateRole : FGUIForm
         _randomNameLibMap = res;
         MLog.Info(eLogTag.createRole, $"end init random name lib");
         //准备好之后，随机一个名字
-        if (!Recycled)
+        if (!IsDisposed)
         {
             RandomName();
         }

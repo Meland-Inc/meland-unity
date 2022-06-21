@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-20 20:08:21
+ * @LastEditTime: 2022-06-21 15:07:54
  * @LastEditors: mangit
  * @Description: 背包界面
  * @Date: 2022-06-15 11:32:37
@@ -23,6 +23,7 @@ public class FormBackpack : FGUIForm
         base.OnInit(userData);
         InitChildren();
         InitLstItem();
+        _ = GCom.AddSubUILogic<BackpackRoleViewLogic>("comRoleView");
     }
 
     protected override void OnOpen(object userData)

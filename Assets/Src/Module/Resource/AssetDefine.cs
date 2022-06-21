@@ -24,6 +24,7 @@ public static class AssetDefine
     public const string SUFFIX_SOUND_EFFECT = ".wav";
     public static readonly string PATH_AVATAR_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Avatar");
     public static readonly string PATH_ROLE_NAME = Path.Combine(PATH_ROOT, "Text/RoleName");
+    public static readonly string PATH_ITEM_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Item");
 }
 
 /// <summary>

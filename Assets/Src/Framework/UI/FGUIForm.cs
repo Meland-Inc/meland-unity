@@ -15,12 +15,13 @@ public abstract class FGUIForm : UIFormLogic
     protected virtual RenderMode RenderMode => RenderMode.ScreenSpaceOverlay;//渲染模式
     protected virtual FitScreen FitScreenMode => FitScreen.FitSize;
 
-    protected bool Recycled { get; private set; } = false;
-
+    /// <summary>
+    /// 界面初始化，只会调用一次，和OnDispose成对
+    /// </summary>
+    /// <param name="userData"></param>
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
-        Recycled = false;
         gameObject.layer = LayerMask.NameToLayer("UI");
         UIPanel = GetComponent<UIPanel>();
         GCom = UIPanel.ui;
@@ -36,11 +37,22 @@ public abstract class FGUIForm : UIFormLogic
         GCom.SetSize(Screen.width, Screen.height);
         GCom.width = Screen.width;
         GCom.height = Screen.height;
+        InitDefaultUIFunc();
     }
 
+    /// <summary>
+    /// 界面销毁，只会调用一次，和OnInit成对
+    /// </summary>
+    protected override void OnDispose()
+    {
+        base.OnDispose();
+    }
+
+    /// <summary>
+    /// 界面回收，入池，每次关闭都会调用，在OnClose之后
+    /// </summary>
     protected override void OnRecycle()
     {
-        Recycled = true;
         base.OnRecycle();
     }
 
@@ -53,6 +65,7 @@ public abstract class FGUIForm : UIFormLogic
         });
         OnStageResize();
         GCom.onSizeChanged.Add(OnStageResize);
+        CalcFormSorting();
     }
 
     protected override void OnClose(bool isShutdown, object userData)
@@ -263,5 +276,28 @@ public abstract class FGUIForm : UIFormLogic
     protected Controller GetController(string name)
     {
         return GCom.GetController(name);
+    }
+
+    /// <summary>
+    /// 初始化
+    /// </summary>
+    private void InitDefaultUIFunc()
+    {
+        GButton btnClose = GetButton("btnClose");
+        if (btnClose != null)
+        {
+            btnClose.onClick.Add(OnBtnCloseClick);
+        }
+    }
+
+    private void OnBtnCloseClick()
+    {
+        Close();
+    }
+
+    private void CalcFormSorting()
+    {
+        int sort = (UIDefine.MAX_FORM_NUM_IN_GROUP * UIForm.UIGroup.Depth) + UIForm.UIGroup.UIFormCount;
+        UIPanel.SetSortingOrder(sort, true);//设置排序
     }
 }

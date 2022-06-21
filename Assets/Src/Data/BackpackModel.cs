@@ -1,11 +1,12 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-20 20:01:34
+ * @LastEditTime: 2022-06-21 15:45:37
  * @LastEditors: mangit
  * @Description: 背包数据中心
  * @Date: 2022-06-15 11:28:41
  * @FilePath: /Assets/Src/Data/BackpackModel.cs
 */
+using Bian;
 using System.Collections.Generic;
 
 public class BackpackModel : DataModelBase
@@ -15,7 +16,7 @@ public class BackpackModel : DataModelBase
     /// </summary>
     /// <returns></returns>
     public Dictionary<string, BpNftItem> ItemDic { get; private set; } = new();
-    public Dictionary<string, BpWearableNftItem> WearableItemDic { get; private set; } = new();
+    public Dictionary<AvatarPosition, BpWearableNftItem> WearableItemDic { get; private set; } = new();
     /// <summary>
     /// 背包数据列表，用于遍历
     /// </summary>
@@ -50,11 +51,18 @@ public class BackpackModel : DataModelBase
             ItemDic[item.Id] = item;
             if (item is BpWearableNftItem wearableItem)
             {
-                WearableItemDic[item.Id] = wearableItem;
+                if (wearableItem.AvatarPos != AvatarPosition.AvatarPositionNone)
+                {
+                    WearableItemDic[wearableItem.AvatarPos] = wearableItem;
+                }
             }
         }
 
         SceneModule.BackpackMgr.OnDataInit.Invoke();
+        if (WearableItemDic.Count > 1)
+        {
+            SceneModule.BackpackMgr.OnWearableDataUpdated.Invoke();
+        }
     }
 
     /// <summary>
@@ -71,9 +79,16 @@ public class BackpackModel : DataModelBase
             item.SetDataIndex(oldItem.DataIndex);
             ItemDic[item.Id] = item;
             ItemList[item.DataIndex] = item;
-            if (item is BpWearableNftItem wearableItem)
+            if (item is BpWearableNftItem newWearableItem && oldItem is BpWearableNftItem oldWearableItem)
             {
-                WearableItemDic[item.Id] = wearableItem;
+                if (newWearableItem.AvatarPos != AvatarPosition.AvatarPositionNone)//更新的部位不为none，说明当前位置有装备
+                {
+                    WearableItemDic[newWearableItem.AvatarPos] = newWearableItem;
+                }
+                else if (WearableItemDic.ContainsKey(oldWearableItem.AvatarPos))//更新的部位为none，说明当前位置没有装备，检测是否有旧的装备，有则删除
+                {
+                    _ = WearableItemDic.Remove(oldWearableItem.AvatarPos);
+                }
                 isWearableDataUpdated = true;
             }
         }

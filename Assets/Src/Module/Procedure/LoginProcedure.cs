@@ -14,10 +14,10 @@ public class LoginProcedure : ProcedureBase
         EventComponent eventCom = GameEntry.GetComponent<EventComponent>();
         eventCom.Subscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
 
-        BasicModule.LoginCenter.OnCheckRoleInfo += OnCheckRoleInfo;
-        BasicModule.LoginCenter.OnRoleReady += OnRoleReady;
-        BasicModule.LoginCenter.OnSignPlayer += OnSignPlayer;
-        BasicModule.LoginCenter.StartLogin();
+        BasicModule.Login.OnCheckRoleInfo += OnCheckRoleInfo;
+        BasicModule.Login.OnRoleReady += OnRoleReady;
+        BasicModule.Login.OnSignPlayer += OnSignPlayer;
+        BasicModule.Login.StartLogin();
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
@@ -25,9 +25,9 @@ public class LoginProcedure : ProcedureBase
         EventComponent eventCom = GameEntry.GetComponent<EventComponent>();
         eventCom.Unsubscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
 
-        BasicModule.LoginCenter.OnCheckRoleInfo -= OnCheckRoleInfo;
-        BasicModule.LoginCenter.OnSignPlayer -= OnSignPlayer;
-        BasicModule.LoginCenter.EndLogin();
+        BasicModule.Login.OnCheckRoleInfo -= OnCheckRoleInfo;
+        BasicModule.Login.OnSignPlayer -= OnSignPlayer;
+        BasicModule.Login.EndLogin();
         base.OnLeave(procedureOwner, isShutdown);
     }
 
@@ -50,7 +50,7 @@ public class LoginProcedure : ProcedureBase
         MLog.Info(eLogTag.network, $"OnNetworkConnected: {args.NetworkChannel.Name}");
         if (args.NetworkChannel.Name == NetworkDefine.CHANNEL_NAME_GAME)
         {
-            BasicModule.LoginCenter.CheckRole();
+            BasicModule.Login.CheckRole();
         }
     }
 
@@ -59,7 +59,7 @@ public class LoginProcedure : ProcedureBase
         MLog.Info(eLogTag.login, "check role info");
         if (string.IsNullOrEmpty(info.Id))
         {
-            BasicModule.LoginCenter.OpenCreateRoleForm();
+            BasicModule.Login.OpenCreateRoleForm();
         }
         else
         {
@@ -71,7 +71,7 @@ public class LoginProcedure : ProcedureBase
     {
         MLog.Info(eLogTag.login, "on role ready,start to sign in player");
         SigninPlayerAction.Req(roleId);
-        BasicModule.LoginCenter.CloseCreateRoleForm();
+        BasicModule.Login.CloseCreateRoleForm();
     }
 
     private void OnSignPlayer(Bian.SigninPlayerResponse rsp)

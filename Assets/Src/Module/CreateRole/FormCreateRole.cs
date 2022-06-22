@@ -109,16 +109,16 @@ public class FormCreateRole : FGUIForm
 
     private void AddMessage()
     {
-        BasicModule.LoginCenter.OnCreatePlayerSuccess += OnCreatePlayerSuccess;
-        BasicModule.LoginCenter.OnCreatePlayerFailed += OnCreatePlayerFailed;
+        BasicModule.Login.OnCreatePlayerSuccess += OnCreatePlayerSuccess;
+        BasicModule.Login.OnCreatePlayerFailed += OnCreatePlayerFailed;
         //todo:断线重连处理
         //todo:转菊花处理
     }
 
     private void RemoveMessage()
     {
-        BasicModule.LoginCenter.OnCreatePlayerSuccess -= OnCreatePlayerSuccess;
-        BasicModule.LoginCenter.OnCreatePlayerFailed -= OnCreatePlayerFailed;
+        BasicModule.Login.OnCreatePlayerSuccess -= OnCreatePlayerSuccess;
+        BasicModule.Login.OnCreatePlayerFailed -= OnCreatePlayerFailed;
         //todo:断线重连处理
         //todo:转菊花处理
     }

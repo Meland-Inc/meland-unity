@@ -20,7 +20,7 @@ public class CreateRoleAction : AccountHttpActionBase<CreatePlayerReq, AccountRs
         if (rsp.Code == 0)
         {
             //创角成功
-            BasicModule.LoginCenter.OnRoleReady.Invoke(rsp.Info.Id);
+            BasicModule.Login.OnRoleReady.Invoke(rsp.Info.Id);
         }
     }
 

@@ -8,7 +8,7 @@ public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, AccountRsp<G
     {
         if (rsp.Code == 0)
         {
-            BasicModule.LoginCenter.OnCheckRoleInfo(rsp.Info);
+            BasicModule.Login.OnCheckRoleInfo(rsp.Info);
         }
     }
 

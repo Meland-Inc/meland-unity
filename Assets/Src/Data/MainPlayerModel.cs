@@ -1,4 +1,5 @@
 using UnityEngine;
+using Bian;
 
 /// <summary>
 /// 自己玩家数据
@@ -6,11 +7,12 @@ using UnityEngine;
 public class MainPlayerModel : DataModelBase
 {
     [SerializeField]
-    private string _roleID;
+    private Player _roleData;
+    public Player RoleData => _roleData;
     /// <summary>
     /// 角色ID 也是场景实体ID
     /// </summary>
-    public string RoleID => _roleID;
+    public string RoleID => _roleData.Id;
 
     /// <summary>
     /// 账号和登陆相关数据 不为null
@@ -31,10 +33,10 @@ public class MainPlayerModel : DataModelBase
     /// <summary>
     /// 初始化角色的数据 不管有没有场景角色 纯数据
     /// </summary>
-    /// <param name="roleID"></param>
-    public void InitRoleData(string roleID)
+    /// <param name="roleData"></param>
+    public void InitRoleData(Player roleData)
     {
-        _roleID = roleID;
+        _roleData = roleData;
     }
 
     /// <summary>

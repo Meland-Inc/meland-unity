@@ -8,7 +8,7 @@ public partial class SceneEntityMgr : SceneModuleBase
     {
         MLog.Info(eLogTag.entity, $"NetInitMainRole id={playerData.Id} [{location.Pos.X} {location.Pos.Y} {location.Z}]");
 
-        DataManager.MainPlayer.InitRoleData(playerData.Id);
+        DataManager.MainPlayer.InitRoleData(playerData);
         SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
         sceneRole.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
 

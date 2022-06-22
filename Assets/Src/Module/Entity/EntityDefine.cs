@@ -29,4 +29,9 @@ public class EntityDefine
     /// GF entity 的分组 角色
     /// </summary>
     public const string GF_ENTITY_GROUP_ROLE = "role";
+
+    /// <summary>
+    /// avatar2d 基础皮肤名
+    /// </summary>
+    public const string AVATAR_BASE_SKIN = "base";
 }

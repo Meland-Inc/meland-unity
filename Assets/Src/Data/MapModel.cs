@@ -17,7 +17,18 @@ public class MapModel : DataModelBase
     [SerializeField]
     private int _mapId;
     public int MapID => _mapId;
-
+    [SerializeField]
+    private int _mapRowTileNum;
+    public int MapRowTileNum => _mapRowTileNum;
+    [SerializeField]
+    private int _mapColTileNum;
+    public int MapColTileNum => _mapColTileNum;
+    [SerializeField]
+    private int _mapOffsetRowTileNum;
+    public int MapOffsetRowTileNum => _mapOffsetRowTileNum;
+    [SerializeField]
+    private int _mapOffsetCowTileNum;
+    public int MapOffsetCowTileNum => _mapOffsetCowTileNum;
     /// <summary>
     /// 格子数据map key为x和z的拼接
     /// </summary>
@@ -33,6 +44,10 @@ public class MapModel : DataModelBase
         InitMapRangeSize((int)svrMapData.MapWidth, (int)svrMapData.MapHeight);
 
         _mapId = svrMapData.Id;
+        _mapRowTileNum = svrMapData.RhombR;
+        _mapColTileNum = svrMapData.RhombC;
+        _mapOffsetRowTileNum = svrMapData.RhombOffsetR;
+        _mapOffsetCowTileNum = svrMapData.RhombOffsetC;
 
         if (svrMapData.StaticData != null && svrMapData.StaticData.Using)
         {

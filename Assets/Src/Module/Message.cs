@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Bian;
 using UnityEngine;
 
@@ -29,6 +30,8 @@ public static class Message
     public static Action<bool> WebReady = delegate { };
     public static Action<string> RuntimeMessageEmitted = delegate { };
 
+    public static Action<Runtime.TUserAssetResponse> RuntimeUserAssetUpdate = delegate { };
+
     #endregion
 
     #region 实体
@@ -42,5 +45,12 @@ public static class Message
     /// </summary>
     public static Action SceneEntityLoadFinish = delegate { };
 
+    #endregion
+
+    #region 大世界
+    public static Action<BigWorldGridData> UpdateBigWorldGridData = delegate { };
+    public static Action<List<ulong>, List<ulong>> UpdateBigWorldGridDataList = delegate { };
+    public static Action<string> UpdateBigWorldPlayerAreaData = delegate { };
+    public static Action<eBigWorldBorderRenderMode> UpdateBigWorldBorderRenderMode = delegate { };
     #endregion
 }

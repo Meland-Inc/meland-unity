@@ -20,8 +20,15 @@ public static class DataManager
     /// </summary>
     public static MapModel Map => s_map = s_map != null ? s_map : GetModel<MapModel>();
 
+    private static BigWorldModel s_bigWorld;
+    /// <summary>
+    /// 大世界数据
+    /// </summary>
+    public static BigWorldModel BigWorld => s_bigWorld = s_bigWorld != null ? s_bigWorld : GetModel<BigWorldModel>();
+
     private static GameObject s_dataRoot;
     private static readonly Dictionary<string, DataModelBase> s_modelMap = new();
+
 
     /// <summary>
     /// 获取某个数据Model

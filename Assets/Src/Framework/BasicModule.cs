@@ -19,6 +19,7 @@ public class BasicModule : MonoBehaviour
     public static AssetLoader Asset;
 
     public static RuntimeGameCenter RuntimeGameCenter;
+    public static BigWorldCenter BigWorldCenter;
 
     private void Start()
     {
@@ -27,5 +28,6 @@ public class BasicModule : MonoBehaviour
         LoginCenter = GameEntry.GetComponent<LoginCenter>();
         RuntimeGameCenter = GameEntry.GetComponent<RuntimeGameCenter>();
         Asset = GameEntry.GetComponent<AssetLoader>();
+        BigWorldCenter = GameEntry.GetComponent<BigWorldCenter>();
     }
 }

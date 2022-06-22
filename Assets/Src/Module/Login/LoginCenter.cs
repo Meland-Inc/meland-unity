@@ -45,6 +45,12 @@ public class LoginCenter : GameFrameworkComponent
         _ = UICenter.OpenUIForm<FormCreateRole>();
     }
 
+    public void CloseCreateRoleForm()
+    {
+        MLog.Info(eLogTag.login, "close create role");
+        UICenter.CloseUIForm<FormCreateRole>();
+    }
+
     public void LoginGame()
     {
         // SigninPlayerAction.Req(PlayerID);

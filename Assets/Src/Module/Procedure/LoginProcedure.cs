@@ -1,4 +1,3 @@
-using System.Security.Cryptography;
 using UnityGameFramework.Runtime;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
@@ -16,6 +15,7 @@ public class LoginProcedure : ProcedureBase
         eventCom.Subscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
 
         BasicModule.LoginCenter.OnCheckRoleInfo += OnCheckRoleInfo;
+        BasicModule.LoginCenter.OnRoleReady += OnRoleReady;
         BasicModule.LoginCenter.OnSignPlayer += OnSignPlayer;
         BasicModule.LoginCenter.StartLogin();
     }
@@ -57,7 +57,6 @@ public class LoginProcedure : ProcedureBase
     private void OnCheckRoleInfo(GetPlayerHttpRspInfo info)
     {
         MLog.Info(eLogTag.login, "check role info");
-        info.Id = "";//test create role
         if (string.IsNullOrEmpty(info.Id))
         {
             BasicModule.LoginCenter.OpenCreateRoleForm();
@@ -72,6 +71,7 @@ public class LoginProcedure : ProcedureBase
     {
         MLog.Info(eLogTag.login, "on role ready,start to sign in player");
         SigninPlayerAction.Req(roleId);
+        BasicModule.LoginCenter.CloseCreateRoleForm();
     }
 
     private void OnSignPlayer(Bian.SigninPlayerResponse rsp)

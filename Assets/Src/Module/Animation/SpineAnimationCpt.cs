@@ -2,8 +2,8 @@ using System.Collections.Generic;
 /*
  * @Author: xiang huan
  * @Date: 2022-06-14 14:11:43
- * @LastEditTime: 2022-06-15 15:31:23
- * @LastEditors: xiang huan
+ * @LastEditTime: 2022-06-22 19:43:07
+ * @LastEditors: Please set LastEditors
  * @Description: spine动画组件
  * @FilePath: /meland-unity/Assets/Src/Module/Animation/SpineAnimationCpt.cs
  * 
@@ -38,13 +38,13 @@ public class SpineAnimationCpt : AnimationCpt
         Init(_skeletonAnimation);
     }
 
-    public void Init(object skeletonAnim)
+    public void Init(SkeletonAnimation skeletonAnim)
     {
         if (IsValid)
         {
             return;
         }
-        _skeletonAnimation = skeletonAnim as SkeletonAnimation;
+        _skeletonAnimation = skeletonAnim;
         if (_skeletonAnimation != null && _skeletonAnimation.valid)
         {
             IsValid = true;
@@ -89,7 +89,7 @@ public class SpineAnimationCpt : AnimationCpt
     {
         if (!IsValid)
         {
-            SpineAnimationInfo info = SpineAnimationInfo.Create(trackIndex, animationName, loop, timeScale);
+            SpineAnimationInfo info = SpineAnimationInfo.Create(trackIndex, animationName, loop, timeScale, delay);
             AddAnimationInfo(trackIndex, info, false);
             return;
         }
@@ -135,6 +135,10 @@ public class SpineAnimationCpt : AnimationCpt
 
     public bool IsPlaying(int trackIndex, string name)
     {
+        if (!IsValid)
+        {
+            return false;
+        }
         TrackEntry curEntry = _animationState.GetCurrent(trackIndex);
         return curEntry != null && curEntry.Animation.Name == name;
     }
@@ -145,6 +149,10 @@ public class SpineAnimationCpt : AnimationCpt
 
     public void StopAnim(int trackIndex)
     {
+        if (!IsValid)
+        {
+            return;
+        }
         if (_animInfoMap.ContainsKey(trackIndex))
         {
             _ = _animInfoMap.Remove(trackIndex);

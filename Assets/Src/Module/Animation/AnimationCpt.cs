@@ -1,8 +1,6 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-06-14 19:07:39
- * @LastEditTime: 2022-06-15 15:45:36
- * @LastEditors: xiang huan
  * @Description: 动画组件基类
  * @FilePath: /meland-unity/Assets/Src/Module/Animation/AnimationCpt.cs
  * 
@@ -40,6 +38,7 @@ public abstract class AnimationCpt : MonoBehaviour
     public abstract void StopAnim(string animationName);
     /// <summary>
     /// 动画事件监听
+    /// t0 动画名  t1事件类型  t3事件数据
     /// </summary>
     public Action<string, eAnimationEventType, object> EventDelegate = delegate { };
 }

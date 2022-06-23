@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using Bian;
 using UnityGameFramework.Runtime;
+using UnityEngine;
 
 /// <summary>
 /// 地图chunk逻辑 包含了创建静态地图物件和销毁管理的数据能力

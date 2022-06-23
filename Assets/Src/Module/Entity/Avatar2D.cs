@@ -18,8 +18,8 @@ public class Avatar2D : MonoBehaviour
     /// 是否有效 代表已经有avatar形象
     /// </summary>
     /// <value></value>
-    public bool IsValid { get => _isValid; }
-    private bool _loadAvatar;//加载方式
+    public bool IsValid => _isValid;
+    private string _loadAssetPath;//非空代表走的资源加载的avatar
 
     [SerializeField]
     private GameObject _root;
@@ -27,16 +27,20 @@ public class Avatar2D : MonoBehaviour
     /// 真正显示avatar对象的根容器 可能是自己 也可能是生成出来的spine对象
     /// </summary>
     /// <value></value>
-    public GameObject Root { get => _root; }
+    public GameObject Root => _root;
 
     private void OnDestroy()
     {
-        //TODO:卸载资源
+        if (!string.IsNullOrEmpty(_loadAssetPath))
+        {
+            BasicModule.Asset.UnloadAsset<SkeletonDataAsset>(_loadAssetPath, GetHashCode());
+            _loadAssetPath = null;
+        }
     }
 
     public void Init()
     {
-        _loadAvatar = false;
+        _loadAssetPath = null;
         _root = gameObject;
         FindComponent();
 
@@ -45,7 +49,6 @@ public class Avatar2D : MonoBehaviour
 
     public void Init(string assetPath, Action<Avatar2D> finishCB)
     {
-        _loadAvatar = true;
         LoadAvatar(assetPath, finishCB);
     }
 
@@ -57,9 +60,16 @@ public class Avatar2D : MonoBehaviour
     /// <returns></returns>
     private async void LoadAvatar(string assetPath, Action<Avatar2D> finishCB)
     {
+        if (string.IsNullOrEmpty(assetPath))
+        {
+            MLog.Error(eLogTag.entity, "LoadAvatar assetPath is empty");
+            return;
+        }
+
         try
         {
-            SkeletonDataAsset asset = await GFEntry.Resource.AwaitLoadAsset<SkeletonDataAsset>(assetPath);
+            _loadAssetPath = assetPath;
+            SkeletonDataAsset asset = await BasicModule.Asset.LoadAsset<SkeletonDataAsset>(assetPath, GetHashCode(), (int)eLoadPriority.Low);
             SkeletonAnimation animation = SkeletonAnimation.NewSkeletonAnimationGameObject(asset);
             _root = animation.gameObject;
             _root.transform.SetParent(transform, false);
@@ -72,7 +82,7 @@ public class Avatar2D : MonoBehaviour
         }
         catch (AssetLoadException e)
         {
-            MLog.Error(eLogTag.resource, $"load 2d avatar asset error,path={assetPath} error={e}");
+            MLog.Error(eLogTag.asset, $"load 2d avatar asset error,path={assetPath} error={e}");
         }
     }
 

@@ -1,3 +1,4 @@
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +13,9 @@ public static class SceneDefine
     /// <returns></returns>
     public static readonly Dictionary<eSceneName, string> SceneResPath = new()
     {
-        {eSceneName.launch, Asset.GetSceneAssetPath("Launch")},
-        {eSceneName.sceneLoading, Asset.GetSceneAssetPath("SceneLoading")},
-        {eSceneName.world, Asset.GetSceneAssetPath("World")},
+        {eSceneName.launch, Path.Combine(AssetDefine.PATH_SCENE,"Launch"+AssetDefine.SUFFIX_SCENE)},
+        {eSceneName.sceneLoading, Path.Combine(AssetDefine.PATH_SCENE,"SceneLoading"+AssetDefine.SUFFIX_SCENE)},
+        {eSceneName.world, Path.Combine(AssetDefine.PATH_SCENE,"World"+AssetDefine.SUFFIX_SCENE)},
     };
 
     /// <summary>

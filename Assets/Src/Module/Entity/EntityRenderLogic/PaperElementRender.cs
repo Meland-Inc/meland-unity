@@ -1,5 +1,5 @@
+using System.IO;
 using UnityEngine;
-using UnityGameFramework.Runtime;
 
 /// <summary>
 /// 纸片元素渲染逻辑
@@ -8,6 +8,8 @@ public class PaperElementRender : SceneEntityRenderBase
 {
     public TargetSameDirection TargetSameDirection;
     public SpriteRenderer SpriteRenderer;
+
+    private string _texturePath;
 
     private void OnBecameVisible()
     {
@@ -33,19 +35,29 @@ public class PaperElementRender : SceneEntityRenderBase
 
         EntityRenderTempData data = userData as EntityRenderTempData;
         TargetSameDirection.SetTargetTsm(Camera.main.transform);
-        LoadSprite(data.ExtraAsset);
+
+        _texturePath = Path.Combine(AssetDefine.PATH_SPRITE, data.ExtraAsset + AssetDefine.SUFFIX_TEXTURE);
+
+        LoadTexture();
     }
 
     protected override void OnRecycle()
     {
-        //TODO:卸载资源
-        SpriteRenderer.sprite = null;
+        UnloadTexture();
+
+        _texturePath = default;
         base.OnRecycle();
     }
 
-    private async void LoadSprite(string spriteName)
+    private async void LoadTexture()
     {
-        Sprite sprite = await Asset.LoadSprite(spriteName);
+        Sprite sprite = await BasicModule.Asset.LoadAsset<Sprite>(_texturePath, GetHashCode());
         SpriteRenderer.sprite = sprite;
+    }
+
+    private void UnloadTexture()
+    {
+        BasicModule.Asset.UnloadAsset<Sprite>(_texturePath, GetHashCode());
+        SpriteRenderer.sprite = null;
     }
 }

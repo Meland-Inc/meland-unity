@@ -24,6 +24,10 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
         networkChannel.RegisterHandler(TPlayerAreaListUpdateAction.GetAction<TPlayerAreaListUpdateAction>());
         networkChannel.RegisterHandler(TPlayerAreaUpdateAction.GetAction<TPlayerAreaUpdateAction>());
         networkChannel.RegisterHandler(TRemovePlayerAreaAction.GetAction<TRemovePlayerAreaAction>());
+        networkChannel.RegisterHandler(TItemUpdatedAction.GetAction<TItemUpdatedAction>());
+        networkChannel.RegisterHandler(TItemAddAction.GetAction<TItemAddAction>());
+        networkChannel.RegisterHandler(TItemDelAction.GetAction<TItemDelAction>());
+        networkChannel.RegisterHandler(TUpdateItemSlotAction.GetAction<TUpdateItemSlotAction>());
     }
 
     public override void PrepareForConnecting()

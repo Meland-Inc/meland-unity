@@ -1,18 +1,16 @@
-using System.Collections.Generic;
 /*
  * @Author: xiang huan
  * @Date: 2022-06-14 14:11:43
- * @LastEditTime: 2022-06-22 19:43:07
- * @LastEditors: Please set LastEditors
  * @Description: spine动画组件
  * @FilePath: /meland-unity/Assets/Src/Module/Animation/SpineAnimationCpt.cs
  * 
  */
+using System.Collections.Generic;
 using System;
 using Spine.Unity;
 using Spine;
 
-public class SpineAnimationCpt : AnimationCpt
+public class SpineAnimationCpt : UnityEngine.MonoBehaviour, IAnimationCpt
 {
 
     private SkeletonAnimation _skeletonAnimation;
@@ -20,12 +18,17 @@ public class SpineAnimationCpt : AnimationCpt
     private AnimationState _animationState;
     private const int DEFAULT_TRACK_INDEX = 0;
     private Dictionary<int, List<SpineAnimationInfo>> _animInfoMap;
+    public Action<string, eAnimationEventType, object> EventDelegate
+    {
+        get; set;
+    }
 
     public bool IsValid { get; private set; }
     void Awake()
     {
         _animInfoMap = new();
         IsValid = false;
+        EventDelegate = delegate { };
     }
 
     public void Init()
@@ -59,7 +62,7 @@ public class SpineAnimationCpt : AnimationCpt
         }
     }
 
-    public override void PlayAnim(string animationName, bool loop = false, float timeScale = 1f)
+    public void PlayAnim(string animationName, bool loop = false, float timeScale = 1f)
     {
         PlayAnim(DEFAULT_TRACK_INDEX, animationName, loop, timeScale);
     }
@@ -81,7 +84,7 @@ public class SpineAnimationCpt : AnimationCpt
         entry.TimeScale = timeScale;
     }
 
-    public override void PlayAnimQueued(string animationName, bool loop = false, float timeScale = 1f, float delay = 0f)
+    public void PlayAnimQueued(string animationName, bool loop = false, float timeScale = 1f, float delay = 0f)
     {
         PlayAnimQueued(DEFAULT_TRACK_INDEX, animationName, loop, delay, timeScale);
     }
@@ -128,7 +131,7 @@ public class SpineAnimationCpt : AnimationCpt
         }
         _animInfoMap.Clear();
     }
-    public override bool IsPlaying(string name)
+    public bool IsPlaying(string name)
     {
         return IsPlaying(DEFAULT_TRACK_INDEX, name);
     }
@@ -142,20 +145,20 @@ public class SpineAnimationCpt : AnimationCpt
         TrackEntry curEntry = _animationState.GetCurrent(trackIndex);
         return curEntry != null && curEntry.Animation.Name == name;
     }
-    public override void StopAnim(string name)
+    public void StopAnim(string name)
     {
         StopAnim(DEFAULT_TRACK_INDEX);
     }
 
     public void StopAnim(int trackIndex)
     {
-        if (!IsValid)
-        {
-            return;
-        }
         if (_animInfoMap.ContainsKey(trackIndex))
         {
             _ = _animInfoMap.Remove(trackIndex);
+        }
+        if (!IsValid)
+        {
+            return;
         }
         _animationState.ClearTrack(trackIndex);
     }

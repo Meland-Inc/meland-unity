@@ -2,13 +2,11 @@
  * @Author: xiang huan
  * @Date: 2022-06-14 19:07:39
  * @Description: 动画组件基类
- * @FilePath: /meland-unity/Assets/Src/Module/Animation/AnimationCpt.cs
+ * @FilePath: /meland-unity/Assets/Src/Module/Animation/IAnimationCpt.cs
  * 
  */
 using System;
-using UnityEngine;
-
-public abstract class AnimationCpt : MonoBehaviour
+public interface IAnimationCpt
 {
     /// <summary>
     /// 播放动画
@@ -16,13 +14,13 @@ public abstract class AnimationCpt : MonoBehaviour
     /// <param name="animationName">动画名</param>
     /// <param name="loop">是否循环</param>
     /// <param name="timeScale">播放速度</param>
-    public abstract void PlayAnim(string animationName, bool loop = false, float timeScale = 1f);
+    public void PlayAnim(string animationName, bool loop = false, float timeScale = 1f);
 
     /// <summary>
     /// 是否播放
     /// </summary>
     /// <param name="animationName">动画名</param>
-    public abstract bool IsPlaying(string animationName);
+    public bool IsPlaying(string animationName);
     /// <summary>
     /// 动画排队播放
     /// </summary>
@@ -30,17 +28,20 @@ public abstract class AnimationCpt : MonoBehaviour
     /// <param name="loop">是否循环</param>
     /// <param name="timeScale">播放速度</param>
     /// <param name="delay">延长时间</param>
-    public abstract void PlayAnimQueued(string animationName, bool loop = false, float timeScale = 1f, float delay = 0f);
+    public void PlayAnimQueued(string animationName, bool loop = false, float timeScale = 1f, float delay = 0f);
     /// <summary>
     /// 停止播放
     /// </summary>
     /// <param name="animationName">动画名</param>
-    public abstract void StopAnim(string animationName);
+    public void StopAnim(string animationName);
     /// <summary>
     /// 动画事件监听
     /// t0 动画名  t1事件类型  t3事件数据
     /// </summary>
-    public Action<string, eAnimationEventType, object> EventDelegate = delegate { };
+    public Action<string, eAnimationEventType, object> EventDelegate
+    {
+        get; set;
+    }
 }
 
 public enum eAnimationEventType

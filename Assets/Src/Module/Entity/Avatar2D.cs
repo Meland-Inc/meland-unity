@@ -10,6 +10,7 @@ public class Avatar2D : MonoBehaviour
     private MeshRenderer _meshRenderer;
 
     private SkeletonAnimation _skeleton;
+    public SkeletonAnimation SkeletonAnimation { get => _skeleton; }
 
     [SerializeField]
     private bool _isValid;

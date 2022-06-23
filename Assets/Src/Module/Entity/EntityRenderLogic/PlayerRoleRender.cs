@@ -4,6 +4,7 @@ public class PlayerRoleRender : SceneEntityRenderBase
 {
     public TargetSameDirection TargetSameDirection;
     private Avatar2D _avatar2D;
+    private SpineAnimationCpt _spineAnimationCpt;
 
     private void OnBecameVisible()
     {
@@ -30,6 +31,10 @@ public class PlayerRoleRender : SceneEntityRenderBase
         TargetSameDirection.SetTargetTsm(Camera.main.transform);
         _avatar2D = gameObject.AddComponent<Avatar2D>();
         _avatar2D.Init();
+
+        _spineAnimationCpt = gameObject.AddComponent<SpineAnimationCpt>();
+        _spineAnimationCpt.Init(_avatar2D.SkeletonAnimation);
+
     }
 
     protected override void OnRecycle()

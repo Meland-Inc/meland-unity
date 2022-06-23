@@ -41,59 +41,59 @@ namespace Bian {
             "SWQSDgoGbGVuZ3RoGAIgASgFIlgKD0F2YXRhckF0dHJpYnV0ZRIOCgZyYXJp",
             "dHkYASABKAkSEgoKZHVyYWJpbGl0eRgCIAEoBRIhCgRkYXRhGAMgAygLMhMu",
             "Qmlhbi5BdHRyaWJ1dGVEYXRhIkEKDUF0dHJpYnV0ZURhdGESIQoEdHlwZRgB",
-            "IAEoDjITLkJpYW4uQXR0cmlidXRlVHlwZRINCgV2YWx1ZRgCIAEoBSKiAgoE",
+            "IAEoDjITLkJpYW4uQXR0cmlidXRlVHlwZRINCgV2YWx1ZRgCIAEoBSKwAgoE",
             "SXRlbRIhCglpdGVtX3R5cGUYASABKA4yDi5CaWFuLkl0ZW1UeXBlEgoKAmlk",
             "GAIgASgJEhIKCm9iamVjdF9jaWQYAyABKAUSCwoDbnVtGAQgASgFEg4KBnBs",
             "YXllchgFIAEoCRIiCghiYWNrcGFjaxgGIAEoDjIQLkJpYW4uQmFja3BhY2tJ",
             "ZBIoCglhdHRyaWJ1dGUYCCABKAsyFS5CaWFuLkF2YXRhckF0dHJpYnV0ZRIo",
             "CgphdmF0YXJfcG9zGAkgASgOMhQuQmlhbi5BdmF0YXJQb3NpdGlvbhIRCglu",
             "ZnRfdXNpbmcYCiABKAgSFQoNbmZ0X2pzb25fZGF0YRgLIAEoCRIYChBuZnRf",
-            "dGltZV9vdXRfc2VjGAwgASgFKtQBCgdORlRUeXBlEhoKFk5GVFR5cGVfTkZU",
-            "VHlwZVVua25vd24QABIdChlORlRUeXBlX05GVFR5cGVDb25zdW1hYmxlEAES",
-            "HAoYTkZUVHlwZV9ORlRUeXBlRXF1aXBtZW50EAISGwoXTkZUVHlwZV9ORlRU",
-            "eXBlTWF0ZXJpYWwQAxIcChhORlRUeXBlX05GVFR5cGVQbGFjZWFibGUQBBIY",
-            "ChRORlRUeXBlX05GVFR5cGVUaGlyZBAFEhsKF05GVFR5cGVfTkZUVHlwZVdl",
-            "YXJhYmxlEAYqwgEKCU5GVFJhcml0eRIeChpORlRSYXJpdHlfTkZUUmFyaXR5",
-            "VW5rbm93bhAAEh0KGU5GVFJhcml0eV9ORlRSYXJpdHlDb21tb24QARIbChdO",
-            "RlRSYXJpdHlfTkZUUmFyaXR5UmFyZRACEhsKF05GVFJhcml0eV9ORlRSYXJp",
-            "dHlFcGljEAMSHQoZTkZUUmFyaXR5X05GVFJhcml0eU15dGhpYxAEEh0KGU5G",
-            "VFJhcml0eV9ORlRSYXJpdHlVbmlxdWUQBSqpAQoRTkZUQ29uc3VtYWJsZVR5",
-            "cGUSMAosTkZUQ29uc3VtYWJsZVR5cGVfTkZUQ29uc3VtYWJsZVR5cGVSZXN0",
-            "b3JlSFAQABIyCi5ORlRDb25zdW1hYmxlVHlwZV9ORlRDb25zdW1hYmxlVHlw",
-            "ZUxlYXJuUmVjaXBlEAESLgoqTkZUQ29uc3VtYWJsZVR5cGVfTkZUQ29uc3Vt",
-            "YWJsZVR5cGVBZGRCdWZmEAIqowIKCkJhY2twYWNrSWQSIAocQmFja3BhY2tJ",
-            "ZF9CYWNrcGFja0lkR2FyYmFnZRAAEh4KGkJhY2twYWNrSWRfQmFja3BhY2tJ",
-            "ZEJhc2ljEAESHwobQmFja3BhY2tJZF9CYWNrcGFja0lkQXZhdGFyEAISIQod",
-            "QmFja3BhY2tJZF9CYWNrcGFja0lkU2hvcnRjdXQQAxIhCh1CYWNrcGFja0lk",
-            "X0JhY2twYWNrSWRCb3RCYXNpYxAEEiIKHkJhY2twYWNrSWRfQmFja3BhY2tJ",
-            "ZEJvdEF2YXRhchAFEiIKHkJhY2twYWNrSWRfQmFja3BhY2tJZFdvcmtiZW5j",
-            "aBAGEiQKH0JhY2twYWNrSWRfQmFja3BhY2tJZEZhbGxpbmdCb3gQ6Qcq+wEK",
-            "ClRha2VSZWFzb24SHgoaVGFrZVJlYXNvbl9UYWtlUmVhc29uT25Vc2UQABId",
-            "ChlUYWtlUmVhc29uX1Rha2VSZWFzb25Ecm9wEAESHgoaVGFrZVJlYXNvbl9U",
-            "YWtlUmVhc29uQnVyc3QQAhIhCh1UYWtlUmVhc29uX1Rha2VSZWFzb25UYXNr",
-            "VGFrZRADEiQKIFRha2VSZWFzb25fVGFrZVJlYXNvbk1hbm9yQ3JlYXRlEAQS",
-            "IgoeVGFrZVJlYXNvbl9UYWtlUmVhc29uTWFub3JNb3ZlEAUSIQodVGFrZVJl",
-            "YXNvbl9UYWtlUmVhc29uTWFub3JCdXkQBio/CghJdGVtVHlwZRIZChVJdGVt",
-            "VHlwZV9JdGVtVHlwZUdhbWUQABIYChRJdGVtVHlwZV9JdGVtVHlwZU5GVBAB",
-            "KusDCg1BdHRyaWJ1dGVUeXBlEiYKIkF0dHJpYnV0ZVR5cGVfQXR0cmlidXRl",
-            "VHlwZVVua25vd24QABImCiJBdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVI",
-            "cExpbWl0EAESKQolQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBlSHBSZWNv",
-            "dmVyeRACEiIKHkF0dHJpYnV0ZVR5cGVfQXR0cmlidXRlVHlwZUF0dBADEicK",
-            "I0F0dHJpYnV0ZVR5cGVfQXR0cmlidXRlVHlwZUF0dFNwZWVkEAQSIgoeQXR0",
-            "cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBlRGVmEAUSIwofQXR0cmlidXRlVHlw",
-            "ZV9BdHRyaWJ1dGVUeXBlQ3JpdBAGEiYKIkF0dHJpYnV0ZVR5cGVfQXR0cmli",
-            "dXRlVHlwZUNyaXREbWcQBxImCiJBdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5",
-            "cGVIaXRSYXRlEAgSJwojQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBlTWlz",
-            "c1JhdGUQCRIoCiRBdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVNb3ZlU3Bl",
-            "ZWQQChImCiJBdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVTa2lsbElkEGMq",
-            "zwIKDkF2YXRhclBvc2l0aW9uEiUKIUF2YXRhclBvc2l0aW9uX0F2YXRhclBv",
-            "c2l0aW9uTm9uZRAAEiUKIUF2YXRhclBvc2l0aW9uX0F2YXRhclBvc2l0aW9u",
-            "SGVhZBABEiUKIUF2YXRhclBvc2l0aW9uX0F2YXRhclBvc2l0aW9uQ29hdBAC",
-            "EiUKIUF2YXRhclBvc2l0aW9uX0F2YXRhclBvc2l0aW9uUGFudBADEiUKIUF2",
-            "YXRhclBvc2l0aW9uX0F2YXRhclBvc2l0aW9uU2hvZRAEEiUKIUF2YXRhclBv",
-            "c2l0aW9uX0F2YXRhclBvc2l0aW9uSGFuZBAFEioKJkF2YXRhclBvc2l0aW9u",
-            "X0F2YXRhclBvc2l0aW9uQWNjZXNzb3J5EAYSJwojQXZhdGFyUG9zaXRpb25f",
-            "QXZhdGFyUG9zaXRpb25XZWFwb24QB2IGcHJvdG8z"));
+            "dGltZV9vdXRfc2VjGAwgASgFEgwKBHRlc3QYDSABKAUq1AEKB05GVFR5cGUS",
+            "GgoWTkZUVHlwZV9ORlRUeXBlVW5rbm93bhAAEh0KGU5GVFR5cGVfTkZUVHlw",
+            "ZUNvbnN1bWFibGUQARIcChhORlRUeXBlX05GVFR5cGVFcXVpcG1lbnQQAhIb",
+            "ChdORlRUeXBlX05GVFR5cGVNYXRlcmlhbBADEhwKGE5GVFR5cGVfTkZUVHlw",
+            "ZVBsYWNlYWJsZRAEEhgKFE5GVFR5cGVfTkZUVHlwZVRoaXJkEAUSGwoXTkZU",
+            "VHlwZV9ORlRUeXBlV2VhcmFibGUQBirCAQoJTkZUUmFyaXR5Eh4KGk5GVFJh",
+            "cml0eV9ORlRSYXJpdHlVbmtub3duEAASHQoZTkZUUmFyaXR5X05GVFJhcml0",
+            "eUNvbW1vbhABEhsKF05GVFJhcml0eV9ORlRSYXJpdHlSYXJlEAISGwoXTkZU",
+            "UmFyaXR5X05GVFJhcml0eUVwaWMQAxIdChlORlRSYXJpdHlfTkZUUmFyaXR5",
+            "TXl0aGljEAQSHQoZTkZUUmFyaXR5X05GVFJhcml0eVVuaXF1ZRAFKqkBChFO",
+            "RlRDb25zdW1hYmxlVHlwZRIwCixORlRDb25zdW1hYmxlVHlwZV9ORlRDb25z",
+            "dW1hYmxlVHlwZVJlc3RvcmVIUBAAEjIKLk5GVENvbnN1bWFibGVUeXBlX05G",
+            "VENvbnN1bWFibGVUeXBlTGVhcm5SZWNpcGUQARIuCipORlRDb25zdW1hYmxl",
+            "VHlwZV9ORlRDb25zdW1hYmxlVHlwZUFkZEJ1ZmYQAiqjAgoKQmFja3BhY2tJ",
+            "ZBIgChxCYWNrcGFja0lkX0JhY2twYWNrSWRHYXJiYWdlEAASHgoaQmFja3Bh",
+            "Y2tJZF9CYWNrcGFja0lkQmFzaWMQARIfChtCYWNrcGFja0lkX0JhY2twYWNr",
+            "SWRBdmF0YXIQAhIhCh1CYWNrcGFja0lkX0JhY2twYWNrSWRTaG9ydGN1dBAD",
+            "EiEKHUJhY2twYWNrSWRfQmFja3BhY2tJZEJvdEJhc2ljEAQSIgoeQmFja3Bh",
+            "Y2tJZF9CYWNrcGFja0lkQm90QXZhdGFyEAUSIgoeQmFja3BhY2tJZF9CYWNr",
+            "cGFja0lkV29ya2JlbmNoEAYSJAofQmFja3BhY2tJZF9CYWNrcGFja0lkRmFs",
+            "bGluZ0JveBDpByr7AQoKVGFrZVJlYXNvbhIeChpUYWtlUmVhc29uX1Rha2VS",
+            "ZWFzb25PblVzZRAAEh0KGVRha2VSZWFzb25fVGFrZVJlYXNvbkRyb3AQARIe",
+            "ChpUYWtlUmVhc29uX1Rha2VSZWFzb25CdXJzdBACEiEKHVRha2VSZWFzb25f",
+            "VGFrZVJlYXNvblRhc2tUYWtlEAMSJAogVGFrZVJlYXNvbl9UYWtlUmVhc29u",
+            "TWFub3JDcmVhdGUQBBIiCh5UYWtlUmVhc29uX1Rha2VSZWFzb25NYW5vck1v",
+            "dmUQBRIhCh1UYWtlUmVhc29uX1Rha2VSZWFzb25NYW5vckJ1eRAGKj8KCEl0",
+            "ZW1UeXBlEhkKFUl0ZW1UeXBlX0l0ZW1UeXBlR2FtZRAAEhgKFEl0ZW1UeXBl",
+            "X0l0ZW1UeXBlTkZUEAEq6wMKDUF0dHJpYnV0ZVR5cGUSJgoiQXR0cmlidXRl",
+            "VHlwZV9BdHRyaWJ1dGVUeXBlVW5rbm93bhAAEiYKIkF0dHJpYnV0ZVR5cGVf",
+            "QXR0cmlidXRlVHlwZUhwTGltaXQQARIpCiVBdHRyaWJ1dGVUeXBlX0F0dHJp",
+            "YnV0ZVR5cGVIcFJlY292ZXJ5EAISIgoeQXR0cmlidXRlVHlwZV9BdHRyaWJ1",
+            "dGVUeXBlQXR0EAMSJwojQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBlQXR0",
+            "U3BlZWQQBBIiCh5BdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVEZWYQBRIj",
+            "Ch9BdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVDcml0EAYSJgoiQXR0cmli",
+            "dXRlVHlwZV9BdHRyaWJ1dGVUeXBlQ3JpdERtZxAHEiYKIkF0dHJpYnV0ZVR5",
+            "cGVfQXR0cmlidXRlVHlwZUhpdFJhdGUQCBInCiNBdHRyaWJ1dGVUeXBlX0F0",
+            "dHJpYnV0ZVR5cGVNaXNzUmF0ZRAJEigKJEF0dHJpYnV0ZVR5cGVfQXR0cmli",
+            "dXRlVHlwZU1vdmVTcGVlZBAKEiYKIkF0dHJpYnV0ZVR5cGVfQXR0cmlidXRl",
+            "VHlwZVNraWxsSWQQYyrPAgoOQXZhdGFyUG9zaXRpb24SJQohQXZhdGFyUG9z",
+            "aXRpb25fQXZhdGFyUG9zaXRpb25Ob25lEAASJQohQXZhdGFyUG9zaXRpb25f",
+            "QXZhdGFyUG9zaXRpb25IZWFkEAESJQohQXZhdGFyUG9zaXRpb25fQXZhdGFy",
+            "UG9zaXRpb25Db2F0EAISJQohQXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRp",
+            "b25QYW50EAMSJQohQXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRpb25TaG9l",
+            "EAQSJQohQXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRpb25IYW5kEAUSKgom",
+            "QXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRpb25BY2Nlc3NvcnkQBhInCiNB",
+            "dmF0YXJQb3NpdGlvbl9BdmF0YXJQb3NpdGlvbldlYXBvbhAHYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Bian.BigWorldReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.NFTType), typeof(global::Bian.NFTRarity), typeof(global::Bian.NFTConsumableType), typeof(global::Bian.BackpackId), typeof(global::Bian.TakeReason), typeof(global::Bian.ItemType), typeof(global::Bian.AttributeType), typeof(global::Bian.AvatarPosition), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -105,7 +105,7 @@ namespace Bian {
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BackpackSize), global::Bian.BackpackSize.Parser, new[]{ "BagId", "Length" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AvatarAttribute), global::Bian.AvatarAttribute.Parser, new[]{ "Rarity", "Durability", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AttributeData), global::Bian.AttributeData.Parser, new[]{ "Type", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Item), global::Bian.Item.Parser, new[]{ "ItemType", "Id", "ObjectCid", "Num", "Player", "Backpack", "Attribute", "AvatarPos", "NftUsing", "NftJsonData", "NftTimeOutSec" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Item), global::Bian.Item.Parser, new[]{ "ItemType", "Id", "ObjectCid", "Num", "Player", "Backpack", "Attribute", "AvatarPos", "NftUsing", "NftJsonData", "NftTimeOutSec", "Test" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2590,6 +2590,7 @@ namespace Bian {
       nftUsing_ = other.nftUsing_;
       nftJsonData_ = other.nftJsonData_;
       nftTimeOutSec_ = other.nftTimeOutSec_;
+      test_ = other.test_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2746,6 +2747,18 @@ namespace Bian {
       }
     }
 
+    /// <summary>Field number for the "test" field.</summary>
+    public const int TestFieldNumber = 13;
+    private int test_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Test {
+      get { return test_; }
+      set {
+        test_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2772,6 +2785,7 @@ namespace Bian {
       if (NftUsing != other.NftUsing) return false;
       if (NftJsonData != other.NftJsonData) return false;
       if (NftTimeOutSec != other.NftTimeOutSec) return false;
+      if (Test != other.Test) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2790,6 +2804,7 @@ namespace Bian {
       if (NftUsing != false) hash ^= NftUsing.GetHashCode();
       if (NftJsonData.Length != 0) hash ^= NftJsonData.GetHashCode();
       if (NftTimeOutSec != 0) hash ^= NftTimeOutSec.GetHashCode();
+      if (Test != 0) hash ^= Test.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2852,6 +2867,10 @@ namespace Bian {
         output.WriteRawTag(96);
         output.WriteInt32(NftTimeOutSec);
       }
+      if (Test != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(Test);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2906,6 +2925,10 @@ namespace Bian {
         output.WriteRawTag(96);
         output.WriteInt32(NftTimeOutSec);
       }
+      if (Test != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(Test);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2948,6 +2971,9 @@ namespace Bian {
       }
       if (NftTimeOutSec != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(NftTimeOutSec);
+      }
+      if (Test != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Test);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2996,6 +3022,9 @@ namespace Bian {
       }
       if (other.NftTimeOutSec != 0) {
         NftTimeOutSec = other.NftTimeOutSec;
+      }
+      if (other.Test != 0) {
+        Test = other.Test;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3059,6 +3088,10 @@ namespace Bian {
             NftTimeOutSec = input.ReadInt32();
             break;
           }
+          case 104: {
+            Test = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -3119,6 +3152,10 @@ namespace Bian {
           }
           case 96: {
             NftTimeOutSec = input.ReadInt32();
+            break;
+          }
+          case 104: {
+            Test = input.ReadInt32();
             break;
           }
         }

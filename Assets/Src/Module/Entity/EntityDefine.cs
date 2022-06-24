@@ -33,5 +33,5 @@ public class EntityDefine
     /// <summary>
     /// avatar2d 基础皮肤名
     /// </summary>
-    public const string AVATAR_BASE_SKIN = "base";
+    public const string AVATAR_BASE_SKIN = "skin-base";
 }

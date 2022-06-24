@@ -20,7 +20,7 @@ public class Avatar2DMixed : Avatar2DSingle
         if (string.IsNullOrEmpty(assetPath) || elements == null || elements.Count == 0)
         {
             MLog.Error(eLogTag.avatar, $"load mix 2d avatar parm is error assetPath={assetPath}");
-            finishCB(this);
+            finishCB?.Invoke(this);
             return;
         }
 
@@ -39,7 +39,7 @@ public class Avatar2DMixed : Avatar2DSingle
             //没变化直接返回
             if (allSame)
             {
-                finishCB(this);
+                finishCB?.Invoke(this);
                 return;
             }
         }
@@ -47,7 +47,7 @@ public class Avatar2DMixed : Avatar2DSingle
         LoadAvatar(assetPath, (target) =>
         {
             MixAvatar(elements);
-            finishCB(this);
+            finishCB?.Invoke(this);
         });
     }
 

@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,9 +13,16 @@ MonoBehaviour:
   m_Name: mix-and-match-pro_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 071eeff112dbeca4e961d78214f41c38, type: 2}
+  - {fileID: 11400000, guid: 5f973ea9def2e4f2e9487276cb196e9f, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 05c17836f4f4fe748b11ad96e9436421, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: f28a470773b36474482d71f6a6acb3f0, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 0
+    applyAdditiveMaterial: 0
+    additiveMaterials: []
+    multiplyMaterials: []
+    screenMaterials: []
   skeletonDataModifiers: []
   fromAnimation: []
   toAnimation: []

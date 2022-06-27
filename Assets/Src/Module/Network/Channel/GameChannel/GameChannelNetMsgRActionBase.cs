@@ -89,7 +89,7 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
             {
                 if (envelope.ErrorCode == ErrorCode.SUCCESS_CODE)
                 {
-                    MLog.Error(eLogTag.network, $"game msg success but propertyName is null,type={envelope.GetType()}");
+                    MLog.Error(eLogTag.network, $"game msg success but propertyName is null,type={envelope.Type}");
                 }
             }
             else

@@ -22,7 +22,9 @@ public partial class SceneEntityMgr : SceneModuleBase
         };
         sceneRole.Root.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
 
-        sceneRole.Root.GetComponent<MainPlayerMoveInput>().MoveSpeed = sceneRole.Root.GetComponent<EntityMoveData>().Speed;
+        MainPlayerMoveInput moveInput = sceneRole.Root.GetComponent<MainPlayerMoveInput>();
+        moveInput.MoveSpeed = sceneRole.Root.GetComponent<EntityMoveData>().Speed;
+        moveInput.PushDownForce = Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
         sceneRole.Root.GetComponent<MoveNetRequest>().enabled = true;
 
         Message.MainPlayerRoleInitFinish.Invoke();

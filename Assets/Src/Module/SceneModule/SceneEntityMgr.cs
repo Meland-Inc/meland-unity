@@ -44,7 +44,7 @@ public partial class SceneEntityMgr : SceneModuleBase
             RemoveSceneEntity(entityID);
         }
 
-        SceneEntity entity = SceneEntityFactory.CreateSceneEntity(entityID, entityType);
+        SceneEntity entity = SceneEntityFactory.CreateSceneEntity(entityID, entityType, false);
         try
         {
             entity.Init();

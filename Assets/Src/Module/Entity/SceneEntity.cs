@@ -32,13 +32,22 @@ public class SceneEntity
     /// </summary>
     public SceneEntityRenderBase SurfaceRender => Surface != null ? Surface.GetSurfaceRender() as SceneEntityRenderBase : null;
 
-    public SceneEntity(string name = null)
+    public SceneEntity(bool isMainRole, string name = null)
     {
         if (string.IsNullOrEmpty(name))
         {
             name = "SceneEntity" + GetHashCode();
         }
-        Root = new GameObject(name);
+        if (isMainRole)//为了能和美术场景预览使用同一个预制件脚本配置 空物体主角的放在resouce下当做配置同步加载上来
+        {
+            GameObject prefab = Resources.Load<GameObject>(EntityDefine.MAIN_PLAYER_ROLE_SPECIAL_PREFAB_PATH);
+            Root = Object.Instantiate(prefab);
+            Resources.UnloadAsset(prefab);
+        }
+        else
+        {
+            Root = new GameObject(name);
+        }
         BaseData = Root.AddComponent<SceneEntityBaseData>();
     }
 

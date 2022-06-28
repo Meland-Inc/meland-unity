@@ -29,11 +29,10 @@ public class PlayerRoleRender : SceneEntityRenderBase
         }
 
         TargetSameDirection.SetTargetTsm(Camera.main.transform);
-        _avatar2D = gameObject.AddComponent<Avatar2D>();
+        _avatar2D = transform.Find("Avatar").gameObject.AddComponent<Avatar2D>();
 
-        _spineAnimationCpt = gameObject.AddComponent<SpineAnimationCpt>();
+        _spineAnimationCpt = _avatar2D.gameObject.AddComponent<SpineAnimationCpt>();
         _spineAnimationCpt.Init(_avatar2D.SkeletonAnimation);
-
     }
 
     protected override void OnRecycle()

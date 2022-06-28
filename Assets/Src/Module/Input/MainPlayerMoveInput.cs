@@ -5,17 +5,21 @@ using UnityEngine;
 /// </summary>
 public class MainPlayerMoveInput : MonoBehaviour
 {
+    public Rigidbody RefRigid;
+    public Vector3 PushDownForce = Vector3.down * 20f;//下压力 防止弹起
     /// <summary>
     /// 移动速度 u/s
     /// </summary>
     public float MoveSpeed = 5;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!Camera.main)
         {
             return;
         }
+
+        RefRigid.AddForce(PushDownForce, ForceMode.Force);//持续下压 否则在持续碰撞下会逐渐上移 暂时没有使用重力
 
         Transform cameraTsm = Camera.main.transform;
 
@@ -48,8 +52,8 @@ public class MainPlayerMoveInput : MonoBehaviour
         }
 
         moveDir.Normalize();
-        moveDir *= MoveSpeed * Time.deltaTime;
-        transform.position = transform.position + moveDir;
+        moveDir *= MoveSpeed * Time.fixedDeltaTime;
+        RefRigid.MovePosition(transform.position + moveDir);
         transform.forward = moveDir;
     }
 }

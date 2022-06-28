@@ -13,9 +13,13 @@ public class EntityDefine
     /// </summary>
     public const string TERRAIN_UNIT_PREFAB_ASSET = "TerrainUnitModel.prefab";
     /// <summary>
-    /// 玩家预制件
+    /// 主角角色预制件
     /// </summary>
-    public const string PLAYER_ROLE_PREFAB_ASSET = "PlayerRole.prefab";
+    public const string MAIN_PLAYER_ROLE_PREFAB_ASSET = "MainPlayerRole.prefab";
+    /// <summary>
+    /// 其他玩家角色预制件
+    /// </summary>
+    public const string OTHER_PLAYER_ROLE_PREFAB_ASSET = "OtherPlayerRole.prefab";
 
     /// <summary>
     /// GF entity 的分组 物件组

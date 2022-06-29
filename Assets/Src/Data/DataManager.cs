@@ -20,11 +20,11 @@ public static class DataManager
     /// </summary>
     public static MapModel Map => s_map = s_map != null ? s_map : GetModel<MapModel>();
 
-    private static BigWorldModel s_bigWorld;
+    private static TerritoryModel s_territory;
     /// <summary>
-    /// 大世界数据
+    /// 领地数据
     /// </summary>
-    public static BigWorldModel BigWorld => s_bigWorld = s_bigWorld != null ? s_bigWorld : GetModel<BigWorldModel>();
+    public static TerritoryModel Territory => s_territory = s_territory != null ? s_territory : GetModel<TerritoryModel>();
 
     private static GameObject s_dataRoot;
     private static readonly Dictionary<string, DataModelBase> s_modelMap = new();

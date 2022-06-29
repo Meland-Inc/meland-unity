@@ -2,14 +2,14 @@
  * @Author: xiang huan
  * @Date: 2022-06-16 14:24:44
  * @Description: 用户资产
- * @FilePath: /meland-unity/Assets/Src/Module/BigWorld/Data/BigWorldUserAssetData.cs
+ * @FilePath: /meland-unity/Assets/Src/Module/Territory/Data/TerritoryUserAssetData.cs
  * 
  */
 
 using UnityEngine;
-public class BigWorldUserAssetData
+public class TerritoryUserAssetData
 {
-    public int EnergyNum { get; private set; }     //能量数
+    public int EnergyNum { get; private set; }     //能量数 
     public int LandNum { get; private set; }  //地块数
     public int LandMaxNum { get; private set; } //max地块数
     public int GoldNum { get; private set; } //金币数
@@ -24,7 +24,7 @@ public class BigWorldUserAssetData
     public int DitaminLand24Hours { get; private set; }
     public string WalletAddress { get; private set; } //钱包地址
 
-    public BigWorldUserAssetData()
+    public TerritoryUserAssetData()
     {
         EnergyNum = 0;
         LandNum = 0;

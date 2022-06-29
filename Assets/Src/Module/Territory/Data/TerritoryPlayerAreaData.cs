@@ -1,8 +1,8 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-06-16 14:24:43
- * @Description: 大世界玩家领地数据
- * @FilePath: /meland-unity/Assets/Src/Module/BigWorld/Data/BigWorldPlayerAreaData.cs
+ * @Description: 玩家领地数据
+ * @FilePath: /meland-unity/Assets/Src/Module/Territory/Data/TerritoryPlayerAreaData.cs
  * 
  */
 
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using GameFramework;
 using UnityEngine;
 
-public class BigWorldPlayerAreaData : IReference
+public class TerritoryPlayerAreaData : IReference
 {
     public Bian.BigWorldPlayerArea SvrData { get; private set; }
     public int MapId { get; private set; }     //地图ID
@@ -22,16 +22,16 @@ public class BigWorldPlayerAreaData : IReference
     public List<ulong> OccupiedLands { get; private set; } //攻占土地 客户端xz作为key
     public int Color { get; private set; }//领地颜色
     public HashSet<ulong> ChallengeTileMap; //可攻占格子Map 客户端xz作为key
-    public BigWorldPlayerAreaData()
+    public TerritoryPlayerAreaData()
     {
         VipLands = new();
         TicketLands = new();
         OccupiedLands = new();
         ChallengeTileMap = new();
     }
-    public static BigWorldPlayerAreaData Create(Bian.BigWorldPlayerArea svrData)
+    public static TerritoryPlayerAreaData Create(Bian.BigWorldPlayerArea svrData)
     {
-        BigWorldPlayerAreaData data = ReferencePool.Acquire<BigWorldPlayerAreaData>();
+        TerritoryPlayerAreaData data = ReferencePool.Acquire<TerritoryPlayerAreaData>();
         data.SetData(svrData);
         return data;
     }
@@ -45,13 +45,13 @@ public class BigWorldPlayerAreaData : IReference
         AnalysisLands(svrData.VipLandTiles, VipLands);
         AnalysisLands(svrData.TicketLandTiles, TicketLands);
         AnalysisLands(svrData.OccupiedLandTiles, OccupiedLands);
-        if (svrData.OwnerId == BigWorldDefine.WORLD_SYSTEM_BORDER_AREA_UID) //官方领地
+        if (svrData.OwnerId == TerritoryDefine.WORLD_SYSTEM_BORDER_AREA_UID) //官方领地
         {
-            Color = BigWorldDefine.BIG_WORLD_OFFICIAL_BORDER_COLOR;
+            Color = TerritoryDefine.BIG_WORLD_OFFICIAL_BORDER_COLOR;
         }
         else if (svrData.OwnerId == DataManager.MainPlayer.RoleID) //自己的领地
         {
-            Color = BigWorldDefine.BIG_WORLD_MAIN_PLAYER_BORDER_COLOR;
+            Color = TerritoryDefine.BIG_WORLD_MAIN_PLAYER_BORDER_COLOR;
             InitChallengeTileMap();
         }
         else
@@ -154,10 +154,10 @@ public class BigWorldPlayerAreaData : IReference
     private void AddChallengeKey(ulong key)
     {
         (int x, int z) = MathUtil.UlongToTwoInt(key);
-        eDirection[] dirList = BigWorldUtil.FOUR_DIR_LIST;
+        eDirection[] dirList = TerritoryUtil.FOUR_DIR_LIST;
         for (int index = 0; index < dirList.Length; index++)
         {
-            Vector2 offset = BigWorldUtil.GetDirOffsetVector2(dirList[index]);
+            Vector2 offset = TerritoryUtil.GetDirOffsetVector2(dirList[index]);
             ulong newKey = MathUtil.TwoIntToUlong(x + (int)offset.x, z + (int)offset.y);
             if (!ChallengeTileMap.Contains(newKey))
             {

@@ -2,7 +2,7 @@
  * @Author: xiang huan
  * @Date: 2022-06-16 14:18:24
  * @Description: xiang huan
- * @FilePath: /meland-unity/Assets/Src/Module/BigWorld/BigWorldModel.cs
+ * @FilePath: /meland-unity/Assets/Src/Module/Territory/TerritoryModel.cs
  * 
  */
 
@@ -11,12 +11,12 @@ using GameFramework;
 using Google.Protobuf.Collections;
 using UnityEngine;
 
-public class BigWorldModel : DataModelBase
+public class TerritoryModel : DataModelBase
 {
-    public Dictionary<string, BigWorldPlayerAreaData> PlayerAreaDataMap { get; private set; }
+    public Dictionary<string, TerritoryPlayerAreaData> PlayerAreaDataMap { get; private set; }
 
-    private BigWorldPlayerAreaData _mainPlayerAreaData;  //主角区域数据
-    public BigWorldPlayerAreaData MainPlayerAreaData
+    private TerritoryPlayerAreaData _mainPlayerAreaData;  //主角区域数据
+    public TerritoryPlayerAreaData MainPlayerAreaData
     {
         get
         {
@@ -28,18 +28,18 @@ public class BigWorldModel : DataModelBase
         }
     }
 
-    public Dictionary<ulong, BigWorldGridData> GridDataMap { get; private set; }
-    public BigWorldUserAssetData AssetData { get; private set; }
+    public Dictionary<ulong, TerritoryGridData> GridDataMap { get; private set; }
+    public TerritoryUserAssetData AssetData { get; private set; }
     [SerializeField]
-    private eBigWorldBorderRenderMode _bigWorldBorderMode;
-    public eBigWorldBorderRenderMode BigWorldBorderMode => _bigWorldBorderMode;
+    private eTerritoryBorderRenderMode _territoryBorderMode;
+    public eTerritoryBorderRenderMode TerritoryBorderMode => _territoryBorderMode;
 
     public void Awake()
     {
         PlayerAreaDataMap = new();
         GridDataMap = new();
         AssetData = new();
-        _bigWorldBorderMode = eBigWorldBorderRenderMode.Battle;
+        _territoryBorderMode = eTerritoryBorderRenderMode.Battle;
 
     }
     //清除数据
@@ -52,7 +52,7 @@ public class BigWorldModel : DataModelBase
     /** 移除所有地格数据*/
     public void RemoveAllGridData()
     {
-        foreach (KeyValuePair<ulong, BigWorldGridData> item in GridDataMap)
+        foreach (KeyValuePair<ulong, TerritoryGridData> item in GridDataMap)
         {
             ReferencePool.Release(item.Value);
         }
@@ -60,9 +60,9 @@ public class BigWorldModel : DataModelBase
     }
 
     /** 获取一个地格数据 */
-    public BigWorldGridData GetGridData(ulong key)
+    public TerritoryGridData GetGridData(ulong key)
     {
-        _ = GridDataMap.TryGetValue(key, out BigWorldGridData gridData);
+        _ = GridDataMap.TryGetValue(key, out TerritoryGridData gridData);
         return gridData;
     }
 
@@ -70,25 +70,25 @@ public class BigWorldModel : DataModelBase
     public void UpdateGridData(Bian.BigWorldTile data)
     {
         ulong key = NetUtil.RCToXZKey(data.R, data.C);
-        _ = GridDataMap.TryGetValue(key, out BigWorldGridData gridData);
+        _ = GridDataMap.TryGetValue(key, out TerritoryGridData gridData);
         if (gridData != null)
         {
             gridData.SetData(data);
         }
-        Message.UpdateBigWorldGridData?.Invoke(gridData);
+        Message.UpdateTerritoryGridData?.Invoke(gridData);
     }
 
     /** 添加一个地格数据 */
-    public BigWorldGridData AddGridData(Bian.BigWorldTile data)
+    public TerritoryGridData AddGridData(Bian.BigWorldTile data)
     {
         ulong key = NetUtil.RCToXZKey(data.R, data.C);
-        if (GridDataMap.TryGetValue(key, out BigWorldGridData gridData))
+        if (GridDataMap.TryGetValue(key, out TerritoryGridData gridData))
         {
             return gridData;
         }
         else
         {
-            gridData = BigWorldGridData.Create(data);
+            gridData = TerritoryGridData.Create(data);
             GridDataMap.Add(key, gridData);
             return gridData;
         }
@@ -97,7 +97,7 @@ public class BigWorldModel : DataModelBase
     /** 移除一个地格数据*/
     public void RemoveGridData(ulong key)
     {
-        _ = GridDataMap.TryGetValue(key, out BigWorldGridData gridData);
+        _ = GridDataMap.TryGetValue(key, out TerritoryGridData gridData);
         if (gridData != null)
         {
             ReferencePool.Release(gridData);
@@ -108,9 +108,9 @@ public class BigWorldModel : DataModelBase
     * 获取或添加一个玩家区域数据
     * @param tData 玩家区域数据
     */
-    public BigWorldPlayerAreaData GetAddPlayerAreaData(Bian.BigWorldPlayerArea data)
+    public TerritoryPlayerAreaData GetAddPlayerAreaData(Bian.BigWorldPlayerArea data)
     {
-        _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out BigWorldPlayerAreaData areaData);
+        _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out TerritoryPlayerAreaData areaData);
         if (areaData != null)
         {
             UpdatePlayerAreaData(data);
@@ -123,9 +123,9 @@ public class BigWorldModel : DataModelBase
     }
 
     /** 获取玩家区域数据 */
-    public BigWorldPlayerAreaData GetPlayerAreaData(string uid)
+    public TerritoryPlayerAreaData GetPlayerAreaData(string uid)
     {
-        _ = PlayerAreaDataMap.TryGetValue(uid, out BigWorldPlayerAreaData areaData);
+        _ = PlayerAreaDataMap.TryGetValue(uid, out TerritoryPlayerAreaData areaData);
         return areaData;
     }
 
@@ -133,48 +133,50 @@ public class BigWorldModel : DataModelBase
     * 添加一个玩家区域数据
     * @param tData 玩家区域数据
 */
-    public BigWorldPlayerAreaData AddPlayerAreaData(Bian.BigWorldPlayerArea data)
+    public TerritoryPlayerAreaData AddPlayerAreaData(Bian.BigWorldPlayerArea data)
     {
-        _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out BigWorldPlayerAreaData areaData);
+        _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out TerritoryPlayerAreaData areaData);
         if (areaData != null)
         {
             return areaData;
         }
-        areaData = BigWorldPlayerAreaData.Create(data);
+        areaData = TerritoryPlayerAreaData.Create(data);
         PlayerAreaDataMap.Add(data.OwnerId, areaData);
-        Message.UpdateBigWorldPlayerAreaData?.Invoke(areaData.OwnerId);
+        Message.UpdateTerritoryPlayerAreaData?.Invoke(areaData.OwnerId);
         return areaData;
     }
 
     /** 刷新玩家区域数据 */
     public void UpdatePlayerAreaData(Bian.BigWorldPlayerArea data)
     {
-        _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out BigWorldPlayerAreaData areaData);
+        _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out TerritoryPlayerAreaData areaData);
         if (areaData == null)
         {
+            MLog.Warning(eLogTag.territory, $"UpdatePlayerAreaData not find Player Area:{data.OwnerId}");
             return;
         }
         areaData.SetData(data);
-        Message.UpdateBigWorldPlayerAreaData?.Invoke(areaData.OwnerId);
+        Message.UpdateTerritoryPlayerAreaData?.Invoke(areaData.OwnerId);
     }
 
     /** 移除一个玩家区域数据*/
     public void RemovePlayerAreaData(string uid)
     {
-        _ = PlayerAreaDataMap.TryGetValue(uid, out BigWorldPlayerAreaData areaData);
+        _ = PlayerAreaDataMap.TryGetValue(uid, out TerritoryPlayerAreaData areaData);
         if (areaData == null)
         {
+            MLog.Warning(eLogTag.territory, $"RemovePlayerAreaData not find Player Area:{uid}");
             return;
         }
         ReferencePool.Release(areaData);
         _ = PlayerAreaDataMap.Remove(uid);
-        Message.UpdateBigWorldPlayerAreaData?.Invoke(areaData.OwnerId);
+        Message.UpdateTerritoryPlayerAreaData?.Invoke(areaData.OwnerId);
     }
 
     /** 移除所有玩家区域数据*/
     public void RemoveAllPlayerAreaData()
     {
-        foreach (KeyValuePair<string, BigWorldPlayerAreaData> item in PlayerAreaDataMap)
+        foreach (KeyValuePair<string, TerritoryPlayerAreaData> item in PlayerAreaDataMap)
         {
             ReferencePool.Release(item.Value);
         }
@@ -190,15 +192,15 @@ public class BigWorldModel : DataModelBase
     public void InitSystemAreaData(RepeatedField<int> rcIndexList)
     {
         Bian.BigWorldPlayerArea areaData = new();
-        areaData.OwnerId = BigWorldDefine.WORLD_SYSTEM_BORDER_AREA_UID;
+        areaData.OwnerId = TerritoryDefine.WORLD_SYSTEM_BORDER_AREA_UID;
         areaData.VipLandTiles.AddRange(rcIndexList);
         _ = GetAddPlayerAreaData(areaData);
     }
 
     /** 设置边界模式 */
-    public void SetBigWorldBorderMode(eBigWorldBorderRenderMode mode)
+    public void SetTerritoryBorderMode(eTerritoryBorderRenderMode mode)
     {
-        _bigWorldBorderMode = mode;
-        Message.UpdateBigWorldBorderRenderMode?.Invoke(mode);
+        _territoryBorderMode = mode;
+        Message.UpdateTerritoryBorderRenderMode?.Invoke(mode);
     }
 }

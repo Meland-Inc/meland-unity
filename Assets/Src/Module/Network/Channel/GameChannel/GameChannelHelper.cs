@@ -19,8 +19,8 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
 
         networkChannel.RegisterHandler(TAddPlayerAreaAction.GetAction<TAddPlayerAreaAction>());
         networkChannel.RegisterHandler(TBaseAreaListAction.GetAction<TBaseAreaListAction>());
-        networkChannel.RegisterHandler(TBigWorldTileAction.GetAction<TBigWorldTileAction>());
-        networkChannel.RegisterHandler(TBigWorldTileUpdateAction.GetAction<TBigWorldTileUpdateAction>());
+        networkChannel.RegisterHandler(TTerritoryTileAction.GetAction<TTerritoryTileAction>());
+        networkChannel.RegisterHandler(TTerritoryTileUpdateAction.GetAction<TTerritoryTileUpdateAction>());
         networkChannel.RegisterHandler(TPlayerAreaListUpdateAction.GetAction<TPlayerAreaListUpdateAction>());
         networkChannel.RegisterHandler(TPlayerAreaUpdateAction.GetAction<TPlayerAreaUpdateAction>());
         networkChannel.RegisterHandler(TRemovePlayerAreaAction.GetAction<TRemovePlayerAreaAction>());

@@ -1,13 +1,13 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-06-16 13:54:28
- * @Description: 大世界
- * @FilePath: /meland-unity/Assets/Src/Module/BigWorld/BigWorldCenter.cs
+ * @Description: 领地中心
+ * @FilePath: /meland-unity/Assets/Src/Module/Territory/TerritoryCenter.cs
  * 
  */
 using UnityGameFramework.Runtime;
 
-public class BigWorldCenter : GameFrameworkComponent
+public class TerritoryCenter : GameFrameworkComponent
 {
     private void Awake()
     {
@@ -16,6 +16,6 @@ public class BigWorldCenter : GameFrameworkComponent
 
     public void UpdateAssetData(Runtime.TUserAssetResponse data)
     {
-        DataManager.BigWorld.UpdateAssetData(data);
+        DataManager.Territory.UpdateAssetData(data);
     }
 }

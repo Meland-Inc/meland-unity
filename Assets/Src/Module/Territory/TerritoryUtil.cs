@@ -1,15 +1,15 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-06-16 14:21:37
- * @Description: 大世界工具
- * @FilePath: /meland-unity/Assets/Src/Module/BigWorld/BigWorldUtil.cs
+ * @Description: 领地工具
+ * @FilePath: /meland-unity/Assets/Src/Module/Territory/TerritoryUtil.cs
  * 
  */
 using System.Collections.Generic;
 using Google.Protobuf.Collections;
 using UnityEngine;
 
-public static class BigWorldUtil
+public static class TerritoryUtil
 {
     public static eDirection[] FOUR_DIR_LIST = { eDirection.UP, eDirection.DOWN, eDirection.LEFT, eDirection.RIGHT };
     private static Dictionary<eDirection, Vector2> s_dirOffsetRCMap;
@@ -29,7 +29,7 @@ public static class BigWorldUtil
         return offset;
     }
 
-    public static void HandleAddRemoveBigWorldGrid(RepeatedField<Bian.BigWorldTile> adds, RepeatedField<int> dels)
+    public static void HandleAddRemoveTerritoryGrid(RepeatedField<Bian.BigWorldTile> adds, RepeatedField<int> dels)
     {
         List<ulong> addList = new();
         List<ulong> delList = new();
@@ -41,7 +41,7 @@ public static class BigWorldUtil
                 for (int rcIndex = dels[index]; rcIndex <= dels[index + 1]; rcIndex++)
                 {
                     ulong key = NetUtil.RCIndexToXZKey(rcIndex);
-                    DataManager.BigWorld.RemoveGridData(key);
+                    DataManager.Territory.RemoveGridData(key);
                     delList.Add(key);
                 }
             }
@@ -52,20 +52,20 @@ public static class BigWorldUtil
         {
             for (int index = 0; index < adds.Count; index++)
             {
-                _ = DataManager.BigWorld.AddGridData(adds[index]);
+                _ = DataManager.Territory.AddGridData(adds[index]);
                 addList.Add(NetUtil.RCToXZKey(adds[index].R, adds[index].C));
             }
         }
-        Message.UpdateBigWorldGridDataList?.Invoke(addList, delList);
+        Message.UpdateTerritoryGridDataList?.Invoke(addList, delList);
     }
 
-    public static void HandleAddRemoveBigWorldPlayerArea(RepeatedField<Bian.BigWorldPlayerArea> adds, RepeatedField<string> dels)
+    public static void HandleAddRemoveTerritoryPlayerArea(RepeatedField<Bian.BigWorldPlayerArea> adds, RepeatedField<string> dels)
     {
         if (dels != null && dels.Count > 0)
         {
             for (int index = 0; index < dels.Count; index++)
             {
-                DataManager.BigWorld.RemovePlayerAreaData(dels[index]);
+                DataManager.Territory.RemovePlayerAreaData(dels[index]);
             }
         }
 
@@ -73,7 +73,7 @@ public static class BigWorldUtil
         {
             for (int index = 0; index < adds.Count; index++)
             {
-                _ = DataManager.BigWorld.GetAddPlayerAreaData(adds[index]);
+                _ = DataManager.Territory.GetAddPlayerAreaData(adds[index]);
             }
         }
     }

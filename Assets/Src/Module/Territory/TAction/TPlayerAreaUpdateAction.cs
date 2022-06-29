@@ -14,7 +14,7 @@ public class TPlayerAreaUpdateAction : GameChannelNetMsgTActionBase<TPlayerAreaU
         {
             return false;
         }
-        _ = DataManager.BigWorld.GetAddPlayerAreaData(rsp.Area);
+        _ = DataManager.Territory.GetAddPlayerAreaData(rsp.Area);
         return true;
     }
 }

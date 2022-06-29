@@ -1,7 +1,7 @@
 
 using Bian;
 
-public class TBigWorldTileUpdateAction : GameChannelNetMsgTActionBase<TBigWorldTileUpdateResponse>
+public class TTerritoryTileUpdateAction : GameChannelNetMsgTActionBase<TBigWorldTileUpdateResponse>
 {
     protected override EnvelopeType GetEnvelopeType()
     {
@@ -14,7 +14,7 @@ public class TBigWorldTileUpdateAction : GameChannelNetMsgTActionBase<TBigWorldT
         {
             return false;
         }
-        DataManager.BigWorld.UpdateGridData(rsp.TilePro);
+        DataManager.Territory.UpdateGridData(rsp.TilePro);
         return true;
     }
 }

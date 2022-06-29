@@ -47,10 +47,10 @@ public static class Message
 
     #endregion
 
-    #region 大世界
-    public static Action<BigWorldGridData> UpdateBigWorldGridData = delegate { };
-    public static Action<List<ulong>, List<ulong>> UpdateBigWorldGridDataList = delegate { };
-    public static Action<string> UpdateBigWorldPlayerAreaData = delegate { };
-    public static Action<eBigWorldBorderRenderMode> UpdateBigWorldBorderRenderMode = delegate { };
+    #region 领地
+    public static Action<TerritoryGridData> UpdateTerritoryGridData = delegate { };
+    public static Action<List<ulong>, List<ulong>> UpdateTerritoryGridDataList = delegate { };
+    public static Action<string> UpdateTerritoryPlayerAreaData = delegate { };
+    public static Action<eTerritoryBorderRenderMode> UpdateTerritoryBorderRenderMode = delegate { };
     #endregion
 }

@@ -16,11 +16,11 @@ public class TBaseAreaListAction : GameChannelNetMsgTActionBase<TBaseAreaListRes
         }
         if (rsp.SelfArea != null)
         {
-            _ = DataManager.BigWorld.GetAddPlayerAreaData(rsp.SelfArea);
+            _ = DataManager.Territory.GetAddPlayerAreaData(rsp.SelfArea);
         }
         if (rsp.SystemArea != null && rsp.SystemArea.Count > 0)
         {
-            DataManager.BigWorld.InitSystemAreaData(rsp.SystemArea);
+            DataManager.Territory.InitSystemAreaData(rsp.SystemArea);
         }
         return true;
     }

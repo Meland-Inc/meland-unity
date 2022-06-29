@@ -14,7 +14,7 @@ public class TRemovePlayerAreaAction : GameChannelNetMsgTActionBase<TRemovePlaye
         {
             return false;
         }
-        DataManager.BigWorld.RemovePlayerAreaData(rsp.Area.OwnerId);
+        DataManager.Territory.RemovePlayerAreaData(rsp.Area.OwnerId);
         return true;
     }
 }

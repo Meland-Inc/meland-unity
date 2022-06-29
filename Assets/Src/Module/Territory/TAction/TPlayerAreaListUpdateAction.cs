@@ -14,7 +14,7 @@ public class TPlayerAreaListUpdateAction : GameChannelNetMsgTActionBase<TPlayerA
         {
             return false;
         }
-        BigWorldUtil.HandleAddRemoveBigWorldPlayerArea(rsp.AddList, rsp.RemoveList);
+        TerritoryUtil.HandleAddRemoveTerritoryPlayerArea(rsp.AddList, rsp.RemoveList);
         return true;
     }
 }

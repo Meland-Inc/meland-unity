@@ -1,14 +1,14 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-06-16 14:24:25
- * @Description: 大世界网格数据
- * @FilePath: /meland-unity/Assets/Src/Module/BigWorld/Data/BigWorldGridData.cs
+ * @Description: 领地网格数据
+ * @FilePath: /meland-unity/Assets/Src/Module/Territory/Data/TerritoryGridData.cs
  * 
  */
 
 using GameFramework;
 using UnityEngine;
-public class BigWorldGridData : IReference
+public class TerritoryGridData : IReference
 {
     public Bian.BigWorldTile SvrData { get; private set; }
     public Vector2 Location { get; private set; }  //XZ坐标
@@ -18,14 +18,16 @@ public class BigWorldGridData : IReference
     public Bian.BigWorldLandState State { get; private set; }
     public Bian.BigWorldFightState FightState { get; private set; }
     public Bian.BigWorldFightInfo FightInfo { get; private set; }
-    public BigWorldGridData()
+
+    private const int MAX_HP_ID = 8000003;
+    public TerritoryGridData()
     {
         Location = new();
     }
 
-    public static BigWorldGridData Create(Bian.BigWorldTile svrData)
+    public static TerritoryGridData Create(Bian.BigWorldTile svrData)
     {
-        BigWorldGridData data = ReferencePool.Acquire<BigWorldGridData>();
+        TerritoryGridData data = ReferencePool.Acquire<TerritoryGridData>();
         data.SetData(svrData);
         return data;
     }
@@ -33,7 +35,7 @@ public class BigWorldGridData : IReference
     {
         SvrData = svrData;
         CurHp = svrData.Profile.CurHp;
-        MaxHp = GFEntry.DataTable.GetDataTable<DRGameValue>().GetDataRow(8000003).Value;
+        MaxHp = GFEntry.DataTable.GetDataTable<DRGameValue>().GetDataRow(MAX_HP_ID).Value;
         Owner = svrData.Profile.OwnerId;
         State = svrData.Profile.State;
         (float x, float z) = NetUtil.RCToXZ(svrData.R, svrData.C);

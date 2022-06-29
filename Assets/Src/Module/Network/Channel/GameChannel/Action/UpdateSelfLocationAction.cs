@@ -1,5 +1,4 @@
-using Bian;
-using UnityEngine;
+using MelandGame3;
 
 /// <summary>
 /// 主角移动请求
@@ -9,7 +8,7 @@ public class UpdateSelfLocationAction : GameChannelNetMsgRActionBase<UpdateSelfL
     /// <summary>
     /// </summary>
     /// <param name="curPos">当前世界坐标</param>
-    public static void Req(Vector3 curPos)
+    public static void Req(UnityEngine.Vector3 curPos)
     {
         UpdateSelfLocationRequest req = GenerateReq();
         req.Movement = new()
@@ -23,7 +22,7 @@ public class UpdateSelfLocationAction : GameChannelNetMsgRActionBase<UpdateSelfL
             },
             DestLocation = null,
             Type = MovementType.MovementTypeRun,
-            Dir = new VectorXYZ()
+            Dir = new Vector3()
             {
                 X = 0,
                 Y = 100,

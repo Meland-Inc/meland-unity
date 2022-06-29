@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from config.proto</summary>
   public static partial class ConfigReflection {
@@ -24,91 +24,96 @@ namespace Bian {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgxjb25maWcucHJvdG8SBEJpYW4aC21vZGVsLnByb3RvGhRmYWxsaW5nX29i",
-            "amVjdC5wcm90bxoKYnVmZi5wcm90bxoLc2tpbGwucHJvdG8aFHJlc291cmNl",
-            "X3BvaW50LnByb3RvGglhc3QucHJvdG8aD2NvbmRpdGlvbi5wcm90bxoIY2Qu",
-            "cHJvdG8aC3F1b3RhLnByb3RvGg1tb25zdGVyLnByb3RvGgx3aWRnZXQucHJv",
-            "dG8aEHJhbmRvbV9tYXAucHJvdG8aD2JpZ193b3JsZC5wcm90byKTAQoPV2Vh",
-            "dGhlclNldHRpbmdzEgoKAmlkGAEgASgFEhMKC3dlYXRoZXJUeXBlGAIgASgF",
-            "EhIKCnRlbXBDaGFuZ2UYAyABKAUSFQoNdGhpcnN0eUNoYW5nZRgEIAEoBRIU",
-            "CgxodW5ncnlDaGFuZ2UYBSABKAUSDgoGYnVmZklkGAYgASgFEg4KBnRpY2tN",
-            "cxgHIAEoBSJvCg9BY2hpZXZlU2V0dGluZ3MSCgoCaWQYASABKAUSDAoEdHlw",
-            "ZRgCIAEoBRIRCgl0YXJnZXRfaWQYAyABKAUSGQoRcmVxdWlyZW1lbnRzX3Rl",
-            "eHQYBCABKAkSFAoMcmV3YXJkc190ZXh0GAUgASgJIjQKEE1hbm9yQnV5U2V0",
-            "dGluZ3MSDwoHYnV5X251bRgBIAEoBRIPCgdjb3N0X2lkGAIgASgFIsUBCg9E",
-            "dW5nZW9uU2V0dGluZ3MSCgoCaWQYASABKAUSDAoEbmFtZRgCIAEoCRIQCght",
-            "YXhMZXZlbBgDIAEoBRITCgttYXhWaXBMZXZlbBgEIAEoBRIUCgx1cGdyYWRl",
-            "U2NvcmUYBSABKAUSFAoMY2RLZXlGbGFnU3RyGAYgASgJEhUKDWJhc2VSZXdh",
-            "cmRTdHIYByABKAkSFgoOc3VwZXJSZXdhcmRTdHIYCCABKAkSFgoOZmluYWxS",
-            "ZXdhcmRTdHIYCSABKAkiSwoKRHVuZ2Vvbk1hcBIKCgJJZBgBIAEoAxIPCgdN",
-            "YXBOYW1lGAIgASgJEhEKCUluRHVuZ2VvbhgDIAEoBRINCgVTY29yZRgEIAEo",
-            "BSKDAQoRR2FtZVZhbHVlU2V0dGluZ3MSCgoCSWQYASABKAUSDQoFVmFsdWUY",
-            "AiABKAUSEwoLU3RyaW5nVmFsdWUYAyABKAkSEgoKVmFsdWVBcnJheRgEIAEo",
-            "CRITCgtTdHJpbmdBcnJheRgFIAEoCRIVCg1JbnRWYWx1ZUFycmF5GAYgAygF",
-            "Il0KDENvZGVSZXNvdXJjZRIQCghjb2RlX2NpZBgBIAEoBRIQCghjYXRlZ29y",
-            "eRgCIAEoCRIRCgljYW5faW5kZXgYAyADKAUSFgoOY2FuX2luZGV4X3R5cGUY",
-            "BCADKAkiZwoMUmVzb3VyY2VzVGFnEigKDHRhcl9jb2RlX3JlcxgBIAMoCzIS",
-            "LkJpYW4uQ29kZVJlc291cmNlEi0KD3Rhcl93aWRnZXRfdHlwZRgCIAMoDjIU",
-            "LkJpYW4uV2lkZ2V0RnVuY1R5cGUisQEKFkV4Y2x1c2lvbkVudGl0eVNldHRp",
-            "bmcSCwoDY2lkGAEgASgFEhkKEWV4X3R5cGVfbm90X2J1aWxkGAIgASgFEhkK",
-            "EWV4X2NpZHNfbm90X2J1aWxkGAMgASgJEhMKC2V4X3R5cGVfZGVsGAQgASgF",
-            "EhMKC2V4X2NpZHNfZGVsGAUgASgJEhQKDGV4X3R5cGVfbW92ZRgGIAEoBRIU",
-            "CgxleF9jaWRzX21vdmUYByABKAki2w4KEkNvbmZpZ0RhdGFTZXR0aW5ncxIt",
-            "Cg93aWRnZXRfc2V0dGluZ3MYASADKAsyFC5CaWFuLldpZGdldFNldHRpbmdz",
-            "Ei0KD29iamVjdF9zZXR0aW5ncxgCIAMoCzIULkJpYW4uT2JqZWN0U2V0dGlu",
-            "Z3MSMwoRb2JqX2dlYXJfc2V0dGluZ3MYAyADKAsyGC5CaWFuLk9iamVjdEdl",
-            "YXJTZXR0aW5ncxI3ChNmbGxpbmdfb2JqX3JlY2lwZXRzGAQgAygLMhouQmlh",
-            "bi5GYWxsaW5nT2JqZWN0UmVjaXBldBInCgxib3Rfc2V0dGluZ3MYBSADKAsy",
-            "ES5CaWFuLkJvdFNldHRpbmdzEi8KEmJvdF9sZXZlbF9zZXR0aW5ncxgGIAMo",
-            "CzITLkJpYW4uQm90THZTZXR0aW5ncxIpCg1idWZmX3NldHRpbmdzGAcgAygL",
-            "MhIuQmlhbi5CdWZmU2V0dGluZ3MSKwoOc2tpbGxfc2V0dGluZ3MYCCADKAsy",
-            "Ey5CaWFuLlNraWxsU2V0dGluZ3MSHwoMbnBjX3NldHRpbmdzGAkgAygLMgku",
-            "Qmlhbi5OcGMSPAoXcmVzb3VyY2VfcG9pbnRfc2V0dGluZ3MYCiADKAsyGy5C",
-            "aWFuLlJlc291cmNlUG9pbnRTZXR0aW5ncxIoCg1jb2RlX3NldHRpbmdzGAsg",
-            "AygLMhEuQmlhbi5Db2RlU2V0dGluZxIoChFjb2RlX2xpYl9zZXR0aW5ncxgM",
-            "IAMoCzINLkJpYW4uQ29kZUxpYhI1ChVwbGF5ZXJfbGV2ZWxfc2V0dGluZ3MY",
-            "DSADKAsyFi5CaWFuLkVudGl0eUx2U2V0dGluZ3MSKQoNcm9sZV9zZXR0aW5n",
-            "cxgOIAMoCzISLkJpYW4uUm9sZVNldHRpbmdzEikKDWNoYXRfc2V0dGluZ3MY",
-            "DyADKAsyEi5CaWFuLkNoYXRTZXR0aW5ncxI6ChZzcGVjaWFsX2J1aWxkX3Nl",
-            "dHRpbmdzGBEgAygLMhouQmlhbi5TcGVjaWFsQnVpbGRTZXR0aW5ncxI4ChVh",
-            "cmNoX2Zvcm11bGFfc2V0dGluZ3MYEiADKAsyGS5CaWFuLkFyY2hGb3JtdWxh",
-            "U2V0dGluZ3MSLgoUc3Bhd25fcG9pbnRfc2V0dGluZ3MYEyADKAsyEC5CaWFu",
-            "LlNwYXduUG9pbnQSPgoYY29uc3VtYWJsZV9pdGVtX3NldHRpbmdzGBQgAygL",
-            "MhwuQmlhbi5Db25zdW1hYmxlSXRlbVNldHRpbmdzEiUKD3Jld2FyZF9zZXR0",
-            "aW5ncxgVIAMoCzIMLkJpYW4uUmV3YXJkEjIKFnNjZW5lX3dlYXRoZXJfc2V0",
-            "dGluZ3MYFiADKAsyEi5CaWFuLlNjZW5lV2VhdGhlchI0ChV3ZWF0aGVyX3Nl",
-            "dHRpbmdzX2xpc3QYFyADKAsyFS5CaWFuLldlYXRoZXJTZXR0aW5ncxIvChBh",
-            "Y2hpZXZlX3NldHRpbmdzGBggAygLMhUuQmlhbi5BY2hpZXZlU2V0dGluZ3MS",
-            "MgoWbWFpbF90ZW1wbGF0ZV9zZXR0aW5ncxgZIAMoCzISLkJpYW4uTWFpbFRl",
-            "bXBsYXRlEikKDXRhc2tfc2V0dGluZ3MYGiADKAsyEi5CaWFuLlRhc2tTZXR0",
-            "aW5ncxIyChJjb25kaXRpb25fc2V0dGluZ3MYGyADKAsyFi5CaWFuLkNvbmRp",
-            "dGlvblNldHRpbmcSJAoLY2Rfc2V0dGluZ3MYHCADKAsyDy5CaWFuLkNkU2V0",
-            "dGluZxIqCg5xdW90YV9zZXR0aW5ncxgdIAMoCzISLkJpYW4uUXVvdGFTZXR0",
-            "aW5nEjIKEm1hbm9yX2J1eV9zZXR0aW5ncxgeIAMoCzIWLkJpYW4uTWFub3JC",
-            "dXlTZXR0aW5ncxItCg9lbnRpdHlfc2V0dGluZ3MYHyADKAsyFC5CaWFuLk9i",
-            "amVjdFNldHRpbmdzEi8KEGR1bmdlb25fc2V0dGluZ3MYICADKAsyFS5CaWFu",
-            "LkR1bmdlb25TZXR0aW5ncxIlCgtkdW5nZW9uX21hcBghIAMoCzIQLkJpYW4u",
-            "RHVuZ2Vvbk1hcBI0ChNnYW1lX3ZhbHVlX3NldHRpbmdzGCIgAygLMhcuQmlh",
-            "bi5HYW1lVmFsdWVTZXR0aW5ncxIvChBtb25zdGVyX3NldHRpbmdzGCMgAygL",
-            "MhUuQmlhbi5Nb25zdGVyU2V0dGluZ3MSNAoTcmFuZG9tX21hcF9zZXR0aW5n",
-            "cxgkIAMoCzIXLkJpYW4uUmFuZG9tTWFwU2V0dGluZ3MSIwoHcmVzX3RhZxgl",
-            "IAEoCzISLkJpYW4uUmVzb3VyY2VzVGFnEj4KGGV4Y2x1c2lvbl9lbnRpdHlf",
-            "c2V0dGluZxgmIAMoCzIcLkJpYW4uRXhjbHVzaW9uRW50aXR5U2V0dGluZxI9",
-            "ChhwbGFjZWFibGVfc2tpbGxfc2V0dGluZ3MYJyADKAsyGy5CaWFuLlBsYWNl",
-            "YWJsZVNraWxsU2V0dGluZ2IGcHJvdG8z"));
+            "Cgxjb25maWcucHJvdG8SC01lbGFuZEdhbWUzGgttb2RlbC5wcm90bxoUZmFs",
+            "bGluZ19vYmplY3QucHJvdG8aCmJ1ZmYucHJvdG8aC3NraWxsLnByb3RvGhRy",
+            "ZXNvdXJjZV9wb2ludC5wcm90bxoJYXN0LnByb3RvGg9jb25kaXRpb24ucHJv",
+            "dG8aCGNkLnByb3RvGgtxdW90YS5wcm90bxoNbW9uc3Rlci5wcm90bxoMd2lk",
+            "Z2V0LnByb3RvGhByYW5kb21fbWFwLnByb3RvGg9iaWdfd29ybGQucHJvdG8i",
+            "kwEKD1dlYXRoZXJTZXR0aW5ncxIKCgJpZBgBIAEoBRITCgt3ZWF0aGVyVHlw",
+            "ZRgCIAEoBRISCgp0ZW1wQ2hhbmdlGAMgASgFEhUKDXRoaXJzdHlDaGFuZ2UY",
+            "BCABKAUSFAoMaHVuZ3J5Q2hhbmdlGAUgASgFEg4KBmJ1ZmZJZBgGIAEoBRIO",
+            "CgZ0aWNrTXMYByABKAUibwoPQWNoaWV2ZVNldHRpbmdzEgoKAmlkGAEgASgF",
+            "EgwKBHR5cGUYAiABKAUSEQoJdGFyZ2V0X2lkGAMgASgFEhkKEXJlcXVpcmVt",
+            "ZW50c190ZXh0GAQgASgJEhQKDHJld2FyZHNfdGV4dBgFIAEoCSI0ChBNYW5v",
+            "ckJ1eVNldHRpbmdzEg8KB2J1eV9udW0YASABKAUSDwoHY29zdF9pZBgCIAEo",
+            "BSLFAQoPRHVuZ2VvblNldHRpbmdzEgoKAmlkGAEgASgFEgwKBG5hbWUYAiAB",
+            "KAkSEAoIbWF4TGV2ZWwYAyABKAUSEwoLbWF4VmlwTGV2ZWwYBCABKAUSFAoM",
+            "dXBncmFkZVNjb3JlGAUgASgFEhQKDGNkS2V5RmxhZ1N0chgGIAEoCRIVCg1i",
+            "YXNlUmV3YXJkU3RyGAcgASgJEhYKDnN1cGVyUmV3YXJkU3RyGAggASgJEhYK",
+            "DmZpbmFsUmV3YXJkU3RyGAkgASgJIksKCkR1bmdlb25NYXASCgoCSWQYASAB",
+            "KAMSDwoHTWFwTmFtZRgCIAEoCRIRCglJbkR1bmdlb24YAyABKAUSDQoFU2Nv",
+            "cmUYBCABKAUigwEKEUdhbWVWYWx1ZVNldHRpbmdzEgoKAklkGAEgASgFEg0K",
+            "BVZhbHVlGAIgASgFEhMKC1N0cmluZ1ZhbHVlGAMgASgJEhIKClZhbHVlQXJy",
+            "YXkYBCABKAkSEwoLU3RyaW5nQXJyYXkYBSABKAkSFQoNSW50VmFsdWVBcnJh",
+            "eRgGIAMoBSJdCgxDb2RlUmVzb3VyY2USEAoIY29kZV9jaWQYASABKAUSEAoI",
+            "Y2F0ZWdvcnkYAiABKAkSEQoJY2FuX2luZGV4GAMgAygFEhYKDmNhbl9pbmRl",
+            "eF90eXBlGAQgAygJInUKDFJlc291cmNlc1RhZxIvCgx0YXJfY29kZV9yZXMY",
+            "ASADKAsyGS5NZWxhbmRHYW1lMy5Db2RlUmVzb3VyY2USNAoPdGFyX3dpZGdl",
+            "dF90eXBlGAIgAygOMhsuTWVsYW5kR2FtZTMuV2lkZ2V0RnVuY1R5cGUisQEK",
+            "FkV4Y2x1c2lvbkVudGl0eVNldHRpbmcSCwoDY2lkGAEgASgFEhkKEWV4X3R5",
+            "cGVfbm90X2J1aWxkGAIgASgFEhkKEWV4X2NpZHNfbm90X2J1aWxkGAMgASgJ",
+            "EhMKC2V4X3R5cGVfZGVsGAQgASgFEhMKC2V4X2NpZHNfZGVsGAUgASgJEhQK",
+            "DGV4X3R5cGVfbW92ZRgGIAEoBRIUCgxleF9jaWRzX21vdmUYByABKAkipBAK",
+            "EkNvbmZpZ0RhdGFTZXR0aW5ncxI0Cg93aWRnZXRfc2V0dGluZ3MYASADKAsy",
+            "Gy5NZWxhbmRHYW1lMy5XaWRnZXRTZXR0aW5ncxI0Cg9vYmplY3Rfc2V0dGlu",
+            "Z3MYAiADKAsyGy5NZWxhbmRHYW1lMy5PYmplY3RTZXR0aW5ncxI6ChFvYmpf",
+            "Z2Vhcl9zZXR0aW5ncxgDIAMoCzIfLk1lbGFuZEdhbWUzLk9iamVjdEdlYXJT",
+            "ZXR0aW5ncxI+ChNmbGxpbmdfb2JqX3JlY2lwZXRzGAQgAygLMiEuTWVsYW5k",
+            "R2FtZTMuRmFsbGluZ09iamVjdFJlY2lwZXQSLgoMYm90X3NldHRpbmdzGAUg",
+            "AygLMhguTWVsYW5kR2FtZTMuQm90U2V0dGluZ3MSNgoSYm90X2xldmVsX3Nl",
+            "dHRpbmdzGAYgAygLMhouTWVsYW5kR2FtZTMuQm90THZTZXR0aW5ncxIwCg1i",
+            "dWZmX3NldHRpbmdzGAcgAygLMhkuTWVsYW5kR2FtZTMuQnVmZlNldHRpbmdz",
+            "EjIKDnNraWxsX3NldHRpbmdzGAggAygLMhouTWVsYW5kR2FtZTMuU2tpbGxT",
+            "ZXR0aW5ncxImCgxucGNfc2V0dGluZ3MYCSADKAsyEC5NZWxhbmRHYW1lMy5O",
+            "cGMSQwoXcmVzb3VyY2VfcG9pbnRfc2V0dGluZ3MYCiADKAsyIi5NZWxhbmRH",
+            "YW1lMy5SZXNvdXJjZVBvaW50U2V0dGluZ3MSLwoNY29kZV9zZXR0aW5ncxgL",
+            "IAMoCzIYLk1lbGFuZEdhbWUzLkNvZGVTZXR0aW5nEi8KEWNvZGVfbGliX3Nl",
+            "dHRpbmdzGAwgAygLMhQuTWVsYW5kR2FtZTMuQ29kZUxpYhI8ChVwbGF5ZXJf",
+            "bGV2ZWxfc2V0dGluZ3MYDSADKAsyHS5NZWxhbmRHYW1lMy5FbnRpdHlMdlNl",
+            "dHRpbmdzEjAKDXJvbGVfc2V0dGluZ3MYDiADKAsyGS5NZWxhbmRHYW1lMy5S",
+            "b2xlU2V0dGluZ3MSMAoNY2hhdF9zZXR0aW5ncxgPIAMoCzIZLk1lbGFuZEdh",
+            "bWUzLkNoYXRTZXR0aW5ncxJBChZzcGVjaWFsX2J1aWxkX3NldHRpbmdzGBEg",
+            "AygLMiEuTWVsYW5kR2FtZTMuU3BlY2lhbEJ1aWxkU2V0dGluZ3MSNQoUc3Bh",
+            "d25fcG9pbnRfc2V0dGluZ3MYEyADKAsyFy5NZWxhbmRHYW1lMy5TcGF3blBv",
+            "aW50EkUKGGNvbnN1bWFibGVfaXRlbV9zZXR0aW5ncxgUIAMoCzIjLk1lbGFu",
+            "ZEdhbWUzLkNvbnN1bWFibGVJdGVtU2V0dGluZ3MSLAoPcmV3YXJkX3NldHRp",
+            "bmdzGBUgAygLMhMuTWVsYW5kR2FtZTMuUmV3YXJkEjkKFnNjZW5lX3dlYXRo",
+            "ZXJfc2V0dGluZ3MYFiADKAsyGS5NZWxhbmRHYW1lMy5TY2VuZVdlYXRoZXIS",
+            "OwoVd2VhdGhlcl9zZXR0aW5nc19saXN0GBcgAygLMhwuTWVsYW5kR2FtZTMu",
+            "V2VhdGhlclNldHRpbmdzEjYKEGFjaGlldmVfc2V0dGluZ3MYGCADKAsyHC5N",
+            "ZWxhbmRHYW1lMy5BY2hpZXZlU2V0dGluZ3MSOQoWbWFpbF90ZW1wbGF0ZV9z",
+            "ZXR0aW5ncxgZIAMoCzIZLk1lbGFuZEdhbWUzLk1haWxUZW1wbGF0ZRIwCg10",
+            "YXNrX3NldHRpbmdzGBogAygLMhkuTWVsYW5kR2FtZTMuVGFza1NldHRpbmdz",
+            "EjkKEmNvbmRpdGlvbl9zZXR0aW5ncxgbIAMoCzIdLk1lbGFuZEdhbWUzLkNv",
+            "bmRpdGlvblNldHRpbmcSKwoLY2Rfc2V0dGluZ3MYHCADKAsyFi5NZWxhbmRH",
+            "YW1lMy5DZFNldHRpbmcSMQoOcXVvdGFfc2V0dGluZ3MYHSADKAsyGS5NZWxh",
+            "bmRHYW1lMy5RdW90YVNldHRpbmcSOQoSbWFub3JfYnV5X3NldHRpbmdzGB4g",
+            "AygLMh0uTWVsYW5kR2FtZTMuTWFub3JCdXlTZXR0aW5ncxI0Cg9lbnRpdHlf",
+            "c2V0dGluZ3MYHyADKAsyGy5NZWxhbmRHYW1lMy5PYmplY3RTZXR0aW5ncxI2",
+            "ChBkdW5nZW9uX3NldHRpbmdzGCAgAygLMhwuTWVsYW5kR2FtZTMuRHVuZ2Vv",
+            "blNldHRpbmdzEiwKC2R1bmdlb25fbWFwGCEgAygLMhcuTWVsYW5kR2FtZTMu",
+            "RHVuZ2Vvbk1hcBI7ChNnYW1lX3ZhbHVlX3NldHRpbmdzGCIgAygLMh4uTWVs",
+            "YW5kR2FtZTMuR2FtZVZhbHVlU2V0dGluZ3MSNgoQbW9uc3Rlcl9zZXR0aW5n",
+            "cxgjIAMoCzIcLk1lbGFuZEdhbWUzLk1vbnN0ZXJTZXR0aW5ncxI7ChNyYW5k",
+            "b21fbWFwX3NldHRpbmdzGCQgAygLMh4uTWVsYW5kR2FtZTMuUmFuZG9tTWFw",
+            "U2V0dGluZ3MSKgoHcmVzX3RhZxglIAEoCzIZLk1lbGFuZEdhbWUzLlJlc291",
+            "cmNlc1RhZxJFChhleGNsdXNpb25fZW50aXR5X3NldHRpbmcYJiADKAsyIy5N",
+            "ZWxhbmRHYW1lMy5FeGNsdXNpb25FbnRpdHlTZXR0aW5nEkQKGHBsYWNlYWJs",
+            "ZV9za2lsbF9zZXR0aW5ncxgnIAMoCzIiLk1lbGFuZEdhbWUzLlBsYWNlYWJs",
+            "ZVNraWxsU2V0dGluZ2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.ModelReflection.Descriptor, global::Bian.FallingObjectReflection.Descriptor, global::Bian.BuffReflection.Descriptor, global::Bian.SkillReflection.Descriptor, global::Bian.ResourcePointReflection.Descriptor, global::Bian.AstReflection.Descriptor, global::Bian.ConditionReflection.Descriptor, global::Bian.CdReflection.Descriptor, global::Bian.QuotaReflection.Descriptor, global::Bian.MonsterReflection.Descriptor, global::Bian.WidgetReflection.Descriptor, global::Bian.RandomMapReflection.Descriptor, global::Bian.BigWorldReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::MelandGame3.ModelReflection.Descriptor, global::MelandGame3.FallingObjectReflection.Descriptor, global::MelandGame3.BuffReflection.Descriptor, global::MelandGame3.SkillReflection.Descriptor, global::MelandGame3.ResourcePointReflection.Descriptor, global::MelandGame3.AstReflection.Descriptor, global::MelandGame3.ConditionReflection.Descriptor, global::MelandGame3.CdReflection.Descriptor, global::MelandGame3.QuotaReflection.Descriptor, global::MelandGame3.MonsterReflection.Descriptor, global::MelandGame3.WidgetReflection.Descriptor, global::MelandGame3.RandomMapReflection.Descriptor, global::MelandGame3.BigWorldReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.WeatherSettings), global::Bian.WeatherSettings.Parser, new[]{ "Id", "WeatherType", "TempChange", "ThirstyChange", "HungryChange", "BuffId", "TickMs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AchieveSettings), global::Bian.AchieveSettings.Parser, new[]{ "Id", "Type", "TargetId", "RequirementsText", "RewardsText" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ManorBuySettings), global::Bian.ManorBuySettings.Parser, new[]{ "BuyNum", "CostId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.DungeonSettings), global::Bian.DungeonSettings.Parser, new[]{ "Id", "Name", "MaxLevel", "MaxVipLevel", "UpgradeScore", "CdKeyFlagStr", "BaseRewardStr", "SuperRewardStr", "FinalRewardStr" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.DungeonMap), global::Bian.DungeonMap.Parser, new[]{ "Id", "MapName", "InDungeon", "Score" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.GameValueSettings), global::Bian.GameValueSettings.Parser, new[]{ "Id", "Value", "StringValue", "ValueArray", "StringArray", "IntValueArray" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CodeResource), global::Bian.CodeResource.Parser, new[]{ "CodeCid", "Category", "CanIndex", "CanIndexType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourcesTag), global::Bian.ResourcesTag.Parser, new[]{ "TarCodeRes", "TarWidgetType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ExclusionEntitySetting), global::Bian.ExclusionEntitySetting.Parser, new[]{ "Cid", "ExTypeNotBuild", "ExCidsNotBuild", "ExTypeDel", "ExCidsDel", "ExTypeMove", "ExCidsMove" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ConfigDataSettings), global::Bian.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "SpecialBuildSettings", "ArchFormulaSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "TaskSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.WeatherSettings), global::MelandGame3.WeatherSettings.Parser, new[]{ "Id", "WeatherType", "TempChange", "ThirstyChange", "HungryChange", "BuffId", "TickMs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AchieveSettings), global::MelandGame3.AchieveSettings.Parser, new[]{ "Id", "Type", "TargetId", "RequirementsText", "RewardsText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ManorBuySettings), global::MelandGame3.ManorBuySettings.Parser, new[]{ "BuyNum", "CostId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.DungeonSettings), global::MelandGame3.DungeonSettings.Parser, new[]{ "Id", "Name", "MaxLevel", "MaxVipLevel", "UpgradeScore", "CdKeyFlagStr", "BaseRewardStr", "SuperRewardStr", "FinalRewardStr" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.DungeonMap), global::MelandGame3.DungeonMap.Parser, new[]{ "Id", "MapName", "InDungeon", "Score" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.GameValueSettings), global::MelandGame3.GameValueSettings.Parser, new[]{ "Id", "Value", "StringValue", "ValueArray", "StringArray", "IntValueArray" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CodeResource), global::MelandGame3.CodeResource.Parser, new[]{ "CodeCid", "Category", "CanIndex", "CanIndexType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ResourcesTag), global::MelandGame3.ResourcesTag.Parser, new[]{ "TarCodeRes", "TarWidgetType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ExclusionEntitySetting), global::MelandGame3.ExclusionEntitySetting.Parser, new[]{ "Cid", "ExTypeNotBuild", "ExCidsNotBuild", "ExTypeDel", "ExCidsDel", "ExTypeMove", "ExCidsMove" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ConfigDataSettings), global::MelandGame3.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "SpecialBuildSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "TaskSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings" }, null, null, null, null)
           }));
     }
     #endregion
@@ -129,7 +134,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -540,7 +545,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -883,7 +888,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1109,7 +1114,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1594,7 +1599,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1894,7 +1899,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2259,7 +2264,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2539,7 +2544,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2572,23 +2577,23 @@ namespace Bian {
 
     /// <summary>Field number for the "tar_code_res" field.</summary>
     public const int TarCodeResFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.CodeResource> _repeated_tarCodeRes_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.CodeResource.Parser);
-    private readonly pbc::RepeatedField<global::Bian.CodeResource> tarCodeRes_ = new pbc::RepeatedField<global::Bian.CodeResource>();
+    private static readonly pb::FieldCodec<global::MelandGame3.CodeResource> _repeated_tarCodeRes_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.CodeResource.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.CodeResource> tarCodeRes_ = new pbc::RepeatedField<global::MelandGame3.CodeResource>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.CodeResource> TarCodeRes {
+    public pbc::RepeatedField<global::MelandGame3.CodeResource> TarCodeRes {
       get { return tarCodeRes_; }
     }
 
     /// <summary>Field number for the "tar_widget_type" field.</summary>
     public const int TarWidgetTypeFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.WidgetFuncType> _repeated_tarWidgetType_codec
-        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Bian.WidgetFuncType) x);
-    private readonly pbc::RepeatedField<global::Bian.WidgetFuncType> tarWidgetType_ = new pbc::RepeatedField<global::Bian.WidgetFuncType>();
+    private static readonly pb::FieldCodec<global::MelandGame3.WidgetFuncType> _repeated_tarWidgetType_codec
+        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::MelandGame3.WidgetFuncType) x);
+    private readonly pbc::RepeatedField<global::MelandGame3.WidgetFuncType> tarWidgetType_ = new pbc::RepeatedField<global::MelandGame3.WidgetFuncType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.WidgetFuncType> TarWidgetType {
+    public pbc::RepeatedField<global::MelandGame3.WidgetFuncType> TarWidgetType {
       get { return tarWidgetType_; }
     }
 
@@ -2745,7 +2750,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3174,7 +3179,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConfigReflection.Descriptor.MessageTypes[9]; }
+      get { return global::MelandGame3.ConfigReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3210,7 +3215,6 @@ namespace Bian {
       roleSettings_ = other.roleSettings_.Clone();
       chatSettings_ = other.chatSettings_.Clone();
       specialBuildSettings_ = other.specialBuildSettings_.Clone();
-      archFormulaSettings_ = other.archFormulaSettings_.Clone();
       spawnPointSettings_ = other.spawnPointSettings_.Clone();
       consumableItemSettings_ = other.consumableItemSettings_.Clone();
       rewardSettings_ = other.rewardSettings_.Clone();
@@ -3243,398 +3247,387 @@ namespace Bian {
 
     /// <summary>Field number for the "widget_settings" field.</summary>
     public const int WidgetSettingsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.WidgetSettings> _repeated_widgetSettings_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.WidgetSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.WidgetSettings> widgetSettings_ = new pbc::RepeatedField<global::Bian.WidgetSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.WidgetSettings> _repeated_widgetSettings_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.WidgetSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.WidgetSettings> widgetSettings_ = new pbc::RepeatedField<global::MelandGame3.WidgetSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.WidgetSettings> WidgetSettings {
+    public pbc::RepeatedField<global::MelandGame3.WidgetSettings> WidgetSettings {
       get { return widgetSettings_; }
     }
 
     /// <summary>Field number for the "object_settings" field.</summary>
     public const int ObjectSettingsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.ObjectSettings> _repeated_objectSettings_codec
-        = pb::FieldCodec.ForMessage(18, global::Bian.ObjectSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ObjectSettings> objectSettings_ = new pbc::RepeatedField<global::Bian.ObjectSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ObjectSettings> _repeated_objectSettings_codec
+        = pb::FieldCodec.ForMessage(18, global::MelandGame3.ObjectSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ObjectSettings> objectSettings_ = new pbc::RepeatedField<global::MelandGame3.ObjectSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjectSettings> ObjectSettings {
+    public pbc::RepeatedField<global::MelandGame3.ObjectSettings> ObjectSettings {
       get { return objectSettings_; }
     }
 
     /// <summary>Field number for the "obj_gear_settings" field.</summary>
     public const int ObjGearSettingsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.ObjectGearSettings> _repeated_objGearSettings_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.ObjectGearSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ObjectGearSettings> objGearSettings_ = new pbc::RepeatedField<global::Bian.ObjectGearSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ObjectGearSettings> _repeated_objGearSettings_codec
+        = pb::FieldCodec.ForMessage(26, global::MelandGame3.ObjectGearSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ObjectGearSettings> objGearSettings_ = new pbc::RepeatedField<global::MelandGame3.ObjectGearSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjectGearSettings> ObjGearSettings {
+    public pbc::RepeatedField<global::MelandGame3.ObjectGearSettings> ObjGearSettings {
       get { return objGearSettings_; }
     }
 
     /// <summary>Field number for the "flling_obj_recipets" field.</summary>
     public const int FllingObjRecipetsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Bian.FallingObjectRecipet> _repeated_fllingObjRecipets_codec
-        = pb::FieldCodec.ForMessage(34, global::Bian.FallingObjectRecipet.Parser);
-    private readonly pbc::RepeatedField<global::Bian.FallingObjectRecipet> fllingObjRecipets_ = new pbc::RepeatedField<global::Bian.FallingObjectRecipet>();
+    private static readonly pb::FieldCodec<global::MelandGame3.FallingObjectRecipet> _repeated_fllingObjRecipets_codec
+        = pb::FieldCodec.ForMessage(34, global::MelandGame3.FallingObjectRecipet.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.FallingObjectRecipet> fllingObjRecipets_ = new pbc::RepeatedField<global::MelandGame3.FallingObjectRecipet>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.FallingObjectRecipet> FllingObjRecipets {
+    public pbc::RepeatedField<global::MelandGame3.FallingObjectRecipet> FllingObjRecipets {
       get { return fllingObjRecipets_; }
     }
 
     /// <summary>Field number for the "bot_settings" field.</summary>
     public const int BotSettingsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Bian.BotSettings> _repeated_botSettings_codec
-        = pb::FieldCodec.ForMessage(42, global::Bian.BotSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BotSettings> botSettings_ = new pbc::RepeatedField<global::Bian.BotSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BotSettings> _repeated_botSettings_codec
+        = pb::FieldCodec.ForMessage(42, global::MelandGame3.BotSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BotSettings> botSettings_ = new pbc::RepeatedField<global::MelandGame3.BotSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BotSettings> BotSettings {
+    public pbc::RepeatedField<global::MelandGame3.BotSettings> BotSettings {
       get { return botSettings_; }
     }
 
     /// <summary>Field number for the "bot_level_settings" field.</summary>
     public const int BotLevelSettingsFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Bian.BotLvSettings> _repeated_botLevelSettings_codec
-        = pb::FieldCodec.ForMessage(50, global::Bian.BotLvSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BotLvSettings> botLevelSettings_ = new pbc::RepeatedField<global::Bian.BotLvSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BotLvSettings> _repeated_botLevelSettings_codec
+        = pb::FieldCodec.ForMessage(50, global::MelandGame3.BotLvSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BotLvSettings> botLevelSettings_ = new pbc::RepeatedField<global::MelandGame3.BotLvSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BotLvSettings> BotLevelSettings {
+    public pbc::RepeatedField<global::MelandGame3.BotLvSettings> BotLevelSettings {
       get { return botLevelSettings_; }
     }
 
     /// <summary>Field number for the "buff_settings" field.</summary>
     public const int BuffSettingsFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Bian.BuffSettings> _repeated_buffSettings_codec
-        = pb::FieldCodec.ForMessage(58, global::Bian.BuffSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BuffSettings> buffSettings_ = new pbc::RepeatedField<global::Bian.BuffSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BuffSettings> _repeated_buffSettings_codec
+        = pb::FieldCodec.ForMessage(58, global::MelandGame3.BuffSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BuffSettings> buffSettings_ = new pbc::RepeatedField<global::MelandGame3.BuffSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BuffSettings> BuffSettings {
+    public pbc::RepeatedField<global::MelandGame3.BuffSettings> BuffSettings {
       get { return buffSettings_; }
     }
 
     /// <summary>Field number for the "skill_settings" field.</summary>
     public const int SkillSettingsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Bian.SkillSettings> _repeated_skillSettings_codec
-        = pb::FieldCodec.ForMessage(66, global::Bian.SkillSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.SkillSettings> skillSettings_ = new pbc::RepeatedField<global::Bian.SkillSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.SkillSettings> _repeated_skillSettings_codec
+        = pb::FieldCodec.ForMessage(66, global::MelandGame3.SkillSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.SkillSettings> skillSettings_ = new pbc::RepeatedField<global::MelandGame3.SkillSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.SkillSettings> SkillSettings {
+    public pbc::RepeatedField<global::MelandGame3.SkillSettings> SkillSettings {
       get { return skillSettings_; }
     }
 
     /// <summary>Field number for the "npc_settings" field.</summary>
     public const int NpcSettingsFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::Bian.Npc> _repeated_npcSettings_codec
-        = pb::FieldCodec.ForMessage(74, global::Bian.Npc.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Npc> npcSettings_ = new pbc::RepeatedField<global::Bian.Npc>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Npc> _repeated_npcSettings_codec
+        = pb::FieldCodec.ForMessage(74, global::MelandGame3.Npc.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Npc> npcSettings_ = new pbc::RepeatedField<global::MelandGame3.Npc>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Npc> NpcSettings {
+    public pbc::RepeatedField<global::MelandGame3.Npc> NpcSettings {
       get { return npcSettings_; }
     }
 
     /// <summary>Field number for the "resource_point_settings" field.</summary>
     public const int ResourcePointSettingsFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Bian.ResourcePointSettings> _repeated_resourcePointSettings_codec
-        = pb::FieldCodec.ForMessage(82, global::Bian.ResourcePointSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ResourcePointSettings> resourcePointSettings_ = new pbc::RepeatedField<global::Bian.ResourcePointSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ResourcePointSettings> _repeated_resourcePointSettings_codec
+        = pb::FieldCodec.ForMessage(82, global::MelandGame3.ResourcePointSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ResourcePointSettings> resourcePointSettings_ = new pbc::RepeatedField<global::MelandGame3.ResourcePointSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ResourcePointSettings> ResourcePointSettings {
+    public pbc::RepeatedField<global::MelandGame3.ResourcePointSettings> ResourcePointSettings {
       get { return resourcePointSettings_; }
     }
 
     /// <summary>Field number for the "code_settings" field.</summary>
     public const int CodeSettingsFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Bian.CodeSetting> _repeated_codeSettings_codec
-        = pb::FieldCodec.ForMessage(90, global::Bian.CodeSetting.Parser);
-    private readonly pbc::RepeatedField<global::Bian.CodeSetting> codeSettings_ = new pbc::RepeatedField<global::Bian.CodeSetting>();
+    private static readonly pb::FieldCodec<global::MelandGame3.CodeSetting> _repeated_codeSettings_codec
+        = pb::FieldCodec.ForMessage(90, global::MelandGame3.CodeSetting.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.CodeSetting> codeSettings_ = new pbc::RepeatedField<global::MelandGame3.CodeSetting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.CodeSetting> CodeSettings {
+    public pbc::RepeatedField<global::MelandGame3.CodeSetting> CodeSettings {
       get { return codeSettings_; }
     }
 
     /// <summary>Field number for the "code_lib_settings" field.</summary>
     public const int CodeLibSettingsFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::Bian.CodeLib> _repeated_codeLibSettings_codec
-        = pb::FieldCodec.ForMessage(98, global::Bian.CodeLib.Parser);
-    private readonly pbc::RepeatedField<global::Bian.CodeLib> codeLibSettings_ = new pbc::RepeatedField<global::Bian.CodeLib>();
+    private static readonly pb::FieldCodec<global::MelandGame3.CodeLib> _repeated_codeLibSettings_codec
+        = pb::FieldCodec.ForMessage(98, global::MelandGame3.CodeLib.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.CodeLib> codeLibSettings_ = new pbc::RepeatedField<global::MelandGame3.CodeLib>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.CodeLib> CodeLibSettings {
+    public pbc::RepeatedField<global::MelandGame3.CodeLib> CodeLibSettings {
       get { return codeLibSettings_; }
     }
 
     /// <summary>Field number for the "player_level_settings" field.</summary>
     public const int PlayerLevelSettingsFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::Bian.EntityLvSettings> _repeated_playerLevelSettings_codec
-        = pb::FieldCodec.ForMessage(106, global::Bian.EntityLvSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.EntityLvSettings> playerLevelSettings_ = new pbc::RepeatedField<global::Bian.EntityLvSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.EntityLvSettings> _repeated_playerLevelSettings_codec
+        = pb::FieldCodec.ForMessage(106, global::MelandGame3.EntityLvSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.EntityLvSettings> playerLevelSettings_ = new pbc::RepeatedField<global::MelandGame3.EntityLvSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.EntityLvSettings> PlayerLevelSettings {
+    public pbc::RepeatedField<global::MelandGame3.EntityLvSettings> PlayerLevelSettings {
       get { return playerLevelSettings_; }
     }
 
     /// <summary>Field number for the "role_settings" field.</summary>
     public const int RoleSettingsFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::Bian.RoleSettings> _repeated_roleSettings_codec
-        = pb::FieldCodec.ForMessage(114, global::Bian.RoleSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.RoleSettings> roleSettings_ = new pbc::RepeatedField<global::Bian.RoleSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.RoleSettings> _repeated_roleSettings_codec
+        = pb::FieldCodec.ForMessage(114, global::MelandGame3.RoleSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.RoleSettings> roleSettings_ = new pbc::RepeatedField<global::MelandGame3.RoleSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.RoleSettings> RoleSettings {
+    public pbc::RepeatedField<global::MelandGame3.RoleSettings> RoleSettings {
       get { return roleSettings_; }
     }
 
     /// <summary>Field number for the "chat_settings" field.</summary>
     public const int ChatSettingsFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::Bian.ChatSettings> _repeated_chatSettings_codec
-        = pb::FieldCodec.ForMessage(122, global::Bian.ChatSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ChatSettings> chatSettings_ = new pbc::RepeatedField<global::Bian.ChatSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ChatSettings> _repeated_chatSettings_codec
+        = pb::FieldCodec.ForMessage(122, global::MelandGame3.ChatSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ChatSettings> chatSettings_ = new pbc::RepeatedField<global::MelandGame3.ChatSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ChatSettings> ChatSettings {
+    public pbc::RepeatedField<global::MelandGame3.ChatSettings> ChatSettings {
       get { return chatSettings_; }
     }
 
     /// <summary>Field number for the "special_build_settings" field.</summary>
     public const int SpecialBuildSettingsFieldNumber = 17;
-    private static readonly pb::FieldCodec<global::Bian.SpecialBuildSettings> _repeated_specialBuildSettings_codec
-        = pb::FieldCodec.ForMessage(138, global::Bian.SpecialBuildSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.SpecialBuildSettings> specialBuildSettings_ = new pbc::RepeatedField<global::Bian.SpecialBuildSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.SpecialBuildSettings> _repeated_specialBuildSettings_codec
+        = pb::FieldCodec.ForMessage(138, global::MelandGame3.SpecialBuildSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.SpecialBuildSettings> specialBuildSettings_ = new pbc::RepeatedField<global::MelandGame3.SpecialBuildSettings>();
     /// <summary>
     /// repeated AttributeRand          attribute_rand = 16;
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.SpecialBuildSettings> SpecialBuildSettings {
+    public pbc::RepeatedField<global::MelandGame3.SpecialBuildSettings> SpecialBuildSettings {
       get { return specialBuildSettings_; }
-    }
-
-    /// <summary>Field number for the "arch_formula_settings" field.</summary>
-    public const int ArchFormulaSettingsFieldNumber = 18;
-    private static readonly pb::FieldCodec<global::Bian.ArchFormulaSettings> _repeated_archFormulaSettings_codec
-        = pb::FieldCodec.ForMessage(146, global::Bian.ArchFormulaSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ArchFormulaSettings> archFormulaSettings_ = new pbc::RepeatedField<global::Bian.ArchFormulaSettings>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ArchFormulaSettings> ArchFormulaSettings {
-      get { return archFormulaSettings_; }
     }
 
     /// <summary>Field number for the "spawn_point_settings" field.</summary>
     public const int SpawnPointSettingsFieldNumber = 19;
-    private static readonly pb::FieldCodec<global::Bian.SpawnPoint> _repeated_spawnPointSettings_codec
-        = pb::FieldCodec.ForMessage(154, global::Bian.SpawnPoint.Parser);
-    private readonly pbc::RepeatedField<global::Bian.SpawnPoint> spawnPointSettings_ = new pbc::RepeatedField<global::Bian.SpawnPoint>();
+    private static readonly pb::FieldCodec<global::MelandGame3.SpawnPoint> _repeated_spawnPointSettings_codec
+        = pb::FieldCodec.ForMessage(154, global::MelandGame3.SpawnPoint.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.SpawnPoint> spawnPointSettings_ = new pbc::RepeatedField<global::MelandGame3.SpawnPoint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.SpawnPoint> SpawnPointSettings {
+    public pbc::RepeatedField<global::MelandGame3.SpawnPoint> SpawnPointSettings {
       get { return spawnPointSettings_; }
     }
 
     /// <summary>Field number for the "consumable_item_settings" field.</summary>
     public const int ConsumableItemSettingsFieldNumber = 20;
-    private static readonly pb::FieldCodec<global::Bian.ConsumableItemSettings> _repeated_consumableItemSettings_codec
-        = pb::FieldCodec.ForMessage(162, global::Bian.ConsumableItemSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ConsumableItemSettings> consumableItemSettings_ = new pbc::RepeatedField<global::Bian.ConsumableItemSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ConsumableItemSettings> _repeated_consumableItemSettings_codec
+        = pb::FieldCodec.ForMessage(162, global::MelandGame3.ConsumableItemSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ConsumableItemSettings> consumableItemSettings_ = new pbc::RepeatedField<global::MelandGame3.ConsumableItemSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ConsumableItemSettings> ConsumableItemSettings {
+    public pbc::RepeatedField<global::MelandGame3.ConsumableItemSettings> ConsumableItemSettings {
       get { return consumableItemSettings_; }
     }
 
     /// <summary>Field number for the "reward_settings" field.</summary>
     public const int RewardSettingsFieldNumber = 21;
-    private static readonly pb::FieldCodec<global::Bian.Reward> _repeated_rewardSettings_codec
-        = pb::FieldCodec.ForMessage(170, global::Bian.Reward.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Reward> rewardSettings_ = new pbc::RepeatedField<global::Bian.Reward>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Reward> _repeated_rewardSettings_codec
+        = pb::FieldCodec.ForMessage(170, global::MelandGame3.Reward.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Reward> rewardSettings_ = new pbc::RepeatedField<global::MelandGame3.Reward>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Reward> RewardSettings {
+    public pbc::RepeatedField<global::MelandGame3.Reward> RewardSettings {
       get { return rewardSettings_; }
     }
 
     /// <summary>Field number for the "scene_weather_settings" field.</summary>
     public const int SceneWeatherSettingsFieldNumber = 22;
-    private static readonly pb::FieldCodec<global::Bian.SceneWeather> _repeated_sceneWeatherSettings_codec
-        = pb::FieldCodec.ForMessage(178, global::Bian.SceneWeather.Parser);
-    private readonly pbc::RepeatedField<global::Bian.SceneWeather> sceneWeatherSettings_ = new pbc::RepeatedField<global::Bian.SceneWeather>();
+    private static readonly pb::FieldCodec<global::MelandGame3.SceneWeather> _repeated_sceneWeatherSettings_codec
+        = pb::FieldCodec.ForMessage(178, global::MelandGame3.SceneWeather.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.SceneWeather> sceneWeatherSettings_ = new pbc::RepeatedField<global::MelandGame3.SceneWeather>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.SceneWeather> SceneWeatherSettings {
+    public pbc::RepeatedField<global::MelandGame3.SceneWeather> SceneWeatherSettings {
       get { return sceneWeatherSettings_; }
     }
 
     /// <summary>Field number for the "weather_settings_list" field.</summary>
     public const int WeatherSettingsListFieldNumber = 23;
-    private static readonly pb::FieldCodec<global::Bian.WeatherSettings> _repeated_weatherSettingsList_codec
-        = pb::FieldCodec.ForMessage(186, global::Bian.WeatherSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.WeatherSettings> weatherSettingsList_ = new pbc::RepeatedField<global::Bian.WeatherSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.WeatherSettings> _repeated_weatherSettingsList_codec
+        = pb::FieldCodec.ForMessage(186, global::MelandGame3.WeatherSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.WeatherSettings> weatherSettingsList_ = new pbc::RepeatedField<global::MelandGame3.WeatherSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.WeatherSettings> WeatherSettingsList {
+    public pbc::RepeatedField<global::MelandGame3.WeatherSettings> WeatherSettingsList {
       get { return weatherSettingsList_; }
     }
 
     /// <summary>Field number for the "achieve_settings" field.</summary>
     public const int AchieveSettingsFieldNumber = 24;
-    private static readonly pb::FieldCodec<global::Bian.AchieveSettings> _repeated_achieveSettings_codec
-        = pb::FieldCodec.ForMessage(194, global::Bian.AchieveSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.AchieveSettings> achieveSettings_ = new pbc::RepeatedField<global::Bian.AchieveSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.AchieveSettings> _repeated_achieveSettings_codec
+        = pb::FieldCodec.ForMessage(194, global::MelandGame3.AchieveSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.AchieveSettings> achieveSettings_ = new pbc::RepeatedField<global::MelandGame3.AchieveSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.AchieveSettings> AchieveSettings {
+    public pbc::RepeatedField<global::MelandGame3.AchieveSettings> AchieveSettings {
       get { return achieveSettings_; }
     }
 
     /// <summary>Field number for the "mail_template_settings" field.</summary>
     public const int MailTemplateSettingsFieldNumber = 25;
-    private static readonly pb::FieldCodec<global::Bian.MailTemplate> _repeated_mailTemplateSettings_codec
-        = pb::FieldCodec.ForMessage(202, global::Bian.MailTemplate.Parser);
-    private readonly pbc::RepeatedField<global::Bian.MailTemplate> mailTemplateSettings_ = new pbc::RepeatedField<global::Bian.MailTemplate>();
+    private static readonly pb::FieldCodec<global::MelandGame3.MailTemplate> _repeated_mailTemplateSettings_codec
+        = pb::FieldCodec.ForMessage(202, global::MelandGame3.MailTemplate.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.MailTemplate> mailTemplateSettings_ = new pbc::RepeatedField<global::MelandGame3.MailTemplate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.MailTemplate> MailTemplateSettings {
+    public pbc::RepeatedField<global::MelandGame3.MailTemplate> MailTemplateSettings {
       get { return mailTemplateSettings_; }
     }
 
     /// <summary>Field number for the "task_settings" field.</summary>
     public const int TaskSettingsFieldNumber = 26;
-    private static readonly pb::FieldCodec<global::Bian.TaskSettings> _repeated_taskSettings_codec
-        = pb::FieldCodec.ForMessage(210, global::Bian.TaskSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.TaskSettings> taskSettings_ = new pbc::RepeatedField<global::Bian.TaskSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.TaskSettings> _repeated_taskSettings_codec
+        = pb::FieldCodec.ForMessage(210, global::MelandGame3.TaskSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.TaskSettings> taskSettings_ = new pbc::RepeatedField<global::MelandGame3.TaskSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.TaskSettings> TaskSettings {
+    public pbc::RepeatedField<global::MelandGame3.TaskSettings> TaskSettings {
       get { return taskSettings_; }
     }
 
     /// <summary>Field number for the "condition_settings" field.</summary>
     public const int ConditionSettingsFieldNumber = 27;
-    private static readonly pb::FieldCodec<global::Bian.ConditionSetting> _repeated_conditionSettings_codec
-        = pb::FieldCodec.ForMessage(218, global::Bian.ConditionSetting.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ConditionSetting> conditionSettings_ = new pbc::RepeatedField<global::Bian.ConditionSetting>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ConditionSetting> _repeated_conditionSettings_codec
+        = pb::FieldCodec.ForMessage(218, global::MelandGame3.ConditionSetting.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ConditionSetting> conditionSettings_ = new pbc::RepeatedField<global::MelandGame3.ConditionSetting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ConditionSetting> ConditionSettings {
+    public pbc::RepeatedField<global::MelandGame3.ConditionSetting> ConditionSettings {
       get { return conditionSettings_; }
     }
 
     /// <summary>Field number for the "cd_settings" field.</summary>
     public const int CdSettingsFieldNumber = 28;
-    private static readonly pb::FieldCodec<global::Bian.CdSetting> _repeated_cdSettings_codec
-        = pb::FieldCodec.ForMessage(226, global::Bian.CdSetting.Parser);
-    private readonly pbc::RepeatedField<global::Bian.CdSetting> cdSettings_ = new pbc::RepeatedField<global::Bian.CdSetting>();
+    private static readonly pb::FieldCodec<global::MelandGame3.CdSetting> _repeated_cdSettings_codec
+        = pb::FieldCodec.ForMessage(226, global::MelandGame3.CdSetting.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.CdSetting> cdSettings_ = new pbc::RepeatedField<global::MelandGame3.CdSetting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.CdSetting> CdSettings {
+    public pbc::RepeatedField<global::MelandGame3.CdSetting> CdSettings {
       get { return cdSettings_; }
     }
 
     /// <summary>Field number for the "quota_settings" field.</summary>
     public const int QuotaSettingsFieldNumber = 29;
-    private static readonly pb::FieldCodec<global::Bian.QuotaSetting> _repeated_quotaSettings_codec
-        = pb::FieldCodec.ForMessage(234, global::Bian.QuotaSetting.Parser);
-    private readonly pbc::RepeatedField<global::Bian.QuotaSetting> quotaSettings_ = new pbc::RepeatedField<global::Bian.QuotaSetting>();
+    private static readonly pb::FieldCodec<global::MelandGame3.QuotaSetting> _repeated_quotaSettings_codec
+        = pb::FieldCodec.ForMessage(234, global::MelandGame3.QuotaSetting.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.QuotaSetting> quotaSettings_ = new pbc::RepeatedField<global::MelandGame3.QuotaSetting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.QuotaSetting> QuotaSettings {
+    public pbc::RepeatedField<global::MelandGame3.QuotaSetting> QuotaSettings {
       get { return quotaSettings_; }
     }
 
     /// <summary>Field number for the "manor_buy_settings" field.</summary>
     public const int ManorBuySettingsFieldNumber = 30;
-    private static readonly pb::FieldCodec<global::Bian.ManorBuySettings> _repeated_manorBuySettings_codec
-        = pb::FieldCodec.ForMessage(242, global::Bian.ManorBuySettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ManorBuySettings> manorBuySettings_ = new pbc::RepeatedField<global::Bian.ManorBuySettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ManorBuySettings> _repeated_manorBuySettings_codec
+        = pb::FieldCodec.ForMessage(242, global::MelandGame3.ManorBuySettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ManorBuySettings> manorBuySettings_ = new pbc::RepeatedField<global::MelandGame3.ManorBuySettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ManorBuySettings> ManorBuySettings {
+    public pbc::RepeatedField<global::MelandGame3.ManorBuySettings> ManorBuySettings {
       get { return manorBuySettings_; }
     }
 
     /// <summary>Field number for the "entity_settings" field.</summary>
     public const int EntitySettingsFieldNumber = 31;
-    private static readonly pb::FieldCodec<global::Bian.ObjectSettings> _repeated_entitySettings_codec
-        = pb::FieldCodec.ForMessage(250, global::Bian.ObjectSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ObjectSettings> entitySettings_ = new pbc::RepeatedField<global::Bian.ObjectSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ObjectSettings> _repeated_entitySettings_codec
+        = pb::FieldCodec.ForMessage(250, global::MelandGame3.ObjectSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ObjectSettings> entitySettings_ = new pbc::RepeatedField<global::MelandGame3.ObjectSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjectSettings> EntitySettings {
+    public pbc::RepeatedField<global::MelandGame3.ObjectSettings> EntitySettings {
       get { return entitySettings_; }
     }
 
     /// <summary>Field number for the "dungeon_settings" field.</summary>
     public const int DungeonSettingsFieldNumber = 32;
-    private static readonly pb::FieldCodec<global::Bian.DungeonSettings> _repeated_dungeonSettings_codec
-        = pb::FieldCodec.ForMessage(258, global::Bian.DungeonSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.DungeonSettings> dungeonSettings_ = new pbc::RepeatedField<global::Bian.DungeonSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.DungeonSettings> _repeated_dungeonSettings_codec
+        = pb::FieldCodec.ForMessage(258, global::MelandGame3.DungeonSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.DungeonSettings> dungeonSettings_ = new pbc::RepeatedField<global::MelandGame3.DungeonSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.DungeonSettings> DungeonSettings {
+    public pbc::RepeatedField<global::MelandGame3.DungeonSettings> DungeonSettings {
       get { return dungeonSettings_; }
     }
 
     /// <summary>Field number for the "dungeon_map" field.</summary>
     public const int DungeonMapFieldNumber = 33;
-    private static readonly pb::FieldCodec<global::Bian.DungeonMap> _repeated_dungeonMap_codec
-        = pb::FieldCodec.ForMessage(266, global::Bian.DungeonMap.Parser);
-    private readonly pbc::RepeatedField<global::Bian.DungeonMap> dungeonMap_ = new pbc::RepeatedField<global::Bian.DungeonMap>();
+    private static readonly pb::FieldCodec<global::MelandGame3.DungeonMap> _repeated_dungeonMap_codec
+        = pb::FieldCodec.ForMessage(266, global::MelandGame3.DungeonMap.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.DungeonMap> dungeonMap_ = new pbc::RepeatedField<global::MelandGame3.DungeonMap>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.DungeonMap> DungeonMap {
+    public pbc::RepeatedField<global::MelandGame3.DungeonMap> DungeonMap {
       get { return dungeonMap_; }
     }
 
     /// <summary>Field number for the "game_value_settings" field.</summary>
     public const int GameValueSettingsFieldNumber = 34;
-    private static readonly pb::FieldCodec<global::Bian.GameValueSettings> _repeated_gameValueSettings_codec
-        = pb::FieldCodec.ForMessage(274, global::Bian.GameValueSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.GameValueSettings> gameValueSettings_ = new pbc::RepeatedField<global::Bian.GameValueSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.GameValueSettings> _repeated_gameValueSettings_codec
+        = pb::FieldCodec.ForMessage(274, global::MelandGame3.GameValueSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.GameValueSettings> gameValueSettings_ = new pbc::RepeatedField<global::MelandGame3.GameValueSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.GameValueSettings> GameValueSettings {
+    public pbc::RepeatedField<global::MelandGame3.GameValueSettings> GameValueSettings {
       get { return gameValueSettings_; }
     }
 
     /// <summary>Field number for the "monster_settings" field.</summary>
     public const int MonsterSettingsFieldNumber = 35;
-    private static readonly pb::FieldCodec<global::Bian.MonsterSettings> _repeated_monsterSettings_codec
-        = pb::FieldCodec.ForMessage(282, global::Bian.MonsterSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.MonsterSettings> monsterSettings_ = new pbc::RepeatedField<global::Bian.MonsterSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.MonsterSettings> _repeated_monsterSettings_codec
+        = pb::FieldCodec.ForMessage(282, global::MelandGame3.MonsterSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.MonsterSettings> monsterSettings_ = new pbc::RepeatedField<global::MelandGame3.MonsterSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.MonsterSettings> MonsterSettings {
+    public pbc::RepeatedField<global::MelandGame3.MonsterSettings> MonsterSettings {
       get { return monsterSettings_; }
     }
 
     /// <summary>Field number for the "random_map_settings" field.</summary>
     public const int RandomMapSettingsFieldNumber = 36;
-    private static readonly pb::FieldCodec<global::Bian.RandomMapSettings> _repeated_randomMapSettings_codec
-        = pb::FieldCodec.ForMessage(290, global::Bian.RandomMapSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.RandomMapSettings> randomMapSettings_ = new pbc::RepeatedField<global::Bian.RandomMapSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.RandomMapSettings> _repeated_randomMapSettings_codec
+        = pb::FieldCodec.ForMessage(290, global::MelandGame3.RandomMapSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.RandomMapSettings> randomMapSettings_ = new pbc::RepeatedField<global::MelandGame3.RandomMapSettings>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.RandomMapSettings> RandomMapSettings {
+    public pbc::RepeatedField<global::MelandGame3.RandomMapSettings> RandomMapSettings {
       get { return randomMapSettings_; }
     }
 
     /// <summary>Field number for the "res_tag" field.</summary>
     public const int ResTagFieldNumber = 37;
-    private global::Bian.ResourcesTag resTag_;
+    private global::MelandGame3.ResourcesTag resTag_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ResourcesTag ResTag {
+    public global::MelandGame3.ResourcesTag ResTag {
       get { return resTag_; }
       set {
         resTag_ = value;
@@ -3643,23 +3636,23 @@ namespace Bian {
 
     /// <summary>Field number for the "exclusion_entity_setting" field.</summary>
     public const int ExclusionEntitySettingFieldNumber = 38;
-    private static readonly pb::FieldCodec<global::Bian.ExclusionEntitySetting> _repeated_exclusionEntitySetting_codec
-        = pb::FieldCodec.ForMessage(306, global::Bian.ExclusionEntitySetting.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ExclusionEntitySetting> exclusionEntitySetting_ = new pbc::RepeatedField<global::Bian.ExclusionEntitySetting>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ExclusionEntitySetting> _repeated_exclusionEntitySetting_codec
+        = pb::FieldCodec.ForMessage(306, global::MelandGame3.ExclusionEntitySetting.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ExclusionEntitySetting> exclusionEntitySetting_ = new pbc::RepeatedField<global::MelandGame3.ExclusionEntitySetting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ExclusionEntitySetting> ExclusionEntitySetting {
+    public pbc::RepeatedField<global::MelandGame3.ExclusionEntitySetting> ExclusionEntitySetting {
       get { return exclusionEntitySetting_; }
     }
 
     /// <summary>Field number for the "placeable_skill_settings" field.</summary>
     public const int PlaceableSkillSettingsFieldNumber = 39;
-    private static readonly pb::FieldCodec<global::Bian.PlaceableSkillSetting> _repeated_placeableSkillSettings_codec
-        = pb::FieldCodec.ForMessage(314, global::Bian.PlaceableSkillSetting.Parser);
-    private readonly pbc::RepeatedField<global::Bian.PlaceableSkillSetting> placeableSkillSettings_ = new pbc::RepeatedField<global::Bian.PlaceableSkillSetting>();
+    private static readonly pb::FieldCodec<global::MelandGame3.PlaceableSkillSetting> _repeated_placeableSkillSettings_codec
+        = pb::FieldCodec.ForMessage(314, global::MelandGame3.PlaceableSkillSetting.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.PlaceableSkillSetting> placeableSkillSettings_ = new pbc::RepeatedField<global::MelandGame3.PlaceableSkillSetting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.PlaceableSkillSetting> PlaceableSkillSettings {
+    public pbc::RepeatedField<global::MelandGame3.PlaceableSkillSetting> PlaceableSkillSettings {
       get { return placeableSkillSettings_; }
     }
 
@@ -3694,7 +3687,6 @@ namespace Bian {
       if(!roleSettings_.Equals(other.roleSettings_)) return false;
       if(!chatSettings_.Equals(other.chatSettings_)) return false;
       if(!specialBuildSettings_.Equals(other.specialBuildSettings_)) return false;
-      if(!archFormulaSettings_.Equals(other.archFormulaSettings_)) return false;
       if(!spawnPointSettings_.Equals(other.spawnPointSettings_)) return false;
       if(!consumableItemSettings_.Equals(other.consumableItemSettings_)) return false;
       if(!rewardSettings_.Equals(other.rewardSettings_)) return false;
@@ -3739,7 +3731,6 @@ namespace Bian {
       hash ^= roleSettings_.GetHashCode();
       hash ^= chatSettings_.GetHashCode();
       hash ^= specialBuildSettings_.GetHashCode();
-      hash ^= archFormulaSettings_.GetHashCode();
       hash ^= spawnPointSettings_.GetHashCode();
       hash ^= consumableItemSettings_.GetHashCode();
       hash ^= rewardSettings_.GetHashCode();
@@ -3795,7 +3786,6 @@ namespace Bian {
       roleSettings_.WriteTo(output, _repeated_roleSettings_codec);
       chatSettings_.WriteTo(output, _repeated_chatSettings_codec);
       specialBuildSettings_.WriteTo(output, _repeated_specialBuildSettings_codec);
-      archFormulaSettings_.WriteTo(output, _repeated_archFormulaSettings_codec);
       spawnPointSettings_.WriteTo(output, _repeated_spawnPointSettings_codec);
       consumableItemSettings_.WriteTo(output, _repeated_consumableItemSettings_codec);
       rewardSettings_.WriteTo(output, _repeated_rewardSettings_codec);
@@ -3846,7 +3836,6 @@ namespace Bian {
       roleSettings_.WriteTo(ref output, _repeated_roleSettings_codec);
       chatSettings_.WriteTo(ref output, _repeated_chatSettings_codec);
       specialBuildSettings_.WriteTo(ref output, _repeated_specialBuildSettings_codec);
-      archFormulaSettings_.WriteTo(ref output, _repeated_archFormulaSettings_codec);
       spawnPointSettings_.WriteTo(ref output, _repeated_spawnPointSettings_codec);
       consumableItemSettings_.WriteTo(ref output, _repeated_consumableItemSettings_codec);
       rewardSettings_.WriteTo(ref output, _repeated_rewardSettings_codec);
@@ -3897,7 +3886,6 @@ namespace Bian {
       size += roleSettings_.CalculateSize(_repeated_roleSettings_codec);
       size += chatSettings_.CalculateSize(_repeated_chatSettings_codec);
       size += specialBuildSettings_.CalculateSize(_repeated_specialBuildSettings_codec);
-      size += archFormulaSettings_.CalculateSize(_repeated_archFormulaSettings_codec);
       size += spawnPointSettings_.CalculateSize(_repeated_spawnPointSettings_codec);
       size += consumableItemSettings_.CalculateSize(_repeated_consumableItemSettings_codec);
       size += rewardSettings_.CalculateSize(_repeated_rewardSettings_codec);
@@ -3949,7 +3937,6 @@ namespace Bian {
       roleSettings_.Add(other.roleSettings_);
       chatSettings_.Add(other.chatSettings_);
       specialBuildSettings_.Add(other.specialBuildSettings_);
-      archFormulaSettings_.Add(other.archFormulaSettings_);
       spawnPointSettings_.Add(other.spawnPointSettings_);
       consumableItemSettings_.Add(other.consumableItemSettings_);
       rewardSettings_.Add(other.rewardSettings_);
@@ -3970,7 +3957,7 @@ namespace Bian {
       randomMapSettings_.Add(other.randomMapSettings_);
       if (other.resTag_ != null) {
         if (resTag_ == null) {
-          ResTag = new global::Bian.ResourcesTag();
+          ResTag = new global::MelandGame3.ResourcesTag();
         }
         ResTag.MergeFrom(other.ResTag);
       }
@@ -4055,10 +4042,6 @@ namespace Bian {
             specialBuildSettings_.AddEntriesFrom(input, _repeated_specialBuildSettings_codec);
             break;
           }
-          case 146: {
-            archFormulaSettings_.AddEntriesFrom(input, _repeated_archFormulaSettings_codec);
-            break;
-          }
           case 154: {
             spawnPointSettings_.AddEntriesFrom(input, _repeated_spawnPointSettings_codec);
             break;
@@ -4133,7 +4116,7 @@ namespace Bian {
           }
           case 298: {
             if (resTag_ == null) {
-              ResTag = new global::Bian.ResourcesTag();
+              ResTag = new global::MelandGame3.ResourcesTag();
             }
             input.ReadMessage(ResTag);
             break;
@@ -4225,10 +4208,6 @@ namespace Bian {
             specialBuildSettings_.AddEntriesFrom(ref input, _repeated_specialBuildSettings_codec);
             break;
           }
-          case 146: {
-            archFormulaSettings_.AddEntriesFrom(ref input, _repeated_archFormulaSettings_codec);
-            break;
-          }
           case 154: {
             spawnPointSettings_.AddEntriesFrom(ref input, _repeated_spawnPointSettings_codec);
             break;
@@ -4303,7 +4282,7 @@ namespace Bian {
           }
           case 298: {
             if (resTag_ == null) {
-              ResTag = new global::Bian.ResourcesTag();
+              ResTag = new global::MelandGame3.ResourcesTag();
             }
             input.ReadMessage(ResTag);
             break;

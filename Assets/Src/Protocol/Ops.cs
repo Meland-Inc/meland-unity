@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from ops.proto</summary>
   public static partial class OpsReflection {
@@ -24,16 +24,16 @@ namespace Bian {
     static OpsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CglvcHMucHJvdG8SBEJpYW4iTQoOR2FtZVNlcnZlckluZm8SCgoCaXAYASAB",
-            "KAkSDAoEbmFtZRgCIAEoCRIQCghlbmRwb2ludBgDIAEoCRIPCgd2ZXJzaW9u",
-            "GAQgASgJKpQBChBHYW1lU2VydmVyU3RhdHVzEiwKKEdhbWVTZXJ2ZXJTdGF0",
-            "dXNfR2FtZVNlcnZlclN0YXR1c1Vua25vd24QABInCiNHYW1lU2VydmVyU3Rh",
-            "dHVzX0dhbWVTZXJ2ZXJTdGF0dXNVcBABEikKJUdhbWVTZXJ2ZXJTdGF0dXNf",
-            "R2FtZVNlcnZlclN0YXR1c0Rvd24QAmIGcHJvdG8z"));
+            "CglvcHMucHJvdG8SC01lbGFuZEdhbWUzIk0KDkdhbWVTZXJ2ZXJJbmZvEgoK",
+            "AmlwGAEgASgJEgwKBG5hbWUYAiABKAkSEAoIZW5kcG9pbnQYAyABKAkSDwoH",
+            "dmVyc2lvbhgEIAEoCSqUAQoQR2FtZVNlcnZlclN0YXR1cxIsCihHYW1lU2Vy",
+            "dmVyU3RhdHVzX0dhbWVTZXJ2ZXJTdGF0dXNVbmtub3duEAASJwojR2FtZVNl",
+            "cnZlclN0YXR1c19HYW1lU2VydmVyU3RhdHVzVXAQARIpCiVHYW1lU2VydmVy",
+            "U3RhdHVzX0dhbWVTZXJ2ZXJTdGF0dXNEb3duEAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.GameServerStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.GameServerInfo), global::Bian.GameServerInfo.Parser, new[]{ "Ip", "Name", "Endpoint", "Version" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.GameServerStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.GameServerInfo), global::MelandGame3.GameServerInfo.Parser, new[]{ "Ip", "Name", "Endpoint", "Version" }, null, null, null, null)
           }));
     }
     #endregion
@@ -63,7 +63,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.OpsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.OpsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

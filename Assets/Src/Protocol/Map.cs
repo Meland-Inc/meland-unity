@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from map.proto</summary>
   public static partial class MapReflection {
@@ -24,111 +24,114 @@ namespace Bian {
     static MapReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgltYXAucHJvdG8SBEJpYW4aD21hcF9ibG9jay5wcm90byKnBQoLTWFwVGVt",
-            "cGxhdGUSEwoLdGVtcGxhdGVfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIQCghv",
-            "d25lcl9pZBgDIAEoCRILCgN1cmwYBCABKAkSCQoBdxgFIAEoBRIJCgFoGAYg",
-            "ASgFEhQKDHJlYmlydGhfa2luZBgHIAEoBRIPCgdpc19vcGVuGAggASgIEhMK",
-            "C2lzX2Nhbl9lZGl0GAkgASgIEhIKCmlzX3B1Ymxpc2gYCiABKAgSIwoEc2l6",
-            "ZRgLIAEoDjIVLkJpYW4uTWFwVGVtcGxhdGVTaXplEhEKCXRpdGxlX3VybBgM",
-            "IAEoCRISCgpvd25lcl9uYW1lGA0gASgJEg4KBk9wVGltZRgOIAEoCRIRCglT",
-            "dWJzY3JpYmUYDyABKAUSFQoNaXNfbWFub3JfcGFzcxgQIAEoCBIWCg5tYW5v",
-            "cl9pbnRlcnZhbBgRIAEoBRIhCgNUYWcYEiABKA4yFC5CaWFuLlRhZ01hcFRl",
-            "bXBsYXRlEg8KB0NvbW1lbnQYEyABKAkSFAoMaXNfcmVjb21tZW5kGBQgASgI",
-            "Eg0KBXZpc2l0GBUgASgFEhAKCHRodW1iX3VwGBYgASgFEhIKCnRodW1iX2Rv",
-            "d24YFyABKAUSEgoKdGh1bWJuYWlscxgYIAMoCRIfCghtYXBfdHlwZRgZIAEo",
-            "DjINLkJpYW4uTWFwVHlwZRIwChFtYXBfdGVtcGxhdGVfdHlwZRgaIAEoDjIV",
-            "LkJpYW4uTWFwVGVtcGxhdGVUeXBlEigKCmxlc3Nvbl90YWcYGyABKA4yFC5C",
-            "aWFuLlRhZ01hcFRlbXBsYXRlEhgKEGlzX3NpbmdsZV9wbGF5ZXIYHCABKAgS",
-            "EwoLbGVzc29uX3BsYW4YHSABKAkSEwoLbGVzc29uX29wZW4YHiABKAgimAIK",
-            "D01hcFRlbXBsYXRlUm9vbRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0K",
-            "BWxpbWl0GAMgASgFEgsKA251bRgEIAEoBRILCgN1cmwYBSABKAkSCgoCcHcY",
-            "BiABKAUSCwoDZ2lkGAcgASgJEhEKCWlzX25hdGl2ZRgIIAEoCBIRCglnYW1l",
-            "X2FyZ3MYCSABKAkSEQoJdGl0bGVfdXJsGAogASgJEhIKCm93bmVyX25hbWUY",
-            "CyABKAkSFQoNdGVtcGxhdGVfbmFtZRgMIAEoCRITCgt0ZW1wbGF0ZV9pZBgN",
-            "IAEoCRIPCgdtYXhfbnVtGA4gASgFEh8KCG1hcF90eXBlGA8gASgOMg0uQmlh",
-            "bi5NYXBUeXBlImIKDU1hcFN0YXRpY0RhdGESDQoFdXNpbmcYASABKAgSFwoP",
-            "bWFwX2NodW5rX2ZpbGVzGAIgAygJEhIKCmNodW5rX2ZpbGUYAyABKAkSFQoN",
-            "cmVzb3VyY2VfZmlsZRgEIAEoCSKHBAoDTWFwEgoKAmlkGAEgASgFEhYKDmdy",
-            "b3VuZF90ZXh0dXJlGAIgASgJEhcKD2NodW5rc19jZG5fYmFzZRgDIAEoCRIT",
-            "CgtjaHVua19maWxlcxgEIAMoCRISCgp0aWxlX3dpZHRoGAUgASgDEhMKC3Rp",
-            "bGVfaGVpZ2h0GAYgASgDEhEKCW1hcF93aWR0aBgHIAEoAxISCgptYXBfaGVp",
-            "Z2h0GAggASgDEgsKA3VybBgJIAEoCRIPCgdpc19lZGl0GAogASgIEhMKC2lz",
-            "X2VkaXRfbWFwGAsgASgIEg8KB3Job21iX3IYDCABKAUSDwoHcmhvbWJfYxgN",
-            "IAEoBRIWCg5yaG9tYl9vZmZzZXRfchgOIAEoBRIWCg5yaG9tYl9vZmZzZXRf",
-            "YxgPIAEoBRIMCgRybGVuGBAgASgFEgwKBGNsZW4YESABKAUSHwoIbWFwX3R5",
-            "cGUYEiABKA4yDS5CaWFuLk1hcFR5cGUSMAoRbWFwX3RlbXBsYXRlX3R5cGUY",
-            "EyABKA4yFS5CaWFuLk1hcFRlbXBsYXRlVHlwZRIZChFsZXNzb25fbW9kZWxf",
-            "anNvbhgUIAEoCRIoCgtzdGF0aWNfZGF0YRgWIAEoCzITLkJpYW4uTWFwU3Rh",
-            "dGljRGF0YRIlCgltYXBfbW9kZWwYFyABKA4yEi5CaWFuLkdhbWVNYXBNb2Rl",
-            "bCI/CgtNYXBMb2NhdGlvbhIJCgFyGAEgASgDEgkKAWMYAiABKAMSDwoHel9p",
-            "bmRleBgDIAEoAxIJCgF6GAQgASgFIosDCg9MZXNzb25Nb2RlbERhdGESMgoM",
-            "dGVhY2hlcl92aWV3GAEgASgOMhwuQmlhbi5MZXNzb25UZWFjaGVyVmlld01v",
-            "ZGVsEhQKDGNhbWVyYV9tb2RlbBgCIAEoCRIVCg1jb250cm9sX21vZGVsGAMg",
-            "ASgJEhcKD3VzZV9kZW1vbnN0cmF0ZRgEIAEoCBISCgpwbGF5X211c2ljGAUg",
-            "ASgIEhQKDHBhdGhfZmluZGluZxgGIAEoCBISCgp1c2Vfd2luZG93GAcgASgI",
-            "EhEKCXVzZV9ndWlkZRgIIAEoCBISCgpwbGF5X2F1ZGlvGAkgASgIEhIKCnVz",
-            "ZV9yb2NrZXIYCiABKAgSFgoObG9ja19zY3JlZW5fdWkYCyABKAgSEwoLc3R1",
-            "ZGVudF9tZ3IYDCABKAgSEgoKc3R1ZGVudF9UUBgNIAEoCBIUCgxzY2VuZV91",
-            "bmxvY2sYDiABKAgSEwoLbWFwX2VudHJhY2UYDyABKAgSGQoRbGVzc29uX21h",
-            "bmFnZXJfdWkYECABKAgifAoRTGVzc29uTW9kZWxDb25maWcSKQoKbW9kZWxf",
-            "dHlwZRgBIAEoDjIVLkJpYW4uTGVzc29uTW9kZWxUeXBlEhEKCW1vZGVsX2Np",
-            "ZBgCIAEoBRIpCgptb2RlbF9kYXRhGAMgASgLMhUuQmlhbi5MZXNzb25Nb2Rl",
-            "bERhdGEiXQoNQXJlYVJlc291cmNlcxIOCgZhdWRpb3MYASADKAkSDgoGdmlk",
-            "ZW9zGAIgAygJEg4KBmltYWdlcxgDIAMoCRIcChRlbnRpdHlUZW1wbGF0ZUlt",
-            "YWdlcxgEIAMoCSJFCgpNYXBBcmVhUmVzEg8KB2FyZWFfaWQYASABKAkSJgoJ",
-            "cmVzb3VyY2VzGAIgASgLMhMuQmlhbi5BcmVhUmVzb3VyY2VzIqUBChBNYXBS",
-            "ZXNvdXJjZXNGaWxlEhMKC3RlbXBsYXRlX2lkGAEgASgJEiwKDXRlbXBsYXRl",
-            "X3R5cGUYAiABKA4yFS5CaWFuLk1hcFRlbXBsYXRlVHlwZRImCgxsZXNzb25N",
-            "YXBSZXMYAyADKAsyEC5CaWFuLk1hcEFyZWFSZXMSJgoMTm9ybWFsTWFwUmVz",
-            "GAQgAygLMhAuQmlhbi5NYXBBcmVhUmVzKtkBCg1NYXBTYXZlU291cmNlEiUK",
-            "IU1hcFNhdmVTb3VyY2VfTWFwU2F2ZVNvdXJjZVVua25vdxAAEiUKIU1hcFNh",
-            "dmVTb3VyY2VfTWFwU2F2ZVNvdXJjZVBsYXllchABEicKI01hcFNhdmVTb3Vy",
-            "Y2VfTWFwU2F2ZVNvdXJjZUF1dG9TYXZlEAISJQohTWFwU2F2ZVNvdXJjZV9N",
-            "YXBTYXZlU291cmNlU2lnblVwEAMSKgomTWFwU2F2ZVNvdXJjZV9NYXBTYXZl",
-            "U291cmNlQ2xvc2VTZXJ2ZXIQBCqCAQoPTWFwVGVtcGxhdGVTaXplEh8KG01h",
-            "cFRlbXBsYXRlU2l6ZV9Vbmtub3duU2l6ZRAAEhcKE01hcFRlbXBsYXRlU2l6",
-            "ZV9CaWcQARIaChZNYXBUZW1wbGF0ZVNpemVfTWlkZGxlEAISGQoVTWFwVGVt",
-            "cGxhdGVTaXplX1NtYWxsEAMqjwEKClRhZ01hcFR5cGUSHgoaVGFnTWFwVHlw",
-            "ZV9NYXBUZW1wbGF0ZVNlbGYQABIdChlUYWdNYXBUeXBlX01hcFRlbXBsYXRl",
-            "TmV3EAESHQoZVGFnTWFwVHlwZV9NYXBUZW1wbGF0ZUhvdBACEiMKH1RhZ01h",
-            "cFR5cGVfTWFwVGVtcGxhdGVSZWNvbW1lbmQQAypnCg9NYXBUZW1wbGF0ZVR5",
-            "cGUSKQolTWFwVGVtcGxhdGVUeXBlX01hcFRlbXBsYXRlVHlwZU5vcm1hbBAA",
-            "EikKJU1hcFRlbXBsYXRlVHlwZV9NYXBUZW1wbGF0ZVR5cGVMZXNzb24QASr9",
-            "AwoOVGFnTWFwVGVtcGxhdGUSKQolVGFnTWFwVGVtcGxhdGVfTWFwVGVtcGxh",
-            "dGVUYWdJbnRlcm5hbBAAEigKJFRhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRl",
-            "VGFnRGVmYXVsdBABEisKJ1RhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFn",
-            "QmVsbFBsYW5ldBACEiYKIlRhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFn",
-            "U3RvcnkQAxIoCiRUYWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ0xlaXN1",
-            "cmUQBBIpCiVUYWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ1R1dG9yaWFs",
-            "EAUSLAooVGFnTWFwVGVtcGxhdGVfTWFwVGVtcGxhdGVUYWdBbGxVc2VyTW9k",
-            "ZRAGEisKJ1RhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFnQWxsRGV2TW9k",
-            "ZRAHEi4KKlRhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFnQWxsTGVzc29u",
-            "TW9kZRAIEjMKL1RhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFnUHJldmlv",
-            "dXNCZWxsUGxhbmV0EAsSLAooVGFnTWFwVGVtcGxhdGVfTWFwVGVtcGxhdGVU",
-            "YWdQbGFuZXRNYXRjaBAMKsUBCgxHYW1lTWFwTW9kZWwSIQodR2FtZU1hcE1v",
-            "ZGVsX0dhbWVNYXBNb2RlbEdhbWUQABIjCh9HYW1lTWFwTW9kZWxfR2FtZU1h",
-            "cE1vZGVsRWRpTWFwEAESIQodR2FtZU1hcE1vZGVsX0dhbWVNYXBNb2RlbFBs",
-            "YXkQAhIjCh9HYW1lTWFwTW9kZWxfR2FtZU1hcE1vZGVsTGVzc29uEAMSJQoh",
-            "R2FtZU1hcE1vZGVsX0dhbWVNYXBNb2RlbEJpZ1dvcmxkEAQqhQEKFkxlc3Nv",
-            "blRlYWNoZXJWaWV3TW9kZWwSNQoxTGVzc29uVGVhY2hlclZpZXdNb2RlbF9M",
-            "ZXNzb25UZWFjaGVyVmlld01vZGVsVXNlchAAEjQKMExlc3NvblRlYWNoZXJW",
-            "aWV3TW9kZWxfTGVzc29uVGVhY2hlclZpZXdNb2RlbEdvZBABKm0KD0xlc3Nv",
-            "bk1vZGVsVHlwZRIpCiVMZXNzb25Nb2RlbFR5cGVfTGVzc29uTW9kZWxUeXBl",
-            "U2VydmVyEAASLworTGVzc29uTW9kZWxUeXBlX0xlc3Nvbk1vZGVsVHlwZVBs",
-            "YXllckRlZmluZRABYgZwcm90bzM="));
+            "CgltYXAucHJvdG8SC01lbGFuZEdhbWUzGg9tYXBfYmxvY2sucHJvdG8iygUK",
+            "C01hcFRlbXBsYXRlEhMKC3RlbXBsYXRlX2lkGAEgASgJEgwKBG5hbWUYAiAB",
+            "KAkSEAoIb3duZXJfaWQYAyABKAkSCwoDdXJsGAQgASgJEgkKAXcYBSABKAUS",
+            "CQoBaBgGIAEoBRIUCgxyZWJpcnRoX2tpbmQYByABKAUSDwoHaXNfb3BlbhgI",
+            "IAEoCBITCgtpc19jYW5fZWRpdBgJIAEoCBISCgppc19wdWJsaXNoGAogASgI",
+            "EioKBHNpemUYCyABKA4yHC5NZWxhbmRHYW1lMy5NYXBUZW1wbGF0ZVNpemUS",
+            "EQoJdGl0bGVfdXJsGAwgASgJEhIKCm93bmVyX25hbWUYDSABKAkSDgoGT3BU",
+            "aW1lGA4gASgJEhEKCVN1YnNjcmliZRgPIAEoBRIVCg1pc19tYW5vcl9wYXNz",
+            "GBAgASgIEhYKDm1hbm9yX2ludGVydmFsGBEgASgFEigKA1RhZxgSIAEoDjIb",
+            "Lk1lbGFuZEdhbWUzLlRhZ01hcFRlbXBsYXRlEg8KB0NvbW1lbnQYEyABKAkS",
+            "FAoMaXNfcmVjb21tZW5kGBQgASgIEg0KBXZpc2l0GBUgASgFEhAKCHRodW1i",
+            "X3VwGBYgASgFEhIKCnRodW1iX2Rvd24YFyABKAUSEgoKdGh1bWJuYWlscxgY",
+            "IAMoCRImCghtYXBfdHlwZRgZIAEoDjIULk1lbGFuZEdhbWUzLk1hcFR5cGUS",
+            "NwoRbWFwX3RlbXBsYXRlX3R5cGUYGiABKA4yHC5NZWxhbmRHYW1lMy5NYXBU",
+            "ZW1wbGF0ZVR5cGUSLwoKbGVzc29uX3RhZxgbIAEoDjIbLk1lbGFuZEdhbWUz",
+            "LlRhZ01hcFRlbXBsYXRlEhgKEGlzX3NpbmdsZV9wbGF5ZXIYHCABKAgSEwoL",
+            "bGVzc29uX3BsYW4YHSABKAkSEwoLbGVzc29uX29wZW4YHiABKAginwIKD01h",
+            "cFRlbXBsYXRlUm9vbRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWxp",
+            "bWl0GAMgASgFEgsKA251bRgEIAEoBRILCgN1cmwYBSABKAkSCgoCcHcYBiAB",
+            "KAUSCwoDZ2lkGAcgASgJEhEKCWlzX25hdGl2ZRgIIAEoCBIRCglnYW1lX2Fy",
+            "Z3MYCSABKAkSEQoJdGl0bGVfdXJsGAogASgJEhIKCm93bmVyX25hbWUYCyAB",
+            "KAkSFQoNdGVtcGxhdGVfbmFtZRgMIAEoCRITCgt0ZW1wbGF0ZV9pZBgNIAEo",
+            "CRIPCgdtYXhfbnVtGA4gASgFEiYKCG1hcF90eXBlGA8gASgOMhQuTWVsYW5k",
+            "R2FtZTMuTWFwVHlwZSJiCg1NYXBTdGF0aWNEYXRhEg0KBXVzaW5nGAEgASgI",
+            "EhcKD21hcF9jaHVua19maWxlcxgCIAMoCRISCgpjaHVua19maWxlGAMgASgJ",
+            "EhUKDXJlc291cmNlX2ZpbGUYBCABKAkiowQKA01hcBIKCgJpZBgBIAEoBRIW",
+            "Cg5ncm91bmRfdGV4dHVyZRgCIAEoCRIXCg9jaHVua3NfY2RuX2Jhc2UYAyAB",
+            "KAkSEwoLY2h1bmtfZmlsZXMYBCADKAkSEgoKdGlsZV93aWR0aBgFIAEoAxIT",
+            "Cgt0aWxlX2hlaWdodBgGIAEoAxIRCgltYXBfd2lkdGgYByABKAMSEgoKbWFw",
+            "X2hlaWdodBgIIAEoAxILCgN1cmwYCSABKAkSDwoHaXNfZWRpdBgKIAEoCBIT",
+            "Cgtpc19lZGl0X21hcBgLIAEoCBIPCgdyaG9tYl9yGAwgASgFEg8KB3Job21i",
+            "X2MYDSABKAUSFgoOcmhvbWJfb2Zmc2V0X3IYDiABKAUSFgoOcmhvbWJfb2Zm",
+            "c2V0X2MYDyABKAUSDAoEcmxlbhgQIAEoBRIMCgRjbGVuGBEgASgFEiYKCG1h",
+            "cF90eXBlGBIgASgOMhQuTWVsYW5kR2FtZTMuTWFwVHlwZRI3ChFtYXBfdGVt",
+            "cGxhdGVfdHlwZRgTIAEoDjIcLk1lbGFuZEdhbWUzLk1hcFRlbXBsYXRlVHlw",
+            "ZRIZChFsZXNzb25fbW9kZWxfanNvbhgUIAEoCRIvCgtzdGF0aWNfZGF0YRgW",
+            "IAEoCzIaLk1lbGFuZEdhbWUzLk1hcFN0YXRpY0RhdGESLAoJbWFwX21vZGVs",
+            "GBcgASgOMhkuTWVsYW5kR2FtZTMuR2FtZU1hcE1vZGVsIj8KC01hcExvY2F0",
+            "aW9uEgkKAXIYASABKAMSCQoBYxgCIAEoAxIPCgd6X2luZGV4GAMgASgDEgkK",
+            "AXoYBCABKAUikgMKD0xlc3Nvbk1vZGVsRGF0YRI5Cgx0ZWFjaGVyX3ZpZXcY",
+            "ASABKA4yIy5NZWxhbmRHYW1lMy5MZXNzb25UZWFjaGVyVmlld01vZGVsEhQK",
+            "DGNhbWVyYV9tb2RlbBgCIAEoCRIVCg1jb250cm9sX21vZGVsGAMgASgJEhcK",
+            "D3VzZV9kZW1vbnN0cmF0ZRgEIAEoCBISCgpwbGF5X211c2ljGAUgASgIEhQK",
+            "DHBhdGhfZmluZGluZxgGIAEoCBISCgp1c2Vfd2luZG93GAcgASgIEhEKCXVz",
+            "ZV9ndWlkZRgIIAEoCBISCgpwbGF5X2F1ZGlvGAkgASgIEhIKCnVzZV9yb2Nr",
+            "ZXIYCiABKAgSFgoObG9ja19zY3JlZW5fdWkYCyABKAgSEwoLc3R1ZGVudF9t",
+            "Z3IYDCABKAgSEgoKc3R1ZGVudF9UUBgNIAEoCBIUCgxzY2VuZV91bmxvY2sY",
+            "DiABKAgSEwoLbWFwX2VudHJhY2UYDyABKAgSGQoRbGVzc29uX21hbmFnZXJf",
+            "dWkYECABKAgiigEKEUxlc3Nvbk1vZGVsQ29uZmlnEjAKCm1vZGVsX3R5cGUY",
+            "ASABKA4yHC5NZWxhbmRHYW1lMy5MZXNzb25Nb2RlbFR5cGUSEQoJbW9kZWxf",
+            "Y2lkGAIgASgFEjAKCm1vZGVsX2RhdGEYAyABKAsyHC5NZWxhbmRHYW1lMy5M",
+            "ZXNzb25Nb2RlbERhdGEiXQoNQXJlYVJlc291cmNlcxIOCgZhdWRpb3MYASAD",
+            "KAkSDgoGdmlkZW9zGAIgAygJEg4KBmltYWdlcxgDIAMoCRIcChRlbnRpdHlU",
+            "ZW1wbGF0ZUltYWdlcxgEIAMoCSJMCgpNYXBBcmVhUmVzEg8KB2FyZWFfaWQY",
+            "ASABKAkSLQoJcmVzb3VyY2VzGAIgASgLMhouTWVsYW5kR2FtZTMuQXJlYVJl",
+            "c291cmNlcyK6AQoQTWFwUmVzb3VyY2VzRmlsZRITCgt0ZW1wbGF0ZV9pZBgB",
+            "IAEoCRIzCg10ZW1wbGF0ZV90eXBlGAIgASgOMhwuTWVsYW5kR2FtZTMuTWFw",
+            "VGVtcGxhdGVUeXBlEi0KDGxlc3Nvbk1hcFJlcxgDIAMoCzIXLk1lbGFuZEdh",
+            "bWUzLk1hcEFyZWFSZXMSLQoMTm9ybWFsTWFwUmVzGAQgAygLMhcuTWVsYW5k",
+            "R2FtZTMuTWFwQXJlYVJlcyrZAQoNTWFwU2F2ZVNvdXJjZRIlCiFNYXBTYXZl",
+            "U291cmNlX01hcFNhdmVTb3VyY2VVbmtub3cQABIlCiFNYXBTYXZlU291cmNl",
+            "X01hcFNhdmVTb3VyY2VQbGF5ZXIQARInCiNNYXBTYXZlU291cmNlX01hcFNh",
+            "dmVTb3VyY2VBdXRvU2F2ZRACEiUKIU1hcFNhdmVTb3VyY2VfTWFwU2F2ZVNv",
+            "dXJjZVNpZ25VcBADEioKJk1hcFNhdmVTb3VyY2VfTWFwU2F2ZVNvdXJjZUNs",
+            "b3NlU2VydmVyEAQqggEKD01hcFRlbXBsYXRlU2l6ZRIfChtNYXBUZW1wbGF0",
+            "ZVNpemVfVW5rbm93blNpemUQABIXChNNYXBUZW1wbGF0ZVNpemVfQmlnEAES",
+            "GgoWTWFwVGVtcGxhdGVTaXplX01pZGRsZRACEhkKFU1hcFRlbXBsYXRlU2l6",
+            "ZV9TbWFsbBADKo8BCgpUYWdNYXBUeXBlEh4KGlRhZ01hcFR5cGVfTWFwVGVt",
+            "cGxhdGVTZWxmEAASHQoZVGFnTWFwVHlwZV9NYXBUZW1wbGF0ZU5ldxABEh0K",
+            "GVRhZ01hcFR5cGVfTWFwVGVtcGxhdGVIb3QQAhIjCh9UYWdNYXBUeXBlX01h",
+            "cFRlbXBsYXRlUmVjb21tZW5kEAMqZwoPTWFwVGVtcGxhdGVUeXBlEikKJU1h",
+            "cFRlbXBsYXRlVHlwZV9NYXBUZW1wbGF0ZVR5cGVOb3JtYWwQABIpCiVNYXBU",
+            "ZW1wbGF0ZVR5cGVfTWFwVGVtcGxhdGVUeXBlTGVzc29uEAEq/QMKDlRhZ01h",
+            "cFRlbXBsYXRlEikKJVRhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFnSW50",
+            "ZXJuYWwQABIoCiRUYWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ0RlZmF1",
+            "bHQQARIrCidUYWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ0JlbGxQbGFu",
+            "ZXQQAhImCiJUYWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ1N0b3J5EAMS",
+            "KAokVGFnTWFwVGVtcGxhdGVfTWFwVGVtcGxhdGVUYWdMZWlzdXJlEAQSKQol",
+            "VGFnTWFwVGVtcGxhdGVfTWFwVGVtcGxhdGVUYWdUdXRvcmlhbBAFEiwKKFRh",
+            "Z01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFnQWxsVXNlck1vZGUQBhIrCidU",
+            "YWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ0FsbERldk1vZGUQBxIuCipU",
+            "YWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ0FsbExlc3Nvbk1vZGUQCBIz",
+            "Ci9UYWdNYXBUZW1wbGF0ZV9NYXBUZW1wbGF0ZVRhZ1ByZXZpb3VzQmVsbFBs",
+            "YW5ldBALEiwKKFRhZ01hcFRlbXBsYXRlX01hcFRlbXBsYXRlVGFnUGxhbmV0",
+            "TWF0Y2gQDCrFAQoMR2FtZU1hcE1vZGVsEiEKHUdhbWVNYXBNb2RlbF9HYW1l",
+            "TWFwTW9kZWxHYW1lEAASIwofR2FtZU1hcE1vZGVsX0dhbWVNYXBNb2RlbEVk",
+            "aU1hcBABEiEKHUdhbWVNYXBNb2RlbF9HYW1lTWFwTW9kZWxQbGF5EAISIwof",
+            "R2FtZU1hcE1vZGVsX0dhbWVNYXBNb2RlbExlc3NvbhADEiUKIUdhbWVNYXBN",
+            "b2RlbF9HYW1lTWFwTW9kZWxCaWdXb3JsZBAEKoUBChZMZXNzb25UZWFjaGVy",
+            "Vmlld01vZGVsEjUKMUxlc3NvblRlYWNoZXJWaWV3TW9kZWxfTGVzc29uVGVh",
+            "Y2hlclZpZXdNb2RlbFVzZXIQABI0CjBMZXNzb25UZWFjaGVyVmlld01vZGVs",
+            "X0xlc3NvblRlYWNoZXJWaWV3TW9kZWxHb2QQASptCg9MZXNzb25Nb2RlbFR5",
+            "cGUSKQolTGVzc29uTW9kZWxUeXBlX0xlc3Nvbk1vZGVsVHlwZVNlcnZlchAA",
+            "Ei8KK0xlc3Nvbk1vZGVsVHlwZV9MZXNzb25Nb2RlbFR5cGVQbGF5ZXJEZWZp",
+            "bmUQAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.MapBlockReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.MapSaveSource), typeof(global::Bian.MapTemplateSize), typeof(global::Bian.TagMapType), typeof(global::Bian.MapTemplateType), typeof(global::Bian.TagMapTemplate), typeof(global::Bian.GameMapModel), typeof(global::Bian.LessonTeacherViewModel), typeof(global::Bian.LessonModelType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapTemplate), global::Bian.MapTemplate.Parser, new[]{ "TemplateId", "Name", "OwnerId", "Url", "W", "H", "RebirthKind", "IsOpen", "IsCanEdit", "IsPublish", "Size", "TitleUrl", "OwnerName", "OpTime", "Subscribe", "IsManorPass", "ManorInterval", "Tag", "Comment", "IsRecommend", "Visit", "ThumbUp", "ThumbDown", "Thumbnails", "MapType", "MapTemplateType", "LessonTag", "IsSinglePlayer", "LessonPlan", "LessonOpen" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapTemplateRoom), global::Bian.MapTemplateRoom.Parser, new[]{ "Id", "Name", "Limit", "Num", "Url", "Pw", "Gid", "IsNative", "GameArgs", "TitleUrl", "OwnerName", "TemplateName", "TemplateId", "MaxNum", "MapType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapStaticData), global::Bian.MapStaticData.Parser, new[]{ "Using", "MapChunkFiles", "ChunkFile", "ResourceFile" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Map), global::Bian.Map.Parser, new[]{ "Id", "GroundTexture", "ChunksCdnBase", "ChunkFiles", "TileWidth", "TileHeight", "MapWidth", "MapHeight", "Url", "IsEdit", "IsEditMap", "RhombR", "RhombC", "RhombOffsetR", "RhombOffsetC", "Rlen", "Clen", "MapType", "MapTemplateType", "LessonModelJson", "StaticData", "MapModel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapLocation), global::Bian.MapLocation.Parser, new[]{ "R", "C", "ZIndex", "Z" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.LessonModelData), global::Bian.LessonModelData.Parser, new[]{ "TeacherView", "CameraModel", "ControlModel", "UseDemonstrate", "PlayMusic", "PathFinding", "UseWindow", "UseGuide", "PlayAudio", "UseRocker", "LockScreenUi", "StudentMgr", "StudentTP", "SceneUnlock", "MapEntrace", "LessonManagerUi" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.LessonModelConfig), global::Bian.LessonModelConfig.Parser, new[]{ "ModelType", "ModelCid", "ModelData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AreaResources), global::Bian.AreaResources.Parser, new[]{ "Audios", "Videos", "Images", "EntityTemplateImages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapAreaRes), global::Bian.MapAreaRes.Parser, new[]{ "AreaId", "Resources" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapResourcesFile), global::Bian.MapResourcesFile.Parser, new[]{ "TemplateId", "TemplateType", "LessonMapRes", "NormalMapRes" }, null, null, null, null)
+          new pbr::FileDescriptor[] { global::MelandGame3.MapBlockReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.MapSaveSource), typeof(global::MelandGame3.MapTemplateSize), typeof(global::MelandGame3.TagMapType), typeof(global::MelandGame3.MapTemplateType), typeof(global::MelandGame3.TagMapTemplate), typeof(global::MelandGame3.GameMapModel), typeof(global::MelandGame3.LessonTeacherViewModel), typeof(global::MelandGame3.LessonModelType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapTemplate), global::MelandGame3.MapTemplate.Parser, new[]{ "TemplateId", "Name", "OwnerId", "Url", "W", "H", "RebirthKind", "IsOpen", "IsCanEdit", "IsPublish", "Size", "TitleUrl", "OwnerName", "OpTime", "Subscribe", "IsManorPass", "ManorInterval", "Tag", "Comment", "IsRecommend", "Visit", "ThumbUp", "ThumbDown", "Thumbnails", "MapType", "MapTemplateType", "LessonTag", "IsSinglePlayer", "LessonPlan", "LessonOpen" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapTemplateRoom), global::MelandGame3.MapTemplateRoom.Parser, new[]{ "Id", "Name", "Limit", "Num", "Url", "Pw", "Gid", "IsNative", "GameArgs", "TitleUrl", "OwnerName", "TemplateName", "TemplateId", "MaxNum", "MapType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapStaticData), global::MelandGame3.MapStaticData.Parser, new[]{ "Using", "MapChunkFiles", "ChunkFile", "ResourceFile" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Map), global::MelandGame3.Map.Parser, new[]{ "Id", "GroundTexture", "ChunksCdnBase", "ChunkFiles", "TileWidth", "TileHeight", "MapWidth", "MapHeight", "Url", "IsEdit", "IsEditMap", "RhombR", "RhombC", "RhombOffsetR", "RhombOffsetC", "Rlen", "Clen", "MapType", "MapTemplateType", "LessonModelJson", "StaticData", "MapModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapLocation), global::MelandGame3.MapLocation.Parser, new[]{ "R", "C", "ZIndex", "Z" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.LessonModelData), global::MelandGame3.LessonModelData.Parser, new[]{ "TeacherView", "CameraModel", "ControlModel", "UseDemonstrate", "PlayMusic", "PathFinding", "UseWindow", "UseGuide", "PlayAudio", "UseRocker", "LockScreenUi", "StudentMgr", "StudentTP", "SceneUnlock", "MapEntrace", "LessonManagerUi" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.LessonModelConfig), global::MelandGame3.LessonModelConfig.Parser, new[]{ "ModelType", "ModelCid", "ModelData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AreaResources), global::MelandGame3.AreaResources.Parser, new[]{ "Audios", "Videos", "Images", "EntityTemplateImages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapAreaRes), global::MelandGame3.MapAreaRes.Parser, new[]{ "AreaId", "Resources" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapResourcesFile), global::MelandGame3.MapResourcesFile.Parser, new[]{ "TemplateId", "TemplateType", "LessonMapRes", "NormalMapRes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -320,7 +323,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -501,10 +504,10 @@ namespace Bian {
 
     /// <summary>Field number for the "size" field.</summary>
     public const int SizeFieldNumber = 11;
-    private global::Bian.MapTemplateSize size_ = global::Bian.MapTemplateSize.UnknownSize;
+    private global::MelandGame3.MapTemplateSize size_ = global::MelandGame3.MapTemplateSize.UnknownSize;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapTemplateSize Size {
+    public global::MelandGame3.MapTemplateSize Size {
       get { return size_; }
       set {
         size_ = value;
@@ -591,10 +594,10 @@ namespace Bian {
 
     /// <summary>Field number for the "Tag" field.</summary>
     public const int TagFieldNumber = 18;
-    private global::Bian.TagMapTemplate tag_ = global::Bian.TagMapTemplate.MapTemplateTagInternal;
+    private global::MelandGame3.TagMapTemplate tag_ = global::MelandGame3.TagMapTemplate.MapTemplateTagInternal;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TagMapTemplate Tag {
+    public global::MelandGame3.TagMapTemplate Tag {
       get { return tag_; }
       set {
         tag_ = value;
@@ -674,13 +677,13 @@ namespace Bian {
 
     /// <summary>Field number for the "map_type" field.</summary>
     public const int MapTypeFieldNumber = 25;
-    private global::Bian.MapType mapType_ = global::Bian.MapType.MapTypeDiamond;
+    private global::MelandGame3.MapType mapType_ = global::MelandGame3.MapType.MapTypeDiamond;
     /// <summary>
     ///地图类型(正交 / 斜45度)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapType MapType {
+    public global::MelandGame3.MapType MapType {
       get { return mapType_; }
       set {
         mapType_ = value;
@@ -689,13 +692,13 @@ namespace Bian {
 
     /// <summary>Field number for the "map_template_type" field.</summary>
     public const int MapTemplateTypeFieldNumber = 26;
-    private global::Bian.MapTemplateType mapTemplateType_ = global::Bian.MapTemplateType.MapTemplateTypeNormal;
+    private global::MelandGame3.MapTemplateType mapTemplateType_ = global::MelandGame3.MapTemplateType.MapTemplateTypeNormal;
     /// <summary>
     /// 0普通地图模板 1课程地图模板
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapTemplateType MapTemplateType {
+    public global::MelandGame3.MapTemplateType MapTemplateType {
       get { return mapTemplateType_; }
       set {
         mapTemplateType_ = value;
@@ -704,13 +707,13 @@ namespace Bian {
 
     /// <summary>Field number for the "lesson_tag" field.</summary>
     public const int LessonTagFieldNumber = 27;
-    private global::Bian.TagMapTemplate lessonTag_ = global::Bian.TagMapTemplate.MapTemplateTagInternal;
+    private global::MelandGame3.TagMapTemplate lessonTag_ = global::MelandGame3.TagMapTemplate.MapTemplateTagInternal;
     /// <summary>
     /// 课程地图模板 发布成标签作业
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TagMapTemplate LessonTag {
+    public global::MelandGame3.TagMapTemplate LessonTag {
       get { return lessonTag_; }
       set {
         lessonTag_ = value;
@@ -824,23 +827,23 @@ namespace Bian {
       if (IsOpen != false) hash ^= IsOpen.GetHashCode();
       if (IsCanEdit != false) hash ^= IsCanEdit.GetHashCode();
       if (IsPublish != false) hash ^= IsPublish.GetHashCode();
-      if (Size != global::Bian.MapTemplateSize.UnknownSize) hash ^= Size.GetHashCode();
+      if (Size != global::MelandGame3.MapTemplateSize.UnknownSize) hash ^= Size.GetHashCode();
       if (TitleUrl.Length != 0) hash ^= TitleUrl.GetHashCode();
       if (OwnerName.Length != 0) hash ^= OwnerName.GetHashCode();
       if (OpTime.Length != 0) hash ^= OpTime.GetHashCode();
       if (Subscribe != 0) hash ^= Subscribe.GetHashCode();
       if (IsManorPass != false) hash ^= IsManorPass.GetHashCode();
       if (ManorInterval != 0) hash ^= ManorInterval.GetHashCode();
-      if (Tag != global::Bian.TagMapTemplate.MapTemplateTagInternal) hash ^= Tag.GetHashCode();
+      if (Tag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) hash ^= Tag.GetHashCode();
       if (Comment.Length != 0) hash ^= Comment.GetHashCode();
       if (IsRecommend != false) hash ^= IsRecommend.GetHashCode();
       if (Visit != 0) hash ^= Visit.GetHashCode();
       if (ThumbUp != 0) hash ^= ThumbUp.GetHashCode();
       if (ThumbDown != 0) hash ^= ThumbDown.GetHashCode();
       hash ^= thumbnails_.GetHashCode();
-      if (MapType != global::Bian.MapType.MapTypeDiamond) hash ^= MapType.GetHashCode();
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) hash ^= MapTemplateType.GetHashCode();
-      if (LessonTag != global::Bian.TagMapTemplate.MapTemplateTagInternal) hash ^= LessonTag.GetHashCode();
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) hash ^= MapType.GetHashCode();
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) hash ^= MapTemplateType.GetHashCode();
+      if (LessonTag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) hash ^= LessonTag.GetHashCode();
       if (IsSinglePlayer != false) hash ^= IsSinglePlayer.GetHashCode();
       if (LessonPlan.Length != 0) hash ^= LessonPlan.GetHashCode();
       if (LessonOpen != false) hash ^= LessonOpen.GetHashCode();
@@ -902,7 +905,7 @@ namespace Bian {
         output.WriteRawTag(80);
         output.WriteBool(IsPublish);
       }
-      if (Size != global::Bian.MapTemplateSize.UnknownSize) {
+      if (Size != global::MelandGame3.MapTemplateSize.UnknownSize) {
         output.WriteRawTag(88);
         output.WriteEnum((int) Size);
       }
@@ -930,7 +933,7 @@ namespace Bian {
         output.WriteRawTag(136, 1);
         output.WriteInt32(ManorInterval);
       }
-      if (Tag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (Tag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) Tag);
       }
@@ -955,15 +958,15 @@ namespace Bian {
         output.WriteInt32(ThumbDown);
       }
       thumbnails_.WriteTo(output, _repeated_thumbnails_codec);
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         output.WriteRawTag(200, 1);
         output.WriteEnum((int) MapType);
       }
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         output.WriteRawTag(208, 1);
         output.WriteEnum((int) MapTemplateType);
       }
-      if (LessonTag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (LessonTag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         output.WriteRawTag(216, 1);
         output.WriteEnum((int) LessonTag);
       }
@@ -1029,7 +1032,7 @@ namespace Bian {
         output.WriteRawTag(80);
         output.WriteBool(IsPublish);
       }
-      if (Size != global::Bian.MapTemplateSize.UnknownSize) {
+      if (Size != global::MelandGame3.MapTemplateSize.UnknownSize) {
         output.WriteRawTag(88);
         output.WriteEnum((int) Size);
       }
@@ -1057,7 +1060,7 @@ namespace Bian {
         output.WriteRawTag(136, 1);
         output.WriteInt32(ManorInterval);
       }
-      if (Tag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (Tag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) Tag);
       }
@@ -1082,15 +1085,15 @@ namespace Bian {
         output.WriteInt32(ThumbDown);
       }
       thumbnails_.WriteTo(ref output, _repeated_thumbnails_codec);
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         output.WriteRawTag(200, 1);
         output.WriteEnum((int) MapType);
       }
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         output.WriteRawTag(208, 1);
         output.WriteEnum((int) MapTemplateType);
       }
-      if (LessonTag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (LessonTag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         output.WriteRawTag(216, 1);
         output.WriteEnum((int) LessonTag);
       }
@@ -1146,7 +1149,7 @@ namespace Bian {
       if (IsPublish != false) {
         size += 1 + 1;
       }
-      if (Size != global::Bian.MapTemplateSize.UnknownSize) {
+      if (Size != global::MelandGame3.MapTemplateSize.UnknownSize) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Size);
       }
       if (TitleUrl.Length != 0) {
@@ -1167,7 +1170,7 @@ namespace Bian {
       if (ManorInterval != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(ManorInterval);
       }
-      if (Tag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (Tag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Tag);
       }
       if (Comment.Length != 0) {
@@ -1186,13 +1189,13 @@ namespace Bian {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(ThumbDown);
       }
       size += thumbnails_.CalculateSize(_repeated_thumbnails_codec);
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MapType);
       }
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MapTemplateType);
       }
-      if (LessonTag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (LessonTag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LessonTag);
       }
       if (IsSinglePlayer != false) {
@@ -1246,7 +1249,7 @@ namespace Bian {
       if (other.IsPublish != false) {
         IsPublish = other.IsPublish;
       }
-      if (other.Size != global::Bian.MapTemplateSize.UnknownSize) {
+      if (other.Size != global::MelandGame3.MapTemplateSize.UnknownSize) {
         Size = other.Size;
       }
       if (other.TitleUrl.Length != 0) {
@@ -1267,7 +1270,7 @@ namespace Bian {
       if (other.ManorInterval != 0) {
         ManorInterval = other.ManorInterval;
       }
-      if (other.Tag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (other.Tag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         Tag = other.Tag;
       }
       if (other.Comment.Length != 0) {
@@ -1286,13 +1289,13 @@ namespace Bian {
         ThumbDown = other.ThumbDown;
       }
       thumbnails_.Add(other.thumbnails_);
-      if (other.MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (other.MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         MapType = other.MapType;
       }
-      if (other.MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (other.MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         MapTemplateType = other.MapTemplateType;
       }
-      if (other.LessonTag != global::Bian.TagMapTemplate.MapTemplateTagInternal) {
+      if (other.LessonTag != global::MelandGame3.TagMapTemplate.MapTemplateTagInternal) {
         LessonTag = other.LessonTag;
       }
       if (other.IsSinglePlayer != false) {
@@ -1360,7 +1363,7 @@ namespace Bian {
             break;
           }
           case 88: {
-            Size = (global::Bian.MapTemplateSize) input.ReadEnum();
+            Size = (global::MelandGame3.MapTemplateSize) input.ReadEnum();
             break;
           }
           case 98: {
@@ -1388,7 +1391,7 @@ namespace Bian {
             break;
           }
           case 144: {
-            Tag = (global::Bian.TagMapTemplate) input.ReadEnum();
+            Tag = (global::MelandGame3.TagMapTemplate) input.ReadEnum();
             break;
           }
           case 154: {
@@ -1416,15 +1419,15 @@ namespace Bian {
             break;
           }
           case 200: {
-            MapType = (global::Bian.MapType) input.ReadEnum();
+            MapType = (global::MelandGame3.MapType) input.ReadEnum();
             break;
           }
           case 208: {
-            MapTemplateType = (global::Bian.MapTemplateType) input.ReadEnum();
+            MapTemplateType = (global::MelandGame3.MapTemplateType) input.ReadEnum();
             break;
           }
           case 216: {
-            LessonTag = (global::Bian.TagMapTemplate) input.ReadEnum();
+            LessonTag = (global::MelandGame3.TagMapTemplate) input.ReadEnum();
             break;
           }
           case 224: {
@@ -1495,7 +1498,7 @@ namespace Bian {
             break;
           }
           case 88: {
-            Size = (global::Bian.MapTemplateSize) input.ReadEnum();
+            Size = (global::MelandGame3.MapTemplateSize) input.ReadEnum();
             break;
           }
           case 98: {
@@ -1523,7 +1526,7 @@ namespace Bian {
             break;
           }
           case 144: {
-            Tag = (global::Bian.TagMapTemplate) input.ReadEnum();
+            Tag = (global::MelandGame3.TagMapTemplate) input.ReadEnum();
             break;
           }
           case 154: {
@@ -1551,15 +1554,15 @@ namespace Bian {
             break;
           }
           case 200: {
-            MapType = (global::Bian.MapType) input.ReadEnum();
+            MapType = (global::MelandGame3.MapType) input.ReadEnum();
             break;
           }
           case 208: {
-            MapTemplateType = (global::Bian.MapTemplateType) input.ReadEnum();
+            MapTemplateType = (global::MelandGame3.MapTemplateType) input.ReadEnum();
             break;
           }
           case 216: {
-            LessonTag = (global::Bian.TagMapTemplate) input.ReadEnum();
+            LessonTag = (global::MelandGame3.TagMapTemplate) input.ReadEnum();
             break;
           }
           case 224: {
@@ -1595,7 +1598,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1835,13 +1838,13 @@ namespace Bian {
 
     /// <summary>Field number for the "map_type" field.</summary>
     public const int MapTypeFieldNumber = 15;
-    private global::Bian.MapType mapType_ = global::Bian.MapType.MapTypeDiamond;
+    private global::MelandGame3.MapType mapType_ = global::MelandGame3.MapType.MapTypeDiamond;
     /// <summary>
     /// 地图类型(正交 / 斜45度)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapType MapType {
+    public global::MelandGame3.MapType MapType {
       get { return mapType_; }
       set {
         mapType_ = value;
@@ -1899,7 +1902,7 @@ namespace Bian {
       if (TemplateName.Length != 0) hash ^= TemplateName.GetHashCode();
       if (TemplateId.Length != 0) hash ^= TemplateId.GetHashCode();
       if (MaxNum != 0) hash ^= MaxNum.GetHashCode();
-      if (MapType != global::Bian.MapType.MapTypeDiamond) hash ^= MapType.GetHashCode();
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) hash ^= MapType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1974,7 +1977,7 @@ namespace Bian {
         output.WriteRawTag(112);
         output.WriteInt32(MaxNum);
       }
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         output.WriteRawTag(120);
         output.WriteEnum((int) MapType);
       }
@@ -2044,7 +2047,7 @@ namespace Bian {
         output.WriteRawTag(112);
         output.WriteInt32(MaxNum);
       }
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         output.WriteRawTag(120);
         output.WriteEnum((int) MapType);
       }
@@ -2100,7 +2103,7 @@ namespace Bian {
       if (MaxNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxNum);
       }
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MapType);
       }
       if (_unknownFields != null) {
@@ -2157,7 +2160,7 @@ namespace Bian {
       if (other.MaxNum != 0) {
         MaxNum = other.MaxNum;
       }
-      if (other.MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (other.MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         MapType = other.MapType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2232,7 +2235,7 @@ namespace Bian {
             break;
           }
           case 120: {
-            MapType = (global::Bian.MapType) input.ReadEnum();
+            MapType = (global::MelandGame3.MapType) input.ReadEnum();
             break;
           }
         }
@@ -2307,7 +2310,7 @@ namespace Bian {
             break;
           }
           case 120: {
-            MapType = (global::Bian.MapType) input.ReadEnum();
+            MapType = (global::MelandGame3.MapType) input.ReadEnum();
             break;
           }
         }
@@ -2334,7 +2337,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2635,7 +2638,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2906,13 +2909,13 @@ namespace Bian {
 
     /// <summary>Field number for the "map_type" field.</summary>
     public const int MapTypeFieldNumber = 18;
-    private global::Bian.MapType mapType_ = global::Bian.MapType.MapTypeDiamond;
+    private global::MelandGame3.MapType mapType_ = global::MelandGame3.MapType.MapTypeDiamond;
     /// <summary>
     ///地图类型(斜45度菱形 / 正交矩形)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapType MapType {
+    public global::MelandGame3.MapType MapType {
       get { return mapType_; }
       set {
         mapType_ = value;
@@ -2921,13 +2924,13 @@ namespace Bian {
 
     /// <summary>Field number for the "map_template_type" field.</summary>
     public const int MapTemplateTypeFieldNumber = 19;
-    private global::Bian.MapTemplateType mapTemplateType_ = global::Bian.MapTemplateType.MapTemplateTypeNormal;
+    private global::MelandGame3.MapTemplateType mapTemplateType_ = global::MelandGame3.MapTemplateType.MapTemplateTypeNormal;
     /// <summary>
     /// 0普通地图模板 1课程地图模板
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapTemplateType MapTemplateType {
+    public global::MelandGame3.MapTemplateType MapTemplateType {
       get { return mapTemplateType_; }
       set {
         mapTemplateType_ = value;
@@ -2951,13 +2954,13 @@ namespace Bian {
 
     /// <summary>Field number for the "static_data" field.</summary>
     public const int StaticDataFieldNumber = 22;
-    private global::Bian.MapStaticData staticData_;
+    private global::MelandGame3.MapStaticData staticData_;
     /// <summary>
     /// 地图静态地块数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapStaticData StaticData {
+    public global::MelandGame3.MapStaticData StaticData {
       get { return staticData_; }
       set {
         staticData_ = value;
@@ -2966,13 +2969,13 @@ namespace Bian {
 
     /// <summary>Field number for the "map_model" field.</summary>
     public const int MapModelFieldNumber = 23;
-    private global::Bian.GameMapModel mapModel_ = global::Bian.GameMapModel.GameMapModelGame;
+    private global::MelandGame3.GameMapModel mapModel_ = global::MelandGame3.GameMapModel.GameMapModelGame;
     /// <summary>
     /// 地图模式
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.GameMapModel MapModel {
+    public global::MelandGame3.GameMapModel MapModel {
       get { return mapModel_; }
       set {
         mapModel_ = value;
@@ -3040,11 +3043,11 @@ namespace Bian {
       if (RhombOffsetC != 0) hash ^= RhombOffsetC.GetHashCode();
       if (Rlen != 0) hash ^= Rlen.GetHashCode();
       if (Clen != 0) hash ^= Clen.GetHashCode();
-      if (MapType != global::Bian.MapType.MapTypeDiamond) hash ^= MapType.GetHashCode();
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) hash ^= MapTemplateType.GetHashCode();
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) hash ^= MapType.GetHashCode();
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) hash ^= MapTemplateType.GetHashCode();
       if (LessonModelJson.Length != 0) hash ^= LessonModelJson.GetHashCode();
       if (staticData_ != null) hash ^= StaticData.GetHashCode();
-      if (MapModel != global::Bian.GameMapModel.GameMapModelGame) hash ^= MapModel.GetHashCode();
+      if (MapModel != global::MelandGame3.GameMapModel.GameMapModelGame) hash ^= MapModel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3128,11 +3131,11 @@ namespace Bian {
         output.WriteRawTag(136, 1);
         output.WriteInt32(Clen);
       }
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) MapType);
       }
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) MapTemplateType);
       }
@@ -3144,7 +3147,7 @@ namespace Bian {
         output.WriteRawTag(178, 1);
         output.WriteMessage(StaticData);
       }
-      if (MapModel != global::Bian.GameMapModel.GameMapModelGame) {
+      if (MapModel != global::MelandGame3.GameMapModel.GameMapModelGame) {
         output.WriteRawTag(184, 1);
         output.WriteEnum((int) MapModel);
       }
@@ -3223,11 +3226,11 @@ namespace Bian {
         output.WriteRawTag(136, 1);
         output.WriteInt32(Clen);
       }
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) MapType);
       }
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) MapTemplateType);
       }
@@ -3239,7 +3242,7 @@ namespace Bian {
         output.WriteRawTag(178, 1);
         output.WriteMessage(StaticData);
       }
-      if (MapModel != global::Bian.GameMapModel.GameMapModelGame) {
+      if (MapModel != global::MelandGame3.GameMapModel.GameMapModelGame) {
         output.WriteRawTag(184, 1);
         output.WriteEnum((int) MapModel);
       }
@@ -3302,10 +3305,10 @@ namespace Bian {
       if (Clen != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(Clen);
       }
-      if (MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MapType);
       }
-      if (MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MapTemplateType);
       }
       if (LessonModelJson.Length != 0) {
@@ -3314,7 +3317,7 @@ namespace Bian {
       if (staticData_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StaticData);
       }
-      if (MapModel != global::Bian.GameMapModel.GameMapModelGame) {
+      if (MapModel != global::MelandGame3.GameMapModel.GameMapModelGame) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MapModel);
       }
       if (_unknownFields != null) {
@@ -3378,10 +3381,10 @@ namespace Bian {
       if (other.Clen != 0) {
         Clen = other.Clen;
       }
-      if (other.MapType != global::Bian.MapType.MapTypeDiamond) {
+      if (other.MapType != global::MelandGame3.MapType.MapTypeDiamond) {
         MapType = other.MapType;
       }
-      if (other.MapTemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (other.MapTemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         MapTemplateType = other.MapTemplateType;
       }
       if (other.LessonModelJson.Length != 0) {
@@ -3389,11 +3392,11 @@ namespace Bian {
       }
       if (other.staticData_ != null) {
         if (staticData_ == null) {
-          StaticData = new global::Bian.MapStaticData();
+          StaticData = new global::MelandGame3.MapStaticData();
         }
         StaticData.MergeFrom(other.StaticData);
       }
-      if (other.MapModel != global::Bian.GameMapModel.GameMapModelGame) {
+      if (other.MapModel != global::MelandGame3.GameMapModel.GameMapModelGame) {
         MapModel = other.MapModel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3480,11 +3483,11 @@ namespace Bian {
             break;
           }
           case 144: {
-            MapType = (global::Bian.MapType) input.ReadEnum();
+            MapType = (global::MelandGame3.MapType) input.ReadEnum();
             break;
           }
           case 152: {
-            MapTemplateType = (global::Bian.MapTemplateType) input.ReadEnum();
+            MapTemplateType = (global::MelandGame3.MapTemplateType) input.ReadEnum();
             break;
           }
           case 162: {
@@ -3493,13 +3496,13 @@ namespace Bian {
           }
           case 178: {
             if (staticData_ == null) {
-              StaticData = new global::Bian.MapStaticData();
+              StaticData = new global::MelandGame3.MapStaticData();
             }
             input.ReadMessage(StaticData);
             break;
           }
           case 184: {
-            MapModel = (global::Bian.GameMapModel) input.ReadEnum();
+            MapModel = (global::MelandGame3.GameMapModel) input.ReadEnum();
             break;
           }
         }
@@ -3586,11 +3589,11 @@ namespace Bian {
             break;
           }
           case 144: {
-            MapType = (global::Bian.MapType) input.ReadEnum();
+            MapType = (global::MelandGame3.MapType) input.ReadEnum();
             break;
           }
           case 152: {
-            MapTemplateType = (global::Bian.MapTemplateType) input.ReadEnum();
+            MapTemplateType = (global::MelandGame3.MapTemplateType) input.ReadEnum();
             break;
           }
           case 162: {
@@ -3599,13 +3602,13 @@ namespace Bian {
           }
           case 178: {
             if (staticData_ == null) {
-              StaticData = new global::Bian.MapStaticData();
+              StaticData = new global::MelandGame3.MapStaticData();
             }
             input.ReadMessage(StaticData);
             break;
           }
           case 184: {
-            MapModel = (global::Bian.GameMapModel) input.ReadEnum();
+            MapModel = (global::MelandGame3.GameMapModel) input.ReadEnum();
             break;
           }
         }
@@ -3629,7 +3632,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3938,7 +3941,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3985,13 +3988,13 @@ namespace Bian {
 
     /// <summary>Field number for the "teacher_view" field.</summary>
     public const int TeacherViewFieldNumber = 1;
-    private global::Bian.LessonTeacherViewModel teacherView_ = global::Bian.LessonTeacherViewModel.LessonTeacherViewModelUser;
+    private global::MelandGame3.LessonTeacherViewModel teacherView_ = global::MelandGame3.LessonTeacherViewModel.LessonTeacherViewModelUser;
     /// <summary>
     /// 老师视角
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonTeacherViewModel TeacherView {
+    public global::MelandGame3.LessonTeacherViewModel TeacherView {
       get { return teacherView_; }
       set {
         teacherView_ = value;
@@ -4261,7 +4264,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TeacherView != global::Bian.LessonTeacherViewModel.LessonTeacherViewModelUser) hash ^= TeacherView.GetHashCode();
+      if (TeacherView != global::MelandGame3.LessonTeacherViewModel.LessonTeacherViewModelUser) hash ^= TeacherView.GetHashCode();
       if (CameraModel.Length != 0) hash ^= CameraModel.GetHashCode();
       if (ControlModel.Length != 0) hash ^= ControlModel.GetHashCode();
       if (UseDemonstrate != false) hash ^= UseDemonstrate.GetHashCode();
@@ -4295,7 +4298,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TeacherView != global::Bian.LessonTeacherViewModel.LessonTeacherViewModelUser) {
+      if (TeacherView != global::MelandGame3.LessonTeacherViewModel.LessonTeacherViewModelUser) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TeacherView);
       }
@@ -4369,7 +4372,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TeacherView != global::Bian.LessonTeacherViewModel.LessonTeacherViewModelUser) {
+      if (TeacherView != global::MelandGame3.LessonTeacherViewModel.LessonTeacherViewModelUser) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TeacherView);
       }
@@ -4443,7 +4446,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TeacherView != global::Bian.LessonTeacherViewModel.LessonTeacherViewModelUser) {
+      if (TeacherView != global::MelandGame3.LessonTeacherViewModel.LessonTeacherViewModelUser) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TeacherView);
       }
       if (CameraModel.Length != 0) {
@@ -4503,7 +4506,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.TeacherView != global::Bian.LessonTeacherViewModel.LessonTeacherViewModelUser) {
+      if (other.TeacherView != global::MelandGame3.LessonTeacherViewModel.LessonTeacherViewModelUser) {
         TeacherView = other.TeacherView;
       }
       if (other.CameraModel.Length != 0) {
@@ -4567,7 +4570,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TeacherView = (global::Bian.LessonTeacherViewModel) input.ReadEnum();
+            TeacherView = (global::MelandGame3.LessonTeacherViewModel) input.ReadEnum();
             break;
           }
           case 18: {
@@ -4646,7 +4649,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            TeacherView = (global::Bian.LessonTeacherViewModel) input.ReadEnum();
+            TeacherView = (global::MelandGame3.LessonTeacherViewModel) input.ReadEnum();
             break;
           }
           case 18: {
@@ -4733,7 +4736,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4767,10 +4770,10 @@ namespace Bian {
 
     /// <summary>Field number for the "model_type" field.</summary>
     public const int ModelTypeFieldNumber = 1;
-    private global::Bian.LessonModelType modelType_ = global::Bian.LessonModelType.LessonModelTypeServer;
+    private global::MelandGame3.LessonModelType modelType_ = global::MelandGame3.LessonModelType.LessonModelTypeServer;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonModelType ModelType {
+    public global::MelandGame3.LessonModelType ModelType {
       get { return modelType_; }
       set {
         modelType_ = value;
@@ -4791,10 +4794,10 @@ namespace Bian {
 
     /// <summary>Field number for the "model_data" field.</summary>
     public const int ModelDataFieldNumber = 3;
-    private global::Bian.LessonModelData modelData_;
+    private global::MelandGame3.LessonModelData modelData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonModelData ModelData {
+    public global::MelandGame3.LessonModelData ModelData {
       get { return modelData_; }
       set {
         modelData_ = value;
@@ -4826,7 +4829,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ModelType != global::Bian.LessonModelType.LessonModelTypeServer) hash ^= ModelType.GetHashCode();
+      if (ModelType != global::MelandGame3.LessonModelType.LessonModelTypeServer) hash ^= ModelType.GetHashCode();
       if (ModelCid != 0) hash ^= ModelCid.GetHashCode();
       if (modelData_ != null) hash ^= ModelData.GetHashCode();
       if (_unknownFields != null) {
@@ -4847,7 +4850,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ModelType != global::Bian.LessonModelType.LessonModelTypeServer) {
+      if (ModelType != global::MelandGame3.LessonModelType.LessonModelTypeServer) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ModelType);
       }
@@ -4869,7 +4872,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ModelType != global::Bian.LessonModelType.LessonModelTypeServer) {
+      if (ModelType != global::MelandGame3.LessonModelType.LessonModelTypeServer) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ModelType);
       }
@@ -4891,7 +4894,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ModelType != global::Bian.LessonModelType.LessonModelTypeServer) {
+      if (ModelType != global::MelandGame3.LessonModelType.LessonModelTypeServer) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelType);
       }
       if (ModelCid != 0) {
@@ -4912,7 +4915,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.ModelType != global::Bian.LessonModelType.LessonModelTypeServer) {
+      if (other.ModelType != global::MelandGame3.LessonModelType.LessonModelTypeServer) {
         ModelType = other.ModelType;
       }
       if (other.ModelCid != 0) {
@@ -4920,7 +4923,7 @@ namespace Bian {
       }
       if (other.modelData_ != null) {
         if (modelData_ == null) {
-          ModelData = new global::Bian.LessonModelData();
+          ModelData = new global::MelandGame3.LessonModelData();
         }
         ModelData.MergeFrom(other.ModelData);
       }
@@ -4940,7 +4943,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ModelType = (global::Bian.LessonModelType) input.ReadEnum();
+            ModelType = (global::MelandGame3.LessonModelType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -4949,7 +4952,7 @@ namespace Bian {
           }
           case 26: {
             if (modelData_ == null) {
-              ModelData = new global::Bian.LessonModelData();
+              ModelData = new global::MelandGame3.LessonModelData();
             }
             input.ReadMessage(ModelData);
             break;
@@ -4970,7 +4973,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ModelType = (global::Bian.LessonModelType) input.ReadEnum();
+            ModelType = (global::MelandGame3.LessonModelType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -4979,7 +4982,7 @@ namespace Bian {
           }
           case 26: {
             if (modelData_ == null) {
-              ModelData = new global::Bian.LessonModelData();
+              ModelData = new global::MelandGame3.LessonModelData();
             }
             input.ReadMessage(ModelData);
             break;
@@ -5008,7 +5011,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5276,7 +5279,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5324,10 +5327,10 @@ namespace Bian {
 
     /// <summary>Field number for the "resources" field.</summary>
     public const int ResourcesFieldNumber = 2;
-    private global::Bian.AreaResources resources_;
+    private global::MelandGame3.AreaResources resources_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AreaResources Resources {
+    public global::MelandGame3.AreaResources Resources {
       get { return resources_; }
       set {
         resources_ = value;
@@ -5437,7 +5440,7 @@ namespace Bian {
       }
       if (other.resources_ != null) {
         if (resources_ == null) {
-          Resources = new global::Bian.AreaResources();
+          Resources = new global::MelandGame3.AreaResources();
         }
         Resources.MergeFrom(other.Resources);
       }
@@ -5462,7 +5465,7 @@ namespace Bian {
           }
           case 18: {
             if (resources_ == null) {
-              Resources = new global::Bian.AreaResources();
+              Resources = new global::MelandGame3.AreaResources();
             }
             input.ReadMessage(Resources);
             break;
@@ -5488,7 +5491,7 @@ namespace Bian {
           }
           case 18: {
             if (resources_ == null) {
-              Resources = new global::Bian.AreaResources();
+              Resources = new global::MelandGame3.AreaResources();
             }
             input.ReadMessage(Resources);
             break;
@@ -5514,7 +5517,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapReflection.Descriptor.MessageTypes[9]; }
+      get { return global::MelandGame3.MapReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5564,13 +5567,13 @@ namespace Bian {
 
     /// <summary>Field number for the "template_type" field.</summary>
     public const int TemplateTypeFieldNumber = 2;
-    private global::Bian.MapTemplateType templateType_ = global::Bian.MapTemplateType.MapTemplateTypeNormal;
+    private global::MelandGame3.MapTemplateType templateType_ = global::MelandGame3.MapTemplateType.MapTemplateTypeNormal;
     /// <summary>
     /// 课程模板类型(普通地图/课程地图)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapTemplateType TemplateType {
+    public global::MelandGame3.MapTemplateType TemplateType {
       get { return templateType_; }
       set {
         templateType_ = value;
@@ -5579,29 +5582,29 @@ namespace Bian {
 
     /// <summary>Field number for the "lessonMapRes" field.</summary>
     public const int LessonMapResFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.MapAreaRes> _repeated_lessonMapRes_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.MapAreaRes.Parser);
-    private readonly pbc::RepeatedField<global::Bian.MapAreaRes> lessonMapRes_ = new pbc::RepeatedField<global::Bian.MapAreaRes>();
+    private static readonly pb::FieldCodec<global::MelandGame3.MapAreaRes> _repeated_lessonMapRes_codec
+        = pb::FieldCodec.ForMessage(26, global::MelandGame3.MapAreaRes.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.MapAreaRes> lessonMapRes_ = new pbc::RepeatedField<global::MelandGame3.MapAreaRes>();
     /// <summary>
     /// 课程地图资源(按课程区域切分数据文件)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.MapAreaRes> LessonMapRes {
+    public pbc::RepeatedField<global::MelandGame3.MapAreaRes> LessonMapRes {
       get { return lessonMapRes_; }
     }
 
     /// <summary>Field number for the "NormalMapRes" field.</summary>
     public const int NormalMapResFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Bian.MapAreaRes> _repeated_normalMapRes_codec
-        = pb::FieldCodec.ForMessage(34, global::Bian.MapAreaRes.Parser);
-    private readonly pbc::RepeatedField<global::Bian.MapAreaRes> normalMapRes_ = new pbc::RepeatedField<global::Bian.MapAreaRes>();
+    private static readonly pb::FieldCodec<global::MelandGame3.MapAreaRes> _repeated_normalMapRes_codec
+        = pb::FieldCodec.ForMessage(34, global::MelandGame3.MapAreaRes.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.MapAreaRes> normalMapRes_ = new pbc::RepeatedField<global::MelandGame3.MapAreaRes>();
     /// <summary>
     /// 普通地图资源(按地图Rc坐标区域切分数据文件)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.MapAreaRes> NormalMapRes {
+    public pbc::RepeatedField<global::MelandGame3.MapAreaRes> NormalMapRes {
       get { return normalMapRes_; }
     }
 
@@ -5632,7 +5635,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (TemplateId.Length != 0) hash ^= TemplateId.GetHashCode();
-      if (TemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) hash ^= TemplateType.GetHashCode();
+      if (TemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) hash ^= TemplateType.GetHashCode();
       hash ^= lessonMapRes_.GetHashCode();
       hash ^= normalMapRes_.GetHashCode();
       if (_unknownFields != null) {
@@ -5657,7 +5660,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(TemplateId);
       }
-      if (TemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (TemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         output.WriteRawTag(16);
         output.WriteEnum((int) TemplateType);
       }
@@ -5677,7 +5680,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(TemplateId);
       }
-      if (TemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (TemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         output.WriteRawTag(16);
         output.WriteEnum((int) TemplateType);
       }
@@ -5696,7 +5699,7 @@ namespace Bian {
       if (TemplateId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TemplateId);
       }
-      if (TemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (TemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TemplateType);
       }
       size += lessonMapRes_.CalculateSize(_repeated_lessonMapRes_codec);
@@ -5716,7 +5719,7 @@ namespace Bian {
       if (other.TemplateId.Length != 0) {
         TemplateId = other.TemplateId;
       }
-      if (other.TemplateType != global::Bian.MapTemplateType.MapTemplateTypeNormal) {
+      if (other.TemplateType != global::MelandGame3.MapTemplateType.MapTemplateTypeNormal) {
         TemplateType = other.TemplateType;
       }
       lessonMapRes_.Add(other.lessonMapRes_);
@@ -5741,7 +5744,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            TemplateType = (global::Bian.MapTemplateType) input.ReadEnum();
+            TemplateType = (global::MelandGame3.MapTemplateType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -5772,7 +5775,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            TemplateType = (global::Bian.MapTemplateType) input.ReadEnum();
+            TemplateType = (global::MelandGame3.MapTemplateType) input.ReadEnum();
             break;
           }
           case 26: {

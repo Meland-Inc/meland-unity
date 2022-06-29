@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from ewsys_error_code.proto</summary>
   public static partial class EwsysErrorCodeReflection {
@@ -24,36 +24,36 @@ namespace Bian {
     static EwsysErrorCodeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZld3N5c19lcnJvcl9jb2RlLnByb3RvEgRCaWFuKvcICgtFd0Vycm9yQ29k",
-            "ZRIbChdFd0Vycm9yQ29kZV9FRUNfVW5rbm93bhAAEjEKJEVFQ19DbGllbnRf",
-            "U3RhcnRVcF9OYXRpdmVTZXJ2ZXJfRmFpbBDvsf////////8BEigKG0VFQ19D",
-            "bGllbnRfTG9hZEFjY291bnRfRmFpbBDusf////////8BEiQKF0VFQ19DbGll",
-            "bnRfTG9hZE1hcF9GYWlsEO2x/////////wESJQoYRUVDX0NsaWVudF9DcmVh",
-            "dE1hcF9GYWlsEOyx/////////wESJQoYRUVDX0NsaWVudF9Kb2luUm9vbV9G",
-            "YWlsEOux/////////wESKQocRUVDX0NsaWVudF9Mb2FkUm9sZUluZm9fRmFp",
-            "bBDqsf////////8BEicKGkVFQ19DbGllbnRfTG9hZENvbmZpZ19GYWlsEOmx",
-            "/////////wESKwoeRUVDX0NsaWVudF9Mb2FkTGVzc29uRGF0YV9GYWlsEOix",
-            "/////////wESLwoiRUVDX0NsaWVudF9Kb2luX0xlc3NvblNlY3Rpb25fRmFp",
-            "bBDnsf////////8BEjEKJEVFQ19DbGllbnRfQ29ubmVjdF9OYXRpdmVTZXJ2",
-            "ZXJfRmFpbBDmsf////////8BEi8KIkVFQ19DbGllbnRfTmF0aXZlU2VydmVy",
-            "X05vUnNwX0ZhaWwQ5bH/////////ARIvCiJFRUNfU2VydmVyX1N0YXJ0VXBf",
-            "R2FtZVNlcnZlcl9GYWlsEN/j/v///////wESKAobRUVDX1NlcnZlcl9Mb2Fk",
-            "QWNjb3VudF9GYWlsEN7j/v///////wESJAoXRUVDX1NlcnZlcl9Mb2FkTWFw",
-            "X0ZhaWwQ3eP+////////ARIlChhFRUNfU2VydmVyX0NyZWF0TWFwX0ZhaWwQ",
-            "3OP+////////ARIlChhFRUNfU2VydmVyX0pvaW5Sb29tX0ZhaWwQ2+P+////",
-            "////ARIpChxFRUNfU2VydmVyX0xvYWRSb2xlSW5mb19GYWlsENrj/v//////",
-            "/wESJwoaRUVDX1NlcnZlcl9Mb2FkQ29uZmlnX0ZhaWwQ2eP+////////ARIu",
-            "CiFFRUNfUGxhdGZvcm1fU3RhcnRVcF9NYXBIYWxsX0ZhaWwQz5X+////////",
-            "ARIuCiFFRUNfUGxhdGZvcm1fU3RhcnRVcF9BY2NvdW50X0ZhaWwQzpX+////",
-            "////ARItCiBFRUNfUGxhdGZvcm1fU3RhcnRVcF9CYW5uZXJfRmFpbBDNlf7/",
-            "//////8BEioKHUVFQ19QbGF0Zm9ybV9Mb2FkQWNjb3VudF9GYWlsEMyV/v//",
-            "/////wESLgohRUVDX1BsYXRmb3JtX0NyZWF0U2VydmVyTm9kZV9GYWlsEMuV",
-            "/v///////wESKwoeRUVDX1BsYXRmb3JtX0xvYWRSb2xlSW5mb19GYWlsEMqV",
-            "/v///////wESKQocRUVDX1BsYXRmb3JtX0xvYWRDb25maWdfRmFpbBDJlf7/",
-            "//////8BYgZwcm90bzM="));
+            "ChZld3N5c19lcnJvcl9jb2RlLnByb3RvEgtNZWxhbmRHYW1lMyr3CAoLRXdF",
+            "cnJvckNvZGUSGwoXRXdFcnJvckNvZGVfRUVDX1Vua25vd24QABIxCiRFRUNf",
+            "Q2xpZW50X1N0YXJ0VXBfTmF0aXZlU2VydmVyX0ZhaWwQ77H/////////ARIo",
+            "ChtFRUNfQ2xpZW50X0xvYWRBY2NvdW50X0ZhaWwQ7rH/////////ARIkChdF",
+            "RUNfQ2xpZW50X0xvYWRNYXBfRmFpbBDtsf////////8BEiUKGEVFQ19DbGll",
+            "bnRfQ3JlYXRNYXBfRmFpbBDssf////////8BEiUKGEVFQ19DbGllbnRfSm9p",
+            "blJvb21fRmFpbBDrsf////////8BEikKHEVFQ19DbGllbnRfTG9hZFJvbGVJ",
+            "bmZvX0ZhaWwQ6rH/////////ARInChpFRUNfQ2xpZW50X0xvYWRDb25maWdf",
+            "RmFpbBDpsf////////8BEisKHkVFQ19DbGllbnRfTG9hZExlc3NvbkRhdGFf",
+            "RmFpbBDosf////////8BEi8KIkVFQ19DbGllbnRfSm9pbl9MZXNzb25TZWN0",
+            "aW9uX0ZhaWwQ57H/////////ARIxCiRFRUNfQ2xpZW50X0Nvbm5lY3RfTmF0",
+            "aXZlU2VydmVyX0ZhaWwQ5rH/////////ARIvCiJFRUNfQ2xpZW50X05hdGl2",
+            "ZVNlcnZlcl9Ob1JzcF9GYWlsEOWx/////////wESLwoiRUVDX1NlcnZlcl9T",
+            "dGFydFVwX0dhbWVTZXJ2ZXJfRmFpbBDf4/7///////8BEigKG0VFQ19TZXJ2",
+            "ZXJfTG9hZEFjY291bnRfRmFpbBDe4/7///////8BEiQKF0VFQ19TZXJ2ZXJf",
+            "TG9hZE1hcF9GYWlsEN3j/v///////wESJQoYRUVDX1NlcnZlcl9DcmVhdE1h",
+            "cF9GYWlsENzj/v///////wESJQoYRUVDX1NlcnZlcl9Kb2luUm9vbV9GYWls",
+            "ENvj/v///////wESKQocRUVDX1NlcnZlcl9Mb2FkUm9sZUluZm9fRmFpbBDa",
+            "4/7///////8BEicKGkVFQ19TZXJ2ZXJfTG9hZENvbmZpZ19GYWlsENnj/v//",
+            "/////wESLgohRUVDX1BsYXRmb3JtX1N0YXJ0VXBfTWFwSGFsbF9GYWlsEM+V",
+            "/v///////wESLgohRUVDX1BsYXRmb3JtX1N0YXJ0VXBfQWNjb3VudF9GYWls",
+            "EM6V/v///////wESLQogRUVDX1BsYXRmb3JtX1N0YXJ0VXBfQmFubmVyX0Zh",
+            "aWwQzZX+////////ARIqCh1FRUNfUGxhdGZvcm1fTG9hZEFjY291bnRfRmFp",
+            "bBDMlf7///////8BEi4KIUVFQ19QbGF0Zm9ybV9DcmVhdFNlcnZlck5vZGVf",
+            "RmFpbBDLlf7///////8BEisKHkVFQ19QbGF0Zm9ybV9Mb2FkUm9sZUluZm9f",
+            "RmFpbBDKlf7///////8BEikKHEVFQ19QbGF0Zm9ybV9Mb2FkQ29uZmlnX0Zh",
+            "aWwQyZX+////////AWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.EwErrorCode), }, null, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.EwErrorCode), }, null, null));
     }
     #endregion
 

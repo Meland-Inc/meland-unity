@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from times.proto</summary>
   public static partial class TimesReflection {
@@ -24,11 +24,11 @@ namespace Bian {
     static TimesReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgt0aW1lcy5wcm90bxIEQmlhbiorCglUaW1lc1R5cGUSHgoaVGltZXNUeXBl",
-            "X1RpbWVzS2lsbE1vbnN0ZXIQAGIGcHJvdG8z"));
+            "Cgt0aW1lcy5wcm90bxILTWVsYW5kR2FtZTMqKwoJVGltZXNUeXBlEh4KGlRp",
+            "bWVzVHlwZV9UaW1lc0tpbGxNb25zdGVyEABiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.TimesType), }, null, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.TimesType), }, null, null));
     }
     #endregion
 

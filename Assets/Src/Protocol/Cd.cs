@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from cd.proto</summary>
   public static partial class CdReflection {
@@ -24,15 +24,15 @@ namespace Bian {
     static CdReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CghjZC5wcm90bxIEQmlhbiJZCglDZFNldHRpbmcSCwoDY2lkGAEgASgFEh0K",
-            "B2NkX3R5cGUYAiABKA4yDC5CaWFuLkNkVHlwZRINCgV2YWx1ZRgDIAEoAxIR",
-            "CgluZWVkX3N5bmMYBCABKAgqUgoGQ2RUeXBlEhUKEUNkVHlwZV9DZER1cmF0",
-            "aW9uEAASFgoSQ2RUeXBlX0NkVGltZXN0YW1wEAESGQoVQ2RUeXBlX0NkRGF5",
-            "VGltZXN0YW1wEAJiBnByb3RvMw=="));
+            "CghjZC5wcm90bxILTWVsYW5kR2FtZTMiYAoJQ2RTZXR0aW5nEgsKA2NpZBgB",
+            "IAEoBRIkCgdjZF90eXBlGAIgASgOMhMuTWVsYW5kR2FtZTMuQ2RUeXBlEg0K",
+            "BXZhbHVlGAMgASgDEhEKCW5lZWRfc3luYxgEIAEoCCpSCgZDZFR5cGUSFQoR",
+            "Q2RUeXBlX0NkRHVyYXRpb24QABIWChJDZFR5cGVfQ2RUaW1lc3RhbXAQARIZ",
+            "ChVDZFR5cGVfQ2REYXlUaW1lc3RhbXAQAmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.CdType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CdSetting), global::Bian.CdSetting.Parser, new[]{ "Cid", "CdType", "Value", "NeedSync" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.CdType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CdSetting), global::MelandGame3.CdSetting.Parser, new[]{ "Cid", "CdType", "Value", "NeedSync" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.CdReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.CdReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,10 +121,10 @@ namespace Bian {
 
     /// <summary>Field number for the "cd_type" field.</summary>
     public const int CdTypeFieldNumber = 2;
-    private global::Bian.CdType cdType_ = global::Bian.CdType.CdDuration;
+    private global::MelandGame3.CdType cdType_ = global::MelandGame3.CdType.CdDuration;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CdType CdType {
+    public global::MelandGame3.CdType CdType {
       get { return cdType_; }
       set {
         cdType_ = value;
@@ -185,7 +185,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Cid != 0) hash ^= Cid.GetHashCode();
-      if (CdType != global::Bian.CdType.CdDuration) hash ^= CdType.GetHashCode();
+      if (CdType != global::MelandGame3.CdType.CdDuration) hash ^= CdType.GetHashCode();
       if (Value != 0L) hash ^= Value.GetHashCode();
       if (NeedSync != false) hash ^= NeedSync.GetHashCode();
       if (_unknownFields != null) {
@@ -210,7 +210,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Cid);
       }
-      if (CdType != global::Bian.CdType.CdDuration) {
+      if (CdType != global::MelandGame3.CdType.CdDuration) {
         output.WriteRawTag(16);
         output.WriteEnum((int) CdType);
       }
@@ -236,7 +236,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Cid);
       }
-      if (CdType != global::Bian.CdType.CdDuration) {
+      if (CdType != global::MelandGame3.CdType.CdDuration) {
         output.WriteRawTag(16);
         output.WriteEnum((int) CdType);
       }
@@ -261,7 +261,7 @@ namespace Bian {
       if (Cid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Cid);
       }
-      if (CdType != global::Bian.CdType.CdDuration) {
+      if (CdType != global::MelandGame3.CdType.CdDuration) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CdType);
       }
       if (Value != 0L) {
@@ -285,7 +285,7 @@ namespace Bian {
       if (other.Cid != 0) {
         Cid = other.Cid;
       }
-      if (other.CdType != global::Bian.CdType.CdDuration) {
+      if (other.CdType != global::MelandGame3.CdType.CdDuration) {
         CdType = other.CdType;
       }
       if (other.Value != 0L) {
@@ -314,7 +314,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            CdType = (global::Bian.CdType) input.ReadEnum();
+            CdType = (global::MelandGame3.CdType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -345,7 +345,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            CdType = (global::Bian.CdType) input.ReadEnum();
+            CdType = (global::MelandGame3.CdType) input.ReadEnum();
             break;
           }
           case 24: {

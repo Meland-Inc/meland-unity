@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from game.proto</summary>
   public static partial class GameReflection {
@@ -24,15 +24,16 @@ namespace Bian {
     static GameReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgpnYW1lLnByb3RvEgRCaWFuIiwKCkdhbWVSZWNvcmQSHgoFc3RhdGUYASAB",
-            "KA4yDy5CaWFuLkdhbWVTdGF0ZSqLAQoJR2FtZVN0YXRlEh4KGkdhbWVTdGF0",
-            "ZV9HYW1lU3RhdGVVbmtub3duEAASHgoaR2FtZVN0YXRlX0dhbWVTdGF0ZUNy",
-            "ZWF0ZWQQARIeChpHYW1lU3RhdGVfR2FtZVN0YXRlU3RhcnRlZBACEh4KGkdh",
-            "bWVTdGF0ZV9HYW1lU3RhdGVTdG9wcGVkEANiBnByb3RvMw=="));
+            "CgpnYW1lLnByb3RvEgtNZWxhbmRHYW1lMyIzCgpHYW1lUmVjb3JkEiUKBXN0",
+            "YXRlGAEgASgOMhYuTWVsYW5kR2FtZTMuR2FtZVN0YXRlKosBCglHYW1lU3Rh",
+            "dGUSHgoaR2FtZVN0YXRlX0dhbWVTdGF0ZVVua25vd24QABIeChpHYW1lU3Rh",
+            "dGVfR2FtZVN0YXRlQ3JlYXRlZBABEh4KGkdhbWVTdGF0ZV9HYW1lU3RhdGVT",
+            "dGFydGVkEAISHgoaR2FtZVN0YXRlX0dhbWVTdGF0ZVN0b3BwZWQQA2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.GameState), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.GameRecord), global::Bian.GameRecord.Parser, new[]{ "State" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.GameState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.GameRecord), global::MelandGame3.GameRecord.Parser, new[]{ "State" }, null, null, null, null)
           }));
     }
     #endregion
@@ -69,7 +70,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.GameReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.GameReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -101,10 +102,10 @@ namespace Bian {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Bian.GameState state_ = global::Bian.GameState.GameStateUnknown;
+    private global::MelandGame3.GameState state_ = global::MelandGame3.GameState.GameStateUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.GameState State {
+    public global::MelandGame3.GameState State {
       get { return state_; }
       set {
         state_ = value;
@@ -134,7 +135,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != global::Bian.GameState.GameStateUnknown) hash ^= State.GetHashCode();
+      if (State != global::MelandGame3.GameState.GameStateUnknown) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +154,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (State != global::Bian.GameState.GameStateUnknown) {
+      if (State != global::MelandGame3.GameState.GameStateUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -167,7 +168,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (State != global::Bian.GameState.GameStateUnknown) {
+      if (State != global::MelandGame3.GameState.GameStateUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -181,7 +182,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (State != global::Bian.GameState.GameStateUnknown) {
+      if (State != global::MelandGame3.GameState.GameStateUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
@@ -196,7 +197,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.State != global::Bian.GameState.GameStateUnknown) {
+      if (other.State != global::MelandGame3.GameState.GameStateUnknown) {
         State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -215,7 +216,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            State = (global::Bian.GameState) input.ReadEnum();
+            State = (global::MelandGame3.GameState) input.ReadEnum();
             break;
           }
         }
@@ -234,7 +235,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            State = (global::Bian.GameState) input.ReadEnum();
+            State = (global::MelandGame3.GameState) input.ReadEnum();
             break;
           }
         }

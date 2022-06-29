@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from random_map.proto</summary>
   public static partial class RandomMapReflection {
@@ -24,18 +24,19 @@ namespace Bian {
     static RandomMapReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChByYW5kb21fbWFwLnByb3RvEgRCaWFuIi0KDU9iaklkV2l0aFJhdGUSDgoG",
-            "b2JqX2lkGAEgASgFEgwKBHJhdGUYAiABKAUiTQoKT2JqSWRSYXRlcxIrCg5v",
-            "YmpfcmF0ZV9hcnJheRgBIAMoCzITLkJpYW4uT2JqSWRXaXRoUmF0ZRISCgp0",
-            "b3RhbF9yYXRlGAIgASgFImoKEVJhbmRvbU1hcFNldHRpbmdzEgoKAmlkGAEg",
-            "ASgFEhAKCHRlcnJpYW5zGAIgAygFEiIKCGNvbnRlbnRzGAMgAygLMhAuQmlh",
-            "bi5PYmpJZFJhdGVzEhMKC2Jyb2FkX3dpZHRoGAQgASgFYgZwcm90bzM="));
+            "ChByYW5kb21fbWFwLnByb3RvEgtNZWxhbmRHYW1lMyItCg1PYmpJZFdpdGhS",
+            "YXRlEg4KBm9ial9pZBgBIAEoBRIMCgRyYXRlGAIgASgFIlQKCk9iaklkUmF0",
+            "ZXMSMgoOb2JqX3JhdGVfYXJyYXkYASADKAsyGi5NZWxhbmRHYW1lMy5PYmpJ",
+            "ZFdpdGhSYXRlEhIKCnRvdGFsX3JhdGUYAiABKAUicQoRUmFuZG9tTWFwU2V0",
+            "dGluZ3MSCgoCaWQYASABKAUSEAoIdGVycmlhbnMYAiADKAUSKQoIY29udGVu",
+            "dHMYAyADKAsyFy5NZWxhbmRHYW1lMy5PYmpJZFJhdGVzEhMKC2Jyb2FkX3dp",
+            "ZHRoGAQgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjIdWithRate), global::Bian.ObjIdWithRate.Parser, new[]{ "ObjId", "Rate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjIdRates), global::Bian.ObjIdRates.Parser, new[]{ "ObjRateArray", "TotalRate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.RandomMapSettings), global::Bian.RandomMapSettings.Parser, new[]{ "Id", "Terrians", "Contents", "BroadWidth" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjIdWithRate), global::MelandGame3.ObjIdWithRate.Parser, new[]{ "ObjId", "Rate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjIdRates), global::MelandGame3.ObjIdRates.Parser, new[]{ "ObjRateArray", "TotalRate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.RandomMapSettings), global::MelandGame3.RandomMapSettings.Parser, new[]{ "Id", "Terrians", "Contents", "BroadWidth" }, null, null, null, null)
           }));
     }
     #endregion
@@ -56,7 +57,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.RandomMapReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.RandomMapReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -282,7 +283,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.RandomMapReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.RandomMapReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -315,12 +316,12 @@ namespace Bian {
 
     /// <summary>Field number for the "obj_rate_array" field.</summary>
     public const int ObjRateArrayFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.ObjIdWithRate> _repeated_objRateArray_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.ObjIdWithRate.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ObjIdWithRate> objRateArray_ = new pbc::RepeatedField<global::Bian.ObjIdWithRate>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ObjIdWithRate> _repeated_objRateArray_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.ObjIdWithRate.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ObjIdWithRate> objRateArray_ = new pbc::RepeatedField<global::MelandGame3.ObjIdWithRate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjIdWithRate> ObjRateArray {
+    public pbc::RepeatedField<global::MelandGame3.ObjIdWithRate> ObjRateArray {
       get { return objRateArray_; }
     }
 
@@ -497,7 +498,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.RandomMapReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.RandomMapReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -555,12 +556,12 @@ namespace Bian {
 
     /// <summary>Field number for the "contents" field.</summary>
     public const int ContentsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.ObjIdRates> _repeated_contents_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.ObjIdRates.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ObjIdRates> contents_ = new pbc::RepeatedField<global::Bian.ObjIdRates>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ObjIdRates> _repeated_contents_codec
+        = pb::FieldCodec.ForMessage(26, global::MelandGame3.ObjIdRates.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ObjIdRates> contents_ = new pbc::RepeatedField<global::MelandGame3.ObjIdRates>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjIdRates> Contents {
+    public pbc::RepeatedField<global::MelandGame3.ObjIdRates> Contents {
       get { return contents_; }
     }
 

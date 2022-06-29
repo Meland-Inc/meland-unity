@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from camera.proto</summary>
   public static partial class CameraReflection {
@@ -24,28 +24,29 @@ namespace Bian {
     static CameraReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxjYW1lcmEucHJvdG8SBEJpYW4aC21vZGVsLnByb3RvImkKDENhbWVyYUNv",
-            "bmZpZxITCgtmb2xsb3dfcm9sZRgBIAEoCBIWCg5jb250cm9sX2NhbWVyYRgC",
-            "IAEoCBIOCgZiYW5fdWkYAyABKAgSHAoUYmFuX3pvbmVfaW50ZXJhY3Rpb24Y",
-            "BCABKAgiRAoQQ2FtZXJhQWN0aW9uWm9vbRIVCg16b29tX211bHRpcGxlGAEg",
-            "ASgCEhkKEWNhbWVyYV9zdGFtcF90aW1lGAIgASgDIm8KEENhbWVyYUFjdGlv",
-            "bk1vdmUSHwoHY3VyX3BvcxgBIAEoCzIOLkJpYW4uVmVjdG9yWFkSHwoHdGFy",
-            "X3BvcxgCIAEoCzIOLkJpYW4uVmVjdG9yWFkSGQoRY2FtZXJhX3N0YW1wX3Rp",
-            "bWUYAyABKAMqkQEKCkNhbWVyYVR5cGUSIAocQ2FtZXJhVHlwZV9DYW1lcmFU",
-            "eXBlQ29kZUN0bBAAEh0KGUNhbWVyYVR5cGVfQ2FtZXJhVHlwZUxvY2sQARIg",
-            "ChxDYW1lcmFUeXBlX0NhbWVyYVR5cGVGcmVlZG9tEAISIAocQ2FtZXJhVHlw",
-            "ZV9DYW1lcmFUeXBlUHJldmlldxADKuwBChBDYW1lcmFBY3Rpb25UeXBlEikK",
-            "JUNhbWVyYUFjdGlvblR5cGVfQ2FtZXJhQWN0aW9uVHlwZU1vdmUQABInCiND",
-            "YW1lcmFBY3Rpb25UeXBlX0NhbWVyYUFjdGlvblR5cGVUcBABEikKJUNhbWVy",
-            "YUFjdGlvblR5cGVfQ2FtZXJhQWN0aW9uVHlwZVpvb20QAhIsCihDYW1lcmFB",
-            "Y3Rpb25UeXBlX0NhbWVyYUFjdGlvblR5cGVSZXN0b3JlEAMSKwonQ2FtZXJh",
-            "QWN0aW9uVHlwZV9DYW1lcmFBY3Rpb25UeXBlQ29uZmlnEARiBnByb3RvMw=="));
+            "CgxjYW1lcmEucHJvdG8SC01lbGFuZEdhbWUzGgx2ZWN0b3IucHJvdG8iaQoM",
+            "Q2FtZXJhQ29uZmlnEhMKC2ZvbGxvd19yb2xlGAEgASgIEhYKDmNvbnRyb2xf",
+            "Y2FtZXJhGAIgASgIEg4KBmJhbl91aRgDIAEoCBIcChRiYW5fem9uZV9pbnRl",
+            "cmFjdGlvbhgEIAEoCCJEChBDYW1lcmFBY3Rpb25ab29tEhUKDXpvb21fbXVs",
+            "dGlwbGUYASABKAISGQoRY2FtZXJhX3N0YW1wX3RpbWUYAiABKAMiewoQQ2Ft",
+            "ZXJhQWN0aW9uTW92ZRIlCgdjdXJfcG9zGAEgASgLMhQuTWVsYW5kR2FtZTMu",
+            "VmVjdG9yMxIlCgd0YXJfcG9zGAIgASgLMhQuTWVsYW5kR2FtZTMuVmVjdG9y",
+            "MxIZChFjYW1lcmFfc3RhbXBfdGltZRgDIAEoAyqRAQoKQ2FtZXJhVHlwZRIg",
+            "ChxDYW1lcmFUeXBlX0NhbWVyYVR5cGVDb2RlQ3RsEAASHQoZQ2FtZXJhVHlw",
+            "ZV9DYW1lcmFUeXBlTG9jaxABEiAKHENhbWVyYVR5cGVfQ2FtZXJhVHlwZUZy",
+            "ZWVkb20QAhIgChxDYW1lcmFUeXBlX0NhbWVyYVR5cGVQcmV2aWV3EAMq7AEK",
+            "EENhbWVyYUFjdGlvblR5cGUSKQolQ2FtZXJhQWN0aW9uVHlwZV9DYW1lcmFB",
+            "Y3Rpb25UeXBlTW92ZRAAEicKI0NhbWVyYUFjdGlvblR5cGVfQ2FtZXJhQWN0",
+            "aW9uVHlwZVRwEAESKQolQ2FtZXJhQWN0aW9uVHlwZV9DYW1lcmFBY3Rpb25U",
+            "eXBlWm9vbRACEiwKKENhbWVyYUFjdGlvblR5cGVfQ2FtZXJhQWN0aW9uVHlw",
+            "ZVJlc3RvcmUQAxIrCidDYW1lcmFBY3Rpb25UeXBlX0NhbWVyYUFjdGlvblR5",
+            "cGVDb25maWcQBGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.ModelReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.CameraType), typeof(global::Bian.CameraActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CameraConfig), global::Bian.CameraConfig.Parser, new[]{ "FollowRole", "ControlCamera", "BanUi", "BanZoneInteraction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CameraActionZoom), global::Bian.CameraActionZoom.Parser, new[]{ "ZoomMultiple", "CameraStampTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CameraActionMove), global::Bian.CameraActionMove.Parser, new[]{ "CurPos", "TarPos", "CameraStampTime" }, null, null, null, null)
+          new pbr::FileDescriptor[] { global::MelandGame3.VectorReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.CameraType), typeof(global::MelandGame3.CameraActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CameraConfig), global::MelandGame3.CameraConfig.Parser, new[]{ "FollowRole", "ControlCamera", "BanUi", "BanZoneInteraction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CameraActionZoom), global::MelandGame3.CameraActionZoom.Parser, new[]{ "ZoomMultiple", "CameraStampTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CameraActionMove), global::MelandGame3.CameraActionMove.Parser, new[]{ "CurPos", "TarPos", "CameraStampTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -114,7 +115,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.CameraReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.CameraReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -426,7 +427,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.CameraReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.CameraReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -652,7 +653,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.CameraReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.CameraReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -686,10 +687,10 @@ namespace Bian {
 
     /// <summary>Field number for the "cur_pos" field.</summary>
     public const int CurPosFieldNumber = 1;
-    private global::Bian.VectorXY curPos_;
+    private global::MelandGame3.Vector3 curPos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY CurPos {
+    public global::MelandGame3.Vector3 CurPos {
       get { return curPos_; }
       set {
         curPos_ = value;
@@ -698,10 +699,10 @@ namespace Bian {
 
     /// <summary>Field number for the "tar_pos" field.</summary>
     public const int TarPosFieldNumber = 2;
-    private global::Bian.VectorXY tarPos_;
+    private global::MelandGame3.Vector3 tarPos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY TarPos {
+    public global::MelandGame3.Vector3 TarPos {
       get { return tarPos_; }
       set {
         tarPos_ = value;
@@ -833,13 +834,13 @@ namespace Bian {
       }
       if (other.curPos_ != null) {
         if (curPos_ == null) {
-          CurPos = new global::Bian.VectorXY();
+          CurPos = new global::MelandGame3.Vector3();
         }
         CurPos.MergeFrom(other.CurPos);
       }
       if (other.tarPos_ != null) {
         if (tarPos_ == null) {
-          TarPos = new global::Bian.VectorXY();
+          TarPos = new global::MelandGame3.Vector3();
         }
         TarPos.MergeFrom(other.TarPos);
       }
@@ -863,14 +864,14 @@ namespace Bian {
             break;
           case 10: {
             if (curPos_ == null) {
-              CurPos = new global::Bian.VectorXY();
+              CurPos = new global::MelandGame3.Vector3();
             }
             input.ReadMessage(CurPos);
             break;
           }
           case 18: {
             if (tarPos_ == null) {
-              TarPos = new global::Bian.VectorXY();
+              TarPos = new global::MelandGame3.Vector3();
             }
             input.ReadMessage(TarPos);
             break;
@@ -896,14 +897,14 @@ namespace Bian {
             break;
           case 10: {
             if (curPos_ == null) {
-              CurPos = new global::Bian.VectorXY();
+              CurPos = new global::MelandGame3.Vector3();
             }
             input.ReadMessage(CurPos);
             break;
           }
           case 18: {
             if (tarPos_ == null) {
-              TarPos = new global::Bian.VectorXY();
+              TarPos = new global::MelandGame3.Vector3();
             }
             input.ReadMessage(TarPos);
             break;

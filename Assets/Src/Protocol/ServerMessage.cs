@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from server_message.proto</summary>
   public static partial class ServerMessageReflection {
@@ -24,43 +24,44 @@ namespace Bian {
     static ServerMessageReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRzZXJ2ZXJfbWVzc2FnZS5wcm90bxIEQmlhbiLTBAoRU2VydmVyTXNnRW52",
-            "ZWxvcGUSEwoLZnJvbV9zZXJ2ZXIYASABKAkSKQoEdHlwZRgCIAEoDjIbLkJp",
-            "YW4uU2VydmVyTXNnRW52ZWxvcGVUeXBlEg4KBnNlcV9pZBgDIAEoBRISCgpl",
-            "cnJvcl9jb2RlGAQgASgFEhUKDWVycm9yX21lc3NhZ2UYBSABKAkSPQoXc2Vy",
-            "dmVyX21zZ19waW5nX3JlcXVlc3QYZCABKAsyGi5CaWFuLlNlcnZlck1zZ1Bp",
-            "bmdSZXF1ZXN0SAASPwoYc2VydmVyX21zZ19waW5nX3Jlc3BvbnNlGGUgASgL",
-            "MhsuQmlhbi5TZXJ2ZXJNc2dQaW5nUmVzcG9uc2VIABI+Chh0X3NlcnZlcl9t",
-            "c2dfc2VydmVyX3N0b3AYZiABKAsyGi5CaWFuLlRTZXJ2ZXJNc2dTZXJ2ZXJT",
-            "dG9wSAASOAoVdF9zZXJ2ZXJfbXNnX2tpY2tfb3V0GGcgASgLMhcuQmlhbi5U",
-            "U2VydmVyTXNnS2lja091dEgAEl0KKHNlcnZlcl9tc2dfY29tcGxldGVfbWFw",
-            "X3RlbXBsYXRlX3JlcXVlc3QYaCABKAsyKS5CaWFuLlNlcnZlck1zZ0NvbXBs",
-            "ZXRlTWFwVGVtcGxhdGVSZXF1ZXN0SAASXwopc2VydmVyX21zZ19jb21wbGV0",
-            "ZV9tYXBfdGVtcGxhdGVfcmVzcG9uc2UYaSABKAsyKi5CaWFuLlNlcnZlck1z",
-            "Z0NvbXBsZXRlTWFwVGVtcGxhdGVSZXNwb25zZUgAQgkKB3BheWxvYWQiFgoU",
-            "U2VydmVyTXNnUGluZ1JlcXVlc3QiFwoVU2VydmVyTXNnUGluZ1Jlc3BvbnNl",
-            "IikKFFRTZXJ2ZXJNc2dTZXJ2ZXJTdG9wEhEKCXNlcnZlcl9pZBgBIAEoCSIT",
-            "ChFUU2VydmVyTXNnS2lja091dCJRCiNTZXJ2ZXJNc2dDb21wbGV0ZU1hcFRl",
-            "bXBsYXRlUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSFwoPbWFwX3RlbXBs",
-            "YXRlX2lkGAIgASgJIiYKJFNlcnZlck1zZ0NvbXBsZXRlTWFwVGVtcGxhdGVS",
-            "ZXNwb25zZSq9AgoVU2VydmVyTXNnRW52ZWxvcGVUeXBlEjYKMlNlcnZlck1z",
-            "Z0VudmVsb3BlVHlwZV9TZXJ2ZXJNc2dFbnZlbG9wZVR5cGVVbmtub3duEAAS",
-            "MwovU2VydmVyTXNnRW52ZWxvcGVUeXBlX1NlcnZlck1zZ0VudmVsb3BlVHlw",
-            "ZVBpbmcQZBI6CjZTZXJ2ZXJNc2dFbnZlbG9wZVR5cGVfVFNlcnZlck1zZ0Vu",
-            "dmVsb3BlVHlwZVNlcnZlclN0b3AQZRI3CjNTZXJ2ZXJNc2dFbnZlbG9wZVR5",
-            "cGVfVFNlcnZlck1zZ0VudmVsb3BlVHlwZUtpY2tPdXQQZhJCCj5TZXJ2ZXJN",
-            "c2dFbnZlbG9wZVR5cGVfU2VydmVyTXNnRW52ZWxvcGVUeXBlQ29tcGxldGVN",
-            "YXBUZW1wbGF0ZRBoYgZwcm90bzM="));
+            "ChRzZXJ2ZXJfbWVzc2FnZS5wcm90bxILTWVsYW5kR2FtZTMihAUKEVNlcnZl",
+            "ck1zZ0VudmVsb3BlEhMKC2Zyb21fc2VydmVyGAEgASgJEjAKBHR5cGUYAiAB",
+            "KA4yIi5NZWxhbmRHYW1lMy5TZXJ2ZXJNc2dFbnZlbG9wZVR5cGUSDgoGc2Vx",
+            "X2lkGAMgASgFEhIKCmVycm9yX2NvZGUYBCABKAUSFQoNZXJyb3JfbWVzc2Fn",
+            "ZRgFIAEoCRJEChdzZXJ2ZXJfbXNnX3BpbmdfcmVxdWVzdBhkIAEoCzIhLk1l",
+            "bGFuZEdhbWUzLlNlcnZlck1zZ1BpbmdSZXF1ZXN0SAASRgoYc2VydmVyX21z",
+            "Z19waW5nX3Jlc3BvbnNlGGUgASgLMiIuTWVsYW5kR2FtZTMuU2VydmVyTXNn",
+            "UGluZ1Jlc3BvbnNlSAASRQoYdF9zZXJ2ZXJfbXNnX3NlcnZlcl9zdG9wGGYg",
+            "ASgLMiEuTWVsYW5kR2FtZTMuVFNlcnZlck1zZ1NlcnZlclN0b3BIABI/ChV0",
+            "X3NlcnZlcl9tc2dfa2lja19vdXQYZyABKAsyHi5NZWxhbmRHYW1lMy5UU2Vy",
+            "dmVyTXNnS2lja091dEgAEmQKKHNlcnZlcl9tc2dfY29tcGxldGVfbWFwX3Rl",
+            "bXBsYXRlX3JlcXVlc3QYaCABKAsyMC5NZWxhbmRHYW1lMy5TZXJ2ZXJNc2dD",
+            "b21wbGV0ZU1hcFRlbXBsYXRlUmVxdWVzdEgAEmYKKXNlcnZlcl9tc2dfY29t",
+            "cGxldGVfbWFwX3RlbXBsYXRlX3Jlc3BvbnNlGGkgASgLMjEuTWVsYW5kR2Ft",
+            "ZTMuU2VydmVyTXNnQ29tcGxldGVNYXBUZW1wbGF0ZVJlc3BvbnNlSABCCQoH",
+            "cGF5bG9hZCIWChRTZXJ2ZXJNc2dQaW5nUmVxdWVzdCIXChVTZXJ2ZXJNc2dQ",
+            "aW5nUmVzcG9uc2UiKQoUVFNlcnZlck1zZ1NlcnZlclN0b3ASEQoJc2VydmVy",
+            "X2lkGAEgASgJIhMKEVRTZXJ2ZXJNc2dLaWNrT3V0IlEKI1NlcnZlck1zZ0Nv",
+            "bXBsZXRlTWFwVGVtcGxhdGVSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIX",
+            "Cg9tYXBfdGVtcGxhdGVfaWQYAiABKAkiJgokU2VydmVyTXNnQ29tcGxldGVN",
+            "YXBUZW1wbGF0ZVJlc3BvbnNlKr0CChVTZXJ2ZXJNc2dFbnZlbG9wZVR5cGUS",
+            "NgoyU2VydmVyTXNnRW52ZWxvcGVUeXBlX1NlcnZlck1zZ0VudmVsb3BlVHlw",
+            "ZVVua25vd24QABIzCi9TZXJ2ZXJNc2dFbnZlbG9wZVR5cGVfU2VydmVyTXNn",
+            "RW52ZWxvcGVUeXBlUGluZxBkEjoKNlNlcnZlck1zZ0VudmVsb3BlVHlwZV9U",
+            "U2VydmVyTXNnRW52ZWxvcGVUeXBlU2VydmVyU3RvcBBlEjcKM1NlcnZlck1z",
+            "Z0VudmVsb3BlVHlwZV9UU2VydmVyTXNnRW52ZWxvcGVUeXBlS2lja091dBBm",
+            "EkIKPlNlcnZlck1zZ0VudmVsb3BlVHlwZV9TZXJ2ZXJNc2dFbnZlbG9wZVR5",
+            "cGVDb21wbGV0ZU1hcFRlbXBsYXRlEGhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.ServerMsgEnvelopeType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ServerMsgEnvelope), global::Bian.ServerMsgEnvelope.Parser, new[]{ "FromServer", "Type", "SeqId", "ErrorCode", "ErrorMessage", "ServerMsgPingRequest", "ServerMsgPingResponse", "TServerMsgServerStop", "TServerMsgKickOut", "ServerMsgCompleteMapTemplateRequest", "ServerMsgCompleteMapTemplateResponse" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ServerMsgPingRequest), global::Bian.ServerMsgPingRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ServerMsgPingResponse), global::Bian.ServerMsgPingResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TServerMsgServerStop), global::Bian.TServerMsgServerStop.Parser, new[]{ "ServerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TServerMsgKickOut), global::Bian.TServerMsgKickOut.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ServerMsgCompleteMapTemplateRequest), global::Bian.ServerMsgCompleteMapTemplateRequest.Parser, new[]{ "PlayerId", "MapTemplateId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ServerMsgCompleteMapTemplateResponse), global::Bian.ServerMsgCompleteMapTemplateResponse.Parser, null, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.ServerMsgEnvelopeType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ServerMsgEnvelope), global::MelandGame3.ServerMsgEnvelope.Parser, new[]{ "FromServer", "Type", "SeqId", "ErrorCode", "ErrorMessage", "ServerMsgPingRequest", "ServerMsgPingResponse", "TServerMsgServerStop", "TServerMsgKickOut", "ServerMsgCompleteMapTemplateRequest", "ServerMsgCompleteMapTemplateResponse" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ServerMsgPingRequest), global::MelandGame3.ServerMsgPingRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ServerMsgPingResponse), global::MelandGame3.ServerMsgPingResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TServerMsgServerStop), global::MelandGame3.TServerMsgServerStop.Parser, new[]{ "ServerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TServerMsgKickOut), global::MelandGame3.TServerMsgKickOut.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ServerMsgCompleteMapTemplateRequest), global::MelandGame3.ServerMsgCompleteMapTemplateRequest.Parser, new[]{ "PlayerId", "MapTemplateId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ServerMsgCompleteMapTemplateResponse), global::MelandGame3.ServerMsgCompleteMapTemplateResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -98,7 +99,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ServerMessageReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.ServerMessageReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,10 +168,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Bian.ServerMsgEnvelopeType type_ = global::Bian.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown;
+    private global::MelandGame3.ServerMsgEnvelopeType type_ = global::MelandGame3.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ServerMsgEnvelopeType Type {
+    public global::MelandGame3.ServerMsgEnvelopeType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -217,8 +218,8 @@ namespace Bian {
     public const int ServerMsgPingRequestFieldNumber = 100;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ServerMsgPingRequest ServerMsgPingRequest {
-      get { return payloadCase_ == PayloadOneofCase.ServerMsgPingRequest ? (global::Bian.ServerMsgPingRequest) payload_ : null; }
+    public global::MelandGame3.ServerMsgPingRequest ServerMsgPingRequest {
+      get { return payloadCase_ == PayloadOneofCase.ServerMsgPingRequest ? (global::MelandGame3.ServerMsgPingRequest) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ServerMsgPingRequest;
@@ -229,8 +230,8 @@ namespace Bian {
     public const int ServerMsgPingResponseFieldNumber = 101;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ServerMsgPingResponse ServerMsgPingResponse {
-      get { return payloadCase_ == PayloadOneofCase.ServerMsgPingResponse ? (global::Bian.ServerMsgPingResponse) payload_ : null; }
+    public global::MelandGame3.ServerMsgPingResponse ServerMsgPingResponse {
+      get { return payloadCase_ == PayloadOneofCase.ServerMsgPingResponse ? (global::MelandGame3.ServerMsgPingResponse) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ServerMsgPingResponse;
@@ -241,8 +242,8 @@ namespace Bian {
     public const int TServerMsgServerStopFieldNumber = 102;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TServerMsgServerStop TServerMsgServerStop {
-      get { return payloadCase_ == PayloadOneofCase.TServerMsgServerStop ? (global::Bian.TServerMsgServerStop) payload_ : null; }
+    public global::MelandGame3.TServerMsgServerStop TServerMsgServerStop {
+      get { return payloadCase_ == PayloadOneofCase.TServerMsgServerStop ? (global::MelandGame3.TServerMsgServerStop) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.TServerMsgServerStop;
@@ -253,8 +254,8 @@ namespace Bian {
     public const int TServerMsgKickOutFieldNumber = 103;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TServerMsgKickOut TServerMsgKickOut {
-      get { return payloadCase_ == PayloadOneofCase.TServerMsgKickOut ? (global::Bian.TServerMsgKickOut) payload_ : null; }
+    public global::MelandGame3.TServerMsgKickOut TServerMsgKickOut {
+      get { return payloadCase_ == PayloadOneofCase.TServerMsgKickOut ? (global::MelandGame3.TServerMsgKickOut) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.TServerMsgKickOut;
@@ -265,8 +266,8 @@ namespace Bian {
     public const int ServerMsgCompleteMapTemplateRequestFieldNumber = 104;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ServerMsgCompleteMapTemplateRequest ServerMsgCompleteMapTemplateRequest {
-      get { return payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateRequest ? (global::Bian.ServerMsgCompleteMapTemplateRequest) payload_ : null; }
+    public global::MelandGame3.ServerMsgCompleteMapTemplateRequest ServerMsgCompleteMapTemplateRequest {
+      get { return payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateRequest ? (global::MelandGame3.ServerMsgCompleteMapTemplateRequest) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ServerMsgCompleteMapTemplateRequest;
@@ -277,8 +278,8 @@ namespace Bian {
     public const int ServerMsgCompleteMapTemplateResponseFieldNumber = 105;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ServerMsgCompleteMapTemplateResponse ServerMsgCompleteMapTemplateResponse {
-      get { return payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateResponse ? (global::Bian.ServerMsgCompleteMapTemplateResponse) payload_ : null; }
+    public global::MelandGame3.ServerMsgCompleteMapTemplateResponse ServerMsgCompleteMapTemplateResponse {
+      get { return payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateResponse ? (global::MelandGame3.ServerMsgCompleteMapTemplateResponse) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ServerMsgCompleteMapTemplateResponse;
@@ -345,7 +346,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (FromServer.Length != 0) hash ^= FromServer.GetHashCode();
-      if (Type != global::Bian.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) hash ^= Type.GetHashCode();
       if (SeqId != 0) hash ^= SeqId.GetHashCode();
       if (ErrorCode != 0) hash ^= ErrorCode.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
@@ -378,7 +379,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(FromServer);
       }
-      if (Type != global::Bian.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
+      if (Type != global::MelandGame3.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -432,7 +433,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(FromServer);
       }
-      if (Type != global::Bian.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
+      if (Type != global::MelandGame3.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -485,7 +486,7 @@ namespace Bian {
       if (FromServer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FromServer);
       }
-      if (Type != global::Bian.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
+      if (Type != global::MelandGame3.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (SeqId != 0) {
@@ -530,7 +531,7 @@ namespace Bian {
       if (other.FromServer.Length != 0) {
         FromServer = other.FromServer;
       }
-      if (other.Type != global::Bian.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
+      if (other.Type != global::MelandGame3.ServerMsgEnvelopeType.ServerMsgEnvelopeTypeUnknown) {
         Type = other.Type;
       }
       if (other.SeqId != 0) {
@@ -545,37 +546,37 @@ namespace Bian {
       switch (other.PayloadCase) {
         case PayloadOneofCase.ServerMsgPingRequest:
           if (ServerMsgPingRequest == null) {
-            ServerMsgPingRequest = new global::Bian.ServerMsgPingRequest();
+            ServerMsgPingRequest = new global::MelandGame3.ServerMsgPingRequest();
           }
           ServerMsgPingRequest.MergeFrom(other.ServerMsgPingRequest);
           break;
         case PayloadOneofCase.ServerMsgPingResponse:
           if (ServerMsgPingResponse == null) {
-            ServerMsgPingResponse = new global::Bian.ServerMsgPingResponse();
+            ServerMsgPingResponse = new global::MelandGame3.ServerMsgPingResponse();
           }
           ServerMsgPingResponse.MergeFrom(other.ServerMsgPingResponse);
           break;
         case PayloadOneofCase.TServerMsgServerStop:
           if (TServerMsgServerStop == null) {
-            TServerMsgServerStop = new global::Bian.TServerMsgServerStop();
+            TServerMsgServerStop = new global::MelandGame3.TServerMsgServerStop();
           }
           TServerMsgServerStop.MergeFrom(other.TServerMsgServerStop);
           break;
         case PayloadOneofCase.TServerMsgKickOut:
           if (TServerMsgKickOut == null) {
-            TServerMsgKickOut = new global::Bian.TServerMsgKickOut();
+            TServerMsgKickOut = new global::MelandGame3.TServerMsgKickOut();
           }
           TServerMsgKickOut.MergeFrom(other.TServerMsgKickOut);
           break;
         case PayloadOneofCase.ServerMsgCompleteMapTemplateRequest:
           if (ServerMsgCompleteMapTemplateRequest == null) {
-            ServerMsgCompleteMapTemplateRequest = new global::Bian.ServerMsgCompleteMapTemplateRequest();
+            ServerMsgCompleteMapTemplateRequest = new global::MelandGame3.ServerMsgCompleteMapTemplateRequest();
           }
           ServerMsgCompleteMapTemplateRequest.MergeFrom(other.ServerMsgCompleteMapTemplateRequest);
           break;
         case PayloadOneofCase.ServerMsgCompleteMapTemplateResponse:
           if (ServerMsgCompleteMapTemplateResponse == null) {
-            ServerMsgCompleteMapTemplateResponse = new global::Bian.ServerMsgCompleteMapTemplateResponse();
+            ServerMsgCompleteMapTemplateResponse = new global::MelandGame3.ServerMsgCompleteMapTemplateResponse();
           }
           ServerMsgCompleteMapTemplateResponse.MergeFrom(other.ServerMsgCompleteMapTemplateResponse);
           break;
@@ -601,7 +602,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ServerMsgEnvelopeType) input.ReadEnum();
+            Type = (global::MelandGame3.ServerMsgEnvelopeType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -617,7 +618,7 @@ namespace Bian {
             break;
           }
           case 802: {
-            global::Bian.ServerMsgPingRequest subBuilder = new global::Bian.ServerMsgPingRequest();
+            global::MelandGame3.ServerMsgPingRequest subBuilder = new global::MelandGame3.ServerMsgPingRequest();
             if (payloadCase_ == PayloadOneofCase.ServerMsgPingRequest) {
               subBuilder.MergeFrom(ServerMsgPingRequest);
             }
@@ -626,7 +627,7 @@ namespace Bian {
             break;
           }
           case 810: {
-            global::Bian.ServerMsgPingResponse subBuilder = new global::Bian.ServerMsgPingResponse();
+            global::MelandGame3.ServerMsgPingResponse subBuilder = new global::MelandGame3.ServerMsgPingResponse();
             if (payloadCase_ == PayloadOneofCase.ServerMsgPingResponse) {
               subBuilder.MergeFrom(ServerMsgPingResponse);
             }
@@ -635,7 +636,7 @@ namespace Bian {
             break;
           }
           case 818: {
-            global::Bian.TServerMsgServerStop subBuilder = new global::Bian.TServerMsgServerStop();
+            global::MelandGame3.TServerMsgServerStop subBuilder = new global::MelandGame3.TServerMsgServerStop();
             if (payloadCase_ == PayloadOneofCase.TServerMsgServerStop) {
               subBuilder.MergeFrom(TServerMsgServerStop);
             }
@@ -644,7 +645,7 @@ namespace Bian {
             break;
           }
           case 826: {
-            global::Bian.TServerMsgKickOut subBuilder = new global::Bian.TServerMsgKickOut();
+            global::MelandGame3.TServerMsgKickOut subBuilder = new global::MelandGame3.TServerMsgKickOut();
             if (payloadCase_ == PayloadOneofCase.TServerMsgKickOut) {
               subBuilder.MergeFrom(TServerMsgKickOut);
             }
@@ -653,7 +654,7 @@ namespace Bian {
             break;
           }
           case 834: {
-            global::Bian.ServerMsgCompleteMapTemplateRequest subBuilder = new global::Bian.ServerMsgCompleteMapTemplateRequest();
+            global::MelandGame3.ServerMsgCompleteMapTemplateRequest subBuilder = new global::MelandGame3.ServerMsgCompleteMapTemplateRequest();
             if (payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateRequest) {
               subBuilder.MergeFrom(ServerMsgCompleteMapTemplateRequest);
             }
@@ -662,7 +663,7 @@ namespace Bian {
             break;
           }
           case 842: {
-            global::Bian.ServerMsgCompleteMapTemplateResponse subBuilder = new global::Bian.ServerMsgCompleteMapTemplateResponse();
+            global::MelandGame3.ServerMsgCompleteMapTemplateResponse subBuilder = new global::MelandGame3.ServerMsgCompleteMapTemplateResponse();
             if (payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateResponse) {
               subBuilder.MergeFrom(ServerMsgCompleteMapTemplateResponse);
             }
@@ -690,7 +691,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ServerMsgEnvelopeType) input.ReadEnum();
+            Type = (global::MelandGame3.ServerMsgEnvelopeType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -706,7 +707,7 @@ namespace Bian {
             break;
           }
           case 802: {
-            global::Bian.ServerMsgPingRequest subBuilder = new global::Bian.ServerMsgPingRequest();
+            global::MelandGame3.ServerMsgPingRequest subBuilder = new global::MelandGame3.ServerMsgPingRequest();
             if (payloadCase_ == PayloadOneofCase.ServerMsgPingRequest) {
               subBuilder.MergeFrom(ServerMsgPingRequest);
             }
@@ -715,7 +716,7 @@ namespace Bian {
             break;
           }
           case 810: {
-            global::Bian.ServerMsgPingResponse subBuilder = new global::Bian.ServerMsgPingResponse();
+            global::MelandGame3.ServerMsgPingResponse subBuilder = new global::MelandGame3.ServerMsgPingResponse();
             if (payloadCase_ == PayloadOneofCase.ServerMsgPingResponse) {
               subBuilder.MergeFrom(ServerMsgPingResponse);
             }
@@ -724,7 +725,7 @@ namespace Bian {
             break;
           }
           case 818: {
-            global::Bian.TServerMsgServerStop subBuilder = new global::Bian.TServerMsgServerStop();
+            global::MelandGame3.TServerMsgServerStop subBuilder = new global::MelandGame3.TServerMsgServerStop();
             if (payloadCase_ == PayloadOneofCase.TServerMsgServerStop) {
               subBuilder.MergeFrom(TServerMsgServerStop);
             }
@@ -733,7 +734,7 @@ namespace Bian {
             break;
           }
           case 826: {
-            global::Bian.TServerMsgKickOut subBuilder = new global::Bian.TServerMsgKickOut();
+            global::MelandGame3.TServerMsgKickOut subBuilder = new global::MelandGame3.TServerMsgKickOut();
             if (payloadCase_ == PayloadOneofCase.TServerMsgKickOut) {
               subBuilder.MergeFrom(TServerMsgKickOut);
             }
@@ -742,7 +743,7 @@ namespace Bian {
             break;
           }
           case 834: {
-            global::Bian.ServerMsgCompleteMapTemplateRequest subBuilder = new global::Bian.ServerMsgCompleteMapTemplateRequest();
+            global::MelandGame3.ServerMsgCompleteMapTemplateRequest subBuilder = new global::MelandGame3.ServerMsgCompleteMapTemplateRequest();
             if (payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateRequest) {
               subBuilder.MergeFrom(ServerMsgCompleteMapTemplateRequest);
             }
@@ -751,7 +752,7 @@ namespace Bian {
             break;
           }
           case 842: {
-            global::Bian.ServerMsgCompleteMapTemplateResponse subBuilder = new global::Bian.ServerMsgCompleteMapTemplateResponse();
+            global::MelandGame3.ServerMsgCompleteMapTemplateResponse subBuilder = new global::MelandGame3.ServerMsgCompleteMapTemplateResponse();
             if (payloadCase_ == PayloadOneofCase.ServerMsgCompleteMapTemplateResponse) {
               subBuilder.MergeFrom(ServerMsgCompleteMapTemplateResponse);
             }
@@ -780,7 +781,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ServerMessageReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.ServerMessageReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -932,7 +933,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ServerMessageReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.ServerMessageReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1084,7 +1085,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ServerMessageReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.ServerMessageReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1273,7 +1274,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ServerMessageReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.ServerMessageReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1425,7 +1426,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ServerMessageReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.ServerMessageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1651,7 +1652,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ServerMessageReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.ServerMessageReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

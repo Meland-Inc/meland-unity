@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from lesson.proto</summary>
   public static partial class LessonReflection {
@@ -24,7 +24,7 @@ namespace Bian {
     static LessonReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxsZXNzb24ucHJvdG8SBEJpYW5iBnByb3RvMw=="));
+            "CgxsZXNzb24ucHJvdG8SC01lbGFuZEdhbWUzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, null));

@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from big_world.proto</summary>
   public static partial class BigWorldReflection {
@@ -24,74 +24,75 @@ namespace Bian {
     static BigWorldReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9iaWdfd29ybGQucHJvdG8SBEJpYW4ivAEKFVBsYWNlYWJsZVNraWxsU2V0",
-            "dGluZxIQCghza2lsbF9pZBgBIAEoBRISCgpza2lsbF9uYW1lGAIgASgJEikK",
-            "BnRhcmdldBgDIAEoDjIZLkJpYW4uQmlnV29ybGRTa2lsbFRhcmdldBIpCgZl",
-            "ZmZlY3QYBCABKA4yGS5CaWFuLkJpZ1dvcmxkU2tpbGxFZmZlY3QSEgoKdmFs",
-            "dWVfbGlzdBgFIAMoCRITCgtyYWRpdXNfbGlzdBgGIAMoBSI3ChFCaWdXb3Js",
-            "ZEZpZ2h0SW5mbxIPCgd1c2VyX2lkGAEgASgJEhEKCXBsYXllcl9pZBgCIAEo",
-            "CSJrCg5CaWdXb3JsZE9ialBybxImCgVzdGF0ZRgBIAEoDjIXLkJpYW4uQmln",
-            "V29ybGRMYW5kU3RhdGUSDwoHdXNlcl9pZBgCIAEoCRIQCghvd25lcl9pZBgD",
-            "IAEoCRIOCgZjdXJfaHAYBCABKAUiZQoRQmlnV29ybGRUaWxlU2tpbGwSEAoI",
-            "c2tpbGxfaWQYASABKAUSEwoLc2tpbGxfbGV2ZWwYAiABKAUSEwoLZnJvbV9l",
-            "bnRpdHkYAyABKAkSFAoMb3duZXJfcGxheWVyGAQgASgJItABCgxCaWdXb3Js",
-            "ZFRpbGUSCQoBchgBIAEoBRIJCgFjGAIgASgFEi0KC2ZpZ2h0X3N0YXRlGAMg",
-            "ASgOMhguQmlhbi5CaWdXb3JsZEZpZ2h0U3RhdGUSKwoKZmlnaHRfaW5mbxgE",
-            "IAEoCzIXLkJpYW4uQmlnV29ybGRGaWdodEluZm8SJQoHcHJvZmlsZRgFIAEo",
-            "CzIULkJpYW4uQmlnV29ybGRPYmpQcm8SJwoGc2tpbGxzGAYgAygLMhcuQmlh",
-            "bi5CaWdXb3JsZFRpbGVTa2lsbCK7AQoSQmlnV29ybGRQbGF5ZXJBcmVhEhEK",
-            "CWluX3NlcnZlchgBIAEoCRIOCgZtYXBfaWQYAiABKAUSEAoIb3duZXJfaWQY",
-            "AyABKAkSEgoKb3duZXJfbmFtZRgEIAEoCRIMCgRpY29uGAUgASgJEhYKDnZp",
-            "cF9sYW5kX3RpbGVzGAcgAygFEhkKEXRpY2tldF9sYW5kX3RpbGVzGAggAygF",
-            "EhsKE29jY3VwaWVkX2xhbmRfdGlsZXMYCSADKAUiUwoUQmlnV29ybGRWaXBM",
-            "YW5kR3JvdXASCgoCaWQYASABKAkSDQoFaW1hZ2UYAiABKAkSEQoJdmlwX2xh",
-            "bmRzGAMgAygFEg0KBXdpZHRoGAQgASgFIpMBChBCaWdXb3JsZExvZ29JbmZv",
-            "Eg8KB3VzZXJfaWQYASABKAUSEQoJcGxheWVyX2lkGAIgASgJEhMKC3BsYXll",
-            "cl9uYW1lGAMgASgJEhEKCXZpcF9sYW5kcxgEIAMoBRIzCg92aXBfbGFuZF9n",
-            "cm91cHMYBSADKAsyGi5CaWFuLkJpZ1dvcmxkVmlwTGFuZEdyb3VwInwKEUVu",
-            "dGl0eU1hcFRlbXBsYXRlEhAKCG93bmVyX2lkGAEgASgJEhIKCm93bmVyX25h",
-            "bWUYAiABKAkSEwoLdGVtcGxhdGVfaWQYAyABKAkSFQoNdGVtcGxhdGVfbmFt",
-            "ZRgEIAEoCRIVCg10ZW1wbGF0ZV9pY29uGAUgASgJIrMBCg5RdWl6ZVB2cFBr",
-            "SW5mbxIKCgJpZBgBIAEoCRIRCglmcm9tX3VzZXIYAiABKAkSEwoLZnJvbV9w",
-            "bGF5ZXIYAyABKAkSEQoJZnJvbV9uYW1lGAQgASgJEg8KB3RvX3VzZXIYBSAB",
-            "KAkSEQoJdG9fcGxheWVyGAYgASgJEg8KB3RvX25hbWUYByABKAkSEAoIZGl0",
-            "YW1haW4YCCABKAUSEwoLdGltZW91dF9zZWMYCSABKAUq9gIKE0JpZ1dvcmxk",
-            "U2VydmVyRXZlbnQSMgouQmlnV29ybGRTZXJ2ZXJFdmVudF9CaWdXb3JsZFNl",
-            "cnZlckV2ZW50X1Vua25vdxAAEjUKMUJpZ1dvcmxkU2VydmVyRXZlbnRfQmln",
-            "V29ybGRTZXJ2ZXJFdmVudF9DbGllbnRNc2cQARI6CjVCaWdXb3JsZFNlcnZl",
-            "ckV2ZW50X0JpZ1dvcmxkU2VydmVyRXZlbnRfUGxheWVyQXJlYUFkZBCQThI8",
-            "CjdCaWdXb3JsZFNlcnZlckV2ZW50X0JpZ1dvcmxkU2VydmVyRXZlbnRfVGls",
-            "ZUF0dHJpYnV0ZVVwEJFOEjwKN0JpZ1dvcmxkU2VydmVyRXZlbnRfQmlnV29y",
-            "bGRTZXJ2ZXJFdmVudF9UaWxlRmlnaHRJbmZvVXAQkk4SPAo3QmlnV29ybGRT",
-            "ZXJ2ZXJFdmVudF9CaWdXb3JsZFNlcnZlckV2ZW50X1RpbGVVc2luZ1NraWxs",
-            "cxCTTip4ChNCaWdXb3JsZFNraWxsVGFyZ2V0Ei8KK0JpZ1dvcmxkU2tpbGxU",
-            "YXJnZXRfQmlnV29ybGRTa2lsbFRhcmdldFNlbGYQABIwCixCaWdXb3JsZFNr",
-            "aWxsVGFyZ2V0X0JpZ1dvcmxkU2tpbGxUYXJnZXRFbmVteRABKoYBChNCaWdX",
-            "b3JsZFNraWxsRWZmZWN0EjUKMUJpZ1dvcmxkU2tpbGxFZmZlY3RfQmlnV29y",
-            "bGRTa2lsbEVmZmVjdFRpbWVSZWR1Y2UQABI4CjRCaWdXb3JsZFNraWxsRWZm",
-            "ZWN0X0JpZ1dvcmxkU2tpbGxFZmZlY3RNb25leUluY3JlYXNlEAEqgwIKEUJp",
-            "Z1dvcmxkTGFuZFN0YXRlEjEKLUJpZ1dvcmxkTGFuZFN0YXRlX0JpZ1dvcmxk",
-            "TGFuZFN0YXRlVW5vY2N1cGllZBAAEi8KK0JpZ1dvcmxkTGFuZFN0YXRlX0Jp",
-            "Z1dvcmxkTGFuZFN0YXRlT2ZmaWNpYWwQARIvCitCaWdXb3JsZExhbmRTdGF0",
-            "ZV9CaWdXb3JsZExhbmRTdGF0ZU9jY3VwaWVkEAISLQopQmlnV29ybGRMYW5k",
-            "U3RhdGVfQmlnV29ybGRMYW5kU3RhdGVUaWNrZXQQAxIqCiZCaWdXb3JsZExh",
-            "bmRTdGF0ZV9CaWdXb3JsZExhbmRTdGF0ZVZpcBAEKnYKEkJpZ1dvcmxkRmln",
-            "aHRTdGF0ZRItCilCaWdXb3JsZEZpZ2h0U3RhdGVfQmlnV29ybGRGaWdodFN0",
-            "YXRlRnJlZRAAEjEKLUJpZ1dvcmxkRmlnaHRTdGF0ZV9CaWdXb3JsZEZpZ2h0",
-            "U3RhdGVGaWdodGluZxABYgZwcm90bzM="));
+            "Cg9iaWdfd29ybGQucHJvdG8SC01lbGFuZEdhbWUzIsoBChVQbGFjZWFibGVT",
+            "a2lsbFNldHRpbmcSEAoIc2tpbGxfaWQYASABKAUSEgoKc2tpbGxfbmFtZRgC",
+            "IAEoCRIwCgZ0YXJnZXQYAyABKA4yIC5NZWxhbmRHYW1lMy5CaWdXb3JsZFNr",
+            "aWxsVGFyZ2V0EjAKBmVmZmVjdBgEIAEoDjIgLk1lbGFuZEdhbWUzLkJpZ1dv",
+            "cmxkU2tpbGxFZmZlY3QSEgoKdmFsdWVfbGlzdBgFIAMoCRITCgtyYWRpdXNf",
+            "bGlzdBgGIAMoBSI3ChFCaWdXb3JsZEZpZ2h0SW5mbxIPCgd1c2VyX2lkGAEg",
+            "ASgJEhEKCXBsYXllcl9pZBgCIAEoCSJyCg5CaWdXb3JsZE9ialBybxItCgVz",
+            "dGF0ZRgBIAEoDjIeLk1lbGFuZEdhbWUzLkJpZ1dvcmxkTGFuZFN0YXRlEg8K",
+            "B3VzZXJfaWQYAiABKAkSEAoIb3duZXJfaWQYAyABKAkSDgoGY3VyX2hwGAQg",
+            "ASgFImUKEUJpZ1dvcmxkVGlsZVNraWxsEhAKCHNraWxsX2lkGAEgASgFEhMK",
+            "C3NraWxsX2xldmVsGAIgASgFEhMKC2Zyb21fZW50aXR5GAMgASgJEhQKDG93",
+            "bmVyX3BsYXllchgEIAEoCSLsAQoMQmlnV29ybGRUaWxlEgkKAXIYASABKAUS",
+            "CQoBYxgCIAEoBRI0CgtmaWdodF9zdGF0ZRgDIAEoDjIfLk1lbGFuZEdhbWUz",
+            "LkJpZ1dvcmxkRmlnaHRTdGF0ZRIyCgpmaWdodF9pbmZvGAQgASgLMh4uTWVs",
+            "YW5kR2FtZTMuQmlnV29ybGRGaWdodEluZm8SLAoHcHJvZmlsZRgFIAEoCzIb",
+            "Lk1lbGFuZEdhbWUzLkJpZ1dvcmxkT2JqUHJvEi4KBnNraWxscxgGIAMoCzIe",
+            "Lk1lbGFuZEdhbWUzLkJpZ1dvcmxkVGlsZVNraWxsIrsBChJCaWdXb3JsZFBs",
+            "YXllckFyZWESEQoJaW5fc2VydmVyGAEgASgJEg4KBm1hcF9pZBgCIAEoBRIQ",
+            "Cghvd25lcl9pZBgDIAEoCRISCgpvd25lcl9uYW1lGAQgASgJEgwKBGljb24Y",
+            "BSABKAkSFgoOdmlwX2xhbmRfdGlsZXMYByADKAkSGQoRdGlja2V0X2xhbmRf",
+            "dGlsZXMYCCADKAkSGwoTb2NjdXBpZWRfbGFuZF90aWxlcxgJIAMoCSJTChRC",
+            "aWdXb3JsZFZpcExhbmRHcm91cBIKCgJpZBgBIAEoCRINCgVpbWFnZRgCIAEo",
+            "CRIRCgl2aXBfbGFuZHMYAyADKAkSDQoFd2lkdGgYBCABKAUimgEKEEJpZ1dv",
+            "cmxkTG9nb0luZm8SDwoHdXNlcl9pZBgBIAEoBRIRCglwbGF5ZXJfaWQYAiAB",
+            "KAkSEwoLcGxheWVyX25hbWUYAyABKAkSEQoJdmlwX2xhbmRzGAQgAygJEjoK",
+            "D3ZpcF9sYW5kX2dyb3VwcxgFIAMoCzIhLk1lbGFuZEdhbWUzLkJpZ1dvcmxk",
+            "VmlwTGFuZEdyb3VwInwKEUVudGl0eU1hcFRlbXBsYXRlEhAKCG93bmVyX2lk",
+            "GAEgASgJEhIKCm93bmVyX25hbWUYAiABKAkSEwoLdGVtcGxhdGVfaWQYAyAB",
+            "KAkSFQoNdGVtcGxhdGVfbmFtZRgEIAEoCRIVCg10ZW1wbGF0ZV9pY29uGAUg",
+            "ASgJIrMBCg5RdWl6ZVB2cFBrSW5mbxIKCgJpZBgBIAEoCRIRCglmcm9tX3Vz",
+            "ZXIYAiABKAkSEwoLZnJvbV9wbGF5ZXIYAyABKAkSEQoJZnJvbV9uYW1lGAQg",
+            "ASgJEg8KB3RvX3VzZXIYBSABKAkSEQoJdG9fcGxheWVyGAYgASgJEg8KB3Rv",
+            "X25hbWUYByABKAkSEAoIZGl0YW1haW4YCCABKAUSEwoLdGltZW91dF9zZWMY",
+            "CSABKAUq9gIKE0JpZ1dvcmxkU2VydmVyRXZlbnQSMgouQmlnV29ybGRTZXJ2",
+            "ZXJFdmVudF9CaWdXb3JsZFNlcnZlckV2ZW50X1Vua25vdxAAEjUKMUJpZ1dv",
+            "cmxkU2VydmVyRXZlbnRfQmlnV29ybGRTZXJ2ZXJFdmVudF9DbGllbnRNc2cQ",
+            "ARI6CjVCaWdXb3JsZFNlcnZlckV2ZW50X0JpZ1dvcmxkU2VydmVyRXZlbnRf",
+            "UGxheWVyQXJlYUFkZBCQThI8CjdCaWdXb3JsZFNlcnZlckV2ZW50X0JpZ1dv",
+            "cmxkU2VydmVyRXZlbnRfVGlsZUF0dHJpYnV0ZVVwEJFOEjwKN0JpZ1dvcmxk",
+            "U2VydmVyRXZlbnRfQmlnV29ybGRTZXJ2ZXJFdmVudF9UaWxlRmlnaHRJbmZv",
+            "VXAQkk4SPAo3QmlnV29ybGRTZXJ2ZXJFdmVudF9CaWdXb3JsZFNlcnZlckV2",
+            "ZW50X1RpbGVVc2luZ1NraWxscxCTTip4ChNCaWdXb3JsZFNraWxsVGFyZ2V0",
+            "Ei8KK0JpZ1dvcmxkU2tpbGxUYXJnZXRfQmlnV29ybGRTa2lsbFRhcmdldFNl",
+            "bGYQABIwCixCaWdXb3JsZFNraWxsVGFyZ2V0X0JpZ1dvcmxkU2tpbGxUYXJn",
+            "ZXRFbmVteRABKoYBChNCaWdXb3JsZFNraWxsRWZmZWN0EjUKMUJpZ1dvcmxk",
+            "U2tpbGxFZmZlY3RfQmlnV29ybGRTa2lsbEVmZmVjdFRpbWVSZWR1Y2UQABI4",
+            "CjRCaWdXb3JsZFNraWxsRWZmZWN0X0JpZ1dvcmxkU2tpbGxFZmZlY3RNb25l",
+            "eUluY3JlYXNlEAEqgwIKEUJpZ1dvcmxkTGFuZFN0YXRlEjEKLUJpZ1dvcmxk",
+            "TGFuZFN0YXRlX0JpZ1dvcmxkTGFuZFN0YXRlVW5vY2N1cGllZBAAEi8KK0Jp",
+            "Z1dvcmxkTGFuZFN0YXRlX0JpZ1dvcmxkTGFuZFN0YXRlT2ZmaWNpYWwQARIv",
+            "CitCaWdXb3JsZExhbmRTdGF0ZV9CaWdXb3JsZExhbmRTdGF0ZU9jY3VwaWVk",
+            "EAISLQopQmlnV29ybGRMYW5kU3RhdGVfQmlnV29ybGRMYW5kU3RhdGVUaWNr",
+            "ZXQQAxIqCiZCaWdXb3JsZExhbmRTdGF0ZV9CaWdXb3JsZExhbmRTdGF0ZVZp",
+            "cBAEKnYKEkJpZ1dvcmxkRmlnaHRTdGF0ZRItCilCaWdXb3JsZEZpZ2h0U3Rh",
+            "dGVfQmlnV29ybGRGaWdodFN0YXRlRnJlZRAAEjEKLUJpZ1dvcmxkRmlnaHRT",
+            "dGF0ZV9CaWdXb3JsZEZpZ2h0U3RhdGVGaWdodGluZxABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.BigWorldServerEvent), typeof(global::Bian.BigWorldSkillTarget), typeof(global::Bian.BigWorldSkillEffect), typeof(global::Bian.BigWorldLandState), typeof(global::Bian.BigWorldFightState), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlaceableSkillSetting), global::Bian.PlaceableSkillSetting.Parser, new[]{ "SkillId", "SkillName", "Target", "Effect", "ValueList", "RadiusList" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BigWorldFightInfo), global::Bian.BigWorldFightInfo.Parser, new[]{ "UserId", "PlayerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BigWorldObjPro), global::Bian.BigWorldObjPro.Parser, new[]{ "State", "UserId", "OwnerId", "CurHp" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BigWorldTileSkill), global::Bian.BigWorldTileSkill.Parser, new[]{ "SkillId", "SkillLevel", "FromEntity", "OwnerPlayer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BigWorldTile), global::Bian.BigWorldTile.Parser, new[]{ "R", "C", "FightState", "FightInfo", "Profile", "Skills" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BigWorldPlayerArea), global::Bian.BigWorldPlayerArea.Parser, new[]{ "InServer", "MapId", "OwnerId", "OwnerName", "Icon", "VipLandTiles", "TicketLandTiles", "OccupiedLandTiles" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BigWorldVipLandGroup), global::Bian.BigWorldVipLandGroup.Parser, new[]{ "Id", "Image", "VipLands", "Width" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BigWorldLogoInfo), global::Bian.BigWorldLogoInfo.Parser, new[]{ "UserId", "PlayerId", "PlayerName", "VipLands", "VipLandGroups" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityMapTemplate), global::Bian.EntityMapTemplate.Parser, new[]{ "OwnerId", "OwnerName", "TemplateId", "TemplateName", "TemplateIcon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.QuizePvpPkInfo), global::Bian.QuizePvpPkInfo.Parser, new[]{ "Id", "FromUser", "FromPlayer", "FromName", "ToUser", "ToPlayer", "ToName", "Ditamain", "TimeoutSec" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.BigWorldServerEvent), typeof(global::MelandGame3.BigWorldSkillTarget), typeof(global::MelandGame3.BigWorldSkillEffect), typeof(global::MelandGame3.BigWorldLandState), typeof(global::MelandGame3.BigWorldFightState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlaceableSkillSetting), global::MelandGame3.PlaceableSkillSetting.Parser, new[]{ "SkillId", "SkillName", "Target", "Effect", "ValueList", "RadiusList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BigWorldFightInfo), global::MelandGame3.BigWorldFightInfo.Parser, new[]{ "UserId", "PlayerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BigWorldObjPro), global::MelandGame3.BigWorldObjPro.Parser, new[]{ "State", "UserId", "OwnerId", "CurHp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BigWorldTileSkill), global::MelandGame3.BigWorldTileSkill.Parser, new[]{ "SkillId", "SkillLevel", "FromEntity", "OwnerPlayer" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BigWorldTile), global::MelandGame3.BigWorldTile.Parser, new[]{ "R", "C", "FightState", "FightInfo", "Profile", "Skills" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BigWorldPlayerArea), global::MelandGame3.BigWorldPlayerArea.Parser, new[]{ "InServer", "MapId", "OwnerId", "OwnerName", "Icon", "VipLandTiles", "TicketLandTiles", "OccupiedLandTiles" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BigWorldVipLandGroup), global::MelandGame3.BigWorldVipLandGroup.Parser, new[]{ "Id", "Image", "VipLands", "Width" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BigWorldLogoInfo), global::MelandGame3.BigWorldLogoInfo.Parser, new[]{ "UserId", "PlayerId", "PlayerName", "VipLands", "VipLandGroups" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityMapTemplate), global::MelandGame3.EntityMapTemplate.Parser, new[]{ "OwnerId", "OwnerName", "TemplateId", "TemplateName", "TemplateIcon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.QuizePvpPkInfo), global::MelandGame3.QuizePvpPkInfo.Parser, new[]{ "Id", "FromUser", "FromPlayer", "FromName", "ToUser", "ToPlayer", "ToName", "Ditamain", "TimeoutSec" }, null, null, null, null)
           }));
     }
     #endregion
@@ -202,7 +203,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -263,10 +264,10 @@ namespace Bian {
 
     /// <summary>Field number for the "target" field.</summary>
     public const int TargetFieldNumber = 3;
-    private global::Bian.BigWorldSkillTarget target_ = global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf;
+    private global::MelandGame3.BigWorldSkillTarget target_ = global::MelandGame3.BigWorldSkillTarget.BigWorldSkillTargetSelf;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BigWorldSkillTarget Target {
+    public global::MelandGame3.BigWorldSkillTarget Target {
       get { return target_; }
       set {
         target_ = value;
@@ -275,10 +276,10 @@ namespace Bian {
 
     /// <summary>Field number for the "effect" field.</summary>
     public const int EffectFieldNumber = 4;
-    private global::Bian.BigWorldSkillEffect effect_ = global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce;
+    private global::MelandGame3.BigWorldSkillEffect effect_ = global::MelandGame3.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BigWorldSkillEffect Effect {
+    public global::MelandGame3.BigWorldSkillEffect Effect {
       get { return effect_; }
       set {
         effect_ = value;
@@ -337,8 +338,8 @@ namespace Bian {
       int hash = 1;
       if (SkillId != 0) hash ^= SkillId.GetHashCode();
       if (SkillName.Length != 0) hash ^= SkillName.GetHashCode();
-      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) hash ^= Target.GetHashCode();
-      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) hash ^= Effect.GetHashCode();
+      if (Target != global::MelandGame3.BigWorldSkillTarget.BigWorldSkillTargetSelf) hash ^= Target.GetHashCode();
+      if (Effect != global::MelandGame3.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) hash ^= Effect.GetHashCode();
       hash ^= valueList_.GetHashCode();
       hash ^= radiusList_.GetHashCode();
       if (_unknownFields != null) {
@@ -367,11 +368,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(SkillName);
       }
-      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
+      if (Target != global::MelandGame3.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Target);
       }
-      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
+      if (Effect != global::MelandGame3.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Effect);
       }
@@ -395,11 +396,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(SkillName);
       }
-      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
+      if (Target != global::MelandGame3.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Target);
       }
-      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
+      if (Effect != global::MelandGame3.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Effect);
       }
@@ -421,10 +422,10 @@ namespace Bian {
       if (SkillName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SkillName);
       }
-      if (Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
+      if (Target != global::MelandGame3.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Target);
       }
-      if (Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
+      if (Effect != global::MelandGame3.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Effect);
       }
       size += valueList_.CalculateSize(_repeated_valueList_codec);
@@ -447,10 +448,10 @@ namespace Bian {
       if (other.SkillName.Length != 0) {
         SkillName = other.SkillName;
       }
-      if (other.Target != global::Bian.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
+      if (other.Target != global::MelandGame3.BigWorldSkillTarget.BigWorldSkillTargetSelf) {
         Target = other.Target;
       }
-      if (other.Effect != global::Bian.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
+      if (other.Effect != global::MelandGame3.BigWorldSkillEffect.BigWorldSkillEffectTimeReduce) {
         Effect = other.Effect;
       }
       valueList_.Add(other.valueList_);
@@ -479,11 +480,11 @@ namespace Bian {
             break;
           }
           case 24: {
-            Target = (global::Bian.BigWorldSkillTarget) input.ReadEnum();
+            Target = (global::MelandGame3.BigWorldSkillTarget) input.ReadEnum();
             break;
           }
           case 32: {
-            Effect = (global::Bian.BigWorldSkillEffect) input.ReadEnum();
+            Effect = (global::MelandGame3.BigWorldSkillEffect) input.ReadEnum();
             break;
           }
           case 42: {
@@ -519,11 +520,11 @@ namespace Bian {
             break;
           }
           case 24: {
-            Target = (global::Bian.BigWorldSkillTarget) input.ReadEnum();
+            Target = (global::MelandGame3.BigWorldSkillTarget) input.ReadEnum();
             break;
           }
           case 32: {
-            Effect = (global::Bian.BigWorldSkillEffect) input.ReadEnum();
+            Effect = (global::MelandGame3.BigWorldSkillEffect) input.ReadEnum();
             break;
           }
           case 42: {
@@ -556,7 +557,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -788,7 +789,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -823,10 +824,10 @@ namespace Bian {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Bian.BigWorldLandState state_ = global::Bian.BigWorldLandState.BigWorldLandStateUnoccupied;
+    private global::MelandGame3.BigWorldLandState state_ = global::MelandGame3.BigWorldLandState.BigWorldLandStateUnoccupied;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BigWorldLandState State {
+    public global::MelandGame3.BigWorldLandState State {
       get { return state_; }
       set {
         state_ = value;
@@ -895,7 +896,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != global::Bian.BigWorldLandState.BigWorldLandStateUnoccupied) hash ^= State.GetHashCode();
+      if (State != global::MelandGame3.BigWorldLandState.BigWorldLandStateUnoccupied) hash ^= State.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (OwnerId.Length != 0) hash ^= OwnerId.GetHashCode();
       if (CurHp != 0) hash ^= CurHp.GetHashCode();
@@ -917,7 +918,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (State != global::Bian.BigWorldLandState.BigWorldLandStateUnoccupied) {
+      if (State != global::MelandGame3.BigWorldLandState.BigWorldLandStateUnoccupied) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -943,7 +944,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (State != global::Bian.BigWorldLandState.BigWorldLandStateUnoccupied) {
+      if (State != global::MelandGame3.BigWorldLandState.BigWorldLandStateUnoccupied) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -969,7 +970,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (State != global::Bian.BigWorldLandState.BigWorldLandStateUnoccupied) {
+      if (State != global::MelandGame3.BigWorldLandState.BigWorldLandStateUnoccupied) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (UserId.Length != 0) {
@@ -993,7 +994,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.State != global::Bian.BigWorldLandState.BigWorldLandStateUnoccupied) {
+      if (other.State != global::MelandGame3.BigWorldLandState.BigWorldLandStateUnoccupied) {
         State = other.State;
       }
       if (other.UserId.Length != 0) {
@@ -1021,7 +1022,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            State = (global::Bian.BigWorldLandState) input.ReadEnum();
+            State = (global::MelandGame3.BigWorldLandState) input.ReadEnum();
             break;
           }
           case 18: {
@@ -1052,7 +1053,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            State = (global::Bian.BigWorldLandState) input.ReadEnum();
+            State = (global::MelandGame3.BigWorldLandState) input.ReadEnum();
             break;
           }
           case 18: {
@@ -1088,7 +1089,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1388,7 +1389,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1449,10 +1450,10 @@ namespace Bian {
 
     /// <summary>Field number for the "fight_state" field.</summary>
     public const int FightStateFieldNumber = 3;
-    private global::Bian.BigWorldFightState fightState_ = global::Bian.BigWorldFightState.BigWorldFightStateFree;
+    private global::MelandGame3.BigWorldFightState fightState_ = global::MelandGame3.BigWorldFightState.BigWorldFightStateFree;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BigWorldFightState FightState {
+    public global::MelandGame3.BigWorldFightState FightState {
       get { return fightState_; }
       set {
         fightState_ = value;
@@ -1461,10 +1462,10 @@ namespace Bian {
 
     /// <summary>Field number for the "fight_info" field.</summary>
     public const int FightInfoFieldNumber = 4;
-    private global::Bian.BigWorldFightInfo fightInfo_;
+    private global::MelandGame3.BigWorldFightInfo fightInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BigWorldFightInfo FightInfo {
+    public global::MelandGame3.BigWorldFightInfo FightInfo {
       get { return fightInfo_; }
       set {
         fightInfo_ = value;
@@ -1473,10 +1474,10 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 5;
-    private global::Bian.BigWorldObjPro profile_;
+    private global::MelandGame3.BigWorldObjPro profile_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BigWorldObjPro Profile {
+    public global::MelandGame3.BigWorldObjPro Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -1485,12 +1486,12 @@ namespace Bian {
 
     /// <summary>Field number for the "skills" field.</summary>
     public const int SkillsFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Bian.BigWorldTileSkill> _repeated_skills_codec
-        = pb::FieldCodec.ForMessage(50, global::Bian.BigWorldTileSkill.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BigWorldTileSkill> skills_ = new pbc::RepeatedField<global::Bian.BigWorldTileSkill>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BigWorldTileSkill> _repeated_skills_codec
+        = pb::FieldCodec.ForMessage(50, global::MelandGame3.BigWorldTileSkill.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BigWorldTileSkill> skills_ = new pbc::RepeatedField<global::MelandGame3.BigWorldTileSkill>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BigWorldTileSkill> Skills {
+    public pbc::RepeatedField<global::MelandGame3.BigWorldTileSkill> Skills {
       get { return skills_; }
     }
 
@@ -1524,7 +1525,7 @@ namespace Bian {
       int hash = 1;
       if (R != 0) hash ^= R.GetHashCode();
       if (C != 0) hash ^= C.GetHashCode();
-      if (FightState != global::Bian.BigWorldFightState.BigWorldFightStateFree) hash ^= FightState.GetHashCode();
+      if (FightState != global::MelandGame3.BigWorldFightState.BigWorldFightStateFree) hash ^= FightState.GetHashCode();
       if (fightInfo_ != null) hash ^= FightInfo.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
       hash ^= skills_.GetHashCode();
@@ -1554,7 +1555,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(C);
       }
-      if (FightState != global::Bian.BigWorldFightState.BigWorldFightStateFree) {
+      if (FightState != global::MelandGame3.BigWorldFightState.BigWorldFightStateFree) {
         output.WriteRawTag(24);
         output.WriteEnum((int) FightState);
       }
@@ -1585,7 +1586,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(C);
       }
-      if (FightState != global::Bian.BigWorldFightState.BigWorldFightStateFree) {
+      if (FightState != global::MelandGame3.BigWorldFightState.BigWorldFightStateFree) {
         output.WriteRawTag(24);
         output.WriteEnum((int) FightState);
       }
@@ -1614,7 +1615,7 @@ namespace Bian {
       if (C != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(C);
       }
-      if (FightState != global::Bian.BigWorldFightState.BigWorldFightStateFree) {
+      if (FightState != global::MelandGame3.BigWorldFightState.BigWorldFightStateFree) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FightState);
       }
       if (fightInfo_ != null) {
@@ -1642,18 +1643,18 @@ namespace Bian {
       if (other.C != 0) {
         C = other.C;
       }
-      if (other.FightState != global::Bian.BigWorldFightState.BigWorldFightStateFree) {
+      if (other.FightState != global::MelandGame3.BigWorldFightState.BigWorldFightStateFree) {
         FightState = other.FightState;
       }
       if (other.fightInfo_ != null) {
         if (fightInfo_ == null) {
-          FightInfo = new global::Bian.BigWorldFightInfo();
+          FightInfo = new global::MelandGame3.BigWorldFightInfo();
         }
         FightInfo.MergeFrom(other.FightInfo);
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.BigWorldObjPro();
+          Profile = new global::MelandGame3.BigWorldObjPro();
         }
         Profile.MergeFrom(other.Profile);
       }
@@ -1682,19 +1683,19 @@ namespace Bian {
             break;
           }
           case 24: {
-            FightState = (global::Bian.BigWorldFightState) input.ReadEnum();
+            FightState = (global::MelandGame3.BigWorldFightState) input.ReadEnum();
             break;
           }
           case 34: {
             if (fightInfo_ == null) {
-              FightInfo = new global::Bian.BigWorldFightInfo();
+              FightInfo = new global::MelandGame3.BigWorldFightInfo();
             }
             input.ReadMessage(FightInfo);
             break;
           }
           case 42: {
             if (profile_ == null) {
-              Profile = new global::Bian.BigWorldObjPro();
+              Profile = new global::MelandGame3.BigWorldObjPro();
             }
             input.ReadMessage(Profile);
             break;
@@ -1727,19 +1728,19 @@ namespace Bian {
             break;
           }
           case 24: {
-            FightState = (global::Bian.BigWorldFightState) input.ReadEnum();
+            FightState = (global::MelandGame3.BigWorldFightState) input.ReadEnum();
             break;
           }
           case 34: {
             if (fightInfo_ == null) {
-              FightInfo = new global::Bian.BigWorldFightInfo();
+              FightInfo = new global::MelandGame3.BigWorldFightInfo();
             }
             input.ReadMessage(FightInfo);
             break;
           }
           case 42: {
             if (profile_ == null) {
-              Profile = new global::Bian.BigWorldObjPro();
+              Profile = new global::MelandGame3.BigWorldObjPro();
             }
             input.ReadMessage(Profile);
             break;
@@ -1772,7 +1773,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1874,43 +1875,43 @@ namespace Bian {
 
     /// <summary>Field number for the "vip_land_tiles" field.</summary>
     public const int VipLandTilesFieldNumber = 7;
-    private static readonly pb::FieldCodec<int> _repeated_vipLandTiles_codec
-        = pb::FieldCodec.ForInt32(58);
-    private readonly pbc::RepeatedField<int> vipLandTiles_ = new pbc::RepeatedField<int>();
+    private static readonly pb::FieldCodec<string> _repeated_vipLandTiles_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> vipLandTiles_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// 购买的地格列表(永久归属) 压缩后的int32列表(begin,end, begin,end)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<int> VipLandTiles {
+    public pbc::RepeatedField<string> VipLandTiles {
       get { return vipLandTiles_; }
     }
 
     /// <summary>Field number for the "ticket_land_tiles" field.</summary>
     public const int TicketLandTilesFieldNumber = 8;
-    private static readonly pb::FieldCodec<int> _repeated_ticketLandTiles_codec
-        = pb::FieldCodec.ForInt32(66);
-    private readonly pbc::RepeatedField<int> ticketLandTiles_ = new pbc::RepeatedField<int>();
+    private static readonly pb::FieldCodec<string> _repeated_ticketLandTiles_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> ticketLandTiles_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// 门票地格列表(永久归属) 压缩后的int32列表(begin,end, begin,end)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<int> TicketLandTiles {
+    public pbc::RepeatedField<string> TicketLandTiles {
       get { return ticketLandTiles_; }
     }
 
     /// <summary>Field number for the "occupied_land_tiles" field.</summary>
     public const int OccupiedLandTilesFieldNumber = 9;
-    private static readonly pb::FieldCodec<int> _repeated_occupiedLandTiles_codec
-        = pb::FieldCodec.ForInt32(74);
-    private readonly pbc::RepeatedField<int> occupiedLandTiles_ = new pbc::RepeatedField<int>();
+    private static readonly pb::FieldCodec<string> _repeated_occupiedLandTiles_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> occupiedLandTiles_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// 攻占的地格列表(临时占用) 压缩后的int32列表(begin,end, begin,end)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<int> OccupiedLandTiles {
+    public pbc::RepeatedField<string> OccupiedLandTiles {
       get { return occupiedLandTiles_; }
     }
 
@@ -2119,18 +2120,15 @@ namespace Bian {
             Icon = input.ReadString();
             break;
           }
-          case 58:
-          case 56: {
+          case 58: {
             vipLandTiles_.AddEntriesFrom(input, _repeated_vipLandTiles_codec);
             break;
           }
-          case 66:
-          case 64: {
+          case 66: {
             ticketLandTiles_.AddEntriesFrom(input, _repeated_ticketLandTiles_codec);
             break;
           }
-          case 74:
-          case 72: {
+          case 74: {
             occupiedLandTiles_.AddEntriesFrom(input, _repeated_occupiedLandTiles_codec);
             break;
           }
@@ -2169,18 +2167,15 @@ namespace Bian {
             Icon = input.ReadString();
             break;
           }
-          case 58:
-          case 56: {
+          case 58: {
             vipLandTiles_.AddEntriesFrom(ref input, _repeated_vipLandTiles_codec);
             break;
           }
-          case 66:
-          case 64: {
+          case 66: {
             ticketLandTiles_.AddEntriesFrom(ref input, _repeated_ticketLandTiles_codec);
             break;
           }
-          case 74:
-          case 72: {
+          case 74: {
             occupiedLandTiles_.AddEntriesFrom(ref input, _repeated_occupiedLandTiles_codec);
             break;
           }
@@ -2205,7 +2200,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2264,12 +2259,12 @@ namespace Bian {
 
     /// <summary>Field number for the "vip_lands" field.</summary>
     public const int VipLandsFieldNumber = 3;
-    private static readonly pb::FieldCodec<int> _repeated_vipLands_codec
-        = pb::FieldCodec.ForInt32(26);
-    private readonly pbc::RepeatedField<int> vipLands_ = new pbc::RepeatedField<int>();
+    private static readonly pb::FieldCodec<string> _repeated_vipLands_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> vipLands_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<int> VipLands {
+    public pbc::RepeatedField<string> VipLands {
       get { return vipLands_; }
     }
 
@@ -2434,8 +2429,7 @@ namespace Bian {
             Image = input.ReadString();
             break;
           }
-          case 26:
-          case 24: {
+          case 26: {
             vipLands_.AddEntriesFrom(input, _repeated_vipLands_codec);
             break;
           }
@@ -2466,8 +2460,7 @@ namespace Bian {
             Image = input.ReadString();
             break;
           }
-          case 26:
-          case 24: {
+          case 26: {
             vipLands_.AddEntriesFrom(ref input, _repeated_vipLands_codec);
             break;
           }
@@ -2496,7 +2489,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2568,23 +2561,23 @@ namespace Bian {
 
     /// <summary>Field number for the "vip_lands" field.</summary>
     public const int VipLandsFieldNumber = 4;
-    private static readonly pb::FieldCodec<int> _repeated_vipLands_codec
-        = pb::FieldCodec.ForInt32(34);
-    private readonly pbc::RepeatedField<int> vipLands_ = new pbc::RepeatedField<int>();
+    private static readonly pb::FieldCodec<string> _repeated_vipLands_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> vipLands_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<int> VipLands {
+    public pbc::RepeatedField<string> VipLands {
       get { return vipLands_; }
     }
 
     /// <summary>Field number for the "vip_land_groups" field.</summary>
     public const int VipLandGroupsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Bian.BigWorldVipLandGroup> _repeated_vipLandGroups_codec
-        = pb::FieldCodec.ForMessage(42, global::Bian.BigWorldVipLandGroup.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BigWorldVipLandGroup> vipLandGroups_ = new pbc::RepeatedField<global::Bian.BigWorldVipLandGroup>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BigWorldVipLandGroup> _repeated_vipLandGroups_codec
+        = pb::FieldCodec.ForMessage(42, global::MelandGame3.BigWorldVipLandGroup.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BigWorldVipLandGroup> vipLandGroups_ = new pbc::RepeatedField<global::MelandGame3.BigWorldVipLandGroup>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BigWorldVipLandGroup> VipLandGroups {
+    public pbc::RepeatedField<global::MelandGame3.BigWorldVipLandGroup> VipLandGroups {
       get { return vipLandGroups_; }
     }
 
@@ -2747,8 +2740,7 @@ namespace Bian {
             PlayerName = input.ReadString();
             break;
           }
-          case 34:
-          case 32: {
+          case 34: {
             vipLands_.AddEntriesFrom(input, _repeated_vipLands_codec);
             break;
           }
@@ -2783,8 +2775,7 @@ namespace Bian {
             PlayerName = input.ReadString();
             break;
           }
-          case 34:
-          case 32: {
+          case 34: {
             vipLands_.AddEntriesFrom(ref input, _repeated_vipLands_codec);
             break;
           }
@@ -2816,7 +2807,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3156,7 +3147,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BigWorldReflection.Descriptor.MessageTypes[9]; }
+      get { return global::MelandGame3.BigWorldReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

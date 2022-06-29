@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from mission.proto</summary>
   public static partial class MissionReflection {
@@ -24,37 +24,38 @@ namespace Bian {
     static MissionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1taXNzaW9uLnByb3RvEgRCaWFuIkoKDU1pc3Npb25XaXRoSWQSCgoCaWQY",
-            "ASABKAkSHwoEdHlwZRgCIAEoDjIRLkJpYW4uTWlzc2lvblR5cGUSDAoEbmFt",
-            "ZRgDIAEoCSJvCgdNaXNzaW9uEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkS",
-            "EAoIb3duZXJfaWQYAyABKAkSHwoEdHlwZRgEIAEoDjIRLkJpYW4uTWlzc2lv",
-            "blR5cGUSFwoPbWlzc2lvbl9zZXR0aW5nGAUgASgJIigKC0F1ZGlvUmVjb3Jk",
-            "EgsKA3VybBgBIAEoCRIMCgRuYW1lGAIgASgJIiQKB1BpY3R1cmUSCwoDdXJs",
-            "GAEgASgJEgwKBG5hbWUYAiABKAkqywIKC01pc3Npb25UeXBlEh4KGk1pc3Np",
-            "b25UeXBlX01pc3Npb25UeXBlQWxsEAASIQodTWlzc2lvblR5cGVfTWlzc2lv",
-            "blR5cGVQdXp6bGUQARIgChxNaXNzaW9uVHlwZV9NaXNzaW9uVHlwZU1hdGNo",
-            "EAISIQodTWlzc2lvblR5cGVfTWlzc2lvblR5cGVTZWVzYXcQAxIjCh9NaXNz",
-            "aW9uVHlwZV9NaXNzaW9uVHlwZUNvbG9yaW5nEAQSJwojTWlzc2lvblR5cGVf",
-            "TWlzc2lvblR5cGVQaWN0dXJlQ29udXQQBRIfChtNaXNzaW9uVHlwZV9NaXNz",
-            "aW9uVHlwZVNvcnQQBhIhCh1NaXNzaW9uVHlwZV9NaXNzaW9uVHlwZUNob29z",
-            "ZRAHEiIKHk1pc3Npb25UeXBlX01pc3Npb25UeXBlVGFuZ3JhbRAIKmMKDk1p",
-            "c3Npb25TdWJqZWN0EiYKIk1pc3Npb25TdWJqZWN0X01pc3Npb25TdWJqZWN0",
-            "SmltbXkQABIpCiVNaXNzaW9uU3ViamVjdF9NaXNzaW9uU3ViamVjdFhpYW9E",
-            "dWFuEAEqgQEKC1NldHRsZVN0YXJzEiYKIlNldHRsZVN0YXJzX01pc3Npb25T",
-            "ZXR0bGVUaHJlZVN0YXIQABIkCiBTZXR0bGVTdGFyc19NaXNzaW9uU2V0dGxl",
-            "VHdvU3RhchABEiQKIFNldHRsZVN0YXJzX01pc3Npb25TZXR0bGVPbmVTdGFy",
-            "EAIqZwoMU2V0dGxlUmVzdWx0EisKJ1NldHRsZVJlc3VsdF9NaXNzaW9uU2V0",
-            "dGxlUmVzdWx0U3VjY2VzcxAAEioKJlNldHRsZVJlc3VsdF9NaXNzaW9uU2V0",
-            "dGxlUmVzdWx0RmFpbGVkEAEqagoPU2NEaXlDb21taXRUeXBlEi0KKVNjRGl5",
-            "Q29tbWl0VHlwZV9TY0RpeUNvbW1pdFR5cGVQcm9kdWN0aW9uEAASKAokU2NE",
-            "aXlDb21taXRUeXBlX1NjRGl5Q29tbWl0VHlwZVN0YWdlEAFiBnByb3RvMw=="));
+            "Cg1taXNzaW9uLnByb3RvEgtNZWxhbmRHYW1lMyJRCg1NaXNzaW9uV2l0aElk",
+            "EgoKAmlkGAEgASgJEiYKBHR5cGUYAiABKA4yGC5NZWxhbmRHYW1lMy5NaXNz",
+            "aW9uVHlwZRIMCgRuYW1lGAMgASgJInYKB01pc3Npb24SCgoCaWQYASABKAkS",
+            "DAoEbmFtZRgCIAEoCRIQCghvd25lcl9pZBgDIAEoCRImCgR0eXBlGAQgASgO",
+            "MhguTWVsYW5kR2FtZTMuTWlzc2lvblR5cGUSFwoPbWlzc2lvbl9zZXR0aW5n",
+            "GAUgASgJIigKC0F1ZGlvUmVjb3JkEgsKA3VybBgBIAEoCRIMCgRuYW1lGAIg",
+            "ASgJIiQKB1BpY3R1cmUSCwoDdXJsGAEgASgJEgwKBG5hbWUYAiABKAkqywIK",
+            "C01pc3Npb25UeXBlEh4KGk1pc3Npb25UeXBlX01pc3Npb25UeXBlQWxsEAAS",
+            "IQodTWlzc2lvblR5cGVfTWlzc2lvblR5cGVQdXp6bGUQARIgChxNaXNzaW9u",
+            "VHlwZV9NaXNzaW9uVHlwZU1hdGNoEAISIQodTWlzc2lvblR5cGVfTWlzc2lv",
+            "blR5cGVTZWVzYXcQAxIjCh9NaXNzaW9uVHlwZV9NaXNzaW9uVHlwZUNvbG9y",
+            "aW5nEAQSJwojTWlzc2lvblR5cGVfTWlzc2lvblR5cGVQaWN0dXJlQ29udXQQ",
+            "BRIfChtNaXNzaW9uVHlwZV9NaXNzaW9uVHlwZVNvcnQQBhIhCh1NaXNzaW9u",
+            "VHlwZV9NaXNzaW9uVHlwZUNob29zZRAHEiIKHk1pc3Npb25UeXBlX01pc3Np",
+            "b25UeXBlVGFuZ3JhbRAIKmMKDk1pc3Npb25TdWJqZWN0EiYKIk1pc3Npb25T",
+            "dWJqZWN0X01pc3Npb25TdWJqZWN0SmltbXkQABIpCiVNaXNzaW9uU3ViamVj",
+            "dF9NaXNzaW9uU3ViamVjdFhpYW9EdWFuEAEqgQEKC1NldHRsZVN0YXJzEiYK",
+            "IlNldHRsZVN0YXJzX01pc3Npb25TZXR0bGVUaHJlZVN0YXIQABIkCiBTZXR0",
+            "bGVTdGFyc19NaXNzaW9uU2V0dGxlVHdvU3RhchABEiQKIFNldHRsZVN0YXJz",
+            "X01pc3Npb25TZXR0bGVPbmVTdGFyEAIqZwoMU2V0dGxlUmVzdWx0EisKJ1Nl",
+            "dHRsZVJlc3VsdF9NaXNzaW9uU2V0dGxlUmVzdWx0U3VjY2VzcxAAEioKJlNl",
+            "dHRsZVJlc3VsdF9NaXNzaW9uU2V0dGxlUmVzdWx0RmFpbGVkEAEqagoPU2NE",
+            "aXlDb21taXRUeXBlEi0KKVNjRGl5Q29tbWl0VHlwZV9TY0RpeUNvbW1pdFR5",
+            "cGVQcm9kdWN0aW9uEAASKAokU2NEaXlDb21taXRUeXBlX1NjRGl5Q29tbWl0",
+            "VHlwZVN0YWdlEAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.MissionType), typeof(global::Bian.MissionSubject), typeof(global::Bian.SettleStars), typeof(global::Bian.SettleResult), typeof(global::Bian.ScDiyCommitType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MissionWithId), global::Bian.MissionWithId.Parser, new[]{ "Id", "Type", "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Mission), global::Bian.Mission.Parser, new[]{ "Id", "Name", "OwnerId", "Type", "MissionSetting" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AudioRecord), global::Bian.AudioRecord.Parser, new[]{ "Url", "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Picture), global::Bian.Picture.Parser, new[]{ "Url", "Name" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.MissionType), typeof(global::MelandGame3.MissionSubject), typeof(global::MelandGame3.SettleStars), typeof(global::MelandGame3.SettleResult), typeof(global::MelandGame3.ScDiyCommitType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MissionWithId), global::MelandGame3.MissionWithId.Parser, new[]{ "Id", "Type", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Mission), global::MelandGame3.Mission.Parser, new[]{ "Id", "Name", "OwnerId", "Type", "MissionSetting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AudioRecord), global::MelandGame3.AudioRecord.Parser, new[]{ "Url", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Picture), global::MelandGame3.Picture.Parser, new[]{ "Url", "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -180,7 +181,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MissionReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.MissionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -226,10 +227,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Bian.MissionType type_ = global::Bian.MissionType.MissionTypeAll;
+    private global::MelandGame3.MissionType type_ = global::MelandGame3.MissionType.MissionTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MissionType Type {
+    public global::MelandGame3.MissionType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -274,7 +275,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Type != global::Bian.MissionType.MissionTypeAll) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) hash ^= Type.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -298,7 +299,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (Type != global::Bian.MissionType.MissionTypeAll) {
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -320,7 +321,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (Type != global::Bian.MissionType.MissionTypeAll) {
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -341,7 +342,7 @@ namespace Bian {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (Type != global::Bian.MissionType.MissionTypeAll) {
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Name.Length != 0) {
@@ -362,7 +363,7 @@ namespace Bian {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.Type != global::Bian.MissionType.MissionTypeAll) {
+      if (other.Type != global::MelandGame3.MissionType.MissionTypeAll) {
         Type = other.Type;
       }
       if (other.Name.Length != 0) {
@@ -388,7 +389,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.MissionType) input.ReadEnum();
+            Type = (global::MelandGame3.MissionType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -415,7 +416,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.MissionType) input.ReadEnum();
+            Type = (global::MelandGame3.MissionType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -443,7 +444,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MissionReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.MissionReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -515,10 +516,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Bian.MissionType type_ = global::Bian.MissionType.MissionTypeAll;
+    private global::MelandGame3.MissionType type_ = global::MelandGame3.MissionType.MissionTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MissionType Type {
+    public global::MelandGame3.MissionType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -567,7 +568,7 @@ namespace Bian {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (OwnerId.Length != 0) hash ^= OwnerId.GetHashCode();
-      if (Type != global::Bian.MissionType.MissionTypeAll) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) hash ^= Type.GetHashCode();
       if (MissionSetting.Length != 0) hash ^= MissionSetting.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -599,7 +600,7 @@ namespace Bian {
         output.WriteRawTag(26);
         output.WriteString(OwnerId);
       }
-      if (Type != global::Bian.MissionType.MissionTypeAll) {
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -629,7 +630,7 @@ namespace Bian {
         output.WriteRawTag(26);
         output.WriteString(OwnerId);
       }
-      if (Type != global::Bian.MissionType.MissionTypeAll) {
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -656,7 +657,7 @@ namespace Bian {
       if (OwnerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnerId);
       }
-      if (Type != global::Bian.MissionType.MissionTypeAll) {
+      if (Type != global::MelandGame3.MissionType.MissionTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (MissionSetting.Length != 0) {
@@ -683,7 +684,7 @@ namespace Bian {
       if (other.OwnerId.Length != 0) {
         OwnerId = other.OwnerId;
       }
-      if (other.Type != global::Bian.MissionType.MissionTypeAll) {
+      if (other.Type != global::MelandGame3.MissionType.MissionTypeAll) {
         Type = other.Type;
       }
       if (other.MissionSetting.Length != 0) {
@@ -717,7 +718,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            Type = (global::Bian.MissionType) input.ReadEnum();
+            Type = (global::MelandGame3.MissionType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -752,7 +753,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            Type = (global::Bian.MissionType) input.ReadEnum();
+            Type = (global::MelandGame3.MissionType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -780,7 +781,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MissionReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.MissionReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1006,7 +1007,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MissionReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.MissionReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

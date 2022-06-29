@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from falling_object.proto</summary>
   public static partial class FallingObjectReflection {
@@ -24,16 +24,17 @@ namespace Bian {
     static FallingObjectReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRmYWxsaW5nX29iamVjdC5wcm90bxIEQmlhbiJSChRGYWxsaW5nT2JqZWN0",
-            "UmVjaXBldBIKCgJpZBgBIAEoBRIuCglkcm9wX2xpc3QYAiADKAsyGy5CaWFu",
-            "LkZhbGxpbmdPYmplY3RTZXR0aW5ncyJeChVGYWxsaW5nT2JqZWN0U2V0dGlu",
-            "Z3MSEgoKb2JqZWN0X2NpZBgBIAEoBRILCgNudW0YAiABKAUSEwoLcG9zc2li",
-            "aWxpdHkYAyABKAUSDwoHcXVhbGl0eRgEIAEoBWIGcHJvdG8z"));
+            "ChRmYWxsaW5nX29iamVjdC5wcm90bxILTWVsYW5kR2FtZTMiWQoURmFsbGlu",
+            "Z09iamVjdFJlY2lwZXQSCgoCaWQYASABKAUSNQoJZHJvcF9saXN0GAIgAygL",
+            "MiIuTWVsYW5kR2FtZTMuRmFsbGluZ09iamVjdFNldHRpbmdzIl4KFUZhbGxp",
+            "bmdPYmplY3RTZXR0aW5ncxISCgpvYmplY3RfY2lkGAEgASgFEgsKA251bRgC",
+            "IAEoBRITCgtwb3NzaWJpbGl0eRgDIAEoBRIPCgdxdWFsaXR5GAQgASgFYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObjectRecipet), global::Bian.FallingObjectRecipet.Parser, new[]{ "Id", "DropList" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObjectSettings), global::Bian.FallingObjectSettings.Parser, new[]{ "ObjectCid", "Num", "Possibility", "Quality" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.FallingObjectRecipet), global::MelandGame3.FallingObjectRecipet.Parser, new[]{ "Id", "DropList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.FallingObjectSettings), global::MelandGame3.FallingObjectSettings.Parser, new[]{ "ObjectCid", "Num", "Possibility", "Quality" }, null, null, null, null)
           }));
     }
     #endregion
@@ -57,7 +58,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.FallingObjectReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.FallingObjectReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -102,15 +103,15 @@ namespace Bian {
 
     /// <summary>Field number for the "drop_list" field.</summary>
     public const int DropListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.FallingObjectSettings> _repeated_dropList_codec
-        = pb::FieldCodec.ForMessage(18, global::Bian.FallingObjectSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.FallingObjectSettings> dropList_ = new pbc::RepeatedField<global::Bian.FallingObjectSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.FallingObjectSettings> _repeated_dropList_codec
+        = pb::FieldCodec.ForMessage(18, global::MelandGame3.FallingObjectSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.FallingObjectSettings> dropList_ = new pbc::RepeatedField<global::MelandGame3.FallingObjectSettings>();
     /// <summary>
     /// 宝箱列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.FallingObjectSettings> DropList {
+    public pbc::RepeatedField<global::MelandGame3.FallingObjectSettings> DropList {
       get { return dropList_; }
     }
 
@@ -278,7 +279,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.FallingObjectReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.FallingObjectReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

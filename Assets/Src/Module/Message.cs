@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
-using Bian;
-using UnityEngine;
+using MelandGame3;
 
 public static class Message
 {

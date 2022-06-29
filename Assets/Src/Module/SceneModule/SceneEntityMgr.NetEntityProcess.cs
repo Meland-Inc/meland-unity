@@ -1,12 +1,11 @@
-using Bian;
+using MelandGame3;
 using Google.Protobuf.Collections;
-using UnityEngine;
 
 public partial class SceneEntityMgr : SceneModuleBase
 {
     public void NetInitMainRole(Player playerData, EntityLocation location)
     {
-        MLog.Info(eLogTag.entity, $"NetInitMainRole id={playerData.Id} [{location.Pos.X} {location.Pos.Y} {location.Z}]");
+        MLog.Info(eLogTag.entity, $"NetInitMainRole id={playerData.Id} [{location.Loc.X} {location.Loc.Y} {location.Loc.Z}]");
 
         DataManager.MainPlayer.InitRoleData(playerData.Id);
         SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
@@ -24,7 +23,7 @@ public partial class SceneEntityMgr : SceneModuleBase
 
         MainPlayerMoveInput moveInput = sceneRole.GetComponent<MainPlayerMoveInput>();
         moveInput.MoveSpeed = sceneRole.GetComponent<EntityMoveData>().Speed;
-        moveInput.PushDownForce = Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
+        moveInput.PushDownForce = UnityEngine.Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
         sceneRole.GetComponent<MoveNetRequest>().enabled = true;
 
         Message.MainPlayerRoleInitFinish.Invoke();

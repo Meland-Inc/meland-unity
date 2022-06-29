@@ -26,7 +26,7 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelSt
 
     public virtual Packet DeserializePacket(IPacketHeader packetHeader, byte[] source, out object customErrorData)
     {
-        Bian.Envelope envelope = Bian.Envelope.Parser.ParseFrom(source);
+        MelandGame3.Envelope envelope = MelandGame3.Envelope.Parser.ParseFrom(source);
 
         customErrorData = null;
         GameChannelPacket packet = new();
@@ -49,7 +49,7 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelSt
 
     public virtual bool Serialize<T>(T packet, out byte[] destination) where T : Packet
     {
-        Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
+        MelandGame3.Envelope envelope = (packet as GameChannelPacket).TransferData;
         int envelopLength = envelope.CalculateSize();
         byte[] headerBytes = BitConverter.GetBytes(envelopLength);
         if (PacketHeaderLength < 0 || (PacketHeaderLength > 0 && headerBytes.Length != PacketHeaderLength))
@@ -89,7 +89,7 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelSt
         Span<byte> dataSpan = new(_packetBytes, 0, (int)source.Length);
         _ = source.Read(dataSpan);
 
-        Bian.Envelope envelope = Bian.Envelope.Parser.ParseFrom(dataSpan);
+        MelandGame3.Envelope envelope = MelandGame3.Envelope.Parser.ParseFrom(dataSpan);
 
         customErrorData = null;
         GameChannelPacket packet = new();
@@ -113,7 +113,7 @@ public abstract class SocketProtobufChannelHelper<TEnvelope> : INetworkChannelSt
 
     public virtual bool Serialize<T>(T packet, Stream destination) where T : Packet
     {
-        Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
+        MelandGame3.Envelope envelope = (packet as GameChannelPacket).TransferData;
         byte[] envelopeBytes = new byte[envelope.CalculateSize()];
         CodedOutputStream codedOutputStream = new(envelopeBytes);
         envelope.WriteTo(codedOutputStream);

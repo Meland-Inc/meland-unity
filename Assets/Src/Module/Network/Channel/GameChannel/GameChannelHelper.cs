@@ -1,6 +1,6 @@
 using GameFramework.Network;
 using UnityGameFramework.Runtime;
-public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
+public class GameChannelHelper : SocketProtobufChannelHelper<MelandGame3.Envelope>
 {
 #if UNITY_WEBGL || WEBSOCKET
     public override int PacketHeaderLength => 0;

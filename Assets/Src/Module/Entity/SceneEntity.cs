@@ -97,7 +97,7 @@ public class SceneEntity
     /// <param name="location"></param>
     public void DirectSetSvrPosition(EntityLocation location)
     {
-        Transform.position = NetUtil.SvrLocToClient(location);
+        Transform.position = NetUtil.SvrToClientLoc(location);
     }
 
     /// <summary>
@@ -106,7 +106,7 @@ public class SceneEntity
     /// <param name="dir"></param>
     public void DirectSetSvrDir(MelandGame3.Vector3 dir)
     {
-        Transform.forward = NetUtil.SvrDirToClient(dir);
+        Transform.forward = NetUtil.SvrToClientDir(dir);
     }
 
     public T GetComponent<T>()

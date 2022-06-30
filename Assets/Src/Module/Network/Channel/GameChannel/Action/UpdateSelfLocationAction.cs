@@ -8,7 +8,7 @@ public class UpdateSelfLocationAction : GameChannelNetMsgRActionBase<UpdateSelfL
     /// <summary>
     /// </summary>
     /// <param name="curPos">当前世界坐标</param>
-    public static void Req(UnityEngine.Vector3 curPos)
+    public static void Req(UnityEngine.Vector3 curPos, UnityEngine.Vector3 dir, MovementType movementType, float speed, float targetTime)
     {
         UpdateSelfLocationRequest req = GenerateReq();
         req.Movement = new()
@@ -21,14 +21,19 @@ public class UpdateSelfLocationAction : GameChannelNetMsgRActionBase<UpdateSelfL
                 Stamp = TimeUtil.GetTimeStamp(),
             },
             DestLocation = null,
-            Type = MovementType.MovementTypeRun,
-            Dir = new Vector3()
-            {
-                X = 0,
-                Y = 100,
-                Z = 0,
-            }
+            Type = movementType,
+            Dir = NetUtil.ClienToSvrVector3(dir)
         };
+        if (!speed.ApproximatelyEquals(0))
+        {
+            UnityEngine.Vector3 targetPos = (speed * targetTime * dir.normalized) + curPos;
+            req.Movement.DestLocation = new()
+            {
+                Location = NetUtil.ClientPosToSvrLoc(targetPos),
+                Stamp = req.Movement.CurLocation.Stamp + ((long)targetTime * TimeDefine.S_2_MS)
+            };
+        }
+        MLog.Debug(eLogTag.move, $"req move ={req.Movement}");
         SendAction<UpdateSelfLocationAction>(req);
     }
 

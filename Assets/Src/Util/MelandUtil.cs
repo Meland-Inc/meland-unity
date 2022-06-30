@@ -21,4 +21,24 @@ public static class MelandUtil
         // Return the hexadecimal string.
         return sBuilder.ToString();
     }
+
+    /// <summary>
+    /// 一个中文长度为2，英文长度为1，其他长度为0.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
+    public static int GetTextNameLen(string name)
+    {
+        int len = 0;
+        for (int i = 0; i < name.Length; i++)
+        {
+            len += IsChinese(name[i]) ? 2 : 1;
+        }
+        return len;
+    }
+
+    public static bool IsChinese(char c)
+    {
+        return c is >= (char)0x4E00 and <= (char)0x9FA5; // 根据字符取汉字
+    }
 }

@@ -1,7 +1,6 @@
 using System.IO;
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-14 17:37:32
  * @LastEditors: mangit
  * @Description: 创角界面
  * @Date: 2022-06-06 19:54:10
@@ -13,10 +12,12 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System;
 using UnityEngine;
+using System.Text;
 
 public class FormCreateRole : FGUIForm
 {
     public const string CREATE_ROLE_ASSET_UID = "CREATE_ROLE_ASSET_UID";
+    private const int MAX_NAME_LEN = 14;
     private GLoader _ladLoading;
     private GLoader _lock;
     private GTextField _tfRoleName;
@@ -285,7 +286,8 @@ public class FormCreateRole : FGUIForm
             return false;
         }
 
-        if (GetNameLength(name) > 14)
+        int nameLen = MelandUtil.GetTextNameLen(name);
+        if (nameLen > MAX_NAME_LEN)
         {
             _tfError.text = "名字长度不能超过14个字符";
             _tfError.visible = true;
@@ -293,11 +295,6 @@ public class FormCreateRole : FGUIForm
         }
 
         return true;
-    }
-
-    private int GetNameLength(string name)
-    {
-        return name.Replace(@"[\u0391-\uFFE5]", "aa").Length;
     }
 
     private void OnClickSexy()

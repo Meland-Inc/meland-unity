@@ -1,6 +1,10 @@
 public class EntityDefine
 {
     /// <summary>
+    /// 为了能和美术场景预览使用同一个预制件脚本配置 主角的放在resouce下当做配置同步加载上来
+    /// </summary>
+    public const string MAIN_PLAYER_ROLE_SPECIAL_PREFAB_PATH = "prefab/MainPlayerRole";
+    /// <summary>
     /// 默认玩家移动速度
     /// </summary>
     public const float DEFINE_PLAYER_MOVE_SPEED = 3f;
@@ -13,7 +17,7 @@ public class EntityDefine
     /// </summary>
     public const string TERRAIN_UNIT_PREFAB_ASSET = "TerrainUnitModel.prefab";
     /// <summary>
-    /// 玩家预制件
+    /// 玩家角色预制件
     /// </summary>
     public const string PLAYER_ROLE_PREFAB_ASSET = "PlayerRole.prefab";
 

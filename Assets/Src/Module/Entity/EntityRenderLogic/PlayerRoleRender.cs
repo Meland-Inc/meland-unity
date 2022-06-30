@@ -33,7 +33,6 @@ public class PlayerRoleRender : SceneEntityRenderBase
 
         _spineAnimationCpt = gameObject.AddComponent<SpineAnimationCpt>();
         _spineAnimationCpt.Init(_avatar2D.SkeletonAnimation);
-
     }
 
     protected override void OnRecycle()

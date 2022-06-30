@@ -17,20 +17,20 @@ public class UpdateSelfLocationAction : GameChannelNetMsgRActionBase<UpdateSelfL
             EntityType = EntityType.EntityTypePlayer,
             CurLocation = new()
             {
-                Location = NetUtil.ClientPosToSvrLoc(curPos),
+                Location = NetUtil.ClientToSvrLoc(curPos),
                 Stamp = TimeUtil.GetTimeStamp(),
             },
             DestLocation = null,
             Type = movementType,
-            Dir = NetUtil.ClienToSvrVector3(dir)
+            Dir = NetUtil.ClientToSvrDir(dir)
         };
         if (!speed.ApproximatelyEquals(0))
         {
             UnityEngine.Vector3 targetPos = (speed * targetTime * dir.normalized) + curPos;
             req.Movement.DestLocation = new()
             {
-                Location = NetUtil.ClientPosToSvrLoc(targetPos),
-                Stamp = req.Movement.CurLocation.Stamp + ((long)targetTime * TimeDefine.S_2_MS)
+                Location = NetUtil.ClientToSvrLoc(targetPos),
+                Stamp = req.Movement.CurLocation.Stamp + (long)(targetTime * TimeDefine.S_2_MS)
             };
         }
         MLog.Debug(eLogTag.move, $"req move ={req.Movement}");

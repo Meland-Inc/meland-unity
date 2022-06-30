@@ -11,7 +11,7 @@ public static class NetUtil
     /// </summary>
     /// <param name="location"></param>
     /// <returns></returns>
-    public static Vector3 SvrLocToClient(MelandGame3.EntityLocation location)
+    public static Vector3 SvrToClientLoc(MelandGame3.EntityLocation location)
     {
         return new Vector3(location.Loc.X, location.Loc.Y, location.Loc.Z);
     }
@@ -21,7 +21,7 @@ public static class NetUtil
     /// </summary>
     /// <param name="clientPos"></param>
     /// <returns></returns>
-    public static MelandGame3.EntityLocation ClientPosToSvrLoc(Vector3 clientPos)
+    public static MelandGame3.EntityLocation ClientToSvrLoc(Vector3 clientPos)
     {
         return new MelandGame3.EntityLocation()
         {
@@ -58,13 +58,40 @@ public static class NetUtil
     }
 
     /// <summary>
-    /// 服务器方向向量转客户端
+    /// 服务器方向向量转客户端 返回必不为空或者长度为0
     /// </summary>
     /// <param name="svrDir"></param>
     /// <returns></returns>
-    public static Vector3 SvrDirToClient(MelandGame3.Vector3 svrDir)
+    public static Vector3 SvrToClientDir(MelandGame3.Vector3 svrDir)
     {
-        return svrDir == null ? Vector3.back : SvrToClientVector3(svrDir);
+        if (svrDir == null)
+        {
+            return Vector3.back;
+        }
+
+        if (svrDir.X.ApproximatelyEquals(0) && svrDir.Y.ApproximatelyEquals(0) && svrDir.Z.ApproximatelyEquals(0))
+        {
+            return Vector3.back;
+        }
+
+        return SvrToClientVector3(svrDir);
+    }
+
+    /// <summary>
+    /// 客户端方向向量转服务器
+    /// </summary>
+    /// <param name="clientDir"></param>
+    /// <returns></returns>
+    public static MelandGame3.Vector3 ClientToSvrDir(Vector3 clientDir)
+    {
+        return clientDir == null
+            ? new MelandGame3.Vector3()
+            {
+                X = 0,
+                Y = 0,
+                Z = -1
+            }
+            : ClienToSvrVector3(clientDir);
     }
 
     /// <summary>

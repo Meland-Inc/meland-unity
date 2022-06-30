@@ -1,8 +1,6 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 11:04:31
- * @LastEditTime: 2022-06-06 17:20:19
- * @LastEditors: xiang huan
  * @Description: runtime 相关定义
  * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimeDefine.cs
  * 
@@ -21,7 +19,7 @@ public sealed class RuntimeDefine
         QuizCreateRoom = 1003,
         QuizCreateFight = 1004,
         TWebViewEnableMode = 1005,
-
+        TUserAsset = 1006,
     };
 
     public enum eEgretEnableMode

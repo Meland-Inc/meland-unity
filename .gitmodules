@@ -1,7 +1,3 @@
-[submodule "Assets/Thirdparty/UnityGameFramework"]
-	path = Assets/Thirdparty/UnityGameFramework
-	url = https://github.com/Meland-Inc/UnityGameFramework.git
-	branch = meland-main
 [submodule "Assets/Thirdparty/Fairygui"]
 	path = Assets/Thirdparty/Fairygui
 	url = https://github.com/Meland-Inc/FairyGUI-unity.git

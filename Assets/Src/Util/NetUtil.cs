@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Bian;
 
@@ -111,5 +112,42 @@ public static class NetUtil
             MLog.Error(eLogTag.map, "not support rc already");
             return (c, r);
         }
+    }
+
+    /// <summary>
+    /// 将服务器RCIndex转换成客户端坐标
+    /// </summary>
+    /// <param name="rcIndex"></param>
+    /// <returns></returns>
+    public static (float x, float z) RCIndexToXZ(int rcIndex)
+    {
+        (int r, int c) = RCIndexToRC(rcIndex);
+        return RCToXZ(r, c);
+    }
+
+    /// <summary>
+    /// 将服务器RCIndex转换成RC
+    /// </summary>
+    /// <param name="rcIndex"></param>
+    /// <returns></returns>
+    public static (int r, int c) RCIndexToRC(int rcIndex)
+    {
+        int row = Mathf.FloorToInt(rcIndex / DataManager.Map.MapColTileNum) - DataManager.Map.MapOffsetRowTileNum;
+        int col = (rcIndex % DataManager.Map.MapColTileNum) - DataManager.Map.MapOffsetCowTileNum;
+        return (row, col);
+    }
+
+    //将服务器rc转换成客户端坐标key
+    public static ulong RCToXZKey(float r, float c)
+    {
+        (float x, float z) = RCToXZ(r, c);
+        return MathUtil.TwoIntToUlong((int)x, (int)z);
+    }
+
+    //将服务器rc转换成客户端坐标key
+    public static ulong RCIndexToXZKey(int rcIndex)
+    {
+        (int r, int c) = RCIndexToRC(rcIndex);
+        return RCToXZKey(r, c);
     }
 }

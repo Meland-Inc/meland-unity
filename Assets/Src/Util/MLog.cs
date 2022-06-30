@@ -17,6 +17,7 @@ public enum eLogTag
     test,
     asset,
     avatar,
+    territory,
 }
 
 /// <summary>

@@ -28,11 +28,6 @@ public class LoginCenter : GameFrameworkComponent
         LoginChannel.OnLoginSuccess += OnLoginSuccess;
     }
 
-    public void LoginWithToken(string token)
-    {
-        LoginChannel.LoginWithToken(token);
-    }
-
     public void CheckRole()
     {
         MLog.Info(eLogTag.login, "check role");
@@ -56,11 +51,6 @@ public class LoginCenter : GameFrameworkComponent
         // SigninPlayerAction.Req(PlayerID);
     }
 
-    public void ReqLogout()
-    {
-        // LogoutAction.Req();
-    }
-
     private string GetGameWSUrl()
     {
         LoginAuthData data = LoginAuthData.Create();
@@ -76,7 +66,6 @@ public class LoginCenter : GameFrameworkComponent
     public void EndLogin()
     {
         MLog.Info(eLogTag.login, $"end login,login channel:{LoginChannel.Channel}");
-        LoginChannel.End();
     }
 
     public void OnLoginSuccess()

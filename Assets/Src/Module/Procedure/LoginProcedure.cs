@@ -27,7 +27,6 @@ public class LoginProcedure : ProcedureBase
 
         Login.OnCheckRoleInfo -= OnCheckRoleInfo;
         Login.OnSignPlayer -= OnSignPlayer;
-        Login.EndLogin();
         base.OnLeave(procedureOwner, isShutdown);
     }
 

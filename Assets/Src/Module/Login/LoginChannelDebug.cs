@@ -8,25 +8,9 @@ public class LoginChannelDebug : LoginChannelBase
         LoginAuthData data = LoginAuthData.Create();
         return $"{data.Token} {data.DataHash} {UserID} {data.TimeStamp}";
     }
-
-    public override void Logout()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Register(string account, string userName, string password)
-    {
-        throw new System.NotImplementedException();
-    }
-
     public override void Start()
     {
         _ = UICenter.OpenUIForm<FormLoginDebug>(this);
-    }
-
-    public override void End()
-    {
-        MLog.Info(eLogTag.login, "On debug login channel end");
     }
 
     public void ConfirmLogin(string userID)

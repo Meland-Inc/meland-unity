@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-16 19:57:48
+ * @LastEditTime: 2022-06-30 22:33:34
  * @LastEditors: mangit
  * @Description: 背包更新协议
  * @Date: 2022-06-16 17:39:06
@@ -22,7 +22,7 @@ public class TItemUpdatedAction : GameChannelNetMsgTActionBase<TItemUpdateRespon
             return false;
         }
 
-        DataManager.Backpack.UpdateData(BackpackUtil.SvrItem2ClientItem(rsp.Items));
+        DataManager.Backpack.UpdateData(rsp.Items);
         return true;
     }
 }

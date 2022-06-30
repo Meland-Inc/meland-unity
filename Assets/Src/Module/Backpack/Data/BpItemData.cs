@@ -1,22 +1,15 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-17 17:18:33
+ * @LastEditTime: 2022-06-30 22:40:21
  * @LastEditors: mangit
  * @Description: 背包数据
  * @Date: 2022-06-15 18:52:50
  * @FilePath: /Assets/Src/Module/Backpack/Data/BpItemData.cs
  */
 using Bian;
-using UnityEngine;
 
 public abstract class BpItemData
 {
-
-    /// <summary>
-    /// 数据索引
-    /// </summary>
-    /// <value></value>
-    public int DataIndex { get; private set; }
     /// <summary>
     /// 服务器数据
     /// </summary>
@@ -35,8 +28,8 @@ public abstract class BpItemData
 
     public abstract void UseFunc();
 
-    public void SetDataIndex(int index)
+    public virtual void UpdateItem(Item item)
     {
-        DataIndex = index;
+        ItemData = item;
     }
 }

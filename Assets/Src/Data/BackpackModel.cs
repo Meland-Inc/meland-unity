@@ -45,7 +45,6 @@ public class BackpackModel : DataModelBase
         for (int i = 0; i < items.Length; i++)
         {
             BpNftItem item = items[i];
-            item.SetDataIndex(i);
             ItemList.Add(item);
             ItemDic[item.Id] = item;
             if (item is BpWearableNftItem wearableItem)
@@ -68,30 +67,35 @@ public class BackpackModel : DataModelBase
     /// 背包数据更新
     /// </summary>
     /// <param name="items"></param>
-    public void UpdateData(BpNftItem[] items)
+    public void UpdateData(IEnumerable<Item> items)
     {
-        MLog.Info(eLogTag.backpack, $"update backpack data, count:{items.Length}");
+        int updateCount = 0;
         bool isWearableDataUpdated = false;
-        foreach (BpNftItem item in items)
+        foreach (Item item in items)
         {
-            BpNftItem oldItem = ItemDic[item.Id];
-            item.SetDataIndex(oldItem.DataIndex);
-            ItemDic[item.Id] = item;
-            ItemList[item.DataIndex] = item;
-            if (item is BpWearableNftItem newWearableItem && oldItem is BpWearableNftItem oldWearableItem)
+            if (!ItemDic.ContainsKey(item.Id))
             {
-                if (newWearableItem.AvatarPos != AvatarPosition.AvatarPositionNone)//更新的部位不为none，说明当前位置有装备
+                MLog.Info(eLogTag.backpack, $"update item error,don't exist item, id:{item.Id}");
+                continue;
+            }
+
+            updateCount++;
+            BpNftItem updatedItem = ItemDic[item.Id];
+            updatedItem.UpdateItem(item);
+            if (updatedItem is BpWearableNftItem updatedWearableItem)
+            {
+                if (item.AvatarPos != AvatarPosition.AvatarPositionNone)//更新的部位不为none，说明当前位置有装备
                 {
-                    WearableItemDic[newWearableItem.AvatarPos] = newWearableItem;
+                    WearableItemDic[item.AvatarPos] = updatedWearableItem;
                 }
-                else if (WearableItemDic.ContainsKey(oldWearableItem.AvatarPos))//更新的部位为none，说明当前位置没有装备，检测是否有旧的装备，有则删除
+                else if (WearableItemDic.ContainsKey(updatedWearableItem.AvatarPos))//更新的部位为none，说明当前位置没有装备，检测是否有旧的装备，有则删除
                 {
-                    _ = WearableItemDic.Remove(oldWearableItem.AvatarPos);
+                    _ = WearableItemDic.Remove(updatedWearableItem.AvatarPos);
                 }
                 isWearableDataUpdated = true;
             }
         }
-
+        MLog.Info(eLogTag.backpack, $"update backpack data, count:{updateCount}");
         SceneModule.BackpackMgr.OnDataUpdated.Invoke();
         if (isWearableDataUpdated)
         {
@@ -109,7 +113,6 @@ public class BackpackModel : DataModelBase
         for (int i = 0; i < items.Length; i++)
         {
             BpNftItem item = items[i];
-            item.SetDataIndex(ItemList.Count + i);
             ItemDic[item.Id] = item;
             ItemList.Add(item);
         }
@@ -132,14 +135,10 @@ public class BackpackModel : DataModelBase
                 continue;
             }
 
-            //item从ItemList后，把后面的数据索引Index往前移
-            for (int i = item.DataIndex; i < ItemList.Count; i++)
-            {
-                ItemList[i].SetDataIndex(ItemList[i].DataIndex - 1);
-            }
-            ItemList.RemoveAt(item.DataIndex);
-            _ = ItemDic.Remove(id);
+            _ = ItemDic.Remove(id);//从字典删除
+            _ = ItemList.Remove(item);//从列表删除
         }
+
         SceneModule.BackpackMgr.OnDataRemoved.Invoke();
     }
 

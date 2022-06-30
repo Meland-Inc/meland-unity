@@ -29,6 +29,16 @@ public class BpNftItem : BpItemData
         InitNFTData(nftData);
     }
 
+    /// <summary>
+    /// 更新nft数据
+    /// </summary>
+    /// <param name="item"></param>
+    public override void UpdateItem(Item item)
+    {
+        ItemData = item;
+        InitNFTData(JsonUtility.FromJson<NFTData>(item.NftJsonData));
+    }
+
     private void InitNFTData(NFTData nftData)
     {
         _nftData = nftData;

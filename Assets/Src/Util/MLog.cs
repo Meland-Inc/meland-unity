@@ -25,6 +25,7 @@ public enum eLogTag
     role,
     craft,
     recharge,
+    move,
 }
 
 /// <summary>

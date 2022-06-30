@@ -1,5 +1,5 @@
 using UnityEngine;
-using Bian;
+using MelandGame3;
 
 /// <summary>
 /// 网络输入移动
@@ -11,7 +11,7 @@ public class NetInputMove : MonoBehaviour
     /// </summary>
     /// <param name="location"></param>
     /// <param name="dir">朝向向量 绕Y轴旋转的朝向</param>
-    public void ForcePosition(EntityLocation location, VectorXY dir)
+    public void ForcePosition(EntityLocation location, MelandGame3.Vector3 dir)
     {
         transform.position = NetUtil.SvrLocToClient(location);
         transform.forward = NetUtil.SvrDirToClient(dir);

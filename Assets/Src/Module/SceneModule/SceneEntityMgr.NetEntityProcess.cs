@@ -24,7 +24,7 @@ public partial class SceneEntityMgr : SceneModuleBase
         MainPlayerMoveInput moveInput = sceneRole.GetComponent<MainPlayerMoveInput>();
         moveInput.MoveSpeed = sceneRole.GetComponent<EntityMoveData>().Speed;
         moveInput.PushDownForce = UnityEngine.Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
-        sceneRole.GetComponent<MoveNetRequest>().enabled = true;
+        sceneRole.GetComponent<NetReqMove>().enabled = true;
 
         PlayerRoleAvatarData avatarData = sceneRole.AddComponent<PlayerRoleAvatarData>();
         avatarData.SetRoleCfgID(playerData.RoleId);

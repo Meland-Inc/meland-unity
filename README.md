@@ -63,7 +63,9 @@ meland client main project make by unity
 
 #### devTool
 - compile proto cs
-  - Find 'devtool' in the Unity menu
-  - Select 'proto' option to open the window
+  - Adding dependency tools
+    - Find 'NuGet' in the Unity menu,click 'Restore Packages' option
+  - Enable the execution permission of the mac compilation tool protoc on "meland-unity/Packages/Google.Protobuf.Tools.3.20.1/tools/macosx_x64/protoc"
+  - Find 'devtool' in the Unity menu,click 'proto' option to open the window
   - Select the proto source file path, for example: .../bian_doc/pbmessage
   - click '开始转换'

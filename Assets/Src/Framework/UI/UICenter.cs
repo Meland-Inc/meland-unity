@@ -46,12 +46,21 @@ public class UICenter : GameFrameworkComponent
 
     public int GetFormCacheID(string assetName)
     {
+        int id = CheckFormCacheID(assetName);
+        if (id == -1)
+        {
+            MLog.Error(eLogTag.ui, "can't find form cache id,assetName: " + assetName);
+        }
+        return id;
+    }
+
+    public int CheckFormCacheID(string assetName)
+    {
         if (_dicFormCacheID.TryGetValue(assetName, out int value))
         {
             return value;
         }
 
-        MLog.Error(eLogTag.ui, "can't find form cache id,assetName: " + assetName);
         return -1;
     }
 
@@ -160,17 +169,18 @@ public class UICenter : GameFrameworkComponent
     /// <returns>int 窗体的序列号</returns>
     public static int OpenUIForm<T>(eUIGroup group, object userData) where T : FGUIForm, new()
     {
-        if (BasicModule.UICenter.CheckFormIsOpen<T>())
-        {
-            MLog.Warning(eLogTag.ui, "open form repeatedly, formName: " + typeof(T).Name);
-            return -1;
-        }
-
         string assetName = BasicModule.UICenter.GetFormAsset<T>();
         if (string.IsNullOrEmpty(assetName))
         {
             MLog.Error(eLogTag.ui, "asset name is empty,formID: " + assetName);
             return -1;
+        }
+
+        int cacheID = BasicModule.UICenter.CheckFormCacheID(assetName);
+        if (cacheID != -1)
+        {
+            MLog.Warning(eLogTag.ui, "open form repeatedly, formName: " + typeof(T).Name);
+            return cacheID;
         }
 
         UIComponent uiCom = GFEntry.UI;

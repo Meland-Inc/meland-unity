@@ -44,6 +44,11 @@ public class BackpackModel : DataModelBase
 
         for (int i = 0; i < items.Length; i++)
         {
+            if (ItemDic.ContainsKey(items[i].Id))
+            {
+                MLog.Error(eLogTag.backpack, $"backpack data init error, bpId:{items[i].Id} is exist");
+                continue;
+            }
             BpNftItem item = items[i];
             ItemList.Add(item);
             ItemDic[item.Id] = item;
@@ -112,6 +117,11 @@ public class BackpackModel : DataModelBase
         MLog.Info(eLogTag.backpack, $"add backpack data, count:{items.Length}");
         for (int i = 0; i < items.Length; i++)
         {
+            if (ItemDic.ContainsKey(items[i].Id))
+            {
+                MLog.Warning(eLogTag.backpack, $"add item error,exist item, id:{items[i].Id}");
+                continue;
+            }
             BpNftItem item = items[i];
             ItemDic[item.Id] = item;
             ItemList.Add(item);
@@ -128,10 +138,10 @@ public class BackpackModel : DataModelBase
         MLog.Info(eLogTag.backpack, $"remove backpack data, count:{idList.Length}");
         foreach (string id in idList)
         {
-            BpNftItem item = ItemDic[id];
+            _ = ItemDic.TryGetValue(id, out BpNftItem item);
             if (item == null)
             {
-                MLog.Error(eLogTag.backpack, $"remove backpack data, id:{id} not found");
+                MLog.Warning(eLogTag.backpack, $"remove backpack data, id:{id} not found");
                 continue;
             }
 

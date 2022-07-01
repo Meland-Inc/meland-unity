@@ -224,10 +224,11 @@ public class FormCreateRole : FGUIForm
             try
             {
                 string fileName = Path.Combine(AssetDefine.PATH_ROLE_NAME, $"randomName_{sex}.txt");
-                TextAsset textAsset = await GFEntry.Resource.AwaitLoadAsset<TextAsset>(fileName);
+                TextAsset textAsset = await BasicModule.Asset.LoadAsset<TextAsset>(fileName, GetHashCode());
                 string fileText = textAsset.text;
                 string[] libList = fileText.Split('\n');
                 res[sex] = libList;
+                BasicModule.Asset.UnloadAsset<TextAsset>(fileName, GetHashCode());
             }
             catch (Exception e)
             {

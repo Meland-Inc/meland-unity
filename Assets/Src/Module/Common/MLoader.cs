@@ -1,6 +1,7 @@
+using System;
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-14 21:07:27
+ * @LastEditTime: 2022-07-01 15:56:37
  * @LastEditors: mangit
  * @Description: fairygui GLoader 的扩展,M代表Meland
  * @Date: 2022-06-09 10:22:49
@@ -18,14 +19,14 @@ public class MLoader : GLoader
 
     protected override void FreeExternal(NTexture texture)
     {
-        GFEntry.Resource.UnloadAsset(url);
+        BasicModule.Asset.UnloadAsset<Texture2D>(url, GetHashCode());
     }
 
     private async void MLoadExternal()
     {
         try
         {
-            Texture2D tex = await GFEntry.Resource.AwaitLoadAsset<Texture2D>(url);
+            Texture2D tex = await BasicModule.Asset.LoadAsset<Texture2D>(url, GetHashCode());
             onExternalLoadSuccess(new NTexture(tex));
         }
         catch

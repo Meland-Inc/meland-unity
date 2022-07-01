@@ -78,11 +78,11 @@ public class ProtoHandler
 
             string content = "";
             content += "syntax = 'proto3';\r\n";
-            content += "package Bian;\r\n";
+            content += "package MelandGame3;\r\n";
             eleContent = eleContent.Replace("syntax = 'proto3';", "");
             eleContent = eleContent.Replace("syntax = \"proto3\";", "");
-            eleContent = eleContent.Replace("option go_package Bian;", "");
-            eleContent = eleContent.Replace("package Bian;", "");
+            eleContent = eleContent.Replace("option go_package MelandGame3;", "");
+            eleContent = eleContent.Replace("package MelandGame3;", "");
 
             content += eleContent + "\n";
 

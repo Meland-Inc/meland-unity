@@ -4,7 +4,7 @@ using HttpPacketDefine;
 using Bian;
 using UnityEngine;
 using RoleDefine;
-
+using System;
 public class CreateRoleAction : AccountHttpActionBase<CreatePlayerReq, AccountRsp<CreatePlayerRspInfo>>
 {
     protected override string Api => "createplayer";
@@ -38,13 +38,47 @@ public class CreateRoleAction : AccountHttpActionBase<CreatePlayerReq, AccountRs
             glove = features[eRoleFeaturePart.glove],
             pants = features[eRoleFeaturePart.pants],
             face = features[eRoleFeaturePart.face],
-            // eye = features[i++],
-            // mouth = features[i++],
-            // eyebrow = features[i++],
             shoes = features[eRoleFeaturePart.shoes],
         };
         req.feature = JsonUtility.ToJson(playerFeature);
         req.osType = (int)OSType.OstypeMac;//todo:
         SendAction<CreateRoleAction>(req);
     }
+}
+
+public class CreatePlayerReq
+{
+    public int roleId;
+    public string name;
+    public string gender;
+    public string feature;
+    public int osType;
+    public int platform;
+    public string roleIcon;
+
+}
+
+[Serializable]
+public class CreatePlayerRspInfo
+{
+    public string Id;
+    public string Gender;
+    public string Name;
+    public string RoleIcon;
+    public string RoleId;
+    public string Feature;
+}
+
+[Serializable]
+public class RoleFeature
+{
+    public int hair;
+    public int clothes;
+    public int glove;
+    public int pants;
+    public int face;
+    // public int eye;
+    // public int mouth;
+    // public int eyebrow;
+    public int shoes;
 }

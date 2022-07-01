@@ -24,8 +24,13 @@ public class SceneModule : MonoBehaviour
     /// <summary>
     /// 背包管理
     /// </summary>
+    /// 
     public static BackpackMgr BackpackMgr;
-
+    /// <summary>
+    /// 角色等级
+    /// </summary>
+    /// <value></value>
+    public static RoleLevelModule RoleLevel { get; private set; }
     private void Awake()
     {
         if (Root != null)
@@ -44,6 +49,7 @@ public class SceneModule : MonoBehaviour
         EntityMgr = null;
         SceneRender = null;
         BackpackMgr = null;
+        RoleLevel = null;
     }
 
     /// <summary>
@@ -54,5 +60,6 @@ public class SceneModule : MonoBehaviour
         EntityMgr = Root.AddComponent<SceneEntityMgr>();
         SceneRender = Root.AddComponent<SceneRender>();
         BackpackMgr = Root.AddComponent<BackpackMgr>();
+        RoleLevel = Root.AddComponent<RoleLevelModule>();
     }
 }

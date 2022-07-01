@@ -1,4 +1,3 @@
-using System.Linq.Expressions;
 /*
  * @Author: mangit
  * @LastEditors: mangit
@@ -24,10 +23,11 @@ public class UpgradeItemSlotAction : GameChannelNetMsgRActionBase<UpgradeItemSlo
 
         //todo:show upgrade success tips
         DataManager.MainPlayer.SetItemSlot(rsp.Slots);
+        SceneModule.RoleLevel.OnSlotUpgraded.Invoke(req.Position);
         return true;
     }
 
-    protected void Req(AvatarPosition pos)
+    public static void Req(AvatarPosition pos)
     {
         UpgradeItemSlotRequest req = GenerateReq();
         req.Position = pos;

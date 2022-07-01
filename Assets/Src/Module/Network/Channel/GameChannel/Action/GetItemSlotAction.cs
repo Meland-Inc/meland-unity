@@ -25,7 +25,7 @@ public class GetItemSlotAction : GameChannelNetMsgRActionBase<GetItemSlotRequest
         return true;
     }
 
-    protected void Req(AvatarPosition pos)
+    public static void Req()
     {
         GetItemSlotRequest req = GenerateReq();
         SendAction<GetItemSlotAction>(req);

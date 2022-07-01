@@ -46,4 +46,11 @@ public static class Message
     public static Action<string> UpdateTerritoryPlayerAreaData = delegate { };
     public static Action<eTerritoryBorderRenderMode> UpdateTerritoryBorderRenderMode = delegate { };
     #endregion
+
+    #region 角色
+    /// <summary>
+    /// 角色属性更新
+    /// </summary>
+    public static Action<EntityProfileField> RoleProfileUpdated = delegate { };
+    #endregion
 }

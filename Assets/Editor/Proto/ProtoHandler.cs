@@ -114,7 +114,7 @@ public class ProtoHandler
             throw new Exception($"protoc 编译工具不存在 ${protoc}");
         }
 
-        CommandTool.ProcessCommand(protoc, $"--proto_path={Constant.TempOutPbmessageDir} {Constant.TempOutPbmessageDir}{Constant.Spt}*.proto --csharp_out {Constant.PbmessageCsPath}");
+        CommandTool.ProcessCommand(protoc, $"--proto_path={Constant.TempOutPbmessageDir} \"{Constant.TempOutPbmessageDir}{Constant.Spt}*.proto\" --csharp_out {Constant.PbmessageCsPath}");
 
         Debug.Log($".*proto文件: 生成最终文件 Pbmessage.cs => {Constant.PbmessageCsPath}");
     }

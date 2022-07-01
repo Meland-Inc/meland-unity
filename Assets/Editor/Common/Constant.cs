@@ -18,6 +18,10 @@ public static class Constant
     public static readonly string ProtocWindow = ProjectPath + $"{Spt}Packages{Spt}Google.Protobuf.Tools.3.20.1{Spt}tools{Spt}windows_x64{Spt}protoc.exe";
     // mac protoc 解析器
     public static readonly string ProtocMac = ProjectPath + $"{Spt}Packages{Spt}Google.Protobuf.Tools.3.20.1{Spt}tools{Spt}macosx_x64{Spt}protoc";
+    // 通用的用于执行命令的sh文件
+    public static readonly string CommonHandleSh = AssetsPath + $"{Spt}Editor{Spt}Common{Spt}CommonBash.sh";
+    // 系统的 /bin/sh 命令
+    public static readonly string BinSh = $"{Spt}bin{Spt}sh";
 
     // 用户预设key
     public enum ePlayerPrefsKey

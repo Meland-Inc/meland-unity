@@ -50,5 +50,5 @@ public class EntityDefine
     /// <summary>
     /// 通用动画名 run
     /// </summary>
-    public const string ANIM_NAME_RUN = "run";
+    public const string ANIM_NAME_RUN = "walk";
 }

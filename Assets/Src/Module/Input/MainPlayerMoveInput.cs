@@ -78,5 +78,11 @@ public class MainPlayerMoveInput : MonoBehaviour, IReqMoveInfo
         _isMoving = moving;
 
         //TODO:临时的切动画
+        SceneEntity mainPlayer = SceneModule.EntityMgr.GetSceneEntity(DataManager.MainPlayer.RoleID);
+        if (mainPlayer.Surface)
+        {
+            string animName = _isMoving ? EntityDefine.ANIM_NAME_RUN : EntityDefine.ANIM_NAME_IDLE;
+            mainPlayer.Surface.GetComponent<IAnimationCpt>().PlayAnim(animName, true);
+        }
     }
 }

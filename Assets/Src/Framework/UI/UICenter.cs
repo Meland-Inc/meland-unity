@@ -55,6 +55,11 @@ public class UICenter : GameFrameworkComponent
         return -1;
     }
 
+    public bool CheckFormIsOpen<T>()
+    {
+        return _dicFormCacheID.ContainsKey(typeof(T).Name);
+    }
+
     public void SetFormCacheID<T>(int serialID) where T : FGUIForm, new()
     {
         SetFormCacheID(typeof(T).Name, serialID);
@@ -62,6 +67,11 @@ public class UICenter : GameFrameworkComponent
 
     public void SetFormCacheID(string formName, int serialID)
     {
+        if (_dicFormCacheID.ContainsKey(formName))
+        {
+            MLog.Warning(eLogTag.ui, "form cache id is exist, formName: " + formName);
+            return;
+        }
         _dicFormCacheID.Add(formName, serialID);
     }
 
@@ -150,6 +160,12 @@ public class UICenter : GameFrameworkComponent
     /// <returns>int 窗体的序列号</returns>
     public static int OpenUIForm<T>(eUIGroup group, object userData) where T : FGUIForm, new()
     {
+        if (BasicModule.UICenter.CheckFormIsOpen<T>())
+        {
+            MLog.Warning(eLogTag.ui, "open form repeatedly, formName: " + typeof(T).Name);
+            return -1;
+        }
+
         string assetName = BasicModule.UICenter.GetFormAsset<T>();
         if (string.IsNullOrEmpty(assetName))
         {

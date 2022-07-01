@@ -20,6 +20,7 @@ public enum eLogTag
     territory,
     resource,
     createRole,
+    backpack,
 }
 
 /// <summary>

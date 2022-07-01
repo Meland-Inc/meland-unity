@@ -21,6 +21,11 @@ public class SceneModule : MonoBehaviour
     /// </summary>
     public static SceneRender SceneRender;
 
+    /// <summary>
+    /// 背包管理
+    /// </summary>
+    public static BackpackMgr BackpackMgr;
+
     private void Awake()
     {
         if (Root != null)
@@ -34,6 +39,7 @@ public class SceneModule : MonoBehaviour
 
         EntityMgr = Root.AddComponent<SceneEntityMgr>();
         SceneRender = Root.AddComponent<SceneRender>();
+        BackpackMgr = Root.AddComponent<BackpackMgr>();
     }
 
     private void OnDestroy()
@@ -41,5 +47,6 @@ public class SceneModule : MonoBehaviour
         Root = null;
         EntityMgr = null;
         SceneRender = null;
+        BackpackMgr = null;
     }
 }

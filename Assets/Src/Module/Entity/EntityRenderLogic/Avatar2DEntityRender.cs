@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class PlayerRoleRender : SceneEntityRenderBase
+/// <summary>
+/// spine 2D动画的实体渲染逻辑
+/// </summary>
+public class Avatar2DEntityRender : SceneEntityRenderBase
 {
     public TargetSameDirection TargetSameDirection;
     private Avatar2D _avatar2D;
@@ -24,7 +27,7 @@ public class PlayerRoleRender : SceneEntityRenderBase
         }
         catch (System.Exception e)
         {
-            MLog.Error(eLogTag.entity, $"PlayerRoleRender init error={e}");
+            MLog.Error(eLogTag.entity, $"Avatar2DEntityRender init error={e}");
             return;
         }
 
@@ -33,6 +36,8 @@ public class PlayerRoleRender : SceneEntityRenderBase
 
         _spineAnimationCpt = gameObject.AddComponent<SpineAnimationCpt>();
         _spineAnimationCpt.Init(_avatar2D.SkeletonAnimation);
+
+        _spineAnimationCpt.PlayAnim(EntityDefine.ANIM_NAME_IDLE, true);
     }
 
     protected override void OnRecycle()

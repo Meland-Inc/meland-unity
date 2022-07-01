@@ -1,3 +1,9 @@
+/** 
+ * @Author xiangqian
+ * @Description 
+ * @Date 2022-07-06 11:55:33
+ * @FilePath /Assets/Src/Module/Entity/Data/EntityConfigData.cs
+ */
 using System.IO;
 using UnityEngine;
 
@@ -18,7 +24,11 @@ public class EntityConfigData : MonoBehaviour, IEntityRenderData
             {
                 return Path.Combine(AssetDefine.PATH_MAP_ELEMENT, AssetConfigPath + AssetDefine.SUFFIX_PREFAB);
             }
-            else//TODO：2d动画的还没接
+            else if (!string.IsNullOrEmpty(_entityCfg.AnimeName))
+            {
+                return Path.Combine(AssetDefine.PATH_ANIM_MAP_ELEMENT, AssetConfigPath + AssetDefine.SUFFIX_PREFAB);
+            }
+            else
             {
                 return Path.Combine(AssetDefine.PATH_SPRITE, "Element", AssetConfigPath + AssetDefine.SUFFIX_SPRITE);
             }

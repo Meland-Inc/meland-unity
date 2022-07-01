@@ -22,7 +22,7 @@ public partial class SceneEntityMgr : SceneModuleBase
         sceneRole.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
 
         MainPlayerMoveInput moveInput = sceneRole.GetComponent<MainPlayerMoveInput>();
-        moveInput.MoveSpeed = sceneRole.GetComponent<EntityMoveData>().Speed;
+        //moveInput.MoveSpeed = sceneRole.GetComponent<EntityMoveData>().Speed;//TODO:测试
         moveInput.PushDownForce = UnityEngine.Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
         sceneRole.GetComponent<NetReqMove>().enabled = true;
 

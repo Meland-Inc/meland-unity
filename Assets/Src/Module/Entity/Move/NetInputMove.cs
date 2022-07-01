@@ -7,7 +7,7 @@ using DG.Tweening;
 /// </summary>
 public class NetInputMove : MonoBehaviour
 {
-    private const float MAX_ALLOW_POSITION_OFFSET = 0.5f;//最大运行位置偏差距离 否则会强拉
+    private const float MAX_ALLOW_POSITION_OFFSET = 1f;//最大运行位置偏差距离 否则会强拉
 
     private MovementType _curMoveType = MovementType.MovementTypeUnknown;
 
@@ -47,7 +47,7 @@ public class NetInputMove : MonoBehaviour
         else
         {
             float duration = (dest.Stamp - cur.Stamp) * TimeDefine.MS_2_S;
-            _ = transform.DOMove(svrDest, duration);
+            _ = transform.DOMove(svrDest, duration).SetEase(Ease.Linear);
         }
 
 

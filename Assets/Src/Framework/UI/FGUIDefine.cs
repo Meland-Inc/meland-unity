@@ -12,5 +12,6 @@ public enum eFUIPackage
 {
     Common,
     Login,
-    Main
+    Main,
+    CreateRole,
 }

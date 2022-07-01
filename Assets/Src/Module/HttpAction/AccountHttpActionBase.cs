@@ -8,7 +8,7 @@ public abstract class AccountHttpActionBase<TReq, TRsp> : HttpChannelNetMsgActio
 
     protected override KeyValuePair<string, string>[] GetHeaders()
     {
-        string token = System.Web.HttpUtility.UrlPathEncode(BasicModule.LoginCenter.LoginChannel.Token);
+        string token = System.Web.HttpUtility.UrlPathEncode(BasicModule.Login.LoginChannel.Token);
         return new[]
         {
             new KeyValuePair<string, string>("channel", "bian_lesson"),

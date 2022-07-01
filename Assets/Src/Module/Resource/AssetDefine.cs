@@ -22,6 +22,8 @@ public static class AssetDefine
     public const string SUFFIX_PREFAB = ".prefab";
     public const string SUFFIX_MUSIC = ".mp3";
     public const string SUFFIX_SOUND_EFFECT = ".wav";
+    public static readonly string PATH_AVATAR_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Avatar");
+    public static readonly string PATH_ROLE_NAME = Path.Combine(PATH_ROOT, "Text/RoleName");
 }
 
 /// <summary>

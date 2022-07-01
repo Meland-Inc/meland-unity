@@ -1,37 +1,22 @@
 public class LoginChannelDebug : LoginChannelBase
 {
     public override LoginDefine.eLoginChannel Channel => LoginDefine.eLoginChannel.DEBUG;
-    public override string Token
-    {
-        get => GetToken();
-        set => SetToken(value);
-    }
-    public override string UserID
-    {
-        get => GetUserID();
-        set => SetUserID(value);
-    }
-    private string _token;
-    private string _userID;
+    public override string Token => GetToken();
 
     private string GetToken()
     {
         LoginAuthData data = LoginAuthData.Create();
         return $"{data.Token} {data.DataHash} {UserID} {data.TimeStamp}";
     }
-
-    private void SetToken(string token)
+    public override void Start()
     {
-        _token = token;
+        _ = UICenter.OpenUIForm<FormLoginDebug>(this);
     }
 
-    private void SetUserID(string id)
+    public void ConfirmLogin(string userID)
     {
-        _userID = id;
-    }
-
-    private string GetUserID()
-    {
-        return _userID;
+        UserID = userID;
+        OnLoginSuccess.Invoke();
+        UICenter.CloseUIForm<FormLoginDebug>();
     }
 }

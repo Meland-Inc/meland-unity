@@ -18,6 +18,8 @@ public enum eLogTag
     asset,
     avatar,
     territory,
+    resource,
+    createRole,
 }
 
 /// <summary>

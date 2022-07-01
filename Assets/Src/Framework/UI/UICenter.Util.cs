@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-15 16:43:42
+ * @LastEditTime: 2022-07-01 16:20:48
  * @LastEditors: mangit
  * @Description: UI 工具类
  * @Date: 2022-06-15 16:19:22
@@ -110,6 +110,13 @@ public partial class UICenter
         {
             MLog.Error(eLogTag.ui, "asset name is empty,formID: " + assetName);
             return -1;
+        }
+
+        int cacheID = BasicModule.UICenter.CheckFormCacheID(assetName);
+        if (cacheID != -1)
+        {
+            MLog.Warning(eLogTag.ui, "open form repeatedly, formName: " + typeof(T).Name);
+            return cacheID;
         }
 
         UIComponent uiCom = GFEntry.UI;

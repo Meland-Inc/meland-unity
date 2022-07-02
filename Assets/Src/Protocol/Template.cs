@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from template.proto</summary>
   public static partial class TemplateReflection {
@@ -24,18 +24,18 @@ namespace Bian {
     static TemplateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg50ZW1wbGF0ZS5wcm90bxIEQmlhbiIrCghJbml0SXRlbRIOCgZpdGVtSWQY",
-            "ASABKAUSDwoHaXRlbU51bRgCIAEoBSLYAQoQVGVtcGxhdGVTZXR0aW5ncxIK",
-            "CgJpZBgBIAEoAxIQCghzY2VuZV9pZBgCIAEoBRINCgVpdGVtcxgDIAMoBRIZ",
-            "ChFib3RfY29kZV90ZW1wbGF0ZRgEIAEoCRIWCg5tYW5vcl90ZW1wbGF0ZRgF",
-            "IAEoBRIWCg5zY2VuZV90ZW1wbGF0ZRgGIAEoCRIkCgxzaG9ydGN1dF9kZWYY",
-            "ByADKAsyDi5CaWFuLkluaXRJdGVtEhgKEG1hcF90ZW1wbGF0ZV90YWcYCCAB",
-            "KAUSDAoEbmFtZRgJIAEoCWIGcHJvdG8z"));
+            "Cg50ZW1wbGF0ZS5wcm90bxILTWVsYW5kR2FtZTMiKwoISW5pdEl0ZW0SDgoG",
+            "aXRlbUlkGAEgASgFEg8KB2l0ZW1OdW0YAiABKAUi3wEKEFRlbXBsYXRlU2V0",
+            "dGluZ3MSCgoCaWQYASABKAMSEAoIc2NlbmVfaWQYAiABKAUSDQoFaXRlbXMY",
+            "AyADKAUSGQoRYm90X2NvZGVfdGVtcGxhdGUYBCABKAkSFgoObWFub3JfdGVt",
+            "cGxhdGUYBSABKAUSFgoOc2NlbmVfdGVtcGxhdGUYBiABKAkSKwoMc2hvcnRj",
+            "dXRfZGVmGAcgAygLMhUuTWVsYW5kR2FtZTMuSW5pdEl0ZW0SGAoQbWFwX3Rl",
+            "bXBsYXRlX3RhZxgIIAEoBRIMCgRuYW1lGAkgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.InitItem), global::Bian.InitItem.Parser, new[]{ "ItemId", "ItemNum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TemplateSettings), global::Bian.TemplateSettings.Parser, new[]{ "Id", "SceneId", "Items", "BotCodeTemplate", "ManorTemplate", "SceneTemplate", "ShortcutDef", "MapTemplateTag", "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.InitItem), global::MelandGame3.InitItem.Parser, new[]{ "ItemId", "ItemNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TemplateSettings), global::MelandGame3.TemplateSettings.Parser, new[]{ "Id", "SceneId", "Items", "BotCodeTemplate", "ManorTemplate", "SceneTemplate", "ShortcutDef", "MapTemplateTag", "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -59,7 +59,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TemplateReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.TemplateReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -294,7 +294,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TemplateReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.TemplateReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -420,15 +420,15 @@ namespace Bian {
 
     /// <summary>Field number for the "shortcut_def" field.</summary>
     public const int ShortcutDefFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Bian.InitItem> _repeated_shortcutDef_codec
-        = pb::FieldCodec.ForMessage(58, global::Bian.InitItem.Parser);
-    private readonly pbc::RepeatedField<global::Bian.InitItem> shortcutDef_ = new pbc::RepeatedField<global::Bian.InitItem>();
+    private static readonly pb::FieldCodec<global::MelandGame3.InitItem> _repeated_shortcutDef_codec
+        = pb::FieldCodec.ForMessage(58, global::MelandGame3.InitItem.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.InitItem> shortcutDef_ = new pbc::RepeatedField<global::MelandGame3.InitItem>();
     /// <summary>
     /// 快捷栏默认物品
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.InitItem> ShortcutDef {
+    public pbc::RepeatedField<global::MelandGame3.InitItem> ShortcutDef {
       get { return shortcutDef_; }
     }
 

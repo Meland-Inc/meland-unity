@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from model.proto</summary>
   public static partial class ModelReflection {
@@ -24,1032 +24,1022 @@ namespace Bian {
     static ModelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgttb2RlbC5wcm90bxIEQmlhbhoJYXN0LnByb3RvGhplbnRpdHlfcHJvZmls",
-            "ZV9maWVsZC5wcm90bxoQdHlwZURlZmluZS5wcm90bxoMd2lkZ2V0LnByb3Rv",
-            "GgltYXAucHJvdG8aC2F1ZGlvLnByb3RvGg9iaWdfd29ybGQucHJvdG8aCml0",
-            "ZW0ucHJvdG8aCmJ1ZmYucHJvdG8itgEKE1BiQmVsbENsYXNzVXNlckluZm8S",
-            "DwoHSGFzaF9pZBgBIAEoCRIOCgZVc2VySWQYAiABKAUSEAoIVXNlcm5hbWUY",
-            "AyABKAkSEQoJUmVhbF9uYW1lGAQgASgJEhAKCFVzZXJUeXBlGAUgASgJEhAK",
-            "CE5pY2tuYW1lGAYgASgJEhAKCEdvbGRfbnVtGAcgASgJEhAKCENvZGVfbnVt",
-            "GAggASgJEhEKCVVzZXJJZFN0chgJIAEoCSJBCgtBY2NvdW50SW5mbxIMCgRk",
-            "YXRhGAEgASgJEhEKCWRhdGFfaGFzaBgCIAEoCRIRCgl0aW1lc3RhbXAYAyAB",
-            "KAkiOQoGU3R1ZmZzEgsKA2NpZBgBIAEoBRIQCghxdWFudGl0eRgCIAEoBRIQ",
-            "CghyYW5kQXR0chgDIAEoCCKEAQoMUm9sZVNldHRpbmdzEgoKAmlkGAEgASgF",
-            "EgsKA3NleBgCIAEoBRIVCg1kZWZhdWx0X3NraWxsGAMgASgFEhUKDWNvbGxl",
-            "Y3Rfc2tpbGwYBCABKAUSFgoOb3Blbl9ib3hfc2tpbGwYBSABKAUSFQoNYm9k",
-            "eV9jYXBhY2l0eRgGIAEoBSIgCghWZWN0b3JYWRIJCgF4GAEgASgFEgkKAXkY",
-            "AiABKAUiLAoJVmVjdG9yWFlaEgkKAXgYASABKAUSCQoBeRgCIAEoBRIJCgF6",
-            "GAMgASgFIjoKBlJjUmVjdBIaCgJ1cBgBIAEoCzIOLkJpYW4uVmVjdG9yWFkS",
-            "CQoBdxgCIAEoBRIJCgFoGAMgASgFInQKDkVudGl0eUxvY2F0aW9uEg4KBm1h",
-            "cF9pZBgBIAEoBRIbCgNwb3MYAiABKAsyDi5CaWFuLlZlY3RvclhZEhoKAnJj",
-            "GAMgASgLMg4uQmlhbi5WZWN0b3JYWRIJCgF6GAQgASgFEg4KBnppbmRleBgF",
-            "IAEoBSJMCg1QbGF5ZXJMb2NJbmZvEgoKAmlkGAEgASgJEgwKBG5hbWUYAiAB",
-            "KAkSIQoDbG9jGAMgASgLMhQuQmlhbi5FbnRpdHlMb2NhdGlvbiJHCg5FbnRp",
-            "dHlNb3ZlU3RlcBImCghsb2NhdGlvbhgBIAEoCzIULkJpYW4uRW50aXR5TG9j",
-            "YXRpb24SDQoFc3RhbXAYAiABKAMi4wEKDkVudGl0eU1vdmVtZW50EiUKC2Vu",
-            "dGl0eV90eXBlGAEgASgOMhAuQmlhbi5FbnRpdHlUeXBlEhEKCWVudGl0eV9p",
-            "ZBgCIAEoCRIqCgxjdXJfbG9jYXRpb24YAyABKAsyFC5CaWFuLkVudGl0eU1v",
-            "dmVTdGVwEisKDWRlc3RfbG9jYXRpb24YBCABKAsyFC5CaWFuLkVudGl0eU1v",
-            "dmVTdGVwEiAKBHR5cGUYBSABKA4yEi5CaWFuLk1vdmVtZW50VHlwZRIcCgNE",
-            "aXIYBiABKAsyDy5CaWFuLlZlY3RvclhZWiJBCgpPYmplY3RBdHRyEhAKCGlz",
-            "TXV0dWFsGAEgASgIEg4KBmlzRWRpdBgCIAEoCBIRCglwaWxlTGltaXQYAyAB",
-            "KAUiNgoIRW50aXR5SWQSHgoEdHlwZRgBIAEoDjIQLkJpYW4uRW50aXR5VHlw",
-            "ZRIKCgJpZBgCIAEoCSJkCgxFbnRpdHlJZERhdGESHgoEdHlwZRgBIAEoDjIQ",
-            "LkJpYW4uRW50aXR5VHlwZRILCgNlaWQYAiABKAkSCwoDY2lkGAMgASgFEhoK",
-            "EmVudGl0eV90ZW1wbGF0ZV9pZBgEIAEoCSKGBAoSRW50aXR5V2l0aExvY2F0",
-            "aW9uEh4KBHR5cGUYASABKA4yEC5CaWFuLkVudGl0eVR5cGUSCgoCaWQYAiAB",
-            "KAkSJgoIbG9jYXRpb24YAyABKAsyFC5CaWFuLkVudGl0eUxvY2F0aW9uEiEK",
-            "CWRpcmVjdGlvbhgEIAEoCzIOLkJpYW4uVmVjdG9yWFkSJQoKbWFwX29iamVj",
-            "dBgFIAEoCzIPLkJpYW4uTWFwT2JqZWN0SAASHgoGcGxheWVyGAYgASgLMgwu",
-            "Qmlhbi5QbGF5ZXJIABIYCgNucGMYByABKAsyCS5CaWFuLk5wY0gAEiAKB21v",
-            "bnN0ZXIYCCABKAsyDS5CaWFuLk1vbnN0ZXJIABItCg5mYWxsaW5nX29iamVj",
-            "dBgJIAEoCzITLkJpYW4uRmFsbGluZ09iamVjdEgAEiIKCG1hdGVyaWFsGAog",
-            "ASgLMg4uQmlhbi5NYXRlcmlhbEgAEhgKA2JvdBgLIAEoCzIJLkJpYW4uQm90",
-            "SAASJwoLZmFsbGluZ19ib3gYDCABKAsyEC5CaWFuLkZhbGxpbmdCb3hIABIc",
-            "CgVwbGFudBgNIAEoCzILLkJpYW4uUGxhbnRIABIYCgNwZXQYDiABKAsyCS5C",
-            "aWFuLlBldEgAEh4KBnB1cHBldBgPIAEoCzIMLkJpYW4uUHVwcGV0SABCCAoG",
-            "ZW50aXR5IsEBCg1FbnRpdHlOZnRJbmZvEg4KBm5mdF9pZBgBIAEoCRIgCghu",
-            "ZnRfdHlwZRgCIAEoDjIOLkJpYW4uSXRlbVR5cGUSLgoOcGxhY2VhYmxlX2lu",
-            "Zm8YAyABKAsyFi5CaWFuLk5mdFBsYWNlYWJsZUluZm8SHwoXdGhpcmRfcGlj",
-            "dHVyZV9mcmFtZV91cmwYBCABKAkSLQoOdGhpcmRfbmZ0X2luZm8YBSABKAsy",
-            "FS5CaWFuLk5mdFRoaXJkTmZ0SW5mbyLvBAoGUGxheWVyEgoKAmlkGAEgASgJ",
-            "EhEKCXBsYXllcl9pZBgCIAEoCRIMCgRuYW1lGAMgASgJEg8KB3JvbGVfaWQY",
-            "BCABKAUSDgoGZ2VuZGVyGAUgASgJEhEKCXJvbGVfaWNvbhgGIAEoCRIkCgdm",
-            "ZWF0dXJlGAcgASgLMhMuQmlhbi5QbGF5ZXJGZWF0dXJlEg0KBWd1aWRlGAgg",
-            "ASgFEiQKB3Byb2ZpbGUYCSABKAsyEy5CaWFuLkVudGl0eVByb2ZpbGUSIwoH",
-            "YXZhdGFycxgKIAMoCzISLkJpYW4uUGxheWVyQXZhdGFyEiIKCXdvcmtiZW5j",
-            "aBgLIAEoCzIPLkJpYW4uV29ya2JlbmNoEg4KBmh1bmdyeRgMIAEoBRIPCgd0",
-            "aGlyc3R5GA0gASgFEg8KB2ZhdGlndWUYDiABKAUSEwoLaXNfYnVpbGRpbmcY",
-            "DyABKAgSDgoGYWN0aXZlGBAgASgIEhsKA2RpchgRIAEoCzIOLkJpYW4uVmVj",
-            "dG9yWFkSFQoNY3VyX2J1aWxkX251bRgTIAEoBRIoCgpndWlkZV9pbmZvGBQg",
-            "ASgLMhQuQmlhbi5FbnRpdHlHdWlkYW5jZRITCgtpc19nb2RfdmlldxgVIAEo",
-            "CBIOCgZpc19pZGUYFiABKAgSFwoPbGlzdGVuX2tleXByZXNzGBcgAygJEhIK",
-            "CmNpZF9hdmF0YXIYGCABKAUSDwoHaXNfaGlkZRgZIAEoCBIRCglCV19hdHRh",
-            "Y2sYGiABKAgSEAoIZmlnaHRpbmcYGyABKAgSIwoJYnVmZl9saXN0GBwgAygL",
-            "MhAuQmlhbi5FbnRpdHlCdWZmIrcICglNYXBPYmplY3QSCgoCaWQYASABKAkS",
-            "IQoDbG9jGAIgASgLMhQuQmlhbi5FbnRpdHlMb2NhdGlvbhILCgNjaWQYAyAB",
-            "KAUSEQoJcGxheWVyX2lkGAQgASgJEhsKA2RpchgFIAEoCzIOLkJpYW4uVmVj",
-            "dG9yWFkSKwoLY29kZV9zdGF0dXMYByABKA4yFi5CaWFuLkVudGl0eUNvZGVT",
-            "dGF0dXMSIgoJd29ya2JlbmNoGAggASgLMg8uQmlhbi5Xb3JrYmVuY2gSFAoM",
-            "cmVmcmVzaF90aW1lGAkgASgDEiwKDXJ1bl9hdHRyaWJ1dGUYCiABKAsyFS5C",
-            "aWFuLkVudGl0eUF0dHJpYnV0ZRIMCgRmdWVsGAsgASgFEiAKBmVfdHlwZRgM",
-            "IAEoDjIQLkJpYW4uRW50aXR5VHlwZRIOCgZtaXJyb3IYDSABKAgSEQoJa2V5",
-            "X2ZyYW1lGA4gASgFEhMKC2lzX3N0YW1wZWRlGA8gASgIEg8KB2lzX2NvcHkY",
-            "ESABKAgSEAoIaXNJbkFyZWEYEiABKAgSDgoGaXNMb2NrGBMgASgIEicKBmJ1",
-            "YmJsZRgVIAEoCzIXLkJpYW4uRW50aXR5U2NlbmVFZmZlY3QSDgoGbG9ja2Vy",
-            "GBYgASgJEhMKC2Nhbl9kZXN0cm95GBcgASgIEh4KFmlzX2J1aWxkX2Zyb21f",
-            "dGVtcGxhdGUYGCABKAgSKAoKZ3VpZGVfaW5mbxgZIAEoCzIULkJpYW4uRW50",
-            "aXR5R3VpZGFuY2USLQoPZW50aXR5X3RlbXBsYXRlGBogASgLMhQuQmlhbi5F",
-            "bnRpdHlUZW1wbGF0ZRIUCgxjdXJfd2Fsa19kaXIYGyABKAkSDwoHaXNfaGlk",
-            "ZRgcIAEoCBIlCgVhbmltcxgeIAEoCzIWLkJpYW4uRW50aXR5QW5pbWF0aW9u",
-            "cxIVCg1jdXJfcGxheV9hbmltGB8gASgFEicKCWxvY2tfdHlwZRggIAEoDjIU",
-            "LkJpYW4uRW50aXR5TG9ja1R5cGUSIwoLZnJvbV9mYXRoZXIYISABKAsyDi5C",
-            "aWFuLkVudGl0eUlkEhQKDHNjZW5lX2VmZmVjdBgiIAEoBRIiCgZhdWRpb3MY",
-            "IyABKAsyEi5CaWFuLkVudGl0eUF1ZGlvcxIwCg9vcGVyYXRlX2J1YmJsZXMY",
-            "JCADKAsyFy5CaWFuLk9wZXJhdGVCdWJibGVEYXRhEi8KDGNhcnJ5X2VudGl0",
-            "eRglIAEoCzIZLkJpYW4uQ2FycnlFbnRpdHlCYXNlRGF0YRIhCglmb3JjZV9k",
-            "aXIYJiADKAsyDi5CaWFuLlZlY3RvclhZEiUKCG5mdF9pbmZvGCcgASgLMhMu",
-            "Qmlhbi5FbnRpdHlOZnRJbmZvEi0KDG1hcF90ZW1wbGF0ZRgoIAEoCzIXLkJp",
-            "YW4uRW50aXR5TWFwVGVtcGxhdGUiuwQKBVBsYW50EhEKCXBsYXllcl9pZBgB",
-            "IAEoCRILCgNjaWQYAiABKAUSCgoCaWQYAyABKAkSDAoEbmFtZRgEIAEoCRIg",
-            "CgZlX3R5cGUYBSABKA4yEC5CaWFuLkVudGl0eVR5cGUSIwoKZW5lbXlfdHlw",
-            "ZRgGIAEoDjIPLkJpYW4uRW5lbXlUeXBlEiQKB3Byb2ZpbGUYByABKAsyEy5C",
-            "aWFuLkVudGl0eVByb2ZpbGUSJgoIbG9jYXRpb24YCCABKAsyFC5CaWFuLkVu",
-            "dGl0eUxvY2F0aW9uEiIKCXdvcmtiZW5jaBgJIAEoCzIPLkJpYW4uV29ya2Jl",
-            "bmNoEhEKCWZhdGhlcl9pZBgKIAEoCRIPCgdpc19jb3B5GAsgASgIEhsKA2Rp",
-            "chgMIAEoCzIOLkJpYW4uVmVjdG9yWFkSEAoIaXNJbkFyZWEYDSABKAgSDgoG",
-            "aXNMb2NrGA4gASgIEg4KBmxvY2tlchgQIAEoCRIoCgpndWlkZV9pbmZvGBEg",
-            "ASgLMhQuQmlhbi5FbnRpdHlHdWlkYW5jZRIPCgdpc19oaWRlGBQgASgIEi0K",
-            "D2VudGl0eV90ZW1wbGF0ZRgVIAEoCzIULkJpYW4uRW50aXR5VGVtcGxhdGUS",
-            "FAoMY3VyX3dhbGtfZGlyGBYgASgJEicKCWxvY2tfdHlwZRgXIAEoDjIULkJp",
-            "YW4uRW50aXR5TG9ja1R5cGUSIwoLZnJvbV9mYXRoZXIYGCABKAsyDi5CaWFu",
-            "LkVudGl0eUlkIu8ECgNQZXQSEQoJcGxheWVyX2lkGAEgASgJEgoKAmlkGAIg",
-            "ASgJEgsKA2NpZBgDIAEoBRIMCgRuYW1lGAQgASgJEh8KBHR5cGUYBSABKA4y",
-            "ES5CaWFuLk1vbnN0ZXJUeXBlEhgKBGNhbXAYBiABKA4yCi5CaWFuLkNhbXAS",
-            "DwoHaXNfYm9zcxgHIAEoCBIkCgdwcm9maWxlGAggASgLMhMuQmlhbi5FbnRp",
-            "dHlQcm9maWxlEiYKCGF0dF90eXBlGAkgASgOMhQuQmlhbi5Nb25zdGVyQXR0",
-            "VHlwZRIsCgtwYXRyb2xfdHlwZRgKIAEoDjIXLkJpYW4uTW9uc3RlclBhdHJv",
-            "bFR5cGUSIgoJd29ya2JlbmNoGAsgASgLMg8uQmlhbi5Xb3JrYmVuY2gSDwoH",
-            "aXNfY29weRgMIAEoCBIbCgNkaXIYDSABKAsyDi5CaWFuLlZlY3RvclhZEhAK",
-            "CGlzSW5BcmVhGA4gASgIEg4KBmlzTG9jaxgPIAEoCBIOCgZsb2NrZXIYESAB",
-            "KAkSKAoKZ3VpZGVfaW5mbxgSIAEoCzIULkJpYW4uRW50aXR5R3VpZGFuY2US",
-            "DwoHaXNfaGlkZRgVIAEoCBItCg9lbnRpdHlfdGVtcGxhdGUYFiABKAsyFC5C",
-            "aWFuLkVudGl0eVRlbXBsYXRlEhQKDGN1cl93YWxrX2RpchgXIAEoCRInCgls",
-            "b2NrX3R5cGUYGCABKA4yFC5CaWFuLkVudGl0eUxvY2tUeXBlEiMKC2Zyb21f",
-            "ZmF0aGVyGBkgASgLMg4uQmlhbi5FbnRpdHlJZBIUCgxzY2VuZV9lZmZlY3QY",
-            "GiABKAUi2AkKBlB1cHBldBIKCgJpZBgBIAEoCRILCgNjaWQYAiABKAUSEQoJ",
-            "cGxheWVyX2lkGAMgASgJEiAKBmVfdHlwZRgEIAEoDjIQLkJpYW4uRW50aXR5",
-            "VHlwZRIfCgR0eXBlGAUgASgOMhEuQmlhbi5Nb25zdGVyVHlwZRIYCgRjYW1w",
-            "GAYgASgOMgouQmlhbi5DYW1wEiQKB3Byb2ZpbGUYByABKAsyEy5CaWFuLkVu",
-            "dGl0eVByb2ZpbGUSJgoIYXR0X3R5cGUYCCABKA4yFC5CaWFuLk1vbnN0ZXJB",
-            "dHRUeXBlEiwKC3BhdHJvbF90eXBlGAkgASgOMhcuQmlhbi5Nb25zdGVyUGF0",
-            "cm9sVHlwZRIQCghoYXRlcl9pZBgKIAEoCRISCgpoYXRlcl9uYW1lGAsgASgJ",
-            "EisKC2NvZGVfc3RhdHVzGAwgASgOMhYuQmlhbi5FbnRpdHlDb2RlU3RhdHVz",
-            "EiIKCXdvcmtiZW5jaBgNIAEoCzIPLkJpYW4uV29ya2JlbmNoEhQKDHJlZnJl",
-            "c2hfdGltZRgOIAEoAxIsCg1ydW5fYXR0cmlidXRlGA8gASgLMhUuQmlhbi5F",
+            "Cgttb2RlbC5wcm90bxILTWVsYW5kR2FtZTMaCWFzdC5wcm90bxoaZW50aXR5",
+            "X3Byb2ZpbGVfZmllbGQucHJvdG8aEHR5cGVEZWZpbmUucHJvdG8aDHdpZGdl",
+            "dC5wcm90bxoLYXVkaW8ucHJvdG8aD2JpZ193b3JsZC5wcm90bxoKaXRlbS5w",
+            "cm90bxoKYnVmZi5wcm90byK2AQoTUGJCZWxsQ2xhc3NVc2VySW5mbxIPCgdI",
+            "YXNoX2lkGAEgASgJEg4KBlVzZXJJZBgCIAEoBRIQCghVc2VybmFtZRgDIAEo",
+            "CRIRCglSZWFsX25hbWUYBCABKAkSEAoIVXNlclR5cGUYBSABKAkSEAoITmlj",
+            "a25hbWUYBiABKAkSEAoIR29sZF9udW0YByABKAkSEAoIQ29kZV9udW0YCCAB",
+            "KAkSEQoJVXNlcklkU3RyGAkgASgJIkEKC0FjY291bnRJbmZvEgwKBGRhdGEY",
+            "ASABKAkSEQoJZGF0YV9oYXNoGAIgASgJEhEKCXRpbWVzdGFtcBgDIAEoCSI5",
+            "CgZTdHVmZnMSCwoDY2lkGAEgASgFEhAKCHF1YW50aXR5GAIgASgFEhAKCHJh",
+            "bmRBdHRyGAMgASgIIoQBCgxSb2xlU2V0dGluZ3MSCgoCaWQYASABKAUSCwoD",
+            "c2V4GAIgASgFEhUKDWRlZmF1bHRfc2tpbGwYAyABKAUSFQoNY29sbGVjdF9z",
+            "a2lsbBgEIAEoBRIWCg5vcGVuX2JveF9za2lsbBgFIAEoBRIVCg1ib2R5X2Nh",
+            "cGFjaXR5GAYgASgFIiAKCFZlY3RvclhZEgkKAXgYASABKAUSCQoBeRgCIAEo",
+            "BSIsCglWZWN0b3JYWVoSCQoBeBgBIAEoBRIJCgF5GAIgASgFEgkKAXoYAyAB",
+            "KAUiQQoGUmNSZWN0EiEKAnVwGAEgASgLMhUuTWVsYW5kR2FtZTMuVmVjdG9y",
+            "WFkSCQoBdxgCIAEoBRIJCgFoGAMgASgFIoIBCg5FbnRpdHlMb2NhdGlvbhIO",
+            "CgZtYXBfaWQYASABKAUSIgoDcG9zGAIgASgLMhUuTWVsYW5kR2FtZTMuVmVj",
+            "dG9yWFkSIQoCcmMYAyABKAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JYWRIJCgF6",
+            "GAQgASgFEg4KBnppbmRleBgFIAEoBSJTCg1QbGF5ZXJMb2NJbmZvEgoKAmlk",
+            "GAEgASgJEgwKBG5hbWUYAiABKAkSKAoDbG9jGAMgASgLMhsuTWVsYW5kR2Ft",
+            "ZTMuRW50aXR5TG9jYXRpb24iTgoORW50aXR5TW92ZVN0ZXASLQoIbG9jYXRp",
+            "b24YASABKAsyGy5NZWxhbmRHYW1lMy5FbnRpdHlMb2NhdGlvbhINCgVzdGFt",
+            "cBgCIAEoAyKGAgoORW50aXR5TW92ZW1lbnQSLAoLZW50aXR5X3R5cGUYASAB",
+            "KA4yFy5NZWxhbmRHYW1lMy5FbnRpdHlUeXBlEhEKCWVudGl0eV9pZBgCIAEo",
+            "CRIxCgxjdXJfbG9jYXRpb24YAyABKAsyGy5NZWxhbmRHYW1lMy5FbnRpdHlN",
+            "b3ZlU3RlcBIyCg1kZXN0X2xvY2F0aW9uGAQgASgLMhsuTWVsYW5kR2FtZTMu",
+            "RW50aXR5TW92ZVN0ZXASJwoEdHlwZRgFIAEoDjIZLk1lbGFuZEdhbWUzLk1v",
+            "dmVtZW50VHlwZRIjCgNEaXIYBiABKAsyFi5NZWxhbmRHYW1lMy5WZWN0b3JY",
+            "WVoiQQoKT2JqZWN0QXR0chIQCghpc011dHVhbBgBIAEoCBIOCgZpc0VkaXQY",
+            "AiABKAgSEQoJcGlsZUxpbWl0GAMgASgFIj0KCEVudGl0eUlkEiUKBHR5cGUY",
+            "ASABKA4yFy5NZWxhbmRHYW1lMy5FbnRpdHlUeXBlEgoKAmlkGAIgASgJImsK",
+            "DEVudGl0eUlkRGF0YRIlCgR0eXBlGAEgASgOMhcuTWVsYW5kR2FtZTMuRW50",
+            "aXR5VHlwZRILCgNlaWQYAiABKAkSCwoDY2lkGAMgASgFEhoKEmVudGl0eV90",
+            "ZW1wbGF0ZV9pZBgEIAEoCSLoBAoSRW50aXR5V2l0aExvY2F0aW9uEiUKBHR5",
+            "cGUYASABKA4yFy5NZWxhbmRHYW1lMy5FbnRpdHlUeXBlEgoKAmlkGAIgASgJ",
+            "Ei0KCGxvY2F0aW9uGAMgASgLMhsuTWVsYW5kR2FtZTMuRW50aXR5TG9jYXRp",
+            "b24SKAoJZGlyZWN0aW9uGAQgASgLMhUuTWVsYW5kR2FtZTMuVmVjdG9yWFkS",
+            "LAoKbWFwX29iamVjdBgFIAEoCzIWLk1lbGFuZEdhbWUzLk1hcE9iamVjdEgA",
+            "EiUKBnBsYXllchgGIAEoCzITLk1lbGFuZEdhbWUzLlBsYXllckgAEh8KA25w",
+            "YxgHIAEoCzIQLk1lbGFuZEdhbWUzLk5wY0gAEicKB21vbnN0ZXIYCCABKAsy",
+            "FC5NZWxhbmRHYW1lMy5Nb25zdGVySAASNAoOZmFsbGluZ19vYmplY3QYCSAB",
+            "KAsyGi5NZWxhbmRHYW1lMy5GYWxsaW5nT2JqZWN0SAASKQoIbWF0ZXJpYWwY",
+            "CiABKAsyFS5NZWxhbmRHYW1lMy5NYXRlcmlhbEgAEh8KA2JvdBgLIAEoCzIQ",
+            "Lk1lbGFuZEdhbWUzLkJvdEgAEi4KC2ZhbGxpbmdfYm94GAwgASgLMhcuTWVs",
+            "YW5kR2FtZTMuRmFsbGluZ0JveEgAEiMKBXBsYW50GA0gASgLMhIuTWVsYW5k",
+            "R2FtZTMuUGxhbnRIABIfCgNwZXQYDiABKAsyEC5NZWxhbmRHYW1lMy5QZXRI",
+            "ABIlCgZwdXBwZXQYDyABKAsyEy5NZWxhbmRHYW1lMy5QdXBwZXRIAEIICgZl",
+            "bnRpdHki1gEKDUVudGl0eU5mdEluZm8SDgoGbmZ0X2lkGAEgASgJEicKCG5m",
+            "dF90eXBlGAIgASgOMhUuTWVsYW5kR2FtZTMuSXRlbVR5cGUSNQoOcGxhY2Vh",
+            "YmxlX2luZm8YAyABKAsyHS5NZWxhbmRHYW1lMy5OZnRQbGFjZWFibGVJbmZv",
+            "Eh8KF3RoaXJkX3BpY3R1cmVfZnJhbWVfdXJsGAQgASgJEjQKDnRoaXJkX25m",
+            "dF9pbmZvGAUgASgLMhwuTWVsYW5kR2FtZTMuTmZ0VGhpcmROZnRJbmZvIqAF",
+            "CgZQbGF5ZXISCgoCaWQYASABKAkSEQoJcGxheWVyX2lkGAIgASgJEgwKBG5h",
+            "bWUYAyABKAkSDwoHcm9sZV9pZBgEIAEoBRIOCgZnZW5kZXIYBSABKAkSEQoJ",
+            "cm9sZV9pY29uGAYgASgJEisKB2ZlYXR1cmUYByABKAsyGi5NZWxhbmRHYW1l",
+            "My5QbGF5ZXJGZWF0dXJlEg0KBWd1aWRlGAggASgFEisKB3Byb2ZpbGUYCSAB",
+            "KAsyGi5NZWxhbmRHYW1lMy5FbnRpdHlQcm9maWxlEioKB2F2YXRhcnMYCiAD",
+            "KAsyGS5NZWxhbmRHYW1lMy5QbGF5ZXJBdmF0YXISKQoJd29ya2JlbmNoGAsg",
+            "ASgLMhYuTWVsYW5kR2FtZTMuV29ya2JlbmNoEg4KBmh1bmdyeRgMIAEoBRIP",
+            "Cgd0aGlyc3R5GA0gASgFEg8KB2ZhdGlndWUYDiABKAUSEwoLaXNfYnVpbGRp",
+            "bmcYDyABKAgSDgoGYWN0aXZlGBAgASgIEiIKA2RpchgRIAEoCzIVLk1lbGFu",
+            "ZEdhbWUzLlZlY3RvclhZEhUKDWN1cl9idWlsZF9udW0YEyABKAUSLwoKZ3Vp",
+            "ZGVfaW5mbxgUIAEoCzIbLk1lbGFuZEdhbWUzLkVudGl0eUd1aWRhbmNlEhMK",
+            "C2lzX2dvZF92aWV3GBUgASgIEg4KBmlzX2lkZRgWIAEoCBIXCg9saXN0ZW5f",
+            "a2V5cHJlc3MYFyADKAkSEgoKY2lkX2F2YXRhchgYIAEoBRIPCgdpc19oaWRl",
+            "GBkgASgIEhEKCUJXX2F0dGFjaxgaIAEoCBIQCghmaWdodGluZxgbIAEoCBIq",
+            "CglidWZmX2xpc3QYHCADKAsyFy5NZWxhbmRHYW1lMy5FbnRpdHlCdWZmIrUJ",
+            "CglNYXBPYmplY3QSCgoCaWQYASABKAkSKAoDbG9jGAIgASgLMhsuTWVsYW5k",
+            "R2FtZTMuRW50aXR5TG9jYXRpb24SCwoDY2lkGAMgASgFEhEKCXBsYXllcl9p",
+            "ZBgEIAEoCRIiCgNkaXIYBSABKAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JYWRIy",
+            "Cgtjb2RlX3N0YXR1cxgHIAEoDjIdLk1lbGFuZEdhbWUzLkVudGl0eUNvZGVT",
+            "dGF0dXMSKQoJd29ya2JlbmNoGAggASgLMhYuTWVsYW5kR2FtZTMuV29ya2Jl",
+            "bmNoEhQKDHJlZnJlc2hfdGltZRgJIAEoAxIzCg1ydW5fYXR0cmlidXRlGAog",
+            "ASgLMhwuTWVsYW5kR2FtZTMuRW50aXR5QXR0cmlidXRlEgwKBGZ1ZWwYCyAB",
+            "KAUSJwoGZV90eXBlGAwgASgOMhcuTWVsYW5kR2FtZTMuRW50aXR5VHlwZRIO",
+            "CgZtaXJyb3IYDSABKAgSEQoJa2V5X2ZyYW1lGA4gASgFEhMKC2lzX3N0YW1w",
+            "ZWRlGA8gASgIEg8KB2lzX2NvcHkYESABKAgSEAoIaXNJbkFyZWEYEiABKAgS",
+            "DgoGaXNMb2NrGBMgASgIEi4KBmJ1YmJsZRgVIAEoCzIeLk1lbGFuZEdhbWUz",
+            "LkVudGl0eVNjZW5lRWZmZWN0Eg4KBmxvY2tlchgWIAEoCRITCgtjYW5fZGVz",
+            "dHJveRgXIAEoCBIeChZpc19idWlsZF9mcm9tX3RlbXBsYXRlGBggASgIEi8K",
+            "Cmd1aWRlX2luZm8YGSABKAsyGy5NZWxhbmRHYW1lMy5FbnRpdHlHdWlkYW5j",
+            "ZRI0Cg9lbnRpdHlfdGVtcGxhdGUYGiABKAsyGy5NZWxhbmRHYW1lMy5FbnRp",
+            "dHlUZW1wbGF0ZRIUCgxjdXJfd2Fsa19kaXIYGyABKAkSDwoHaXNfaGlkZRgc",
+            "IAEoCBIsCgVhbmltcxgeIAEoCzIdLk1lbGFuZEdhbWUzLkVudGl0eUFuaW1h",
+            "dGlvbnMSFQoNY3VyX3BsYXlfYW5pbRgfIAEoBRIuCglsb2NrX3R5cGUYICAB",
+            "KA4yGy5NZWxhbmRHYW1lMy5FbnRpdHlMb2NrVHlwZRIqCgtmcm9tX2ZhdGhl",
+            "chghIAEoCzIVLk1lbGFuZEdhbWUzLkVudGl0eUlkEhQKDHNjZW5lX2VmZmVj",
+            "dBgiIAEoBRIpCgZhdWRpb3MYIyABKAsyGS5NZWxhbmRHYW1lMy5FbnRpdHlB",
+            "dWRpb3MSNwoPb3BlcmF0ZV9idWJibGVzGCQgAygLMh4uTWVsYW5kR2FtZTMu",
+            "T3BlcmF0ZUJ1YmJsZURhdGESNgoMY2FycnlfZW50aXR5GCUgASgLMiAuTWVs",
+            "YW5kR2FtZTMuQ2FycnlFbnRpdHlCYXNlRGF0YRIoCglmb3JjZV9kaXIYJiAD",
+            "KAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JYWRIsCghuZnRfaW5mbxgnIAEoCzIa",
+            "Lk1lbGFuZEdhbWUzLkVudGl0eU5mdEluZm8SNAoMbWFwX3RlbXBsYXRlGCgg",
+            "ASgLMh4uTWVsYW5kR2FtZTMuRW50aXR5TWFwVGVtcGxhdGUigQUKBVBsYW50",
+            "EhEKCXBsYXllcl9pZBgBIAEoCRILCgNjaWQYAiABKAUSCgoCaWQYAyABKAkS",
+            "DAoEbmFtZRgEIAEoCRInCgZlX3R5cGUYBSABKA4yFy5NZWxhbmRHYW1lMy5F",
+            "bnRpdHlUeXBlEioKCmVuZW15X3R5cGUYBiABKA4yFi5NZWxhbmRHYW1lMy5F",
+            "bmVteVR5cGUSKwoHcHJvZmlsZRgHIAEoCzIaLk1lbGFuZEdhbWUzLkVudGl0",
+            "eVByb2ZpbGUSLQoIbG9jYXRpb24YCCABKAsyGy5NZWxhbmRHYW1lMy5FbnRp",
+            "dHlMb2NhdGlvbhIpCgl3b3JrYmVuY2gYCSABKAsyFi5NZWxhbmRHYW1lMy5X",
+            "b3JrYmVuY2gSEQoJZmF0aGVyX2lkGAogASgJEg8KB2lzX2NvcHkYCyABKAgS",
+            "IgoDZGlyGAwgASgLMhUuTWVsYW5kR2FtZTMuVmVjdG9yWFkSEAoIaXNJbkFy",
+            "ZWEYDSABKAgSDgoGaXNMb2NrGA4gASgIEg4KBmxvY2tlchgQIAEoCRIvCgpn",
+            "dWlkZV9pbmZvGBEgASgLMhsuTWVsYW5kR2FtZTMuRW50aXR5R3VpZGFuY2US",
+            "DwoHaXNfaGlkZRgUIAEoCBI0Cg9lbnRpdHlfdGVtcGxhdGUYFSABKAsyGy5N",
+            "ZWxhbmRHYW1lMy5FbnRpdHlUZW1wbGF0ZRIUCgxjdXJfd2Fsa19kaXIYFiAB",
+            "KAkSLgoJbG9ja190eXBlGBcgASgOMhsuTWVsYW5kR2FtZTMuRW50aXR5TG9j",
+            "a1R5cGUSKgoLZnJvbV9mYXRoZXIYGCABKAsyFS5NZWxhbmRHYW1lMy5FbnRp",
+            "dHlJZCK8BQoDUGV0EhEKCXBsYXllcl9pZBgBIAEoCRIKCgJpZBgCIAEoCRIL",
+            "CgNjaWQYAyABKAUSDAoEbmFtZRgEIAEoCRImCgR0eXBlGAUgASgOMhguTWVs",
+            "YW5kR2FtZTMuTW9uc3RlclR5cGUSHwoEY2FtcBgGIAEoDjIRLk1lbGFuZEdh",
+            "bWUzLkNhbXASDwoHaXNfYm9zcxgHIAEoCBIrCgdwcm9maWxlGAggASgLMhou",
+            "TWVsYW5kR2FtZTMuRW50aXR5UHJvZmlsZRItCghhdHRfdHlwZRgJIAEoDjIb",
+            "Lk1lbGFuZEdhbWUzLk1vbnN0ZXJBdHRUeXBlEjMKC3BhdHJvbF90eXBlGAog",
+            "ASgOMh4uTWVsYW5kR2FtZTMuTW9uc3RlclBhdHJvbFR5cGUSKQoJd29ya2Jl",
+            "bmNoGAsgASgLMhYuTWVsYW5kR2FtZTMuV29ya2JlbmNoEg8KB2lzX2NvcHkY",
+            "DCABKAgSIgoDZGlyGA0gASgLMhUuTWVsYW5kR2FtZTMuVmVjdG9yWFkSEAoI",
+            "aXNJbkFyZWEYDiABKAgSDgoGaXNMb2NrGA8gASgIEg4KBmxvY2tlchgRIAEo",
+            "CRIvCgpndWlkZV9pbmZvGBIgASgLMhsuTWVsYW5kR2FtZTMuRW50aXR5R3Vp",
+            "ZGFuY2USDwoHaXNfaGlkZRgVIAEoCBI0Cg9lbnRpdHlfdGVtcGxhdGUYFiAB",
+            "KAsyGy5NZWxhbmRHYW1lMy5FbnRpdHlUZW1wbGF0ZRIUCgxjdXJfd2Fsa19k",
+            "aXIYFyABKAkSLgoJbG9ja190eXBlGBggASgOMhsuTWVsYW5kR2FtZTMuRW50",
+            "aXR5TG9ja1R5cGUSKgoLZnJvbV9mYXRoZXIYGSABKAsyFS5NZWxhbmRHYW1l",
+            "My5FbnRpdHlJZBIUCgxzY2VuZV9lZmZlY3QYGiABKAUi6woKBlB1cHBldBIK",
+            "CgJpZBgBIAEoCRILCgNjaWQYAiABKAUSEQoJcGxheWVyX2lkGAMgASgJEicK",
+            "BmVfdHlwZRgEIAEoDjIXLk1lbGFuZEdhbWUzLkVudGl0eVR5cGUSJgoEdHlw",
+            "ZRgFIAEoDjIYLk1lbGFuZEdhbWUzLk1vbnN0ZXJUeXBlEh8KBGNhbXAYBiAB",
+            "KA4yES5NZWxhbmRHYW1lMy5DYW1wEisKB3Byb2ZpbGUYByABKAsyGi5NZWxh",
+            "bmRHYW1lMy5FbnRpdHlQcm9maWxlEi0KCGF0dF90eXBlGAggASgOMhsuTWVs",
+            "YW5kR2FtZTMuTW9uc3RlckF0dFR5cGUSMwoLcGF0cm9sX3R5cGUYCSABKA4y",
+            "Hi5NZWxhbmRHYW1lMy5Nb25zdGVyUGF0cm9sVHlwZRIQCghoYXRlcl9pZBgK",
+            "IAEoCRISCgpoYXRlcl9uYW1lGAsgASgJEjIKC2NvZGVfc3RhdHVzGAwgASgO",
+            "Mh0uTWVsYW5kR2FtZTMuRW50aXR5Q29kZVN0YXR1cxIpCgl3b3JrYmVuY2gY",
+            "DSABKAsyFi5NZWxhbmRHYW1lMy5Xb3JrYmVuY2gSFAoMcmVmcmVzaF90aW1l",
+            "GA4gASgDEjMKDXJ1bl9hdHRyaWJ1dGUYDyABKAsyHC5NZWxhbmRHYW1lMy5F",
             "bnRpdHlBdHRyaWJ1dGUSEQoJa2V5X2ZyYW1lGBEgASgFEhMKC2lzX3N0YW1w",
-            "ZWRlGBIgASgIEg4KBm1pcnJvchgTIAEoCBIPCgdpc19oaWRlGBUgASgIEhsK",
-            "A2RpchgWIAEoCzIOLkJpYW4uVmVjdG9yWFkSDwoHaXNfY29weRgXIAEoCBIQ",
-            "Cghpc0luQXJlYRgYIAEoCBIOCgZpc0xvY2sYGSABKAgSJwoGYnViYmxlGBsg",
-            "ASgLMhcuQmlhbi5FbnRpdHlTY2VuZUVmZmVjdBIOCgZsb2NrZXIYHCABKAkS",
-            "EwoLY2FuX2Rlc3Ryb3kYHSABKAgSHgoWaXNfYnVpbGRfZnJvbV90ZW1wbGF0",
-            "ZRgeIAEoCBIoCgpndWlkZV9pbmZvGB8gASgLMhQuQmlhbi5FbnRpdHlHdWlk",
-            "YW5jZRItCg9lbnRpdHlfdGVtcGxhdGUYICABKAsyFC5CaWFuLkVudGl0eVRl",
-            "bXBsYXRlEhQKDGN1cl93YWxrX2RpchghIAEoCRIlCgVhbmltcxgkIAEoCzIW",
-            "LkJpYW4uRW50aXR5QW5pbWF0aW9ucxIVCg1jdXJfcGxheV9hbmltGCUgASgF",
-            "EicKCWxvY2tfdHlwZRgmIAEoDjIULkJpYW4uRW50aXR5TG9ja1R5cGUSIwoL",
-            "ZnJvbV9mYXRoZXIYJyABKAsyDi5CaWFuLkVudGl0eUlkEhQKDHNjZW5lX2Vm",
-            "ZmVjdBgoIAEoBRIiCgZhdWRpb3MYKSABKAsyEi5CaWFuLkVudGl0eUF1ZGlv",
-            "cxISCgpjaWRfYXZhdGFyGCogASgFEjAKD29wZXJhdGVfYnViYmxlcxgrIAMo",
-            "CzIXLkJpYW4uT3BlcmF0ZUJ1YmJsZURhdGESEQoJY3VyX2Vtb2ppGCwgASgF",
-            "Ei8KDGNhcnJ5X2VudGl0eRgtIAEoCzIZLkJpYW4uQ2FycnlFbnRpdHlCYXNl",
-            "RGF0YRIhCglmb3JjZV9kaXIYLiADKAsyDi5CaWFuLlZlY3RvclhZEiUKCG5m",
-            "dF9pbmZvGC8gASgLMhMuQmlhbi5FbnRpdHlOZnRJbmZvIsoCCgdNb25zdGVy",
-            "EgsKA2NpZBgBIAEoBRIKCgJpZBgCIAEoCRIMCgRuYW1lGAMgASgJEg4KBmFj",
-            "dGl2ZRgEIAEoCBINCgVvd25lchgFIAEoCRIkCgdwcm9maWxlGAYgASgLMhMu",
-            "Qmlhbi5FbnRpdHlQcm9maWxlEiYKCGF0dF90eXBlGAcgASgOMhQuQmlhbi5N",
-            "b25zdGVyQXR0VHlwZRIsCgtwYXRyb2xfdHlwZRgIIAEoDjIXLkJpYW4uTW9u",
-            "c3RlclBhdHJvbFR5cGUSEAoIaGF0ZXJfaWQYCSABKAkSEgoKaGF0ZXJfbmFt",
-            "ZRgKIAEoCRIbCgNkaXIYCyABKAsyDi5CaWFuLlZlY3RvclhZEigKCmd1aWRl",
-            "X2luZm8YDCABKAsyFC5CaWFuLkVudGl0eUd1aWRhbmNlEhAKCGZpZ2h0aW5n",
-            "GA0gASgIIr0FCg1GYWxsaW5nT2JqZWN0EgoKAmlkGAEgASgJEgsKA2NpZBgC",
-            "IAEoBRIQCghxdWFudGl0eRgDIAEoBRIRCglwbGF5ZXJfaWQYBCABKAkSDgoG",
-            "bWlycm9yGAUgASgIEigKCWF0dHJpYnV0ZRgHIAEoCzIVLkJpYW4uQXZhdGFy",
-            "QXR0cmlidXRlEhEKCWF1dG9fcGljaxgIIAEoCBIbCgNkaXIYCSABKAsyDi5C",
-            "aWFuLlZlY3RvclhZEhAKCGlzSW5BcmVhGAogASgIEg4KBmlzTG9jaxgLIAEo",
-            "CBIOCgZsb2NrZXIYDCABKAkSKAoKZ3VpZGVfaW5mbxgNIAEoCzIULkJpYW4u",
-            "RW50aXR5R3VpZGFuY2USJwoJbG9ja190eXBlGA4gASgOMhQuQmlhbi5FbnRp",
-            "dHlMb2NrVHlwZRIgCgZlX3R5cGUYDyABKA4yEC5CaWFuLkVudGl0eVR5cGUS",
-            "DwoHaXNfaGlkZRgQIAEoCBItCg9lbnRpdHlfdGVtcGxhdGUYESABKAsyFC5C",
-            "aWFuLkVudGl0eVRlbXBsYXRlEiwKDXJ1bl9hdHRyaWJ1dGUYEiABKAsyFS5C",
-            "aWFuLkVudGl0eUF0dHJpYnV0ZRIPCgdpc19jb3B5GBMgASgIEiMKC2Zyb21f",
-            "ZmF0aGVyGBQgASgLMg4uQmlhbi5FbnRpdHlJZBIUCgxzY2VuZV9lZmZlY3QY",
-            "FSABKAUSIgoGYXVkaW9zGBYgASgLMhIuQmlhbi5FbnRpdHlBdWRpb3MSGQoR",
-            "aXNfcmVzb3VyY2VfcG9pbnQYFyABKAgSMAoPb3BlcmF0ZV9idWJibGVzGBgg",
-            "AygLMhcuQmlhbi5PcGVyYXRlQnViYmxlRGF0YRIhCglmb3JjZV9kaXIYGSAD",
-            "KAsyDi5CaWFuLlZlY3RvclhZEg8KB3F1YWxpdHkYGiABKAUisAMKCE1hdGVy",
-            "aWFsEgsKA2NpZBgBIAEoBRIKCgJpZBgCIAEoCRIgCgR0eXBlGAMgASgOMhIu",
-            "Qmlhbi5NYXRlcmlhbFR5cGUSDAoEbmFtZRgEIAEoCRIkCgdwcm9maWxlGAUg",
-            "ASgLMhMuQmlhbi5FbnRpdHlQcm9maWxlEiMKCmVuZW15X3R5cGUYBiABKA4y",
-            "Dy5CaWFuLkVuZW15VHlwZRIQCghkcm9wX2V4cBgHIAEoBRIbCgNkaXIYCCAB",
-            "KAsyDi5CaWFuLlZlY3RvclhZEhAKCGlzSW5BcmVhGAkgASgIEg4KBmlzTG9j",
-            "axgKIAEoCBIOCgZsb2NrZXIYCyABKAkSKAoKZ3VpZGVfaW5mbxgMIAEoCzIU",
-            "LkJpYW4uRW50aXR5R3VpZGFuY2USHAoUZnJvbV9lbnRpdHlfdGVtcGxhdGUY",
-            "DSABKAgSLQoPZW50aXR5X3RlbXBsYXRlGA4gASgLMhQuQmlhbi5FbnRpdHlU",
-            "ZW1wbGF0ZRIPCgdpc19oaWRlGA8gASgIEicKCWxvY2tfdHlwZRgQIAEoDjIU",
-            "LkJpYW4uRW50aXR5TG9ja1R5cGUikgQKA0JvdBILCgNjaWQYASABKAUSCgoC",
-            "aWQYAiABKAkSEAoIYm90X25hbWUYAyABKAkSEQoJcGxheWVyX2lkGAQgASgJ",
-            "EhIKCnBsYXllck5hbWUYBSABKAkSJAoHcHJvZmlsZRgGIAEoCzITLkJpYW4u",
-            "RW50aXR5UHJvZmlsZRIfCgZzdGF0dXMYByABKA4yDy5CaWFuLkJvdFN0YXR1",
-            "cxIMCgRmdWVsGAggASgFEiYKCGxvY2F0aW9uGAkgASgLMhQuQmlhbi5FbnRp",
-            "dHlMb2NhdGlvbhIPCgdub3dTa2luGAogASgFEg0KBXNraW5zGAsgAygFEicK",
-            "BmJ1YmJsZRgMIAEoCzIXLkJpYW4uRW50aXR5U2NlbmVFZmZlY3QSGwoDZGly",
-            "GA0gASgLMg4uQmlhbi5WZWN0b3JYWRIjCgdhdmF0YXJzGA4gAygLMhIuQmlh",
-            "bi5QbGF5ZXJBdmF0YXISDwoHaXNfY29weRgPIAEoCBIrCgtjb2RlX3N0YXR1",
-            "cxgQIAEoDjIWLkJpYW4uRW50aXR5Q29kZVN0YXR1cxIQCghpc0luQXJlYRgR",
-            "IAEoCBIOCgZpc0xvY2sYEiABKAgSKAoKZ3VpZGVfaW5mbxgUIAEoCzIULkJp",
-            "YW4uRW50aXR5R3VpZGFuY2USJwoJbG9ja190eXBlGBUgASgOMhQuQmlhbi5F",
-            "bnRpdHlMb2NrVHlwZSKbAgoKRmFsbGluZ0JveBIKCgJpZBgBIAEoCRImCghs",
-            "b2NhdGlvbhgCIAEoCzIULkJpYW4uRW50aXR5TG9jYXRpb24SLAoPZmFsbGlu",
-            "Z19vYmplY3RzGAMgAygLMhMuQmlhbi5GYWxsaW5nT2JqZWN0EhEKCXBsYXll",
-            "cl9pZBgEIAEoCRITCgtwbGF5ZXJfbmFtZRgFIAEoCRIQCghpc0luQXJlYRgG",
-            "IAEoCBIOCgZpc0xvY2sYByABKAgSDgoGbG9ja2VyGAggASgJEigKCmd1aWRl",
-            "X2luZm8YCSABKAsyFC5CaWFuLkVudGl0eUd1aWRhbmNlEicKCWxvY2tfdHlw",
-            "ZRgKIAEoDjIULkJpYW4uRW50aXR5TG9ja1R5cGUi+gEKDkVudGl0eUJhc2VE",
-            "YXRhEiAKBmVfdHlwZRgBIAEoDjIQLkJpYW4uRW50aXR5VHlwZRIhCgNsb2MY",
-            "AiABKAsyFC5CaWFuLkVudGl0eUxvY2F0aW9uEgsKA2NpZBgDIAEoBRIbCgNk",
-            "aXIYBCABKAsyDi5CaWFuLlZlY3RvclhZEg4KBm1pcnJvchgFIAEoCBIPCgdp",
-            "c19oaWRlGAYgASgIEhAKCHJlc19uYW1lGAcgASgJEhUKDWN1cl9wbGF5X2Fu",
-            "aW0YCCABKAUSDAoEYXJlYRgJIAEoCRIhCglmb3JjZV9kaXIYCiADKAsyDi5C",
-            "aWFuLlZlY3RvclhZImwKDUVudGl0eVR1cm5pbmcSJQoLZW50aXR5X3R5cGUY",
-            "ASABKA4yEC5CaWFuLkVudGl0eVR5cGUSEQoJZW50aXR5X2lkGAIgASgJEiEK",
-            "CWRpcmVjdGlvbhgDIAEoCzIOLkJpYW4uVmVjdG9yWFkiNgoOUGxheWVyTG9j",
-            "YXRpb24SDgoGbWFwX2lkGAEgASgFEgkKAXIYAiABKAUSCQoBYxgDIAEoBSJa",
-            "ChJQbGF5ZXJXaXRoTG9jYXRpb24SHAoGcGxheWVyGAEgASgLMgwuQmlhbi5Q",
-            "bGF5ZXISJgoIbG9jYXRpb24YAiABKAsyFC5CaWFuLlBsYXllckxvY2F0aW9u",
-            "InMKDFBsYXllckF2YXRhchImCghwb3NpdGlvbhgBIAEoDjIULkJpYW4uQXZh",
-            "dGFyUG9zaXRpb24SEQoJb2JqZWN0X2lkGAIgASgFEigKCWF0dHJpYnV0ZRgD",
-            "IAEoCzIVLkJpYW4uQXZhdGFyQXR0cmlidXRlIpYBCg1QbGF5ZXJGZWF0dXJl",
-            "Eg8KB2V5ZWJyb3cYASABKAUSDQoFbW91dGgYAiABKAUSCwoDZXllGAMgASgF",
-            "EgwKBGZhY2UYBCABKAUSDAoEaGFpchgFIAEoBRINCgVnbG92ZRgGIAEoBRIP",
-            "CgdjbG90aGVzGAcgASgFEg0KBXBhbnRzGAggASgFEg0KBXNob2VzGAkgASgF",
-            "Ii8KD05wY0NvbnZlcnNhdGlvbhIKCgJpZBgBIAEoCRIQCghzZW50ZW5jZRgC",
-            "IAMoCSLBAQoDTnBjEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDgoGYXZh",
-            "dGFyGAMgASgJEhEKCXBsYXllcl9pZBgEIAEoCRIMCgRpY29uGAUgASgJEjMK",
-            "FGRlZmF1bHRfY29udmVyc2F0aW9uGAYgAygLMhUuQmlhbi5OcGNDb252ZXJz",
-            "YXRpb24SGAoQdGFza19ub3RpY2VfdHlwZRgHIAEoBRIQCghpc0luQXJlYRgI",
-            "IAEoCBIOCgZpc0xvY2sYCSABKAgiMwoLTnBjTG9jYXRpb24SDgoGbWFwX2lk",
-            "GAEgASgJEgkKAXIYAiABKAUSCQoBYxgDIAEoBSJOCg9OcGNXaXRoTG9jYXRp",
-            "b24SFgoDbnBjGAEgASgLMgkuQmlhbi5OcGMSIwoIbG9jYXRpb24YAiABKAsy",
-            "ES5CaWFuLk5wY0xvY2F0aW9uIiQKDE9iamVjdEFuY2hvchIJCgF4GAEgASgB",
-            "EgkKAXkYAiABKAEiXgoLT2JqZWN0U2hhcGUSDwoHcl9jb3VudBgBIAEoBRIP",
-            "CgdjX2NvdW50GAIgASgFEhQKDGFyZWFfZGVmYXVsdBgDIAEoBRIXCg93YWxr",
-            "ZGlyX2RlZmF1bHQYBCABKAUiKgoKT2JqZWN0QXJlYRIJCgFuGAEgASgFEhEK",
-            "BXZhbHVlGAIgAygFQgIQASKpAQoPT2JqZWN0QW5pbWF0aW9uEgoKAmlkGAEg",
-            "ASgJEg4KBnNvdXJjZRgCIAEoCRI2Cgx0cmlnZ2VyX3R5cGUYAyABKA4yIC5C",
-            "aWFuLk9iamVjdEFuaW1hdGlvblRyaWdnZXJUeXBlEjAKCXN0b3BfdHlwZRgE",
-            "IAEoDjIdLkJpYW4uT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGUSEAoIcHJpb3Jp",
-            "dHkYBSABKAUiaAoLT2JqZWN0U3RhdGUSCgoCaWQYASABKAUSEgoKaXNfZGVm",
-            "YXVsdBgCIAEoCBIPCgd0ZXh0dXJlGAMgASgJEigKCWFuaW1hdGlvbhgEIAEo",
-            "CzIVLkJpYW4uT2JqZWN0QW5pbWF0aW9uImkKFkNvbnN1bWFibGVJdGVtU2V0",
-            "dGluZ3MSDwoHaXRlbV9pZBgBIAEoBRIKCgJjZBgCIAEoBRITCgtjYWxsX21l",
-            "dGhvZBgDIAMoCRIMCgRhcmdzGAQgAygFEg8KB2NkX3R5cGUYBSABKAUiRgoS",
-            "T2JqZWN0R2VhclNldHRpbmdzEgsKA2NpZBgBIAEoBRIjCgdzZXR0aW5nGAIg",
-            "ASgLMhIuQmlhbi5HZWFyU2V0dGluZ3Mi7gIKDEdlYXJTZXR0aW5ncxInCgln",
-            "ZWFyX3R5cGUYASABKA4yFC5CaWFuLk9iamVjdEdlYXJUeXBlEhIKCmR1cmFi",
-            "aWxpdHkYAiABKAUSEAoIc2tpbGxfaWQYAyABKAUSFgoOaHBfbGltaXRfYWRk",
-            "ZWQYBCABKAUSGQoRaHBfcmVjb3ZlcnlfYWRkZWQYBSABKAUSEQoJYXR0X2Fk",
-            "ZGVkGAYgASgFEhcKD2F0dF9zcGVlZF9hZGRlZBgHIAEoBRIRCglkZWZfYWRk",
-            "ZWQYCCABKAUSFwoPY3JpdF9yYXRlX2FkZGVkGAkgASgFEhYKDmNyaXRfZG1n",
-            "X2FkZGVkGAogASgFEhYKDmhpdF9yYXRlX2FkZGVkGAsgASgFEhcKD21pc3Nf",
-            "cmF0ZV9hZGRlZBgMIAEoBRIYChBtb3ZlX3NwZWVkX2FkZGVkGA0gASgFEiEK",
-            "C3JlcGFpcl9uZWVkGA4gAygLMgwuQmlhbi5TdHVmZnMiWgoRU2NlbmVGb3Jj",
-            "ZVNldHRpbmcSCwoDY2lkGAEgASgFEgwKBGRlc2MYAiABKAkSDQoFZm9yY2UY",
-            "AyABKAUSGwoDZGlyGAQgASgLMg4uQmlhbi5WZWN0b3JYWSLADAoOT2JqZWN0",
-            "U2V0dGluZ3MSCgoCaWQYASABKAUSHgoEdHlwZRgCIAEoDjIQLkJpYW4uT2Jq",
-            "ZWN0VHlwZRIQCghzdWJfdHlwZRgDIAEoBRIMCgRuYW1lGAQgASgJEhMKC2Rl",
-            "c2NyaXB0aW9uGAUgASgJEg8KB3RleHR1cmUYBiADKAkSDwoHdGlsZXNldBgH",
-            "IAEoCRIpCgpibG9ja190eXBlGAggASgOMhUuQmlhbi5PYmplY3RCbG9ja1R5",
-            "cGUSIgoGYW5jaG9yGAkgASgLMhIuQmlhbi5PYmplY3RBbmNob3ISHgoEYXJl",
-            "YRgKIAEoCzIQLkJpYW4uT2JqZWN0QXJlYRIOCgZtaXJyb3IYCyABKAgSEAoI",
-            "c3RhdGVfaWQYDCABKAUSIQoGc3RhdGVzGA0gAygLMhEuQmlhbi5PYmplY3RT",
-            "dGF0ZRIqChBwcmVfYXJ0aWNsZV90eXBlGA4gAygOMhAuQmlhbi5PYmplY3RU",
-            "eXBlEhsKE2JhY2twYWNrX2l0ZW1fbGltaXQYDyABKAUSJAoHcXVhbGl0eRgQ",
-            "IAEoDjITLkJpYW4uT2JqZWN0UXVhbGl0eRIRCgljYW5fdHJhZGUYESABKAgS",
-            "EAoIY2FuX3NlbGwYEiABKAgSEAoIY2FuX2Ryb3AYEyABKAgSJwoJZ2Vhcl90",
-            "eXBlGBQgASgOMhQuQmlhbi5PYmplY3RHZWFyVHlwZRITCgtnZWFyX2F2YXRh",
-            "chgVIAEoCRIsCglidWlsZGFibGUYGCABKA4yGS5CaWFuLk9iamVjdEJ1aWxk",
-            "YWJsZVR5cGUSKQoNbWF0ZXJpYWxfdHlwZRgZIAEoDjISLkJpYW4uTWF0ZXJp",
-            "YWxUeXBlEhkKEW1hdGVyaWFsX2hwX2xpbWl0GBogASgFEiMKG21hdGVyaWFs",
-            "X2ZhbGxpbmdfcmVjaXBldF9pZBgbIAEoBRIUCgxidWlsZF9oZWlnaHQYHCAB",
-            "KAUSFQoNb2JqZWN0X2hlaWdodBgdIAEoBRIiCgh3YWxrX2RpchgeIAEoCzIQ",
-            "LkJpYW4uT2JqZWN0QXJlYRIpCg1nZWFyX3NldHRpbmdzGB8gASgLMhIuQmlh",
-            "bi5HZWFyU2V0dGluZ3MSFwoPd2Fsa19sb3dfaGVpZ2h0GCAgASgFEhgKEHdh",
-            "bGtfaGlnaF9oZWlnaHQYISABKAUSIwoKZW5lbXlfdHlwZRgiIAEoDjIPLkJp",
-            "YW4uRW5lbXlUeXBlEhIKCm9iamVjdF9kZWYYIyABKAUSEAoIZHJvcF9leHAY",
-            "JCABKAUSHAoUaW5pdF9vYmplY3RfcXVhbnRpdHkYJSABKAUSFAoMZXh0cmFf",
-            "Y29uZmlnGCYgASgJEhEKCWhpZ2hfZWRnZRgnIAEoBRIQCgh1c2VfZHJvcBgo",
-            "IAEoBRIPCgdpc19mdWVsGCkgASgIEicKDHRlcnJhaW5fdHlwZRgqIAEoDjIR",
-            "LkJpYW4uVGVycmFpblR5cGUSDgoGdXNlX2x2GCsgASgFEhgKBGNhbXAYLCAB",
-            "KA4yCi5CaWFuLkNhbXASDAoEbGlmZRgtIAEoBRITCgtib2R5X3JhZGl1cxgu",
-            "IAEoBRIhCgl1c2VyX3R5cGUYLyABKA4yDi5CaWFuLlVzZXJUeXBlEhEKCWF0",
-            "dFdpZGdldBgwIAEoBRIdCgd3aWRnZXRzGDEgAygLMgwuQmlhbi5XaWRnZXQS",
-            "DgoGZnJhbWVzGDIgAygFEhAKCGNvZGVfbGliGDMgASgFEhIKCmlzX3RlcnJh",
-            "aW4YNCABKAgSJQoFYW5pbXMYNSABKAsyFi5CaWFuLkVudGl0eUFuaW1hdGlv",
-            "bnMSDwoHaXNfaXRlbRg2IAEoCBITCgtkZWZfZHJvcF9pZBg3IAEoBRIPCgdi",
-            "aW5kaW5nGDggASgFEhcKD3JlY3RfYnVpbGRfaGlnaBg5IAEoBRIVCg1yZWN0",
-            "X3dhbGtfbG93GDogASgFEhYKDnJlY3Rfd2Fsa19oaWdoGDsgASgFEhQKDHJl",
-            "Y3RfdGV4dHVyZRg8IAMoCRIrCg5lbnRpdHlfcHJlbG9hZBg9IAEoCzITLkJp",
-            "YW4uRW50aXR5UHJlbG9hZBIsCgtzY2VuZV9mb3JjZRg+IAEoCzIXLkJpYW4u",
-            "U2NlbmVGb3JjZVNldHRpbmcijwEKCk9iamVjdEl0ZW0SCgoCaWQYASABKAUS",
-            "HgoEdHlwZRgCIAEoDjIQLkJpYW4uT2JqZWN0VHlwZRIQCghzdWJfdHlwZRgD",
-            "IAEoBRIMCgRuYW1lGAQgASgJEhMKC2Rlc2NyaXB0aW9uGAUgASgJEg4KBm1p",
-            "cnJvchgGIAEoCBIQCghzdGF0ZV9pZBgHIAEoBSIyCg9JdGVtVGVtcGxhdGVM",
-            "ZXQSEgoKb2JqZWN0X2NpZBgBIAEoBRILCgNwb3MYAiABKAUirwEKC0dhbWVQ",
-            "cm9qZWN0EgoKAmlkGAEgASgJEhEKCXBsYXllcl9pZBgCIAEoCRIlCgVzdGF0",
-            "ZRgDIAEoDjIWLkJpYW4uR2FtZVByb2plY3RTdGF0ZRIjCgR0eXBlGAQgASgO",
-            "MhUuQmlhbi5HYW1lUHJvamVjdFR5cGUSDAoEbmFtZRgFIAEoCRITCgtkZXNj",
-            "cmlwdGlvbhgGIAEoCRISCgpjcmVhdGVkX2F0GAcgASgJInkKEkdhbWVQcm9q",
-            "ZWN0Q29tbWVudBIKCgJpZBgBIAEoCRIXCg9nYW1lX3Byb2plY3RfaWQYAiAB",
-            "KAkSGQoRY29tbWVudF9wbGF5ZXJfaWQYAyABKAkSDwoHY29udGVudBgEIAEo",
-            "CRISCgpjcmVhdGVkX2F0GAUgASgJIkIKCEN1cnJlbmN5EikKDWN1cnJlbmN5",
-            "X3R5cGUYASABKA4yEi5CaWFuLkN1cnJlbmN5VHlwZRILCgNudW0YAiABKAUi",
-            "bgoGUmV3YXJkEhEKCXJld2FyZF9pZBgBIAEoBRIiCgxyZXdhcmRfaXRlbXMY",
-            "AiADKAsyDC5CaWFuLlN0dWZmcxILCgNleHAYAyABKAUSIAoIY3VycmVuY3kY",
-            "BCADKAsyDi5CaWFuLkN1cnJlbmN5IoUCCgxUYXNrU2V0dGluZ3MSCgoCSWQY",
-            "ASABKAUSDAoETmFtZRgCIAEoCRITCgtEZXNjcmlwdGlvbhgDIAEoCRIRCglG",
-            "cm9tTnBjSWQYBCABKAUSDwoHVG9OcGNJZBgFIAEoBRIMCgRUeXBlGAYgASgJ",
-            "EhgKEFJlcXVpcmVtZW50c1RleHQYByABKAkSFgoOT2JqZWN0aXZlc1RleHQY",
-            "CCABKAkSEAoIUmV3YXJkSWQYCSABKAUSFgoORm9sbG93VGFza1RleHQYCiAB",
-            "KAkSEQoJSXNFbmFibGVkGAsgASgIEg8KB0lzQ3ljbGUYDCABKAgSFAoMSXNB",
-            "dXRvRmluaXNoGA0gASgIIsIBCgRUYXNrEgoKAmlkGAEgASgFEgwKBG5hbWUY",
-            "AiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDwoHaXNfbWFpbhgEIAEoCBIV",
-            "Cg1pc19hY2NlcHRhYmxlGAUgASgIEisKDnRhc2tfb2JqZWN0aXZlGAYgAygL",
-            "MhMuQmlhbi5UYXNrT2JqZWN0aXZlEjYKF2FjY2VwdGFibGVfY29udmVyc2F0",
-            "aW9uGAggAygLMhUuQmlhbi5OcGNDb252ZXJzYXRpb24ijgEKDVRhc2tPYmpl",
-            "Y3RpdmUSEAoIcXVhbnRpdHkYASABKAUSDAoEcmF0ZRgCIAEoBRIRCgl0YXJn",
-            "ZXRfaWQYAyABKAUSFAoMaXNfY29tcGxldGVkGAQgASgIEjQKE3Rhc2tfb2Jq",
-            "ZWN0aXZlX3R5cGUYBSABKA4yFy5CaWFuLlRhc2tPYmplY3RpdmVUeXBlIl8K",
-            "ClRhc2tSZXdhcmQSLgoQdGFza19yZXdhcmRfdHlwZRgBIAEoDjIULkJpYW4u",
-            "VGFza1Jld2FyZFR5cGUSDwoHaXRlbV9pZBgCIAEoCRIQCghxdWFudGl0eRgD",
-            "IAEoAyKuAgoKUGxheWVyVGFzaxIKCgJpZBgBIAEoCRIPCgd0YXNrX2lkGAIg",
-            "ASgFEh4KBXN0YXRlGAMgASgOMg8uQmlhbi5UYXNrU3RhdGUSDAoEbmFtZRgE",
-            "IAEoCRITCgtkZXNjcmlwdGlvbhgFIAEoCRIPCgdpc19tYWluGAYgASgIEisK",
-            "DnRhc2tfb2JqZWN0aXZlGAcgAygLMhMuQmlhbi5UYXNrT2JqZWN0aXZlEjYK",
-            "F3Byb2Nlc3NpbmdfY29udmVyc2F0aW9uGAkgAygLMhUuQmlhbi5OcGNDb252",
-            "ZXJzYXRpb24SNwoYc3VibWl0dGFibGVfY29udmVyc2F0aW9uGAogAygLMhUu",
-            "Qmlhbi5OcGNDb252ZXJzYXRpb24SEQoJdG9fbnBjX2lkGAsgASgJIkQKDENo",
-            "YXRTZXR0aW5ncxIoCgljaGF0X3R5cGUYASABKA4yFS5CaWFuLkNoYXRDaGFu",
-            "bmVsVHlwZRIKCgJjZBgCIAEoBSKqAQoLQ2hhdE1lc3NhZ2USEQoJc2VuZGVy",
-            "X2lkGAEgASgJEhMKC3NlbmRlcl9uYW1lGAIgASgJEhMKC3NlbmRlcl9pY29u",
-            "GAMgASgJEigKCWNoYXRfdHlwZRgEIAEoDjIVLkJpYW4uQ2hhdENoYW5uZWxU",
-            "eXBlEg8KB2NvbnRlbnQYBSABKAkSEwoLcmVjZWl2ZXJfaWQYBiABKAkSDgoG",
-            "bXNnX2lkGAcgASgJIpsBCgtNaW5pbWFwTWFyaxIjCgR0eXBlGAEgASgOMhUu",
-            "Qmlhbi5NaW5pbWFwTWFya1R5cGUSMgoMZGlzcGxheV90eXBlGAIgASgOMhwu",
-            "Qmlhbi5NaW5pbWFwTWFya0Rpc3BsYXlUeXBlEg8KB21hcmtfaWQYAyABKAkS",
-            "DAoEbmFtZRgEIAEoCRIJCgFyGAUgASgFEgkKAWMYBiABKAUi8AIKDUVudGl0",
-            "eVByb2ZpbGUSCgoCbHYYASABKAUSCwoDZXhwGAIgASgFEgsKA2F0dBgDIAEo",
-            "BRIRCglhdHRfc3BlZWQYBCABKAUSCwoDZGVmGAUgASgFEhIKCmhwX2N1cnJl",
-            "bnQYBiABKAUSEAoIaHBfbGltaXQYByABKAUSEQoJY3JpdF9yYXRlGAggASgF",
-            "EhAKCGNyaXRfZG1nGAkgASgFEhAKCGhpdF9yYXRlGAogASgFEhEKCW1pc3Nf",
-            "cmF0ZRgLIAEoBRISCgptb3ZlX3NwZWVkGAwgASgFEhAKCHB1c2hfZG1nGA0g",
-            "ASgFEhEKCXB1c2hfZGlzdBgOIAEoBRITCgtocF9yZWNvdmVyeRgVIAEoBRIU",
-            "CgxodW5ncnlfbGltaXQYGSABKAUSFQoNdGhpcnN0eV9saW1pdBgaIAEoBRIV",
-            "Cg1mYXRpZ3VlX2xpbWl0GBsgASgFEhcKD2ZhdGlndWVfY3VycmVudBgcIAEo",
-            "BSJRChNFbnRpdHlQcm9maWxlVXBkYXRlEicKBWZpZWxkGAEgASgOMhguQmlh",
-            "bi5FbnRpdHlQcm9maWxlRmllbGQSEQoJY3VyX3ZhbHVlGAIgASgFIssBChFF",
-            "bnRpdHlTY2VuZUVmZmVjdBIsCgllZmZlY3RfaWQYASABKA4yGS5CaWFuLkVu",
-            "dGl0eVNjZW5lRWZmZWN0SWQSFAoMdGV4dF9jb250ZW50GAIgASgJEhIKCmV4",
-            "cGlyZWRfYXQYBCABKAUSEwoLZnJvbV9kZXZpY2UYBSABKAUSEQoJZnJvbV9u",
-            "b2RlGAYgASgFEjYKEmJ1YmJsZV9lZmZlY3RfdHlwZRgHIAEoDjIaLkJpYW4u",
-            "QnViYmxlVGV4dEVmZmVjdFR5cGUivgIKC0JvdFNldHRpbmdzEgoKAmlkGAEg",
-            "ASgFEgwKBG5hbWUYAiABKAkSDwoHbHZfdHlwZRgDIAEoBRIMCgRraW5kGAQg",
-            "ASgFEhAKCHNraWxsMWlkGAUgASgFEhAKCHNraWxsMmlkGAYgASgFEhUKDXNr",
-            "aWxsU2VxdWVuY2UYByADKAUSGAoQcm9ib3RDb2RlQmxvY2tJZBgIIAEoBRIS",
-            "CgpiYWdHcmlkTnVtGAkgASgFEhMKC2Z1ZWxDZWlsaW5nGAogASgFEg0KBXNr",
-            "aW4xGAsgASgFEg0KBXNraW4yGAwgASgFEg0KBXNraW4zGA0gASgFEg0KBXNr",
-            "aW40GA4gASgFEgwKBHNraW4YDyABKAUSGQoRQWNxdWlzaXRpb25za2lsbHMY",
-            "ECABKAUSEwoLYm9keV9yYWRpdXMYESABKAUigAIKClBsYXllckFyZWESDgoG",
-            "bWFwX2lkGAEgASgFEhAKCHJfY2VudGVyGAIgASgFEhAKCGNfY2VudGVyGAMg",
-            "ASgFEhAKCGl0ZW1fY2lkGAQgASgFEhEKCWJ1eV9tYXJrcxgFIAEoDBIQCghv",
-            "d25lcl9pZBgGIAEoCRISCgpvd25lcl9uYW1lGAcgASgJEhUKDXJfY29yZV9y",
-            "YWRpdXMYCCABKAUSFQoNY19jb3JlX3JhZGl1cxgJIAEoBRIXCg9yX2V4dGVu",
-            "ZF9yYWRpdXMYCiABKAUSFwoPY19leHRlbmRfcmFkaXVzGAsgASgFEhMKC3Rl",
-            "bXBsYXRlX2lkGAwgASgFIrsBCg9QbGF5ZXJBcmVhQnJpZWYSEAoIcl9jZW50",
-            "ZXIYAiABKAUSEAoIY19jZW50ZXIYAyABKAUSEAoIb3duZXJfaWQYBiABKAkS",
-            "EgoKb3duZXJfbmFtZRgHIAEoCRIVCg1yX2NvcmVfcmFkaXVzGAggASgFEhUK",
-            "DWNfY29yZV9yYWRpdXMYCSABKAUSFwoPcl9leHRlbmRfcmFkaXVzGAogASgF",
-            "EhcKD2NfZXh0ZW5kX3JhZGl1cxgLIAEoBSKjAQoRQ29kZWJsb2NrVGVtcGxh",
-            "dGUSCgoCaWQYASABKAkSDQoFdGl0bGUYAiABKAkSJQoEZGF0YRgDIAEoCzIX",
-            "LkJpYW4uQ29kZUJsb2NrUHJvZ3JhbXMSEQoJdGh1bWJuYWlsGAQgASgJEg4K",
-            "BmlzX25ldxgFIAEoCBIpCgR0eXBlGAYgASgOMhsuQmlhbi5Db2RlYmxvY2tU",
-            "ZW1wbGF0ZVR5cGUiQgoEUm9sZRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJ",
-            "Eg4KBmdlbmRlchgDIAEoCRIQCghza2VsZXRvbhgEIAEoCSJPCgpTcGF3blBv",
-            "aW50EgoKAmlkGAEgASgFEg4KBm1hcF9pZBgCIAEoBRIJCgF4GAMgASgFEgkK",
-            "AXkYBCABKAUSDwoHaW5pdGlhbBgFIAEoCCKAAQoMU2NlbmVXZWF0aGVyEhAK",
-            "CHNjZW5lX2lkGAEgASgFEiIKB3dlYXRoZXIYAiABKA4yES5CaWFuLldlYXRo",
-            "ZXJUeXBlEhMKC3RlbXBlcmF0dXJlGAMgASgFEhIKCnN0YXJ0X3JhdGUYBCAB",
-            "KAUSEQoJc3RvcF9yYXRlGAUgASgFIl4KDFdlYXRoZXJTdGF0ZRIQCghzY2Vu",
-            "ZV9pZBgBIAEoBRInCgx3ZWF0aGVyX3R5cGUYAiABKA4yES5CaWFuLldlYXRo",
-            "ZXJUeXBlEhMKC3RlbXBlcmF0dXJlGAMgASgFIjYKDEFjaGlldmVJbmRleBIT",
-            "CgtyZXF1aXJlX251bRgBIAEoBRIRCglyZXdhcmRfaWQYAiABKAUicQoHQWNo",
-            "aWV2ZRISCgphY2hpZXZlX2lkGAEgASgFEicKDGFjaGlldmVfdHlwZRgCIAEo",
-            "DjIRLkJpYW4uQWNoaWV2ZVR5cGUSKQoNYWNoaWV2ZV9pbmRleBgDIAMoCzIS",
-            "LkJpYW4uQWNoaWV2ZUluZGV4IoICChBFbnRpdHlMdlNldHRpbmdzEgoKAmx2",
-            "GAEgASgFEgsKA2V4cBgCIAEoBRILCgNhdHQYAyABKAUSEQoJYXR0X3NwZWVk",
-            "GAQgASgFEgsKA2RlZhgFIAEoBRITCgtocF9yZWNvdmVyeRgGIAEoBRIQCgho",
-            "cF9saW1pdBgHIAEoBRIRCgljcml0X3JhdGUYCCABKAUSEAoIY3JpdF9kbWcY",
-            "CSABKAUSEAoIaGl0X3JhdGUYCiABKAUSEQoJbWlzc19yYXRlGAsgASgFEhIK",
-            "Cm1vdmVfc3BlZWQYDCABKAUSEAoIcHVzaF9kbWcYDSABKAUSEQoJcHVzaF9k",
-            "aXN0GA4gASgFImAKDUJvdEx2U2V0dGluZ3MSCgoCaWQYASABKAUSDwoHbHZf",
-            "dHlwZRgCIAEoBRIyChJlbnRpdHlfbHZfc2V0dGluZ3MYAyABKAsyFi5CaWFu",
-            "LkVudGl0eUx2U2V0dGluZ3MiaAoHSXRlbUxldBIPCgdpdGVtX2lkGAEgASgF",
-            "EhAKCHF1YW50aXR5GAIgASgFEhAKCE5lZWRSYW5kGAMgASgIEigKCWF0dHJp",
-            "YnV0ZRgEIAEoCzIVLkJpYW4uQXZhdGFyQXR0cmlidXRlIr0BCgRNYWlsEg8K",
-            "B21haWxfaWQYASABKAkSDQoFdGl0bGUYAiABKAkSDwoHY29udGVudBgDIAEo",
-            "CRISCgpwYXJhbWV0ZXJzGAQgAygJEgsKA3RvcBgFIAEoBRIOCgZzZW5kZXIY",
-            "BiABKAkSEgoKZXhwaXJlZF9hdBgHIAEoAxIMCgRyZWFkGAggASgIEg0KBXRh",
-            "a2VuGAkgASgIEiIKC2F0dGFjaG1lbnRzGAogAygLMg0uQmlhbi5JdGVtTGV0",
-            "Im4KCE1haWxIZWFkEg8KB21haWxfaWQYASABKAkSDQoFdGl0bGUYAiABKAkS",
-            "EgoKZXhwaXJlZF9hdBgDIAEoAxILCgN0b3AYBCABKAUSDAoEcmVhZBgFIAEo",
-            "CBITCgthdHRhY2htZW50cxgGIAEoCCKLAQoMTWFpbFRlbXBsYXRlEhMKC3Rl",
-            "bXBsYXRlX2lkGAEgASgFEgwKBG5hbWUYAiABKAkSEAoIdGVtcGxhdGUYAyAB",
-            "KAkSCwoDdG9wGAQgASgFEhYKDnJld2FyZF9naWZ0X2lkGAUgASgFEg8KB2lu",
-            "aXRpYWwYBiABKAUSEAoIZHVyYXRpb24YByABKAMiMgoMUGxheWVySHVuZ3J5",
-            "Eg0KBWxpbWl0GAEgASgFEhMKC2N1cnJlbnRfdmFsGAIgASgFIjMKDVBsYXll",
-            "clRoaXJzdHkSDQoFbGltaXQYASABKAUSEwoLY3VycmVudF92YWwYAiABKAUi",
-            "MwoNUGxheWVyRmF0aWd1ZRINCgVsaW1pdBgBIAEoBRITCgtjdXJyZW50X3Zh",
-            "bBgCIAEoBSL+AQoUU3BlY2lhbEJ1aWxkU2V0dGluZ3MSCgoCaWQYASABKAUS",
-            "EQoJZGF0YV9mcm9tGAIgASgFEicKBHR5cGUYAyABKA4yGS5CaWFuLlNwZWNp",
-            "YWxCdWlsZFN1YlR5cGUSEAoIZm9ybXVsYXMYBCADKAUSEAoIZ3JpZF9udW0Y",
-            "BSABKAUSEQoJbmVlZF9mdWVsGAYgAygFEhYKDmJ1cm5pbmdfcmF0aW9uGAcg",
-            "ASgFEhEKCW1heF9jaGFycxgIIAEoBRIPCgdjb250ZW50GAkgASgJEhQKDGRp",
-            "c3BsYXlfdGltZRgKIAEoBRIVCg10cmlnZ2VyX3JhbmdlGAsgASgFIoABCg1X",
-            "b3JrYmVuY2hIZWFkEh4KBmVudGl0eRgBIAEoCzIOLkJpYW4uRW50aXR5SWQS",
-            "JgoIbG9jYXRpb24YAiABKAsyFC5CaWFuLkVudGl0eUxvY2F0aW9uEhAKCG93",
-            "bmVyX2lkGAMgASgJEhUKDXdvcmtiZW5jaF9jaWQYBCABKAUiyAEKCVdvcmti",
-            "ZW5jaBIeCgZlbnRpdHkYASABKAsyDi5CaWFuLkVudGl0eUlkEhUKDXdvcmti",
+            "ZWRlGBIgASgIEg4KBm1pcnJvchgTIAEoCBIPCgdpc19oaWRlGBUgASgIEiIK",
+            "A2RpchgWIAEoCzIVLk1lbGFuZEdhbWUzLlZlY3RvclhZEg8KB2lzX2NvcHkY",
+            "FyABKAgSEAoIaXNJbkFyZWEYGCABKAgSDgoGaXNMb2NrGBkgASgIEi4KBmJ1",
+            "YmJsZRgbIAEoCzIeLk1lbGFuZEdhbWUzLkVudGl0eVNjZW5lRWZmZWN0Eg4K",
+            "BmxvY2tlchgcIAEoCRITCgtjYW5fZGVzdHJveRgdIAEoCBIeChZpc19idWls",
+            "ZF9mcm9tX3RlbXBsYXRlGB4gASgIEi8KCmd1aWRlX2luZm8YHyABKAsyGy5N",
+            "ZWxhbmRHYW1lMy5FbnRpdHlHdWlkYW5jZRI0Cg9lbnRpdHlfdGVtcGxhdGUY",
+            "ICABKAsyGy5NZWxhbmRHYW1lMy5FbnRpdHlUZW1wbGF0ZRIUCgxjdXJfd2Fs",
+            "a19kaXIYISABKAkSLAoFYW5pbXMYJCABKAsyHS5NZWxhbmRHYW1lMy5FbnRp",
+            "dHlBbmltYXRpb25zEhUKDWN1cl9wbGF5X2FuaW0YJSABKAUSLgoJbG9ja190",
+            "eXBlGCYgASgOMhsuTWVsYW5kR2FtZTMuRW50aXR5TG9ja1R5cGUSKgoLZnJv",
+            "bV9mYXRoZXIYJyABKAsyFS5NZWxhbmRHYW1lMy5FbnRpdHlJZBIUCgxzY2Vu",
+            "ZV9lZmZlY3QYKCABKAUSKQoGYXVkaW9zGCkgASgLMhkuTWVsYW5kR2FtZTMu",
+            "RW50aXR5QXVkaW9zEhIKCmNpZF9hdmF0YXIYKiABKAUSNwoPb3BlcmF0ZV9i",
+            "dWJibGVzGCsgAygLMh4uTWVsYW5kR2FtZTMuT3BlcmF0ZUJ1YmJsZURhdGES",
+            "EQoJY3VyX2Vtb2ppGCwgASgFEjYKDGNhcnJ5X2VudGl0eRgtIAEoCzIgLk1l",
+            "bGFuZEdhbWUzLkNhcnJ5RW50aXR5QmFzZURhdGESKAoJZm9yY2VfZGlyGC4g",
+            "AygLMhUuTWVsYW5kR2FtZTMuVmVjdG9yWFkSLAoIbmZ0X2luZm8YLyABKAsy",
+            "Gi5NZWxhbmRHYW1lMy5FbnRpdHlOZnRJbmZvIu0CCgdNb25zdGVyEgsKA2Np",
+            "ZBgBIAEoBRIKCgJpZBgCIAEoCRIMCgRuYW1lGAMgASgJEg4KBmFjdGl2ZRgE",
+            "IAEoCBINCgVvd25lchgFIAEoCRIrCgdwcm9maWxlGAYgASgLMhouTWVsYW5k",
+            "R2FtZTMuRW50aXR5UHJvZmlsZRItCghhdHRfdHlwZRgHIAEoDjIbLk1lbGFu",
+            "ZEdhbWUzLk1vbnN0ZXJBdHRUeXBlEjMKC3BhdHJvbF90eXBlGAggASgOMh4u",
+            "TWVsYW5kR2FtZTMuTW9uc3RlclBhdHJvbFR5cGUSEAoIaGF0ZXJfaWQYCSAB",
+            "KAkSEgoKaGF0ZXJfbmFtZRgKIAEoCRIiCgNkaXIYCyABKAsyFS5NZWxhbmRH",
+            "YW1lMy5WZWN0b3JYWRIvCgpndWlkZV9pbmZvGAwgASgLMhsuTWVsYW5kR2Ft",
+            "ZTMuRW50aXR5R3VpZGFuY2USEAoIZmlnaHRpbmcYDSABKAgiigYKDUZhbGxp",
+            "bmdPYmplY3QSCgoCaWQYASABKAkSCwoDY2lkGAIgASgFEhAKCHF1YW50aXR5",
+            "GAMgASgFEhEKCXBsYXllcl9pZBgEIAEoCRIOCgZtaXJyb3IYBSABKAgSLwoJ",
+            "YXR0cmlidXRlGAcgASgLMhwuTWVsYW5kR2FtZTMuQXZhdGFyQXR0cmlidXRl",
+            "EhEKCWF1dG9fcGljaxgIIAEoCBIiCgNkaXIYCSABKAsyFS5NZWxhbmRHYW1l",
+            "My5WZWN0b3JYWRIQCghpc0luQXJlYRgKIAEoCBIOCgZpc0xvY2sYCyABKAgS",
+            "DgoGbG9ja2VyGAwgASgJEi8KCmd1aWRlX2luZm8YDSABKAsyGy5NZWxhbmRH",
+            "YW1lMy5FbnRpdHlHdWlkYW5jZRIuCglsb2NrX3R5cGUYDiABKA4yGy5NZWxh",
+            "bmRHYW1lMy5FbnRpdHlMb2NrVHlwZRInCgZlX3R5cGUYDyABKA4yFy5NZWxh",
+            "bmRHYW1lMy5FbnRpdHlUeXBlEg8KB2lzX2hpZGUYECABKAgSNAoPZW50aXR5",
+            "X3RlbXBsYXRlGBEgASgLMhsuTWVsYW5kR2FtZTMuRW50aXR5VGVtcGxhdGUS",
+            "MwoNcnVuX2F0dHJpYnV0ZRgSIAEoCzIcLk1lbGFuZEdhbWUzLkVudGl0eUF0",
+            "dHJpYnV0ZRIPCgdpc19jb3B5GBMgASgIEioKC2Zyb21fZmF0aGVyGBQgASgL",
+            "MhUuTWVsYW5kR2FtZTMuRW50aXR5SWQSFAoMc2NlbmVfZWZmZWN0GBUgASgF",
+            "EikKBmF1ZGlvcxgWIAEoCzIZLk1lbGFuZEdhbWUzLkVudGl0eUF1ZGlvcxIZ",
+            "ChFpc19yZXNvdXJjZV9wb2ludBgXIAEoCBI3Cg9vcGVyYXRlX2J1YmJsZXMY",
+            "GCADKAsyHi5NZWxhbmRHYW1lMy5PcGVyYXRlQnViYmxlRGF0YRIoCglmb3Jj",
+            "ZV9kaXIYGSADKAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JYWRIPCgdxdWFsaXR5",
+            "GBogASgFIuEDCghNYXRlcmlhbBILCgNjaWQYASABKAUSCgoCaWQYAiABKAkS",
+            "JwoEdHlwZRgDIAEoDjIZLk1lbGFuZEdhbWUzLk1hdGVyaWFsVHlwZRIMCgRu",
+            "YW1lGAQgASgJEisKB3Byb2ZpbGUYBSABKAsyGi5NZWxhbmRHYW1lMy5FbnRp",
+            "dHlQcm9maWxlEioKCmVuZW15X3R5cGUYBiABKA4yFi5NZWxhbmRHYW1lMy5F",
+            "bmVteVR5cGUSEAoIZHJvcF9leHAYByABKAUSIgoDZGlyGAggASgLMhUuTWVs",
+            "YW5kR2FtZTMuVmVjdG9yWFkSEAoIaXNJbkFyZWEYCSABKAgSDgoGaXNMb2Nr",
+            "GAogASgIEg4KBmxvY2tlchgLIAEoCRIvCgpndWlkZV9pbmZvGAwgASgLMhsu",
+            "TWVsYW5kR2FtZTMuRW50aXR5R3VpZGFuY2USHAoUZnJvbV9lbnRpdHlfdGVt",
+            "cGxhdGUYDSABKAgSNAoPZW50aXR5X3RlbXBsYXRlGA4gASgLMhsuTWVsYW5k",
+            "R2FtZTMuRW50aXR5VGVtcGxhdGUSDwoHaXNfaGlkZRgPIAEoCBIuCglsb2Nr",
+            "X3R5cGUYECABKA4yGy5NZWxhbmRHYW1lMy5FbnRpdHlMb2NrVHlwZSLRBAoD",
+            "Qm90EgsKA2NpZBgBIAEoBRIKCgJpZBgCIAEoCRIQCghib3RfbmFtZRgDIAEo",
+            "CRIRCglwbGF5ZXJfaWQYBCABKAkSEgoKcGxheWVyTmFtZRgFIAEoCRIrCgdw",
+            "cm9maWxlGAYgASgLMhouTWVsYW5kR2FtZTMuRW50aXR5UHJvZmlsZRImCgZz",
+            "dGF0dXMYByABKA4yFi5NZWxhbmRHYW1lMy5Cb3RTdGF0dXMSDAoEZnVlbBgI",
+            "IAEoBRItCghsb2NhdGlvbhgJIAEoCzIbLk1lbGFuZEdhbWUzLkVudGl0eUxv",
+            "Y2F0aW9uEg8KB25vd1NraW4YCiABKAUSDQoFc2tpbnMYCyADKAUSLgoGYnVi",
+            "YmxlGAwgASgLMh4uTWVsYW5kR2FtZTMuRW50aXR5U2NlbmVFZmZlY3QSIgoD",
+            "ZGlyGA0gASgLMhUuTWVsYW5kR2FtZTMuVmVjdG9yWFkSKgoHYXZhdGFycxgO",
+            "IAMoCzIZLk1lbGFuZEdhbWUzLlBsYXllckF2YXRhchIPCgdpc19jb3B5GA8g",
+            "ASgIEjIKC2NvZGVfc3RhdHVzGBAgASgOMh0uTWVsYW5kR2FtZTMuRW50aXR5",
+            "Q29kZVN0YXR1cxIQCghpc0luQXJlYRgRIAEoCBIOCgZpc0xvY2sYEiABKAgS",
+            "LwoKZ3VpZGVfaW5mbxgUIAEoCzIbLk1lbGFuZEdhbWUzLkVudGl0eUd1aWRh",
+            "bmNlEi4KCWxvY2tfdHlwZRgVIAEoDjIbLk1lbGFuZEdhbWUzLkVudGl0eUxv",
+            "Y2tUeXBlIrcCCgpGYWxsaW5nQm94EgoKAmlkGAEgASgJEi0KCGxvY2F0aW9u",
+            "GAIgASgLMhsuTWVsYW5kR2FtZTMuRW50aXR5TG9jYXRpb24SMwoPZmFsbGlu",
+            "Z19vYmplY3RzGAMgAygLMhouTWVsYW5kR2FtZTMuRmFsbGluZ09iamVjdBIR",
+            "CglwbGF5ZXJfaWQYBCABKAkSEwoLcGxheWVyX25hbWUYBSABKAkSEAoIaXNJ",
+            "bkFyZWEYBiABKAgSDgoGaXNMb2NrGAcgASgIEg4KBmxvY2tlchgIIAEoCRIv",
+            "CgpndWlkZV9pbmZvGAkgASgLMhsuTWVsYW5kR2FtZTMuRW50aXR5R3VpZGFu",
+            "Y2USLgoJbG9ja190eXBlGAogASgOMhsuTWVsYW5kR2FtZTMuRW50aXR5TG9j",
+            "a1R5cGUilgIKDkVudGl0eUJhc2VEYXRhEicKBmVfdHlwZRgBIAEoDjIXLk1l",
+            "bGFuZEdhbWUzLkVudGl0eVR5cGUSKAoDbG9jGAIgASgLMhsuTWVsYW5kR2Ft",
+            "ZTMuRW50aXR5TG9jYXRpb24SCwoDY2lkGAMgASgFEiIKA2RpchgEIAEoCzIV",
+            "Lk1lbGFuZEdhbWUzLlZlY3RvclhZEg4KBm1pcnJvchgFIAEoCBIPCgdpc19o",
+            "aWRlGAYgASgIEhAKCHJlc19uYW1lGAcgASgJEhUKDWN1cl9wbGF5X2FuaW0Y",
+            "CCABKAUSDAoEYXJlYRgJIAEoCRIoCglmb3JjZV9kaXIYCiADKAsyFS5NZWxh",
+            "bmRHYW1lMy5WZWN0b3JYWSJ6Cg1FbnRpdHlUdXJuaW5nEiwKC2VudGl0eV90",
+            "eXBlGAEgASgOMhcuTWVsYW5kR2FtZTMuRW50aXR5VHlwZRIRCgllbnRpdHlf",
+            "aWQYAiABKAkSKAoJZGlyZWN0aW9uGAMgASgLMhUuTWVsYW5kR2FtZTMuVmVj",
+            "dG9yWFkiNgoOUGxheWVyTG9jYXRpb24SDgoGbWFwX2lkGAEgASgFEgkKAXIY",
+            "AiABKAUSCQoBYxgDIAEoBSJoChJQbGF5ZXJXaXRoTG9jYXRpb24SIwoGcGxh",
+            "eWVyGAEgASgLMhMuTWVsYW5kR2FtZTMuUGxheWVyEi0KCGxvY2F0aW9uGAIg",
+            "ASgLMhsuTWVsYW5kR2FtZTMuUGxheWVyTG9jYXRpb24igQEKDFBsYXllckF2",
+            "YXRhchItCghwb3NpdGlvbhgBIAEoDjIbLk1lbGFuZEdhbWUzLkF2YXRhclBv",
+            "c2l0aW9uEhEKCW9iamVjdF9pZBgCIAEoBRIvCglhdHRyaWJ1dGUYAyABKAsy",
+            "HC5NZWxhbmRHYW1lMy5BdmF0YXJBdHRyaWJ1dGUilgEKDVBsYXllckZlYXR1",
+            "cmUSDwoHZXllYnJvdxgBIAEoBRINCgVtb3V0aBgCIAEoBRILCgNleWUYAyAB",
+            "KAUSDAoEZmFjZRgEIAEoBRIMCgRoYWlyGAUgASgFEg0KBWdsb3ZlGAYgASgF",
+            "Eg8KB2Nsb3RoZXMYByABKAUSDQoFcGFudHMYCCABKAUSDQoFc2hvZXMYCSAB",
+            "KAUiLwoPTnBjQ29udmVyc2F0aW9uEgoKAmlkGAEgASgJEhAKCHNlbnRlbmNl",
+            "GAIgAygJIsgBCgNOcGMSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZh",
+            "dmF0YXIYAyABKAkSEQoJcGxheWVyX2lkGAQgASgJEgwKBGljb24YBSABKAkS",
+            "OgoUZGVmYXVsdF9jb252ZXJzYXRpb24YBiADKAsyHC5NZWxhbmRHYW1lMy5O",
+            "cGNDb252ZXJzYXRpb24SGAoQdGFza19ub3RpY2VfdHlwZRgHIAEoBRIQCghp",
+            "c0luQXJlYRgIIAEoCBIOCgZpc0xvY2sYCSABKAgiMwoLTnBjTG9jYXRpb24S",
+            "DgoGbWFwX2lkGAEgASgJEgkKAXIYAiABKAUSCQoBYxgDIAEoBSJcCg9OcGNX",
+            "aXRoTG9jYXRpb24SHQoDbnBjGAEgASgLMhAuTWVsYW5kR2FtZTMuTnBjEioK",
+            "CGxvY2F0aW9uGAIgASgLMhguTWVsYW5kR2FtZTMuTnBjTG9jYXRpb24iJAoM",
+            "T2JqZWN0QW5jaG9yEgkKAXgYASABKAESCQoBeRgCIAEoASJeCgtPYmplY3RT",
+            "aGFwZRIPCgdyX2NvdW50GAEgASgFEg8KB2NfY291bnQYAiABKAUSFAoMYXJl",
+            "YV9kZWZhdWx0GAMgASgFEhcKD3dhbGtkaXJfZGVmYXVsdBgEIAEoBSIqCgpP",
+            "YmplY3RBcmVhEgkKAW4YASABKAUSEQoFdmFsdWUYAiADKAVCAhABIrcBCg9P",
+            "YmplY3RBbmltYXRpb24SCgoCaWQYASABKAkSDgoGc291cmNlGAIgASgJEj0K",
+            "DHRyaWdnZXJfdHlwZRgDIAEoDjInLk1lbGFuZEdhbWUzLk9iamVjdEFuaW1h",
+            "dGlvblRyaWdnZXJUeXBlEjcKCXN0b3BfdHlwZRgEIAEoDjIkLk1lbGFuZEdh",
+            "bWUzLk9iamVjdEFuaW1hdGlvblN0b3BUeXBlEhAKCHByaW9yaXR5GAUgASgF",
+            "Im8KC09iamVjdFN0YXRlEgoKAmlkGAEgASgFEhIKCmlzX2RlZmF1bHQYAiAB",
+            "KAgSDwoHdGV4dHVyZRgDIAEoCRIvCglhbmltYXRpb24YBCABKAsyHC5NZWxh",
+            "bmRHYW1lMy5PYmplY3RBbmltYXRpb24iaQoWQ29uc3VtYWJsZUl0ZW1TZXR0",
+            "aW5ncxIPCgdpdGVtX2lkGAEgASgFEgoKAmNkGAIgASgFEhMKC2NhbGxfbWV0",
+            "aG9kGAMgAygJEgwKBGFyZ3MYBCADKAUSDwoHY2RfdHlwZRgFIAEoBSJNChJP",
+            "YmplY3RHZWFyU2V0dGluZ3MSCwoDY2lkGAEgASgFEioKB3NldHRpbmcYAiAB",
+            "KAsyGS5NZWxhbmRHYW1lMy5HZWFyU2V0dGluZ3Mi/AIKDEdlYXJTZXR0aW5n",
+            "cxIuCglnZWFyX3R5cGUYASABKA4yGy5NZWxhbmRHYW1lMy5PYmplY3RHZWFy",
+            "VHlwZRISCgpkdXJhYmlsaXR5GAIgASgFEhAKCHNraWxsX2lkGAMgASgFEhYK",
+            "DmhwX2xpbWl0X2FkZGVkGAQgASgFEhkKEWhwX3JlY292ZXJ5X2FkZGVkGAUg",
+            "ASgFEhEKCWF0dF9hZGRlZBgGIAEoBRIXCg9hdHRfc3BlZWRfYWRkZWQYByAB",
+            "KAUSEQoJZGVmX2FkZGVkGAggASgFEhcKD2NyaXRfcmF0ZV9hZGRlZBgJIAEo",
+            "BRIWCg5jcml0X2RtZ19hZGRlZBgKIAEoBRIWCg5oaXRfcmF0ZV9hZGRlZBgL",
+            "IAEoBRIXCg9taXNzX3JhdGVfYWRkZWQYDCABKAUSGAoQbW92ZV9zcGVlZF9h",
+            "ZGRlZBgNIAEoBRIoCgtyZXBhaXJfbmVlZBgOIAMoCzITLk1lbGFuZEdhbWUz",
+            "LlN0dWZmcyJhChFTY2VuZUZvcmNlU2V0dGluZxILCgNjaWQYASABKAUSDAoE",
+            "ZGVzYxgCIAEoCRINCgVmb3JjZRgDIAEoBRIiCgNkaXIYBCABKAsyFS5NZWxh",
+            "bmRHYW1lMy5WZWN0b3JYWSLMDQoOT2JqZWN0U2V0dGluZ3MSCgoCaWQYASAB",
+            "KAUSJQoEdHlwZRgCIAEoDjIXLk1lbGFuZEdhbWUzLk9iamVjdFR5cGUSEAoI",
+            "c3ViX3R5cGUYAyABKAUSDAoEbmFtZRgEIAEoCRITCgtkZXNjcmlwdGlvbhgF",
+            "IAEoCRIPCgd0ZXh0dXJlGAYgAygJEg8KB3RpbGVzZXQYByABKAkSMAoKYmxv",
+            "Y2tfdHlwZRgIIAEoDjIcLk1lbGFuZEdhbWUzLk9iamVjdEJsb2NrVHlwZRIp",
+            "CgZhbmNob3IYCSABKAsyGS5NZWxhbmRHYW1lMy5PYmplY3RBbmNob3ISJQoE",
+            "YXJlYRgKIAEoCzIXLk1lbGFuZEdhbWUzLk9iamVjdEFyZWESDgoGbWlycm9y",
+            "GAsgASgIEhAKCHN0YXRlX2lkGAwgASgFEigKBnN0YXRlcxgNIAMoCzIYLk1l",
+            "bGFuZEdhbWUzLk9iamVjdFN0YXRlEjEKEHByZV9hcnRpY2xlX3R5cGUYDiAD",
+            "KA4yFy5NZWxhbmRHYW1lMy5PYmplY3RUeXBlEhsKE2JhY2twYWNrX2l0ZW1f",
+            "bGltaXQYDyABKAUSKwoHcXVhbGl0eRgQIAEoDjIaLk1lbGFuZEdhbWUzLk9i",
+            "amVjdFF1YWxpdHkSEQoJY2FuX3RyYWRlGBEgASgIEhAKCGNhbl9zZWxsGBIg",
+            "ASgIEhAKCGNhbl9kcm9wGBMgASgIEi4KCWdlYXJfdHlwZRgUIAEoDjIbLk1l",
+            "bGFuZEdhbWUzLk9iamVjdEdlYXJUeXBlEhMKC2dlYXJfYXZhdGFyGBUgASgJ",
+            "EjMKCWJ1aWxkYWJsZRgYIAEoDjIgLk1lbGFuZEdhbWUzLk9iamVjdEJ1aWxk",
+            "YWJsZVR5cGUSMAoNbWF0ZXJpYWxfdHlwZRgZIAEoDjIZLk1lbGFuZEdhbWUz",
+            "Lk1hdGVyaWFsVHlwZRIZChFtYXRlcmlhbF9ocF9saW1pdBgaIAEoBRIjChtt",
+            "YXRlcmlhbF9mYWxsaW5nX3JlY2lwZXRfaWQYGyABKAUSFAoMYnVpbGRfaGVp",
+            "Z2h0GBwgASgFEhUKDW9iamVjdF9oZWlnaHQYHSABKAUSKQoId2Fsa19kaXIY",
+            "HiABKAsyFy5NZWxhbmRHYW1lMy5PYmplY3RBcmVhEjAKDWdlYXJfc2V0dGlu",
+            "Z3MYHyABKAsyGS5NZWxhbmRHYW1lMy5HZWFyU2V0dGluZ3MSFwoPd2Fsa19s",
+            "b3dfaGVpZ2h0GCAgASgFEhgKEHdhbGtfaGlnaF9oZWlnaHQYISABKAUSKgoK",
+            "ZW5lbXlfdHlwZRgiIAEoDjIWLk1lbGFuZEdhbWUzLkVuZW15VHlwZRISCgpv",
+            "YmplY3RfZGVmGCMgASgFEhAKCGRyb3BfZXhwGCQgASgFEhwKFGluaXRfb2Jq",
+            "ZWN0X3F1YW50aXR5GCUgASgFEhQKDGV4dHJhX2NvbmZpZxgmIAEoCRIRCglo",
+            "aWdoX2VkZ2UYJyABKAUSEAoIdXNlX2Ryb3AYKCABKAUSDwoHaXNfZnVlbBgp",
+            "IAEoCBIuCgx0ZXJyYWluX3R5cGUYKiABKA4yGC5NZWxhbmRHYW1lMy5UZXJy",
+            "YWluVHlwZRIOCgZ1c2VfbHYYKyABKAUSHwoEY2FtcBgsIAEoDjIRLk1lbGFu",
+            "ZEdhbWUzLkNhbXASDAoEbGlmZRgtIAEoBRITCgtib2R5X3JhZGl1cxguIAEo",
+            "BRIoCgl1c2VyX3R5cGUYLyABKA4yFS5NZWxhbmRHYW1lMy5Vc2VyVHlwZRIR",
+            "CglhdHRXaWRnZXQYMCABKAUSJAoHd2lkZ2V0cxgxIAMoCzITLk1lbGFuZEdh",
+            "bWUzLldpZGdldBIOCgZmcmFtZXMYMiADKAUSEAoIY29kZV9saWIYMyABKAUS",
+            "EgoKaXNfdGVycmFpbhg0IAEoCBIsCgVhbmltcxg1IAEoCzIdLk1lbGFuZEdh",
+            "bWUzLkVudGl0eUFuaW1hdGlvbnMSDwoHaXNfaXRlbRg2IAEoCBITCgtkZWZf",
+            "ZHJvcF9pZBg3IAEoBRIPCgdiaW5kaW5nGDggASgFEhcKD3JlY3RfYnVpbGRf",
+            "aGlnaBg5IAEoBRIVCg1yZWN0X3dhbGtfbG93GDogASgFEhYKDnJlY3Rfd2Fs",
+            "a19oaWdoGDsgASgFEhQKDHJlY3RfdGV4dHVyZRg8IAMoCRIyCg5lbnRpdHlf",
+            "cHJlbG9hZBg9IAEoCzIaLk1lbGFuZEdhbWUzLkVudGl0eVByZWxvYWQSMwoL",
+            "c2NlbmVfZm9yY2UYPiABKAsyHi5NZWxhbmRHYW1lMy5TY2VuZUZvcmNlU2V0",
+            "dGluZyKWAQoKT2JqZWN0SXRlbRIKCgJpZBgBIAEoBRIlCgR0eXBlGAIgASgO",
+            "MhcuTWVsYW5kR2FtZTMuT2JqZWN0VHlwZRIQCghzdWJfdHlwZRgDIAEoBRIM",
+            "CgRuYW1lGAQgASgJEhMKC2Rlc2NyaXB0aW9uGAUgASgJEg4KBm1pcnJvchgG",
+            "IAEoCBIQCghzdGF0ZV9pZBgHIAEoBSIyCg9JdGVtVGVtcGxhdGVMZXQSEgoK",
+            "b2JqZWN0X2NpZBgBIAEoBRILCgNwb3MYAiABKAUivQEKC0dhbWVQcm9qZWN0",
+            "EgoKAmlkGAEgASgJEhEKCXBsYXllcl9pZBgCIAEoCRIsCgVzdGF0ZRgDIAEo",
+            "DjIdLk1lbGFuZEdhbWUzLkdhbWVQcm9qZWN0U3RhdGUSKgoEdHlwZRgEIAEo",
+            "DjIcLk1lbGFuZEdhbWUzLkdhbWVQcm9qZWN0VHlwZRIMCgRuYW1lGAUgASgJ",
+            "EhMKC2Rlc2NyaXB0aW9uGAYgASgJEhIKCmNyZWF0ZWRfYXQYByABKAkieQoS",
+            "R2FtZVByb2plY3RDb21tZW50EgoKAmlkGAEgASgJEhcKD2dhbWVfcHJvamVj",
+            "dF9pZBgCIAEoCRIZChFjb21tZW50X3BsYXllcl9pZBgDIAEoCRIPCgdjb250",
+            "ZW50GAQgASgJEhIKCmNyZWF0ZWRfYXQYBSABKAkiSQoIQ3VycmVuY3kSMAoN",
+            "Y3VycmVuY3lfdHlwZRgBIAEoDjIZLk1lbGFuZEdhbWUzLkN1cnJlbmN5VHlw",
+            "ZRILCgNudW0YAiABKAUifAoGUmV3YXJkEhEKCXJld2FyZF9pZBgBIAEoBRIp",
+            "CgxyZXdhcmRfaXRlbXMYAiADKAsyEy5NZWxhbmRHYW1lMy5TdHVmZnMSCwoD",
+            "ZXhwGAMgASgFEicKCGN1cnJlbmN5GAQgAygLMhUuTWVsYW5kR2FtZTMuQ3Vy",
+            "cmVuY3kiSwoMQ2hhdFNldHRpbmdzEi8KCWNoYXRfdHlwZRgBIAEoDjIcLk1l",
+            "bGFuZEdhbWUzLkNoYXRDaGFubmVsVHlwZRIKCgJjZBgCIAEoBSKxAQoLQ2hh",
+            "dE1lc3NhZ2USEQoJc2VuZGVyX2lkGAEgASgJEhMKC3NlbmRlcl9uYW1lGAIg",
+            "ASgJEhMKC3NlbmRlcl9pY29uGAMgASgJEi8KCWNoYXRfdHlwZRgEIAEoDjIc",
+            "Lk1lbGFuZEdhbWUzLkNoYXRDaGFubmVsVHlwZRIPCgdjb250ZW50GAUgASgJ",
+            "EhMKC3JlY2VpdmVyX2lkGAYgASgJEg4KBm1zZ19pZBgHIAEoCSKpAQoLTWlu",
+            "aW1hcE1hcmsSKgoEdHlwZRgBIAEoDjIcLk1lbGFuZEdhbWUzLk1pbmltYXBN",
+            "YXJrVHlwZRI5CgxkaXNwbGF5X3R5cGUYAiABKA4yIy5NZWxhbmRHYW1lMy5N",
+            "aW5pbWFwTWFya0Rpc3BsYXlUeXBlEg8KB21hcmtfaWQYAyABKAkSDAoEbmFt",
+            "ZRgEIAEoCRIJCgFyGAUgASgFEgkKAWMYBiABKAUi8AIKDUVudGl0eVByb2Zp",
+            "bGUSCgoCbHYYASABKAUSCwoDZXhwGAIgASgJEgsKA2F0dBgDIAEoBRIRCglh",
+            "dHRfc3BlZWQYBCABKAUSCwoDZGVmGAUgASgFEhIKCmhwX2N1cnJlbnQYBiAB",
+            "KAUSEAoIaHBfbGltaXQYByABKAUSEQoJY3JpdF9yYXRlGAggASgFEhAKCGNy",
+            "aXRfZG1nGAkgASgFEhAKCGhpdF9yYXRlGAogASgFEhEKCW1pc3NfcmF0ZRgL",
+            "IAEoBRISCgptb3ZlX3NwZWVkGAwgASgFEhAKCHB1c2hfZG1nGA0gASgFEhEK",
+            "CXB1c2hfZGlzdBgOIAEoBRITCgtocF9yZWNvdmVyeRgVIAEoBRIUCgxodW5n",
+            "cnlfbGltaXQYGSABKAUSFQoNdGhpcnN0eV9saW1pdBgaIAEoBRIVCg1mYXRp",
+            "Z3VlX2xpbWl0GBsgASgFEhcKD2ZhdGlndWVfY3VycmVudBgcIAEoBSKJAQoT",
+            "RW50aXR5UHJvZmlsZVVwZGF0ZRIuCgVmaWVsZBgBIAEoDjIfLk1lbGFuZEdh",
+            "bWUzLkVudGl0eVByb2ZpbGVGaWVsZBIRCgljdXJfdmFsdWUYAiABKAUSFQoN",
+            "Y3VyX3ZhbHVlX3N0chgDIAEoCRIYChB1c2Vfc3RyaW5nX3ZhbHVlGAQgASgI",
+            "ItkBChFFbnRpdHlTY2VuZUVmZmVjdBIzCgllZmZlY3RfaWQYASABKA4yIC5N",
+            "ZWxhbmRHYW1lMy5FbnRpdHlTY2VuZUVmZmVjdElkEhQKDHRleHRfY29udGVu",
+            "dBgCIAEoCRISCgpleHBpcmVkX2F0GAQgASgFEhMKC2Zyb21fZGV2aWNlGAUg",
+            "ASgFEhEKCWZyb21fbm9kZRgGIAEoBRI9ChJidWJibGVfZWZmZWN0X3R5cGUY",
+            "ByABKA4yIS5NZWxhbmRHYW1lMy5CdWJibGVUZXh0RWZmZWN0VHlwZSK+AgoL",
+            "Qm90U2V0dGluZ3MSCgoCaWQYASABKAUSDAoEbmFtZRgCIAEoCRIPCgdsdl90",
+            "eXBlGAMgASgFEgwKBGtpbmQYBCABKAUSEAoIc2tpbGwxaWQYBSABKAUSEAoI",
+            "c2tpbGwyaWQYBiABKAUSFQoNc2tpbGxTZXF1ZW5jZRgHIAMoBRIYChByb2Jv",
+            "dENvZGVCbG9ja0lkGAggASgFEhIKCmJhZ0dyaWROdW0YCSABKAUSEwoLZnVl",
+            "bENlaWxpbmcYCiABKAUSDQoFc2tpbjEYCyABKAUSDQoFc2tpbjIYDCABKAUS",
+            "DQoFc2tpbjMYDSABKAUSDQoFc2tpbjQYDiABKAUSDAoEc2tpbhgPIAEoBRIZ",
+            "ChFBY3F1aXNpdGlvbnNraWxscxgQIAEoBRITCgtib2R5X3JhZGl1cxgRIAEo",
+            "BSKAAgoKUGxheWVyQXJlYRIOCgZtYXBfaWQYASABKAUSEAoIcl9jZW50ZXIY",
+            "AiABKAUSEAoIY19jZW50ZXIYAyABKAUSEAoIaXRlbV9jaWQYBCABKAUSEQoJ",
+            "YnV5X21hcmtzGAUgASgMEhAKCG93bmVyX2lkGAYgASgJEhIKCm93bmVyX25h",
+            "bWUYByABKAkSFQoNcl9jb3JlX3JhZGl1cxgIIAEoBRIVCg1jX2NvcmVfcmFk",
+            "aXVzGAkgASgFEhcKD3JfZXh0ZW5kX3JhZGl1cxgKIAEoBRIXCg9jX2V4dGVu",
+            "ZF9yYWRpdXMYCyABKAUSEwoLdGVtcGxhdGVfaWQYDCABKAUiuwEKD1BsYXll",
+            "ckFyZWFCcmllZhIQCghyX2NlbnRlchgCIAEoBRIQCghjX2NlbnRlchgDIAEo",
+            "BRIQCghvd25lcl9pZBgGIAEoCRISCgpvd25lcl9uYW1lGAcgASgJEhUKDXJf",
+            "Y29yZV9yYWRpdXMYCCABKAUSFQoNY19jb3JlX3JhZGl1cxgJIAEoBRIXCg9y",
+            "X2V4dGVuZF9yYWRpdXMYCiABKAUSFwoPY19leHRlbmRfcmFkaXVzGAsgASgF",
+            "IrEBChFDb2RlYmxvY2tUZW1wbGF0ZRIKCgJpZBgBIAEoCRINCgV0aXRsZRgC",
+            "IAEoCRIsCgRkYXRhGAMgASgLMh4uTWVsYW5kR2FtZTMuQ29kZUJsb2NrUHJv",
+            "Z3JhbXMSEQoJdGh1bWJuYWlsGAQgASgJEg4KBmlzX25ldxgFIAEoCBIwCgR0",
+            "eXBlGAYgASgOMiIuTWVsYW5kR2FtZTMuQ29kZWJsb2NrVGVtcGxhdGVUeXBl",
+            "IkIKBFJvbGUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZnZW5kZXIY",
+            "AyABKAkSEAoIc2tlbGV0b24YBCABKAkiTwoKU3Bhd25Qb2ludBIKCgJpZBgB",
+            "IAEoBRIOCgZtYXBfaWQYAiABKAUSCQoBeBgDIAEoBRIJCgF5GAQgASgFEg8K",
+            "B2luaXRpYWwYBSABKAgihwEKDFNjZW5lV2VhdGhlchIQCghzY2VuZV9pZBgB",
+            "IAEoBRIpCgd3ZWF0aGVyGAIgASgOMhguTWVsYW5kR2FtZTMuV2VhdGhlclR5",
+            "cGUSEwoLdGVtcGVyYXR1cmUYAyABKAUSEgoKc3RhcnRfcmF0ZRgEIAEoBRIR",
+            "CglzdG9wX3JhdGUYBSABKAUiZQoMV2VhdGhlclN0YXRlEhAKCHNjZW5lX2lk",
+            "GAEgASgFEi4KDHdlYXRoZXJfdHlwZRgCIAEoDjIYLk1lbGFuZEdhbWUzLldl",
+            "YXRoZXJUeXBlEhMKC3RlbXBlcmF0dXJlGAMgASgFIjYKDEFjaGlldmVJbmRl",
+            "eBITCgtyZXF1aXJlX251bRgBIAEoBRIRCglyZXdhcmRfaWQYAiABKAUifwoH",
+            "QWNoaWV2ZRISCgphY2hpZXZlX2lkGAEgASgFEi4KDGFjaGlldmVfdHlwZRgC",
+            "IAEoDjIYLk1lbGFuZEdhbWUzLkFjaGlldmVUeXBlEjAKDWFjaGlldmVfaW5k",
+            "ZXgYAyADKAsyGS5NZWxhbmRHYW1lMy5BY2hpZXZlSW5kZXgimgIKEEVudGl0",
+            "eUx2U2V0dGluZ3MSCgoCbHYYASABKAUSCwoDZXhwGAIgASgFEgsKA2F0dBgD",
+            "IAEoBRIRCglhdHRfc3BlZWQYBCABKAUSCwoDZGVmGAUgASgFEhMKC2hwX3Jl",
+            "Y292ZXJ5GAYgASgFEhAKCGhwX2xpbWl0GAcgASgFEhEKCWNyaXRfcmF0ZRgI",
+            "IAEoBRIQCghjcml0X2RtZxgJIAEoBRIQCghoaXRfcmF0ZRgKIAEoBRIRCglt",
+            "aXNzX3JhdGUYCyABKAUSEgoKbW92ZV9zcGVlZBgMIAEoBRIQCghwdXNoX2Rt",
+            "ZxgNIAEoBRIRCglwdXNoX2Rpc3QYDiABKAUSFgoOZGVhdGhfbG9zc19leHAY",
+            "DyABKAUiZwoNQm90THZTZXR0aW5ncxIKCgJpZBgBIAEoBRIPCgdsdl90eXBl",
+            "GAIgASgFEjkKEmVudGl0eV9sdl9zZXR0aW5ncxgDIAEoCzIdLk1lbGFuZEdh",
+            "bWUzLkVudGl0eUx2U2V0dGluZ3MibwoHSXRlbUxldBIPCgdpdGVtX2lkGAEg",
+            "ASgFEhAKCHF1YW50aXR5GAIgASgFEhAKCE5lZWRSYW5kGAMgASgIEi8KCWF0",
+            "dHJpYnV0ZRgEIAEoCzIcLk1lbGFuZEdhbWUzLkF2YXRhckF0dHJpYnV0ZSLE",
+            "AQoETWFpbBIPCgdtYWlsX2lkGAEgASgJEg0KBXRpdGxlGAIgASgJEg8KB2Nv",
+            "bnRlbnQYAyABKAkSEgoKcGFyYW1ldGVycxgEIAMoCRILCgN0b3AYBSABKAUS",
+            "DgoGc2VuZGVyGAYgASgJEhIKCmV4cGlyZWRfYXQYByABKAMSDAoEcmVhZBgI",
+            "IAEoCBINCgV0YWtlbhgJIAEoCBIpCgthdHRhY2htZW50cxgKIAMoCzIULk1l",
+            "bGFuZEdhbWUzLkl0ZW1MZXQibgoITWFpbEhlYWQSDwoHbWFpbF9pZBgBIAEo",
+            "CRINCgV0aXRsZRgCIAEoCRISCgpleHBpcmVkX2F0GAMgASgDEgsKA3RvcBgE",
+            "IAEoBRIMCgRyZWFkGAUgASgIEhMKC2F0dGFjaG1lbnRzGAYgASgIIosBCgxN",
+            "YWlsVGVtcGxhdGUSEwoLdGVtcGxhdGVfaWQYASABKAUSDAoEbmFtZRgCIAEo",
+            "CRIQCgh0ZW1wbGF0ZRgDIAEoCRILCgN0b3AYBCABKAUSFgoOcmV3YXJkX2dp",
+            "ZnRfaWQYBSABKAUSDwoHaW5pdGlhbBgGIAEoBRIQCghkdXJhdGlvbhgHIAEo",
+            "AyIyCgxQbGF5ZXJIdW5ncnkSDQoFbGltaXQYASABKAUSEwoLY3VycmVudF92",
+            "YWwYAiABKAUiMwoNUGxheWVyVGhpcnN0eRINCgVsaW1pdBgBIAEoBRITCgtj",
+            "dXJyZW50X3ZhbBgCIAEoBSIzCg1QbGF5ZXJGYXRpZ3VlEg0KBWxpbWl0GAEg",
+            "ASgFEhMKC2N1cnJlbnRfdmFsGAIgASgFIoUCChRTcGVjaWFsQnVpbGRTZXR0",
+            "aW5ncxIKCgJpZBgBIAEoBRIRCglkYXRhX2Zyb20YAiABKAUSLgoEdHlwZRgD",
+            "IAEoDjIgLk1lbGFuZEdhbWUzLlNwZWNpYWxCdWlsZFN1YlR5cGUSEAoIZm9y",
+            "bXVsYXMYBCADKAUSEAoIZ3JpZF9udW0YBSABKAUSEQoJbmVlZF9mdWVsGAYg",
+            "AygFEhYKDmJ1cm5pbmdfcmF0aW9uGAcgASgFEhEKCW1heF9jaGFycxgIIAEo",
+            "BRIPCgdjb250ZW50GAkgASgJEhQKDGRpc3BsYXlfdGltZRgKIAEoBRIVCg10",
+            "cmlnZ2VyX3JhbmdlGAsgASgFIo4BCg1Xb3JrYmVuY2hIZWFkEiUKBmVudGl0",
+            "eRgBIAEoCzIVLk1lbGFuZEdhbWUzLkVudGl0eUlkEi0KCGxvY2F0aW9uGAIg",
+            "ASgLMhsuTWVsYW5kR2FtZTMuRW50aXR5TG9jYXRpb24SEAoIb3duZXJfaWQY",
+            "AyABKAkSFQoNd29ya2JlbmNoX2NpZBgEIAEoBSLPAQoJV29ya2JlbmNoEiUK",
+            "BmVudGl0eRgBIAEoCzIVLk1lbGFuZEdhbWUzLkVudGl0eUlkEhUKDXdvcmti",
             "ZW5jaF9jaWQYAiABKAUSGQoRb25fdXNlX2Zvcm11bGFfaWQYAyABKAUSEAoI",
             "ZW5kX3RpbWUYBCABKAkSDgoGcHJvbXB0GAUgASgJEhUKDWNvbXBvbmVudF9u",
             "dW0YBiABKAUSDAoEZnVlbBgHIAEoBRIOCgZzdWJfaWQYCCABKAkSEgoKYmVn",
             "aW5fdGltZRgJIAEoCSInCgdNYXRJdGVtEgoKAmlkGAEgASgFEhAKCHF1YW50",
             "aXR5GAIgASgFIjEKC1Byb2R1Y3RTaG93EhEKCXNob3dfdGltZRgBIAEoBRIP",
-            "CgdzaG93X2lkGAIgASgFIpQCChNBcmNoRm9ybXVsYVNldHRpbmdzEgoKAmlk",
-            "GAEgASgFEiwKC3VubG9ja190eXBlGAIgASgOMhcuQmlhbi5Gb3JtdWxhVW5s",
-            "b2NrVHlwZRIYChB1bmxvY2tfY29uZGl0aW9uGAMgASgFEhQKDGNvbnN1bWVf",
-            "dGltZRgEIAEoBRISCgpwcm9kdWN0X2lkGAUgASgFEikKDHByb2R1Y3RfdHlw",
-            "ZRgGIAEoDjITLkJpYW4uQ29tcG9uZW50VHlwZRIgCgltYXRfaXRlbXMYByAD",
-            "KAsyDS5CaWFuLk1hdEl0ZW0SHwoEc2hvdxgIIAMoCzIRLkJpYW4uUHJvZHVj",
-            "dFNob3cSEQoJcmV3YXJkX2lkGAkgASgFIigKCEdhaW5JdGVtEgoKAmlkGAEg",
-            "ASgFEhAKCHF1YW50aXR5GAIgASgFImEKB0JvdEdhaW4SDgoGYm90X2lkGAEg",
-            "ASgDEhEKCWxldmVsX2RpcxgCIAEoBRIQCghmdWVsX2RpcxgDIAEoBRIhCglp",
-            "dGVtX2xpc3QYBCADKAsyDi5CaWFuLkdhaW5JdGVtIlAKD0VudGl0eUF0dHJp",
-            "YnV0ZRIeCgZlbnRpdHkYASABKAsyDi5CaWFuLkVudGl0eUlkEh0KB3dpZGdl",
-            "dHMYAyADKAsyDC5CaWFuLldpZGdldCIxChBFbnRpdHlBdHRyaWJ1dGVzEh0K",
-            "B3dpZGdldHMYASADKAsyDC5CaWFuLldpZGdldCJoCgdTdHVkZW50EgoKAmlk",
-            "GAEgASgJEhEKCWdhbWVfbmFtZRgCIAEoCRIPCgdoYXNoX2lkGAMgASgJEhEK",
-            "CXJlYWxfbmFtZRgEIAEoCRIaCgJyYxgFIAEoCzIOLkJpYW4uVmVjdG9yWFki",
-            "TQoNQnVpbGRpbmdQb2ludBIJCgF4GAEgASgFEgkKAXkYAiABKAUSCQoBehgD",
-            "IAEoBRIbCgNkaXIYBCABKAsyDi5CaWFuLlZlY3RvclhZIp4CCglFbnRpdHlB",
-            "ZGQSFAoMYnVpbGRfcHVwcGV0GAEgASgIEg8KB2l0ZW1faWQYAiABKAkSGwoD",
-            "UG9zGAMgASgLMg4uQmlhbi5WZWN0b3JYWRIbCgNkaXIYBCABKAsyDi5CaWFu",
-            "LlZlY3RvclhZEg4KBm1pcnJvchgFIAEoCBIcChRmcm9tX2VudGl0eV90ZW1w",
-            "bGF0ZRgGIAEoCBIQCghzdGF0ZV9pZBgHIAEoBRILCgNjaWQYCCABKAUSDgoG",
-            "aXNJdGVtGAkgASgIEiEKCWZvcmNlX2RpchgKIAMoCzIOLkJpYW4uVmVjdG9y",
-            "WFkSFQoNc3Vydml2YWxfdGltZRgLIAEoBRIZChFwaWN0dXJlX2ZyYW1lX3Vy",
-            "bBgMIAEoCSKXAQoKRW50aXR5Q29weRIcCgRmcm9tGAEgASgLMg4uQmlhbi5F",
-            "bnRpdHlJZBIbCgNwb3MYAiABKAsyDi5CaWFuLlZlY3RvclhZEhsKA2RpchgD",
-            "IAEoCzIOLkJpYW4uVmVjdG9yWFkSDgoGbWlycm9yGAUgASgIEiEKCWZvcmNl",
-            "X2RpchgGIAMoCzIOLkJpYW4uVmVjdG9yWFkitQEKCkVudGl0eU1vdmUSHgoG",
-            "ZW50aXR5GAEgASgLMg4uQmlhbi5FbnRpdHlJZBIbCgNwb3MYAiABKAsyDi5C",
-            "aWFuLlZlY3RvclhZEhsKA2RpchgDIAEoCzIOLkJpYW4uVmVjdG9yWFkSDgoG",
-            "bWlycm9yGAQgASgFEgkKAXoYBSABKAUSDwoHel9pbmRleBgGIAEoBRIhCglm",
-            "b3JjZV9kaXIYByADKAsyDi5CaWFuLlZlY3RvclhZImgKDEVudGl0eURlbFJl",
-            "cxIeCgZlbnRpdHkYASABKAsyDi5CaWFuLkVudGl0eUlkEhsKA3BvcxgCIAEo",
-            "CzIOLkJpYW4uVmVjdG9yWFkSGwoDZGlyGAMgASgLMg4uQmlhbi5WZWN0b3JY",
-            "WSJ9Cg9CdWlsZGluZ01vZGVQb3MSCwoDY2lkGAEgASgFEh4KBmVudGl0eRgC",
-            "IAEoCzIOLkJpYW4uRW50aXR5SWQSGgoSZW50aXR5X3RlbXBsYXRlX2lkGAMg",
-            "ASgJEiEKBGRpcnMYBCADKAsyEy5CaWFuLkJ1aWxkaW5nUG9pbnQiQAoNQW5p",
-            "bWF0aW9uQm9uZRIKCgJpZBgBIAEoCRIRCglhbmltX25hbWUYAiABKAkSEAoI",
-            "cmVzX25hbWUYAyABKAkiWAoOQW5pbWF0aW9uRnJhbWUSCgoCaWQYASABKAkS",
-            "DAoEbmFtZRgCIAEoCRINCgVpbmRleBgDIAEoBRILCgN1cmwYBCABKAkSEAoI",
-            "cmVjdF91cmwYBSABKAkipQEKCUFuaW1hdGlvbhIKCgJpZBgBIAEoCRIMCgRu",
-            "YW1lGAIgASgJEg0KBWluZGV4GAMgASgFEiEKBHR5cGUYBCABKA4yEy5CaWFu",
-            "LkFuaW1hdGlvblR5cGUSJAoGZnJhbWVzGAUgAygLMhQuQmlhbi5BbmltYXRp",
-            "b25GcmFtZRImCglib25lX2FuaW0YBiABKAsyEy5CaWFuLkFuaW1hdGlvbkJv",
-            "bmUiWAoQRW50aXR5QW5pbWF0aW9ucxIjCgphbmltYXRpb25zGAEgAygLMg8u",
-            "Qmlhbi5BbmltYXRpb24SHwoGRW1vamlzGAIgAygLMg8uQmlhbi5BbmltYXRp",
-            "b24i0gMKDkVudGl0eVRlbXBsYXRlEhMKC3BsYXllcl9uYW1lGAEgASgJEhMK",
-            "C3RlbXBsYXRlX2lkGAIgASgJEgwKBG5hbWUYAyABKAkSDAoEZGVzYxgEIAEo",
-            "CRIQCgh3YWxrX2RpchgFIAEoCRIQCghpY29uX3VybBgGIAEoCRIRCglpbWFn",
-            "ZV91cmwYByABKAkSEAoIYW5pbV91cmwYCCADKAkSDAoEYXJlYRgJIAEoCRIR",
-            "CglkaXJlY3Rpb24YCiABKAUSFAoMYnVpbGRfaGVpZ2h0GAsgASgFEhIKCmJ1",
-            "aWxkX3R5cGUYDCABKAUSEAoIZnJvbV9jaWQYDSABKAUSFgoOY3JlYXRlX3R5",
-            "cGVfaWQYDiABKAUSEwoLY29kZV9saWJfaWQYDyABKAUSKgoKYW5pbWF0aW9u",
-            "cxgQIAEoCzIWLkJpYW4uRW50aXR5QW5pbWF0aW9ucxIpCglhdHRyaWJ1dGUY",
-            "ESABKAsyFi5CaWFuLkVudGl0eUF0dHJpYnV0ZXMSIgoGYXVkaW9zGBIgASgL",
-            "MhIuQmlhbi5FbnRpdHlBdWRpb3MSLAoKdGltZV9saW5lcxgTIAEoCzIYLkJp",
-            "YW4uRW50aXR5VGltZUxpbmVMaXN0IkMKDkVudGl0eVBvc2l0aW9uEhMKC3Rl",
-            "bXBsYXRlX2lkGAEgASgJEhwKA3ZlYxgCIAEoCzIPLkJpYW4uVmVjdG9yWFla",
-            "IqYBChNFbnRpdHlUZW1wbGF0ZUdyb3VwEhMKC3RlbXBsYXRlX2lkGAEgASgJ",
-            "EgwKBG5hbWUYAiABKAkSDAoEZGVzYxgDIAEoCRIQCghpY29uX3VybBgEIAEo",
-            "CRIoCgpldGVtcGxhdGVzGAUgAygLMhQuQmlhbi5FbnRpdHlUZW1wbGF0ZRIi",
-            "CgRlcG9zGAYgAygLMhQuQmlhbi5FbnRpdHlQb3NpdGlvbiJDCg1LZXlwcmVz",
-            "c0V2ZW50Eg4KBmtleV9pZBgBIAEoBRIiCgVzdGF0ZRgCIAEoDjITLkJpYW4u",
-            "S2V5cHJlc3NTdGF0ZSI7CghLZXlwcmVzcxILCgNrZXkYASABKAkSIgoFc3Rh",
-            "dGUYAiABKA4yEy5CaWFuLktleXByZXNzU3RhdGUigAEKCklucHV0RXZlbnQS",
-            "IgoEdHlwZRgBIAEoDjIULkJpYW4uSW5wdXRFdmVudFR5cGUSJwoIa2V5cHJl",
-            "c3MYMiABKAsyEy5CaWFuLktleXByZXNzRXZlbnRIABIdCgNrZXkYMyABKAsy",
-            "Di5CaWFuLktleXByZXNzSABCBgoEZGF0YSLzAgoMUGFuZWxQcm9maWxlEioK",
-            "CnBhbmVsX3R5cGUYASABKA4yFi5CaWFuLlBhbmVsUHJvZmlsZVR5cGUSIwoF",
-            "c3R5bGUYCiABKAsyEi5CaWFuLlBhbmVsQkdTdHlsZUgAEhEKB3Jvd19udW0Y",
-            "CyABKAVIABIRCgdjb2xfbnVtGAwgASgFSAASIQoFdGl0bGUYDSABKAsyEC5C",
-            "aWFuLlBhbmVsVGl0bGVIABIuCgxncmlkX3Byb2ZpbGUYDiABKAsyFi5CaWFu",
-            "LlBhbmVsR3JpZFByb2ZpbGVIABIrCgpyb3dfaGVpZ2h0GA8gASgLMhUuQmlh",
-            "bi5QYW5lbFJvd0NvbFNpemVIABIqCgljb2xfd2lkdGgYECABKAsyFS5CaWFu",
-            "LlBhbmVsUm93Q29sU2l6ZUgAEiMKBmFuY2hvchgRIAEoCzIRLkJpYW4uUGFu",
-            "ZWxBbmNob3JIABITCglpc19oaWRkZW4YEiABKAhIAEIGCgRkYXRhImMKDFBh",
-            "bmVsQkdTdHlsZRIcCgVzdHlsZRgBIAEoDjINLkJpYW4uQkdTdHlsZRIJCgFy",
-            "GAIgASgFEgkKAWcYAyABKAUSCQoBYhgEIAEoBRIUCgx0cmFuc3BhcmVuY3kY",
-            "BSABKAUidgoKUGFuZWxUaXRsZRIQCghjYW5fZm9sZBgBIAEoCBIJCgFyGAIg",
-            "ASgFEgkKAWcYAyABKAUSCQoBYhgEIAEoBRIUCgx0cmFuc3BhcmVuY3kYBSAB",
-            "KAUSDwoHY29udGVudBgGIAEoCRIOCgZoZWlnaHQYByABKAUiiAEKEFBhbmVs",
-            "R3JpZFByb2ZpbGUSDwoHY29udGVudBgBIAEoCRIfCgVhbGlnbhgCIAEoDjIQ",
-            "LkJpYW4uQWxpZ25TdHlsZRIPCgdwaWN0dXJlGAMgASgJEg8KB3BlcmNlbnQY",
-            "BCABKAUSDwoHY29sX251bRgFIAEoBRIPCgdyb3dfbnVtGAYgASgFIi4KD1Bh",
-            "bmVsUm93Q29sU2l6ZRINCgV3aGljaBgBIAEoBRIMCgRzaXplGAIgASgFIlYK",
-            "C1BhbmVsQW5jaG9yEiEKA3BvcxgBIAEoDjIULkJpYW4uUGFuZWxBbmNob3JQ",
-            "b3MSEgoKaG9yaXpvbnRhbBgCIAEoBRIQCgh2ZXJ0aWNhbBgDIAEoBSJuCgxT",
-            "aG93Vmlld0RhdGESHAoEdHlwZRgBIAEoDjIOLkJpYW4uVmlld1R5cGUSOAoS",
-            "ZHVuZ2Vvbl9zY29yZV9kYXRhGAogASgLMhouQmlhbi5WaWV3RHVuZ2VvblNj",
-            "b3JlRGF0YUgAQgYKBGRhdGEipwEKFFZpZXdEdW5nZW9uU2NvcmVEYXRhEhIK",
-            "CmR1bmdlb25faWQYASABKAUSDQoFc2NvcmUYAiABKAUSHAoUcmVjZWl2ZWRf",
-            "YmFzZV9yZXdhcmQYAyADKAUSEAoIc3VwZXJfbHYYBCABKAUSHQoVcmVjZWl2",
-            "ZWRfc3VwZXJfcmV3YXJkGAUgAygFEh0KFXJlY2VpdmVkX2ZpbmFsX3Jld2Fy",
-            "ZBgGIAEoCCI8ChJEdW5nZW9uU3VwZXJSZXdhcmQSEQoJcmV3YXJkX2lkGAEg",
-            "ASgFEhMKC25lZWRfdmlwX2x2GAIgASgFIjoKEVJlc291cmNlUG9pbnRJbmZv",
-            "EhAKCHJjX2luZGV4GAEgASgFEhMKC3Jlc291cmNlX2lkGAIgASgFIi4KDUJv",
-            "cm5Qb2ludEluZm8SEAoIcmNfaW5kZXgYASABKAUSCwoDY2lkGAIgASgFIk4K",
-            "BVNjb3BlEiAKCHRvcF9ub2RlGAEgASgLMg4uQmlhbi5WZWN0b3JYWRIjCgti",
-            "b3R0b21fbm9kZRgCIAEoCzIOLkJpYW4uVmVjdG9yWFki2AIKCkxlc3NvbkFy",
-            "ZWESFgoObGVzc29uX2FyZWFfaWQYASABKAkSGwoTbGVzc29uX2FyZWFfY29t",
-            "bWVudBgCIAEoCRIYChBsZXNzb25fYXJlYV9uYW1lGAMgASgJEhoKBXNjb3Bl",
-            "GAQgASgLMgsuQmlhbi5TY29wZRIeCgZ0cF9wb3MYBSABKAsyDi5CaWFuLlZl",
-            "Y3RvclhZEhQKDG5leHRfYXJlYV9pZBgGIAEoCRIUCgxwcmV2X2FyYWVfaWQY",
-            "ByABKAkSFAoMdGVycmFpbnNfY2lkGAggASgFEicKCXNob3dfdHlwZRgJIAEo",
-            "DjIULkJpYW4uTGVzc29uU2hvd1R5cGUSJwoJYXJlYV9tb2RlGAogASgOMhQu",
-            "Qmlhbi5MZXNzb25BcmVhTW9kZRIrCg1jb2RlX2VudGl0aWVzGAsgAygLMhQu",
-            "Qmlhbi5Db2RlRW50aXR5RGF0YSJ1Cg5Db2RlRW50aXR5RGF0YRIZCgFlGAEg",
-            "ASgLMg4uQmlhbi5FbnRpdHlJZBIOCgZlX25hbWUYAiABKAkSCwoDY2lkGAMg",
-            "ASgFEgwKBGljb24YBCABKAkSCwoDdGFiGAUgASgFEhAKCHRhYl9uYW1lGAYg",
-            "ASgJImoKFExlc3NvbkFyZWFFbnRpdHlEYXRhEhkKAWUYASABKAsyDi5CaWFu",
-            "LkVudGl0eUlkEgsKA2NpZBgCIAEoBRIOCgZlX2Rlc2MYAyABKAkSGgoCcmMY",
-            "BCABKAsyDi5CaWFuLlZlY3RvclhZIq8BCg5MZXNzb25BcmVhSW5mbxIeCgRh",
-            "cmVhGAEgASgLMhAuQmlhbi5MZXNzb25BcmVhEi0KCXRwX3BvaW50cxgCIAMo",
-            "CzIaLkJpYW4uTGVzc29uQXJlYUVudGl0eURhdGESFAoMaXNfcmVzZXR0aW5n",
-            "GAMgASgIEiMKCmxvY2tfc3RhdGUYBCABKA4yDy5CaWFuLkxvY2tTdGF0ZRIT",
-            "CgtoYXNfYXJyaXZlZBgFIAEoCCLiAgoOTGVzc29uQXJlYURhdGESNwoVbGVz",
-            "c29uX2FyZWFfZGF0YV90eXBlGAEgASgOMhguQmlhbi5MZXNzb25BcmVhRGF0",
-            "YVR5cGUSDgoEbmFtZRgKIAEoCUgAEhEKB2NvbW1lbnQYCyABKAlIABIcCgVz",
-            "Y29wZRgMIAEoCzILLkJpYW4uU2NvcGVIABIgCgZ0cF9wb3MYDSABKAsyDi5C",
-            "aWFuLlZlY3RvclhZSAASEQoHYXJlYV9pZBgOIAEoCUgAEhYKDHRlcnJhaW5z",
-            "X2NpZBgPIAEoBUgAEisKC2VudGl0eV9kYXRhGBAgASgLMhQuQmlhbi5Db2Rl",
-            "RW50aXR5RGF0YUgAEikKCXNob3dfdHlwZRgRIAEoDjIULkJpYW4uTGVzc29u",
-            "U2hvd1R5cGVIABIpCglhcmVhX21vZGUYEiABKA4yFC5CaWFuLkxlc3NvbkFy",
-            "ZWFNb2RlSABCBgoEZGF0YSJMCg5BcmVhVXBkYXRlRGF0YRIPCgdhcmVhX2lk",
-            "GAEgASgJEikKC3VwZGF0ZV9kYXRhGAIgAygLMhQuQmlhbi5MZXNzb25BcmVh",
-            "RGF0YSI5CgxFbnRpdHlPZlRpbGUSEAoIcmNfaW5kZXgYASABKAUSFwoPcmFu",
-            "ZG9tX2VudGl0aWVzGAIgAygDIm8KE0NhcnJ5RW50aXR5QmFzZURhdGESGgoC",
-            "aWQYASABKAsyDi5CaWFuLkVudGl0eUlkEiEKA2xvYxgCIAEoCzIULkJpYW4u",
-            "RW50aXR5TG9jYXRpb24SCwoDY2lkGAMgASgFEgwKBGljb24YBCABKAki0QEK",
-            "DUVudGl0eVByZWxvYWQSCwoDY2lkGAEgASgFEjMKEnByZWxvYWRfY29kZV9i",
-            "bG9jaxgCIAEoCzIXLkJpYW4uQ29kZUJsb2NrUHJvZ3JhbXMSMgoTcHJlbG9h",
-            "ZF9lbnRpdHlfYXR0chgDIAEoCzIVLkJpYW4uRW50aXR5QXR0cmlidXRlEjcK",
-            "FXByZWxvYWRfdGltZWxpbmVfbGlzdBgEIAEoCzIYLkJpYW4uRW50aXR5VGlt",
-            "ZUxpbmVMaXN0EhEKCWVudGl0eV9pZBgFIAEoCSJcCg1FbnRpdHlDdXNEYXRh",
-            "EgsKA2NpZBgBIAEoBRIRCglmaWxlX25hbWUYAiABKAkSKwoOZW50aXR5X3By",
-            "ZWxvYWQYAyABKAsyEy5CaWFuLkVudGl0eVByZWxvYWQifAoURW50aXRpZXNR",
-            "dWlja0NvZGVUYWISHgoGZW50aXR5GAEgASgLMg4uQmlhbi5FbnRpdHlJZBIO",
-            "CgZ0YWJfaWQYAiABKAUSEwoLZW50aXR5X25hbWUYAyABKAkSEQoJYXZhdGFy",
-            "Q2lkGAQgASgFEgwKBGljb24YBSABKAkqbgoPU2VydmVyQ2xvc2VUeXBlEikK",
-            "JVNlcnZlckNsb3NlVHlwZV9TZXJ2ZXJDbG9zZVR5cGVOb3JtYWwQABIwCixT",
-            "ZXJ2ZXJDbG9zZVR5cGVfU2VydmVyQ2xvc2VUeXBlTWFzdGVyU2lnbk91dBAB",
-            "KsgBCgtLaWNrT3V0VHlwZRIhCh1LaWNrT3V0VHlwZV9LaWNrT3V0VHlwZVVu",
-            "a25vdxAAEigKJEtpY2tPdXRUeXBlX0tpY2tPdXRUeXBlUmVwZWF0Q29ubmVj",
-            "dBABEiEKHUtpY2tPdXRUeXBlX0tpY2tPdXRUeXBlT25Ib29rEAISIgoeS2lj",
-            "a091dFR5cGVfS2lja091dFR5cGVPdmVyTWF4EAMSJQohS2lja091dFR5cGVf",
-            "S2lja091dFR5cGVSZXN0YXJ0TWFwEAQq7AIKCUVuZW15VHlwZRIjCh9FbmVt",
-            "eVR5cGVfRW5lbXlUeXBlVW5hdHRhY2thYmxlEAASHQoZRW5lbXlUeXBlX0Vu",
-            "ZW15VHlwZVBsYXllchABEhsKF0VuZW15VHlwZV9FbmVteVR5cGVUcmVlEAIS",
-            "HAoYRW5lbXlUeXBlX0VuZW15VHlwZUdyYXNzEAMSHAoYRW5lbXlUeXBlX0Vu",
-            "ZW15VHlwZVN0b25lEAQSHwobRW5lbXlUeXBlX0VuZW15VHlwZUJ1aWxkaW5n",
-            "EAUSGgoWRW5lbXlUeXBlX0VuZW15VHlwZUJvdBAGEh4KGkVuZW15VHlwZV9F",
-            "bmVteVR5cGVNb25zdGVyEAcSIgoeRW5lbXlUeXBlX0VuZW15VHlwZVRyZWFz",
-            "dXJlQm94EAgSHgoaRW5lbXlUeXBlX0VuZW15VHlwZUZhbGxpbmcQCRIhCh1F",
-            "bmVteVR5cGVfRW5lbXlUeXBlRmFsbGluZ0JveBAKKpQBChBFbnRpdHlDb2Rl",
-            "U3RhdHVzEisKJ0VudGl0eUNvZGVTdGF0dXNfRW50aXR5Q29kZVN0YXR1c1Vu",
-            "a25vdxAAEigKJEVudGl0eUNvZGVTdGF0dXNfRW50aXR5Q29kZVN0YXR1c1J1",
-            "bhABEikKJUVudGl0eUNvZGVTdGF0dXNfRW50aXR5Q29kZVN0YXR1c1N0b3AQ",
-            "Aio8CghNb3ZlVHlwZRIXChNNb3ZlVHlwZV9Nb3ZlVHlwZVhZEAASFwoTTW92",
-            "ZVR5cGVfTW92ZVR5cGVSQxABKpwBCgxNb3ZlbWVudFR5cGUSJAogTW92ZW1l",
-            "bnRUeXBlX01vdmVtZW50VHlwZVVua25vd24QABIhCh1Nb3ZlbWVudFR5cGVf",
-            "TW92ZW1lbnRUeXBlV2FsaxABEiAKHE1vdmVtZW50VHlwZV9Nb3ZlbWVudFR5",
-            "cGVSdW4QAhIhCh1Nb3ZlbWVudFR5cGVfTW92ZW1lbnRUeXBlSWRsZRADKo0F",
-            "CgpPYmplY3RUeXBlEiAKHE9iamVjdFR5cGVfT2JqZWN0VHlwZVVua25vd24Q",
-            "ABIdChlPYmplY3RUeXBlX09iamVjdFR5cGVHZWFyEAESIAocT2JqZWN0VHlw",
-            "ZV9PYmplY3RUeXBlQnJpZGdldBACEiAKHE9iamVjdFR5cGVfT2JqZWN0VHlw",
-            "ZUNvbnN1bWUQAxIhCh1PYmplY3RUeXBlX09iamVjdFR5cGVNYXRlcmlhbBAE",
-            "EiUKIU9iamVjdFR5cGVfT2JqZWN0VHlwZUNvbnN0cnVjdGlvbhAFEh4KGk9i",
-            "amVjdFR5cGVfT2JqZWN0VHlwZVdhdGVyEAYSHwobT2JqZWN0VHlwZV9PYmpl",
-            "Y3RUeXBlR3JvdW5kEAcSIQodT2JqZWN0VHlwZV9PYmplY3RUeXBlUmVzb3Vy",
-            "Y2UQCBIhCh1PYmplY3RUeXBlX09iamVjdFR5cGVDdXJyZW5jeRAJEh4KGk9i",
-            "amVjdFR5cGVfT2JqZWN0VHlwZUZsb29yEAoSHQoZT2JqZWN0VHlwZV9PYmpl",
-            "Y3RUeXBlV2FsbBALEh8KG09iamVjdFR5cGVfT2JqZWN0VHlwZVdpbmRvdxAM",
-            "EicKI09iamVjdFR5cGVfT2JqZWN0VHlwZVBsYXllckFyZWFGbGFnEA0SHAoY",
-            "T2JqZWN0VHlwZV9PYmplY3RUeXBlQm94EA4SIAocT2JqZWN0VHlwZV9PYmpl",
-            "Y3RUeXBlRm9ybXVsYRAPEh0KGU9iamVjdFR5cGVfT2JqZWN0VHlwZVZvaWQQ",
-            "EBIgChxPYmplY3RUeXBlX09iamVjdFR5cGVTdXJmYWNlEBESHwobT2JqZWN0",
-            "VHlwZV9PYmplY3RUeXBlUHVwcGV0EBIqzAEKEVdhbGxPYmplY3RTdWJUeXBl",
-            "Ei4KKldhbGxPYmplY3RTdWJUeXBlX1dhbGxPYmplY3RTdWJUeXBlVW5rbm93",
-            "bhAAEiwKKFdhbGxPYmplY3RTdWJUeXBlX1dhbGxPYmplY3RTdWJUeXBlQmFz",
-            "aWMQARIsCihXYWxsT2JqZWN0U3ViVHlwZV9XYWxsT2JqZWN0U3ViVHlwZUZl",
-            "bmNlEAISKwonV2FsbE9iamVjdFN1YlR5cGVfV2FsbE9iamVjdFN1YlR5cGVE",
-            "b29yEAMqtQEKE09iamVjdEJ1aWxkYWJsZVR5cGUSNgoyT2JqZWN0QnVpbGRh",
-            "YmxlVHlwZV9PYmplY3RCdWlsZGFibGVUeXBlVW5idWlsZGFibGUQABI0CjBP",
-            "YmplY3RCdWlsZGFibGVUeXBlX09iamVjdEJ1aWxkYWJsZVR5cGVCdWlsZGFi",
-            "bGUQARIwCixPYmplY3RCdWlsZGFibGVUeXBlX09iamVjdEJ1aWxkYWJsZVR5",
-            "cGVNZXJnZRACKpABCg9PYmplY3RCbG9ja1R5cGUSJwojT2JqZWN0QmxvY2tU",
-            "eXBlX09iamVjdEJsb2NrVHlwZUZyZWUQABIoCiRPYmplY3RCbG9ja1R5cGVf",
-            "T2JqZWN0QmxvY2tUeXBlQmxvY2sQARIqCiZPYmplY3RCbG9ja1R5cGVfT2Jq",
-            "ZWN0QmxvY2tUeXBlRHluYW1pYxACKpoCCg1PYmplY3RRdWFsaXR5EiYKIk9i",
-            "amVjdFF1YWxpdHlfT2JqZWN0UXVhbGl0eVVua25vd24QABIkCiBPYmplY3RR",
-            "dWFsaXR5X09iamVjdFF1YWxpdHlXaGl0ZRABEiQKIE9iamVjdFF1YWxpdHlf",
-            "T2JqZWN0UXVhbGl0eUdyZWVuEAISIwofT2JqZWN0UXVhbGl0eV9PYmplY3RR",
-            "dWFsaXR5Qmx1ZRADEiUKIU9iamVjdFF1YWxpdHlfT2JqZWN0UXVhbGl0eVB1",
-            "cnBsZRAEEiUKIU9iamVjdFF1YWxpdHlfT2JqZWN0UXVhbGl0eU9yYW5nZRAF",
-            "EiIKHk9iamVjdFF1YWxpdHlfT2JqZWN0UXVhbGl0eVJlZBAGKpkECg5PYmpl",
-            "Y3RHZWFyVHlwZRIoCiRPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZVVu",
-            "a25vd24QABIlCiFPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZUhlYWQQ",
-            "ARIlCiFPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZUNvYXQQAhIlCiFP",
-            "YmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZVBhbnQQAxIlCiFPYmplY3RH",
-            "ZWFyVHlwZV9PYmplY3RHZWFyVHlwZVNob2UQBBIlCiFPYmplY3RHZWFyVHlw",
-            "ZV9PYmplY3RHZWFyVHlwZUhhbmQQBRIkCiBPYmplY3RHZWFyVHlwZV9PYmpl",
-            "Y3RHZWFyVHlwZUF4ZRAGEigKJE9iamVjdEdlYXJUeXBlX09iamVjdEdlYXJU",
-            "eXBlUGlja2F4ZRAHEiYKIk9iamVjdEdlYXJUeXBlX09iamVjdEdlYXJUeXBl",
-            "U3dvcmQQCBIkCiBPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZUJvdxAJ",
-            "EioKJk9iamVjdEdlYXJUeXBlX09iamVjdEdlYXJUeXBlQWNjZXNzb3J5EAoS",
-            "JAogT2JqZWN0R2VhclR5cGVfT2JqZWN0R2VhclR5cGVHdW4QCxIqCiZPYmpl",
-            "Y3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZURvdWJsZUd1bhAMKqgDChpPYmpl",
-            "Y3RBbmltYXRpb25UcmlnZ2VyVHlwZRJACjxPYmplY3RBbmltYXRpb25Ucmln",
-            "Z2VyVHlwZV9PYmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZVVua25vd24QABI9",
-            "CjlPYmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZV9PYmplY3RBbmltYXRpb25U",
-            "cmlnZ2VyVHlwZUF1dG8QARJBCj1PYmplY3RBbmltYXRpb25UcmlnZ2VyVHlw",
-            "ZV9PYmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZUludGVyYWN0EAISPgo6T2Jq",
-            "ZWN0QW5pbWF0aW9uVHJpZ2dlclR5cGVfT2JqZWN0QW5pbWF0aW9uVHJpZ2dl",
-            "clR5cGVUb3VjaBADEj4KOk9iamVjdEFuaW1hdGlvblRyaWdnZXJUeXBlX09i",
-            "amVjdEFuaW1hdGlvblRyaWdnZXJUeXBlTGVhdmUQBBJGCkJPYmplY3RBbmlt",
-            "YXRpb25UcmlnZ2VyVHlwZV9PYmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZU9u",
-            "U3RhdGVDaGFuZ2UQBSr7AgoXT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGUSOgo2",
-            "T2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVfT2JqZWN0QW5pbWF0aW9uU3RvcFR5",
-            "cGVVbmtub3duEAASNwozT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVfT2JqZWN0",
-            "QW5pbWF0aW9uU3RvcFR5cGVBdXRvEAESOwo3T2JqZWN0QW5pbWF0aW9uU3Rv",
-            "cFR5cGVfT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVJbnRlcmFjdBACEjgKNE9i",
-            "amVjdEFuaW1hdGlvblN0b3BUeXBlX09iamVjdEFuaW1hdGlvblN0b3BUeXBl",
-            "TGVhdmUQAxI4CjRPYmplY3RBbmltYXRpb25TdG9wVHlwZV9PYmplY3RBbmlt",
-            "YXRpb25TdG9wVHlwZVRvdWNoEAQSOgo2T2JqZWN0QW5pbWF0aW9uU3RvcFR5",
-            "cGVfT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVOb25TdG9wEAUqeQoIVXNlclR5",
-            "cGUSHAoYVXNlclR5cGVfVXNlclR5cGVVbmtub3duEAASGwoXVXNlclR5cGVf",
-            "VXNlclR5cGVQbGF5ZXIQARIYChRVc2VyVHlwZV9Vc2VyVHlwZUJvdBACEhgK",
-            "FFVzZXJUeXBlX1VzZXJUeXBlUGV0EAMqmwIKC1RlcnJhaW5UeXBlEhsKF1Rl",
-            "cnJhaW5UeXBlX1RlcnJhaW5Ob25lEAASHAoYVGVycmFpblR5cGVfVGVycmFp",
-            "bkdyYXNzEAESHwobVGVycmFpblR5cGVfVGVycmFpblN1YnRpbGlzEAISHAoY",
-            "VGVycmFpblR5cGVfVGVycmFpblNsYXRlEAMSGgoWVGVycmFpblR5cGVfVGVy",
-            "cmFpbk11ZBAEEhsKF1RlcnJhaW5UeXBlX1RlcnJhaW5Tbm93EAUSHQoZVGVy",
-            "cmFpblR5cGVfVGVycmFpbkRlc2VydBAGEhwKGFRlcnJhaW5UeXBlX1RlcnJh",
-            "aW5QbGFuaxAHEhwKGFRlcnJhaW5UeXBlX1RlcnJhaW5XYXRlchAIKpwBChBH",
-            "YW1lUHJvamVjdFN0YXRlEioKJkdhbWVQcm9qZWN0U3RhdGVfR2FtZVByb2pl",
-            "Y3RTdGF0ZURyYWZ0EAASLAooR2FtZVByb2plY3RTdGF0ZV9HYW1lUHJvamVj",
-            "dFN0YXRlRGVsZXRlZBABEi4KKkdhbWVQcm9qZWN0U3RhdGVfR2FtZVByb2pl",
-            "Y3RTdGF0ZVB1Ymxpc2hlZBACKo8BCg9HYW1lUHJvamVjdFR5cGUSKgomR2Ft",
-            "ZVByb2plY3RUeXBlX0dhbWVQcm9qZWN0VHlwZVVua25vd24QABIpCiVHYW1l",
-            "UHJvamVjdFR5cGVfR2FtZVByb2plY3RUeXBlUGxhbmV0EAESJQohR2FtZVBy",
-            "b2plY3RUeXBlX0dhbWVQcm9qZWN0VHlwZTJEEAIqVwoMQ3VycmVuY3lUeXBl",
-            "EiQKIEN1cnJlbmN5VHlwZV9DdXJyZW5jeVR5cGVVbmtub3duEAASIQodQ3Vy",
-            "cmVuY3lUeXBlX0N1cnJlbmN5VHlwZUdvbGQQASq3AQoJVGFza1N0YXRlEh4K",
-            "GlRhc2tTdGF0ZV9UYXNrU3RhdGVVbmtub3duEAASHwobVGFza1N0YXRlX1Rh",
-            "c2tTdGF0ZUFjY2VwdGVkEAESIAocVGFza1N0YXRlX1Rhc2tTdGF0ZUNvbXBs",
-            "ZXRlZBACEiAKHFRhc2tTdGF0ZV9UYXNrU3RhdGVTdWJtaXR0ZWQQAxIlCiFU",
-            "YXNrU3RhdGVfVGFza1N0YXRlRm9yY2VDb21wbGV0ZWQQBCqvAQoTVGFza1Jl",
-            "cXVpcmVtZW50VHlwZRIyCi5UYXNrUmVxdWlyZW1lbnRUeXBlX1Rhc2tSZXF1",
-            "aXJlbWVudFR5cGVVbmtub3duEAASMAosVGFza1JlcXVpcmVtZW50VHlwZV9U",
-            "YXNrUmVxdWlyZW1lbnRUeXBlTGV2ZWwQARIyCi5UYXNrUmVxdWlyZW1lbnRU",
-            "eXBlX1Rhc2tSZXF1aXJlbWVudFR5cGVQcmVUYXNrEAIq3AUKEVRhc2tPYmpl",
-            "Y3RpdmVUeXBlEi4KKlRhc2tPYmplY3RpdmVUeXBlX1Rhc2tPYmplY3RpdmVU",
-            "eXBlVW5rbm93bhAAEjQKMFRhc2tPYmplY3RpdmVUeXBlX1Rhc2tPYmplY3Rp",
-            "dmVUeXBlQXV0b0NvbXBsZXRlZBABEiwKKFRhc2tPYmplY3RpdmVUeXBlX1Rh",
-            "c2tPYmplY3RpdmVUeXBlQnVpbGQQAhIrCidUYXNrT2JqZWN0aXZlVHlwZV9U",
-            "YXNrT2JqZWN0aXZlVHlwZVRhbGsQAxItCilUYXNrT2JqZWN0aXZlVHlwZV9U",
-            "YXNrT2JqZWN0aXZlVHlwZU9iamVjdBAEEjAKLFRhc2tPYmplY3RpdmVUeXBl",
-            "X1Rhc2tPYmplY3RpdmVUeXBlU3ludGhlc2lzEAUSKwonVGFza09iamVjdGl2",
-            "ZVR5cGVfVGFza09iamVjdGl2ZVR5cGVLaWxsEAYSLQopVGFza09iamVjdGl2",
-            "ZVR5cGVfVGFza09iamVjdGl2ZVR5cGVHYXRoZXIQBxItCilUYXNrT2JqZWN0",
-            "aXZlVHlwZV9UYXNrT2JqZWN0aXZlVHlwZURlbGV0ZRAIEi8KK1Rhc2tPYmpl",
-            "Y3RpdmVUeXBlX1Rhc2tPYmplY3RpdmVUeXBlRXhwbG9yZWQQCRIsCihUYXNr",
-            "T2JqZWN0aXZlVHlwZV9UYXNrT2JqZWN0aXZlVHlwZUxldmVsEAoSMgouVGFz",
-            "a09iamVjdGl2ZVR5cGVfVGFza09iamVjdGl2ZVR5cGVEdW5nZW9uTHZVcBAL",
-            "EisKJ1Rhc2tPYmplY3RpdmVUeXBlX1Rhc2tPYmplY3RpdmVUeXBlQ29kZRAM",
-            "EiwKKFRhc2tPYmplY3RpdmVUeXBlX1Rhc2tPYmplY3RpdmVUeXBlQnJlZWQQ",
-            "DRIsCihUYXNrT2JqZWN0aXZlVHlwZV9UYXNrT2JqZWN0aXZlVHlwZVBsYW50",
-            "EA4qlgEKDlRhc2tSZXdhcmRUeXBlEigKJFRhc2tSZXdhcmRUeXBlX1Rhc2tS",
-            "ZXdhcmRUeXBlVW5rbm93bhAAEicKI1Rhc2tSZXdhcmRUeXBlX1Rhc2tSZXdh",
-            "cmRUeXBlT2JqZWN0EAESMQotVGFza1Jld2FyZFR5cGVfVGFza1Jld2FyZFR5",
-            "cGVDb25maXNjYXRlT2JqZWN0EAIquAEKFEFjaGlldmVPYmplY3RpdmVUeXBl",
-            "EjMKL0FjaGlldmVPYmplY3RpdmVUeXBlX0FjaGlldmVPYmplY3RpdmVUeXBl",
-            "VW5rbm93EAASNQoxQWNoaWV2ZU9iamVjdGl2ZVR5cGVfQWNoaWV2ZU9iamVj",
-            "dGl2ZVR5cGVFeHBsb3JlZBABEjQKMEFjaGlldmVPYmplY3RpdmVUeXBlX0Fj",
-            "aGlldmVPYmplY3RpdmVUeXBlTW9uc3RlchACKqADCg9DaGF0Q2hhbm5lbFR5",
-            "cGUSKgomQ2hhdENoYW5uZWxUeXBlX0NoYXRDaGFubmVsVHlwZVVua25vd24Q",
-            "ABIpCiVDaGF0Q2hhbm5lbFR5cGVfQ2hhdENoYW5uZWxUeXBlU3lzdGVtEAES",
-            "KAokQ2hhdENoYW5uZWxUeXBlX0NoYXRDaGFubmVsVHlwZVdvcmxkEAISJgoi",
-            "Q2hhdENoYW5uZWxUeXBlX0NoYXRDaGFubmVsVHlwZU1hcBADEisKJ0NoYXRD",
-            "aGFubmVsVHlwZV9DaGF0Q2hhbm5lbFR5cGVJbnN0YW5jZRAEEikKJUNoYXRD",
-            "aGFubmVsVHlwZV9DaGF0Q2hhbm5lbFR5cGVOZWFyYnkQBRIqCiZDaGF0Q2hh",
-            "bm5lbFR5cGVfQ2hhdENoYW5uZWxUeXBlUHJpdmF0ZRAGEjAKLENoYXRDaGFu",
-            "bmVsVHlwZV9DaGF0Q2hhbm5lbFR5cGVDb21wcmVoZW5zaXZlEAcSLgoqQ2hh",
-            "dENoYW5uZWxUeXBlX0NoYXRDaGFubmVsVHlwZU5lYXJieVRvQm90EAgqRgoJ",
-            "Q2hhdFN0YXRlEh0KGUNoYXRTdGF0ZV9DaGF0U3RhdGVOb3JtYWwQABIaChZD",
-            "aGF0U3RhdGVfQ2hhdFN0YXRlQmFuEAEq6wIKD01pbmltYXBNYXJrVHlwZRIq",
-            "CiZNaW5pbWFwTWFya1R5cGVfTWluaW1hcE1hcmtUeXBlVW5rbm93bhAAEiYK",
-            "Ik1pbmltYXBNYXJrVHlwZV9NaW5pbWFwTWFya1R5cGVOcGMQARInCiNNaW5p",
-            "bWFwTWFya1R5cGVfTWluaW1hcE1hcmtUeXBlVG93bhACEicKI01pbmltYXBN",
-            "YXJrVHlwZV9NaW5pbWFwTWFya1R5cGVIb21lEAMSKQolTWluaW1hcE1hcmtU",
-            "eXBlX01pbmltYXBNYXJrVHlwZUN1c3RvbRAEEjAKLE1pbmltYXBNYXJrVHlw",
-            "ZV9NaW5pbWFwTWFya1R5cGVUcmFuc2ZlclBvaW50EAUSLQopTWluaW1hcE1h",
-            "cmtUeXBlX01pbmltYXBNYXJrVHlwZURlYXRoUG9pbnQQBhImCiJNaW5pbWFw",
-            "TWFya1R5cGVfTWluaW1hcE1hcmtUeXBlQm90EAcqvAUKFk1pbmltYXBNYXJr",
-            "RGlzcGxheVR5cGUSOAo0TWluaW1hcE1hcmtEaXNwbGF5VHlwZV9NaW5pbWFw",
-            "TWFya0Rpc3BsYXlUeXBlVW5rbm93bhAAEjwKOE1pbmltYXBNYXJrRGlzcGxh",
-            "eVR5cGVfTWluaW1hcE1hcmtEaXNwbGF5VHlwZUJsdWVCYWxsb29uEAESPgo6",
-            "TWluaW1hcE1hcmtEaXNwbGF5VHlwZV9NaW5pbWFwTWFya0Rpc3BsYXlUeXBl",
-            "WWVsbG93QmFsbG9vbhACEj4KOk1pbmltYXBNYXJrRGlzcGxheVR5cGVfTWlu",
-            "aW1hcE1hcmtEaXNwbGF5VHlwZVB1cnBsZUJhbGxvb24QAxI7CjdNaW5pbWFw",
-            "TWFya0Rpc3BsYXlUeXBlX01pbmltYXBNYXJrRGlzcGxheVR5cGVZZWxsb3dT",
-            "dGFyEAQSOwo3TWluaW1hcE1hcmtEaXNwbGF5VHlwZV9NaW5pbWFwTWFya0Rp",
-            "c3BsYXlUeXBlQmx1ZUFuY2hvchAFEjwKOE1pbmltYXBNYXJrRGlzcGxheVR5",
-            "cGVfTWluaW1hcE1hcmtEaXNwbGF5VHlwZVB1cnBsZUhlYXJ0EAYSOwo3TWlu",
-            "aW1hcE1hcmtEaXNwbGF5VHlwZV9NaW5pbWFwTWFya0Rpc3BsYXlUeXBlT3Jh",
-            "bmdlRmxhZxAHEjsKN01pbmltYXBNYXJrRGlzcGxheVR5cGVfTWluaW1hcE1h",
-            "cmtEaXNwbGF5VHlwZUdyZWVuVHJhaW4QCBI/CjtNaW5pbWFwTWFya0Rpc3Bs",
-            "YXlUeXBlX01pbmltYXBNYXJrRGlzcGxheVR5cGVQdXJwbGVUcmlhbmdsZRAJ",
-            "EjcKM01pbmltYXBNYXJrRGlzcGxheVR5cGVfTWluaW1hcE1hcmtEaXNwbGF5",
-            "VHlwZUJsYWNrWBAKKn8KE0VudGl0eVNjZW5lRWZmZWN0SWQSMgouRW50aXR5",
-            "U2NlbmVFZmZlY3RJZF9FbnRpdHlTY2VuZUVmZmVjdElkVW5rbm93bhAAEjQK",
-            "L0VudGl0eVNjZW5lRWZmZWN0SWRfRW50aXR5U2NlbmVFZmZlY3RCdWJibGVU",
-            "ZXh0EOkHKrIBChRCdWJibGVUZXh0RWZmZWN0VHlwZRIzCi9CdWJibGVUZXh0",
-            "RWZmZWN0VHlwZV9CdWJibGVUZXh0RWZmZWN0VHlwZU5vcm1hbBAAEjIKLkJ1",
-            "YmJsZVRleHRFZmZlY3RUeXBlX0J1YmJsZVRleHRFZmZlY3RUeXBlQ2xvdWQQ",
-            "ARIxCi1CdWJibGVUZXh0RWZmZWN0VHlwZV9CdWJibGVUZXh0RWZmZWN0VHlw",
-            "ZVZpYmUQAioyCgRDYW1wEhQKEENhbXBfQ2FtcE5ldXRyYWwQABIUCg9DYW1w",
-            "X0NhbXBQbGF5ZXIQ6AcqxgEKDE1vbnN0ZXJTdGF0ZRIkCiBNb25zdGVyU3Rh",
-            "dGVfTW9uc3RlclN0YXRlVW5Lbm93bhAAEiMKH01vbnN0ZXJTdGF0ZV9Nb25z",
-            "dGVyU3RhdGVQYXRyb2wQARIjCh9Nb25zdGVyU3RhdGVfTW9uc3RlclN0YXRl",
-            "Q29tYmF0EAISIwofTW9uc3RlclN0YXRlX01vbnN0ZXJTdGF0ZUVzY2FwZRAD",
-            "EiEKHU1vbnN0ZXJTdGF0ZV9Nb25zdGVyU3RhdGVCYWNrEAQquAEKDk1vbnN0",
-            "ZXJBdHRUeXBlEigKJE1vbnN0ZXJBdHRUeXBlX01vbnN0ZXJBdHRUeXBlVW5r",
-            "bm93bhAAEisKJ01vbnN0ZXJBdHRUeXBlX01vbnN0ZXJBdHRUeXBlSW5pdGlh",
-            "dGl2ZRABEigKJE1vbnN0ZXJBdHRUeXBlX01vbnN0ZXJBdHRUeXBlUGFzc2l2",
-            "ZRACEiUKIU1vbnN0ZXJBdHRUeXBlX01vbnN0ZXJBdHRUeXBlRHVtYhADKssB",
-            "ChFNb25zdGVyUGF0cm9sVHlwZRIuCipNb25zdGVyUGF0cm9sVHlwZV9Nb25z",
-            "dGVyUGF0cm9sVHlwZVVua25vd24QABIrCidNb25zdGVyUGF0cm9sVHlwZV9N",
-            "b25zdGVyUGF0cm9sVHlwZUR1bWIQARItCilNb25zdGVyUGF0cm9sVHlwZV9N",
-            "b25zdGVyUGF0cm9sVHlwZVJhbmRvbRACEioKJk1vbnN0ZXJQYXRyb2xUeXBl",
-            "X01vbnN0ZXJQYXRyb2xUeXBlRml4EAMqVAoLTW9uc3RlclR5cGUSIgoeTW9u",
-            "c3RlclR5cGVfTW9uc3RlclR5cGVVbmtub3duEAASIQodTW9uc3RlclR5cGVf",
-            "TW9uc3RlclR5cGVMaXZpbmcQASrQAQoMTWF0ZXJpYWxUeXBlEiQKIE1hdGVy",
-            "aWFsVHlwZV9NYXRlcmlhbFR5cGVVbmtub3duEAASMQotTWF0ZXJpYWxUeXBl",
-            "X01hdGVyaWFsVHlwZVJlc291cmNlQ29sbGVjdEJ5SG9lEAESMQotTWF0ZXJp",
-            "YWxUeXBlX01hdGVyaWFsVHlwZVJlc291cmNlQ29sbGVjdEJ5QXhlEAISNAow",
-            "TWF0ZXJpYWxUeXBlX01hdGVyaWFsVHlwZVJlc291cmNlQ29sbGVjdERpcmVj",
-            "dGx5EAMqqAEKCUJvdFN0YXR1cxIeChpCb3RTdGF0dXNfQm90U3RhdHVzVW5r",
-            "bm93bhAAEhsKF0JvdFN0YXR1c19Cb3RTdGF0dXNTdG9wEAESHgoaQm90U3Rh",
-            "dHVzX0JvdFN0YXR1c1N1c3BlbmQQAhIeChpCb3RTdGF0dXNfQm90U3RhdHVz",
-            "UnVubmluZxADEh4KGkJvdFN0YXR1c19Cb3RTdGF0dXNPZmZsaW5lEAQqngEK",
-            "CURpcmVjdGlvbhIeChpEaXJlY3Rpb25fRGlyZWN0aW9uVW5rbm93bhAAEhkK",
-            "FURpcmVjdGlvbl9EaXJlY3Rpb25VcBABEhsKF0RpcmVjdGlvbl9EaXJlY3Rp",
-            "b25MZWZ0EAISGwoXRGlyZWN0aW9uX0RpcmVjdGlvbkRvd24QAxIcChhEaXJl",
-            "Y3Rpb25fRGlyZWN0aW9uUmlnaHQQBCq7AQoVQ29kZWJsb2NrVGVtcGxhdGVU",
-            "eXBlEjYKMkNvZGVibG9ja1RlbXBsYXRlVHlwZV9Db2RlYmxvY2tUZW1wbGF0",
-            "ZVR5cGVVbmtub3duEAASNQoxQ29kZWJsb2NrVGVtcGxhdGVUeXBlX0NvZGVi",
-            "bG9ja1RlbXBsYXRlVHlwZVN5c3RlbRABEjMKL0NvZGVibG9ja1RlbXBsYXRl",
-            "VHlwZV9Db2RlYmxvY2tUZW1wbGF0ZVR5cGVVc2VyEAIq1AEKC1dlYXRoZXJU",
-            "eXBlEh8KG1dlYXRoZXJUeXBlX1dlYXRoZXJUeXBlTm9uZRAAEh8KG1dlYXRo",
-            "ZXJUeXBlX1dlYXRoZXJUeXBlUmFpbhABEh8KG1dlYXRoZXJUeXBlX1dlYXRo",
-            "ZXJUeXBlU25vdxACEh8KG1dlYXRoZXJUeXBlX1dlYXRoZXJUeXBlV2luZBAD",
-            "Eh8KG1dlYXRoZXJUeXBlX1dlYXRoZXJUeXBlRmlyZRAEEiAKHFdlYXRoZXJU",
-            "eXBlX1dlYXRoZXJUeXBlTWlhc20QBSrIAQoORGFpbHlDeWNsZVR5cGUSIwof",
-            "RGFpbHlDeWNsZVR5cGVfRGFpbHlDeWNsZVVua25vdxAAEiQKIERhaWx5Q3lj",
-            "bGVUeXBlX0RhaWx5Q3ljbGVEYXlUaW1lEAESIgoeRGFpbHlDeWNsZVR5cGVf",
-            "RGFpbHlDeWNsZU5pZ2h0EAISJAogRGFpbHlDeWNsZVR5cGVfRGFpbHlDeWNs",
-            "ZU1vcm5pbmcQAxIhCh1EYWlseUN5Y2xlVHlwZV9EYWlseUN5Y2xlRHVzaxAE",
-            "KnkKC0FjaGlldmVUeXBlEiEKHUFjaGlldmVUeXBlX0FjaGlldmVUeXBlVW5r",
-            "bm93EAASIwofQWNoaWV2ZVR5cGVfQWNoaWV2ZVR5cGVFeHBsb3JlZBABEiIK",
-            "HkFjaGlldmVUeXBlX0FjaGlldmVUeXBlTW9uc3RlchACKnsKDE9wZXJhdG9y",
-            "VHlwZRIkCiBPcGVyYXRvclR5cGVfT3BlcmF0b3JUeXBlVW5rbm93bhAAEiMK",
-            "H09wZXJhdG9yVHlwZV9PcGVyYXRvclR5cGVQbGF5ZXIQARIgChxPcGVyYXRv",
-            "clR5cGVfT3BlcmF0b3JUeXBlQm90EAIqYwoOV29ya2JlbmNoU3RhdGUSKAok",
-            "V29ya2JlbmNoU3RhdGVfV29ya2JlbmNoU3RhdGVVbmtub3duEAASJwojV29y",
-            "a2JlbmNoU3RhdGVfV29ya2JlbmNoU3RhdGVPbk1ha2UQASqeAQoRRm9ybXVs",
-            "YVVubG9ja1R5cGUSLgoqRm9ybXVsYVVubG9ja1R5cGVfRm9ybXVsYVVubG9j",
-            "a1R5cGVVbmtub3duEAASLAooRm9ybXVsYVVubG9ja1R5cGVfRm9ybXVsYVVu",
-            "bG9ja1R5cGVMZXZlbBABEisKJ0Zvcm11bGFVbmxvY2tUeXBlX0Zvcm11bGFV",
-            "bmxvY2tUeXBlSXRlbRACKqcBCg1Db21wb25lbnRUeXBlEiQKIENvbXBvbmVu",
-            "dFR5cGVfUHJvZHVjdFR5cGVVbmtub3duEAASIwofQ29tcG9uZW50VHlwZV9Q",
-            "cm9kdWN0VHlwZU9iamVjdBABEiQKIENvbXBvbmVudFR5cGVfUHJvZHVjdFR5",
-            "cGVNb25zdGVyEAISJQohQ29tcG9uZW50VHlwZV9Qcm9kdWN0VHlwZU1hdGVy",
-            "aWFsEAMqmgEKBk9TVHlwZRIXChNPU1R5cGVfT1NUeXBlVW5rbm93EAASGAoU",
-            "T1NUeXBlX09TVHlwZUFuZHJvaWQQARIUChBPU1R5cGVfT1NUeXBlSU9TEAIS",
-            "FAoQT1NUeXBlX09TVHlwZU1hYxADEhkKFU9TVHlwZV9PU1R5cGVXaW5QaG9u",
-            "ZRAEEhYKEk9TVHlwZV9PU1R5cGVXaW5QYxAFKlAKDFBsYXRmb3JtVHlwZRIf",
-            "ChtQbGF0Zm9ybVR5cGVfUGxhdGZvcm1Vbmtub3cQABIfChtQbGF0Zm9ybVR5",
-            "cGVfUGxhdGZvcm1UYXBUYXAQASpjCglQb3dlclR5cGUSGgoWUG93ZXJUeXBl",
-            "X1Bvd2VyVHlwZUFsbBAAEh0KGVBvd2VyVHlwZV9Qb3dlclR5cGVGcmllbmQQ",
-            "ARIbChdQb3dlclR5cGVfUG93ZXJUeXBlU2VsZhACKnAKCkJ1aWxkTW9kZWwS",
-            "IAocQnVpbGRNb2RlbF9CdWlsZE1vZGVsVW5rbm93bhAAEh8KG0J1aWxkTW9k",
-            "ZWxfQnVpbGRNb2RlbENyZWF0ZRABEh8KG0J1aWxkTW9kZWxfQnVpbGRNb2Rl",
-            "bFJlbW92ZRACKrwBCgpFbnRpdHlGcm9tEh4KGkVudGl0eUZyb21fRW50aXR5",
-            "RnJvbUJ1aWxkEAASHQoZRW50aXR5RnJvbV9FbnRpdHlGcm9tRHJvcBABEiAK",
-            "HEVudGl0eUZyb21fRW50aXR5RnJvbURpc2NhcmQQAhImCiJFbnRpdHlGcm9t",
-            "X0VudGl0eUZyb21SZXNvdXJjZVBvaW50EAMSJQohRW50aXR5RnJvbV9FbnRp",
-            "dHlGcm9tVXNlSXRlbUJ1aWxkEAQqggEKDUFuaW1hdGlvblR5cGUSJgoiQW5p",
-            "bWF0aW9uVHlwZV9BbmltYXRpb25UeXBlVW5rbm93bhAAEiQKIEFuaW1hdGlv",
-            "blR5cGVfQW5pbWF0aW9uVHlwZUZyYW1lEAESIwofQW5pbWF0aW9uVHlwZV9B",
-            "bmltYXRpb25UeXBlQm9uZRACKpMBCg5JbnB1dEV2ZW50VHlwZRIoCiRJbnB1",
-            "dEV2ZW50VHlwZV9JbnB1dEV2ZW50VHlwZVVua25vd24QABIsCihJbnB1dEV2",
-            "ZW50VHlwZV9JbnB1dEV2ZW50VHlwZVNwZWNpZmljS2V5EAESKQolSW5wdXRF",
-            "dmVudFR5cGVfSW5wdXRFdmVudFR5cGVLZXlwcmVzcxACKlgKDUtleXByZXNz",
-            "U3RhdGUSFAoQS2V5cHJlc3NTdGF0ZV9VcBAAEhYKEktleXByZXNzU3RhdGVf",
-            "RG93bhABEhkKFUtleXByZXNzU3RhdGVfRG93bmluZxACKuUBCgtTcGVjaWZp",
-            "Y0tleRIiCh5TcGVjaWZpY0tleV9TcGVjaWZpY0tleUludmFsaWQQABIgChtT",
-            "cGVjaWZpY0tleV9TcGVjaWZpY0tleVRpY2sQrE0SJwoiU3BlY2lmaWNLZXlf",
-            "U3BlY2lmaWNLZXlDaXJjdWxhcml0eRCtTRIdChhTcGVjaWZpY0tleV9TcGVj",
-            "aWZpY0tleVgQrk0SIgodU3BlY2lmaWNLZXlfU3BlY2lmaWNLZXlTcXVhcmUQ",
-            "r00SJAofU3BlY2lmaWNLZXlfU3BlY2lmaWNLZXlUcmlhbmdsZRCwTSqaAwoQ",
-            "UGFuZWxQcm9maWxlVHlwZRIlCiFQYW5lbFByb2ZpbGVUeXBlX1BhbmVsVHlw",
-            "ZUJHU3R5bGUQABIkCiBQYW5lbFByb2ZpbGVUeXBlX1BhbmVsVHlwZVJvd051",
-            "bRABEiQKIFBhbmVsUHJvZmlsZVR5cGVfUGFuZWxUeXBlQ29sTnVtEAISIwof",
-            "UGFuZWxQcm9maWxlVHlwZV9QYW5lbFR5cGVUaXRsZRADEikKJVBhbmVsUHJv",
-            "ZmlsZVR5cGVfUGFuZWxUeXBlR3JpZFByb2ZpbGUQBBIkCiBQYW5lbFByb2Zp",
-            "bGVUeXBlX1BhbmVsVHlwZUhlaWdodBAFEiMKH1BhbmVsUHJvZmlsZVR5cGVf",
-            "UGFuZWxUeXBlV2lkdGgQBhIkCiBQYW5lbFByb2ZpbGVUeXBlX1BhbmVsVHlw",
-            "ZUFuY2hvchAHEiYKIlBhbmVsUHJvZmlsZVR5cGVfUGFuZWxUeXBlSXNIaWRk",
-            "ZW4QCBIqCiZQYW5lbFByb2ZpbGVUeXBlX1BhbmVsVHlwZVRpdGxlQkdDb2xv",
-            "chAJKmgKB0JHU3R5bGUSEgoOQkdTdHlsZV9Ob3JtYWwQABIWChJCR1N0eWxl",
-            "X0dyYWR1YWxMVFIQARIWChJCR1N0eWxlX0dyYWR1YWxSVEwQAhIZChVCR1N0",
-            "eWxlX0dyYWR1YWxTcHJlYWQQAypOCgpBbGlnblN0eWxlEhMKD0FsaWduU3R5",
-            "bGVfTGVmdBAAEhQKEEFsaWduU3R5bGVfUmlnaHQQARIVChFBbGlnblN0eWxl",
-            "X0NlbnRlchACKowCCg5QYW5lbEFuY2hvclBvcxIZChVQYW5lbEFuY2hvclBv",
-            "c19MZWZ0VXAQABIYChRQYW5lbEFuY2hvclBvc19NaWRVcBABEhoKFlBhbmVs",
-            "QW5jaG9yUG9zX1JpZ2h0VXAQAhIaChZQYW5lbEFuY2hvclBvc19MZWZ0TWlk",
-            "EAMSGQoVUGFuZWxBbmNob3JQb3NfTWlkTWlkEAQSGwoXUGFuZWxBbmNob3JQ",
-            "b3NfUmlnaHRNaWQQBRIbChdQYW5lbEFuY2hvclBvc19MZWZ0RG93bhAGEhoK",
-            "FlBhbmVsQW5jaG9yUG9zX01pZERvd24QBxIcChhQYW5lbEFuY2hvclBvc19S",
-            "aWdodERvd24QCCqNAQoORW50aXR5TG9ja1R5cGUSKAokRW50aXR5TG9ja1R5",
-            "cGVfRW50aXR5TG9ja1R5cGVVbmtub3duEAASJwojRW50aXR5TG9ja1R5cGVf",
-            "RW50aXR5TG9ja1R5cGVDb2RpbmcQARIoCiRFbnRpdHlMb2NrVHlwZV9FbnRp",
-            "dHlMb2NrVHlwZUVkaXRpbmcQAir8AQoPQ29kZVJlc3RhcnRUeXBlEiwKKENv",
-            "ZGVSZXN0YXJ0VHlwZV9Db2RlUmVzdGFydFR5cGVQdWJsaWNNYXAQABItCilD",
-            "b2RlUmVzdGFydFR5cGVfQ29kZVJlc3RhcnRUeXBlUGxheWVyQXJlYRABEikK",
-            "JUNvZGVSZXN0YXJ0VHlwZV9Db2RlUmVzdGFydFR5cGVFbnRpdHkQAhItCilD",
-            "b2RlUmVzdGFydFR5cGVfQ29kZVJlc3RhcnRUeXBlTGVzc29uQXJlYRADEjIK",
-            "LkNvZGVSZXN0YXJ0VHlwZV9Db2RlUmVzdGFydFR5cGVFbnRpdHlRdWlja0Nv",
-            "ZGUQBCqyAgoIVmlld1R5cGUSGwoXVmlld1R5cGVfVmlld1R5cGVVbmtub3cQ",
-            "ABIhCh1WaWV3VHlwZV9WaWV3VHlwZUR1bmdlb25TY29yZRABEiMKH1ZpZXdU",
-            "eXBlX1ZpZXdUeXBlVGVtcGxhdGVDcmVhdGUQAhIdChlWaWV3VHlwZV9WaWV3",
-            "VHlwZUJhY2twYWNrEAMSHwobVmlld1R5cGVfVmlld1R5cGVMZXNzb25QbGFu",
-            "EAQSHwobVmlld1R5cGVfVmlld1R5cGVJZGVUZXJyYWluEAUSHQoZVmlld1R5",
-            "cGVfVmlld1R5cGVJZGVCdWlsZBAGEiEKHVZpZXdUeXBlX1ZpZXdUeXBlSWRl",
-            "QXR0cmlidXRlEAcSHgoaVmlld1R5cGVfVmlld1R5cGVDb2RlQmxvY2sQCCrL",
-            "AQoRRHVuZ2VvblJld2FyZFR5cGUSLQopRHVuZ2VvblJld2FyZFR5cGVfRHVu",
-            "Z2VvblJld2FyZFR5cGVVbmtub3cQABIrCidEdW5nZW9uUmV3YXJkVHlwZV9E",
-            "dW5nZW9uUmV3YXJkVHlwZUJhc2UQARIsCihEdW5nZW9uUmV3YXJkVHlwZV9E",
-            "dW5nZW9uUmV3YXJkVHlwZVN1cGVyEAISLAooRHVuZ2VvblJld2FyZFR5cGVf",
-            "RHVuZ2VvblJld2FyZFR5cGVGaW5hbBADKp8BCgtPcGVuVXJsVHlwZRIhCh1P",
-            "cGVuVXJsVHlwZV9PcGVuVXJsVHlwZVdpbmRvdxAAEiIKHk9wZW5VcmxUeXBl",
-            "X09wZW5VcmxUeXBlV2ViVmlldxABEiUKIU9wZW5VcmxUeXBlX09wZW5VcmxU",
-            "eXBlRnVsbFNjcmVlbhACEiIKHk9wZW5VcmxUeXBlX09wZW5VcmxUeXBlV2Vi",
-            "UGFnZRADKo0BCg5MZXNzb25BcmVhTW9kZRInCiNMZXNzb25BcmVhTW9kZV9M",
-            "ZXNzb25BcmVhTW9kZU5vcm1hbBAAEioKJkxlc3NvbkFyZWFNb2RlX0xlc3Nv",
-            "bkFyZWFNb2RlUXVpY2tDb2RlEAESJgoiTGVzc29uQXJlYU1vZGVfTGVzc29u",
-            "QXJlYU1vZGVWaWRlbxACKmAKDkxlc3NvblNob3dUeXBlEiQKIExlc3NvblNo",
-            "b3dUeXBlX0xlc3NvblNob3dUeXBlQWxsEAASKAokTGVzc29uU2hvd1R5cGVf",
-            "TGVzc29uU2hvd1R5cGVUZWFjaGVyEAEqhQEKCUxvY2tTdGF0ZRIdChlMb2Nr",
-            "U3RhdGVfTG9ja1N0YXRlVW5rb3duEAASGgoWTG9ja1N0YXRlX0xvY2tTdGF0",
-            "ZUFsbBABEh4KGkxvY2tTdGF0ZV9Mb2NrU3RhdGVTdHVkZW50EAISHQoZTG9j",
-            "a1N0YXRlX0xvY2tTdGF0ZU5vQm9keRADKoYFChJMZXNzb25BcmVhRGF0YVR5",
-            "cGUSLQopTGVzc29uQXJlYURhdGFUeXBlX0xlc3NvbkFyZWFEYXRhVHlwZU5h",
-            "bWUQABIuCipMZXNzb25BcmVhRGF0YVR5cGVfTGVzc29uQXJlYURhdGFUeXBl",
-            "U2NvcGUQARIuCipMZXNzb25BcmVhRGF0YVR5cGVfTGVzc29uQXJlYURhdGFU",
-            "eXBlVHBQb3MQAhIwCixMZXNzb25BcmVhRGF0YVR5cGVfTGVzc29uQXJlYURh",
-            "dGFUeXBlQ29tbWVudBADEjEKLUxlc3NvbkFyZWFEYXRhVHlwZV9MZXNzb25B",
-            "cmVhRGF0YVR5cGVOZXh0QXJlYRAEEjEKLUxlc3NvbkFyZWFEYXRhVHlwZV9M",
-            "ZXNzb25BcmVhRGF0YVR5cGVQcmV2QXJlYRAFEjQKMExlc3NvbkFyZWFEYXRh",
-            "VHlwZV9MZXNzb25BcmVhRGF0YVR5cGVUZXJyYWluc0NpZBAGEjYKMkxlc3Nv",
-            "bkFyZWFEYXRhVHlwZV9MZXNzb25BcmVhRGF0YVR5cGVBZGRDb2RlRW50aXR5",
-            "EAcSNwozTGVzc29uQXJlYURhdGFUeXBlX0xlc3NvbkFyZWFEYXRhVHlwZUVk",
-            "aXRDb2RlRW50aXR5EAgSNgoyTGVzc29uQXJlYURhdGFUeXBlX0xlc3NvbkFy",
-            "ZWFEYXRhVHlwZURlbENvZGVFbnRpdHkQCRI3CjNMZXNzb25BcmVhRGF0YVR5",
-            "cGVfTGVzc29uQXJlYURhdGFUeXBlTGVzc29uU2hvd1R5cGUQChIxCi1MZXNz",
-            "b25BcmVhRGF0YVR5cGVfTGVzc29uQXJlYURhdGFUeXBlQXJlYU1vZGUQCyqe",
-            "AgoUTGVzc29uQXJlYVVwZGF0ZVR5cGUSMwovTGVzc29uQXJlYVVwZGF0ZVR5",
-            "cGVfTGVzc29uQXJlYVVwZGF0ZVR5cGVOb3JtYWwQABIwCixMZXNzb25BcmVh",
-            "VXBkYXRlVHlwZV9MZXNzb25BcmVhVXBkYXRlVHlwZUFkZBABEjAKLExlc3Nv",
-            "bkFyZWFVcGRhdGVUeXBlX0xlc3NvbkFyZWFVcGRhdGVUeXBlRGVsEAISOAo0",
-            "TGVzc29uQXJlYVVwZGF0ZVR5cGVfTGVzc29uQXJlYVVwZGF0ZVR5cGVJbmRl",
-            "eENoYW5nZRADEjMKL0xlc3NvbkFyZWFVcGRhdGVUeXBlX0xlc3NvbkFyZWFV",
-            "cGRhdGVUeXBlVW5sb2NrEAQqzgEKEUNoYW5nZVNjZW5lRWZmZWN0Ei0KKUNo",
-            "YW5nZVNjZW5lRWZmZWN0X0NoYW5nZVNjZW5lRWZmZWN0VW5rb3duEAASKwon",
-            "Q2hhbmdlU2NlbmVFZmZlY3RfQ2hhbmdlU2NlbmVFZmZlY3RNaXN0EAESLAoo",
-            "Q2hhbmdlU2NlbmVFZmZlY3RfQ2hhbmdlU2NlbmVFZmZlY3RCbGFjaxACEi8K",
-            "K0NoYW5nZVNjZW5lRWZmZWN0X0NoYW5nZVNjZW5lRWZmZWN0RG9yYWVtb24Q",
-            "AyqMAQoNRXhjbHVzaW9uVHlwZRIeChpFeGNsdXNpb25UeXBlX0V4VHlwZVVu",
-            "a293bhAAEiAKHEV4Y2x1c2lvblR5cGVfRXhUeXBlTm90QnVpbGQQARIbChdF",
-            "eGNsdXNpb25UeXBlX0V4VHlwZURlbBACEhwKGEV4Y2x1c2lvblR5cGVfRXhU",
-            "eXBlTW92ZRADYgZwcm90bzM="));
+            "CgdzaG93X2lkGAIgASgFIrACChNBcmNoRm9ybXVsYVNldHRpbmdzEgoKAmlk",
+            "GAEgASgFEjMKC3VubG9ja190eXBlGAIgASgOMh4uTWVsYW5kR2FtZTMuRm9y",
+            "bXVsYVVubG9ja1R5cGUSGAoQdW5sb2NrX2NvbmRpdGlvbhgDIAEoBRIUCgxj",
+            "b25zdW1lX3RpbWUYBCABKAUSEgoKcHJvZHVjdF9pZBgFIAEoBRIwCgxwcm9k",
+            "dWN0X3R5cGUYBiABKA4yGi5NZWxhbmRHYW1lMy5Db21wb25lbnRUeXBlEicK",
+            "CW1hdF9pdGVtcxgHIAMoCzIULk1lbGFuZEdhbWUzLk1hdEl0ZW0SJgoEc2hv",
+            "dxgIIAMoCzIYLk1lbGFuZEdhbWUzLlByb2R1Y3RTaG93EhEKCXJld2FyZF9p",
+            "ZBgJIAEoBSIoCghHYWluSXRlbRIKCgJpZBgBIAEoBRIQCghxdWFudGl0eRgC",
+            "IAEoBSJoCgdCb3RHYWluEg4KBmJvdF9pZBgBIAEoAxIRCglsZXZlbF9kaXMY",
+            "AiABKAUSEAoIZnVlbF9kaXMYAyABKAUSKAoJaXRlbV9saXN0GAQgAygLMhUu",
+            "TWVsYW5kR2FtZTMuR2Fpbkl0ZW0iXgoPRW50aXR5QXR0cmlidXRlEiUKBmVu",
+            "dGl0eRgBIAEoCzIVLk1lbGFuZEdhbWUzLkVudGl0eUlkEiQKB3dpZGdldHMY",
+            "AyADKAsyEy5NZWxhbmRHYW1lMy5XaWRnZXQiOAoQRW50aXR5QXR0cmlidXRl",
+            "cxIkCgd3aWRnZXRzGAEgAygLMhMuTWVsYW5kR2FtZTMuV2lkZ2V0Im8KB1N0",
+            "dWRlbnQSCgoCaWQYASABKAkSEQoJZ2FtZV9uYW1lGAIgASgJEg8KB2hhc2hf",
+            "aWQYAyABKAkSEQoJcmVhbF9uYW1lGAQgASgJEiEKAnJjGAUgASgLMhUuTWVs",
+            "YW5kR2FtZTMuVmVjdG9yWFkiVAoNQnVpbGRpbmdQb2ludBIJCgF4GAEgASgF",
+            "EgkKAXkYAiABKAUSCQoBehgDIAEoBRIiCgNkaXIYBCABKAsyFS5NZWxhbmRH",
+            "YW1lMy5WZWN0b3JYWSKzAgoJRW50aXR5QWRkEhQKDGJ1aWxkX3B1cHBldBgB",
+            "IAEoCBIPCgdpdGVtX2lkGAIgASgJEiIKA1BvcxgDIAEoCzIVLk1lbGFuZEdh",
+            "bWUzLlZlY3RvclhZEiIKA2RpchgEIAEoCzIVLk1lbGFuZEdhbWUzLlZlY3Rv",
+            "clhZEg4KBm1pcnJvchgFIAEoCBIcChRmcm9tX2VudGl0eV90ZW1wbGF0ZRgG",
+            "IAEoCBIQCghzdGF0ZV9pZBgHIAEoBRILCgNjaWQYCCABKAUSDgoGaXNJdGVt",
+            "GAkgASgIEigKCWZvcmNlX2RpchgKIAMoCzIVLk1lbGFuZEdhbWUzLlZlY3Rv",
+            "clhZEhUKDXN1cnZpdmFsX3RpbWUYCyABKAUSGQoRcGljdHVyZV9mcmFtZV91",
+            "cmwYDCABKAkiswEKCkVudGl0eUNvcHkSIwoEZnJvbRgBIAEoCzIVLk1lbGFu",
+            "ZEdhbWUzLkVudGl0eUlkEiIKA3BvcxgCIAEoCzIVLk1lbGFuZEdhbWUzLlZl",
+            "Y3RvclhZEiIKA2RpchgDIAEoCzIVLk1lbGFuZEdhbWUzLlZlY3RvclhZEg4K",
+            "Bm1pcnJvchgFIAEoCBIoCglmb3JjZV9kaXIYBiADKAsyFS5NZWxhbmRHYW1l",
+            "My5WZWN0b3JYWSLRAQoKRW50aXR5TW92ZRIlCgZlbnRpdHkYASABKAsyFS5N",
+            "ZWxhbmRHYW1lMy5FbnRpdHlJZBIiCgNwb3MYAiABKAsyFS5NZWxhbmRHYW1l",
+            "My5WZWN0b3JYWRIiCgNkaXIYAyABKAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JY",
+            "WRIOCgZtaXJyb3IYBCABKAUSCQoBehgFIAEoBRIPCgd6X2luZGV4GAYgASgF",
+            "EigKCWZvcmNlX2RpchgHIAMoCzIVLk1lbGFuZEdhbWUzLlZlY3RvclhZIn0K",
+            "DEVudGl0eURlbFJlcxIlCgZlbnRpdHkYASABKAsyFS5NZWxhbmRHYW1lMy5F",
+            "bnRpdHlJZBIiCgNwb3MYAiABKAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JYWRIi",
+            "CgNkaXIYAyABKAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JYWSKLAQoPQnVpbGRp",
+            "bmdNb2RlUG9zEgsKA2NpZBgBIAEoBRIlCgZlbnRpdHkYAiABKAsyFS5NZWxh",
+            "bmRHYW1lMy5FbnRpdHlJZBIaChJlbnRpdHlfdGVtcGxhdGVfaWQYAyABKAkS",
+            "KAoEZGlycxgEIAMoCzIaLk1lbGFuZEdhbWUzLkJ1aWxkaW5nUG9pbnQiQAoN",
+            "QW5pbWF0aW9uQm9uZRIKCgJpZBgBIAEoCRIRCglhbmltX25hbWUYAiABKAkS",
+            "EAoIcmVzX25hbWUYAyABKAkiWAoOQW5pbWF0aW9uRnJhbWUSCgoCaWQYASAB",
+            "KAkSDAoEbmFtZRgCIAEoCRINCgVpbmRleBgDIAEoBRILCgN1cmwYBCABKAkS",
+            "EAoIcmVjdF91cmwYBSABKAkiugEKCUFuaW1hdGlvbhIKCgJpZBgBIAEoCRIM",
+            "CgRuYW1lGAIgASgJEg0KBWluZGV4GAMgASgFEigKBHR5cGUYBCABKA4yGi5N",
+            "ZWxhbmRHYW1lMy5BbmltYXRpb25UeXBlEisKBmZyYW1lcxgFIAMoCzIbLk1l",
+            "bGFuZEdhbWUzLkFuaW1hdGlvbkZyYW1lEi0KCWJvbmVfYW5pbRgGIAEoCzIa",
+            "Lk1lbGFuZEdhbWUzLkFuaW1hdGlvbkJvbmUiZgoQRW50aXR5QW5pbWF0aW9u",
+            "cxIqCgphbmltYXRpb25zGAEgAygLMhYuTWVsYW5kR2FtZTMuQW5pbWF0aW9u",
+            "EiYKBkVtb2ppcxgCIAMoCzIWLk1lbGFuZEdhbWUzLkFuaW1hdGlvbiLuAwoO",
+            "RW50aXR5VGVtcGxhdGUSEwoLcGxheWVyX25hbWUYASABKAkSEwoLdGVtcGxh",
+            "dGVfaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIMCgRkZXNjGAQgASgJEhAKCHdh",
+            "bGtfZGlyGAUgASgJEhAKCGljb25fdXJsGAYgASgJEhEKCWltYWdlX3VybBgH",
+            "IAEoCRIQCghhbmltX3VybBgIIAMoCRIMCgRhcmVhGAkgASgJEhEKCWRpcmVj",
+            "dGlvbhgKIAEoBRIUCgxidWlsZF9oZWlnaHQYCyABKAUSEgoKYnVpbGRfdHlw",
+            "ZRgMIAEoBRIQCghmcm9tX2NpZBgNIAEoBRIWCg5jcmVhdGVfdHlwZV9pZBgO",
+            "IAEoBRITCgtjb2RlX2xpYl9pZBgPIAEoBRIxCgphbmltYXRpb25zGBAgASgL",
+            "Mh0uTWVsYW5kR2FtZTMuRW50aXR5QW5pbWF0aW9ucxIwCglhdHRyaWJ1dGUY",
+            "ESABKAsyHS5NZWxhbmRHYW1lMy5FbnRpdHlBdHRyaWJ1dGVzEikKBmF1ZGlv",
+            "cxgSIAEoCzIZLk1lbGFuZEdhbWUzLkVudGl0eUF1ZGlvcxIzCgp0aW1lX2xp",
+            "bmVzGBMgASgLMh8uTWVsYW5kR2FtZTMuRW50aXR5VGltZUxpbmVMaXN0IkoK",
+            "DkVudGl0eVBvc2l0aW9uEhMKC3RlbXBsYXRlX2lkGAEgASgJEiMKA3ZlYxgC",
+            "IAEoCzIWLk1lbGFuZEdhbWUzLlZlY3RvclhZWiK0AQoTRW50aXR5VGVtcGxh",
+            "dGVHcm91cBITCgt0ZW1wbGF0ZV9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEgwK",
+            "BGRlc2MYAyABKAkSEAoIaWNvbl91cmwYBCABKAkSLwoKZXRlbXBsYXRlcxgF",
+            "IAMoCzIbLk1lbGFuZEdhbWUzLkVudGl0eVRlbXBsYXRlEikKBGVwb3MYBiAD",
+            "KAsyGy5NZWxhbmRHYW1lMy5FbnRpdHlQb3NpdGlvbiJKCg1LZXlwcmVzc0V2",
+            "ZW50Eg4KBmtleV9pZBgBIAEoBRIpCgVzdGF0ZRgCIAEoDjIaLk1lbGFuZEdh",
+            "bWUzLktleXByZXNzU3RhdGUiQgoIS2V5cHJlc3MSCwoDa2V5GAEgASgJEikK",
+            "BXN0YXRlGAIgASgOMhouTWVsYW5kR2FtZTMuS2V5cHJlc3NTdGF0ZSKVAQoK",
+            "SW5wdXRFdmVudBIpCgR0eXBlGAEgASgOMhsuTWVsYW5kR2FtZTMuSW5wdXRF",
+            "dmVudFR5cGUSLgoIa2V5cHJlc3MYMiABKAsyGi5NZWxhbmRHYW1lMy5LZXlw",
+            "cmVzc0V2ZW50SAASJAoDa2V5GDMgASgLMhUuTWVsYW5kR2FtZTMuS2V5cHJl",
+            "c3NIAEIGCgRkYXRhIqQDCgxQYW5lbFByb2ZpbGUSMQoKcGFuZWxfdHlwZRgB",
+            "IAEoDjIdLk1lbGFuZEdhbWUzLlBhbmVsUHJvZmlsZVR5cGUSKgoFc3R5bGUY",
+            "CiABKAsyGS5NZWxhbmRHYW1lMy5QYW5lbEJHU3R5bGVIABIRCgdyb3dfbnVt",
+            "GAsgASgFSAASEQoHY29sX251bRgMIAEoBUgAEigKBXRpdGxlGA0gASgLMhcu",
+            "TWVsYW5kR2FtZTMuUGFuZWxUaXRsZUgAEjUKDGdyaWRfcHJvZmlsZRgOIAEo",
+            "CzIdLk1lbGFuZEdhbWUzLlBhbmVsR3JpZFByb2ZpbGVIABIyCgpyb3dfaGVp",
+            "Z2h0GA8gASgLMhwuTWVsYW5kR2FtZTMuUGFuZWxSb3dDb2xTaXplSAASMQoJ",
+            "Y29sX3dpZHRoGBAgASgLMhwuTWVsYW5kR2FtZTMuUGFuZWxSb3dDb2xTaXpl",
+            "SAASKgoGYW5jaG9yGBEgASgLMhguTWVsYW5kR2FtZTMuUGFuZWxBbmNob3JI",
+            "ABITCglpc19oaWRkZW4YEiABKAhIAEIGCgRkYXRhImoKDFBhbmVsQkdTdHls",
+            "ZRIjCgVzdHlsZRgBIAEoDjIULk1lbGFuZEdhbWUzLkJHU3R5bGUSCQoBchgC",
+            "IAEoBRIJCgFnGAMgASgFEgkKAWIYBCABKAUSFAoMdHJhbnNwYXJlbmN5GAUg",
+            "ASgFInYKClBhbmVsVGl0bGUSEAoIY2FuX2ZvbGQYASABKAgSCQoBchgCIAEo",
+            "BRIJCgFnGAMgASgFEgkKAWIYBCABKAUSFAoMdHJhbnNwYXJlbmN5GAUgASgF",
+            "Eg8KB2NvbnRlbnQYBiABKAkSDgoGaGVpZ2h0GAcgASgFIo8BChBQYW5lbEdy",
+            "aWRQcm9maWxlEg8KB2NvbnRlbnQYASABKAkSJgoFYWxpZ24YAiABKA4yFy5N",
+            "ZWxhbmRHYW1lMy5BbGlnblN0eWxlEg8KB3BpY3R1cmUYAyABKAkSDwoHcGVy",
+            "Y2VudBgEIAEoBRIPCgdjb2xfbnVtGAUgASgFEg8KB3Jvd19udW0YBiABKAUi",
+            "LgoPUGFuZWxSb3dDb2xTaXplEg0KBXdoaWNoGAEgASgFEgwKBHNpemUYAiAB",
+            "KAUiXQoLUGFuZWxBbmNob3ISKAoDcG9zGAEgASgOMhsuTWVsYW5kR2FtZTMu",
+            "UGFuZWxBbmNob3JQb3MSEgoKaG9yaXpvbnRhbBgCIAEoBRIQCgh2ZXJ0aWNh",
+            "bBgDIAEoBSJ8CgxTaG93Vmlld0RhdGESIwoEdHlwZRgBIAEoDjIVLk1lbGFu",
+            "ZEdhbWUzLlZpZXdUeXBlEj8KEmR1bmdlb25fc2NvcmVfZGF0YRgKIAEoCzIh",
+            "Lk1lbGFuZEdhbWUzLlZpZXdEdW5nZW9uU2NvcmVEYXRhSABCBgoEZGF0YSKn",
+            "AQoUVmlld0R1bmdlb25TY29yZURhdGESEgoKZHVuZ2Vvbl9pZBgBIAEoBRIN",
+            "CgVzY29yZRgCIAEoBRIcChRyZWNlaXZlZF9iYXNlX3Jld2FyZBgDIAMoBRIQ",
+            "CghzdXBlcl9sdhgEIAEoBRIdChVyZWNlaXZlZF9zdXBlcl9yZXdhcmQYBSAD",
+            "KAUSHQoVcmVjZWl2ZWRfZmluYWxfcmV3YXJkGAYgASgIIjwKEkR1bmdlb25T",
+            "dXBlclJld2FyZBIRCglyZXdhcmRfaWQYASABKAUSEwoLbmVlZF92aXBfbHYY",
+            "AiABKAUiOgoRUmVzb3VyY2VQb2ludEluZm8SEAoIcmNfaW5kZXgYASABKAUS",
+            "EwoLcmVzb3VyY2VfaWQYAiABKAUiLgoNQm9yblBvaW50SW5mbxIQCghyY19p",
+            "bmRleBgBIAEoBRILCgNjaWQYAiABKAUiXAoFU2NvcGUSJwoIdG9wX25vZGUY",
+            "ASABKAsyFS5NZWxhbmRHYW1lMy5WZWN0b3JYWRIqCgtib3R0b21fbm9kZRgC",
+            "IAEoCzIVLk1lbGFuZEdhbWUzLlZlY3RvclhZIvsCCgpMZXNzb25BcmVhEhYK",
+            "Dmxlc3Nvbl9hcmVhX2lkGAEgASgJEhsKE2xlc3Nvbl9hcmVhX2NvbW1lbnQY",
+            "AiABKAkSGAoQbGVzc29uX2FyZWFfbmFtZRgDIAEoCRIhCgVzY29wZRgEIAEo",
+            "CzISLk1lbGFuZEdhbWUzLlNjb3BlEiUKBnRwX3BvcxgFIAEoCzIVLk1lbGFu",
+            "ZEdhbWUzLlZlY3RvclhZEhQKDG5leHRfYXJlYV9pZBgGIAEoCRIUCgxwcmV2",
+            "X2FyYWVfaWQYByABKAkSFAoMdGVycmFpbnNfY2lkGAggASgFEi4KCXNob3df",
+            "dHlwZRgJIAEoDjIbLk1lbGFuZEdhbWUzLkxlc3NvblNob3dUeXBlEi4KCWFy",
+            "ZWFfbW9kZRgKIAEoDjIbLk1lbGFuZEdhbWUzLkxlc3NvbkFyZWFNb2RlEjIK",
+            "DWNvZGVfZW50aXRpZXMYCyADKAsyGy5NZWxhbmRHYW1lMy5Db2RlRW50aXR5",
+            "RGF0YSJ8Cg5Db2RlRW50aXR5RGF0YRIgCgFlGAEgASgLMhUuTWVsYW5kR2Ft",
+            "ZTMuRW50aXR5SWQSDgoGZV9uYW1lGAIgASgJEgsKA2NpZBgDIAEoBRIMCgRp",
+            "Y29uGAQgASgJEgsKA3RhYhgFIAEoBRIQCgh0YWJfbmFtZRgGIAEoCSJ4ChRM",
+            "ZXNzb25BcmVhRW50aXR5RGF0YRIgCgFlGAEgASgLMhUuTWVsYW5kR2FtZTMu",
+            "RW50aXR5SWQSCwoDY2lkGAIgASgFEg4KBmVfZGVzYxgDIAEoCRIhCgJyYxgE",
+            "IAEoCzIVLk1lbGFuZEdhbWUzLlZlY3RvclhZIsQBCg5MZXNzb25BcmVhSW5m",
+            "bxIlCgRhcmVhGAEgASgLMhcuTWVsYW5kR2FtZTMuTGVzc29uQXJlYRI0Cgl0",
+            "cF9wb2ludHMYAiADKAsyIS5NZWxhbmRHYW1lMy5MZXNzb25BcmVhRW50aXR5",
+            "RGF0YRIUCgxpc19yZXNldHRpbmcYAyABKAgSKgoKbG9ja19zdGF0ZRgEIAEo",
+            "DjIWLk1lbGFuZEdhbWUzLkxvY2tTdGF0ZRITCgtoYXNfYXJyaXZlZBgFIAEo",
+            "CCKMAwoOTGVzc29uQXJlYURhdGESPgoVbGVzc29uX2FyZWFfZGF0YV90eXBl",
+            "GAEgASgOMh8uTWVsYW5kR2FtZTMuTGVzc29uQXJlYURhdGFUeXBlEg4KBG5h",
+            "bWUYCiABKAlIABIRCgdjb21tZW50GAsgASgJSAASIwoFc2NvcGUYDCABKAsy",
+            "Ei5NZWxhbmRHYW1lMy5TY29wZUgAEicKBnRwX3BvcxgNIAEoCzIVLk1lbGFu",
+            "ZEdhbWUzLlZlY3RvclhZSAASEQoHYXJlYV9pZBgOIAEoCUgAEhYKDHRlcnJh",
+            "aW5zX2NpZBgPIAEoBUgAEjIKC2VudGl0eV9kYXRhGBAgASgLMhsuTWVsYW5k",
+            "R2FtZTMuQ29kZUVudGl0eURhdGFIABIwCglzaG93X3R5cGUYESABKA4yGy5N",
+            "ZWxhbmRHYW1lMy5MZXNzb25TaG93VHlwZUgAEjAKCWFyZWFfbW9kZRgSIAEo",
+            "DjIbLk1lbGFuZEdhbWUzLkxlc3NvbkFyZWFNb2RlSABCBgoEZGF0YSJTCg5B",
+            "cmVhVXBkYXRlRGF0YRIPCgdhcmVhX2lkGAEgASgJEjAKC3VwZGF0ZV9kYXRh",
+            "GAIgAygLMhsuTWVsYW5kR2FtZTMuTGVzc29uQXJlYURhdGEiOQoMRW50aXR5",
+            "T2ZUaWxlEhAKCHJjX2luZGV4GAEgASgFEhcKD3JhbmRvbV9lbnRpdGllcxgC",
+            "IAMoAyJ9ChNDYXJyeUVudGl0eUJhc2VEYXRhEiEKAmlkGAEgASgLMhUuTWVs",
+            "YW5kR2FtZTMuRW50aXR5SWQSKAoDbG9jGAIgASgLMhsuTWVsYW5kR2FtZTMu",
+            "RW50aXR5TG9jYXRpb24SCwoDY2lkGAMgASgFEgwKBGljb24YBCABKAki5gEK",
+            "DUVudGl0eVByZWxvYWQSCwoDY2lkGAEgASgFEjoKEnByZWxvYWRfY29kZV9i",
+            "bG9jaxgCIAEoCzIeLk1lbGFuZEdhbWUzLkNvZGVCbG9ja1Byb2dyYW1zEjkK",
+            "E3ByZWxvYWRfZW50aXR5X2F0dHIYAyABKAsyHC5NZWxhbmRHYW1lMy5FbnRp",
+            "dHlBdHRyaWJ1dGUSPgoVcHJlbG9hZF90aW1lbGluZV9saXN0GAQgASgLMh8u",
+            "TWVsYW5kR2FtZTMuRW50aXR5VGltZUxpbmVMaXN0EhEKCWVudGl0eV9pZBgF",
+            "IAEoCSJjCg1FbnRpdHlDdXNEYXRhEgsKA2NpZBgBIAEoBRIRCglmaWxlX25h",
+            "bWUYAiABKAkSMgoOZW50aXR5X3ByZWxvYWQYAyABKAsyGi5NZWxhbmRHYW1l",
+            "My5FbnRpdHlQcmVsb2FkIoMBChRFbnRpdGllc1F1aWNrQ29kZVRhYhIlCgZl",
+            "bnRpdHkYASABKAsyFS5NZWxhbmRHYW1lMy5FbnRpdHlJZBIOCgZ0YWJfaWQY",
+            "AiABKAUSEwoLZW50aXR5X25hbWUYAyABKAkSEQoJYXZhdGFyQ2lkGAQgASgF",
+            "EgwKBGljb24YBSABKAkqbgoPU2VydmVyQ2xvc2VUeXBlEikKJVNlcnZlckNs",
+            "b3NlVHlwZV9TZXJ2ZXJDbG9zZVR5cGVOb3JtYWwQABIwCixTZXJ2ZXJDbG9z",
+            "ZVR5cGVfU2VydmVyQ2xvc2VUeXBlTWFzdGVyU2lnbk91dBABKsgBCgtLaWNr",
+            "T3V0VHlwZRIhCh1LaWNrT3V0VHlwZV9LaWNrT3V0VHlwZVVua25vdxAAEigK",
+            "JEtpY2tPdXRUeXBlX0tpY2tPdXRUeXBlUmVwZWF0Q29ubmVjdBABEiEKHUtp",
+            "Y2tPdXRUeXBlX0tpY2tPdXRUeXBlT25Ib29rEAISIgoeS2lja091dFR5cGVf",
+            "S2lja091dFR5cGVPdmVyTWF4EAMSJQohS2lja091dFR5cGVfS2lja091dFR5",
+            "cGVSZXN0YXJ0TWFwEAQq7AIKCUVuZW15VHlwZRIjCh9FbmVteVR5cGVfRW5l",
+            "bXlUeXBlVW5hdHRhY2thYmxlEAASHQoZRW5lbXlUeXBlX0VuZW15VHlwZVBs",
+            "YXllchABEhsKF0VuZW15VHlwZV9FbmVteVR5cGVUcmVlEAISHAoYRW5lbXlU",
+            "eXBlX0VuZW15VHlwZUdyYXNzEAMSHAoYRW5lbXlUeXBlX0VuZW15VHlwZVN0",
+            "b25lEAQSHwobRW5lbXlUeXBlX0VuZW15VHlwZUJ1aWxkaW5nEAUSGgoWRW5l",
+            "bXlUeXBlX0VuZW15VHlwZUJvdBAGEh4KGkVuZW15VHlwZV9FbmVteVR5cGVN",
+            "b25zdGVyEAcSIgoeRW5lbXlUeXBlX0VuZW15VHlwZVRyZWFzdXJlQm94EAgS",
+            "HgoaRW5lbXlUeXBlX0VuZW15VHlwZUZhbGxpbmcQCRIhCh1FbmVteVR5cGVf",
+            "RW5lbXlUeXBlRmFsbGluZ0JveBAKKpQBChBFbnRpdHlDb2RlU3RhdHVzEisK",
+            "J0VudGl0eUNvZGVTdGF0dXNfRW50aXR5Q29kZVN0YXR1c1Vua25vdxAAEigK",
+            "JEVudGl0eUNvZGVTdGF0dXNfRW50aXR5Q29kZVN0YXR1c1J1bhABEikKJUVu",
+            "dGl0eUNvZGVTdGF0dXNfRW50aXR5Q29kZVN0YXR1c1N0b3AQAio8CghNb3Zl",
+            "VHlwZRIXChNNb3ZlVHlwZV9Nb3ZlVHlwZVhZEAASFwoTTW92ZVR5cGVfTW92",
+            "ZVR5cGVSQxABKpwBCgxNb3ZlbWVudFR5cGUSJAogTW92ZW1lbnRUeXBlX01v",
+            "dmVtZW50VHlwZVVua25vd24QABIhCh1Nb3ZlbWVudFR5cGVfTW92ZW1lbnRU",
+            "eXBlV2FsaxABEiAKHE1vdmVtZW50VHlwZV9Nb3ZlbWVudFR5cGVSdW4QAhIh",
+            "Ch1Nb3ZlbWVudFR5cGVfTW92ZW1lbnRUeXBlSWRsZRADKo0FCgpPYmplY3RU",
+            "eXBlEiAKHE9iamVjdFR5cGVfT2JqZWN0VHlwZVVua25vd24QABIdChlPYmpl",
+            "Y3RUeXBlX09iamVjdFR5cGVHZWFyEAESIAocT2JqZWN0VHlwZV9PYmplY3RU",
+            "eXBlQnJpZGdldBACEiAKHE9iamVjdFR5cGVfT2JqZWN0VHlwZUNvbnN1bWUQ",
+            "AxIhCh1PYmplY3RUeXBlX09iamVjdFR5cGVNYXRlcmlhbBAEEiUKIU9iamVj",
+            "dFR5cGVfT2JqZWN0VHlwZUNvbnN0cnVjdGlvbhAFEh4KGk9iamVjdFR5cGVf",
+            "T2JqZWN0VHlwZVdhdGVyEAYSHwobT2JqZWN0VHlwZV9PYmplY3RUeXBlR3Jv",
+            "dW5kEAcSIQodT2JqZWN0VHlwZV9PYmplY3RUeXBlUmVzb3VyY2UQCBIhCh1P",
+            "YmplY3RUeXBlX09iamVjdFR5cGVDdXJyZW5jeRAJEh4KGk9iamVjdFR5cGVf",
+            "T2JqZWN0VHlwZUZsb29yEAoSHQoZT2JqZWN0VHlwZV9PYmplY3RUeXBlV2Fs",
+            "bBALEh8KG09iamVjdFR5cGVfT2JqZWN0VHlwZVdpbmRvdxAMEicKI09iamVj",
+            "dFR5cGVfT2JqZWN0VHlwZVBsYXllckFyZWFGbGFnEA0SHAoYT2JqZWN0VHlw",
+            "ZV9PYmplY3RUeXBlQm94EA4SIAocT2JqZWN0VHlwZV9PYmplY3RUeXBlRm9y",
+            "bXVsYRAPEh0KGU9iamVjdFR5cGVfT2JqZWN0VHlwZVZvaWQQEBIgChxPYmpl",
+            "Y3RUeXBlX09iamVjdFR5cGVTdXJmYWNlEBESHwobT2JqZWN0VHlwZV9PYmpl",
+            "Y3RUeXBlUHVwcGV0EBIqzAEKEVdhbGxPYmplY3RTdWJUeXBlEi4KKldhbGxP",
+            "YmplY3RTdWJUeXBlX1dhbGxPYmplY3RTdWJUeXBlVW5rbm93bhAAEiwKKFdh",
+            "bGxPYmplY3RTdWJUeXBlX1dhbGxPYmplY3RTdWJUeXBlQmFzaWMQARIsCihX",
+            "YWxsT2JqZWN0U3ViVHlwZV9XYWxsT2JqZWN0U3ViVHlwZUZlbmNlEAISKwon",
+            "V2FsbE9iamVjdFN1YlR5cGVfV2FsbE9iamVjdFN1YlR5cGVEb29yEAMqtQEK",
+            "E09iamVjdEJ1aWxkYWJsZVR5cGUSNgoyT2JqZWN0QnVpbGRhYmxlVHlwZV9P",
+            "YmplY3RCdWlsZGFibGVUeXBlVW5idWlsZGFibGUQABI0CjBPYmplY3RCdWls",
+            "ZGFibGVUeXBlX09iamVjdEJ1aWxkYWJsZVR5cGVCdWlsZGFibGUQARIwCixP",
+            "YmplY3RCdWlsZGFibGVUeXBlX09iamVjdEJ1aWxkYWJsZVR5cGVNZXJnZRAC",
+            "KpABCg9PYmplY3RCbG9ja1R5cGUSJwojT2JqZWN0QmxvY2tUeXBlX09iamVj",
+            "dEJsb2NrVHlwZUZyZWUQABIoCiRPYmplY3RCbG9ja1R5cGVfT2JqZWN0Qmxv",
+            "Y2tUeXBlQmxvY2sQARIqCiZPYmplY3RCbG9ja1R5cGVfT2JqZWN0QmxvY2tU",
+            "eXBlRHluYW1pYxACKpoCCg1PYmplY3RRdWFsaXR5EiYKIk9iamVjdFF1YWxp",
+            "dHlfT2JqZWN0UXVhbGl0eVVua25vd24QABIkCiBPYmplY3RRdWFsaXR5X09i",
+            "amVjdFF1YWxpdHlXaGl0ZRABEiQKIE9iamVjdFF1YWxpdHlfT2JqZWN0UXVh",
+            "bGl0eUdyZWVuEAISIwofT2JqZWN0UXVhbGl0eV9PYmplY3RRdWFsaXR5Qmx1",
+            "ZRADEiUKIU9iamVjdFF1YWxpdHlfT2JqZWN0UXVhbGl0eVB1cnBsZRAEEiUK",
+            "IU9iamVjdFF1YWxpdHlfT2JqZWN0UXVhbGl0eU9yYW5nZRAFEiIKHk9iamVj",
+            "dFF1YWxpdHlfT2JqZWN0UXVhbGl0eVJlZBAGKpkECg5PYmplY3RHZWFyVHlw",
+            "ZRIoCiRPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZVVua25vd24QABIl",
+            "CiFPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZUhlYWQQARIlCiFPYmpl",
+            "Y3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZUNvYXQQAhIlCiFPYmplY3RHZWFy",
+            "VHlwZV9PYmplY3RHZWFyVHlwZVBhbnQQAxIlCiFPYmplY3RHZWFyVHlwZV9P",
+            "YmplY3RHZWFyVHlwZVNob2UQBBIlCiFPYmplY3RHZWFyVHlwZV9PYmplY3RH",
+            "ZWFyVHlwZUhhbmQQBRIkCiBPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlw",
+            "ZUF4ZRAGEigKJE9iamVjdEdlYXJUeXBlX09iamVjdEdlYXJUeXBlUGlja2F4",
+            "ZRAHEiYKIk9iamVjdEdlYXJUeXBlX09iamVjdEdlYXJUeXBlU3dvcmQQCBIk",
+            "CiBPYmplY3RHZWFyVHlwZV9PYmplY3RHZWFyVHlwZUJvdxAJEioKJk9iamVj",
+            "dEdlYXJUeXBlX09iamVjdEdlYXJUeXBlQWNjZXNzb3J5EAoSJAogT2JqZWN0",
+            "R2VhclR5cGVfT2JqZWN0R2VhclR5cGVHdW4QCxIqCiZPYmplY3RHZWFyVHlw",
+            "ZV9PYmplY3RHZWFyVHlwZURvdWJsZUd1bhAMKqgDChpPYmplY3RBbmltYXRp",
+            "b25UcmlnZ2VyVHlwZRJACjxPYmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZV9P",
+            "YmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZVVua25vd24QABI9CjlPYmplY3RB",
+            "bmltYXRpb25UcmlnZ2VyVHlwZV9PYmplY3RBbmltYXRpb25UcmlnZ2VyVHlw",
+            "ZUF1dG8QARJBCj1PYmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZV9PYmplY3RB",
+            "bmltYXRpb25UcmlnZ2VyVHlwZUludGVyYWN0EAISPgo6T2JqZWN0QW5pbWF0",
+            "aW9uVHJpZ2dlclR5cGVfT2JqZWN0QW5pbWF0aW9uVHJpZ2dlclR5cGVUb3Vj",
+            "aBADEj4KOk9iamVjdEFuaW1hdGlvblRyaWdnZXJUeXBlX09iamVjdEFuaW1h",
+            "dGlvblRyaWdnZXJUeXBlTGVhdmUQBBJGCkJPYmplY3RBbmltYXRpb25Ucmln",
+            "Z2VyVHlwZV9PYmplY3RBbmltYXRpb25UcmlnZ2VyVHlwZU9uU3RhdGVDaGFu",
+            "Z2UQBSr7AgoXT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGUSOgo2T2JqZWN0QW5p",
+            "bWF0aW9uU3RvcFR5cGVfT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVVbmtub3du",
+            "EAASNwozT2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVfT2JqZWN0QW5pbWF0aW9u",
+            "U3RvcFR5cGVBdXRvEAESOwo3T2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVfT2Jq",
+            "ZWN0QW5pbWF0aW9uU3RvcFR5cGVJbnRlcmFjdBACEjgKNE9iamVjdEFuaW1h",
+            "dGlvblN0b3BUeXBlX09iamVjdEFuaW1hdGlvblN0b3BUeXBlTGVhdmUQAxI4",
+            "CjRPYmplY3RBbmltYXRpb25TdG9wVHlwZV9PYmplY3RBbmltYXRpb25TdG9w",
+            "VHlwZVRvdWNoEAQSOgo2T2JqZWN0QW5pbWF0aW9uU3RvcFR5cGVfT2JqZWN0",
+            "QW5pbWF0aW9uU3RvcFR5cGVOb25TdG9wEAUqeQoIVXNlclR5cGUSHAoYVXNl",
+            "clR5cGVfVXNlclR5cGVVbmtub3duEAASGwoXVXNlclR5cGVfVXNlclR5cGVQ",
+            "bGF5ZXIQARIYChRVc2VyVHlwZV9Vc2VyVHlwZUJvdBACEhgKFFVzZXJUeXBl",
+            "X1VzZXJUeXBlUGV0EAMqmwIKC1RlcnJhaW5UeXBlEhsKF1RlcnJhaW5UeXBl",
+            "X1RlcnJhaW5Ob25lEAASHAoYVGVycmFpblR5cGVfVGVycmFpbkdyYXNzEAES",
+            "HwobVGVycmFpblR5cGVfVGVycmFpblN1YnRpbGlzEAISHAoYVGVycmFpblR5",
+            "cGVfVGVycmFpblNsYXRlEAMSGgoWVGVycmFpblR5cGVfVGVycmFpbk11ZBAE",
+            "EhsKF1RlcnJhaW5UeXBlX1RlcnJhaW5Tbm93EAUSHQoZVGVycmFpblR5cGVf",
+            "VGVycmFpbkRlc2VydBAGEhwKGFRlcnJhaW5UeXBlX1RlcnJhaW5QbGFuaxAH",
+            "EhwKGFRlcnJhaW5UeXBlX1RlcnJhaW5XYXRlchAIKpwBChBHYW1lUHJvamVj",
+            "dFN0YXRlEioKJkdhbWVQcm9qZWN0U3RhdGVfR2FtZVByb2plY3RTdGF0ZURy",
+            "YWZ0EAASLAooR2FtZVByb2plY3RTdGF0ZV9HYW1lUHJvamVjdFN0YXRlRGVs",
+            "ZXRlZBABEi4KKkdhbWVQcm9qZWN0U3RhdGVfR2FtZVByb2plY3RTdGF0ZVB1",
+            "Ymxpc2hlZBACKo8BCg9HYW1lUHJvamVjdFR5cGUSKgomR2FtZVByb2plY3RU",
+            "eXBlX0dhbWVQcm9qZWN0VHlwZVVua25vd24QABIpCiVHYW1lUHJvamVjdFR5",
+            "cGVfR2FtZVByb2plY3RUeXBlUGxhbmV0EAESJQohR2FtZVByb2plY3RUeXBl",
+            "X0dhbWVQcm9qZWN0VHlwZTJEEAIqVwoMQ3VycmVuY3lUeXBlEiQKIEN1cnJl",
+            "bmN5VHlwZV9DdXJyZW5jeVR5cGVVbmtub3duEAASIQodQ3VycmVuY3lUeXBl",
+            "X0N1cnJlbmN5VHlwZUdvbGQQASq4AQoUQWNoaWV2ZU9iamVjdGl2ZVR5cGUS",
+            "MwovQWNoaWV2ZU9iamVjdGl2ZVR5cGVfQWNoaWV2ZU9iamVjdGl2ZVR5cGVV",
+            "bmtub3cQABI1CjFBY2hpZXZlT2JqZWN0aXZlVHlwZV9BY2hpZXZlT2JqZWN0",
+            "aXZlVHlwZUV4cGxvcmVkEAESNAowQWNoaWV2ZU9iamVjdGl2ZVR5cGVfQWNo",
+            "aWV2ZU9iamVjdGl2ZVR5cGVNb25zdGVyEAIqoAMKD0NoYXRDaGFubmVsVHlw",
+            "ZRIqCiZDaGF0Q2hhbm5lbFR5cGVfQ2hhdENoYW5uZWxUeXBlVW5rbm93bhAA",
+            "EikKJUNoYXRDaGFubmVsVHlwZV9DaGF0Q2hhbm5lbFR5cGVTeXN0ZW0QARIo",
+            "CiRDaGF0Q2hhbm5lbFR5cGVfQ2hhdENoYW5uZWxUeXBlV29ybGQQAhImCiJD",
+            "aGF0Q2hhbm5lbFR5cGVfQ2hhdENoYW5uZWxUeXBlTWFwEAMSKwonQ2hhdENo",
+            "YW5uZWxUeXBlX0NoYXRDaGFubmVsVHlwZUluc3RhbmNlEAQSKQolQ2hhdENo",
+            "YW5uZWxUeXBlX0NoYXRDaGFubmVsVHlwZU5lYXJieRAFEioKJkNoYXRDaGFu",
+            "bmVsVHlwZV9DaGF0Q2hhbm5lbFR5cGVQcml2YXRlEAYSMAosQ2hhdENoYW5u",
+            "ZWxUeXBlX0NoYXRDaGFubmVsVHlwZUNvbXByZWhlbnNpdmUQBxIuCipDaGF0",
+            "Q2hhbm5lbFR5cGVfQ2hhdENoYW5uZWxUeXBlTmVhcmJ5VG9Cb3QQCCpGCglD",
+            "aGF0U3RhdGUSHQoZQ2hhdFN0YXRlX0NoYXRTdGF0ZU5vcm1hbBAAEhoKFkNo",
+            "YXRTdGF0ZV9DaGF0U3RhdGVCYW4QASrrAgoPTWluaW1hcE1hcmtUeXBlEioK",
+            "Jk1pbmltYXBNYXJrVHlwZV9NaW5pbWFwTWFya1R5cGVVbmtub3duEAASJgoi",
+            "TWluaW1hcE1hcmtUeXBlX01pbmltYXBNYXJrVHlwZU5wYxABEicKI01pbmlt",
+            "YXBNYXJrVHlwZV9NaW5pbWFwTWFya1R5cGVUb3duEAISJwojTWluaW1hcE1h",
+            "cmtUeXBlX01pbmltYXBNYXJrVHlwZUhvbWUQAxIpCiVNaW5pbWFwTWFya1R5",
+            "cGVfTWluaW1hcE1hcmtUeXBlQ3VzdG9tEAQSMAosTWluaW1hcE1hcmtUeXBl",
+            "X01pbmltYXBNYXJrVHlwZVRyYW5zZmVyUG9pbnQQBRItCilNaW5pbWFwTWFy",
+            "a1R5cGVfTWluaW1hcE1hcmtUeXBlRGVhdGhQb2ludBAGEiYKIk1pbmltYXBN",
+            "YXJrVHlwZV9NaW5pbWFwTWFya1R5cGVCb3QQByq8BQoWTWluaW1hcE1hcmtE",
+            "aXNwbGF5VHlwZRI4CjRNaW5pbWFwTWFya0Rpc3BsYXlUeXBlX01pbmltYXBN",
+            "YXJrRGlzcGxheVR5cGVVbmtub3duEAASPAo4TWluaW1hcE1hcmtEaXNwbGF5",
+            "VHlwZV9NaW5pbWFwTWFya0Rpc3BsYXlUeXBlQmx1ZUJhbGxvb24QARI+CjpN",
+            "aW5pbWFwTWFya0Rpc3BsYXlUeXBlX01pbmltYXBNYXJrRGlzcGxheVR5cGVZ",
+            "ZWxsb3dCYWxsb29uEAISPgo6TWluaW1hcE1hcmtEaXNwbGF5VHlwZV9NaW5p",
+            "bWFwTWFya0Rpc3BsYXlUeXBlUHVycGxlQmFsbG9vbhADEjsKN01pbmltYXBN",
+            "YXJrRGlzcGxheVR5cGVfTWluaW1hcE1hcmtEaXNwbGF5VHlwZVllbGxvd1N0",
+            "YXIQBBI7CjdNaW5pbWFwTWFya0Rpc3BsYXlUeXBlX01pbmltYXBNYXJrRGlz",
+            "cGxheVR5cGVCbHVlQW5jaG9yEAUSPAo4TWluaW1hcE1hcmtEaXNwbGF5VHlw",
+            "ZV9NaW5pbWFwTWFya0Rpc3BsYXlUeXBlUHVycGxlSGVhcnQQBhI7CjdNaW5p",
+            "bWFwTWFya0Rpc3BsYXlUeXBlX01pbmltYXBNYXJrRGlzcGxheVR5cGVPcmFu",
+            "Z2VGbGFnEAcSOwo3TWluaW1hcE1hcmtEaXNwbGF5VHlwZV9NaW5pbWFwTWFy",
+            "a0Rpc3BsYXlUeXBlR3JlZW5UcmFpbhAIEj8KO01pbmltYXBNYXJrRGlzcGxh",
+            "eVR5cGVfTWluaW1hcE1hcmtEaXNwbGF5VHlwZVB1cnBsZVRyaWFuZ2xlEAkS",
+            "NwozTWluaW1hcE1hcmtEaXNwbGF5VHlwZV9NaW5pbWFwTWFya0Rpc3BsYXlU",
+            "eXBlQmxhY2tYEAoqfwoTRW50aXR5U2NlbmVFZmZlY3RJZBIyCi5FbnRpdHlT",
+            "Y2VuZUVmZmVjdElkX0VudGl0eVNjZW5lRWZmZWN0SWRVbmtub3duEAASNAov",
+            "RW50aXR5U2NlbmVFZmZlY3RJZF9FbnRpdHlTY2VuZUVmZmVjdEJ1YmJsZVRl",
+            "eHQQ6QcqsgEKFEJ1YmJsZVRleHRFZmZlY3RUeXBlEjMKL0J1YmJsZVRleHRF",
+            "ZmZlY3RUeXBlX0J1YmJsZVRleHRFZmZlY3RUeXBlTm9ybWFsEAASMgouQnVi",
+            "YmxlVGV4dEVmZmVjdFR5cGVfQnViYmxlVGV4dEVmZmVjdFR5cGVDbG91ZBAB",
+            "EjEKLUJ1YmJsZVRleHRFZmZlY3RUeXBlX0J1YmJsZVRleHRFZmZlY3RUeXBl",
+            "VmliZRACKjIKBENhbXASFAoQQ2FtcF9DYW1wTmV1dHJhbBAAEhQKD0NhbXBf",
+            "Q2FtcFBsYXllchDoByrGAQoMTW9uc3RlclN0YXRlEiQKIE1vbnN0ZXJTdGF0",
+            "ZV9Nb25zdGVyU3RhdGVVbktub3duEAASIwofTW9uc3RlclN0YXRlX01vbnN0",
+            "ZXJTdGF0ZVBhdHJvbBABEiMKH01vbnN0ZXJTdGF0ZV9Nb25zdGVyU3RhdGVD",
+            "b21iYXQQAhIjCh9Nb25zdGVyU3RhdGVfTW9uc3RlclN0YXRlRXNjYXBlEAMS",
+            "IQodTW9uc3RlclN0YXRlX01vbnN0ZXJTdGF0ZUJhY2sQBCq4AQoOTW9uc3Rl",
+            "ckF0dFR5cGUSKAokTW9uc3RlckF0dFR5cGVfTW9uc3RlckF0dFR5cGVVbmtu",
+            "b3duEAASKwonTW9uc3RlckF0dFR5cGVfTW9uc3RlckF0dFR5cGVJbml0aWF0",
+            "aXZlEAESKAokTW9uc3RlckF0dFR5cGVfTW9uc3RlckF0dFR5cGVQYXNzaXZl",
+            "EAISJQohTW9uc3RlckF0dFR5cGVfTW9uc3RlckF0dFR5cGVEdW1iEAMqywEK",
+            "EU1vbnN0ZXJQYXRyb2xUeXBlEi4KKk1vbnN0ZXJQYXRyb2xUeXBlX01vbnN0",
+            "ZXJQYXRyb2xUeXBlVW5rbm93bhAAEisKJ01vbnN0ZXJQYXRyb2xUeXBlX01v",
+            "bnN0ZXJQYXRyb2xUeXBlRHVtYhABEi0KKU1vbnN0ZXJQYXRyb2xUeXBlX01v",
+            "bnN0ZXJQYXRyb2xUeXBlUmFuZG9tEAISKgomTW9uc3RlclBhdHJvbFR5cGVf",
+            "TW9uc3RlclBhdHJvbFR5cGVGaXgQAypUCgtNb25zdGVyVHlwZRIiCh5Nb25z",
+            "dGVyVHlwZV9Nb25zdGVyVHlwZVVua25vd24QABIhCh1Nb25zdGVyVHlwZV9N",
+            "b25zdGVyVHlwZUxpdmluZxABKtABCgxNYXRlcmlhbFR5cGUSJAogTWF0ZXJp",
+            "YWxUeXBlX01hdGVyaWFsVHlwZVVua25vd24QABIxCi1NYXRlcmlhbFR5cGVf",
+            "TWF0ZXJpYWxUeXBlUmVzb3VyY2VDb2xsZWN0QnlIb2UQARIxCi1NYXRlcmlh",
+            "bFR5cGVfTWF0ZXJpYWxUeXBlUmVzb3VyY2VDb2xsZWN0QnlBeGUQAhI0CjBN",
+            "YXRlcmlhbFR5cGVfTWF0ZXJpYWxUeXBlUmVzb3VyY2VDb2xsZWN0RGlyZWN0",
+            "bHkQAyqoAQoJQm90U3RhdHVzEh4KGkJvdFN0YXR1c19Cb3RTdGF0dXNVbmtu",
+            "b3duEAASGwoXQm90U3RhdHVzX0JvdFN0YXR1c1N0b3AQARIeChpCb3RTdGF0",
+            "dXNfQm90U3RhdHVzU3VzcGVuZBACEh4KGkJvdFN0YXR1c19Cb3RTdGF0dXNS",
+            "dW5uaW5nEAMSHgoaQm90U3RhdHVzX0JvdFN0YXR1c09mZmxpbmUQBCqeAQoJ",
+            "RGlyZWN0aW9uEh4KGkRpcmVjdGlvbl9EaXJlY3Rpb25Vbmtub3duEAASGQoV",
+            "RGlyZWN0aW9uX0RpcmVjdGlvblVwEAESGwoXRGlyZWN0aW9uX0RpcmVjdGlv",
+            "bkxlZnQQAhIbChdEaXJlY3Rpb25fRGlyZWN0aW9uRG93bhADEhwKGERpcmVj",
+            "dGlvbl9EaXJlY3Rpb25SaWdodBAEKrsBChVDb2RlYmxvY2tUZW1wbGF0ZVR5",
+            "cGUSNgoyQ29kZWJsb2NrVGVtcGxhdGVUeXBlX0NvZGVibG9ja1RlbXBsYXRl",
+            "VHlwZVVua25vd24QABI1CjFDb2RlYmxvY2tUZW1wbGF0ZVR5cGVfQ29kZWJs",
+            "b2NrVGVtcGxhdGVUeXBlU3lzdGVtEAESMwovQ29kZWJsb2NrVGVtcGxhdGVU",
+            "eXBlX0NvZGVibG9ja1RlbXBsYXRlVHlwZVVzZXIQAirUAQoLV2VhdGhlclR5",
+            "cGUSHwobV2VhdGhlclR5cGVfV2VhdGhlclR5cGVOb25lEAASHwobV2VhdGhl",
+            "clR5cGVfV2VhdGhlclR5cGVSYWluEAESHwobV2VhdGhlclR5cGVfV2VhdGhl",
+            "clR5cGVTbm93EAISHwobV2VhdGhlclR5cGVfV2VhdGhlclR5cGVXaW5kEAMS",
+            "HwobV2VhdGhlclR5cGVfV2VhdGhlclR5cGVGaXJlEAQSIAocV2VhdGhlclR5",
+            "cGVfV2VhdGhlclR5cGVNaWFzbRAFKsgBCg5EYWlseUN5Y2xlVHlwZRIjCh9E",
+            "YWlseUN5Y2xlVHlwZV9EYWlseUN5Y2xlVW5rbm93EAASJAogRGFpbHlDeWNs",
+            "ZVR5cGVfRGFpbHlDeWNsZURheVRpbWUQARIiCh5EYWlseUN5Y2xlVHlwZV9E",
+            "YWlseUN5Y2xlTmlnaHQQAhIkCiBEYWlseUN5Y2xlVHlwZV9EYWlseUN5Y2xl",
+            "TW9ybmluZxADEiEKHURhaWx5Q3ljbGVUeXBlX0RhaWx5Q3ljbGVEdXNrEAQq",
+            "eQoLQWNoaWV2ZVR5cGUSIQodQWNoaWV2ZVR5cGVfQWNoaWV2ZVR5cGVVbmtu",
+            "b3cQABIjCh9BY2hpZXZlVHlwZV9BY2hpZXZlVHlwZUV4cGxvcmVkEAESIgoe",
+            "QWNoaWV2ZVR5cGVfQWNoaWV2ZVR5cGVNb25zdGVyEAIqewoMT3BlcmF0b3JU",
+            "eXBlEiQKIE9wZXJhdG9yVHlwZV9PcGVyYXRvclR5cGVVbmtub3duEAASIwof",
+            "T3BlcmF0b3JUeXBlX09wZXJhdG9yVHlwZVBsYXllchABEiAKHE9wZXJhdG9y",
+            "VHlwZV9PcGVyYXRvclR5cGVCb3QQAipjCg5Xb3JrYmVuY2hTdGF0ZRIoCiRX",
+            "b3JrYmVuY2hTdGF0ZV9Xb3JrYmVuY2hTdGF0ZVVua25vd24QABInCiNXb3Jr",
+            "YmVuY2hTdGF0ZV9Xb3JrYmVuY2hTdGF0ZU9uTWFrZRABKp4BChFGb3JtdWxh",
+            "VW5sb2NrVHlwZRIuCipGb3JtdWxhVW5sb2NrVHlwZV9Gb3JtdWxhVW5sb2Nr",
+            "VHlwZVVua25vd24QABIsCihGb3JtdWxhVW5sb2NrVHlwZV9Gb3JtdWxhVW5s",
+            "b2NrVHlwZUxldmVsEAESKwonRm9ybXVsYVVubG9ja1R5cGVfRm9ybXVsYVVu",
+            "bG9ja1R5cGVJdGVtEAIqpwEKDUNvbXBvbmVudFR5cGUSJAogQ29tcG9uZW50",
+            "VHlwZV9Qcm9kdWN0VHlwZVVua25vd24QABIjCh9Db21wb25lbnRUeXBlX1By",
+            "b2R1Y3RUeXBlT2JqZWN0EAESJAogQ29tcG9uZW50VHlwZV9Qcm9kdWN0VHlw",
+            "ZU1vbnN0ZXIQAhIlCiFDb21wb25lbnRUeXBlX1Byb2R1Y3RUeXBlTWF0ZXJp",
+            "YWwQAyqaAQoGT1NUeXBlEhcKE09TVHlwZV9PU1R5cGVVbmtub3cQABIYChRP",
+            "U1R5cGVfT1NUeXBlQW5kcm9pZBABEhQKEE9TVHlwZV9PU1R5cGVJT1MQAhIU",
+            "ChBPU1R5cGVfT1NUeXBlTWFjEAMSGQoVT1NUeXBlX09TVHlwZVdpblBob25l",
+            "EAQSFgoST1NUeXBlX09TVHlwZVdpblBjEAUqUAoMUGxhdGZvcm1UeXBlEh8K",
+            "G1BsYXRmb3JtVHlwZV9QbGF0Zm9ybVVua25vdxAAEh8KG1BsYXRmb3JtVHlw",
+            "ZV9QbGF0Zm9ybVRhcFRhcBABKmMKCVBvd2VyVHlwZRIaChZQb3dlclR5cGVf",
+            "UG93ZXJUeXBlQWxsEAASHQoZUG93ZXJUeXBlX1Bvd2VyVHlwZUZyaWVuZBAB",
+            "EhsKF1Bvd2VyVHlwZV9Qb3dlclR5cGVTZWxmEAIqcAoKQnVpbGRNb2RlbBIg",
+            "ChxCdWlsZE1vZGVsX0J1aWxkTW9kZWxVbmtub3duEAASHwobQnVpbGRNb2Rl",
+            "bF9CdWlsZE1vZGVsQ3JlYXRlEAESHwobQnVpbGRNb2RlbF9CdWlsZE1vZGVs",
+            "UmVtb3ZlEAIqvAEKCkVudGl0eUZyb20SHgoaRW50aXR5RnJvbV9FbnRpdHlG",
+            "cm9tQnVpbGQQABIdChlFbnRpdHlGcm9tX0VudGl0eUZyb21Ecm9wEAESIAoc",
+            "RW50aXR5RnJvbV9FbnRpdHlGcm9tRGlzY2FyZBACEiYKIkVudGl0eUZyb21f",
+            "RW50aXR5RnJvbVJlc291cmNlUG9pbnQQAxIlCiFFbnRpdHlGcm9tX0VudGl0",
+            "eUZyb21Vc2VJdGVtQnVpbGQQBCqCAQoNQW5pbWF0aW9uVHlwZRImCiJBbmlt",
+            "YXRpb25UeXBlX0FuaW1hdGlvblR5cGVVbmtub3duEAASJAogQW5pbWF0aW9u",
+            "VHlwZV9BbmltYXRpb25UeXBlRnJhbWUQARIjCh9BbmltYXRpb25UeXBlX0Fu",
+            "aW1hdGlvblR5cGVCb25lEAIqkwEKDklucHV0RXZlbnRUeXBlEigKJElucHV0",
+            "RXZlbnRUeXBlX0lucHV0RXZlbnRUeXBlVW5rbm93bhAAEiwKKElucHV0RXZl",
+            "bnRUeXBlX0lucHV0RXZlbnRUeXBlU3BlY2lmaWNLZXkQARIpCiVJbnB1dEV2",
+            "ZW50VHlwZV9JbnB1dEV2ZW50VHlwZUtleXByZXNzEAIqWAoNS2V5cHJlc3NT",
+            "dGF0ZRIUChBLZXlwcmVzc1N0YXRlX1VwEAASFgoSS2V5cHJlc3NTdGF0ZV9E",
+            "b3duEAESGQoVS2V5cHJlc3NTdGF0ZV9Eb3duaW5nEAIq5QEKC1NwZWNpZmlj",
+            "S2V5EiIKHlNwZWNpZmljS2V5X1NwZWNpZmljS2V5SW52YWxpZBAAEiAKG1Nw",
+            "ZWNpZmljS2V5X1NwZWNpZmljS2V5VGljaxCsTRInCiJTcGVjaWZpY0tleV9T",
+            "cGVjaWZpY0tleUNpcmN1bGFyaXR5EK1NEh0KGFNwZWNpZmljS2V5X1NwZWNp",
+            "ZmljS2V5WBCuTRIiCh1TcGVjaWZpY0tleV9TcGVjaWZpY0tleVNxdWFyZRCv",
+            "TRIkCh9TcGVjaWZpY0tleV9TcGVjaWZpY0tleVRyaWFuZ2xlELBNKpoDChBQ",
+            "YW5lbFByb2ZpbGVUeXBlEiUKIVBhbmVsUHJvZmlsZVR5cGVfUGFuZWxUeXBl",
+            "QkdTdHlsZRAAEiQKIFBhbmVsUHJvZmlsZVR5cGVfUGFuZWxUeXBlUm93TnVt",
+            "EAESJAogUGFuZWxQcm9maWxlVHlwZV9QYW5lbFR5cGVDb2xOdW0QAhIjCh9Q",
+            "YW5lbFByb2ZpbGVUeXBlX1BhbmVsVHlwZVRpdGxlEAMSKQolUGFuZWxQcm9m",
+            "aWxlVHlwZV9QYW5lbFR5cGVHcmlkUHJvZmlsZRAEEiQKIFBhbmVsUHJvZmls",
+            "ZVR5cGVfUGFuZWxUeXBlSGVpZ2h0EAUSIwofUGFuZWxQcm9maWxlVHlwZV9Q",
+            "YW5lbFR5cGVXaWR0aBAGEiQKIFBhbmVsUHJvZmlsZVR5cGVfUGFuZWxUeXBl",
+            "QW5jaG9yEAcSJgoiUGFuZWxQcm9maWxlVHlwZV9QYW5lbFR5cGVJc0hpZGRl",
+            "bhAIEioKJlBhbmVsUHJvZmlsZVR5cGVfUGFuZWxUeXBlVGl0bGVCR0NvbG9y",
+            "EAkqaAoHQkdTdHlsZRISCg5CR1N0eWxlX05vcm1hbBAAEhYKEkJHU3R5bGVf",
+            "R3JhZHVhbExUUhABEhYKEkJHU3R5bGVfR3JhZHVhbFJUTBACEhkKFUJHU3R5",
+            "bGVfR3JhZHVhbFNwcmVhZBADKk4KCkFsaWduU3R5bGUSEwoPQWxpZ25TdHls",
+            "ZV9MZWZ0EAASFAoQQWxpZ25TdHlsZV9SaWdodBABEhUKEUFsaWduU3R5bGVf",
+            "Q2VudGVyEAIqjAIKDlBhbmVsQW5jaG9yUG9zEhkKFVBhbmVsQW5jaG9yUG9z",
+            "X0xlZnRVcBAAEhgKFFBhbmVsQW5jaG9yUG9zX01pZFVwEAESGgoWUGFuZWxB",
+            "bmNob3JQb3NfUmlnaHRVcBACEhoKFlBhbmVsQW5jaG9yUG9zX0xlZnRNaWQQ",
+            "AxIZChVQYW5lbEFuY2hvclBvc19NaWRNaWQQBBIbChdQYW5lbEFuY2hvclBv",
+            "c19SaWdodE1pZBAFEhsKF1BhbmVsQW5jaG9yUG9zX0xlZnREb3duEAYSGgoW",
+            "UGFuZWxBbmNob3JQb3NfTWlkRG93bhAHEhwKGFBhbmVsQW5jaG9yUG9zX1Jp",
+            "Z2h0RG93bhAIKo0BCg5FbnRpdHlMb2NrVHlwZRIoCiRFbnRpdHlMb2NrVHlw",
+            "ZV9FbnRpdHlMb2NrVHlwZVVua25vd24QABInCiNFbnRpdHlMb2NrVHlwZV9F",
+            "bnRpdHlMb2NrVHlwZUNvZGluZxABEigKJEVudGl0eUxvY2tUeXBlX0VudGl0",
+            "eUxvY2tUeXBlRWRpdGluZxACKvwBCg9Db2RlUmVzdGFydFR5cGUSLAooQ29k",
+            "ZVJlc3RhcnRUeXBlX0NvZGVSZXN0YXJ0VHlwZVB1YmxpY01hcBAAEi0KKUNv",
+            "ZGVSZXN0YXJ0VHlwZV9Db2RlUmVzdGFydFR5cGVQbGF5ZXJBcmVhEAESKQol",
+            "Q29kZVJlc3RhcnRUeXBlX0NvZGVSZXN0YXJ0VHlwZUVudGl0eRACEi0KKUNv",
+            "ZGVSZXN0YXJ0VHlwZV9Db2RlUmVzdGFydFR5cGVMZXNzb25BcmVhEAMSMgou",
+            "Q29kZVJlc3RhcnRUeXBlX0NvZGVSZXN0YXJ0VHlwZUVudGl0eVF1aWNrQ29k",
+            "ZRAEKrICCghWaWV3VHlwZRIbChdWaWV3VHlwZV9WaWV3VHlwZVVua25vdxAA",
+            "EiEKHVZpZXdUeXBlX1ZpZXdUeXBlRHVuZ2VvblNjb3JlEAESIwofVmlld1R5",
+            "cGVfVmlld1R5cGVUZW1wbGF0ZUNyZWF0ZRACEh0KGVZpZXdUeXBlX1ZpZXdU",
+            "eXBlQmFja3BhY2sQAxIfChtWaWV3VHlwZV9WaWV3VHlwZUxlc3NvblBsYW4Q",
+            "BBIfChtWaWV3VHlwZV9WaWV3VHlwZUlkZVRlcnJhaW4QBRIdChlWaWV3VHlw",
+            "ZV9WaWV3VHlwZUlkZUJ1aWxkEAYSIQodVmlld1R5cGVfVmlld1R5cGVJZGVB",
+            "dHRyaWJ1dGUQBxIeChpWaWV3VHlwZV9WaWV3VHlwZUNvZGVCbG9jaxAIKssB",
+            "ChFEdW5nZW9uUmV3YXJkVHlwZRItCilEdW5nZW9uUmV3YXJkVHlwZV9EdW5n",
+            "ZW9uUmV3YXJkVHlwZVVua25vdxAAEisKJ0R1bmdlb25SZXdhcmRUeXBlX0R1",
+            "bmdlb25SZXdhcmRUeXBlQmFzZRABEiwKKER1bmdlb25SZXdhcmRUeXBlX0R1",
+            "bmdlb25SZXdhcmRUeXBlU3VwZXIQAhIsCihEdW5nZW9uUmV3YXJkVHlwZV9E",
+            "dW5nZW9uUmV3YXJkVHlwZUZpbmFsEAMqnwEKC09wZW5VcmxUeXBlEiEKHU9w",
+            "ZW5VcmxUeXBlX09wZW5VcmxUeXBlV2luZG93EAASIgoeT3BlblVybFR5cGVf",
+            "T3BlblVybFR5cGVXZWJWaWV3EAESJQohT3BlblVybFR5cGVfT3BlblVybFR5",
+            "cGVGdWxsU2NyZWVuEAISIgoeT3BlblVybFR5cGVfT3BlblVybFR5cGVXZWJQ",
+            "YWdlEAMqjQEKDkxlc3NvbkFyZWFNb2RlEicKI0xlc3NvbkFyZWFNb2RlX0xl",
+            "c3NvbkFyZWFNb2RlTm9ybWFsEAASKgomTGVzc29uQXJlYU1vZGVfTGVzc29u",
+            "QXJlYU1vZGVRdWlja0NvZGUQARImCiJMZXNzb25BcmVhTW9kZV9MZXNzb25B",
+            "cmVhTW9kZVZpZGVvEAIqYAoOTGVzc29uU2hvd1R5cGUSJAogTGVzc29uU2hv",
+            "d1R5cGVfTGVzc29uU2hvd1R5cGVBbGwQABIoCiRMZXNzb25TaG93VHlwZV9M",
+            "ZXNzb25TaG93VHlwZVRlYWNoZXIQASqFAQoJTG9ja1N0YXRlEh0KGUxvY2tT",
+            "dGF0ZV9Mb2NrU3RhdGVVbmtvd24QABIaChZMb2NrU3RhdGVfTG9ja1N0YXRl",
+            "QWxsEAESHgoaTG9ja1N0YXRlX0xvY2tTdGF0ZVN0dWRlbnQQAhIdChlMb2Nr",
+            "U3RhdGVfTG9ja1N0YXRlTm9Cb2R5EAMqhgUKEkxlc3NvbkFyZWFEYXRhVHlw",
+            "ZRItCilMZXNzb25BcmVhRGF0YVR5cGVfTGVzc29uQXJlYURhdGFUeXBlTmFt",
+            "ZRAAEi4KKkxlc3NvbkFyZWFEYXRhVHlwZV9MZXNzb25BcmVhRGF0YVR5cGVT",
+            "Y29wZRABEi4KKkxlc3NvbkFyZWFEYXRhVHlwZV9MZXNzb25BcmVhRGF0YVR5",
+            "cGVUcFBvcxACEjAKLExlc3NvbkFyZWFEYXRhVHlwZV9MZXNzb25BcmVhRGF0",
+            "YVR5cGVDb21tZW50EAMSMQotTGVzc29uQXJlYURhdGFUeXBlX0xlc3NvbkFy",
+            "ZWFEYXRhVHlwZU5leHRBcmVhEAQSMQotTGVzc29uQXJlYURhdGFUeXBlX0xl",
+            "c3NvbkFyZWFEYXRhVHlwZVByZXZBcmVhEAUSNAowTGVzc29uQXJlYURhdGFU",
+            "eXBlX0xlc3NvbkFyZWFEYXRhVHlwZVRlcnJhaW5zQ2lkEAYSNgoyTGVzc29u",
+            "QXJlYURhdGFUeXBlX0xlc3NvbkFyZWFEYXRhVHlwZUFkZENvZGVFbnRpdHkQ",
+            "BxI3CjNMZXNzb25BcmVhRGF0YVR5cGVfTGVzc29uQXJlYURhdGFUeXBlRWRp",
+            "dENvZGVFbnRpdHkQCBI2CjJMZXNzb25BcmVhRGF0YVR5cGVfTGVzc29uQXJl",
+            "YURhdGFUeXBlRGVsQ29kZUVudGl0eRAJEjcKM0xlc3NvbkFyZWFEYXRhVHlw",
+            "ZV9MZXNzb25BcmVhRGF0YVR5cGVMZXNzb25TaG93VHlwZRAKEjEKLUxlc3Nv",
+            "bkFyZWFEYXRhVHlwZV9MZXNzb25BcmVhRGF0YVR5cGVBcmVhTW9kZRALKp4C",
+            "ChRMZXNzb25BcmVhVXBkYXRlVHlwZRIzCi9MZXNzb25BcmVhVXBkYXRlVHlw",
+            "ZV9MZXNzb25BcmVhVXBkYXRlVHlwZU5vcm1hbBAAEjAKLExlc3NvbkFyZWFV",
+            "cGRhdGVUeXBlX0xlc3NvbkFyZWFVcGRhdGVUeXBlQWRkEAESMAosTGVzc29u",
+            "QXJlYVVwZGF0ZVR5cGVfTGVzc29uQXJlYVVwZGF0ZVR5cGVEZWwQAhI4CjRM",
+            "ZXNzb25BcmVhVXBkYXRlVHlwZV9MZXNzb25BcmVhVXBkYXRlVHlwZUluZGV4",
+            "Q2hhbmdlEAMSMwovTGVzc29uQXJlYVVwZGF0ZVR5cGVfTGVzc29uQXJlYVVw",
+            "ZGF0ZVR5cGVVbmxvY2sQBCrOAQoRQ2hhbmdlU2NlbmVFZmZlY3QSLQopQ2hh",
+            "bmdlU2NlbmVFZmZlY3RfQ2hhbmdlU2NlbmVFZmZlY3RVbmtvd24QABIrCidD",
+            "aGFuZ2VTY2VuZUVmZmVjdF9DaGFuZ2VTY2VuZUVmZmVjdE1pc3QQARIsCihD",
+            "aGFuZ2VTY2VuZUVmZmVjdF9DaGFuZ2VTY2VuZUVmZmVjdEJsYWNrEAISLwor",
+            "Q2hhbmdlU2NlbmVFZmZlY3RfQ2hhbmdlU2NlbmVFZmZlY3REb3JhZW1vbhAD",
+            "KowBCg1FeGNsdXNpb25UeXBlEh4KGkV4Y2x1c2lvblR5cGVfRXhUeXBlVW5r",
+            "b3duEAASIAocRXhjbHVzaW9uVHlwZV9FeFR5cGVOb3RCdWlsZBABEhsKF0V4",
+            "Y2x1c2lvblR5cGVfRXhUeXBlRGVsEAISHAoYRXhjbHVzaW9uVHlwZV9FeFR5",
+            "cGVNb3ZlEANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.AstReflection.Descriptor, global::Bian.EntityProfileFieldReflection.Descriptor, global::Bian.TypeDefineReflection.Descriptor, global::Bian.WidgetReflection.Descriptor, global::Bian.MapReflection.Descriptor, global::Bian.AudioReflection.Descriptor, global::Bian.BigWorldReflection.Descriptor, global::Bian.ItemReflection.Descriptor, global::Bian.BuffReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.ServerCloseType), typeof(global::Bian.KickOutType), typeof(global::Bian.EnemyType), typeof(global::Bian.EntityCodeStatus), typeof(global::Bian.MoveType), typeof(global::Bian.MovementType), typeof(global::Bian.ObjectType), typeof(global::Bian.WallObjectSubType), typeof(global::Bian.ObjectBuildableType), typeof(global::Bian.ObjectBlockType), typeof(global::Bian.ObjectQuality), typeof(global::Bian.ObjectGearType), typeof(global::Bian.ObjectAnimationTriggerType), typeof(global::Bian.ObjectAnimationStopType), typeof(global::Bian.UserType), typeof(global::Bian.TerrainType), typeof(global::Bian.GameProjectState), typeof(global::Bian.GameProjectType), typeof(global::Bian.CurrencyType), typeof(global::Bian.TaskState), typeof(global::Bian.TaskRequirementType), typeof(global::Bian.TaskObjectiveType), typeof(global::Bian.TaskRewardType), typeof(global::Bian.AchieveObjectiveType), typeof(global::Bian.ChatChannelType), typeof(global::Bian.ChatState), typeof(global::Bian.MinimapMarkType), typeof(global::Bian.MinimapMarkDisplayType), typeof(global::Bian.EntitySceneEffectId), typeof(global::Bian.BubbleTextEffectType), typeof(global::Bian.Camp), typeof(global::Bian.MonsterState), typeof(global::Bian.MonsterAttType), typeof(global::Bian.MonsterPatrolType), typeof(global::Bian.MonsterType), typeof(global::Bian.MaterialType), typeof(global::Bian.BotStatus), typeof(global::Bian.Direction), typeof(global::Bian.CodeblockTemplateType), typeof(global::Bian.WeatherType), typeof(global::Bian.DailyCycleType), typeof(global::Bian.AchieveType), typeof(global::Bian.OperatorType), typeof(global::Bian.WorkbenchState), typeof(global::Bian.FormulaUnlockType), typeof(global::Bian.ComponentType), typeof(global::Bian.OSType), typeof(global::Bian.PlatformType), typeof(global::Bian.PowerType), typeof(global::Bian.BuildModel), typeof(global::Bian.EntityFrom), typeof(global::Bian.AnimationType), typeof(global::Bian.InputEventType), typeof(global::Bian.KeypressState), typeof(global::Bian.SpecificKey), typeof(global::Bian.PanelProfileType), typeof(global::Bian.BGStyle), typeof(global::Bian.AlignStyle), typeof(global::Bian.PanelAnchorPos), typeof(global::Bian.EntityLockType), typeof(global::Bian.CodeRestartType), typeof(global::Bian.ViewType), typeof(global::Bian.DungeonRewardType), typeof(global::Bian.OpenUrlType), typeof(global::Bian.LessonAreaMode), typeof(global::Bian.LessonShowType), typeof(global::Bian.LockState), typeof(global::Bian.LessonAreaDataType), typeof(global::Bian.LessonAreaUpdateType), typeof(global::Bian.ChangeSceneEffect), typeof(global::Bian.ExclusionType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PbBellClassUserInfo), global::Bian.PbBellClassUserInfo.Parser, new[]{ "HashId", "UserId", "Username", "RealName", "UserType", "Nickname", "GoldNum", "CodeNum", "UserIdStr" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AccountInfo), global::Bian.AccountInfo.Parser, new[]{ "Data", "DataHash", "Timestamp" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Stuffs), global::Bian.Stuffs.Parser, new[]{ "Cid", "Quantity", "RandAttr" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.RoleSettings), global::Bian.RoleSettings.Parser, new[]{ "Id", "Sex", "DefaultSkill", "CollectSkill", "OpenBoxSkill", "BodyCapacity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.VectorXY), global::Bian.VectorXY.Parser, new[]{ "X", "Y" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.VectorXYZ), global::Bian.VectorXYZ.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.RcRect), global::Bian.RcRect.Parser, new[]{ "Up", "W", "H" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityLocation), global::Bian.EntityLocation.Parser, new[]{ "MapId", "Pos", "Rc", "Z", "Zindex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerLocInfo), global::Bian.PlayerLocInfo.Parser, new[]{ "Id", "Name", "Loc" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityMoveStep), global::Bian.EntityMoveStep.Parser, new[]{ "Location", "Stamp" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityMovement), global::Bian.EntityMovement.Parser, new[]{ "EntityType", "EntityId", "CurLocation", "DestLocation", "Type", "Dir" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectAttr), global::Bian.ObjectAttr.Parser, new[]{ "IsMutual", "IsEdit", "PileLimit" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityId), global::Bian.EntityId.Parser, new[]{ "Type", "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityIdData), global::Bian.EntityIdData.Parser, new[]{ "Type", "Eid", "Cid", "EntityTemplateId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityWithLocation), global::Bian.EntityWithLocation.Parser, new[]{ "Type", "Id", "Location", "Direction", "MapObject", "Player", "Npc", "Monster", "FallingObject", "Material", "Bot", "FallingBox", "Plant", "Pet", "Puppet" }, new[]{ "Entity" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityNftInfo), global::Bian.EntityNftInfo.Parser, new[]{ "NftId", "NftType", "PlaceableInfo", "ThirdPictureFrameUrl", "ThirdNftInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Player), global::Bian.Player.Parser, new[]{ "Id", "PlayerId", "Name", "RoleId", "Gender", "RoleIcon", "Feature", "Guide", "Profile", "Avatars", "Workbench", "Hungry", "Thirsty", "Fatigue", "IsBuilding", "Active", "Dir", "CurBuildNum", "GuideInfo", "IsGodView", "IsIde", "ListenKeypress", "CidAvatar", "IsHide", "BWAttack", "Fighting", "BuffList" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapObject), global::Bian.MapObject.Parser, new[]{ "Id", "Loc", "Cid", "PlayerId", "Dir", "CodeStatus", "Workbench", "RefreshTime", "RunAttribute", "Fuel", "EType", "Mirror", "KeyFrame", "IsStampede", "IsCopy", "IsInArea", "IsLock", "Bubble", "Locker", "CanDestroy", "IsBuildFromTemplate", "GuideInfo", "EntityTemplate", "CurWalkDir", "IsHide", "Anims", "CurPlayAnim", "LockType", "FromFather", "SceneEffect", "Audios", "OperateBubbles", "CarryEntity", "ForceDir", "NftInfo", "MapTemplate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Plant), global::Bian.Plant.Parser, new[]{ "PlayerId", "Cid", "Id", "Name", "EType", "EnemyType", "Profile", "Location", "Workbench", "FatherId", "IsCopy", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "IsHide", "EntityTemplate", "CurWalkDir", "LockType", "FromFather" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Pet), global::Bian.Pet.Parser, new[]{ "PlayerId", "Id", "Cid", "Name", "Type", "Camp", "IsBoss", "Profile", "AttType", "PatrolType", "Workbench", "IsCopy", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "IsHide", "EntityTemplate", "CurWalkDir", "LockType", "FromFather", "SceneEffect" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Puppet), global::Bian.Puppet.Parser, new[]{ "Id", "Cid", "PlayerId", "EType", "Type", "Camp", "Profile", "AttType", "PatrolType", "HaterId", "HaterName", "CodeStatus", "Workbench", "RefreshTime", "RunAttribute", "KeyFrame", "IsStampede", "Mirror", "IsHide", "Dir", "IsCopy", "IsInArea", "IsLock", "Bubble", "Locker", "CanDestroy", "IsBuildFromTemplate", "GuideInfo", "EntityTemplate", "CurWalkDir", "Anims", "CurPlayAnim", "LockType", "FromFather", "SceneEffect", "Audios", "CidAvatar", "OperateBubbles", "CurEmoji", "CarryEntity", "ForceDir", "NftInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Monster), global::Bian.Monster.Parser, new[]{ "Cid", "Id", "Name", "Active", "Owner", "Profile", "AttType", "PatrolType", "HaterId", "HaterName", "Dir", "GuideInfo", "Fighting" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingObject), global::Bian.FallingObject.Parser, new[]{ "Id", "Cid", "Quantity", "PlayerId", "Mirror", "Attribute", "AutoPick", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "LockType", "EType", "IsHide", "EntityTemplate", "RunAttribute", "IsCopy", "FromFather", "SceneEffect", "Audios", "IsResourcePoint", "OperateBubbles", "ForceDir", "Quality" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Material), global::Bian.Material.Parser, new[]{ "Cid", "Id", "Type", "Name", "Profile", "EnemyType", "DropExp", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "FromEntityTemplate", "EntityTemplate", "IsHide", "LockType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Bot), global::Bian.Bot.Parser, new[]{ "Cid", "Id", "BotName", "PlayerId", "PlayerName", "Profile", "Status", "Fuel", "Location", "NowSkin", "Skins", "Bubble", "Dir", "Avatars", "IsCopy", "CodeStatus", "IsInArea", "IsLock", "GuideInfo", "LockType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.FallingBox), global::Bian.FallingBox.Parser, new[]{ "Id", "Location", "FallingObjects", "PlayerId", "PlayerName", "IsInArea", "IsLock", "Locker", "GuideInfo", "LockType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityBaseData), global::Bian.EntityBaseData.Parser, new[]{ "EType", "Loc", "Cid", "Dir", "Mirror", "IsHide", "ResName", "CurPlayAnim", "Area", "ForceDir" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityTurning), global::Bian.EntityTurning.Parser, new[]{ "EntityType", "EntityId", "Direction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerLocation), global::Bian.PlayerLocation.Parser, new[]{ "MapId", "R", "C" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerWithLocation), global::Bian.PlayerWithLocation.Parser, new[]{ "Player", "Location" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerAvatar), global::Bian.PlayerAvatar.Parser, new[]{ "Position", "ObjectId", "Attribute" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerFeature), global::Bian.PlayerFeature.Parser, new[]{ "Eyebrow", "Mouth", "Eye", "Face", "Hair", "Glove", "Clothes", "Pants", "Shoes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NpcConversation), global::Bian.NpcConversation.Parser, new[]{ "Id", "Sentence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Npc), global::Bian.Npc.Parser, new[]{ "Id", "Name", "Avatar", "PlayerId", "Icon", "DefaultConversation", "TaskNoticeType", "IsInArea", "IsLock" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NpcLocation), global::Bian.NpcLocation.Parser, new[]{ "MapId", "R", "C" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NpcWithLocation), global::Bian.NpcWithLocation.Parser, new[]{ "Npc", "Location" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectAnchor), global::Bian.ObjectAnchor.Parser, new[]{ "X", "Y" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectShape), global::Bian.ObjectShape.Parser, new[]{ "RCount", "CCount", "AreaDefault", "WalkdirDefault" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectArea), global::Bian.ObjectArea.Parser, new[]{ "N", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectAnimation), global::Bian.ObjectAnimation.Parser, new[]{ "Id", "Source", "TriggerType", "StopType", "Priority" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectState), global::Bian.ObjectState.Parser, new[]{ "Id", "IsDefault", "Texture", "Animation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ConsumableItemSettings), global::Bian.ConsumableItemSettings.Parser, new[]{ "ItemId", "Cd", "CallMethod", "Args", "CdType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectGearSettings), global::Bian.ObjectGearSettings.Parser, new[]{ "Cid", "Setting" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.GearSettings), global::Bian.GearSettings.Parser, new[]{ "GearType", "Durability", "SkillId", "HpLimitAdded", "HpRecoveryAdded", "AttAdded", "AttSpeedAdded", "DefAdded", "CritRateAdded", "CritDmgAdded", "HitRateAdded", "MissRateAdded", "MoveSpeedAdded", "RepairNeed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SceneForceSetting), global::Bian.SceneForceSetting.Parser, new[]{ "Cid", "Desc", "Force", "Dir" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectSettings), global::Bian.ObjectSettings.Parser, new[]{ "Id", "Type", "SubType", "Name", "Description", "Texture", "Tileset", "BlockType", "Anchor", "Area", "Mirror", "StateId", "States", "PreArticleType", "BackpackItemLimit", "Quality", "CanTrade", "CanSell", "CanDrop", "GearType", "GearAvatar", "Buildable", "MaterialType", "MaterialHpLimit", "MaterialFallingRecipetId", "BuildHeight", "ObjectHeight", "WalkDir", "GearSettings", "WalkLowHeight", "WalkHighHeight", "EnemyType", "ObjectDef", "DropExp", "InitObjectQuantity", "ExtraConfig", "HighEdge", "UseDrop", "IsFuel", "TerrainType", "UseLv", "Camp", "Life", "BodyRadius", "UserType", "AttWidget", "Widgets", "Frames", "CodeLib", "IsTerrain", "Anims", "IsItem", "DefDropId", "Binding", "RectBuildHigh", "RectWalkLow", "RectWalkHigh", "RectTexture", "EntityPreload", "SceneForce" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ObjectItem), global::Bian.ObjectItem.Parser, new[]{ "Id", "Type", "SubType", "Name", "Description", "Mirror", "StateId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ItemTemplateLet), global::Bian.ItemTemplateLet.Parser, new[]{ "ObjectCid", "Pos" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.GameProject), global::Bian.GameProject.Parser, new[]{ "Id", "PlayerId", "State", "Type", "Name", "Description", "CreatedAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.GameProjectComment), global::Bian.GameProjectComment.Parser, new[]{ "Id", "GameProjectId", "CommentPlayerId", "Content", "CreatedAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Currency), global::Bian.Currency.Parser, new[]{ "CurrencyType", "Num" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Reward), global::Bian.Reward.Parser, new[]{ "RewardId", "RewardItems", "Exp", "Currency" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskSettings), global::Bian.TaskSettings.Parser, new[]{ "Id", "Name", "Description", "FromNpcId", "ToNpcId", "Type", "RequirementsText", "ObjectivesText", "RewardId", "FollowTaskText", "IsEnabled", "IsCycle", "IsAutoFinish" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Task), global::Bian.Task.Parser, new[]{ "Id", "Name", "Description", "IsMain", "IsAcceptable", "TaskObjective", "AcceptableConversation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskObjective), global::Bian.TaskObjective.Parser, new[]{ "Quantity", "Rate", "TargetId", "IsCompleted", "TaskObjectiveType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskReward), global::Bian.TaskReward.Parser, new[]{ "TaskRewardType", "ItemId", "Quantity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerTask), global::Bian.PlayerTask.Parser, new[]{ "Id", "TaskId", "State", "Name", "Description", "IsMain", "TaskObjective", "ProcessingConversation", "SubmittableConversation", "ToNpcId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ChatSettings), global::Bian.ChatSettings.Parser, new[]{ "ChatType", "Cd" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ChatMessage), global::Bian.ChatMessage.Parser, new[]{ "SenderId", "SenderName", "SenderIcon", "ChatType", "Content", "ReceiverId", "MsgId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MinimapMark), global::Bian.MinimapMark.Parser, new[]{ "Type", "DisplayType", "MarkId", "Name", "R", "C" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityProfile), global::Bian.EntityProfile.Parser, new[]{ "Lv", "Exp", "Att", "AttSpeed", "Def", "HpCurrent", "HpLimit", "CritRate", "CritDmg", "HitRate", "MissRate", "MoveSpeed", "PushDmg", "PushDist", "HpRecovery", "HungryLimit", "ThirstyLimit", "FatigueLimit", "FatigueCurrent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityProfileUpdate), global::Bian.EntityProfileUpdate.Parser, new[]{ "Field", "CurValue" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntitySceneEffect), global::Bian.EntitySceneEffect.Parser, new[]{ "EffectId", "TextContent", "ExpiredAt", "FromDevice", "FromNode", "BubbleEffectType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BotSettings), global::Bian.BotSettings.Parser, new[]{ "Id", "Name", "LvType", "Kind", "Skill1Id", "Skill2Id", "SkillSequence", "RobotCodeBlockId", "BagGridNum", "FuelCeiling", "Skin1", "Skin2", "Skin3", "Skin4", "Skin", "Acquisitionskills", "BodyRadius" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerArea), global::Bian.PlayerArea.Parser, new[]{ "MapId", "RCenter", "CCenter", "ItemCid", "BuyMarks", "OwnerId", "OwnerName", "RCoreRadius", "CCoreRadius", "RExtendRadius", "CExtendRadius", "TemplateId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerAreaBrief), global::Bian.PlayerAreaBrief.Parser, new[]{ "RCenter", "CCenter", "OwnerId", "OwnerName", "RCoreRadius", "CCoreRadius", "RExtendRadius", "CExtendRadius" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CodeblockTemplate), global::Bian.CodeblockTemplate.Parser, new[]{ "Id", "Title", "Data", "Thumbnail", "IsNew", "Type" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Role), global::Bian.Role.Parser, new[]{ "Id", "Name", "Gender", "Skeleton" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SpawnPoint), global::Bian.SpawnPoint.Parser, new[]{ "Id", "MapId", "X", "Y", "Initial" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SceneWeather), global::Bian.SceneWeather.Parser, new[]{ "SceneId", "Weather", "Temperature", "StartRate", "StopRate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.WeatherState), global::Bian.WeatherState.Parser, new[]{ "SceneId", "WeatherType", "Temperature" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AchieveIndex), global::Bian.AchieveIndex.Parser, new[]{ "RequireNum", "RewardId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Achieve), global::Bian.Achieve.Parser, new[]{ "AchieveId", "AchieveType", "AchieveIndex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityLvSettings), global::Bian.EntityLvSettings.Parser, new[]{ "Lv", "Exp", "Att", "AttSpeed", "Def", "HpRecovery", "HpLimit", "CritRate", "CritDmg", "HitRate", "MissRate", "MoveSpeed", "PushDmg", "PushDist" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BotLvSettings), global::Bian.BotLvSettings.Parser, new[]{ "Id", "LvType", "EntityLvSettings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ItemLet), global::Bian.ItemLet.Parser, new[]{ "ItemId", "Quantity", "NeedRand", "Attribute" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Mail), global::Bian.Mail.Parser, new[]{ "MailId", "Title", "Content", "Parameters", "Top", "Sender", "ExpiredAt", "Read", "Taken", "Attachments" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MailHead), global::Bian.MailHead.Parser, new[]{ "MailId", "Title", "ExpiredAt", "Top", "Read", "Attachments" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MailTemplate), global::Bian.MailTemplate.Parser, new[]{ "TemplateId", "Name", "Template", "Top", "RewardGiftId", "Initial", "Duration" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerHungry), global::Bian.PlayerHungry.Parser, new[]{ "Limit", "CurrentVal" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerThirsty), global::Bian.PlayerThirsty.Parser, new[]{ "Limit", "CurrentVal" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerFatigue), global::Bian.PlayerFatigue.Parser, new[]{ "Limit", "CurrentVal" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.SpecialBuildSettings), global::Bian.SpecialBuildSettings.Parser, new[]{ "Id", "DataFrom", "Type", "Formulas", "GridNum", "NeedFuel", "BurningRation", "MaxChars", "Content", "DisplayTime", "TriggerRange" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.WorkbenchHead), global::Bian.WorkbenchHead.Parser, new[]{ "Entity", "Location", "OwnerId", "WorkbenchCid" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Workbench), global::Bian.Workbench.Parser, new[]{ "Entity", "WorkbenchCid", "OnUseFormulaId", "EndTime", "Prompt", "ComponentNum", "Fuel", "SubId", "BeginTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MatItem), global::Bian.MatItem.Parser, new[]{ "Id", "Quantity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ProductShow), global::Bian.ProductShow.Parser, new[]{ "ShowTime", "ShowId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ArchFormulaSettings), global::Bian.ArchFormulaSettings.Parser, new[]{ "Id", "UnlockType", "UnlockCondition", "ConsumeTime", "ProductId", "ProductType", "MatItems", "Show", "RewardId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.GainItem), global::Bian.GainItem.Parser, new[]{ "Id", "Quantity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BotGain), global::Bian.BotGain.Parser, new[]{ "BotId", "LevelDis", "FuelDis", "ItemList" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityAttribute), global::Bian.EntityAttribute.Parser, new[]{ "Entity", "Widgets" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityAttributes), global::Bian.EntityAttributes.Parser, new[]{ "Widgets" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Student), global::Bian.Student.Parser, new[]{ "Id", "GameName", "HashId", "RealName", "Rc" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BuildingPoint), global::Bian.BuildingPoint.Parser, new[]{ "X", "Y", "Z", "Dir" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityAdd), global::Bian.EntityAdd.Parser, new[]{ "BuildPuppet", "ItemId", "Pos", "Dir", "Mirror", "FromEntityTemplate", "StateId", "Cid", "IsItem", "ForceDir", "SurvivalTime", "PictureFrameUrl" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityCopy), global::Bian.EntityCopy.Parser, new[]{ "From", "Pos", "Dir", "Mirror", "ForceDir" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityMove), global::Bian.EntityMove.Parser, new[]{ "Entity", "Pos", "Dir", "Mirror", "Z", "ZIndex", "ForceDir" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityDelRes), global::Bian.EntityDelRes.Parser, new[]{ "Entity", "Pos", "Dir" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BuildingModePos), global::Bian.BuildingModePos.Parser, new[]{ "Cid", "Entity", "EntityTemplateId", "Dirs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AnimationBone), global::Bian.AnimationBone.Parser, new[]{ "Id", "AnimName", "ResName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AnimationFrame), global::Bian.AnimationFrame.Parser, new[]{ "Id", "Name", "Index", "Url", "RectUrl" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Animation), global::Bian.Animation.Parser, new[]{ "Id", "Name", "Index", "Type", "Frames", "BoneAnim" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityAnimations), global::Bian.EntityAnimations.Parser, new[]{ "Animations", "Emojis" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityTemplate), global::Bian.EntityTemplate.Parser, new[]{ "PlayerName", "TemplateId", "Name", "Desc", "WalkDir", "IconUrl", "ImageUrl", "AnimUrl", "Area", "Direction", "BuildHeight", "BuildType", "FromCid", "CreateTypeId", "CodeLibId", "Animations", "Attribute", "Audios", "TimeLines" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityPosition), global::Bian.EntityPosition.Parser, new[]{ "TemplateId", "Vec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityTemplateGroup), global::Bian.EntityTemplateGroup.Parser, new[]{ "TemplateId", "Name", "Desc", "IconUrl", "Etemplates", "Epos" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.KeypressEvent), global::Bian.KeypressEvent.Parser, new[]{ "KeyId", "State" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Keypress), global::Bian.Keypress.Parser, new[]{ "Key", "State" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.InputEvent), global::Bian.InputEvent.Parser, new[]{ "Type", "Keypress", "Key" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PanelProfile), global::Bian.PanelProfile.Parser, new[]{ "PanelType", "Style", "RowNum", "ColNum", "Title", "GridProfile", "RowHeight", "ColWidth", "Anchor", "IsHidden" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PanelBGStyle), global::Bian.PanelBGStyle.Parser, new[]{ "Style", "R", "G", "B", "Transparency" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PanelTitle), global::Bian.PanelTitle.Parser, new[]{ "CanFold", "R", "G", "B", "Transparency", "Content", "Height" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PanelGridProfile), global::Bian.PanelGridProfile.Parser, new[]{ "Content", "Align", "Picture", "Percent", "ColNum", "RowNum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PanelRowColSize), global::Bian.PanelRowColSize.Parser, new[]{ "Which", "Size" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PanelAnchor), global::Bian.PanelAnchor.Parser, new[]{ "Pos", "Horizontal", "Vertical" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ShowViewData), global::Bian.ShowViewData.Parser, new[]{ "Type", "DungeonScoreData" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ViewDungeonScoreData), global::Bian.ViewDungeonScoreData.Parser, new[]{ "DungeonId", "Score", "ReceivedBaseReward", "SuperLv", "ReceivedSuperReward", "ReceivedFinalReward" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.DungeonSuperReward), global::Bian.DungeonSuperReward.Parser, new[]{ "RewardId", "NeedVipLv" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourcePointInfo), global::Bian.ResourcePointInfo.Parser, new[]{ "RcIndex", "ResourceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BornPointInfo), global::Bian.BornPointInfo.Parser, new[]{ "RcIndex", "Cid" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Scope), global::Bian.Scope.Parser, new[]{ "TopNode", "BottomNode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.LessonArea), global::Bian.LessonArea.Parser, new[]{ "LessonAreaId", "LessonAreaComment", "LessonAreaName", "Scope", "TpPos", "NextAreaId", "PrevAraeId", "TerrainsCid", "ShowType", "AreaMode", "CodeEntities" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CodeEntityData), global::Bian.CodeEntityData.Parser, new[]{ "E", "EName", "Cid", "Icon", "Tab", "TabName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.LessonAreaEntityData), global::Bian.LessonAreaEntityData.Parser, new[]{ "E", "Cid", "EDesc", "Rc" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.LessonAreaInfo), global::Bian.LessonAreaInfo.Parser, new[]{ "Area", "TpPoints", "IsResetting", "LockState", "HasArrived" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.LessonAreaData), global::Bian.LessonAreaData.Parser, new[]{ "LessonAreaDataType", "Name", "Comment", "Scope", "TpPos", "AreaId", "TerrainsCid", "EntityData", "ShowType", "AreaMode" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AreaUpdateData), global::Bian.AreaUpdateData.Parser, new[]{ "AreaId", "UpdateData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityOfTile), global::Bian.EntityOfTile.Parser, new[]{ "RcIndex", "RandomEntities" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.CarryEntityBaseData), global::Bian.CarryEntityBaseData.Parser, new[]{ "Id", "Loc", "Cid", "Icon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityPreload), global::Bian.EntityPreload.Parser, new[]{ "Cid", "PreloadCodeBlock", "PreloadEntityAttr", "PreloadTimelineList", "EntityId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityCusData), global::Bian.EntityCusData.Parser, new[]{ "Cid", "FileName", "EntityPreload" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntitiesQuickCodeTab), global::Bian.EntitiesQuickCodeTab.Parser, new[]{ "Entity", "TabId", "EntityName", "AvatarCid", "Icon" }, null, null, null, null)
+          new pbr::FileDescriptor[] { global::MelandGame3.AstReflection.Descriptor, global::MelandGame3.EntityProfileFieldReflection.Descriptor, global::MelandGame3.TypeDefineReflection.Descriptor, global::MelandGame3.WidgetReflection.Descriptor, global::MelandGame3.AudioReflection.Descriptor, global::MelandGame3.BigWorldReflection.Descriptor, global::MelandGame3.ItemReflection.Descriptor, global::MelandGame3.BuffReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.ServerCloseType), typeof(global::MelandGame3.KickOutType), typeof(global::MelandGame3.EnemyType), typeof(global::MelandGame3.EntityCodeStatus), typeof(global::MelandGame3.MoveType), typeof(global::MelandGame3.MovementType), typeof(global::MelandGame3.ObjectType), typeof(global::MelandGame3.WallObjectSubType), typeof(global::MelandGame3.ObjectBuildableType), typeof(global::MelandGame3.ObjectBlockType), typeof(global::MelandGame3.ObjectQuality), typeof(global::MelandGame3.ObjectGearType), typeof(global::MelandGame3.ObjectAnimationTriggerType), typeof(global::MelandGame3.ObjectAnimationStopType), typeof(global::MelandGame3.UserType), typeof(global::MelandGame3.TerrainType), typeof(global::MelandGame3.GameProjectState), typeof(global::MelandGame3.GameProjectType), typeof(global::MelandGame3.CurrencyType), typeof(global::MelandGame3.AchieveObjectiveType), typeof(global::MelandGame3.ChatChannelType), typeof(global::MelandGame3.ChatState), typeof(global::MelandGame3.MinimapMarkType), typeof(global::MelandGame3.MinimapMarkDisplayType), typeof(global::MelandGame3.EntitySceneEffectId), typeof(global::MelandGame3.BubbleTextEffectType), typeof(global::MelandGame3.Camp), typeof(global::MelandGame3.MonsterState), typeof(global::MelandGame3.MonsterAttType), typeof(global::MelandGame3.MonsterPatrolType), typeof(global::MelandGame3.MonsterType), typeof(global::MelandGame3.MaterialType), typeof(global::MelandGame3.BotStatus), typeof(global::MelandGame3.Direction), typeof(global::MelandGame3.CodeblockTemplateType), typeof(global::MelandGame3.WeatherType), typeof(global::MelandGame3.DailyCycleType), typeof(global::MelandGame3.AchieveType), typeof(global::MelandGame3.OperatorType), typeof(global::MelandGame3.WorkbenchState), typeof(global::MelandGame3.FormulaUnlockType), typeof(global::MelandGame3.ComponentType), typeof(global::MelandGame3.OSType), typeof(global::MelandGame3.PlatformType), typeof(global::MelandGame3.PowerType), typeof(global::MelandGame3.BuildModel), typeof(global::MelandGame3.EntityFrom), typeof(global::MelandGame3.AnimationType), typeof(global::MelandGame3.InputEventType), typeof(global::MelandGame3.KeypressState), typeof(global::MelandGame3.SpecificKey), typeof(global::MelandGame3.PanelProfileType), typeof(global::MelandGame3.BGStyle), typeof(global::MelandGame3.AlignStyle), typeof(global::MelandGame3.PanelAnchorPos), typeof(global::MelandGame3.EntityLockType), typeof(global::MelandGame3.CodeRestartType), typeof(global::MelandGame3.ViewType), typeof(global::MelandGame3.DungeonRewardType), typeof(global::MelandGame3.OpenUrlType), typeof(global::MelandGame3.LessonAreaMode), typeof(global::MelandGame3.LessonShowType), typeof(global::MelandGame3.LockState), typeof(global::MelandGame3.LessonAreaDataType), typeof(global::MelandGame3.LessonAreaUpdateType), typeof(global::MelandGame3.ChangeSceneEffect), typeof(global::MelandGame3.ExclusionType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PbBellClassUserInfo), global::MelandGame3.PbBellClassUserInfo.Parser, new[]{ "HashId", "UserId", "Username", "RealName", "UserType", "Nickname", "GoldNum", "CodeNum", "UserIdStr" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AccountInfo), global::MelandGame3.AccountInfo.Parser, new[]{ "Data", "DataHash", "Timestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Stuffs), global::MelandGame3.Stuffs.Parser, new[]{ "Cid", "Quantity", "RandAttr" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.RoleSettings), global::MelandGame3.RoleSettings.Parser, new[]{ "Id", "Sex", "DefaultSkill", "CollectSkill", "OpenBoxSkill", "BodyCapacity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.VectorXY), global::MelandGame3.VectorXY.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.VectorXYZ), global::MelandGame3.VectorXYZ.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.RcRect), global::MelandGame3.RcRect.Parser, new[]{ "Up", "W", "H" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityLocation), global::MelandGame3.EntityLocation.Parser, new[]{ "MapId", "Pos", "Rc", "Z", "Zindex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerLocInfo), global::MelandGame3.PlayerLocInfo.Parser, new[]{ "Id", "Name", "Loc" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityMoveStep), global::MelandGame3.EntityMoveStep.Parser, new[]{ "Location", "Stamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityMovement), global::MelandGame3.EntityMovement.Parser, new[]{ "EntityType", "EntityId", "CurLocation", "DestLocation", "Type", "Dir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectAttr), global::MelandGame3.ObjectAttr.Parser, new[]{ "IsMutual", "IsEdit", "PileLimit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityId), global::MelandGame3.EntityId.Parser, new[]{ "Type", "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityIdData), global::MelandGame3.EntityIdData.Parser, new[]{ "Type", "Eid", "Cid", "EntityTemplateId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityWithLocation), global::MelandGame3.EntityWithLocation.Parser, new[]{ "Type", "Id", "Location", "Direction", "MapObject", "Player", "Npc", "Monster", "FallingObject", "Material", "Bot", "FallingBox", "Plant", "Pet", "Puppet" }, new[]{ "Entity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityNftInfo), global::MelandGame3.EntityNftInfo.Parser, new[]{ "NftId", "NftType", "PlaceableInfo", "ThirdPictureFrameUrl", "ThirdNftInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Player), global::MelandGame3.Player.Parser, new[]{ "Id", "PlayerId", "Name", "RoleId", "Gender", "RoleIcon", "Feature", "Guide", "Profile", "Avatars", "Workbench", "Hungry", "Thirsty", "Fatigue", "IsBuilding", "Active", "Dir", "CurBuildNum", "GuideInfo", "IsGodView", "IsIde", "ListenKeypress", "CidAvatar", "IsHide", "BWAttack", "Fighting", "BuffList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapObject), global::MelandGame3.MapObject.Parser, new[]{ "Id", "Loc", "Cid", "PlayerId", "Dir", "CodeStatus", "Workbench", "RefreshTime", "RunAttribute", "Fuel", "EType", "Mirror", "KeyFrame", "IsStampede", "IsCopy", "IsInArea", "IsLock", "Bubble", "Locker", "CanDestroy", "IsBuildFromTemplate", "GuideInfo", "EntityTemplate", "CurWalkDir", "IsHide", "Anims", "CurPlayAnim", "LockType", "FromFather", "SceneEffect", "Audios", "OperateBubbles", "CarryEntity", "ForceDir", "NftInfo", "MapTemplate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Plant), global::MelandGame3.Plant.Parser, new[]{ "PlayerId", "Cid", "Id", "Name", "EType", "EnemyType", "Profile", "Location", "Workbench", "FatherId", "IsCopy", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "IsHide", "EntityTemplate", "CurWalkDir", "LockType", "FromFather" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Pet), global::MelandGame3.Pet.Parser, new[]{ "PlayerId", "Id", "Cid", "Name", "Type", "Camp", "IsBoss", "Profile", "AttType", "PatrolType", "Workbench", "IsCopy", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "IsHide", "EntityTemplate", "CurWalkDir", "LockType", "FromFather", "SceneEffect" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Puppet), global::MelandGame3.Puppet.Parser, new[]{ "Id", "Cid", "PlayerId", "EType", "Type", "Camp", "Profile", "AttType", "PatrolType", "HaterId", "HaterName", "CodeStatus", "Workbench", "RefreshTime", "RunAttribute", "KeyFrame", "IsStampede", "Mirror", "IsHide", "Dir", "IsCopy", "IsInArea", "IsLock", "Bubble", "Locker", "CanDestroy", "IsBuildFromTemplate", "GuideInfo", "EntityTemplate", "CurWalkDir", "Anims", "CurPlayAnim", "LockType", "FromFather", "SceneEffect", "Audios", "CidAvatar", "OperateBubbles", "CurEmoji", "CarryEntity", "ForceDir", "NftInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Monster), global::MelandGame3.Monster.Parser, new[]{ "Cid", "Id", "Name", "Active", "Owner", "Profile", "AttType", "PatrolType", "HaterId", "HaterName", "Dir", "GuideInfo", "Fighting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.FallingObject), global::MelandGame3.FallingObject.Parser, new[]{ "Id", "Cid", "Quantity", "PlayerId", "Mirror", "Attribute", "AutoPick", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "LockType", "EType", "IsHide", "EntityTemplate", "RunAttribute", "IsCopy", "FromFather", "SceneEffect", "Audios", "IsResourcePoint", "OperateBubbles", "ForceDir", "Quality" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Material), global::MelandGame3.Material.Parser, new[]{ "Cid", "Id", "Type", "Name", "Profile", "EnemyType", "DropExp", "Dir", "IsInArea", "IsLock", "Locker", "GuideInfo", "FromEntityTemplate", "EntityTemplate", "IsHide", "LockType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Bot), global::MelandGame3.Bot.Parser, new[]{ "Cid", "Id", "BotName", "PlayerId", "PlayerName", "Profile", "Status", "Fuel", "Location", "NowSkin", "Skins", "Bubble", "Dir", "Avatars", "IsCopy", "CodeStatus", "IsInArea", "IsLock", "GuideInfo", "LockType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.FallingBox), global::MelandGame3.FallingBox.Parser, new[]{ "Id", "Location", "FallingObjects", "PlayerId", "PlayerName", "IsInArea", "IsLock", "Locker", "GuideInfo", "LockType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityBaseData), global::MelandGame3.EntityBaseData.Parser, new[]{ "EType", "Loc", "Cid", "Dir", "Mirror", "IsHide", "ResName", "CurPlayAnim", "Area", "ForceDir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityTurning), global::MelandGame3.EntityTurning.Parser, new[]{ "EntityType", "EntityId", "Direction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerLocation), global::MelandGame3.PlayerLocation.Parser, new[]{ "MapId", "R", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerWithLocation), global::MelandGame3.PlayerWithLocation.Parser, new[]{ "Player", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerAvatar), global::MelandGame3.PlayerAvatar.Parser, new[]{ "Position", "ObjectId", "Attribute" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerFeature), global::MelandGame3.PlayerFeature.Parser, new[]{ "Eyebrow", "Mouth", "Eye", "Face", "Hair", "Glove", "Clothes", "Pants", "Shoes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NpcConversation), global::MelandGame3.NpcConversation.Parser, new[]{ "Id", "Sentence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Npc), global::MelandGame3.Npc.Parser, new[]{ "Id", "Name", "Avatar", "PlayerId", "Icon", "DefaultConversation", "TaskNoticeType", "IsInArea", "IsLock" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NpcLocation), global::MelandGame3.NpcLocation.Parser, new[]{ "MapId", "R", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NpcWithLocation), global::MelandGame3.NpcWithLocation.Parser, new[]{ "Npc", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectAnchor), global::MelandGame3.ObjectAnchor.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectShape), global::MelandGame3.ObjectShape.Parser, new[]{ "RCount", "CCount", "AreaDefault", "WalkdirDefault" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectArea), global::MelandGame3.ObjectArea.Parser, new[]{ "N", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectAnimation), global::MelandGame3.ObjectAnimation.Parser, new[]{ "Id", "Source", "TriggerType", "StopType", "Priority" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectState), global::MelandGame3.ObjectState.Parser, new[]{ "Id", "IsDefault", "Texture", "Animation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ConsumableItemSettings), global::MelandGame3.ConsumableItemSettings.Parser, new[]{ "ItemId", "Cd", "CallMethod", "Args", "CdType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectGearSettings), global::MelandGame3.ObjectGearSettings.Parser, new[]{ "Cid", "Setting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.GearSettings), global::MelandGame3.GearSettings.Parser, new[]{ "GearType", "Durability", "SkillId", "HpLimitAdded", "HpRecoveryAdded", "AttAdded", "AttSpeedAdded", "DefAdded", "CritRateAdded", "CritDmgAdded", "HitRateAdded", "MissRateAdded", "MoveSpeedAdded", "RepairNeed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.SceneForceSetting), global::MelandGame3.SceneForceSetting.Parser, new[]{ "Cid", "Desc", "Force", "Dir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectSettings), global::MelandGame3.ObjectSettings.Parser, new[]{ "Id", "Type", "SubType", "Name", "Description", "Texture", "Tileset", "BlockType", "Anchor", "Area", "Mirror", "StateId", "States", "PreArticleType", "BackpackItemLimit", "Quality", "CanTrade", "CanSell", "CanDrop", "GearType", "GearAvatar", "Buildable", "MaterialType", "MaterialHpLimit", "MaterialFallingRecipetId", "BuildHeight", "ObjectHeight", "WalkDir", "GearSettings", "WalkLowHeight", "WalkHighHeight", "EnemyType", "ObjectDef", "DropExp", "InitObjectQuantity", "ExtraConfig", "HighEdge", "UseDrop", "IsFuel", "TerrainType", "UseLv", "Camp", "Life", "BodyRadius", "UserType", "AttWidget", "Widgets", "Frames", "CodeLib", "IsTerrain", "Anims", "IsItem", "DefDropId", "Binding", "RectBuildHigh", "RectWalkLow", "RectWalkHigh", "RectTexture", "EntityPreload", "SceneForce" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ObjectItem), global::MelandGame3.ObjectItem.Parser, new[]{ "Id", "Type", "SubType", "Name", "Description", "Mirror", "StateId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ItemTemplateLet), global::MelandGame3.ItemTemplateLet.Parser, new[]{ "ObjectCid", "Pos" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.GameProject), global::MelandGame3.GameProject.Parser, new[]{ "Id", "PlayerId", "State", "Type", "Name", "Description", "CreatedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.GameProjectComment), global::MelandGame3.GameProjectComment.Parser, new[]{ "Id", "GameProjectId", "CommentPlayerId", "Content", "CreatedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Currency), global::MelandGame3.Currency.Parser, new[]{ "CurrencyType", "Num" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Reward), global::MelandGame3.Reward.Parser, new[]{ "RewardId", "RewardItems", "Exp", "Currency" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ChatSettings), global::MelandGame3.ChatSettings.Parser, new[]{ "ChatType", "Cd" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ChatMessage), global::MelandGame3.ChatMessage.Parser, new[]{ "SenderId", "SenderName", "SenderIcon", "ChatType", "Content", "ReceiverId", "MsgId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MinimapMark), global::MelandGame3.MinimapMark.Parser, new[]{ "Type", "DisplayType", "MarkId", "Name", "R", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityProfile), global::MelandGame3.EntityProfile.Parser, new[]{ "Lv", "Exp", "Att", "AttSpeed", "Def", "HpCurrent", "HpLimit", "CritRate", "CritDmg", "HitRate", "MissRate", "MoveSpeed", "PushDmg", "PushDist", "HpRecovery", "HungryLimit", "ThirstyLimit", "FatigueLimit", "FatigueCurrent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityProfileUpdate), global::MelandGame3.EntityProfileUpdate.Parser, new[]{ "Field", "CurValue", "CurValueStr", "UseStringValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntitySceneEffect), global::MelandGame3.EntitySceneEffect.Parser, new[]{ "EffectId", "TextContent", "ExpiredAt", "FromDevice", "FromNode", "BubbleEffectType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BotSettings), global::MelandGame3.BotSettings.Parser, new[]{ "Id", "Name", "LvType", "Kind", "Skill1Id", "Skill2Id", "SkillSequence", "RobotCodeBlockId", "BagGridNum", "FuelCeiling", "Skin1", "Skin2", "Skin3", "Skin4", "Skin", "Acquisitionskills", "BodyRadius" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerArea), global::MelandGame3.PlayerArea.Parser, new[]{ "MapId", "RCenter", "CCenter", "ItemCid", "BuyMarks", "OwnerId", "OwnerName", "RCoreRadius", "CCoreRadius", "RExtendRadius", "CExtendRadius", "TemplateId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerAreaBrief), global::MelandGame3.PlayerAreaBrief.Parser, new[]{ "RCenter", "CCenter", "OwnerId", "OwnerName", "RCoreRadius", "CCoreRadius", "RExtendRadius", "CExtendRadius" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CodeblockTemplate), global::MelandGame3.CodeblockTemplate.Parser, new[]{ "Id", "Title", "Data", "Thumbnail", "IsNew", "Type" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Role), global::MelandGame3.Role.Parser, new[]{ "Id", "Name", "Gender", "Skeleton" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.SpawnPoint), global::MelandGame3.SpawnPoint.Parser, new[]{ "Id", "MapId", "X", "Y", "Initial" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.SceneWeather), global::MelandGame3.SceneWeather.Parser, new[]{ "SceneId", "Weather", "Temperature", "StartRate", "StopRate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.WeatherState), global::MelandGame3.WeatherState.Parser, new[]{ "SceneId", "WeatherType", "Temperature" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AchieveIndex), global::MelandGame3.AchieveIndex.Parser, new[]{ "RequireNum", "RewardId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Achieve), global::MelandGame3.Achieve.Parser, new[]{ "AchieveId", "AchieveType", "AchieveIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityLvSettings), global::MelandGame3.EntityLvSettings.Parser, new[]{ "Lv", "Exp", "Att", "AttSpeed", "Def", "HpRecovery", "HpLimit", "CritRate", "CritDmg", "HitRate", "MissRate", "MoveSpeed", "PushDmg", "PushDist", "DeathLossExp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BotLvSettings), global::MelandGame3.BotLvSettings.Parser, new[]{ "Id", "LvType", "EntityLvSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ItemLet), global::MelandGame3.ItemLet.Parser, new[]{ "ItemId", "Quantity", "NeedRand", "Attribute" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Mail), global::MelandGame3.Mail.Parser, new[]{ "MailId", "Title", "Content", "Parameters", "Top", "Sender", "ExpiredAt", "Read", "Taken", "Attachments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MailHead), global::MelandGame3.MailHead.Parser, new[]{ "MailId", "Title", "ExpiredAt", "Top", "Read", "Attachments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MailTemplate), global::MelandGame3.MailTemplate.Parser, new[]{ "TemplateId", "Name", "Template", "Top", "RewardGiftId", "Initial", "Duration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerHungry), global::MelandGame3.PlayerHungry.Parser, new[]{ "Limit", "CurrentVal" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerThirsty), global::MelandGame3.PlayerThirsty.Parser, new[]{ "Limit", "CurrentVal" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerFatigue), global::MelandGame3.PlayerFatigue.Parser, new[]{ "Limit", "CurrentVal" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.SpecialBuildSettings), global::MelandGame3.SpecialBuildSettings.Parser, new[]{ "Id", "DataFrom", "Type", "Formulas", "GridNum", "NeedFuel", "BurningRation", "MaxChars", "Content", "DisplayTime", "TriggerRange" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.WorkbenchHead), global::MelandGame3.WorkbenchHead.Parser, new[]{ "Entity", "Location", "OwnerId", "WorkbenchCid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Workbench), global::MelandGame3.Workbench.Parser, new[]{ "Entity", "WorkbenchCid", "OnUseFormulaId", "EndTime", "Prompt", "ComponentNum", "Fuel", "SubId", "BeginTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MatItem), global::MelandGame3.MatItem.Parser, new[]{ "Id", "Quantity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ProductShow), global::MelandGame3.ProductShow.Parser, new[]{ "ShowTime", "ShowId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ArchFormulaSettings), global::MelandGame3.ArchFormulaSettings.Parser, new[]{ "Id", "UnlockType", "UnlockCondition", "ConsumeTime", "ProductId", "ProductType", "MatItems", "Show", "RewardId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.GainItem), global::MelandGame3.GainItem.Parser, new[]{ "Id", "Quantity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BotGain), global::MelandGame3.BotGain.Parser, new[]{ "BotId", "LevelDis", "FuelDis", "ItemList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityAttribute), global::MelandGame3.EntityAttribute.Parser, new[]{ "Entity", "Widgets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityAttributes), global::MelandGame3.EntityAttributes.Parser, new[]{ "Widgets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Student), global::MelandGame3.Student.Parser, new[]{ "Id", "GameName", "HashId", "RealName", "Rc" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BuildingPoint), global::MelandGame3.BuildingPoint.Parser, new[]{ "X", "Y", "Z", "Dir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityAdd), global::MelandGame3.EntityAdd.Parser, new[]{ "BuildPuppet", "ItemId", "Pos", "Dir", "Mirror", "FromEntityTemplate", "StateId", "Cid", "IsItem", "ForceDir", "SurvivalTime", "PictureFrameUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityCopy), global::MelandGame3.EntityCopy.Parser, new[]{ "From", "Pos", "Dir", "Mirror", "ForceDir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityMove), global::MelandGame3.EntityMove.Parser, new[]{ "Entity", "Pos", "Dir", "Mirror", "Z", "ZIndex", "ForceDir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityDelRes), global::MelandGame3.EntityDelRes.Parser, new[]{ "Entity", "Pos", "Dir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BuildingModePos), global::MelandGame3.BuildingModePos.Parser, new[]{ "Cid", "Entity", "EntityTemplateId", "Dirs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AnimationBone), global::MelandGame3.AnimationBone.Parser, new[]{ "Id", "AnimName", "ResName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AnimationFrame), global::MelandGame3.AnimationFrame.Parser, new[]{ "Id", "Name", "Index", "Url", "RectUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Animation), global::MelandGame3.Animation.Parser, new[]{ "Id", "Name", "Index", "Type", "Frames", "BoneAnim" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityAnimations), global::MelandGame3.EntityAnimations.Parser, new[]{ "Animations", "Emojis" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityTemplate), global::MelandGame3.EntityTemplate.Parser, new[]{ "PlayerName", "TemplateId", "Name", "Desc", "WalkDir", "IconUrl", "ImageUrl", "AnimUrl", "Area", "Direction", "BuildHeight", "BuildType", "FromCid", "CreateTypeId", "CodeLibId", "Animations", "Attribute", "Audios", "TimeLines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityPosition), global::MelandGame3.EntityPosition.Parser, new[]{ "TemplateId", "Vec" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityTemplateGroup), global::MelandGame3.EntityTemplateGroup.Parser, new[]{ "TemplateId", "Name", "Desc", "IconUrl", "Etemplates", "Epos" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.KeypressEvent), global::MelandGame3.KeypressEvent.Parser, new[]{ "KeyId", "State" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Keypress), global::MelandGame3.Keypress.Parser, new[]{ "Key", "State" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.InputEvent), global::MelandGame3.InputEvent.Parser, new[]{ "Type", "Keypress", "Key" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PanelProfile), global::MelandGame3.PanelProfile.Parser, new[]{ "PanelType", "Style", "RowNum", "ColNum", "Title", "GridProfile", "RowHeight", "ColWidth", "Anchor", "IsHidden" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PanelBGStyle), global::MelandGame3.PanelBGStyle.Parser, new[]{ "Style", "R", "G", "B", "Transparency" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PanelTitle), global::MelandGame3.PanelTitle.Parser, new[]{ "CanFold", "R", "G", "B", "Transparency", "Content", "Height" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PanelGridProfile), global::MelandGame3.PanelGridProfile.Parser, new[]{ "Content", "Align", "Picture", "Percent", "ColNum", "RowNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PanelRowColSize), global::MelandGame3.PanelRowColSize.Parser, new[]{ "Which", "Size" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PanelAnchor), global::MelandGame3.PanelAnchor.Parser, new[]{ "Pos", "Horizontal", "Vertical" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ShowViewData), global::MelandGame3.ShowViewData.Parser, new[]{ "Type", "DungeonScoreData" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ViewDungeonScoreData), global::MelandGame3.ViewDungeonScoreData.Parser, new[]{ "DungeonId", "Score", "ReceivedBaseReward", "SuperLv", "ReceivedSuperReward", "ReceivedFinalReward" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.DungeonSuperReward), global::MelandGame3.DungeonSuperReward.Parser, new[]{ "RewardId", "NeedVipLv" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ResourcePointInfo), global::MelandGame3.ResourcePointInfo.Parser, new[]{ "RcIndex", "ResourceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BornPointInfo), global::MelandGame3.BornPointInfo.Parser, new[]{ "RcIndex", "Cid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Scope), global::MelandGame3.Scope.Parser, new[]{ "TopNode", "BottomNode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.LessonArea), global::MelandGame3.LessonArea.Parser, new[]{ "LessonAreaId", "LessonAreaComment", "LessonAreaName", "Scope", "TpPos", "NextAreaId", "PrevAraeId", "TerrainsCid", "ShowType", "AreaMode", "CodeEntities" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CodeEntityData), global::MelandGame3.CodeEntityData.Parser, new[]{ "E", "EName", "Cid", "Icon", "Tab", "TabName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.LessonAreaEntityData), global::MelandGame3.LessonAreaEntityData.Parser, new[]{ "E", "Cid", "EDesc", "Rc" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.LessonAreaInfo), global::MelandGame3.LessonAreaInfo.Parser, new[]{ "Area", "TpPoints", "IsResetting", "LockState", "HasArrived" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.LessonAreaData), global::MelandGame3.LessonAreaData.Parser, new[]{ "LessonAreaDataType", "Name", "Comment", "Scope", "TpPos", "AreaId", "TerrainsCid", "EntityData", "ShowType", "AreaMode" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AreaUpdateData), global::MelandGame3.AreaUpdateData.Parser, new[]{ "AreaId", "UpdateData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityOfTile), global::MelandGame3.EntityOfTile.Parser, new[]{ "RcIndex", "RandomEntities" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CarryEntityBaseData), global::MelandGame3.CarryEntityBaseData.Parser, new[]{ "Id", "Loc", "Cid", "Icon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityPreload), global::MelandGame3.EntityPreload.Parser, new[]{ "Cid", "PreloadCodeBlock", "PreloadEntityAttr", "PreloadTimelineList", "EntityId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityCusData), global::MelandGame3.EntityCusData.Parser, new[]{ "Cid", "FileName", "EntityPreload" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntitiesQuickCodeTab), global::MelandGame3.EntitiesQuickCodeTab.Parser, new[]{ "Entity", "TabId", "EntityName", "AvatarCid", "Icon" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1506,101 +1496,6 @@ namespace Bian {
     ///金币
     /// </summary>
     [pbr::OriginalName("CurrencyType_CurrencyTypeGold")] CurrencyTypeGold = 1,
-  }
-
-  public enum TaskState {
-    /// <summary>
-    /// 未知状态
-    /// </summary>
-    [pbr::OriginalName("TaskState_TaskStateUnknown")] TaskStateUnknown = 0,
-    /// <summary>
-    /// 进行中
-    /// </summary>
-    [pbr::OriginalName("TaskState_TaskStateAccepted")] TaskStateAccepted = 1,
-    /// <summary>
-    /// 已完成
-    /// </summary>
-    [pbr::OriginalName("TaskState_TaskStateCompleted")] TaskStateCompleted = 2,
-    /// <summary>
-    /// 已提交
-    /// </summary>
-    [pbr::OriginalName("TaskState_TaskStateSubmitted")] TaskStateSubmitted = 3,
-    /// <summary>
-    /// 强制完成
-    /// </summary>
-    [pbr::OriginalName("TaskState_TaskStateForceCompleted")] TaskStateForceCompleted = 4,
-  }
-
-  public enum TaskRequirementType {
-    [pbr::OriginalName("TaskRequirementType_TaskRequirementTypeUnknown")] TaskRequirementTypeUnknown = 0,
-    [pbr::OriginalName("TaskRequirementType_TaskRequirementTypeLevel")] TaskRequirementTypeLevel = 1,
-    [pbr::OriginalName("TaskRequirementType_TaskRequirementTypePreTask")] TaskRequirementTypePreTask = 2,
-  }
-
-  public enum TaskObjectiveType {
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeUnknown")] TaskObjectiveTypeUnknown = 0,
-    /// <summary>
-    /// 自动完成
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeAutoCompleted")] TaskObjectiveTypeAutoCompleted = 1,
-    /// <summary>
-    /// 建造
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeBuild")] TaskObjectiveTypeBuild = 2,
-    /// <summary>
-    /// npc对话
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeTalk")] TaskObjectiveTypeTalk = 3,
-    /// <summary>
-    /// 拥有物品
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeObject")] TaskObjectiveTypeObject = 4,
-    /// <summary>
-    /// 合成
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeSynthesis")] TaskObjectiveTypeSynthesis = 5,
-    /// <summary>
-    /// 打怪
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeKill")] TaskObjectiveTypeKill = 6,
-    /// <summary>
-    /// 采集
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeGather")] TaskObjectiveTypeGather = 7,
-    /// <summary>
-    /// 扣除物品
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeDelete")] TaskObjectiveTypeDelete = 8,
-    /// <summary>
-    /// 探索区域
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeExplored")] TaskObjectiveTypeExplored = 9,
-    /// <summary>
-    /// 等级
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeLevel")] TaskObjectiveTypeLevel = 10,
-    /// <summary>
-    /// banner特别任务
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeDungeonLvUp")] TaskObjectiveTypeDungeonLvUp = 11,
-    /// <summary>
-    /// 编辑模式使用代码块
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeCode")] TaskObjectiveTypeCode = 12,
-    /// <summary>
-    /// 养殖
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypeBreed")] TaskObjectiveTypeBreed = 13,
-    /// <summary>
-    /// 种植
-    /// </summary>
-    [pbr::OriginalName("TaskObjectiveType_TaskObjectiveTypePlant")] TaskObjectiveTypePlant = 14,
-  }
-
-  public enum TaskRewardType {
-    [pbr::OriginalName("TaskRewardType_TaskRewardTypeUnknown")] TaskRewardTypeUnknown = 0,
-    [pbr::OriginalName("TaskRewardType_TaskRewardTypeObject")] TaskRewardTypeObject = 1,
-    [pbr::OriginalName("TaskRewardType_TaskRewardTypeConfiscateObject")] TaskRewardTypeConfiscateObject = 2,
   }
 
   public enum AchieveObjectiveType {
@@ -2390,7 +2285,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2884,7 +2779,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3150,7 +3045,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3416,7 +3311,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3790,7 +3685,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4016,7 +3911,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4292,7 +4187,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4326,10 +4221,10 @@ namespace Bian {
 
     /// <summary>Field number for the "up" field.</summary>
     public const int UpFieldNumber = 1;
-    private global::Bian.VectorXY up_;
+    private global::MelandGame3.VectorXY up_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Up {
+    public global::MelandGame3.VectorXY Up {
       get { return up_; }
       set {
         up_ = value;
@@ -4473,7 +4368,7 @@ namespace Bian {
       }
       if (other.up_ != null) {
         if (up_ == null) {
-          Up = new global::Bian.VectorXY();
+          Up = new global::MelandGame3.VectorXY();
         }
         Up.MergeFrom(other.Up);
       }
@@ -4500,7 +4395,7 @@ namespace Bian {
             break;
           case 10: {
             if (up_ == null) {
-              Up = new global::Bian.VectorXY();
+              Up = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Up);
             break;
@@ -4530,7 +4425,7 @@ namespace Bian {
             break;
           case 10: {
             if (up_ == null) {
-              Up = new global::Bian.VectorXY();
+              Up = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Up);
             break;
@@ -4564,7 +4459,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4615,13 +4510,13 @@ namespace Bian {
 
     /// <summary>Field number for the "pos" field.</summary>
     public const int PosFieldNumber = 2;
-    private global::Bian.VectorXY pos_;
+    private global::MelandGame3.VectorXY pos_;
     /// <summary>
     ///像素坐标
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Pos {
+    public global::MelandGame3.VectorXY Pos {
       get { return pos_; }
       set {
         pos_ = value;
@@ -4630,13 +4525,13 @@ namespace Bian {
 
     /// <summary>Field number for the "rc" field.</summary>
     public const int RcFieldNumber = 3;
-    private global::Bian.VectorXY rc_;
+    private global::MelandGame3.VectorXY rc_;
     /// <summary>
     ///rc坐标
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Rc {
+    public global::MelandGame3.VectorXY Rc {
       get { return rc_; }
       set {
         rc_ = value;
@@ -4815,13 +4710,13 @@ namespace Bian {
       }
       if (other.pos_ != null) {
         if (pos_ == null) {
-          Pos = new global::Bian.VectorXY();
+          Pos = new global::MelandGame3.VectorXY();
         }
         Pos.MergeFrom(other.Pos);
       }
       if (other.rc_ != null) {
         if (rc_ == null) {
-          Rc = new global::Bian.VectorXY();
+          Rc = new global::MelandGame3.VectorXY();
         }
         Rc.MergeFrom(other.Rc);
       }
@@ -4852,14 +4747,14 @@ namespace Bian {
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (rc_ == null) {
-              Rc = new global::Bian.VectorXY();
+              Rc = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Rc);
             break;
@@ -4893,14 +4788,14 @@ namespace Bian {
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (rc_ == null) {
-              Rc = new global::Bian.VectorXY();
+              Rc = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Rc);
             break;
@@ -4934,7 +4829,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4992,10 +4887,10 @@ namespace Bian {
 
     /// <summary>Field number for the "loc" field.</summary>
     public const int LocFieldNumber = 3;
-    private global::Bian.EntityLocation loc_;
+    private global::MelandGame3.EntityLocation loc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Loc {
+    public global::MelandGame3.EntityLocation Loc {
       get { return loc_; }
       set {
         loc_ = value;
@@ -5121,7 +5016,7 @@ namespace Bian {
       }
       if (other.loc_ != null) {
         if (loc_ == null) {
-          Loc = new global::Bian.EntityLocation();
+          Loc = new global::MelandGame3.EntityLocation();
         }
         Loc.MergeFrom(other.Loc);
       }
@@ -5150,7 +5045,7 @@ namespace Bian {
           }
           case 26: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -5180,7 +5075,7 @@ namespace Bian {
           }
           case 26: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -5209,7 +5104,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[9]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5242,13 +5137,13 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 1;
-    private global::Bian.EntityLocation location_;
+    private global::MelandGame3.EntityLocation location_;
     /// <summary>
     /// 目标点
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Location {
+    public global::MelandGame3.EntityLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -5370,7 +5265,7 @@ namespace Bian {
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.EntityLocation();
+          Location = new global::MelandGame3.EntityLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -5394,7 +5289,7 @@ namespace Bian {
             break;
           case 10: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -5420,7 +5315,7 @@ namespace Bian {
             break;
           case 10: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -5450,7 +5345,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[10]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5487,10 +5382,10 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_type" field.</summary>
     public const int EntityTypeFieldNumber = 1;
-    private global::Bian.EntityType entityType_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType entityType_ = global::MelandGame3.EntityType.EntityTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType EntityType {
+    public global::MelandGame3.EntityType EntityType {
       get { return entityType_; }
       set {
         entityType_ = value;
@@ -5511,13 +5406,13 @@ namespace Bian {
 
     /// <summary>Field number for the "cur_location" field.</summary>
     public const int CurLocationFieldNumber = 3;
-    private global::Bian.EntityMoveStep curLocation_;
+    private global::MelandGame3.EntityMoveStep curLocation_;
     /// <summary>
     /// 当前位置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityMoveStep CurLocation {
+    public global::MelandGame3.EntityMoveStep CurLocation {
       get { return curLocation_; }
       set {
         curLocation_ = value;
@@ -5526,13 +5421,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dest_location" field.</summary>
     public const int DestLocationFieldNumber = 4;
-    private global::Bian.EntityMoveStep destLocation_;
+    private global::MelandGame3.EntityMoveStep destLocation_;
     /// <summary>
     /// 目标位置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityMoveStep DestLocation {
+    public global::MelandGame3.EntityMoveStep DestLocation {
       get { return destLocation_; }
       set {
         destLocation_ = value;
@@ -5541,13 +5436,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 5;
-    private global::Bian.MovementType type_ = global::Bian.MovementType.MovementTypeUnknown;
+    private global::MelandGame3.MovementType type_ = global::MelandGame3.MovementType.MovementTypeUnknown;
     /// <summary>
     /// 移动方式
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MovementType Type {
+    public global::MelandGame3.MovementType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -5556,13 +5451,13 @@ namespace Bian {
 
     /// <summary>Field number for the "Dir" field.</summary>
     public const int DirFieldNumber = 6;
-    private global::Bian.VectorXYZ dir_;
+    private global::MelandGame3.VectorXYZ dir_;
     /// <summary>
     /// 实体朝向(交互数据 = 实际数据 * 1000)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXYZ Dir {
+    public global::MelandGame3.VectorXYZ Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -5597,11 +5492,11 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) hash ^= EntityType.GetHashCode();
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) hash ^= EntityType.GetHashCode();
       if (EntityId.Length != 0) hash ^= EntityId.GetHashCode();
       if (curLocation_ != null) hash ^= CurLocation.GetHashCode();
       if (destLocation_ != null) hash ^= DestLocation.GetHashCode();
-      if (Type != global::Bian.MovementType.MovementTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.MovementType.MovementTypeUnknown) hash ^= Type.GetHashCode();
       if (dir_ != null) hash ^= Dir.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5621,7 +5516,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EntityType);
       }
@@ -5637,7 +5532,7 @@ namespace Bian {
         output.WriteRawTag(34);
         output.WriteMessage(DestLocation);
       }
-      if (Type != global::Bian.MovementType.MovementTypeUnknown) {
+      if (Type != global::MelandGame3.MovementType.MovementTypeUnknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
@@ -5655,7 +5550,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EntityType);
       }
@@ -5671,7 +5566,7 @@ namespace Bian {
         output.WriteRawTag(34);
         output.WriteMessage(DestLocation);
       }
-      if (Type != global::Bian.MovementType.MovementTypeUnknown) {
+      if (Type != global::MelandGame3.MovementType.MovementTypeUnknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
@@ -5689,7 +5584,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntityType);
       }
       if (EntityId.Length != 0) {
@@ -5701,7 +5596,7 @@ namespace Bian {
       if (destLocation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DestLocation);
       }
-      if (Type != global::Bian.MovementType.MovementTypeUnknown) {
+      if (Type != global::MelandGame3.MovementType.MovementTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (dir_ != null) {
@@ -5719,7 +5614,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (other.EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         EntityType = other.EntityType;
       }
       if (other.EntityId.Length != 0) {
@@ -5727,22 +5622,22 @@ namespace Bian {
       }
       if (other.curLocation_ != null) {
         if (curLocation_ == null) {
-          CurLocation = new global::Bian.EntityMoveStep();
+          CurLocation = new global::MelandGame3.EntityMoveStep();
         }
         CurLocation.MergeFrom(other.CurLocation);
       }
       if (other.destLocation_ != null) {
         if (destLocation_ == null) {
-          DestLocation = new global::Bian.EntityMoveStep();
+          DestLocation = new global::MelandGame3.EntityMoveStep();
         }
         DestLocation.MergeFrom(other.DestLocation);
       }
-      if (other.Type != global::Bian.MovementType.MovementTypeUnknown) {
+      if (other.Type != global::MelandGame3.MovementType.MovementTypeUnknown) {
         Type = other.Type;
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXYZ();
+          Dir = new global::MelandGame3.VectorXYZ();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -5762,7 +5657,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            EntityType = (global::Bian.EntityType) input.ReadEnum();
+            EntityType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -5771,25 +5666,25 @@ namespace Bian {
           }
           case 26: {
             if (curLocation_ == null) {
-              CurLocation = new global::Bian.EntityMoveStep();
+              CurLocation = new global::MelandGame3.EntityMoveStep();
             }
             input.ReadMessage(CurLocation);
             break;
           }
           case 34: {
             if (destLocation_ == null) {
-              DestLocation = new global::Bian.EntityMoveStep();
+              DestLocation = new global::MelandGame3.EntityMoveStep();
             }
             input.ReadMessage(DestLocation);
             break;
           }
           case 40: {
-            Type = (global::Bian.MovementType) input.ReadEnum();
+            Type = (global::MelandGame3.MovementType) input.ReadEnum();
             break;
           }
           case 50: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXYZ();
+              Dir = new global::MelandGame3.VectorXYZ();
             }
             input.ReadMessage(Dir);
             break;
@@ -5810,7 +5705,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            EntityType = (global::Bian.EntityType) input.ReadEnum();
+            EntityType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -5819,25 +5714,25 @@ namespace Bian {
           }
           case 26: {
             if (curLocation_ == null) {
-              CurLocation = new global::Bian.EntityMoveStep();
+              CurLocation = new global::MelandGame3.EntityMoveStep();
             }
             input.ReadMessage(CurLocation);
             break;
           }
           case 34: {
             if (destLocation_ == null) {
-              DestLocation = new global::Bian.EntityMoveStep();
+              DestLocation = new global::MelandGame3.EntityMoveStep();
             }
             input.ReadMessage(DestLocation);
             break;
           }
           case 40: {
-            Type = (global::Bian.MovementType) input.ReadEnum();
+            Type = (global::MelandGame3.MovementType) input.ReadEnum();
             break;
           }
           case 50: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXYZ();
+              Dir = new global::MelandGame3.VectorXYZ();
             }
             input.ReadMessage(Dir);
             break;
@@ -5863,7 +5758,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[11]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6135,7 +6030,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[12]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6168,10 +6063,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Bian.EntityType type_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType type_ = global::MelandGame3.EntityType.EntityTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType Type {
+    public global::MelandGame3.EntityType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -6214,7 +6109,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::Bian.EntityType.EntityTypeAll) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) hash ^= Type.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6234,7 +6129,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -6252,7 +6147,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -6270,7 +6165,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Id.Length != 0) {
@@ -6288,7 +6183,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Type != global::Bian.EntityType.EntityTypeAll) {
+      if (other.Type != global::MelandGame3.EntityType.EntityTypeAll) {
         Type = other.Type;
       }
       if (other.Id.Length != 0) {
@@ -6310,7 +6205,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::Bian.EntityType) input.ReadEnum();
+            Type = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -6333,7 +6228,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::Bian.EntityType) input.ReadEnum();
+            Type = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -6361,7 +6256,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[13]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6396,10 +6291,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Bian.EntityType type_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType type_ = global::MelandGame3.EntityType.EntityTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType Type {
+    public global::MelandGame3.EntityType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -6468,7 +6363,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::Bian.EntityType.EntityTypeAll) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) hash ^= Type.GetHashCode();
       if (Eid.Length != 0) hash ^= Eid.GetHashCode();
       if (Cid != 0) hash ^= Cid.GetHashCode();
       if (EntityTemplateId.Length != 0) hash ^= EntityTemplateId.GetHashCode();
@@ -6490,7 +6385,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -6516,7 +6411,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -6542,7 +6437,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Eid.Length != 0) {
@@ -6566,7 +6461,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Type != global::Bian.EntityType.EntityTypeAll) {
+      if (other.Type != global::MelandGame3.EntityType.EntityTypeAll) {
         Type = other.Type;
       }
       if (other.Eid.Length != 0) {
@@ -6594,7 +6489,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::Bian.EntityType) input.ReadEnum();
+            Type = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -6625,7 +6520,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::Bian.EntityType) input.ReadEnum();
+            Type = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -6661,7 +6556,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[14]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6732,10 +6627,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Bian.EntityType type_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType type_ = global::MelandGame3.EntityType.EntityTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType Type {
+    public global::MelandGame3.EntityType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -6756,10 +6651,10 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 3;
-    private global::Bian.EntityLocation location_;
+    private global::MelandGame3.EntityLocation location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Location {
+    public global::MelandGame3.EntityLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -6768,13 +6663,13 @@ namespace Bian {
 
     /// <summary>Field number for the "direction" field.</summary>
     public const int DirectionFieldNumber = 4;
-    private global::Bian.VectorXY direction_;
+    private global::MelandGame3.VectorXY direction_;
     /// <summary>
     /// TODO: 1001
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Direction {
+    public global::MelandGame3.VectorXY Direction {
       get { return direction_; }
       set {
         direction_ = value;
@@ -6785,8 +6680,8 @@ namespace Bian {
     public const int MapObjectFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MapObject MapObject {
-      get { return entityCase_ == EntityOneofCase.MapObject ? (global::Bian.MapObject) entity_ : null; }
+    public global::MelandGame3.MapObject MapObject {
+      get { return entityCase_ == EntityOneofCase.MapObject ? (global::MelandGame3.MapObject) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.MapObject;
@@ -6797,8 +6692,8 @@ namespace Bian {
     public const int PlayerFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Player Player {
-      get { return entityCase_ == EntityOneofCase.Player ? (global::Bian.Player) entity_ : null; }
+    public global::MelandGame3.Player Player {
+      get { return entityCase_ == EntityOneofCase.Player ? (global::MelandGame3.Player) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Player;
@@ -6809,8 +6704,8 @@ namespace Bian {
     public const int NpcFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Npc Npc {
-      get { return entityCase_ == EntityOneofCase.Npc ? (global::Bian.Npc) entity_ : null; }
+    public global::MelandGame3.Npc Npc {
+      get { return entityCase_ == EntityOneofCase.Npc ? (global::MelandGame3.Npc) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Npc;
@@ -6821,8 +6716,8 @@ namespace Bian {
     public const int MonsterFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Monster Monster {
-      get { return entityCase_ == EntityOneofCase.Monster ? (global::Bian.Monster) entity_ : null; }
+    public global::MelandGame3.Monster Monster {
+      get { return entityCase_ == EntityOneofCase.Monster ? (global::MelandGame3.Monster) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Monster;
@@ -6833,8 +6728,8 @@ namespace Bian {
     public const int FallingObjectFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.FallingObject FallingObject {
-      get { return entityCase_ == EntityOneofCase.FallingObject ? (global::Bian.FallingObject) entity_ : null; }
+    public global::MelandGame3.FallingObject FallingObject {
+      get { return entityCase_ == EntityOneofCase.FallingObject ? (global::MelandGame3.FallingObject) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.FallingObject;
@@ -6845,8 +6740,8 @@ namespace Bian {
     public const int MaterialFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Material Material {
-      get { return entityCase_ == EntityOneofCase.Material ? (global::Bian.Material) entity_ : null; }
+    public global::MelandGame3.Material Material {
+      get { return entityCase_ == EntityOneofCase.Material ? (global::MelandGame3.Material) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Material;
@@ -6857,8 +6752,8 @@ namespace Bian {
     public const int BotFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Bot Bot {
-      get { return entityCase_ == EntityOneofCase.Bot ? (global::Bian.Bot) entity_ : null; }
+    public global::MelandGame3.Bot Bot {
+      get { return entityCase_ == EntityOneofCase.Bot ? (global::MelandGame3.Bot) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Bot;
@@ -6869,8 +6764,8 @@ namespace Bian {
     public const int FallingBoxFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.FallingBox FallingBox {
-      get { return entityCase_ == EntityOneofCase.FallingBox ? (global::Bian.FallingBox) entity_ : null; }
+    public global::MelandGame3.FallingBox FallingBox {
+      get { return entityCase_ == EntityOneofCase.FallingBox ? (global::MelandGame3.FallingBox) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.FallingBox;
@@ -6881,8 +6776,8 @@ namespace Bian {
     public const int PlantFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Plant Plant {
-      get { return entityCase_ == EntityOneofCase.Plant ? (global::Bian.Plant) entity_ : null; }
+    public global::MelandGame3.Plant Plant {
+      get { return entityCase_ == EntityOneofCase.Plant ? (global::MelandGame3.Plant) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Plant;
@@ -6893,8 +6788,8 @@ namespace Bian {
     public const int PetFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Pet Pet {
-      get { return entityCase_ == EntityOneofCase.Pet ? (global::Bian.Pet) entity_ : null; }
+    public global::MelandGame3.Pet Pet {
+      get { return entityCase_ == EntityOneofCase.Pet ? (global::MelandGame3.Pet) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Pet;
@@ -6905,8 +6800,8 @@ namespace Bian {
     public const int PuppetFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Puppet Puppet {
-      get { return entityCase_ == EntityOneofCase.Puppet ? (global::Bian.Puppet) entity_ : null; }
+    public global::MelandGame3.Puppet Puppet {
+      get { return entityCase_ == EntityOneofCase.Puppet ? (global::MelandGame3.Puppet) entity_ : null; }
       set {
         entity_ = value;
         entityCase_ = value == null ? EntityOneofCase.None : EntityOneofCase.Puppet;
@@ -6981,7 +6876,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::Bian.EntityType.EntityTypeAll) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) hash ^= Type.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
       if (direction_ != null) hash ^= Direction.GetHashCode();
@@ -7015,7 +6910,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -7085,7 +6980,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -7155,7 +7050,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::Bian.EntityType.EntityTypeAll) {
+      if (Type != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Id.Length != 0) {
@@ -7212,7 +7107,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Type != global::Bian.EntityType.EntityTypeAll) {
+      if (other.Type != global::MelandGame3.EntityType.EntityTypeAll) {
         Type = other.Type;
       }
       if (other.Id.Length != 0) {
@@ -7220,80 +7115,80 @@ namespace Bian {
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.EntityLocation();
+          Location = new global::MelandGame3.EntityLocation();
         }
         Location.MergeFrom(other.Location);
       }
       if (other.direction_ != null) {
         if (direction_ == null) {
-          Direction = new global::Bian.VectorXY();
+          Direction = new global::MelandGame3.VectorXY();
         }
         Direction.MergeFrom(other.Direction);
       }
       switch (other.EntityCase) {
         case EntityOneofCase.MapObject:
           if (MapObject == null) {
-            MapObject = new global::Bian.MapObject();
+            MapObject = new global::MelandGame3.MapObject();
           }
           MapObject.MergeFrom(other.MapObject);
           break;
         case EntityOneofCase.Player:
           if (Player == null) {
-            Player = new global::Bian.Player();
+            Player = new global::MelandGame3.Player();
           }
           Player.MergeFrom(other.Player);
           break;
         case EntityOneofCase.Npc:
           if (Npc == null) {
-            Npc = new global::Bian.Npc();
+            Npc = new global::MelandGame3.Npc();
           }
           Npc.MergeFrom(other.Npc);
           break;
         case EntityOneofCase.Monster:
           if (Monster == null) {
-            Monster = new global::Bian.Monster();
+            Monster = new global::MelandGame3.Monster();
           }
           Monster.MergeFrom(other.Monster);
           break;
         case EntityOneofCase.FallingObject:
           if (FallingObject == null) {
-            FallingObject = new global::Bian.FallingObject();
+            FallingObject = new global::MelandGame3.FallingObject();
           }
           FallingObject.MergeFrom(other.FallingObject);
           break;
         case EntityOneofCase.Material:
           if (Material == null) {
-            Material = new global::Bian.Material();
+            Material = new global::MelandGame3.Material();
           }
           Material.MergeFrom(other.Material);
           break;
         case EntityOneofCase.Bot:
           if (Bot == null) {
-            Bot = new global::Bian.Bot();
+            Bot = new global::MelandGame3.Bot();
           }
           Bot.MergeFrom(other.Bot);
           break;
         case EntityOneofCase.FallingBox:
           if (FallingBox == null) {
-            FallingBox = new global::Bian.FallingBox();
+            FallingBox = new global::MelandGame3.FallingBox();
           }
           FallingBox.MergeFrom(other.FallingBox);
           break;
         case EntityOneofCase.Plant:
           if (Plant == null) {
-            Plant = new global::Bian.Plant();
+            Plant = new global::MelandGame3.Plant();
           }
           Plant.MergeFrom(other.Plant);
           break;
         case EntityOneofCase.Pet:
           if (Pet == null) {
-            Pet = new global::Bian.Pet();
+            Pet = new global::MelandGame3.Pet();
           }
           Pet.MergeFrom(other.Pet);
           break;
         case EntityOneofCase.Puppet:
           if (Puppet == null) {
-            Puppet = new global::Bian.Puppet();
+            Puppet = new global::MelandGame3.Puppet();
           }
           Puppet.MergeFrom(other.Puppet);
           break;
@@ -7315,7 +7210,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::Bian.EntityType) input.ReadEnum();
+            Type = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -7324,20 +7219,20 @@ namespace Bian {
           }
           case 26: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
           }
           case 34: {
             if (direction_ == null) {
-              Direction = new global::Bian.VectorXY();
+              Direction = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Direction);
             break;
           }
           case 42: {
-            global::Bian.MapObject subBuilder = new global::Bian.MapObject();
+            global::MelandGame3.MapObject subBuilder = new global::MelandGame3.MapObject();
             if (entityCase_ == EntityOneofCase.MapObject) {
               subBuilder.MergeFrom(MapObject);
             }
@@ -7346,7 +7241,7 @@ namespace Bian {
             break;
           }
           case 50: {
-            global::Bian.Player subBuilder = new global::Bian.Player();
+            global::MelandGame3.Player subBuilder = new global::MelandGame3.Player();
             if (entityCase_ == EntityOneofCase.Player) {
               subBuilder.MergeFrom(Player);
             }
@@ -7355,7 +7250,7 @@ namespace Bian {
             break;
           }
           case 58: {
-            global::Bian.Npc subBuilder = new global::Bian.Npc();
+            global::MelandGame3.Npc subBuilder = new global::MelandGame3.Npc();
             if (entityCase_ == EntityOneofCase.Npc) {
               subBuilder.MergeFrom(Npc);
             }
@@ -7364,7 +7259,7 @@ namespace Bian {
             break;
           }
           case 66: {
-            global::Bian.Monster subBuilder = new global::Bian.Monster();
+            global::MelandGame3.Monster subBuilder = new global::MelandGame3.Monster();
             if (entityCase_ == EntityOneofCase.Monster) {
               subBuilder.MergeFrom(Monster);
             }
@@ -7373,7 +7268,7 @@ namespace Bian {
             break;
           }
           case 74: {
-            global::Bian.FallingObject subBuilder = new global::Bian.FallingObject();
+            global::MelandGame3.FallingObject subBuilder = new global::MelandGame3.FallingObject();
             if (entityCase_ == EntityOneofCase.FallingObject) {
               subBuilder.MergeFrom(FallingObject);
             }
@@ -7382,7 +7277,7 @@ namespace Bian {
             break;
           }
           case 82: {
-            global::Bian.Material subBuilder = new global::Bian.Material();
+            global::MelandGame3.Material subBuilder = new global::MelandGame3.Material();
             if (entityCase_ == EntityOneofCase.Material) {
               subBuilder.MergeFrom(Material);
             }
@@ -7391,7 +7286,7 @@ namespace Bian {
             break;
           }
           case 90: {
-            global::Bian.Bot subBuilder = new global::Bian.Bot();
+            global::MelandGame3.Bot subBuilder = new global::MelandGame3.Bot();
             if (entityCase_ == EntityOneofCase.Bot) {
               subBuilder.MergeFrom(Bot);
             }
@@ -7400,7 +7295,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.FallingBox subBuilder = new global::Bian.FallingBox();
+            global::MelandGame3.FallingBox subBuilder = new global::MelandGame3.FallingBox();
             if (entityCase_ == EntityOneofCase.FallingBox) {
               subBuilder.MergeFrom(FallingBox);
             }
@@ -7409,7 +7304,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.Plant subBuilder = new global::Bian.Plant();
+            global::MelandGame3.Plant subBuilder = new global::MelandGame3.Plant();
             if (entityCase_ == EntityOneofCase.Plant) {
               subBuilder.MergeFrom(Plant);
             }
@@ -7418,7 +7313,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.Pet subBuilder = new global::Bian.Pet();
+            global::MelandGame3.Pet subBuilder = new global::MelandGame3.Pet();
             if (entityCase_ == EntityOneofCase.Pet) {
               subBuilder.MergeFrom(Pet);
             }
@@ -7427,7 +7322,7 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.Puppet subBuilder = new global::Bian.Puppet();
+            global::MelandGame3.Puppet subBuilder = new global::MelandGame3.Puppet();
             if (entityCase_ == EntityOneofCase.Puppet) {
               subBuilder.MergeFrom(Puppet);
             }
@@ -7451,7 +7346,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::Bian.EntityType) input.ReadEnum();
+            Type = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -7460,20 +7355,20 @@ namespace Bian {
           }
           case 26: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
           }
           case 34: {
             if (direction_ == null) {
-              Direction = new global::Bian.VectorXY();
+              Direction = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Direction);
             break;
           }
           case 42: {
-            global::Bian.MapObject subBuilder = new global::Bian.MapObject();
+            global::MelandGame3.MapObject subBuilder = new global::MelandGame3.MapObject();
             if (entityCase_ == EntityOneofCase.MapObject) {
               subBuilder.MergeFrom(MapObject);
             }
@@ -7482,7 +7377,7 @@ namespace Bian {
             break;
           }
           case 50: {
-            global::Bian.Player subBuilder = new global::Bian.Player();
+            global::MelandGame3.Player subBuilder = new global::MelandGame3.Player();
             if (entityCase_ == EntityOneofCase.Player) {
               subBuilder.MergeFrom(Player);
             }
@@ -7491,7 +7386,7 @@ namespace Bian {
             break;
           }
           case 58: {
-            global::Bian.Npc subBuilder = new global::Bian.Npc();
+            global::MelandGame3.Npc subBuilder = new global::MelandGame3.Npc();
             if (entityCase_ == EntityOneofCase.Npc) {
               subBuilder.MergeFrom(Npc);
             }
@@ -7500,7 +7395,7 @@ namespace Bian {
             break;
           }
           case 66: {
-            global::Bian.Monster subBuilder = new global::Bian.Monster();
+            global::MelandGame3.Monster subBuilder = new global::MelandGame3.Monster();
             if (entityCase_ == EntityOneofCase.Monster) {
               subBuilder.MergeFrom(Monster);
             }
@@ -7509,7 +7404,7 @@ namespace Bian {
             break;
           }
           case 74: {
-            global::Bian.FallingObject subBuilder = new global::Bian.FallingObject();
+            global::MelandGame3.FallingObject subBuilder = new global::MelandGame3.FallingObject();
             if (entityCase_ == EntityOneofCase.FallingObject) {
               subBuilder.MergeFrom(FallingObject);
             }
@@ -7518,7 +7413,7 @@ namespace Bian {
             break;
           }
           case 82: {
-            global::Bian.Material subBuilder = new global::Bian.Material();
+            global::MelandGame3.Material subBuilder = new global::MelandGame3.Material();
             if (entityCase_ == EntityOneofCase.Material) {
               subBuilder.MergeFrom(Material);
             }
@@ -7527,7 +7422,7 @@ namespace Bian {
             break;
           }
           case 90: {
-            global::Bian.Bot subBuilder = new global::Bian.Bot();
+            global::MelandGame3.Bot subBuilder = new global::MelandGame3.Bot();
             if (entityCase_ == EntityOneofCase.Bot) {
               subBuilder.MergeFrom(Bot);
             }
@@ -7536,7 +7431,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.FallingBox subBuilder = new global::Bian.FallingBox();
+            global::MelandGame3.FallingBox subBuilder = new global::MelandGame3.FallingBox();
             if (entityCase_ == EntityOneofCase.FallingBox) {
               subBuilder.MergeFrom(FallingBox);
             }
@@ -7545,7 +7440,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.Plant subBuilder = new global::Bian.Plant();
+            global::MelandGame3.Plant subBuilder = new global::MelandGame3.Plant();
             if (entityCase_ == EntityOneofCase.Plant) {
               subBuilder.MergeFrom(Plant);
             }
@@ -7554,7 +7449,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.Pet subBuilder = new global::Bian.Pet();
+            global::MelandGame3.Pet subBuilder = new global::MelandGame3.Pet();
             if (entityCase_ == EntityOneofCase.Pet) {
               subBuilder.MergeFrom(Pet);
             }
@@ -7563,7 +7458,7 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.Puppet subBuilder = new global::Bian.Puppet();
+            global::MelandGame3.Puppet subBuilder = new global::MelandGame3.Puppet();
             if (entityCase_ == EntityOneofCase.Puppet) {
               subBuilder.MergeFrom(Puppet);
             }
@@ -7592,7 +7487,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[15]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7640,13 +7535,13 @@ namespace Bian {
 
     /// <summary>Field number for the "nft_type" field.</summary>
     public const int NftTypeFieldNumber = 2;
-    private global::Bian.ItemType nftType_ = global::Bian.ItemType.ItemTypeGame;
+    private global::MelandGame3.ItemType nftType_ = global::MelandGame3.ItemType.ItemTypeGame;
     /// <summary>
     /// 放置类NFT || 第三方nft
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ItemType NftType {
+    public global::MelandGame3.ItemType NftType {
       get { return nftType_; }
       set {
         nftType_ = value;
@@ -7655,13 +7550,13 @@ namespace Bian {
 
     /// <summary>Field number for the "placeable_info" field.</summary>
     public const int PlaceableInfoFieldNumber = 3;
-    private global::Bian.NftPlaceableInfo placeableInfo_;
+    private global::MelandGame3.NftPlaceableInfo placeableInfo_;
     /// <summary>
     /// 放置类 nft 信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.NftPlaceableInfo PlaceableInfo {
+    public global::MelandGame3.NftPlaceableInfo PlaceableInfo {
       get { return placeableInfo_; }
       set {
         placeableInfo_ = value;
@@ -7685,13 +7580,13 @@ namespace Bian {
 
     /// <summary>Field number for the "third_nft_info" field.</summary>
     public const int ThirdNftInfoFieldNumber = 5;
-    private global::Bian.NftThirdNftInfo thirdNftInfo_;
+    private global::MelandGame3.NftThirdNftInfo thirdNftInfo_;
     /// <summary>
     /// 第三方 nft 信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.NftThirdNftInfo ThirdNftInfo {
+    public global::MelandGame3.NftThirdNftInfo ThirdNftInfo {
       get { return thirdNftInfo_; }
       set {
         thirdNftInfo_ = value;
@@ -7726,7 +7621,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (NftId.Length != 0) hash ^= NftId.GetHashCode();
-      if (NftType != global::Bian.ItemType.ItemTypeGame) hash ^= NftType.GetHashCode();
+      if (NftType != global::MelandGame3.ItemType.ItemTypeGame) hash ^= NftType.GetHashCode();
       if (placeableInfo_ != null) hash ^= PlaceableInfo.GetHashCode();
       if (ThirdPictureFrameUrl.Length != 0) hash ^= ThirdPictureFrameUrl.GetHashCode();
       if (thirdNftInfo_ != null) hash ^= ThirdNftInfo.GetHashCode();
@@ -7752,7 +7647,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(NftId);
       }
-      if (NftType != global::Bian.ItemType.ItemTypeGame) {
+      if (NftType != global::MelandGame3.ItemType.ItemTypeGame) {
         output.WriteRawTag(16);
         output.WriteEnum((int) NftType);
       }
@@ -7782,7 +7677,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(NftId);
       }
-      if (NftType != global::Bian.ItemType.ItemTypeGame) {
+      if (NftType != global::MelandGame3.ItemType.ItemTypeGame) {
         output.WriteRawTag(16);
         output.WriteEnum((int) NftType);
       }
@@ -7811,7 +7706,7 @@ namespace Bian {
       if (NftId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NftId);
       }
-      if (NftType != global::Bian.ItemType.ItemTypeGame) {
+      if (NftType != global::MelandGame3.ItemType.ItemTypeGame) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NftType);
       }
       if (placeableInfo_ != null) {
@@ -7838,12 +7733,12 @@ namespace Bian {
       if (other.NftId.Length != 0) {
         NftId = other.NftId;
       }
-      if (other.NftType != global::Bian.ItemType.ItemTypeGame) {
+      if (other.NftType != global::MelandGame3.ItemType.ItemTypeGame) {
         NftType = other.NftType;
       }
       if (other.placeableInfo_ != null) {
         if (placeableInfo_ == null) {
-          PlaceableInfo = new global::Bian.NftPlaceableInfo();
+          PlaceableInfo = new global::MelandGame3.NftPlaceableInfo();
         }
         PlaceableInfo.MergeFrom(other.PlaceableInfo);
       }
@@ -7852,7 +7747,7 @@ namespace Bian {
       }
       if (other.thirdNftInfo_ != null) {
         if (thirdNftInfo_ == null) {
-          ThirdNftInfo = new global::Bian.NftThirdNftInfo();
+          ThirdNftInfo = new global::MelandGame3.NftThirdNftInfo();
         }
         ThirdNftInfo.MergeFrom(other.ThirdNftInfo);
       }
@@ -7876,12 +7771,12 @@ namespace Bian {
             break;
           }
           case 16: {
-            NftType = (global::Bian.ItemType) input.ReadEnum();
+            NftType = (global::MelandGame3.ItemType) input.ReadEnum();
             break;
           }
           case 26: {
             if (placeableInfo_ == null) {
-              PlaceableInfo = new global::Bian.NftPlaceableInfo();
+              PlaceableInfo = new global::MelandGame3.NftPlaceableInfo();
             }
             input.ReadMessage(PlaceableInfo);
             break;
@@ -7892,7 +7787,7 @@ namespace Bian {
           }
           case 42: {
             if (thirdNftInfo_ == null) {
-              ThirdNftInfo = new global::Bian.NftThirdNftInfo();
+              ThirdNftInfo = new global::MelandGame3.NftThirdNftInfo();
             }
             input.ReadMessage(ThirdNftInfo);
             break;
@@ -7917,12 +7812,12 @@ namespace Bian {
             break;
           }
           case 16: {
-            NftType = (global::Bian.ItemType) input.ReadEnum();
+            NftType = (global::MelandGame3.ItemType) input.ReadEnum();
             break;
           }
           case 26: {
             if (placeableInfo_ == null) {
-              PlaceableInfo = new global::Bian.NftPlaceableInfo();
+              PlaceableInfo = new global::MelandGame3.NftPlaceableInfo();
             }
             input.ReadMessage(PlaceableInfo);
             break;
@@ -7933,7 +7828,7 @@ namespace Bian {
           }
           case 42: {
             if (thirdNftInfo_ == null) {
-              ThirdNftInfo = new global::Bian.NftThirdNftInfo();
+              ThirdNftInfo = new global::MelandGame3.NftThirdNftInfo();
             }
             input.ReadMessage(ThirdNftInfo);
             break;
@@ -7959,7 +7854,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[16]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8098,10 +7993,10 @@ namespace Bian {
 
     /// <summary>Field number for the "feature" field.</summary>
     public const int FeatureFieldNumber = 7;
-    private global::Bian.PlayerFeature feature_;
+    private global::MelandGame3.PlayerFeature feature_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PlayerFeature Feature {
+    public global::MelandGame3.PlayerFeature Feature {
       get { return feature_; }
       set {
         feature_ = value;
@@ -8122,13 +8017,13 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 9;
-    private global::Bian.EntityProfile profile_;
+    private global::MelandGame3.EntityProfile profile_;
     /// <summary>
     /// 玩家属性
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile Profile {
+    public global::MelandGame3.EntityProfile Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -8137,27 +8032,27 @@ namespace Bian {
 
     /// <summary>Field number for the "avatars" field.</summary>
     public const int AvatarsFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Bian.PlayerAvatar> _repeated_avatars_codec
-        = pb::FieldCodec.ForMessage(82, global::Bian.PlayerAvatar.Parser);
-    private readonly pbc::RepeatedField<global::Bian.PlayerAvatar> avatars_ = new pbc::RepeatedField<global::Bian.PlayerAvatar>();
+    private static readonly pb::FieldCodec<global::MelandGame3.PlayerAvatar> _repeated_avatars_codec
+        = pb::FieldCodec.ForMessage(82, global::MelandGame3.PlayerAvatar.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.PlayerAvatar> avatars_ = new pbc::RepeatedField<global::MelandGame3.PlayerAvatar>();
     /// <summary>
     /// 玩家 avatar
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.PlayerAvatar> Avatars {
+    public pbc::RepeatedField<global::MelandGame3.PlayerAvatar> Avatars {
       get { return avatars_; }
     }
 
     /// <summary>Field number for the "workbench" field.</summary>
     public const int WorkbenchFieldNumber = 11;
-    private global::Bian.Workbench workbench_;
+    private global::MelandGame3.Workbench workbench_;
     /// <summary>
     ///工作台数据(简略)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Workbench Workbench {
+    public global::MelandGame3.Workbench Workbench {
       get { return workbench_; }
       set {
         workbench_ = value;
@@ -8229,13 +8124,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 17;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -8259,13 +8154,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 20;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -8378,12 +8273,12 @@ namespace Bian {
 
     /// <summary>Field number for the "buff_list" field.</summary>
     public const int BuffListFieldNumber = 28;
-    private static readonly pb::FieldCodec<global::Bian.EntityBuff> _repeated_buffList_codec
-        = pb::FieldCodec.ForMessage(226, global::Bian.EntityBuff.Parser);
-    private readonly pbc::RepeatedField<global::Bian.EntityBuff> buffList_ = new pbc::RepeatedField<global::Bian.EntityBuff>();
+    private static readonly pb::FieldCodec<global::MelandGame3.EntityBuff> _repeated_buffList_codec
+        = pb::FieldCodec.ForMessage(226, global::MelandGame3.EntityBuff.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.EntityBuff> buffList_ = new pbc::RepeatedField<global::MelandGame3.EntityBuff>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.EntityBuff> BuffList {
+    public pbc::RepeatedField<global::MelandGame3.EntityBuff> BuffList {
       get { return buffList_; }
     }
 
@@ -8806,7 +8701,7 @@ namespace Bian {
       }
       if (other.feature_ != null) {
         if (feature_ == null) {
-          Feature = new global::Bian.PlayerFeature();
+          Feature = new global::MelandGame3.PlayerFeature();
         }
         Feature.MergeFrom(other.Feature);
       }
@@ -8815,14 +8710,14 @@ namespace Bian {
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.EntityProfile();
+          Profile = new global::MelandGame3.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
       avatars_.Add(other.avatars_);
       if (other.workbench_ != null) {
         if (workbench_ == null) {
-          Workbench = new global::Bian.Workbench();
+          Workbench = new global::MelandGame3.Workbench();
         }
         Workbench.MergeFrom(other.Workbench);
       }
@@ -8843,7 +8738,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -8852,7 +8747,7 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
@@ -8917,7 +8812,7 @@ namespace Bian {
           }
           case 58: {
             if (feature_ == null) {
-              Feature = new global::Bian.PlayerFeature();
+              Feature = new global::MelandGame3.PlayerFeature();
             }
             input.ReadMessage(Feature);
             break;
@@ -8928,7 +8823,7 @@ namespace Bian {
           }
           case 74: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
@@ -8939,7 +8834,7 @@ namespace Bian {
           }
           case 90: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -8966,7 +8861,7 @@ namespace Bian {
           }
           case 138: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -8977,7 +8872,7 @@ namespace Bian {
           }
           case 162: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -9055,7 +8950,7 @@ namespace Bian {
           }
           case 58: {
             if (feature_ == null) {
-              Feature = new global::Bian.PlayerFeature();
+              Feature = new global::MelandGame3.PlayerFeature();
             }
             input.ReadMessage(Feature);
             break;
@@ -9066,7 +8961,7 @@ namespace Bian {
           }
           case 74: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
@@ -9077,7 +8972,7 @@ namespace Bian {
           }
           case 90: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -9104,7 +8999,7 @@ namespace Bian {
           }
           case 138: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -9115,7 +9010,7 @@ namespace Bian {
           }
           case 162: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -9176,7 +9071,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[17]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9255,10 +9150,10 @@ namespace Bian {
 
     /// <summary>Field number for the "loc" field.</summary>
     public const int LocFieldNumber = 2;
-    private global::Bian.EntityLocation loc_;
+    private global::MelandGame3.EntityLocation loc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Loc {
+    public global::MelandGame3.EntityLocation Loc {
       get { return loc_; }
       set {
         loc_ = value;
@@ -9294,13 +9189,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 5;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -9309,7 +9204,7 @@ namespace Bian {
 
     /// <summary>Field number for the "code_status" field.</summary>
     public const int CodeStatusFieldNumber = 7;
-    private global::Bian.EntityCodeStatus codeStatus_ = global::Bian.EntityCodeStatus.EntityCodeStatusUnknow;
+    private global::MelandGame3.EntityCodeStatus codeStatus_ = global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow;
     /// <summary>
     /// 当前状态
     ///int32 state_id = 6;
@@ -9317,7 +9212,7 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityCodeStatus CodeStatus {
+    public global::MelandGame3.EntityCodeStatus CodeStatus {
       get { return codeStatus_; }
       set {
         codeStatus_ = value;
@@ -9326,13 +9221,13 @@ namespace Bian {
 
     /// <summary>Field number for the "workbench" field.</summary>
     public const int WorkbenchFieldNumber = 8;
-    private global::Bian.Workbench workbench_;
+    private global::MelandGame3.Workbench workbench_;
     /// <summary>
     ///工作台数据(简略)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Workbench Workbench {
+    public global::MelandGame3.Workbench Workbench {
       get { return workbench_; }
       set {
         workbench_ = value;
@@ -9356,13 +9251,13 @@ namespace Bian {
 
     /// <summary>Field number for the "run_attribute" field.</summary>
     public const int RunAttributeFieldNumber = 10;
-    private global::Bian.EntityAttribute runAttribute_;
+    private global::MelandGame3.EntityAttribute runAttribute_;
     /// <summary>
     ///控件属性
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAttribute RunAttribute {
+    public global::MelandGame3.EntityAttribute RunAttribute {
       get { return runAttribute_; }
       set {
         runAttribute_ = value;
@@ -9386,13 +9281,13 @@ namespace Bian {
 
     /// <summary>Field number for the "e_type" field.</summary>
     public const int ETypeFieldNumber = 12;
-    private global::Bian.EntityType eType_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType eType_ = global::MelandGame3.EntityType.EntityTypeAll;
     /// <summary>
     /// 类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType EType {
+    public global::MelandGame3.EntityType EType {
       get { return eType_; }
       set {
         eType_ = value;
@@ -9482,13 +9377,13 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble" field.</summary>
     public const int BubbleFieldNumber = 21;
-    private global::Bian.EntitySceneEffect bubble_;
+    private global::MelandGame3.EntitySceneEffect bubble_;
     /// <summary>
     /// 泡泡
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntitySceneEffect Bubble {
+    public global::MelandGame3.EntitySceneEffect Bubble {
       get { return bubble_; }
       set {
         bubble_ = value;
@@ -9536,13 +9431,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 25;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     /// 引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -9551,13 +9446,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_template" field.</summary>
     public const int EntityTemplateFieldNumber = 26;
-    private global::Bian.EntityTemplate entityTemplate_;
+    private global::MelandGame3.EntityTemplate entityTemplate_;
     /// <summary>
     /// 实体模板数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTemplate EntityTemplate {
+    public global::MelandGame3.EntityTemplate EntityTemplate {
       get { return entityTemplate_; }
       set {
         entityTemplate_ = value;
@@ -9596,13 +9491,13 @@ namespace Bian {
 
     /// <summary>Field number for the "anims" field.</summary>
     public const int AnimsFieldNumber = 30;
-    private global::Bian.EntityAnimations anims_;
+    private global::MelandGame3.EntityAnimations anims_;
     /// <summary>
     /// 实体动画信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAnimations Anims {
+    public global::MelandGame3.EntityAnimations Anims {
       get { return anims_; }
       set {
         anims_ = value;
@@ -9623,10 +9518,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 32;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -9635,10 +9530,10 @@ namespace Bian {
 
     /// <summary>Field number for the "from_father" field.</summary>
     public const int FromFatherFieldNumber = 33;
-    private global::Bian.EntityId fromFather_;
+    private global::MelandGame3.EntityId fromFather_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId FromFather {
+    public global::MelandGame3.EntityId FromFather {
       get { return fromFather_; }
       set {
         fromFather_ = value;
@@ -9662,13 +9557,13 @@ namespace Bian {
 
     /// <summary>Field number for the "audios" field.</summary>
     public const int AudiosFieldNumber = 35;
-    private global::Bian.EntityAudios audios_;
+    private global::MelandGame3.EntityAudios audios_;
     /// <summary>
     /// 实体音频信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAudios Audios {
+    public global::MelandGame3.EntityAudios Audios {
       get { return audios_; }
       set {
         audios_ = value;
@@ -9677,24 +9572,24 @@ namespace Bian {
 
     /// <summary>Field number for the "operate_bubbles" field.</summary>
     public const int OperateBubblesFieldNumber = 36;
-    private static readonly pb::FieldCodec<global::Bian.OperateBubbleData> _repeated_operateBubbles_codec
-        = pb::FieldCodec.ForMessage(290, global::Bian.OperateBubbleData.Parser);
-    private readonly pbc::RepeatedField<global::Bian.OperateBubbleData> operateBubbles_ = new pbc::RepeatedField<global::Bian.OperateBubbleData>();
+    private static readonly pb::FieldCodec<global::MelandGame3.OperateBubbleData> _repeated_operateBubbles_codec
+        = pb::FieldCodec.ForMessage(290, global::MelandGame3.OperateBubbleData.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.OperateBubbleData> operateBubbles_ = new pbc::RepeatedField<global::MelandGame3.OperateBubbleData>();
     /// <summary>
     /// 气泡数据LIST
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.OperateBubbleData> OperateBubbles {
+    public pbc::RepeatedField<global::MelandGame3.OperateBubbleData> OperateBubbles {
       get { return operateBubbles_; }
     }
 
     /// <summary>Field number for the "carry_entity" field.</summary>
     public const int CarryEntityFieldNumber = 37;
-    private global::Bian.CarryEntityBaseData carryEntity_;
+    private global::MelandGame3.CarryEntityBaseData carryEntity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CarryEntityBaseData CarryEntity {
+    public global::MelandGame3.CarryEntityBaseData CarryEntity {
       get { return carryEntity_; }
       set {
         carryEntity_ = value;
@@ -9703,27 +9598,27 @@ namespace Bian {
 
     /// <summary>Field number for the "force_dir" field.</summary>
     public const int ForceDirFieldNumber = 38;
-    private static readonly pb::FieldCodec<global::Bian.VectorXY> _repeated_forceDir_codec
-        = pb::FieldCodec.ForMessage(306, global::Bian.VectorXY.Parser);
-    private readonly pbc::RepeatedField<global::Bian.VectorXY> forceDir_ = new pbc::RepeatedField<global::Bian.VectorXY>();
+    private static readonly pb::FieldCodec<global::MelandGame3.VectorXY> _repeated_forceDir_codec
+        = pb::FieldCodec.ForMessage(306, global::MelandGame3.VectorXY.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.VectorXY> forceDir_ = new pbc::RepeatedField<global::MelandGame3.VectorXY>();
     /// <summary>
     /// 场景作用力方向
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.VectorXY> ForceDir {
+    public pbc::RepeatedField<global::MelandGame3.VectorXY> ForceDir {
       get { return forceDir_; }
     }
 
     /// <summary>Field number for the "nft_info" field.</summary>
     public const int NftInfoFieldNumber = 39;
-    private global::Bian.EntityNftInfo nftInfo_;
+    private global::MelandGame3.EntityNftInfo nftInfo_;
     /// <summary>
     /// nft 道具信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityNftInfo NftInfo {
+    public global::MelandGame3.EntityNftInfo NftInfo {
       get { return nftInfo_; }
       set {
         nftInfo_ = value;
@@ -9732,13 +9627,13 @@ namespace Bian {
 
     /// <summary>Field number for the "map_template" field.</summary>
     public const int MapTemplateFieldNumber = 40;
-    private global::Bian.EntityMapTemplate mapTemplate_;
+    private global::MelandGame3.EntityMapTemplate mapTemplate_;
     /// <summary>
     /// 关联的游玩地图(大世界使用)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityMapTemplate MapTemplate {
+    public global::MelandGame3.EntityMapTemplate MapTemplate {
       get { return mapTemplate_; }
       set {
         mapTemplate_ = value;
@@ -9808,12 +9703,12 @@ namespace Bian {
       if (Cid != 0) hash ^= Cid.GetHashCode();
       if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (dir_ != null) hash ^= Dir.GetHashCode();
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) hash ^= CodeStatus.GetHashCode();
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) hash ^= CodeStatus.GetHashCode();
       if (workbench_ != null) hash ^= Workbench.GetHashCode();
       if (RefreshTime != 0L) hash ^= RefreshTime.GetHashCode();
       if (runAttribute_ != null) hash ^= RunAttribute.GetHashCode();
       if (Fuel != 0) hash ^= Fuel.GetHashCode();
-      if (EType != global::Bian.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
       if (Mirror != false) hash ^= Mirror.GetHashCode();
       if (KeyFrame != 0) hash ^= KeyFrame.GetHashCode();
       if (IsStampede != false) hash ^= IsStampede.GetHashCode();
@@ -9830,7 +9725,7 @@ namespace Bian {
       if (IsHide != false) hash ^= IsHide.GetHashCode();
       if (anims_ != null) hash ^= Anims.GetHashCode();
       if (CurPlayAnim != 0) hash ^= CurPlayAnim.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
       if (fromFather_ != null) hash ^= FromFather.GetHashCode();
       if (SceneEffect != 0) hash ^= SceneEffect.GetHashCode();
       if (audios_ != null) hash ^= Audios.GetHashCode();
@@ -9877,7 +9772,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteMessage(Dir);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         output.WriteRawTag(56);
         output.WriteEnum((int) CodeStatus);
       }
@@ -9897,7 +9792,7 @@ namespace Bian {
         output.WriteRawTag(88);
         output.WriteInt32(Fuel);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(96);
         output.WriteEnum((int) EType);
       }
@@ -9965,7 +9860,7 @@ namespace Bian {
         output.WriteRawTag(248, 1);
         output.WriteInt32(CurPlayAnim);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(128, 2);
         output.WriteEnum((int) LockType);
       }
@@ -10025,7 +9920,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteMessage(Dir);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         output.WriteRawTag(56);
         output.WriteEnum((int) CodeStatus);
       }
@@ -10045,7 +9940,7 @@ namespace Bian {
         output.WriteRawTag(88);
         output.WriteInt32(Fuel);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(96);
         output.WriteEnum((int) EType);
       }
@@ -10113,7 +10008,7 @@ namespace Bian {
         output.WriteRawTag(248, 1);
         output.WriteInt32(CurPlayAnim);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(128, 2);
         output.WriteEnum((int) LockType);
       }
@@ -10168,7 +10063,7 @@ namespace Bian {
       if (dir_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Dir);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CodeStatus);
       }
       if (workbench_ != null) {
@@ -10183,7 +10078,7 @@ namespace Bian {
       if (Fuel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Fuel);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EType);
       }
       if (Mirror != false) {
@@ -10234,7 +10129,7 @@ namespace Bian {
       if (CurPlayAnim != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(CurPlayAnim);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
       if (fromFather_ != null) {
@@ -10274,7 +10169,7 @@ namespace Bian {
       }
       if (other.loc_ != null) {
         if (loc_ == null) {
-          Loc = new global::Bian.EntityLocation();
+          Loc = new global::MelandGame3.EntityLocation();
         }
         Loc.MergeFrom(other.Loc);
       }
@@ -10286,16 +10181,16 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
-      if (other.CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (other.CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         CodeStatus = other.CodeStatus;
       }
       if (other.workbench_ != null) {
         if (workbench_ == null) {
-          Workbench = new global::Bian.Workbench();
+          Workbench = new global::MelandGame3.Workbench();
         }
         Workbench.MergeFrom(other.Workbench);
       }
@@ -10304,14 +10199,14 @@ namespace Bian {
       }
       if (other.runAttribute_ != null) {
         if (runAttribute_ == null) {
-          RunAttribute = new global::Bian.EntityAttribute();
+          RunAttribute = new global::MelandGame3.EntityAttribute();
         }
         RunAttribute.MergeFrom(other.RunAttribute);
       }
       if (other.Fuel != 0) {
         Fuel = other.Fuel;
       }
-      if (other.EType != global::Bian.EntityType.EntityTypeAll) {
+      if (other.EType != global::MelandGame3.EntityType.EntityTypeAll) {
         EType = other.EType;
       }
       if (other.Mirror != false) {
@@ -10334,7 +10229,7 @@ namespace Bian {
       }
       if (other.bubble_ != null) {
         if (bubble_ == null) {
-          Bubble = new global::Bian.EntitySceneEffect();
+          Bubble = new global::MelandGame3.EntitySceneEffect();
         }
         Bubble.MergeFrom(other.Bubble);
       }
@@ -10349,13 +10244,13 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
       if (other.entityTemplate_ != null) {
         if (entityTemplate_ == null) {
-          EntityTemplate = new global::Bian.EntityTemplate();
+          EntityTemplate = new global::MelandGame3.EntityTemplate();
         }
         EntityTemplate.MergeFrom(other.EntityTemplate);
       }
@@ -10367,19 +10262,19 @@ namespace Bian {
       }
       if (other.anims_ != null) {
         if (anims_ == null) {
-          Anims = new global::Bian.EntityAnimations();
+          Anims = new global::MelandGame3.EntityAnimations();
         }
         Anims.MergeFrom(other.Anims);
       }
       if (other.CurPlayAnim != 0) {
         CurPlayAnim = other.CurPlayAnim;
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
       if (other.fromFather_ != null) {
         if (fromFather_ == null) {
-          FromFather = new global::Bian.EntityId();
+          FromFather = new global::MelandGame3.EntityId();
         }
         FromFather.MergeFrom(other.FromFather);
       }
@@ -10388,27 +10283,27 @@ namespace Bian {
       }
       if (other.audios_ != null) {
         if (audios_ == null) {
-          Audios = new global::Bian.EntityAudios();
+          Audios = new global::MelandGame3.EntityAudios();
         }
         Audios.MergeFrom(other.Audios);
       }
       operateBubbles_.Add(other.operateBubbles_);
       if (other.carryEntity_ != null) {
         if (carryEntity_ == null) {
-          CarryEntity = new global::Bian.CarryEntityBaseData();
+          CarryEntity = new global::MelandGame3.CarryEntityBaseData();
         }
         CarryEntity.MergeFrom(other.CarryEntity);
       }
       forceDir_.Add(other.forceDir_);
       if (other.nftInfo_ != null) {
         if (nftInfo_ == null) {
-          NftInfo = new global::Bian.EntityNftInfo();
+          NftInfo = new global::MelandGame3.EntityNftInfo();
         }
         NftInfo.MergeFrom(other.NftInfo);
       }
       if (other.mapTemplate_ != null) {
         if (mapTemplate_ == null) {
-          MapTemplate = new global::Bian.EntityMapTemplate();
+          MapTemplate = new global::MelandGame3.EntityMapTemplate();
         }
         MapTemplate.MergeFrom(other.MapTemplate);
       }
@@ -10433,7 +10328,7 @@ namespace Bian {
           }
           case 18: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -10448,18 +10343,18 @@ namespace Bian {
           }
           case 42: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
           }
           case 56: {
-            CodeStatus = (global::Bian.EntityCodeStatus) input.ReadEnum();
+            CodeStatus = (global::MelandGame3.EntityCodeStatus) input.ReadEnum();
             break;
           }
           case 66: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -10470,7 +10365,7 @@ namespace Bian {
           }
           case 82: {
             if (runAttribute_ == null) {
-              RunAttribute = new global::Bian.EntityAttribute();
+              RunAttribute = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(RunAttribute);
             break;
@@ -10480,7 +10375,7 @@ namespace Bian {
             break;
           }
           case 96: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 104: {
@@ -10509,7 +10404,7 @@ namespace Bian {
           }
           case 170: {
             if (bubble_ == null) {
-              Bubble = new global::Bian.EntitySceneEffect();
+              Bubble = new global::MelandGame3.EntitySceneEffect();
             }
             input.ReadMessage(Bubble);
             break;
@@ -10528,14 +10423,14 @@ namespace Bian {
           }
           case 202: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 210: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -10550,7 +10445,7 @@ namespace Bian {
           }
           case 242: {
             if (anims_ == null) {
-              Anims = new global::Bian.EntityAnimations();
+              Anims = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
@@ -10560,12 +10455,12 @@ namespace Bian {
             break;
           }
           case 256: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 266: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -10576,7 +10471,7 @@ namespace Bian {
           }
           case 282: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
@@ -10587,7 +10482,7 @@ namespace Bian {
           }
           case 298: {
             if (carryEntity_ == null) {
-              CarryEntity = new global::Bian.CarryEntityBaseData();
+              CarryEntity = new global::MelandGame3.CarryEntityBaseData();
             }
             input.ReadMessage(CarryEntity);
             break;
@@ -10598,14 +10493,14 @@ namespace Bian {
           }
           case 314: {
             if (nftInfo_ == null) {
-              NftInfo = new global::Bian.EntityNftInfo();
+              NftInfo = new global::MelandGame3.EntityNftInfo();
             }
             input.ReadMessage(NftInfo);
             break;
           }
           case 322: {
             if (mapTemplate_ == null) {
-              MapTemplate = new global::Bian.EntityMapTemplate();
+              MapTemplate = new global::MelandGame3.EntityMapTemplate();
             }
             input.ReadMessage(MapTemplate);
             break;
@@ -10631,7 +10526,7 @@ namespace Bian {
           }
           case 18: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -10646,18 +10541,18 @@ namespace Bian {
           }
           case 42: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
           }
           case 56: {
-            CodeStatus = (global::Bian.EntityCodeStatus) input.ReadEnum();
+            CodeStatus = (global::MelandGame3.EntityCodeStatus) input.ReadEnum();
             break;
           }
           case 66: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -10668,7 +10563,7 @@ namespace Bian {
           }
           case 82: {
             if (runAttribute_ == null) {
-              RunAttribute = new global::Bian.EntityAttribute();
+              RunAttribute = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(RunAttribute);
             break;
@@ -10678,7 +10573,7 @@ namespace Bian {
             break;
           }
           case 96: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 104: {
@@ -10707,7 +10602,7 @@ namespace Bian {
           }
           case 170: {
             if (bubble_ == null) {
-              Bubble = new global::Bian.EntitySceneEffect();
+              Bubble = new global::MelandGame3.EntitySceneEffect();
             }
             input.ReadMessage(Bubble);
             break;
@@ -10726,14 +10621,14 @@ namespace Bian {
           }
           case 202: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 210: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -10748,7 +10643,7 @@ namespace Bian {
           }
           case 242: {
             if (anims_ == null) {
-              Anims = new global::Bian.EntityAnimations();
+              Anims = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
@@ -10758,12 +10653,12 @@ namespace Bian {
             break;
           }
           case 256: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 266: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -10774,7 +10669,7 @@ namespace Bian {
           }
           case 282: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
@@ -10785,7 +10680,7 @@ namespace Bian {
           }
           case 298: {
             if (carryEntity_ == null) {
-              CarryEntity = new global::Bian.CarryEntityBaseData();
+              CarryEntity = new global::MelandGame3.CarryEntityBaseData();
             }
             input.ReadMessage(CarryEntity);
             break;
@@ -10796,14 +10691,14 @@ namespace Bian {
           }
           case 314: {
             if (nftInfo_ == null) {
-              NftInfo = new global::Bian.EntityNftInfo();
+              NftInfo = new global::MelandGame3.EntityNftInfo();
             }
             input.ReadMessage(NftInfo);
             break;
           }
           case 322: {
             if (mapTemplate_ == null) {
-              MapTemplate = new global::Bian.EntityMapTemplate();
+              MapTemplate = new global::MelandGame3.EntityMapTemplate();
             }
             input.ReadMessage(MapTemplate);
             break;
@@ -10832,7 +10727,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[18]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10944,13 +10839,13 @@ namespace Bian {
 
     /// <summary>Field number for the "e_type" field.</summary>
     public const int ETypeFieldNumber = 5;
-    private global::Bian.EntityType eType_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType eType_ = global::MelandGame3.EntityType.EntityTypeAll;
     /// <summary>
     /// 类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType EType {
+    public global::MelandGame3.EntityType EType {
       get { return eType_; }
       set {
         eType_ = value;
@@ -10959,10 +10854,10 @@ namespace Bian {
 
     /// <summary>Field number for the "enemy_type" field.</summary>
     public const int EnemyTypeFieldNumber = 6;
-    private global::Bian.EnemyType enemyType_ = global::Bian.EnemyType.EnemyTypeUnattackable;
+    private global::MelandGame3.EnemyType enemyType_ = global::MelandGame3.EnemyType.EnemyTypeUnattackable;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EnemyType EnemyType {
+    public global::MelandGame3.EnemyType EnemyType {
       get { return enemyType_; }
       set {
         enemyType_ = value;
@@ -10971,13 +10866,13 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 7;
-    private global::Bian.EntityProfile profile_;
+    private global::MelandGame3.EntityProfile profile_;
     /// <summary>
     /// 资源数值 (hp_limit)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile Profile {
+    public global::MelandGame3.EntityProfile Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -10986,10 +10881,10 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 8;
-    private global::Bian.EntityLocation location_;
+    private global::MelandGame3.EntityLocation location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Location {
+    public global::MelandGame3.EntityLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -10998,13 +10893,13 @@ namespace Bian {
 
     /// <summary>Field number for the "workbench" field.</summary>
     public const int WorkbenchFieldNumber = 9;
-    private global::Bian.Workbench workbench_;
+    private global::MelandGame3.Workbench workbench_;
     /// <summary>
     /// 工作台数据(简略)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Workbench Workbench {
+    public global::MelandGame3.Workbench Workbench {
       get { return workbench_; }
       set {
         workbench_ = value;
@@ -11043,13 +10938,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 12;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -11094,13 +10989,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 17;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -11124,13 +11019,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_template" field.</summary>
     public const int EntityTemplateFieldNumber = 21;
-    private global::Bian.EntityTemplate entityTemplate_;
+    private global::MelandGame3.EntityTemplate entityTemplate_;
     /// <summary>
     /// 实体模板数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTemplate EntityTemplate {
+    public global::MelandGame3.EntityTemplate EntityTemplate {
       get { return entityTemplate_; }
       set {
         entityTemplate_ = value;
@@ -11154,10 +11049,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 23;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -11166,10 +11061,10 @@ namespace Bian {
 
     /// <summary>Field number for the "from_father" field.</summary>
     public const int FromFatherFieldNumber = 24;
-    private global::Bian.EntityId fromFather_;
+    private global::MelandGame3.EntityId fromFather_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId FromFather {
+    public global::MelandGame3.EntityId FromFather {
       get { return fromFather_; }
       set {
         fromFather_ = value;
@@ -11223,8 +11118,8 @@ namespace Bian {
       if (Cid != 0) hash ^= Cid.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (EType != global::Bian.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) hash ^= EnemyType.GetHashCode();
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) hash ^= EnemyType.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
       if (workbench_ != null) hash ^= Workbench.GetHashCode();
@@ -11238,7 +11133,7 @@ namespace Bian {
       if (IsHide != false) hash ^= IsHide.GetHashCode();
       if (entityTemplate_ != null) hash ^= EntityTemplate.GetHashCode();
       if (CurWalkDir.Length != 0) hash ^= CurWalkDir.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
       if (fromFather_ != null) hash ^= FromFather.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11274,11 +11169,11 @@ namespace Bian {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(40);
         output.WriteEnum((int) EType);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         output.WriteRawTag(48);
         output.WriteEnum((int) EnemyType);
       }
@@ -11334,7 +11229,7 @@ namespace Bian {
         output.WriteRawTag(178, 1);
         output.WriteString(CurWalkDir);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(184, 1);
         output.WriteEnum((int) LockType);
       }
@@ -11368,11 +11263,11 @@ namespace Bian {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(40);
         output.WriteEnum((int) EType);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         output.WriteRawTag(48);
         output.WriteEnum((int) EnemyType);
       }
@@ -11428,7 +11323,7 @@ namespace Bian {
         output.WriteRawTag(178, 1);
         output.WriteString(CurWalkDir);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(184, 1);
         output.WriteEnum((int) LockType);
       }
@@ -11458,10 +11353,10 @@ namespace Bian {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EType);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EnemyType);
       }
       if (profile_ != null) {
@@ -11503,7 +11398,7 @@ namespace Bian {
       if (CurWalkDir.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(CurWalkDir);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
       if (fromFather_ != null) {
@@ -11533,27 +11428,27 @@ namespace Bian {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.EType != global::Bian.EntityType.EntityTypeAll) {
+      if (other.EType != global::MelandGame3.EntityType.EntityTypeAll) {
         EType = other.EType;
       }
-      if (other.EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (other.EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         EnemyType = other.EnemyType;
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.EntityProfile();
+          Profile = new global::MelandGame3.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.EntityLocation();
+          Location = new global::MelandGame3.EntityLocation();
         }
         Location.MergeFrom(other.Location);
       }
       if (other.workbench_ != null) {
         if (workbench_ == null) {
-          Workbench = new global::Bian.Workbench();
+          Workbench = new global::MelandGame3.Workbench();
         }
         Workbench.MergeFrom(other.Workbench);
       }
@@ -11565,7 +11460,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -11580,7 +11475,7 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
@@ -11589,19 +11484,19 @@ namespace Bian {
       }
       if (other.entityTemplate_ != null) {
         if (entityTemplate_ == null) {
-          EntityTemplate = new global::Bian.EntityTemplate();
+          EntityTemplate = new global::MelandGame3.EntityTemplate();
         }
         EntityTemplate.MergeFrom(other.EntityTemplate);
       }
       if (other.CurWalkDir.Length != 0) {
         CurWalkDir = other.CurWalkDir;
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
       if (other.fromFather_ != null) {
         if (fromFather_ == null) {
-          FromFather = new global::Bian.EntityId();
+          FromFather = new global::MelandGame3.EntityId();
         }
         FromFather.MergeFrom(other.FromFather);
       }
@@ -11637,30 +11532,30 @@ namespace Bian {
             break;
           }
           case 40: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 48: {
-            EnemyType = (global::Bian.EnemyType) input.ReadEnum();
+            EnemyType = (global::MelandGame3.EnemyType) input.ReadEnum();
             break;
           }
           case 58: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 66: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
           }
           case 74: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -11675,7 +11570,7 @@ namespace Bian {
           }
           case 98: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -11694,7 +11589,7 @@ namespace Bian {
           }
           case 138: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -11705,7 +11600,7 @@ namespace Bian {
           }
           case 170: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -11715,12 +11610,12 @@ namespace Bian {
             break;
           }
           case 184: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 194: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -11757,30 +11652,30 @@ namespace Bian {
             break;
           }
           case 40: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 48: {
-            EnemyType = (global::Bian.EnemyType) input.ReadEnum();
+            EnemyType = (global::MelandGame3.EnemyType) input.ReadEnum();
             break;
           }
           case 58: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 66: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
           }
           case 74: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -11795,7 +11690,7 @@ namespace Bian {
           }
           case 98: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -11814,7 +11709,7 @@ namespace Bian {
           }
           case 138: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -11825,7 +11720,7 @@ namespace Bian {
           }
           case 170: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -11835,12 +11730,12 @@ namespace Bian {
             break;
           }
           case 184: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 194: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -11869,7 +11764,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[19]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11983,13 +11878,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 5;
-    private global::Bian.MonsterType type_ = global::Bian.MonsterType.MonsterTypeUnknown;
+    private global::MelandGame3.MonsterType type_ = global::MelandGame3.MonsterType.MonsterTypeUnknown;
     /// <summary>
     /// 宠物类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterType Type {
+    public global::MelandGame3.MonsterType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -11998,13 +11893,13 @@ namespace Bian {
 
     /// <summary>Field number for the "camp" field.</summary>
     public const int CampFieldNumber = 6;
-    private global::Bian.Camp camp_ = global::Bian.Camp.CampNeutral;
+    private global::MelandGame3.Camp camp_ = global::MelandGame3.Camp.CampNeutral;
     /// <summary>
     /// 宠物阵营
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Camp Camp {
+    public global::MelandGame3.Camp Camp {
       get { return camp_; }
       set {
         camp_ = value;
@@ -12028,13 +11923,13 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 8;
-    private global::Bian.EntityProfile profile_;
+    private global::MelandGame3.EntityProfile profile_;
     /// <summary>
     /// 宠物数值(lv, exp, att, def, ...)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile Profile {
+    public global::MelandGame3.EntityProfile Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -12043,13 +11938,13 @@ namespace Bian {
 
     /// <summary>Field number for the "att_type" field.</summary>
     public const int AttTypeFieldNumber = 9;
-    private global::Bian.MonsterAttType attType_ = global::Bian.MonsterAttType.MonsterAttTypeUnknown;
+    private global::MelandGame3.MonsterAttType attType_ = global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown;
     /// <summary>
     /// 攻击类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterAttType AttType {
+    public global::MelandGame3.MonsterAttType AttType {
       get { return attType_; }
       set {
         attType_ = value;
@@ -12058,13 +11953,13 @@ namespace Bian {
 
     /// <summary>Field number for the "patrol_type" field.</summary>
     public const int PatrolTypeFieldNumber = 10;
-    private global::Bian.MonsterPatrolType patrolType_ = global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown;
+    private global::MelandGame3.MonsterPatrolType patrolType_ = global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown;
     /// <summary>
     /// 巡逻类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterPatrolType PatrolType {
+    public global::MelandGame3.MonsterPatrolType PatrolType {
       get { return patrolType_; }
       set {
         patrolType_ = value;
@@ -12073,13 +11968,13 @@ namespace Bian {
 
     /// <summary>Field number for the "workbench" field.</summary>
     public const int WorkbenchFieldNumber = 11;
-    private global::Bian.Workbench workbench_;
+    private global::MelandGame3.Workbench workbench_;
     /// <summary>
     /// 工作台数据(简略)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Workbench Workbench {
+    public global::MelandGame3.Workbench Workbench {
       get { return workbench_; }
       set {
         workbench_ = value;
@@ -12103,13 +11998,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 13;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -12154,13 +12049,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 18;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -12184,13 +12079,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_template" field.</summary>
     public const int EntityTemplateFieldNumber = 22;
-    private global::Bian.EntityTemplate entityTemplate_;
+    private global::MelandGame3.EntityTemplate entityTemplate_;
     /// <summary>
     /// 实体模板数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTemplate EntityTemplate {
+    public global::MelandGame3.EntityTemplate EntityTemplate {
       get { return entityTemplate_; }
       set {
         entityTemplate_ = value;
@@ -12214,10 +12109,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 24;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -12226,10 +12121,10 @@ namespace Bian {
 
     /// <summary>Field number for the "from_father" field.</summary>
     public const int FromFatherFieldNumber = 25;
-    private global::Bian.EntityId fromFather_;
+    private global::MelandGame3.EntityId fromFather_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId FromFather {
+    public global::MelandGame3.EntityId FromFather {
       get { return fromFather_; }
       set {
         fromFather_ = value;
@@ -12300,12 +12195,12 @@ namespace Bian {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Cid != 0) hash ^= Cid.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) hash ^= Type.GetHashCode();
-      if (Camp != global::Bian.Camp.CampNeutral) hash ^= Camp.GetHashCode();
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) hash ^= Type.GetHashCode();
+      if (Camp != global::MelandGame3.Camp.CampNeutral) hash ^= Camp.GetHashCode();
       if (IsBoss != false) hash ^= IsBoss.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) hash ^= AttType.GetHashCode();
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) hash ^= PatrolType.GetHashCode();
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) hash ^= AttType.GetHashCode();
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) hash ^= PatrolType.GetHashCode();
       if (workbench_ != null) hash ^= Workbench.GetHashCode();
       if (IsCopy != false) hash ^= IsCopy.GetHashCode();
       if (dir_ != null) hash ^= Dir.GetHashCode();
@@ -12316,7 +12211,7 @@ namespace Bian {
       if (IsHide != false) hash ^= IsHide.GetHashCode();
       if (entityTemplate_ != null) hash ^= EntityTemplate.GetHashCode();
       if (CurWalkDir.Length != 0) hash ^= CurWalkDir.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
       if (fromFather_ != null) hash ^= FromFather.GetHashCode();
       if (SceneEffect != 0) hash ^= SceneEffect.GetHashCode();
       if (_unknownFields != null) {
@@ -12353,11 +12248,11 @@ namespace Bian {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Camp);
       }
@@ -12369,11 +12264,11 @@ namespace Bian {
         output.WriteRawTag(66);
         output.WriteMessage(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         output.WriteRawTag(80);
         output.WriteEnum((int) PatrolType);
       }
@@ -12417,7 +12312,7 @@ namespace Bian {
         output.WriteRawTag(186, 1);
         output.WriteString(CurWalkDir);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(192, 1);
         output.WriteEnum((int) LockType);
       }
@@ -12455,11 +12350,11 @@ namespace Bian {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Camp);
       }
@@ -12471,11 +12366,11 @@ namespace Bian {
         output.WriteRawTag(66);
         output.WriteMessage(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         output.WriteRawTag(80);
         output.WriteEnum((int) PatrolType);
       }
@@ -12519,7 +12414,7 @@ namespace Bian {
         output.WriteRawTag(186, 1);
         output.WriteString(CurWalkDir);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(192, 1);
         output.WriteEnum((int) LockType);
       }
@@ -12553,10 +12448,10 @@ namespace Bian {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Camp);
       }
       if (IsBoss != false) {
@@ -12565,10 +12460,10 @@ namespace Bian {
       if (profile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PatrolType);
       }
       if (workbench_ != null) {
@@ -12601,7 +12496,7 @@ namespace Bian {
       if (CurWalkDir.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(CurWalkDir);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
       if (fromFather_ != null) {
@@ -12634,10 +12529,10 @@ namespace Bian {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (other.Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         Type = other.Type;
       }
-      if (other.Camp != global::Bian.Camp.CampNeutral) {
+      if (other.Camp != global::MelandGame3.Camp.CampNeutral) {
         Camp = other.Camp;
       }
       if (other.IsBoss != false) {
@@ -12645,19 +12540,19 @@ namespace Bian {
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.EntityProfile();
+          Profile = new global::MelandGame3.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
-      if (other.AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (other.AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         AttType = other.AttType;
       }
-      if (other.PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (other.PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         PatrolType = other.PatrolType;
       }
       if (other.workbench_ != null) {
         if (workbench_ == null) {
-          Workbench = new global::Bian.Workbench();
+          Workbench = new global::MelandGame3.Workbench();
         }
         Workbench.MergeFrom(other.Workbench);
       }
@@ -12666,7 +12561,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -12681,7 +12576,7 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
@@ -12690,19 +12585,19 @@ namespace Bian {
       }
       if (other.entityTemplate_ != null) {
         if (entityTemplate_ == null) {
-          EntityTemplate = new global::Bian.EntityTemplate();
+          EntityTemplate = new global::MelandGame3.EntityTemplate();
         }
         EntityTemplate.MergeFrom(other.EntityTemplate);
       }
       if (other.CurWalkDir.Length != 0) {
         CurWalkDir = other.CurWalkDir;
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
       if (other.fromFather_ != null) {
         if (fromFather_ == null) {
-          FromFather = new global::Bian.EntityId();
+          FromFather = new global::MelandGame3.EntityId();
         }
         FromFather.MergeFrom(other.FromFather);
       }
@@ -12741,11 +12636,11 @@ namespace Bian {
             break;
           }
           case 40: {
-            Type = (global::Bian.MonsterType) input.ReadEnum();
+            Type = (global::MelandGame3.MonsterType) input.ReadEnum();
             break;
           }
           case 48: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
+            Camp = (global::MelandGame3.Camp) input.ReadEnum();
             break;
           }
           case 56: {
@@ -12754,22 +12649,22 @@ namespace Bian {
           }
           case 66: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 72: {
-            AttType = (global::Bian.MonsterAttType) input.ReadEnum();
+            AttType = (global::MelandGame3.MonsterAttType) input.ReadEnum();
             break;
           }
           case 80: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
+            PatrolType = (global::MelandGame3.MonsterPatrolType) input.ReadEnum();
             break;
           }
           case 90: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -12780,7 +12675,7 @@ namespace Bian {
           }
           case 106: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -12799,7 +12694,7 @@ namespace Bian {
           }
           case 146: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -12810,7 +12705,7 @@ namespace Bian {
           }
           case 178: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -12820,12 +12715,12 @@ namespace Bian {
             break;
           }
           case 192: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 202: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -12866,11 +12761,11 @@ namespace Bian {
             break;
           }
           case 40: {
-            Type = (global::Bian.MonsterType) input.ReadEnum();
+            Type = (global::MelandGame3.MonsterType) input.ReadEnum();
             break;
           }
           case 48: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
+            Camp = (global::MelandGame3.Camp) input.ReadEnum();
             break;
           }
           case 56: {
@@ -12879,22 +12774,22 @@ namespace Bian {
           }
           case 66: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 72: {
-            AttType = (global::Bian.MonsterAttType) input.ReadEnum();
+            AttType = (global::MelandGame3.MonsterAttType) input.ReadEnum();
             break;
           }
           case 80: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
+            PatrolType = (global::MelandGame3.MonsterPatrolType) input.ReadEnum();
             break;
           }
           case 90: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -12905,7 +12800,7 @@ namespace Bian {
           }
           case 106: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -12924,7 +12819,7 @@ namespace Bian {
           }
           case 146: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -12935,7 +12830,7 @@ namespace Bian {
           }
           case 178: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -12945,12 +12840,12 @@ namespace Bian {
             break;
           }
           case 192: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 202: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -12980,7 +12875,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[20]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13095,13 +12990,13 @@ namespace Bian {
 
     /// <summary>Field number for the "e_type" field.</summary>
     public const int ETypeFieldNumber = 4;
-    private global::Bian.EntityType eType_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType eType_ = global::MelandGame3.EntityType.EntityTypeAll;
     /// <summary>
     /// 实体类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType EType {
+    public global::MelandGame3.EntityType EType {
       get { return eType_; }
       set {
         eType_ = value;
@@ -13110,13 +13005,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 5;
-    private global::Bian.MonsterType type_ = global::Bian.MonsterType.MonsterTypeUnknown;
+    private global::MelandGame3.MonsterType type_ = global::MelandGame3.MonsterType.MonsterTypeUnknown;
     /// <summary>
     /// 怪物类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterType Type {
+    public global::MelandGame3.MonsterType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -13125,13 +13020,13 @@ namespace Bian {
 
     /// <summary>Field number for the "camp" field.</summary>
     public const int CampFieldNumber = 6;
-    private global::Bian.Camp camp_ = global::Bian.Camp.CampNeutral;
+    private global::MelandGame3.Camp camp_ = global::MelandGame3.Camp.CampNeutral;
     /// <summary>
     /// 阵营
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Camp Camp {
+    public global::MelandGame3.Camp Camp {
       get { return camp_; }
       set {
         camp_ = value;
@@ -13140,13 +13035,13 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 7;
-    private global::Bian.EntityProfile profile_;
+    private global::MelandGame3.EntityProfile profile_;
     /// <summary>
     /// 战斗属性(lv, exp, att, def, ...)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile Profile {
+    public global::MelandGame3.EntityProfile Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -13155,13 +13050,13 @@ namespace Bian {
 
     /// <summary>Field number for the "att_type" field.</summary>
     public const int AttTypeFieldNumber = 8;
-    private global::Bian.MonsterAttType attType_ = global::Bian.MonsterAttType.MonsterAttTypeUnknown;
+    private global::MelandGame3.MonsterAttType attType_ = global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown;
     /// <summary>
     /// 攻击类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterAttType AttType {
+    public global::MelandGame3.MonsterAttType AttType {
       get { return attType_; }
       set {
         attType_ = value;
@@ -13170,13 +13065,13 @@ namespace Bian {
 
     /// <summary>Field number for the "patrol_type" field.</summary>
     public const int PatrolTypeFieldNumber = 9;
-    private global::Bian.MonsterPatrolType patrolType_ = global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown;
+    private global::MelandGame3.MonsterPatrolType patrolType_ = global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown;
     /// <summary>
     /// 巡逻类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterPatrolType PatrolType {
+    public global::MelandGame3.MonsterPatrolType PatrolType {
       get { return patrolType_; }
       set {
         patrolType_ = value;
@@ -13215,13 +13110,13 @@ namespace Bian {
 
     /// <summary>Field number for the "code_status" field.</summary>
     public const int CodeStatusFieldNumber = 12;
-    private global::Bian.EntityCodeStatus codeStatus_ = global::Bian.EntityCodeStatus.EntityCodeStatusUnknow;
+    private global::MelandGame3.EntityCodeStatus codeStatus_ = global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow;
     /// <summary>
     /// 运行状态
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityCodeStatus CodeStatus {
+    public global::MelandGame3.EntityCodeStatus CodeStatus {
       get { return codeStatus_; }
       set {
         codeStatus_ = value;
@@ -13230,13 +13125,13 @@ namespace Bian {
 
     /// <summary>Field number for the "workbench" field.</summary>
     public const int WorkbenchFieldNumber = 13;
-    private global::Bian.Workbench workbench_;
+    private global::MelandGame3.Workbench workbench_;
     /// <summary>
     /// 工作台数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Workbench Workbench {
+    public global::MelandGame3.Workbench Workbench {
       get { return workbench_; }
       set {
         workbench_ = value;
@@ -13260,13 +13155,13 @@ namespace Bian {
 
     /// <summary>Field number for the "run_attribute" field.</summary>
     public const int RunAttributeFieldNumber = 15;
-    private global::Bian.EntityAttribute runAttribute_;
+    private global::MelandGame3.EntityAttribute runAttribute_;
     /// <summary>
     /// 控件属性
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAttribute RunAttribute {
+    public global::MelandGame3.EntityAttribute RunAttribute {
       get { return runAttribute_; }
       set {
         runAttribute_ = value;
@@ -13332,13 +13227,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 22;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -13386,13 +13281,13 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble" field.</summary>
     public const int BubbleFieldNumber = 27;
-    private global::Bian.EntitySceneEffect bubble_;
+    private global::MelandGame3.EntitySceneEffect bubble_;
     /// <summary>
     /// 泡泡
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntitySceneEffect Bubble {
+    public global::MelandGame3.EntitySceneEffect Bubble {
       get { return bubble_; }
       set {
         bubble_ = value;
@@ -13437,13 +13332,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 31;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -13452,13 +13347,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_template" field.</summary>
     public const int EntityTemplateFieldNumber = 32;
-    private global::Bian.EntityTemplate entityTemplate_;
+    private global::MelandGame3.EntityTemplate entityTemplate_;
     /// <summary>
     /// 实体模板数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTemplate EntityTemplate {
+    public global::MelandGame3.EntityTemplate EntityTemplate {
       get { return entityTemplate_; }
       set {
         entityTemplate_ = value;
@@ -13482,13 +13377,13 @@ namespace Bian {
 
     /// <summary>Field number for the "anims" field.</summary>
     public const int AnimsFieldNumber = 36;
-    private global::Bian.EntityAnimations anims_;
+    private global::MelandGame3.EntityAnimations anims_;
     /// <summary>
     /// 自定义动画
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAnimations Anims {
+    public global::MelandGame3.EntityAnimations Anims {
       get { return anims_; }
       set {
         anims_ = value;
@@ -13509,10 +13404,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 38;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -13521,10 +13416,10 @@ namespace Bian {
 
     /// <summary>Field number for the "from_father" field.</summary>
     public const int FromFatherFieldNumber = 39;
-    private global::Bian.EntityId fromFather_;
+    private global::MelandGame3.EntityId fromFather_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId FromFather {
+    public global::MelandGame3.EntityId FromFather {
       get { return fromFather_; }
       set {
         fromFather_ = value;
@@ -13548,10 +13443,10 @@ namespace Bian {
 
     /// <summary>Field number for the "audios" field.</summary>
     public const int AudiosFieldNumber = 41;
-    private global::Bian.EntityAudios audios_;
+    private global::MelandGame3.EntityAudios audios_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAudios Audios {
+    public global::MelandGame3.EntityAudios Audios {
       get { return audios_; }
       set {
         audios_ = value;
@@ -13575,15 +13470,15 @@ namespace Bian {
 
     /// <summary>Field number for the "operate_bubbles" field.</summary>
     public const int OperateBubblesFieldNumber = 43;
-    private static readonly pb::FieldCodec<global::Bian.OperateBubbleData> _repeated_operateBubbles_codec
-        = pb::FieldCodec.ForMessage(346, global::Bian.OperateBubbleData.Parser);
-    private readonly pbc::RepeatedField<global::Bian.OperateBubbleData> operateBubbles_ = new pbc::RepeatedField<global::Bian.OperateBubbleData>();
+    private static readonly pb::FieldCodec<global::MelandGame3.OperateBubbleData> _repeated_operateBubbles_codec
+        = pb::FieldCodec.ForMessage(346, global::MelandGame3.OperateBubbleData.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.OperateBubbleData> operateBubbles_ = new pbc::RepeatedField<global::MelandGame3.OperateBubbleData>();
     /// <summary>
     ///气泡数据LIST
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.OperateBubbleData> OperateBubbles {
+    public pbc::RepeatedField<global::MelandGame3.OperateBubbleData> OperateBubbles {
       get { return operateBubbles_; }
     }
 
@@ -13601,13 +13496,13 @@ namespace Bian {
 
     /// <summary>Field number for the "carry_entity" field.</summary>
     public const int CarryEntityFieldNumber = 45;
-    private global::Bian.CarryEntityBaseData carryEntity_;
+    private global::MelandGame3.CarryEntityBaseData carryEntity_;
     /// <summary>
     /// 生物当前搬运的实体
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CarryEntityBaseData CarryEntity {
+    public global::MelandGame3.CarryEntityBaseData CarryEntity {
       get { return carryEntity_; }
       set {
         carryEntity_ = value;
@@ -13616,27 +13511,27 @@ namespace Bian {
 
     /// <summary>Field number for the "force_dir" field.</summary>
     public const int ForceDirFieldNumber = 46;
-    private static readonly pb::FieldCodec<global::Bian.VectorXY> _repeated_forceDir_codec
-        = pb::FieldCodec.ForMessage(370, global::Bian.VectorXY.Parser);
-    private readonly pbc::RepeatedField<global::Bian.VectorXY> forceDir_ = new pbc::RepeatedField<global::Bian.VectorXY>();
+    private static readonly pb::FieldCodec<global::MelandGame3.VectorXY> _repeated_forceDir_codec
+        = pb::FieldCodec.ForMessage(370, global::MelandGame3.VectorXY.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.VectorXY> forceDir_ = new pbc::RepeatedField<global::MelandGame3.VectorXY>();
     /// <summary>
     /// 场景作用力方向
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.VectorXY> ForceDir {
+    public pbc::RepeatedField<global::MelandGame3.VectorXY> ForceDir {
       get { return forceDir_; }
     }
 
     /// <summary>Field number for the "nft_info" field.</summary>
     public const int NftInfoFieldNumber = 47;
-    private global::Bian.EntityNftInfo nftInfo_;
+    private global::MelandGame3.EntityNftInfo nftInfo_;
     /// <summary>
     /// nft 道具信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityNftInfo NftInfo {
+    public global::MelandGame3.EntityNftInfo NftInfo {
       get { return nftInfo_; }
       set {
         nftInfo_ = value;
@@ -13710,15 +13605,15 @@ namespace Bian {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Cid != 0) hash ^= Cid.GetHashCode();
       if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
-      if (EType != global::Bian.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) hash ^= Type.GetHashCode();
-      if (Camp != global::Bian.Camp.CampNeutral) hash ^= Camp.GetHashCode();
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) hash ^= Type.GetHashCode();
+      if (Camp != global::MelandGame3.Camp.CampNeutral) hash ^= Camp.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) hash ^= AttType.GetHashCode();
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) hash ^= PatrolType.GetHashCode();
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) hash ^= AttType.GetHashCode();
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) hash ^= PatrolType.GetHashCode();
       if (HaterId.Length != 0) hash ^= HaterId.GetHashCode();
       if (HaterName.Length != 0) hash ^= HaterName.GetHashCode();
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) hash ^= CodeStatus.GetHashCode();
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) hash ^= CodeStatus.GetHashCode();
       if (workbench_ != null) hash ^= Workbench.GetHashCode();
       if (RefreshTime != 0L) hash ^= RefreshTime.GetHashCode();
       if (runAttribute_ != null) hash ^= RunAttribute.GetHashCode();
@@ -13739,7 +13634,7 @@ namespace Bian {
       if (CurWalkDir.Length != 0) hash ^= CurWalkDir.GetHashCode();
       if (anims_ != null) hash ^= Anims.GetHashCode();
       if (CurPlayAnim != 0) hash ^= CurPlayAnim.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
       if (fromFather_ != null) hash ^= FromFather.GetHashCode();
       if (SceneEffect != 0) hash ^= SceneEffect.GetHashCode();
       if (audios_ != null) hash ^= Audios.GetHashCode();
@@ -13779,15 +13674,15 @@ namespace Bian {
         output.WriteRawTag(26);
         output.WriteString(PlayerId);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(32);
         output.WriteEnum((int) EType);
       }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Camp);
       }
@@ -13795,11 +13690,11 @@ namespace Bian {
         output.WriteRawTag(58);
         output.WriteMessage(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         output.WriteRawTag(64);
         output.WriteEnum((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) PatrolType);
       }
@@ -13811,7 +13706,7 @@ namespace Bian {
         output.WriteRawTag(90);
         output.WriteString(HaterName);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         output.WriteRawTag(96);
         output.WriteEnum((int) CodeStatus);
       }
@@ -13895,7 +13790,7 @@ namespace Bian {
         output.WriteRawTag(168, 2);
         output.WriteInt32(CurPlayAnim);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(176, 2);
         output.WriteEnum((int) LockType);
       }
@@ -13951,15 +13846,15 @@ namespace Bian {
         output.WriteRawTag(26);
         output.WriteString(PlayerId);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(32);
         output.WriteEnum((int) EType);
       }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Camp);
       }
@@ -13967,11 +13862,11 @@ namespace Bian {
         output.WriteRawTag(58);
         output.WriteMessage(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         output.WriteRawTag(64);
         output.WriteEnum((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) PatrolType);
       }
@@ -13983,7 +13878,7 @@ namespace Bian {
         output.WriteRawTag(90);
         output.WriteString(HaterName);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         output.WriteRawTag(96);
         output.WriteEnum((int) CodeStatus);
       }
@@ -14067,7 +13962,7 @@ namespace Bian {
         output.WriteRawTag(168, 2);
         output.WriteInt32(CurPlayAnim);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(176, 2);
         output.WriteEnum((int) LockType);
       }
@@ -14120,22 +14015,22 @@ namespace Bian {
       if (PlayerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EType);
       }
-      if (Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Camp);
       }
       if (profile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PatrolType);
       }
       if (HaterId.Length != 0) {
@@ -14144,7 +14039,7 @@ namespace Bian {
       if (HaterName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HaterName);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CodeStatus);
       }
       if (workbench_ != null) {
@@ -14207,7 +14102,7 @@ namespace Bian {
       if (CurPlayAnim != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(CurPlayAnim);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
       if (fromFather_ != null) {
@@ -14254,25 +14149,25 @@ namespace Bian {
       if (other.PlayerId.Length != 0) {
         PlayerId = other.PlayerId;
       }
-      if (other.EType != global::Bian.EntityType.EntityTypeAll) {
+      if (other.EType != global::MelandGame3.EntityType.EntityTypeAll) {
         EType = other.EType;
       }
-      if (other.Type != global::Bian.MonsterType.MonsterTypeUnknown) {
+      if (other.Type != global::MelandGame3.MonsterType.MonsterTypeUnknown) {
         Type = other.Type;
       }
-      if (other.Camp != global::Bian.Camp.CampNeutral) {
+      if (other.Camp != global::MelandGame3.Camp.CampNeutral) {
         Camp = other.Camp;
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.EntityProfile();
+          Profile = new global::MelandGame3.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
-      if (other.AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (other.AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         AttType = other.AttType;
       }
-      if (other.PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (other.PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         PatrolType = other.PatrolType;
       }
       if (other.HaterId.Length != 0) {
@@ -14281,12 +14176,12 @@ namespace Bian {
       if (other.HaterName.Length != 0) {
         HaterName = other.HaterName;
       }
-      if (other.CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (other.CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         CodeStatus = other.CodeStatus;
       }
       if (other.workbench_ != null) {
         if (workbench_ == null) {
-          Workbench = new global::Bian.Workbench();
+          Workbench = new global::MelandGame3.Workbench();
         }
         Workbench.MergeFrom(other.Workbench);
       }
@@ -14295,7 +14190,7 @@ namespace Bian {
       }
       if (other.runAttribute_ != null) {
         if (runAttribute_ == null) {
-          RunAttribute = new global::Bian.EntityAttribute();
+          RunAttribute = new global::MelandGame3.EntityAttribute();
         }
         RunAttribute.MergeFrom(other.RunAttribute);
       }
@@ -14313,7 +14208,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -14328,7 +14223,7 @@ namespace Bian {
       }
       if (other.bubble_ != null) {
         if (bubble_ == null) {
-          Bubble = new global::Bian.EntitySceneEffect();
+          Bubble = new global::MelandGame3.EntitySceneEffect();
         }
         Bubble.MergeFrom(other.Bubble);
       }
@@ -14343,13 +14238,13 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
       if (other.entityTemplate_ != null) {
         if (entityTemplate_ == null) {
-          EntityTemplate = new global::Bian.EntityTemplate();
+          EntityTemplate = new global::MelandGame3.EntityTemplate();
         }
         EntityTemplate.MergeFrom(other.EntityTemplate);
       }
@@ -14358,19 +14253,19 @@ namespace Bian {
       }
       if (other.anims_ != null) {
         if (anims_ == null) {
-          Anims = new global::Bian.EntityAnimations();
+          Anims = new global::MelandGame3.EntityAnimations();
         }
         Anims.MergeFrom(other.Anims);
       }
       if (other.CurPlayAnim != 0) {
         CurPlayAnim = other.CurPlayAnim;
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
       if (other.fromFather_ != null) {
         if (fromFather_ == null) {
-          FromFather = new global::Bian.EntityId();
+          FromFather = new global::MelandGame3.EntityId();
         }
         FromFather.MergeFrom(other.FromFather);
       }
@@ -14379,7 +14274,7 @@ namespace Bian {
       }
       if (other.audios_ != null) {
         if (audios_ == null) {
-          Audios = new global::Bian.EntityAudios();
+          Audios = new global::MelandGame3.EntityAudios();
         }
         Audios.MergeFrom(other.Audios);
       }
@@ -14392,14 +14287,14 @@ namespace Bian {
       }
       if (other.carryEntity_ != null) {
         if (carryEntity_ == null) {
-          CarryEntity = new global::Bian.CarryEntityBaseData();
+          CarryEntity = new global::MelandGame3.CarryEntityBaseData();
         }
         CarryEntity.MergeFrom(other.CarryEntity);
       }
       forceDir_.Add(other.forceDir_);
       if (other.nftInfo_ != null) {
         if (nftInfo_ == null) {
-          NftInfo = new global::Bian.EntityNftInfo();
+          NftInfo = new global::MelandGame3.EntityNftInfo();
         }
         NftInfo.MergeFrom(other.NftInfo);
       }
@@ -14431,30 +14326,30 @@ namespace Bian {
             break;
           }
           case 32: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 40: {
-            Type = (global::Bian.MonsterType) input.ReadEnum();
+            Type = (global::MelandGame3.MonsterType) input.ReadEnum();
             break;
           }
           case 48: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
+            Camp = (global::MelandGame3.Camp) input.ReadEnum();
             break;
           }
           case 58: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 64: {
-            AttType = (global::Bian.MonsterAttType) input.ReadEnum();
+            AttType = (global::MelandGame3.MonsterAttType) input.ReadEnum();
             break;
           }
           case 72: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
+            PatrolType = (global::MelandGame3.MonsterPatrolType) input.ReadEnum();
             break;
           }
           case 82: {
@@ -14466,12 +14361,12 @@ namespace Bian {
             break;
           }
           case 96: {
-            CodeStatus = (global::Bian.EntityCodeStatus) input.ReadEnum();
+            CodeStatus = (global::MelandGame3.EntityCodeStatus) input.ReadEnum();
             break;
           }
           case 106: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -14482,7 +14377,7 @@ namespace Bian {
           }
           case 122: {
             if (runAttribute_ == null) {
-              RunAttribute = new global::Bian.EntityAttribute();
+              RunAttribute = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(RunAttribute);
             break;
@@ -14505,7 +14400,7 @@ namespace Bian {
           }
           case 178: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -14524,7 +14419,7 @@ namespace Bian {
           }
           case 218: {
             if (bubble_ == null) {
-              Bubble = new global::Bian.EntitySceneEffect();
+              Bubble = new global::MelandGame3.EntitySceneEffect();
             }
             input.ReadMessage(Bubble);
             break;
@@ -14543,14 +14438,14 @@ namespace Bian {
           }
           case 250: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 258: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -14561,7 +14456,7 @@ namespace Bian {
           }
           case 290: {
             if (anims_ == null) {
-              Anims = new global::Bian.EntityAnimations();
+              Anims = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
@@ -14571,12 +14466,12 @@ namespace Bian {
             break;
           }
           case 304: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 314: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -14587,7 +14482,7 @@ namespace Bian {
           }
           case 330: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
@@ -14606,7 +14501,7 @@ namespace Bian {
           }
           case 362: {
             if (carryEntity_ == null) {
-              CarryEntity = new global::Bian.CarryEntityBaseData();
+              CarryEntity = new global::MelandGame3.CarryEntityBaseData();
             }
             input.ReadMessage(CarryEntity);
             break;
@@ -14617,7 +14512,7 @@ namespace Bian {
           }
           case 378: {
             if (nftInfo_ == null) {
-              NftInfo = new global::Bian.EntityNftInfo();
+              NftInfo = new global::MelandGame3.EntityNftInfo();
             }
             input.ReadMessage(NftInfo);
             break;
@@ -14650,30 +14545,30 @@ namespace Bian {
             break;
           }
           case 32: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 40: {
-            Type = (global::Bian.MonsterType) input.ReadEnum();
+            Type = (global::MelandGame3.MonsterType) input.ReadEnum();
             break;
           }
           case 48: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
+            Camp = (global::MelandGame3.Camp) input.ReadEnum();
             break;
           }
           case 58: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 64: {
-            AttType = (global::Bian.MonsterAttType) input.ReadEnum();
+            AttType = (global::MelandGame3.MonsterAttType) input.ReadEnum();
             break;
           }
           case 72: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
+            PatrolType = (global::MelandGame3.MonsterPatrolType) input.ReadEnum();
             break;
           }
           case 82: {
@@ -14685,12 +14580,12 @@ namespace Bian {
             break;
           }
           case 96: {
-            CodeStatus = (global::Bian.EntityCodeStatus) input.ReadEnum();
+            CodeStatus = (global::MelandGame3.EntityCodeStatus) input.ReadEnum();
             break;
           }
           case 106: {
             if (workbench_ == null) {
-              Workbench = new global::Bian.Workbench();
+              Workbench = new global::MelandGame3.Workbench();
             }
             input.ReadMessage(Workbench);
             break;
@@ -14701,7 +14596,7 @@ namespace Bian {
           }
           case 122: {
             if (runAttribute_ == null) {
-              RunAttribute = new global::Bian.EntityAttribute();
+              RunAttribute = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(RunAttribute);
             break;
@@ -14724,7 +14619,7 @@ namespace Bian {
           }
           case 178: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -14743,7 +14638,7 @@ namespace Bian {
           }
           case 218: {
             if (bubble_ == null) {
-              Bubble = new global::Bian.EntitySceneEffect();
+              Bubble = new global::MelandGame3.EntitySceneEffect();
             }
             input.ReadMessage(Bubble);
             break;
@@ -14762,14 +14657,14 @@ namespace Bian {
           }
           case 250: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 258: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -14780,7 +14675,7 @@ namespace Bian {
           }
           case 290: {
             if (anims_ == null) {
-              Anims = new global::Bian.EntityAnimations();
+              Anims = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
@@ -14790,12 +14685,12 @@ namespace Bian {
             break;
           }
           case 304: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 314: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -14806,7 +14701,7 @@ namespace Bian {
           }
           case 330: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
@@ -14825,7 +14720,7 @@ namespace Bian {
           }
           case 362: {
             if (carryEntity_ == null) {
-              CarryEntity = new global::Bian.CarryEntityBaseData();
+              CarryEntity = new global::MelandGame3.CarryEntityBaseData();
             }
             input.ReadMessage(CarryEntity);
             break;
@@ -14836,7 +14731,7 @@ namespace Bian {
           }
           case 378: {
             if (nftInfo_ == null) {
-              NftInfo = new global::Bian.EntityNftInfo();
+              NftInfo = new global::MelandGame3.EntityNftInfo();
             }
             input.ReadMessage(NftInfo);
             break;
@@ -14862,7 +14757,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[21]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14978,13 +14873,13 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 6;
-    private global::Bian.EntityProfile profile_;
+    private global::MelandGame3.EntityProfile profile_;
     /// <summary>
     /// 怪物数值(lv, exp, att, def, ...)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile Profile {
+    public global::MelandGame3.EntityProfile Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -14993,13 +14888,13 @@ namespace Bian {
 
     /// <summary>Field number for the "att_type" field.</summary>
     public const int AttTypeFieldNumber = 7;
-    private global::Bian.MonsterAttType attType_ = global::Bian.MonsterAttType.MonsterAttTypeUnknown;
+    private global::MelandGame3.MonsterAttType attType_ = global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown;
     /// <summary>
     /// 攻击类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterAttType AttType {
+    public global::MelandGame3.MonsterAttType AttType {
       get { return attType_; }
       set {
         attType_ = value;
@@ -15008,13 +14903,13 @@ namespace Bian {
 
     /// <summary>Field number for the "patrol_type" field.</summary>
     public const int PatrolTypeFieldNumber = 8;
-    private global::Bian.MonsterPatrolType patrolType_ = global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown;
+    private global::MelandGame3.MonsterPatrolType patrolType_ = global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown;
     /// <summary>
     /// 巡逻类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MonsterPatrolType PatrolType {
+    public global::MelandGame3.MonsterPatrolType PatrolType {
       get { return patrolType_; }
       set {
         patrolType_ = value;
@@ -15050,13 +14945,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 11;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -15065,13 +14960,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 12;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -15134,8 +15029,8 @@ namespace Bian {
       if (Active != false) hash ^= Active.GetHashCode();
       if (Owner.Length != 0) hash ^= Owner.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) hash ^= AttType.GetHashCode();
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) hash ^= PatrolType.GetHashCode();
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) hash ^= AttType.GetHashCode();
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) hash ^= PatrolType.GetHashCode();
       if (HaterId.Length != 0) hash ^= HaterId.GetHashCode();
       if (HaterName.Length != 0) hash ^= HaterName.GetHashCode();
       if (dir_ != null) hash ^= Dir.GetHashCode();
@@ -15183,11 +15078,11 @@ namespace Bian {
         output.WriteRawTag(50);
         output.WriteMessage(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         output.WriteRawTag(56);
         output.WriteEnum((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         output.WriteRawTag(64);
         output.WriteEnum((int) PatrolType);
       }
@@ -15245,11 +15140,11 @@ namespace Bian {
         output.WriteRawTag(50);
         output.WriteMessage(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         output.WriteRawTag(56);
         output.WriteEnum((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         output.WriteRawTag(64);
         output.WriteEnum((int) PatrolType);
       }
@@ -15301,10 +15196,10 @@ namespace Bian {
       if (profile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Profile);
       }
-      if (AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AttType);
       }
-      if (PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PatrolType);
       }
       if (HaterId.Length != 0) {
@@ -15351,14 +15246,14 @@ namespace Bian {
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.EntityProfile();
+          Profile = new global::MelandGame3.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
-      if (other.AttType != global::Bian.MonsterAttType.MonsterAttTypeUnknown) {
+      if (other.AttType != global::MelandGame3.MonsterAttType.MonsterAttTypeUnknown) {
         AttType = other.AttType;
       }
-      if (other.PatrolType != global::Bian.MonsterPatrolType.MonsterPatrolTypeUnknown) {
+      if (other.PatrolType != global::MelandGame3.MonsterPatrolType.MonsterPatrolTypeUnknown) {
         PatrolType = other.PatrolType;
       }
       if (other.HaterId.Length != 0) {
@@ -15369,13 +15264,13 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
@@ -15419,17 +15314,17 @@ namespace Bian {
           }
           case 50: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 56: {
-            AttType = (global::Bian.MonsterAttType) input.ReadEnum();
+            AttType = (global::MelandGame3.MonsterAttType) input.ReadEnum();
             break;
           }
           case 64: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
+            PatrolType = (global::MelandGame3.MonsterPatrolType) input.ReadEnum();
             break;
           }
           case 74: {
@@ -15442,14 +15337,14 @@ namespace Bian {
           }
           case 90: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
           }
           case 98: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -15495,17 +15390,17 @@ namespace Bian {
           }
           case 50: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 56: {
-            AttType = (global::Bian.MonsterAttType) input.ReadEnum();
+            AttType = (global::MelandGame3.MonsterAttType) input.ReadEnum();
             break;
           }
           case 64: {
-            PatrolType = (global::Bian.MonsterPatrolType) input.ReadEnum();
+            PatrolType = (global::MelandGame3.MonsterPatrolType) input.ReadEnum();
             break;
           }
           case 74: {
@@ -15518,14 +15413,14 @@ namespace Bian {
           }
           case 90: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
           }
           case 98: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -15558,7 +15453,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[22]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15686,7 +15581,7 @@ namespace Bian {
 
     /// <summary>Field number for the "attribute" field.</summary>
     public const int AttributeFieldNumber = 7;
-    private global::Bian.AvatarAttribute attribute_;
+    private global::MelandGame3.AvatarAttribute attribute_;
     /// <summary>
     /// 当前状态
     ///int32 state_id = 6;
@@ -15694,7 +15589,7 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AvatarAttribute Attribute {
+    public global::MelandGame3.AvatarAttribute Attribute {
       get { return attribute_; }
       set {
         attribute_ = value;
@@ -15718,13 +15613,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 9;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -15769,13 +15664,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 13;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -15784,10 +15679,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 14;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -15796,13 +15691,13 @@ namespace Bian {
 
     /// <summary>Field number for the "e_type" field.</summary>
     public const int ETypeFieldNumber = 15;
-    private global::Bian.EntityType eType_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType eType_ = global::MelandGame3.EntityType.EntityTypeAll;
     /// <summary>
     /// 类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType EType {
+    public global::MelandGame3.EntityType EType {
       get { return eType_; }
       set {
         eType_ = value;
@@ -15826,13 +15721,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_template" field.</summary>
     public const int EntityTemplateFieldNumber = 17;
-    private global::Bian.EntityTemplate entityTemplate_;
+    private global::MelandGame3.EntityTemplate entityTemplate_;
     /// <summary>
     /// 实体模板数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTemplate EntityTemplate {
+    public global::MelandGame3.EntityTemplate EntityTemplate {
       get { return entityTemplate_; }
       set {
         entityTemplate_ = value;
@@ -15841,13 +15736,13 @@ namespace Bian {
 
     /// <summary>Field number for the "run_attribute" field.</summary>
     public const int RunAttributeFieldNumber = 18;
-    private global::Bian.EntityAttribute runAttribute_;
+    private global::MelandGame3.EntityAttribute runAttribute_;
     /// <summary>
     /// 控件属性
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAttribute RunAttribute {
+    public global::MelandGame3.EntityAttribute RunAttribute {
       get { return runAttribute_; }
       set {
         runAttribute_ = value;
@@ -15868,10 +15763,10 @@ namespace Bian {
 
     /// <summary>Field number for the "from_father" field.</summary>
     public const int FromFatherFieldNumber = 20;
-    private global::Bian.EntityId fromFather_;
+    private global::MelandGame3.EntityId fromFather_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId FromFather {
+    public global::MelandGame3.EntityId FromFather {
       get { return fromFather_; }
       set {
         fromFather_ = value;
@@ -15895,10 +15790,10 @@ namespace Bian {
 
     /// <summary>Field number for the "audios" field.</summary>
     public const int AudiosFieldNumber = 22;
-    private global::Bian.EntityAudios audios_;
+    private global::MelandGame3.EntityAudios audios_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAudios Audios {
+    public global::MelandGame3.EntityAudios Audios {
       get { return audios_; }
       set {
         audios_ = value;
@@ -15919,29 +15814,29 @@ namespace Bian {
 
     /// <summary>Field number for the "operate_bubbles" field.</summary>
     public const int OperateBubblesFieldNumber = 24;
-    private static readonly pb::FieldCodec<global::Bian.OperateBubbleData> _repeated_operateBubbles_codec
-        = pb::FieldCodec.ForMessage(194, global::Bian.OperateBubbleData.Parser);
-    private readonly pbc::RepeatedField<global::Bian.OperateBubbleData> operateBubbles_ = new pbc::RepeatedField<global::Bian.OperateBubbleData>();
+    private static readonly pb::FieldCodec<global::MelandGame3.OperateBubbleData> _repeated_operateBubbles_codec
+        = pb::FieldCodec.ForMessage(194, global::MelandGame3.OperateBubbleData.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.OperateBubbleData> operateBubbles_ = new pbc::RepeatedField<global::MelandGame3.OperateBubbleData>();
     /// <summary>
     ///气泡数据LIST
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.OperateBubbleData> OperateBubbles {
+    public pbc::RepeatedField<global::MelandGame3.OperateBubbleData> OperateBubbles {
       get { return operateBubbles_; }
     }
 
     /// <summary>Field number for the "force_dir" field.</summary>
     public const int ForceDirFieldNumber = 25;
-    private static readonly pb::FieldCodec<global::Bian.VectorXY> _repeated_forceDir_codec
-        = pb::FieldCodec.ForMessage(202, global::Bian.VectorXY.Parser);
-    private readonly pbc::RepeatedField<global::Bian.VectorXY> forceDir_ = new pbc::RepeatedField<global::Bian.VectorXY>();
+    private static readonly pb::FieldCodec<global::MelandGame3.VectorXY> _repeated_forceDir_codec
+        = pb::FieldCodec.ForMessage(202, global::MelandGame3.VectorXY.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.VectorXY> forceDir_ = new pbc::RepeatedField<global::MelandGame3.VectorXY>();
     /// <summary>
     /// 场景作用力方向
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.VectorXY> ForceDir {
+    public pbc::RepeatedField<global::MelandGame3.VectorXY> ForceDir {
       get { return forceDir_; }
     }
 
@@ -16019,8 +15914,8 @@ namespace Bian {
       if (IsLock != false) hash ^= IsLock.GetHashCode();
       if (Locker.Length != 0) hash ^= Locker.GetHashCode();
       if (guideInfo_ != null) hash ^= GuideInfo.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
-      if (EType != global::Bian.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
       if (IsHide != false) hash ^= IsHide.GetHashCode();
       if (entityTemplate_ != null) hash ^= EntityTemplate.GetHashCode();
       if (runAttribute_ != null) hash ^= RunAttribute.GetHashCode();
@@ -16098,11 +15993,11 @@ namespace Bian {
         output.WriteRawTag(106);
         output.WriteMessage(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(112);
         output.WriteEnum((int) LockType);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(120);
         output.WriteEnum((int) EType);
       }
@@ -16202,11 +16097,11 @@ namespace Bian {
         output.WriteRawTag(106);
         output.WriteMessage(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(112);
         output.WriteEnum((int) LockType);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(120);
         output.WriteEnum((int) EType);
       }
@@ -16294,10 +16189,10 @@ namespace Bian {
       if (guideInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EType);
       }
       if (IsHide != false) {
@@ -16358,7 +16253,7 @@ namespace Bian {
       }
       if (other.attribute_ != null) {
         if (attribute_ == null) {
-          Attribute = new global::Bian.AvatarAttribute();
+          Attribute = new global::MelandGame3.AvatarAttribute();
         }
         Attribute.MergeFrom(other.Attribute);
       }
@@ -16367,7 +16262,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -16382,14 +16277,14 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
-      if (other.EType != global::Bian.EntityType.EntityTypeAll) {
+      if (other.EType != global::MelandGame3.EntityType.EntityTypeAll) {
         EType = other.EType;
       }
       if (other.IsHide != false) {
@@ -16397,13 +16292,13 @@ namespace Bian {
       }
       if (other.entityTemplate_ != null) {
         if (entityTemplate_ == null) {
-          EntityTemplate = new global::Bian.EntityTemplate();
+          EntityTemplate = new global::MelandGame3.EntityTemplate();
         }
         EntityTemplate.MergeFrom(other.EntityTemplate);
       }
       if (other.runAttribute_ != null) {
         if (runAttribute_ == null) {
-          RunAttribute = new global::Bian.EntityAttribute();
+          RunAttribute = new global::MelandGame3.EntityAttribute();
         }
         RunAttribute.MergeFrom(other.RunAttribute);
       }
@@ -16412,7 +16307,7 @@ namespace Bian {
       }
       if (other.fromFather_ != null) {
         if (fromFather_ == null) {
-          FromFather = new global::Bian.EntityId();
+          FromFather = new global::MelandGame3.EntityId();
         }
         FromFather.MergeFrom(other.FromFather);
       }
@@ -16421,7 +16316,7 @@ namespace Bian {
       }
       if (other.audios_ != null) {
         if (audios_ == null) {
-          Audios = new global::Bian.EntityAudios();
+          Audios = new global::MelandGame3.EntityAudios();
         }
         Audios.MergeFrom(other.Audios);
       }
@@ -16470,7 +16365,7 @@ namespace Bian {
           }
           case 58: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -16481,7 +16376,7 @@ namespace Bian {
           }
           case 74: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -16500,17 +16395,17 @@ namespace Bian {
           }
           case 106: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 112: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 120: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 128: {
@@ -16519,14 +16414,14 @@ namespace Bian {
           }
           case 138: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
           }
           case 146: {
             if (runAttribute_ == null) {
-              RunAttribute = new global::Bian.EntityAttribute();
+              RunAttribute = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(RunAttribute);
             break;
@@ -16537,7 +16432,7 @@ namespace Bian {
           }
           case 162: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -16548,7 +16443,7 @@ namespace Bian {
           }
           case 178: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
@@ -16606,7 +16501,7 @@ namespace Bian {
           }
           case 58: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -16617,7 +16512,7 @@ namespace Bian {
           }
           case 74: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -16636,17 +16531,17 @@ namespace Bian {
           }
           case 106: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 112: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
           case 120: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 128: {
@@ -16655,14 +16550,14 @@ namespace Bian {
           }
           case 138: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
           }
           case 146: {
             if (runAttribute_ == null) {
-              RunAttribute = new global::Bian.EntityAttribute();
+              RunAttribute = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(RunAttribute);
             break;
@@ -16673,7 +16568,7 @@ namespace Bian {
           }
           case 162: {
             if (fromFather_ == null) {
-              FromFather = new global::Bian.EntityId();
+              FromFather = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(FromFather);
             break;
@@ -16684,7 +16579,7 @@ namespace Bian {
           }
           case 178: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
@@ -16729,7 +16624,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[23]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16806,13 +16701,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 3;
-    private global::Bian.MaterialType type_ = global::Bian.MaterialType.MaterialTypeUnknown;
+    private global::MelandGame3.MaterialType type_ = global::MelandGame3.MaterialType.MaterialTypeUnknown;
     /// <summary>
     /// 类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MaterialType Type {
+    public global::MelandGame3.MaterialType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -16836,13 +16731,13 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 5;
-    private global::Bian.EntityProfile profile_;
+    private global::MelandGame3.EntityProfile profile_;
     /// <summary>
     /// 资源数值 (hp_limit)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile Profile {
+    public global::MelandGame3.EntityProfile Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -16851,10 +16746,10 @@ namespace Bian {
 
     /// <summary>Field number for the "enemy_type" field.</summary>
     public const int EnemyTypeFieldNumber = 6;
-    private global::Bian.EnemyType enemyType_ = global::Bian.EnemyType.EnemyTypeUnattackable;
+    private global::MelandGame3.EnemyType enemyType_ = global::MelandGame3.EnemyType.EnemyTypeUnattackable;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EnemyType EnemyType {
+    public global::MelandGame3.EnemyType EnemyType {
       get { return enemyType_; }
       set {
         enemyType_ = value;
@@ -16878,13 +16773,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 8;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向（朝向）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -16929,13 +16824,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 12;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -16959,13 +16854,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_template" field.</summary>
     public const int EntityTemplateFieldNumber = 14;
-    private global::Bian.EntityTemplate entityTemplate_;
+    private global::MelandGame3.EntityTemplate entityTemplate_;
     /// <summary>
     /// 模板数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTemplate EntityTemplate {
+    public global::MelandGame3.EntityTemplate EntityTemplate {
       get { return entityTemplate_; }
       set {
         entityTemplate_ = value;
@@ -16989,10 +16884,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 16;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -17039,10 +16934,10 @@ namespace Bian {
       int hash = 1;
       if (Cid != 0) hash ^= Cid.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Type != global::Bian.MaterialType.MaterialTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.MaterialType.MaterialTypeUnknown) hash ^= Type.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) hash ^= EnemyType.GetHashCode();
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) hash ^= EnemyType.GetHashCode();
       if (DropExp != 0) hash ^= DropExp.GetHashCode();
       if (dir_ != null) hash ^= Dir.GetHashCode();
       if (IsInArea != false) hash ^= IsInArea.GetHashCode();
@@ -17052,7 +16947,7 @@ namespace Bian {
       if (FromEntityTemplate != false) hash ^= FromEntityTemplate.GetHashCode();
       if (entityTemplate_ != null) hash ^= EntityTemplate.GetHashCode();
       if (IsHide != false) hash ^= IsHide.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -17079,7 +16974,7 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(Id);
       }
-      if (Type != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (Type != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
@@ -17091,7 +16986,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteMessage(Profile);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         output.WriteRawTag(48);
         output.WriteEnum((int) EnemyType);
       }
@@ -17131,7 +17026,7 @@ namespace Bian {
         output.WriteRawTag(120);
         output.WriteBool(IsHide);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) LockType);
       }
@@ -17153,7 +17048,7 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(Id);
       }
-      if (Type != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (Type != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
@@ -17165,7 +17060,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteMessage(Profile);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         output.WriteRawTag(48);
         output.WriteEnum((int) EnemyType);
       }
@@ -17205,7 +17100,7 @@ namespace Bian {
         output.WriteRawTag(120);
         output.WriteBool(IsHide);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) LockType);
       }
@@ -17225,7 +17120,7 @@ namespace Bian {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (Type != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (Type != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Name.Length != 0) {
@@ -17234,7 +17129,7 @@ namespace Bian {
       if (profile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Profile);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EnemyType);
       }
       if (DropExp != 0) {
@@ -17264,7 +17159,7 @@ namespace Bian {
       if (IsHide != false) {
         size += 1 + 1;
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
       if (_unknownFields != null) {
@@ -17285,7 +17180,7 @@ namespace Bian {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.Type != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (other.Type != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         Type = other.Type;
       }
       if (other.Name.Length != 0) {
@@ -17293,11 +17188,11 @@ namespace Bian {
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.EntityProfile();
+          Profile = new global::MelandGame3.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
-      if (other.EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (other.EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         EnemyType = other.EnemyType;
       }
       if (other.DropExp != 0) {
@@ -17305,7 +17200,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -17320,7 +17215,7 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
@@ -17329,14 +17224,14 @@ namespace Bian {
       }
       if (other.entityTemplate_ != null) {
         if (entityTemplate_ == null) {
-          EntityTemplate = new global::Bian.EntityTemplate();
+          EntityTemplate = new global::MelandGame3.EntityTemplate();
         }
         EntityTemplate.MergeFrom(other.EntityTemplate);
       }
       if (other.IsHide != false) {
         IsHide = other.IsHide;
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -17363,7 +17258,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            Type = (global::Bian.MaterialType) input.ReadEnum();
+            Type = (global::MelandGame3.MaterialType) input.ReadEnum();
             break;
           }
           case 34: {
@@ -17372,13 +17267,13 @@ namespace Bian {
           }
           case 42: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 48: {
-            EnemyType = (global::Bian.EnemyType) input.ReadEnum();
+            EnemyType = (global::MelandGame3.EnemyType) input.ReadEnum();
             break;
           }
           case 56: {
@@ -17387,7 +17282,7 @@ namespace Bian {
           }
           case 66: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -17406,7 +17301,7 @@ namespace Bian {
           }
           case 98: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -17417,7 +17312,7 @@ namespace Bian {
           }
           case 114: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -17427,7 +17322,7 @@ namespace Bian {
             break;
           }
           case 128: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
         }
@@ -17454,7 +17349,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            Type = (global::Bian.MaterialType) input.ReadEnum();
+            Type = (global::MelandGame3.MaterialType) input.ReadEnum();
             break;
           }
           case 34: {
@@ -17463,13 +17358,13 @@ namespace Bian {
           }
           case 42: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 48: {
-            EnemyType = (global::Bian.EnemyType) input.ReadEnum();
+            EnemyType = (global::MelandGame3.EnemyType) input.ReadEnum();
             break;
           }
           case 56: {
@@ -17478,7 +17373,7 @@ namespace Bian {
           }
           case 66: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -17497,7 +17392,7 @@ namespace Bian {
           }
           case 98: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
@@ -17508,7 +17403,7 @@ namespace Bian {
           }
           case 114: {
             if (entityTemplate_ == null) {
-              EntityTemplate = new global::Bian.EntityTemplate();
+              EntityTemplate = new global::MelandGame3.EntityTemplate();
             }
             input.ReadMessage(EntityTemplate);
             break;
@@ -17518,7 +17413,7 @@ namespace Bian {
             break;
           }
           case 128: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
         }
@@ -17542,7 +17437,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[24]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17668,13 +17563,13 @@ namespace Bian {
 
     /// <summary>Field number for the "profile" field.</summary>
     public const int ProfileFieldNumber = 6;
-    private global::Bian.EntityProfile profile_;
+    private global::MelandGame3.EntityProfile profile_;
     /// <summary>
     /// 属性
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfile Profile {
+    public global::MelandGame3.EntityProfile Profile {
       get { return profile_; }
       set {
         profile_ = value;
@@ -17683,13 +17578,13 @@ namespace Bian {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 7;
-    private global::Bian.BotStatus status_ = global::Bian.BotStatus.BotStatusUnknown;
+    private global::MelandGame3.BotStatus status_ = global::MelandGame3.BotStatus.BotStatusUnknown;
     /// <summary>
     /// 运行状态
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BotStatus Status {
+    public global::MelandGame3.BotStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -17713,10 +17608,10 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 9;
-    private global::Bian.EntityLocation location_;
+    private global::MelandGame3.EntityLocation location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Location {
+    public global::MelandGame3.EntityLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -17754,13 +17649,13 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble" field.</summary>
     public const int BubbleFieldNumber = 12;
-    private global::Bian.EntitySceneEffect bubble_;
+    private global::MelandGame3.EntitySceneEffect bubble_;
     /// <summary>
     /// 泡泡
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntitySceneEffect Bubble {
+    public global::MelandGame3.EntitySceneEffect Bubble {
       get { return bubble_; }
       set {
         bubble_ = value;
@@ -17769,13 +17664,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 13;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 方向
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -17784,15 +17679,15 @@ namespace Bian {
 
     /// <summary>Field number for the "avatars" field.</summary>
     public const int AvatarsFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::Bian.PlayerAvatar> _repeated_avatars_codec
-        = pb::FieldCodec.ForMessage(114, global::Bian.PlayerAvatar.Parser);
-    private readonly pbc::RepeatedField<global::Bian.PlayerAvatar> avatars_ = new pbc::RepeatedField<global::Bian.PlayerAvatar>();
+    private static readonly pb::FieldCodec<global::MelandGame3.PlayerAvatar> _repeated_avatars_codec
+        = pb::FieldCodec.ForMessage(114, global::MelandGame3.PlayerAvatar.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.PlayerAvatar> avatars_ = new pbc::RepeatedField<global::MelandGame3.PlayerAvatar>();
     /// <summary>
     /// bot avatar
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.PlayerAvatar> Avatars {
+    public pbc::RepeatedField<global::MelandGame3.PlayerAvatar> Avatars {
       get { return avatars_; }
     }
 
@@ -17813,13 +17708,13 @@ namespace Bian {
 
     /// <summary>Field number for the "code_status" field.</summary>
     public const int CodeStatusFieldNumber = 16;
-    private global::Bian.EntityCodeStatus codeStatus_ = global::Bian.EntityCodeStatus.EntityCodeStatusUnknow;
+    private global::MelandGame3.EntityCodeStatus codeStatus_ = global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow;
     /// <summary>
     /// 运行状态
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityCodeStatus CodeStatus {
+    public global::MelandGame3.EntityCodeStatus CodeStatus {
       get { return codeStatus_; }
       set {
         codeStatus_ = value;
@@ -17852,13 +17747,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 20;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -17867,10 +17762,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 21;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -17925,7 +17820,7 @@ namespace Bian {
       if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
-      if (Status != global::Bian.BotStatus.BotStatusUnknown) hash ^= Status.GetHashCode();
+      if (Status != global::MelandGame3.BotStatus.BotStatusUnknown) hash ^= Status.GetHashCode();
       if (Fuel != 0) hash ^= Fuel.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
       if (NowSkin != 0) hash ^= NowSkin.GetHashCode();
@@ -17934,11 +17829,11 @@ namespace Bian {
       if (dir_ != null) hash ^= Dir.GetHashCode();
       hash ^= avatars_.GetHashCode();
       if (IsCopy != false) hash ^= IsCopy.GetHashCode();
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) hash ^= CodeStatus.GetHashCode();
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) hash ^= CodeStatus.GetHashCode();
       if (IsInArea != false) hash ^= IsInArea.GetHashCode();
       if (IsLock != false) hash ^= IsLock.GetHashCode();
       if (guideInfo_ != null) hash ^= GuideInfo.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -17981,7 +17876,7 @@ namespace Bian {
         output.WriteRawTag(50);
         output.WriteMessage(Profile);
       }
-      if (Status != global::Bian.BotStatus.BotStatusUnknown) {
+      if (Status != global::MelandGame3.BotStatus.BotStatusUnknown) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
       }
@@ -18011,7 +17906,7 @@ namespace Bian {
         output.WriteRawTag(120);
         output.WriteBool(IsCopy);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) CodeStatus);
       }
@@ -18027,7 +17922,7 @@ namespace Bian {
         output.WriteRawTag(162, 1);
         output.WriteMessage(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(168, 1);
         output.WriteEnum((int) LockType);
       }
@@ -18065,7 +17960,7 @@ namespace Bian {
         output.WriteRawTag(50);
         output.WriteMessage(Profile);
       }
-      if (Status != global::Bian.BotStatus.BotStatusUnknown) {
+      if (Status != global::MelandGame3.BotStatus.BotStatusUnknown) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
       }
@@ -18095,7 +17990,7 @@ namespace Bian {
         output.WriteRawTag(120);
         output.WriteBool(IsCopy);
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) CodeStatus);
       }
@@ -18111,7 +18006,7 @@ namespace Bian {
         output.WriteRawTag(162, 1);
         output.WriteMessage(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(168, 1);
         output.WriteEnum((int) LockType);
       }
@@ -18143,7 +18038,7 @@ namespace Bian {
       if (profile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Profile);
       }
-      if (Status != global::Bian.BotStatus.BotStatusUnknown) {
+      if (Status != global::MelandGame3.BotStatus.BotStatusUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (Fuel != 0) {
@@ -18166,7 +18061,7 @@ namespace Bian {
       if (IsCopy != false) {
         size += 1 + 1;
       }
-      if (CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CodeStatus);
       }
       if (IsInArea != false) {
@@ -18178,7 +18073,7 @@ namespace Bian {
       if (guideInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
       if (_unknownFields != null) {
@@ -18210,11 +18105,11 @@ namespace Bian {
       }
       if (other.profile_ != null) {
         if (profile_ == null) {
-          Profile = new global::Bian.EntityProfile();
+          Profile = new global::MelandGame3.EntityProfile();
         }
         Profile.MergeFrom(other.Profile);
       }
-      if (other.Status != global::Bian.BotStatus.BotStatusUnknown) {
+      if (other.Status != global::MelandGame3.BotStatus.BotStatusUnknown) {
         Status = other.Status;
       }
       if (other.Fuel != 0) {
@@ -18222,7 +18117,7 @@ namespace Bian {
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.EntityLocation();
+          Location = new global::MelandGame3.EntityLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -18232,13 +18127,13 @@ namespace Bian {
       skins_.Add(other.skins_);
       if (other.bubble_ != null) {
         if (bubble_ == null) {
-          Bubble = new global::Bian.EntitySceneEffect();
+          Bubble = new global::MelandGame3.EntitySceneEffect();
         }
         Bubble.MergeFrom(other.Bubble);
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -18246,7 +18141,7 @@ namespace Bian {
       if (other.IsCopy != false) {
         IsCopy = other.IsCopy;
       }
-      if (other.CodeStatus != global::Bian.EntityCodeStatus.EntityCodeStatusUnknow) {
+      if (other.CodeStatus != global::MelandGame3.EntityCodeStatus.EntityCodeStatusUnknow) {
         CodeStatus = other.CodeStatus;
       }
       if (other.IsInArea != false) {
@@ -18257,11 +18152,11 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -18301,13 +18196,13 @@ namespace Bian {
           }
           case 50: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 56: {
-            Status = (global::Bian.BotStatus) input.ReadEnum();
+            Status = (global::MelandGame3.BotStatus) input.ReadEnum();
             break;
           }
           case 64: {
@@ -18316,7 +18211,7 @@ namespace Bian {
           }
           case 74: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -18332,14 +18227,14 @@ namespace Bian {
           }
           case 98: {
             if (bubble_ == null) {
-              Bubble = new global::Bian.EntitySceneEffect();
+              Bubble = new global::MelandGame3.EntitySceneEffect();
             }
             input.ReadMessage(Bubble);
             break;
           }
           case 106: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -18353,7 +18248,7 @@ namespace Bian {
             break;
           }
           case 128: {
-            CodeStatus = (global::Bian.EntityCodeStatus) input.ReadEnum();
+            CodeStatus = (global::MelandGame3.EntityCodeStatus) input.ReadEnum();
             break;
           }
           case 136: {
@@ -18366,13 +18261,13 @@ namespace Bian {
           }
           case 162: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 168: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
         }
@@ -18412,13 +18307,13 @@ namespace Bian {
           }
           case 50: {
             if (profile_ == null) {
-              Profile = new global::Bian.EntityProfile();
+              Profile = new global::MelandGame3.EntityProfile();
             }
             input.ReadMessage(Profile);
             break;
           }
           case 56: {
-            Status = (global::Bian.BotStatus) input.ReadEnum();
+            Status = (global::MelandGame3.BotStatus) input.ReadEnum();
             break;
           }
           case 64: {
@@ -18427,7 +18322,7 @@ namespace Bian {
           }
           case 74: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -18443,14 +18338,14 @@ namespace Bian {
           }
           case 98: {
             if (bubble_ == null) {
-              Bubble = new global::Bian.EntitySceneEffect();
+              Bubble = new global::MelandGame3.EntitySceneEffect();
             }
             input.ReadMessage(Bubble);
             break;
           }
           case 106: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -18464,7 +18359,7 @@ namespace Bian {
             break;
           }
           case 128: {
-            CodeStatus = (global::Bian.EntityCodeStatus) input.ReadEnum();
+            CodeStatus = (global::MelandGame3.EntityCodeStatus) input.ReadEnum();
             break;
           }
           case 136: {
@@ -18477,13 +18372,13 @@ namespace Bian {
           }
           case 162: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 168: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
         }
@@ -18507,7 +18402,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[25]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18560,10 +18455,10 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 2;
-    private global::Bian.EntityLocation location_;
+    private global::MelandGame3.EntityLocation location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Location {
+    public global::MelandGame3.EntityLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -18572,12 +18467,12 @@ namespace Bian {
 
     /// <summary>Field number for the "falling_objects" field.</summary>
     public const int FallingObjectsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.FallingObject> _repeated_fallingObjects_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.FallingObject.Parser);
-    private readonly pbc::RepeatedField<global::Bian.FallingObject> fallingObjects_ = new pbc::RepeatedField<global::Bian.FallingObject>();
+    private static readonly pb::FieldCodec<global::MelandGame3.FallingObject> _repeated_fallingObjects_codec
+        = pb::FieldCodec.ForMessage(26, global::MelandGame3.FallingObject.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.FallingObject> fallingObjects_ = new pbc::RepeatedField<global::MelandGame3.FallingObject>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.FallingObject> FallingObjects {
+    public pbc::RepeatedField<global::MelandGame3.FallingObject> FallingObjects {
       get { return fallingObjects_; }
     }
 
@@ -18643,13 +18538,13 @@ namespace Bian {
 
     /// <summary>Field number for the "guide_info" field.</summary>
     public const int GuideInfoFieldNumber = 9;
-    private global::Bian.EntityGuidance guideInfo_;
+    private global::MelandGame3.EntityGuidance guideInfo_;
     /// <summary>
     ///引导提示信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityGuidance GuideInfo {
+    public global::MelandGame3.EntityGuidance GuideInfo {
       get { return guideInfo_; }
       set {
         guideInfo_ = value;
@@ -18658,10 +18553,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_type" field.</summary>
     public const int LockTypeFieldNumber = 10;
-    private global::Bian.EntityLockType lockType_ = global::Bian.EntityLockType.EntityLockTypeUnknown;
+    private global::MelandGame3.EntityLockType lockType_ = global::MelandGame3.EntityLockType.EntityLockTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLockType LockType {
+    public global::MelandGame3.EntityLockType LockType {
       get { return lockType_; }
       set {
         lockType_ = value;
@@ -18709,7 +18604,7 @@ namespace Bian {
       if (IsLock != false) hash ^= IsLock.GetHashCode();
       if (Locker.Length != 0) hash ^= Locker.GetHashCode();
       if (guideInfo_ != null) hash ^= GuideInfo.GetHashCode();
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) hash ^= LockType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -18761,7 +18656,7 @@ namespace Bian {
         output.WriteRawTag(74);
         output.WriteMessage(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(80);
         output.WriteEnum((int) LockType);
       }
@@ -18808,7 +18703,7 @@ namespace Bian {
         output.WriteRawTag(74);
         output.WriteMessage(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         output.WriteRawTag(80);
         output.WriteEnum((int) LockType);
       }
@@ -18847,7 +18742,7 @@ namespace Bian {
       if (guideInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GuideInfo);
       }
-      if (LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockType);
       }
       if (_unknownFields != null) {
@@ -18867,7 +18762,7 @@ namespace Bian {
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.EntityLocation();
+          Location = new global::MelandGame3.EntityLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -18889,11 +18784,11 @@ namespace Bian {
       }
       if (other.guideInfo_ != null) {
         if (guideInfo_ == null) {
-          GuideInfo = new global::Bian.EntityGuidance();
+          GuideInfo = new global::MelandGame3.EntityGuidance();
         }
         GuideInfo.MergeFrom(other.GuideInfo);
       }
-      if (other.LockType != global::Bian.EntityLockType.EntityLockTypeUnknown) {
+      if (other.LockType != global::MelandGame3.EntityLockType.EntityLockTypeUnknown) {
         LockType = other.LockType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -18917,7 +18812,7 @@ namespace Bian {
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -18948,13 +18843,13 @@ namespace Bian {
           }
           case 74: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 80: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
         }
@@ -18978,7 +18873,7 @@ namespace Bian {
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -19009,13 +18904,13 @@ namespace Bian {
           }
           case 74: {
             if (guideInfo_ == null) {
-              GuideInfo = new global::Bian.EntityGuidance();
+              GuideInfo = new global::MelandGame3.EntityGuidance();
             }
             input.ReadMessage(GuideInfo);
             break;
           }
           case 80: {
-            LockType = (global::Bian.EntityLockType) input.ReadEnum();
+            LockType = (global::MelandGame3.EntityLockType) input.ReadEnum();
             break;
           }
         }
@@ -19042,7 +18937,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[26]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19083,10 +18978,10 @@ namespace Bian {
 
     /// <summary>Field number for the "e_type" field.</summary>
     public const int ETypeFieldNumber = 1;
-    private global::Bian.EntityType eType_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType eType_ = global::MelandGame3.EntityType.EntityTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType EType {
+    public global::MelandGame3.EntityType EType {
       get { return eType_; }
       set {
         eType_ = value;
@@ -19095,10 +18990,10 @@ namespace Bian {
 
     /// <summary>Field number for the "loc" field.</summary>
     public const int LocFieldNumber = 2;
-    private global::Bian.EntityLocation loc_;
+    private global::MelandGame3.EntityLocation loc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Loc {
+    public global::MelandGame3.EntityLocation Loc {
       get { return loc_; }
       set {
         loc_ = value;
@@ -19119,10 +19014,10 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 4;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -19197,15 +19092,15 @@ namespace Bian {
 
     /// <summary>Field number for the "force_dir" field.</summary>
     public const int ForceDirFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Bian.VectorXY> _repeated_forceDir_codec
-        = pb::FieldCodec.ForMessage(82, global::Bian.VectorXY.Parser);
-    private readonly pbc::RepeatedField<global::Bian.VectorXY> forceDir_ = new pbc::RepeatedField<global::Bian.VectorXY>();
+    private static readonly pb::FieldCodec<global::MelandGame3.VectorXY> _repeated_forceDir_codec
+        = pb::FieldCodec.ForMessage(82, global::MelandGame3.VectorXY.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.VectorXY> forceDir_ = new pbc::RepeatedField<global::MelandGame3.VectorXY>();
     /// <summary>
     /// 场景作用力方向(in,out)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.VectorXY> ForceDir {
+    public pbc::RepeatedField<global::MelandGame3.VectorXY> ForceDir {
       get { return forceDir_; }
     }
 
@@ -19241,7 +19136,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EType != global::Bian.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) hash ^= EType.GetHashCode();
       if (loc_ != null) hash ^= Loc.GetHashCode();
       if (Cid != 0) hash ^= Cid.GetHashCode();
       if (dir_ != null) hash ^= Dir.GetHashCode();
@@ -19269,7 +19164,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EType);
       }
@@ -19316,7 +19211,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EType);
       }
@@ -19363,7 +19258,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EType != global::Bian.EntityType.EntityTypeAll) {
+      if (EType != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EType);
       }
       if (loc_ != null) {
@@ -19403,12 +19298,12 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.EType != global::Bian.EntityType.EntityTypeAll) {
+      if (other.EType != global::MelandGame3.EntityType.EntityTypeAll) {
         EType = other.EType;
       }
       if (other.loc_ != null) {
         if (loc_ == null) {
-          Loc = new global::Bian.EntityLocation();
+          Loc = new global::MelandGame3.EntityLocation();
         }
         Loc.MergeFrom(other.Loc);
       }
@@ -19417,7 +19312,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -19453,12 +19348,12 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -19469,7 +19364,7 @@ namespace Bian {
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -19514,12 +19409,12 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            EType = (global::Bian.EntityType) input.ReadEnum();
+            EType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -19530,7 +19425,7 @@ namespace Bian {
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -19580,7 +19475,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[27]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19614,10 +19509,10 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_type" field.</summary>
     public const int EntityTypeFieldNumber = 1;
-    private global::Bian.EntityType entityType_ = global::Bian.EntityType.EntityTypeAll;
+    private global::MelandGame3.EntityType entityType_ = global::MelandGame3.EntityType.EntityTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityType EntityType {
+    public global::MelandGame3.EntityType EntityType {
       get { return entityType_; }
       set {
         entityType_ = value;
@@ -19638,13 +19533,13 @@ namespace Bian {
 
     /// <summary>Field number for the "direction" field.</summary>
     public const int DirectionFieldNumber = 3;
-    private global::Bian.VectorXY direction_;
+    private global::MelandGame3.VectorXY direction_;
     /// <summary>
     /// 朝向
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Direction {
+    public global::MelandGame3.VectorXY Direction {
       get { return direction_; }
       set {
         direction_ = value;
@@ -19676,7 +19571,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) hash ^= EntityType.GetHashCode();
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) hash ^= EntityType.GetHashCode();
       if (EntityId.Length != 0) hash ^= EntityId.GetHashCode();
       if (direction_ != null) hash ^= Direction.GetHashCode();
       if (_unknownFields != null) {
@@ -19697,7 +19592,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EntityType);
       }
@@ -19719,7 +19614,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EntityType);
       }
@@ -19741,7 +19636,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntityType);
       }
       if (EntityId.Length != 0) {
@@ -19762,7 +19657,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.EntityType != global::Bian.EntityType.EntityTypeAll) {
+      if (other.EntityType != global::MelandGame3.EntityType.EntityTypeAll) {
         EntityType = other.EntityType;
       }
       if (other.EntityId.Length != 0) {
@@ -19770,7 +19665,7 @@ namespace Bian {
       }
       if (other.direction_ != null) {
         if (direction_ == null) {
-          Direction = new global::Bian.VectorXY();
+          Direction = new global::MelandGame3.VectorXY();
         }
         Direction.MergeFrom(other.Direction);
       }
@@ -19790,7 +19685,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            EntityType = (global::Bian.EntityType) input.ReadEnum();
+            EntityType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -19799,7 +19694,7 @@ namespace Bian {
           }
           case 26: {
             if (direction_ == null) {
-              Direction = new global::Bian.VectorXY();
+              Direction = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Direction);
             break;
@@ -19820,7 +19715,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            EntityType = (global::Bian.EntityType) input.ReadEnum();
+            EntityType = (global::MelandGame3.EntityType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -19829,7 +19724,7 @@ namespace Bian {
           }
           case 26: {
             if (direction_ == null) {
-              Direction = new global::Bian.VectorXY();
+              Direction = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Direction);
             break;
@@ -19855,7 +19750,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[28]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20118,7 +20013,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[29]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20151,10 +20046,10 @@ namespace Bian {
 
     /// <summary>Field number for the "player" field.</summary>
     public const int PlayerFieldNumber = 1;
-    private global::Bian.Player player_;
+    private global::MelandGame3.Player player_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Player Player {
+    public global::MelandGame3.Player Player {
       get { return player_; }
       set {
         player_ = value;
@@ -20163,10 +20058,10 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 2;
-    private global::Bian.PlayerLocation location_;
+    private global::MelandGame3.PlayerLocation location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PlayerLocation Location {
+    public global::MelandGame3.PlayerLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -20273,13 +20168,13 @@ namespace Bian {
       }
       if (other.player_ != null) {
         if (player_ == null) {
-          Player = new global::Bian.Player();
+          Player = new global::MelandGame3.Player();
         }
         Player.MergeFrom(other.Player);
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.PlayerLocation();
+          Location = new global::MelandGame3.PlayerLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -20300,14 +20195,14 @@ namespace Bian {
             break;
           case 10: {
             if (player_ == null) {
-              Player = new global::Bian.Player();
+              Player = new global::MelandGame3.Player();
             }
             input.ReadMessage(Player);
             break;
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.PlayerLocation();
+              Location = new global::MelandGame3.PlayerLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -20329,14 +20224,14 @@ namespace Bian {
             break;
           case 10: {
             if (player_ == null) {
-              Player = new global::Bian.Player();
+              Player = new global::MelandGame3.Player();
             }
             input.ReadMessage(Player);
             break;
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.PlayerLocation();
+              Location = new global::MelandGame3.PlayerLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -20365,7 +20260,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[30]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20399,13 +20294,13 @@ namespace Bian {
 
     /// <summary>Field number for the "position" field.</summary>
     public const int PositionFieldNumber = 1;
-    private global::Bian.AvatarPosition position_ = global::Bian.AvatarPosition.AvatarPositionNone;
+    private global::MelandGame3.AvatarPosition position_ = global::MelandGame3.AvatarPosition.AvatarPositionNone;
     /// <summary>
     /// 装备位置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AvatarPosition Position {
+    public global::MelandGame3.AvatarPosition Position {
       get { return position_; }
       set {
         position_ = value;
@@ -20429,13 +20324,13 @@ namespace Bian {
 
     /// <summary>Field number for the "attribute" field.</summary>
     public const int AttributeFieldNumber = 3;
-    private global::Bian.AvatarAttribute attribute_;
+    private global::MelandGame3.AvatarAttribute attribute_;
     /// <summary>
     /// 属性
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AvatarAttribute Attribute {
+    public global::MelandGame3.AvatarAttribute Attribute {
       get { return attribute_; }
       set {
         attribute_ = value;
@@ -20467,7 +20362,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) hash ^= Position.GetHashCode();
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) hash ^= Position.GetHashCode();
       if (ObjectId != 0) hash ^= ObjectId.GetHashCode();
       if (attribute_ != null) hash ^= Attribute.GetHashCode();
       if (_unknownFields != null) {
@@ -20488,7 +20383,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Position);
       }
@@ -20510,7 +20405,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Position);
       }
@@ -20532,7 +20427,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Position);
       }
       if (ObjectId != 0) {
@@ -20553,7 +20448,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (other.Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         Position = other.Position;
       }
       if (other.ObjectId != 0) {
@@ -20561,7 +20456,7 @@ namespace Bian {
       }
       if (other.attribute_ != null) {
         if (attribute_ == null) {
-          Attribute = new global::Bian.AvatarAttribute();
+          Attribute = new global::MelandGame3.AvatarAttribute();
         }
         Attribute.MergeFrom(other.Attribute);
       }
@@ -20581,7 +20476,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Position = (global::Bian.AvatarPosition) input.ReadEnum();
+            Position = (global::MelandGame3.AvatarPosition) input.ReadEnum();
             break;
           }
           case 16: {
@@ -20590,7 +20485,7 @@ namespace Bian {
           }
           case 26: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -20611,7 +20506,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Position = (global::Bian.AvatarPosition) input.ReadEnum();
+            Position = (global::MelandGame3.AvatarPosition) input.ReadEnum();
             break;
           }
           case 16: {
@@ -20620,7 +20515,7 @@ namespace Bian {
           }
           case 26: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -20649,7 +20544,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[31]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21161,7 +21056,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[32]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21376,7 +21271,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[33]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21482,12 +21377,12 @@ namespace Bian {
 
     /// <summary>Field number for the "default_conversation" field.</summary>
     public const int DefaultConversationFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Bian.NpcConversation> _repeated_defaultConversation_codec
-        = pb::FieldCodec.ForMessage(50, global::Bian.NpcConversation.Parser);
-    private readonly pbc::RepeatedField<global::Bian.NpcConversation> defaultConversation_ = new pbc::RepeatedField<global::Bian.NpcConversation>();
+    private static readonly pb::FieldCodec<global::MelandGame3.NpcConversation> _repeated_defaultConversation_codec
+        = pb::FieldCodec.ForMessage(50, global::MelandGame3.NpcConversation.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.NpcConversation> defaultConversation_ = new pbc::RepeatedField<global::MelandGame3.NpcConversation>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.NpcConversation> DefaultConversation {
+    public pbc::RepeatedField<global::MelandGame3.NpcConversation> DefaultConversation {
       get { return defaultConversation_; }
     }
 
@@ -21868,7 +21763,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[34]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22131,7 +22026,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[35]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22164,10 +22059,10 @@ namespace Bian {
 
     /// <summary>Field number for the "npc" field.</summary>
     public const int NpcFieldNumber = 1;
-    private global::Bian.Npc npc_;
+    private global::MelandGame3.Npc npc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Npc Npc {
+    public global::MelandGame3.Npc Npc {
       get { return npc_; }
       set {
         npc_ = value;
@@ -22176,10 +22071,10 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 2;
-    private global::Bian.NpcLocation location_;
+    private global::MelandGame3.NpcLocation location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.NpcLocation Location {
+    public global::MelandGame3.NpcLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -22286,13 +22181,13 @@ namespace Bian {
       }
       if (other.npc_ != null) {
         if (npc_ == null) {
-          Npc = new global::Bian.Npc();
+          Npc = new global::MelandGame3.Npc();
         }
         Npc.MergeFrom(other.Npc);
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.NpcLocation();
+          Location = new global::MelandGame3.NpcLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -22313,14 +22208,14 @@ namespace Bian {
             break;
           case 10: {
             if (npc_ == null) {
-              Npc = new global::Bian.Npc();
+              Npc = new global::MelandGame3.Npc();
             }
             input.ReadMessage(Npc);
             break;
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.NpcLocation();
+              Location = new global::MelandGame3.NpcLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -22342,14 +22237,14 @@ namespace Bian {
             break;
           case 10: {
             if (npc_ == null) {
-              Npc = new global::Bian.Npc();
+              Npc = new global::MelandGame3.Npc();
             }
             input.ReadMessage(Npc);
             break;
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.NpcLocation();
+              Location = new global::MelandGame3.NpcLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -22375,7 +22270,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[36]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22601,7 +22496,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[37]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22901,7 +22796,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[38]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23129,7 +23024,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[39]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23189,10 +23084,10 @@ namespace Bian {
 
     /// <summary>Field number for the "trigger_type" field.</summary>
     public const int TriggerTypeFieldNumber = 3;
-    private global::Bian.ObjectAnimationTriggerType triggerType_ = global::Bian.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown;
+    private global::MelandGame3.ObjectAnimationTriggerType triggerType_ = global::MelandGame3.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectAnimationTriggerType TriggerType {
+    public global::MelandGame3.ObjectAnimationTriggerType TriggerType {
       get { return triggerType_; }
       set {
         triggerType_ = value;
@@ -23201,10 +23096,10 @@ namespace Bian {
 
     /// <summary>Field number for the "stop_type" field.</summary>
     public const int StopTypeFieldNumber = 4;
-    private global::Bian.ObjectAnimationStopType stopType_ = global::Bian.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown;
+    private global::MelandGame3.ObjectAnimationStopType stopType_ = global::MelandGame3.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectAnimationStopType StopType {
+    public global::MelandGame3.ObjectAnimationStopType StopType {
       get { return stopType_; }
       set {
         stopType_ = value;
@@ -23252,8 +23147,8 @@ namespace Bian {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Source.Length != 0) hash ^= Source.GetHashCode();
-      if (TriggerType != global::Bian.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) hash ^= TriggerType.GetHashCode();
-      if (StopType != global::Bian.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) hash ^= StopType.GetHashCode();
+      if (TriggerType != global::MelandGame3.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) hash ^= TriggerType.GetHashCode();
+      if (StopType != global::MelandGame3.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) hash ^= StopType.GetHashCode();
       if (Priority != 0) hash ^= Priority.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -23281,11 +23176,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(Source);
       }
-      if (TriggerType != global::Bian.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
+      if (TriggerType != global::MelandGame3.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) TriggerType);
       }
-      if (StopType != global::Bian.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
+      if (StopType != global::MelandGame3.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) StopType);
       }
@@ -23311,11 +23206,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(Source);
       }
-      if (TriggerType != global::Bian.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
+      if (TriggerType != global::MelandGame3.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) TriggerType);
       }
-      if (StopType != global::Bian.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
+      if (StopType != global::MelandGame3.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) StopType);
       }
@@ -23339,10 +23234,10 @@ namespace Bian {
       if (Source.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
       }
-      if (TriggerType != global::Bian.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
+      if (TriggerType != global::MelandGame3.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TriggerType);
       }
-      if (StopType != global::Bian.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
+      if (StopType != global::MelandGame3.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StopType);
       }
       if (Priority != 0) {
@@ -23366,10 +23261,10 @@ namespace Bian {
       if (other.Source.Length != 0) {
         Source = other.Source;
       }
-      if (other.TriggerType != global::Bian.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
+      if (other.TriggerType != global::MelandGame3.ObjectAnimationTriggerType.ObjectAnimationTriggerTypeUnknown) {
         TriggerType = other.TriggerType;
       }
-      if (other.StopType != global::Bian.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
+      if (other.StopType != global::MelandGame3.ObjectAnimationStopType.ObjectAnimationStopTypeUnknown) {
         StopType = other.StopType;
       }
       if (other.Priority != 0) {
@@ -23399,11 +23294,11 @@ namespace Bian {
             break;
           }
           case 24: {
-            TriggerType = (global::Bian.ObjectAnimationTriggerType) input.ReadEnum();
+            TriggerType = (global::MelandGame3.ObjectAnimationTriggerType) input.ReadEnum();
             break;
           }
           case 32: {
-            StopType = (global::Bian.ObjectAnimationStopType) input.ReadEnum();
+            StopType = (global::MelandGame3.ObjectAnimationStopType) input.ReadEnum();
             break;
           }
           case 40: {
@@ -23434,11 +23329,11 @@ namespace Bian {
             break;
           }
           case 24: {
-            TriggerType = (global::Bian.ObjectAnimationTriggerType) input.ReadEnum();
+            TriggerType = (global::MelandGame3.ObjectAnimationTriggerType) input.ReadEnum();
             break;
           }
           case 32: {
-            StopType = (global::Bian.ObjectAnimationStopType) input.ReadEnum();
+            StopType = (global::MelandGame3.ObjectAnimationStopType) input.ReadEnum();
             break;
           }
           case 40: {
@@ -23466,7 +23361,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[40]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23537,10 +23432,10 @@ namespace Bian {
 
     /// <summary>Field number for the "animation" field.</summary>
     public const int AnimationFieldNumber = 4;
-    private global::Bian.ObjectAnimation animation_;
+    private global::MelandGame3.ObjectAnimation animation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectAnimation Animation {
+    public global::MelandGame3.ObjectAnimation Animation {
       get { return animation_; }
       set {
         animation_ = value;
@@ -23682,7 +23577,7 @@ namespace Bian {
       }
       if (other.animation_ != null) {
         if (animation_ == null) {
-          Animation = new global::Bian.ObjectAnimation();
+          Animation = new global::MelandGame3.ObjectAnimation();
         }
         Animation.MergeFrom(other.Animation);
       }
@@ -23715,7 +23610,7 @@ namespace Bian {
           }
           case 34: {
             if (animation_ == null) {
-              Animation = new global::Bian.ObjectAnimation();
+              Animation = new global::MelandGame3.ObjectAnimation();
             }
             input.ReadMessage(Animation);
             break;
@@ -23749,7 +23644,7 @@ namespace Bian {
           }
           case 34: {
             if (animation_ == null) {
-              Animation = new global::Bian.ObjectAnimation();
+              Animation = new global::MelandGame3.ObjectAnimation();
             }
             input.ReadMessage(Animation);
             break;
@@ -23775,7 +23670,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[41]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24107,7 +24002,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[42]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24152,10 +24047,10 @@ namespace Bian {
 
     /// <summary>Field number for the "setting" field.</summary>
     public const int SettingFieldNumber = 2;
-    private global::Bian.GearSettings setting_;
+    private global::MelandGame3.GearSettings setting_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.GearSettings Setting {
+    public global::MelandGame3.GearSettings Setting {
       get { return setting_; }
       set {
         setting_ = value;
@@ -24265,7 +24160,7 @@ namespace Bian {
       }
       if (other.setting_ != null) {
         if (setting_ == null) {
-          Setting = new global::Bian.GearSettings();
+          Setting = new global::MelandGame3.GearSettings();
         }
         Setting.MergeFrom(other.Setting);
       }
@@ -24290,7 +24185,7 @@ namespace Bian {
           }
           case 18: {
             if (setting_ == null) {
-              Setting = new global::Bian.GearSettings();
+              Setting = new global::MelandGame3.GearSettings();
             }
             input.ReadMessage(Setting);
             break;
@@ -24316,7 +24211,7 @@ namespace Bian {
           }
           case 18: {
             if (setting_ == null) {
-              Setting = new global::Bian.GearSettings();
+              Setting = new global::MelandGame3.GearSettings();
             }
             input.ReadMessage(Setting);
             break;
@@ -24342,7 +24237,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[43]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24387,13 +24282,13 @@ namespace Bian {
 
     /// <summary>Field number for the "gear_type" field.</summary>
     public const int GearTypeFieldNumber = 1;
-    private global::Bian.ObjectGearType gearType_ = global::Bian.ObjectGearType.ObjectGearTypeUnknown;
+    private global::MelandGame3.ObjectGearType gearType_ = global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown;
     /// <summary>
     /// 装备类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectGearType GearType {
+    public global::MelandGame3.ObjectGearType GearType {
       get { return gearType_; }
       set {
         gearType_ = value;
@@ -24582,15 +24477,15 @@ namespace Bian {
 
     /// <summary>Field number for the "repair_need" field.</summary>
     public const int RepairNeedFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::Bian.Stuffs> _repeated_repairNeed_codec
-        = pb::FieldCodec.ForMessage(114, global::Bian.Stuffs.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Stuffs> repairNeed_ = new pbc::RepeatedField<global::Bian.Stuffs>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Stuffs> _repeated_repairNeed_codec
+        = pb::FieldCodec.ForMessage(114, global::MelandGame3.Stuffs.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Stuffs> repairNeed_ = new pbc::RepeatedField<global::MelandGame3.Stuffs>();
     /// <summary>
     /// 维修材料组
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Stuffs> RepairNeed {
+    public pbc::RepeatedField<global::MelandGame3.Stuffs> RepairNeed {
       get { return repairNeed_; }
     }
 
@@ -24630,7 +24525,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) hash ^= GearType.GetHashCode();
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) hash ^= GearType.GetHashCode();
       if (Durability != 0) hash ^= Durability.GetHashCode();
       if (SkillId != 0) hash ^= SkillId.GetHashCode();
       if (HpLimitAdded != 0) hash ^= HpLimitAdded.GetHashCode();
@@ -24662,7 +24557,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) GearType);
       }
@@ -24725,7 +24620,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) GearType);
       }
@@ -24788,7 +24683,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GearType);
       }
       if (Durability != 0) {
@@ -24840,7 +24735,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (other.GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         GearType = other.GearType;
       }
       if (other.Durability != 0) {
@@ -24896,7 +24791,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            GearType = (global::Bian.ObjectGearType) input.ReadEnum();
+            GearType = (global::MelandGame3.ObjectGearType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -24967,7 +24862,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            GearType = (global::Bian.ObjectGearType) input.ReadEnum();
+            GearType = (global::MelandGame3.ObjectGearType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -25046,7 +24941,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[44]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25117,10 +25012,10 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 4;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -25262,7 +25157,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -25295,7 +25190,7 @@ namespace Bian {
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -25329,7 +25224,7 @@ namespace Bian {
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -25355,7 +25250,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[45]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25458,10 +25353,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Bian.ObjectType type_ = global::Bian.ObjectType.ObjectTypeUnknown;
+    private global::MelandGame3.ObjectType type_ = global::MelandGame3.ObjectType.ObjectTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectType Type {
+    public global::MelandGame3.ObjectType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -25532,10 +25427,10 @@ namespace Bian {
 
     /// <summary>Field number for the "block_type" field.</summary>
     public const int BlockTypeFieldNumber = 8;
-    private global::Bian.ObjectBlockType blockType_ = global::Bian.ObjectBlockType.ObjectBlockTypeFree;
+    private global::MelandGame3.ObjectBlockType blockType_ = global::MelandGame3.ObjectBlockType.ObjectBlockTypeFree;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectBlockType BlockType {
+    public global::MelandGame3.ObjectBlockType BlockType {
       get { return blockType_; }
       set {
         blockType_ = value;
@@ -25544,13 +25439,13 @@ namespace Bian {
 
     /// <summary>Field number for the "anchor" field.</summary>
     public const int AnchorFieldNumber = 9;
-    private global::Bian.ObjectAnchor anchor_;
+    private global::MelandGame3.ObjectAnchor anchor_;
     /// <summary>
     /// 物品显示锚点
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectAnchor Anchor {
+    public global::MelandGame3.ObjectAnchor Anchor {
       get { return anchor_; }
       set {
         anchor_ = value;
@@ -25559,7 +25454,7 @@ namespace Bian {
 
     /// <summary>Field number for the "area" field.</summary>
     public const int AreaFieldNumber = 10;
-    private global::Bian.ObjectArea area_;
+    private global::MelandGame3.ObjectArea area_;
     /// <summary>
     /// 物品区域描述采用以下格式：
     /// 对于每个格子中每条边的摆放，由 0b0000 来决定，整型数值代表的是边的占用情况，例子：
@@ -25586,7 +25481,7 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectArea Area {
+    public global::MelandGame3.ObjectArea Area {
       get { return area_; }
       set {
         area_ = value;
@@ -25625,29 +25520,29 @@ namespace Bian {
 
     /// <summary>Field number for the "states" field.</summary>
     public const int StatesFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::Bian.ObjectState> _repeated_states_codec
-        = pb::FieldCodec.ForMessage(106, global::Bian.ObjectState.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ObjectState> states_ = new pbc::RepeatedField<global::Bian.ObjectState>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ObjectState> _repeated_states_codec
+        = pb::FieldCodec.ForMessage(106, global::MelandGame3.ObjectState.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ObjectState> states_ = new pbc::RepeatedField<global::MelandGame3.ObjectState>();
     /// <summary>
     /// 物品状态定义
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjectState> States {
+    public pbc::RepeatedField<global::MelandGame3.ObjectState> States {
       get { return states_; }
     }
 
     /// <summary>Field number for the "pre_article_type" field.</summary>
     public const int PreArticleTypeFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::Bian.ObjectType> _repeated_preArticleType_codec
-        = pb::FieldCodec.ForEnum(114, x => (int) x, x => (global::Bian.ObjectType) x);
-    private readonly pbc::RepeatedField<global::Bian.ObjectType> preArticleType_ = new pbc::RepeatedField<global::Bian.ObjectType>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ObjectType> _repeated_preArticleType_codec
+        = pb::FieldCodec.ForEnum(114, x => (int) x, x => (global::MelandGame3.ObjectType) x);
+    private readonly pbc::RepeatedField<global::MelandGame3.ObjectType> preArticleType_ = new pbc::RepeatedField<global::MelandGame3.ObjectType>();
     /// <summary>
     /// 前置物件类型列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ObjectType> PreArticleType {
+    public pbc::RepeatedField<global::MelandGame3.ObjectType> PreArticleType {
       get { return preArticleType_; }
     }
 
@@ -25665,10 +25560,10 @@ namespace Bian {
 
     /// <summary>Field number for the "quality" field.</summary>
     public const int QualityFieldNumber = 16;
-    private global::Bian.ObjectQuality quality_ = global::Bian.ObjectQuality.ObjectQualityUnknown;
+    private global::MelandGame3.ObjectQuality quality_ = global::MelandGame3.ObjectQuality.ObjectQualityUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectQuality Quality {
+    public global::MelandGame3.ObjectQuality Quality {
       get { return quality_; }
       set {
         quality_ = value;
@@ -25713,10 +25608,10 @@ namespace Bian {
 
     /// <summary>Field number for the "gear_type" field.</summary>
     public const int GearTypeFieldNumber = 20;
-    private global::Bian.ObjectGearType gearType_ = global::Bian.ObjectGearType.ObjectGearTypeUnknown;
+    private global::MelandGame3.ObjectGearType gearType_ = global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectGearType GearType {
+    public global::MelandGame3.ObjectGearType GearType {
       get { return gearType_; }
       set {
         gearType_ = value;
@@ -25737,10 +25632,10 @@ namespace Bian {
 
     /// <summary>Field number for the "buildable" field.</summary>
     public const int BuildableFieldNumber = 24;
-    private global::Bian.ObjectBuildableType buildable_ = global::Bian.ObjectBuildableType.ObjectBuildableTypeUnbuildable;
+    private global::MelandGame3.ObjectBuildableType buildable_ = global::MelandGame3.ObjectBuildableType.ObjectBuildableTypeUnbuildable;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectBuildableType Buildable {
+    public global::MelandGame3.ObjectBuildableType Buildable {
       get { return buildable_; }
       set {
         buildable_ = value;
@@ -25749,13 +25644,13 @@ namespace Bian {
 
     /// <summary>Field number for the "material_type" field.</summary>
     public const int MaterialTypeFieldNumber = 25;
-    private global::Bian.MaterialType materialType_ = global::Bian.MaterialType.MaterialTypeUnknown;
+    private global::MelandGame3.MaterialType materialType_ = global::MelandGame3.MaterialType.MaterialTypeUnknown;
     /// <summary>
     /// material
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MaterialType MaterialType {
+    public global::MelandGame3.MaterialType MaterialType {
       get { return materialType_; }
       set {
         materialType_ = value;
@@ -25818,7 +25713,7 @@ namespace Bian {
 
     /// <summary>Field number for the "walk_dir" field.</summary>
     public const int WalkDirFieldNumber = 30;
-    private global::Bian.ObjectArea walkDir_;
+    private global::MelandGame3.ObjectArea walkDir_;
     /// <summary>
     /// 物品行走方向定义
     ///
@@ -25849,7 +25744,7 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectArea WalkDir {
+    public global::MelandGame3.ObjectArea WalkDir {
       get { return walkDir_; }
       set {
         walkDir_ = value;
@@ -25858,13 +25753,13 @@ namespace Bian {
 
     /// <summary>Field number for the "gear_settings" field.</summary>
     public const int GearSettingsFieldNumber = 31;
-    private global::Bian.GearSettings gearSettings_;
+    private global::MelandGame3.GearSettings gearSettings_;
     /// <summary>
     /// 装备配置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.GearSettings GearSettings {
+    public global::MelandGame3.GearSettings GearSettings {
       get { return gearSettings_; }
       set {
         gearSettings_ = value;
@@ -25903,13 +25798,13 @@ namespace Bian {
 
     /// <summary>Field number for the "enemy_type" field.</summary>
     public const int EnemyTypeFieldNumber = 34;
-    private global::Bian.EnemyType enemyType_ = global::Bian.EnemyType.EnemyTypeUnattackable;
+    private global::MelandGame3.EnemyType enemyType_ = global::MelandGame3.EnemyType.EnemyTypeUnattackable;
     /// <summary>
     /// 生物类型(用于标示技能可攻击的具体生物)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EnemyType EnemyType {
+    public global::MelandGame3.EnemyType EnemyType {
       get { return enemyType_; }
       set {
         enemyType_ = value;
@@ -26020,10 +25915,10 @@ namespace Bian {
 
     /// <summary>Field number for the "terrain_type" field.</summary>
     public const int TerrainTypeFieldNumber = 42;
-    private global::Bian.TerrainType terrainType_ = global::Bian.TerrainType.TerrainNone;
+    private global::MelandGame3.TerrainType terrainType_ = global::MelandGame3.TerrainType.TerrainNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TerrainType TerrainType {
+    public global::MelandGame3.TerrainType TerrainType {
       get { return terrainType_; }
       set {
         terrainType_ = value;
@@ -26044,10 +25939,10 @@ namespace Bian {
 
     /// <summary>Field number for the "camp" field.</summary>
     public const int CampFieldNumber = 44;
-    private global::Bian.Camp camp_ = global::Bian.Camp.CampNeutral;
+    private global::MelandGame3.Camp camp_ = global::MelandGame3.Camp.CampNeutral;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Camp Camp {
+    public global::MelandGame3.Camp Camp {
       get { return camp_; }
       set {
         camp_ = value;
@@ -26086,13 +25981,13 @@ namespace Bian {
 
     /// <summary>Field number for the "user_type" field.</summary>
     public const int UserTypeFieldNumber = 47;
-    private global::Bian.UserType userType_ = global::Bian.UserType.UserTypeUnknown;
+    private global::MelandGame3.UserType userType_ = global::MelandGame3.UserType.UserTypeUnknown;
     /// <summary>
     /// 使用者
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.UserType UserType {
+    public global::MelandGame3.UserType UserType {
       get { return userType_; }
       set {
         userType_ = value;
@@ -26116,15 +26011,15 @@ namespace Bian {
 
     /// <summary>Field number for the "widgets" field.</summary>
     public const int WidgetsFieldNumber = 49;
-    private static readonly pb::FieldCodec<global::Bian.Widget> _repeated_widgets_codec
-        = pb::FieldCodec.ForMessage(394, global::Bian.Widget.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Widget> widgets_ = new pbc::RepeatedField<global::Bian.Widget>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Widget> _repeated_widgets_codec
+        = pb::FieldCodec.ForMessage(394, global::MelandGame3.Widget.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Widget> widgets_ = new pbc::RepeatedField<global::MelandGame3.Widget>();
     /// <summary>
     /// 控件配置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Widget> Widgets {
+    public pbc::RepeatedField<global::MelandGame3.Widget> Widgets {
       get { return widgets_; }
     }
 
@@ -26174,13 +26069,13 @@ namespace Bian {
 
     /// <summary>Field number for the "anims" field.</summary>
     public const int AnimsFieldNumber = 53;
-    private global::Bian.EntityAnimations anims_;
+    private global::MelandGame3.EntityAnimations anims_;
     /// <summary>
     /// 动画
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAnimations Anims {
+    public global::MelandGame3.EntityAnimations Anims {
       get { return anims_; }
       set {
         anims_ = value;
@@ -26293,13 +26188,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_preload" field.</summary>
     public const int EntityPreloadFieldNumber = 61;
-    private global::Bian.EntityPreload entityPreload_;
+    private global::MelandGame3.EntityPreload entityPreload_;
     /// <summary>
     /// 实体预制数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityPreload EntityPreload {
+    public global::MelandGame3.EntityPreload EntityPreload {
       get { return entityPreload_; }
       set {
         entityPreload_ = value;
@@ -26308,13 +26203,13 @@ namespace Bian {
 
     /// <summary>Field number for the "scene_force" field.</summary>
     public const int SceneForceFieldNumber = 62;
-    private global::Bian.SceneForceSetting sceneForce_;
+    private global::MelandGame3.SceneForceSetting sceneForce_;
     /// <summary>
     /// 实体场景作用力
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.SceneForceSetting SceneForce {
+    public global::MelandGame3.SceneForceSetting SceneForce {
       get { return sceneForce_; }
       set {
         sceneForce_ = value;
@@ -26404,13 +26299,13 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) hash ^= Type.GetHashCode();
       if (SubType != 0) hash ^= SubType.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= texture_.GetHashCode();
       if (Tileset.Length != 0) hash ^= Tileset.GetHashCode();
-      if (BlockType != global::Bian.ObjectBlockType.ObjectBlockTypeFree) hash ^= BlockType.GetHashCode();
+      if (BlockType != global::MelandGame3.ObjectBlockType.ObjectBlockTypeFree) hash ^= BlockType.GetHashCode();
       if (anchor_ != null) hash ^= Anchor.GetHashCode();
       if (area_ != null) hash ^= Area.GetHashCode();
       if (Mirror != false) hash ^= Mirror.GetHashCode();
@@ -26418,14 +26313,14 @@ namespace Bian {
       hash ^= states_.GetHashCode();
       hash ^= preArticleType_.GetHashCode();
       if (BackpackItemLimit != 0) hash ^= BackpackItemLimit.GetHashCode();
-      if (Quality != global::Bian.ObjectQuality.ObjectQualityUnknown) hash ^= Quality.GetHashCode();
+      if (Quality != global::MelandGame3.ObjectQuality.ObjectQualityUnknown) hash ^= Quality.GetHashCode();
       if (CanTrade != false) hash ^= CanTrade.GetHashCode();
       if (CanSell != false) hash ^= CanSell.GetHashCode();
       if (CanDrop != false) hash ^= CanDrop.GetHashCode();
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) hash ^= GearType.GetHashCode();
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) hash ^= GearType.GetHashCode();
       if (GearAvatar.Length != 0) hash ^= GearAvatar.GetHashCode();
-      if (Buildable != global::Bian.ObjectBuildableType.ObjectBuildableTypeUnbuildable) hash ^= Buildable.GetHashCode();
-      if (MaterialType != global::Bian.MaterialType.MaterialTypeUnknown) hash ^= MaterialType.GetHashCode();
+      if (Buildable != global::MelandGame3.ObjectBuildableType.ObjectBuildableTypeUnbuildable) hash ^= Buildable.GetHashCode();
+      if (MaterialType != global::MelandGame3.MaterialType.MaterialTypeUnknown) hash ^= MaterialType.GetHashCode();
       if (MaterialHpLimit != 0) hash ^= MaterialHpLimit.GetHashCode();
       if (MaterialFallingRecipetId != 0) hash ^= MaterialFallingRecipetId.GetHashCode();
       if (BuildHeight != 0) hash ^= BuildHeight.GetHashCode();
@@ -26434,7 +26329,7 @@ namespace Bian {
       if (gearSettings_ != null) hash ^= GearSettings.GetHashCode();
       if (WalkLowHeight != 0) hash ^= WalkLowHeight.GetHashCode();
       if (WalkHighHeight != 0) hash ^= WalkHighHeight.GetHashCode();
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) hash ^= EnemyType.GetHashCode();
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) hash ^= EnemyType.GetHashCode();
       if (ObjectDef != 0) hash ^= ObjectDef.GetHashCode();
       if (DropExp != 0) hash ^= DropExp.GetHashCode();
       if (InitObjectQuantity != 0) hash ^= InitObjectQuantity.GetHashCode();
@@ -26442,12 +26337,12 @@ namespace Bian {
       if (HighEdge != 0) hash ^= HighEdge.GetHashCode();
       if (UseDrop != 0) hash ^= UseDrop.GetHashCode();
       if (IsFuel != false) hash ^= IsFuel.GetHashCode();
-      if (TerrainType != global::Bian.TerrainType.TerrainNone) hash ^= TerrainType.GetHashCode();
+      if (TerrainType != global::MelandGame3.TerrainType.TerrainNone) hash ^= TerrainType.GetHashCode();
       if (UseLv != 0) hash ^= UseLv.GetHashCode();
-      if (Camp != global::Bian.Camp.CampNeutral) hash ^= Camp.GetHashCode();
+      if (Camp != global::MelandGame3.Camp.CampNeutral) hash ^= Camp.GetHashCode();
       if (Life != 0) hash ^= Life.GetHashCode();
       if (BodyRadius != 0) hash ^= BodyRadius.GetHashCode();
-      if (UserType != global::Bian.UserType.UserTypeUnknown) hash ^= UserType.GetHashCode();
+      if (UserType != global::MelandGame3.UserType.UserTypeUnknown) hash ^= UserType.GetHashCode();
       if (AttWidget != 0) hash ^= AttWidget.GetHashCode();
       hash ^= widgets_.GetHashCode();
       hash ^= frames_.GetHashCode();
@@ -26485,7 +26380,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -26506,7 +26401,7 @@ namespace Bian {
         output.WriteRawTag(58);
         output.WriteString(Tileset);
       }
-      if (BlockType != global::Bian.ObjectBlockType.ObjectBlockTypeFree) {
+      if (BlockType != global::MelandGame3.ObjectBlockType.ObjectBlockTypeFree) {
         output.WriteRawTag(64);
         output.WriteEnum((int) BlockType);
       }
@@ -26532,7 +26427,7 @@ namespace Bian {
         output.WriteRawTag(120);
         output.WriteInt32(BackpackItemLimit);
       }
-      if (Quality != global::Bian.ObjectQuality.ObjectQualityUnknown) {
+      if (Quality != global::MelandGame3.ObjectQuality.ObjectQualityUnknown) {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) Quality);
       }
@@ -26548,7 +26443,7 @@ namespace Bian {
         output.WriteRawTag(152, 1);
         output.WriteBool(CanDrop);
       }
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         output.WriteRawTag(160, 1);
         output.WriteEnum((int) GearType);
       }
@@ -26556,11 +26451,11 @@ namespace Bian {
         output.WriteRawTag(170, 1);
         output.WriteString(GearAvatar);
       }
-      if (Buildable != global::Bian.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
+      if (Buildable != global::MelandGame3.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
         output.WriteRawTag(192, 1);
         output.WriteEnum((int) Buildable);
       }
-      if (MaterialType != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (MaterialType != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         output.WriteRawTag(200, 1);
         output.WriteEnum((int) MaterialType);
       }
@@ -26596,7 +26491,7 @@ namespace Bian {
         output.WriteRawTag(136, 2);
         output.WriteInt32(WalkHighHeight);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         output.WriteRawTag(144, 2);
         output.WriteEnum((int) EnemyType);
       }
@@ -26628,7 +26523,7 @@ namespace Bian {
         output.WriteRawTag(200, 2);
         output.WriteBool(IsFuel);
       }
-      if (TerrainType != global::Bian.TerrainType.TerrainNone) {
+      if (TerrainType != global::MelandGame3.TerrainType.TerrainNone) {
         output.WriteRawTag(208, 2);
         output.WriteEnum((int) TerrainType);
       }
@@ -26636,7 +26531,7 @@ namespace Bian {
         output.WriteRawTag(216, 2);
         output.WriteInt32(UseLv);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         output.WriteRawTag(224, 2);
         output.WriteEnum((int) Camp);
       }
@@ -26648,7 +26543,7 @@ namespace Bian {
         output.WriteRawTag(240, 2);
         output.WriteInt32(BodyRadius);
       }
-      if (UserType != global::Bian.UserType.UserTypeUnknown) {
+      if (UserType != global::MelandGame3.UserType.UserTypeUnknown) {
         output.WriteRawTag(248, 2);
         output.WriteEnum((int) UserType);
       }
@@ -26717,7 +26612,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -26738,7 +26633,7 @@ namespace Bian {
         output.WriteRawTag(58);
         output.WriteString(Tileset);
       }
-      if (BlockType != global::Bian.ObjectBlockType.ObjectBlockTypeFree) {
+      if (BlockType != global::MelandGame3.ObjectBlockType.ObjectBlockTypeFree) {
         output.WriteRawTag(64);
         output.WriteEnum((int) BlockType);
       }
@@ -26764,7 +26659,7 @@ namespace Bian {
         output.WriteRawTag(120);
         output.WriteInt32(BackpackItemLimit);
       }
-      if (Quality != global::Bian.ObjectQuality.ObjectQualityUnknown) {
+      if (Quality != global::MelandGame3.ObjectQuality.ObjectQualityUnknown) {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) Quality);
       }
@@ -26780,7 +26675,7 @@ namespace Bian {
         output.WriteRawTag(152, 1);
         output.WriteBool(CanDrop);
       }
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         output.WriteRawTag(160, 1);
         output.WriteEnum((int) GearType);
       }
@@ -26788,11 +26683,11 @@ namespace Bian {
         output.WriteRawTag(170, 1);
         output.WriteString(GearAvatar);
       }
-      if (Buildable != global::Bian.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
+      if (Buildable != global::MelandGame3.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
         output.WriteRawTag(192, 1);
         output.WriteEnum((int) Buildable);
       }
-      if (MaterialType != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (MaterialType != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         output.WriteRawTag(200, 1);
         output.WriteEnum((int) MaterialType);
       }
@@ -26828,7 +26723,7 @@ namespace Bian {
         output.WriteRawTag(136, 2);
         output.WriteInt32(WalkHighHeight);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         output.WriteRawTag(144, 2);
         output.WriteEnum((int) EnemyType);
       }
@@ -26860,7 +26755,7 @@ namespace Bian {
         output.WriteRawTag(200, 2);
         output.WriteBool(IsFuel);
       }
-      if (TerrainType != global::Bian.TerrainType.TerrainNone) {
+      if (TerrainType != global::MelandGame3.TerrainType.TerrainNone) {
         output.WriteRawTag(208, 2);
         output.WriteEnum((int) TerrainType);
       }
@@ -26868,7 +26763,7 @@ namespace Bian {
         output.WriteRawTag(216, 2);
         output.WriteInt32(UseLv);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         output.WriteRawTag(224, 2);
         output.WriteEnum((int) Camp);
       }
@@ -26880,7 +26775,7 @@ namespace Bian {
         output.WriteRawTag(240, 2);
         output.WriteInt32(BodyRadius);
       }
-      if (UserType != global::Bian.UserType.UserTypeUnknown) {
+      if (UserType != global::MelandGame3.UserType.UserTypeUnknown) {
         output.WriteRawTag(248, 2);
         output.WriteEnum((int) UserType);
       }
@@ -26948,7 +26843,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (SubType != 0) {
@@ -26964,7 +26859,7 @@ namespace Bian {
       if (Tileset.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tileset);
       }
-      if (BlockType != global::Bian.ObjectBlockType.ObjectBlockTypeFree) {
+      if (BlockType != global::MelandGame3.ObjectBlockType.ObjectBlockTypeFree) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlockType);
       }
       if (anchor_ != null) {
@@ -26984,7 +26879,7 @@ namespace Bian {
       if (BackpackItemLimit != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(BackpackItemLimit);
       }
-      if (Quality != global::Bian.ObjectQuality.ObjectQualityUnknown) {
+      if (Quality != global::MelandGame3.ObjectQuality.ObjectQualityUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Quality);
       }
       if (CanTrade != false) {
@@ -26996,16 +26891,16 @@ namespace Bian {
       if (CanDrop != false) {
         size += 2 + 1;
       }
-      if (GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) GearType);
       }
       if (GearAvatar.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(GearAvatar);
       }
-      if (Buildable != global::Bian.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
+      if (Buildable != global::MelandGame3.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Buildable);
       }
-      if (MaterialType != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (MaterialType != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MaterialType);
       }
       if (MaterialHpLimit != 0) {
@@ -27032,7 +26927,7 @@ namespace Bian {
       if (WalkHighHeight != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(WalkHighHeight);
       }
-      if (EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EnemyType);
       }
       if (ObjectDef != 0) {
@@ -27056,13 +26951,13 @@ namespace Bian {
       if (IsFuel != false) {
         size += 2 + 1;
       }
-      if (TerrainType != global::Bian.TerrainType.TerrainNone) {
+      if (TerrainType != global::MelandGame3.TerrainType.TerrainNone) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) TerrainType);
       }
       if (UseLv != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(UseLv);
       }
-      if (Camp != global::Bian.Camp.CampNeutral) {
+      if (Camp != global::MelandGame3.Camp.CampNeutral) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Camp);
       }
       if (Life != 0) {
@@ -27071,7 +26966,7 @@ namespace Bian {
       if (BodyRadius != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(BodyRadius);
       }
-      if (UserType != global::Bian.UserType.UserTypeUnknown) {
+      if (UserType != global::MelandGame3.UserType.UserTypeUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) UserType);
       }
       if (AttWidget != 0) {
@@ -27128,7 +27023,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (other.Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         Type = other.Type;
       }
       if (other.SubType != 0) {
@@ -27144,18 +27039,18 @@ namespace Bian {
       if (other.Tileset.Length != 0) {
         Tileset = other.Tileset;
       }
-      if (other.BlockType != global::Bian.ObjectBlockType.ObjectBlockTypeFree) {
+      if (other.BlockType != global::MelandGame3.ObjectBlockType.ObjectBlockTypeFree) {
         BlockType = other.BlockType;
       }
       if (other.anchor_ != null) {
         if (anchor_ == null) {
-          Anchor = new global::Bian.ObjectAnchor();
+          Anchor = new global::MelandGame3.ObjectAnchor();
         }
         Anchor.MergeFrom(other.Anchor);
       }
       if (other.area_ != null) {
         if (area_ == null) {
-          Area = new global::Bian.ObjectArea();
+          Area = new global::MelandGame3.ObjectArea();
         }
         Area.MergeFrom(other.Area);
       }
@@ -27170,7 +27065,7 @@ namespace Bian {
       if (other.BackpackItemLimit != 0) {
         BackpackItemLimit = other.BackpackItemLimit;
       }
-      if (other.Quality != global::Bian.ObjectQuality.ObjectQualityUnknown) {
+      if (other.Quality != global::MelandGame3.ObjectQuality.ObjectQualityUnknown) {
         Quality = other.Quality;
       }
       if (other.CanTrade != false) {
@@ -27182,16 +27077,16 @@ namespace Bian {
       if (other.CanDrop != false) {
         CanDrop = other.CanDrop;
       }
-      if (other.GearType != global::Bian.ObjectGearType.ObjectGearTypeUnknown) {
+      if (other.GearType != global::MelandGame3.ObjectGearType.ObjectGearTypeUnknown) {
         GearType = other.GearType;
       }
       if (other.GearAvatar.Length != 0) {
         GearAvatar = other.GearAvatar;
       }
-      if (other.Buildable != global::Bian.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
+      if (other.Buildable != global::MelandGame3.ObjectBuildableType.ObjectBuildableTypeUnbuildable) {
         Buildable = other.Buildable;
       }
-      if (other.MaterialType != global::Bian.MaterialType.MaterialTypeUnknown) {
+      if (other.MaterialType != global::MelandGame3.MaterialType.MaterialTypeUnknown) {
         MaterialType = other.MaterialType;
       }
       if (other.MaterialHpLimit != 0) {
@@ -27208,13 +27103,13 @@ namespace Bian {
       }
       if (other.walkDir_ != null) {
         if (walkDir_ == null) {
-          WalkDir = new global::Bian.ObjectArea();
+          WalkDir = new global::MelandGame3.ObjectArea();
         }
         WalkDir.MergeFrom(other.WalkDir);
       }
       if (other.gearSettings_ != null) {
         if (gearSettings_ == null) {
-          GearSettings = new global::Bian.GearSettings();
+          GearSettings = new global::MelandGame3.GearSettings();
         }
         GearSettings.MergeFrom(other.GearSettings);
       }
@@ -27224,7 +27119,7 @@ namespace Bian {
       if (other.WalkHighHeight != 0) {
         WalkHighHeight = other.WalkHighHeight;
       }
-      if (other.EnemyType != global::Bian.EnemyType.EnemyTypeUnattackable) {
+      if (other.EnemyType != global::MelandGame3.EnemyType.EnemyTypeUnattackable) {
         EnemyType = other.EnemyType;
       }
       if (other.ObjectDef != 0) {
@@ -27248,13 +27143,13 @@ namespace Bian {
       if (other.IsFuel != false) {
         IsFuel = other.IsFuel;
       }
-      if (other.TerrainType != global::Bian.TerrainType.TerrainNone) {
+      if (other.TerrainType != global::MelandGame3.TerrainType.TerrainNone) {
         TerrainType = other.TerrainType;
       }
       if (other.UseLv != 0) {
         UseLv = other.UseLv;
       }
-      if (other.Camp != global::Bian.Camp.CampNeutral) {
+      if (other.Camp != global::MelandGame3.Camp.CampNeutral) {
         Camp = other.Camp;
       }
       if (other.Life != 0) {
@@ -27263,7 +27158,7 @@ namespace Bian {
       if (other.BodyRadius != 0) {
         BodyRadius = other.BodyRadius;
       }
-      if (other.UserType != global::Bian.UserType.UserTypeUnknown) {
+      if (other.UserType != global::MelandGame3.UserType.UserTypeUnknown) {
         UserType = other.UserType;
       }
       if (other.AttWidget != 0) {
@@ -27279,7 +27174,7 @@ namespace Bian {
       }
       if (other.anims_ != null) {
         if (anims_ == null) {
-          Anims = new global::Bian.EntityAnimations();
+          Anims = new global::MelandGame3.EntityAnimations();
         }
         Anims.MergeFrom(other.Anims);
       }
@@ -27304,13 +27199,13 @@ namespace Bian {
       rectTexture_.Add(other.rectTexture_);
       if (other.entityPreload_ != null) {
         if (entityPreload_ == null) {
-          EntityPreload = new global::Bian.EntityPreload();
+          EntityPreload = new global::MelandGame3.EntityPreload();
         }
         EntityPreload.MergeFrom(other.EntityPreload);
       }
       if (other.sceneForce_ != null) {
         if (sceneForce_ == null) {
-          SceneForce = new global::Bian.SceneForceSetting();
+          SceneForce = new global::MelandGame3.SceneForceSetting();
         }
         SceneForce.MergeFrom(other.SceneForce);
       }
@@ -27334,7 +27229,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ObjectType) input.ReadEnum();
+            Type = (global::MelandGame3.ObjectType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -27358,19 +27253,19 @@ namespace Bian {
             break;
           }
           case 64: {
-            BlockType = (global::Bian.ObjectBlockType) input.ReadEnum();
+            BlockType = (global::MelandGame3.ObjectBlockType) input.ReadEnum();
             break;
           }
           case 74: {
             if (anchor_ == null) {
-              Anchor = new global::Bian.ObjectAnchor();
+              Anchor = new global::MelandGame3.ObjectAnchor();
             }
             input.ReadMessage(Anchor);
             break;
           }
           case 82: {
             if (area_ == null) {
-              Area = new global::Bian.ObjectArea();
+              Area = new global::MelandGame3.ObjectArea();
             }
             input.ReadMessage(Area);
             break;
@@ -27397,7 +27292,7 @@ namespace Bian {
             break;
           }
           case 128: {
-            Quality = (global::Bian.ObjectQuality) input.ReadEnum();
+            Quality = (global::MelandGame3.ObjectQuality) input.ReadEnum();
             break;
           }
           case 136: {
@@ -27413,7 +27308,7 @@ namespace Bian {
             break;
           }
           case 160: {
-            GearType = (global::Bian.ObjectGearType) input.ReadEnum();
+            GearType = (global::MelandGame3.ObjectGearType) input.ReadEnum();
             break;
           }
           case 170: {
@@ -27421,11 +27316,11 @@ namespace Bian {
             break;
           }
           case 192: {
-            Buildable = (global::Bian.ObjectBuildableType) input.ReadEnum();
+            Buildable = (global::MelandGame3.ObjectBuildableType) input.ReadEnum();
             break;
           }
           case 200: {
-            MaterialType = (global::Bian.MaterialType) input.ReadEnum();
+            MaterialType = (global::MelandGame3.MaterialType) input.ReadEnum();
             break;
           }
           case 208: {
@@ -27446,14 +27341,14 @@ namespace Bian {
           }
           case 242: {
             if (walkDir_ == null) {
-              WalkDir = new global::Bian.ObjectArea();
+              WalkDir = new global::MelandGame3.ObjectArea();
             }
             input.ReadMessage(WalkDir);
             break;
           }
           case 250: {
             if (gearSettings_ == null) {
-              GearSettings = new global::Bian.GearSettings();
+              GearSettings = new global::MelandGame3.GearSettings();
             }
             input.ReadMessage(GearSettings);
             break;
@@ -27467,7 +27362,7 @@ namespace Bian {
             break;
           }
           case 272: {
-            EnemyType = (global::Bian.EnemyType) input.ReadEnum();
+            EnemyType = (global::MelandGame3.EnemyType) input.ReadEnum();
             break;
           }
           case 280: {
@@ -27499,7 +27394,7 @@ namespace Bian {
             break;
           }
           case 336: {
-            TerrainType = (global::Bian.TerrainType) input.ReadEnum();
+            TerrainType = (global::MelandGame3.TerrainType) input.ReadEnum();
             break;
           }
           case 344: {
@@ -27507,7 +27402,7 @@ namespace Bian {
             break;
           }
           case 352: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
+            Camp = (global::MelandGame3.Camp) input.ReadEnum();
             break;
           }
           case 360: {
@@ -27519,7 +27414,7 @@ namespace Bian {
             break;
           }
           case 376: {
-            UserType = (global::Bian.UserType) input.ReadEnum();
+            UserType = (global::MelandGame3.UserType) input.ReadEnum();
             break;
           }
           case 384: {
@@ -27545,7 +27440,7 @@ namespace Bian {
           }
           case 426: {
             if (anims_ == null) {
-              Anims = new global::Bian.EntityAnimations();
+              Anims = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
@@ -27580,14 +27475,14 @@ namespace Bian {
           }
           case 490: {
             if (entityPreload_ == null) {
-              EntityPreload = new global::Bian.EntityPreload();
+              EntityPreload = new global::MelandGame3.EntityPreload();
             }
             input.ReadMessage(EntityPreload);
             break;
           }
           case 498: {
             if (sceneForce_ == null) {
-              SceneForce = new global::Bian.SceneForceSetting();
+              SceneForce = new global::MelandGame3.SceneForceSetting();
             }
             input.ReadMessage(SceneForce);
             break;
@@ -27612,7 +27507,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ObjectType) input.ReadEnum();
+            Type = (global::MelandGame3.ObjectType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -27636,19 +27531,19 @@ namespace Bian {
             break;
           }
           case 64: {
-            BlockType = (global::Bian.ObjectBlockType) input.ReadEnum();
+            BlockType = (global::MelandGame3.ObjectBlockType) input.ReadEnum();
             break;
           }
           case 74: {
             if (anchor_ == null) {
-              Anchor = new global::Bian.ObjectAnchor();
+              Anchor = new global::MelandGame3.ObjectAnchor();
             }
             input.ReadMessage(Anchor);
             break;
           }
           case 82: {
             if (area_ == null) {
-              Area = new global::Bian.ObjectArea();
+              Area = new global::MelandGame3.ObjectArea();
             }
             input.ReadMessage(Area);
             break;
@@ -27675,7 +27570,7 @@ namespace Bian {
             break;
           }
           case 128: {
-            Quality = (global::Bian.ObjectQuality) input.ReadEnum();
+            Quality = (global::MelandGame3.ObjectQuality) input.ReadEnum();
             break;
           }
           case 136: {
@@ -27691,7 +27586,7 @@ namespace Bian {
             break;
           }
           case 160: {
-            GearType = (global::Bian.ObjectGearType) input.ReadEnum();
+            GearType = (global::MelandGame3.ObjectGearType) input.ReadEnum();
             break;
           }
           case 170: {
@@ -27699,11 +27594,11 @@ namespace Bian {
             break;
           }
           case 192: {
-            Buildable = (global::Bian.ObjectBuildableType) input.ReadEnum();
+            Buildable = (global::MelandGame3.ObjectBuildableType) input.ReadEnum();
             break;
           }
           case 200: {
-            MaterialType = (global::Bian.MaterialType) input.ReadEnum();
+            MaterialType = (global::MelandGame3.MaterialType) input.ReadEnum();
             break;
           }
           case 208: {
@@ -27724,14 +27619,14 @@ namespace Bian {
           }
           case 242: {
             if (walkDir_ == null) {
-              WalkDir = new global::Bian.ObjectArea();
+              WalkDir = new global::MelandGame3.ObjectArea();
             }
             input.ReadMessage(WalkDir);
             break;
           }
           case 250: {
             if (gearSettings_ == null) {
-              GearSettings = new global::Bian.GearSettings();
+              GearSettings = new global::MelandGame3.GearSettings();
             }
             input.ReadMessage(GearSettings);
             break;
@@ -27745,7 +27640,7 @@ namespace Bian {
             break;
           }
           case 272: {
-            EnemyType = (global::Bian.EnemyType) input.ReadEnum();
+            EnemyType = (global::MelandGame3.EnemyType) input.ReadEnum();
             break;
           }
           case 280: {
@@ -27777,7 +27672,7 @@ namespace Bian {
             break;
           }
           case 336: {
-            TerrainType = (global::Bian.TerrainType) input.ReadEnum();
+            TerrainType = (global::MelandGame3.TerrainType) input.ReadEnum();
             break;
           }
           case 344: {
@@ -27785,7 +27680,7 @@ namespace Bian {
             break;
           }
           case 352: {
-            Camp = (global::Bian.Camp) input.ReadEnum();
+            Camp = (global::MelandGame3.Camp) input.ReadEnum();
             break;
           }
           case 360: {
@@ -27797,7 +27692,7 @@ namespace Bian {
             break;
           }
           case 376: {
-            UserType = (global::Bian.UserType) input.ReadEnum();
+            UserType = (global::MelandGame3.UserType) input.ReadEnum();
             break;
           }
           case 384: {
@@ -27823,7 +27718,7 @@ namespace Bian {
           }
           case 426: {
             if (anims_ == null) {
-              Anims = new global::Bian.EntityAnimations();
+              Anims = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Anims);
             break;
@@ -27858,14 +27753,14 @@ namespace Bian {
           }
           case 490: {
             if (entityPreload_ == null) {
-              EntityPreload = new global::Bian.EntityPreload();
+              EntityPreload = new global::MelandGame3.EntityPreload();
             }
             input.ReadMessage(EntityPreload);
             break;
           }
           case 498: {
             if (sceneForce_ == null) {
-              SceneForce = new global::Bian.SceneForceSetting();
+              SceneForce = new global::MelandGame3.SceneForceSetting();
             }
             input.ReadMessage(SceneForce);
             break;
@@ -27894,7 +27789,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[46]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27944,10 +27839,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Bian.ObjectType type_ = global::Bian.ObjectType.ObjectTypeUnknown;
+    private global::MelandGame3.ObjectType type_ = global::MelandGame3.ObjectType.ObjectTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ObjectType Type {
+    public global::MelandGame3.ObjectType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -28054,7 +27949,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) hash ^= Type.GetHashCode();
       if (SubType != 0) hash ^= SubType.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -28082,7 +27977,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -28120,7 +28015,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -28157,7 +28052,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (SubType != 0) {
@@ -28190,7 +28085,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Type != global::Bian.ObjectType.ObjectTypeUnknown) {
+      if (other.Type != global::MelandGame3.ObjectType.ObjectTypeUnknown) {
         Type = other.Type;
       }
       if (other.SubType != 0) {
@@ -28228,7 +28123,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ObjectType) input.ReadEnum();
+            Type = (global::MelandGame3.ObjectType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -28271,7 +28166,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ObjectType) input.ReadEnum();
+            Type = (global::MelandGame3.ObjectType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -28318,7 +28213,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[47]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28547,7 +28442,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[48]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28612,13 +28507,13 @@ namespace Bian {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
-    private global::Bian.GameProjectState state_ = global::Bian.GameProjectState.GameProjectStateDraft;
+    private global::MelandGame3.GameProjectState state_ = global::MelandGame3.GameProjectState.GameProjectStateDraft;
     /// <summary>
     /// 作品状态
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.GameProjectState State {
+    public global::MelandGame3.GameProjectState State {
       get { return state_; }
       set {
         state_ = value;
@@ -28627,13 +28522,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Bian.GameProjectType type_ = global::Bian.GameProjectType.GameProjectTypeUnknown;
+    private global::MelandGame3.GameProjectType type_ = global::MelandGame3.GameProjectType.GameProjectTypeUnknown;
     /// <summary>
     /// 作品类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.GameProjectType Type {
+    public global::MelandGame3.GameProjectType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -28716,8 +28611,8 @@ namespace Bian {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
-      if (State != global::Bian.GameProjectState.GameProjectStateDraft) hash ^= State.GetHashCode();
-      if (Type != global::Bian.GameProjectType.GameProjectTypeUnknown) hash ^= Type.GetHashCode();
+      if (State != global::MelandGame3.GameProjectState.GameProjectStateDraft) hash ^= State.GetHashCode();
+      if (Type != global::MelandGame3.GameProjectType.GameProjectTypeUnknown) hash ^= Type.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (CreatedAt.Length != 0) hash ^= CreatedAt.GetHashCode();
@@ -28747,11 +28642,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(PlayerId);
       }
-      if (State != global::Bian.GameProjectState.GameProjectStateDraft) {
+      if (State != global::MelandGame3.GameProjectState.GameProjectStateDraft) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
-      if (Type != global::Bian.GameProjectType.GameProjectTypeUnknown) {
+      if (Type != global::MelandGame3.GameProjectType.GameProjectTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -28785,11 +28680,11 @@ namespace Bian {
         output.WriteRawTag(18);
         output.WriteString(PlayerId);
       }
-      if (State != global::Bian.GameProjectState.GameProjectStateDraft) {
+      if (State != global::MelandGame3.GameProjectState.GameProjectStateDraft) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
-      if (Type != global::Bian.GameProjectType.GameProjectTypeUnknown) {
+      if (Type != global::MelandGame3.GameProjectType.GameProjectTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -28821,10 +28716,10 @@ namespace Bian {
       if (PlayerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
       }
-      if (State != global::Bian.GameProjectState.GameProjectStateDraft) {
+      if (State != global::MelandGame3.GameProjectState.GameProjectStateDraft) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
-      if (Type != global::Bian.GameProjectType.GameProjectTypeUnknown) {
+      if (Type != global::MelandGame3.GameProjectType.GameProjectTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Name.Length != 0) {
@@ -28854,10 +28749,10 @@ namespace Bian {
       if (other.PlayerId.Length != 0) {
         PlayerId = other.PlayerId;
       }
-      if (other.State != global::Bian.GameProjectState.GameProjectStateDraft) {
+      if (other.State != global::MelandGame3.GameProjectState.GameProjectStateDraft) {
         State = other.State;
       }
-      if (other.Type != global::Bian.GameProjectType.GameProjectTypeUnknown) {
+      if (other.Type != global::MelandGame3.GameProjectType.GameProjectTypeUnknown) {
         Type = other.Type;
       }
       if (other.Name.Length != 0) {
@@ -28893,11 +28788,11 @@ namespace Bian {
             break;
           }
           case 24: {
-            State = (global::Bian.GameProjectState) input.ReadEnum();
+            State = (global::MelandGame3.GameProjectState) input.ReadEnum();
             break;
           }
           case 32: {
-            Type = (global::Bian.GameProjectType) input.ReadEnum();
+            Type = (global::MelandGame3.GameProjectType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -28936,11 +28831,11 @@ namespace Bian {
             break;
           }
           case 24: {
-            State = (global::Bian.GameProjectState) input.ReadEnum();
+            State = (global::MelandGame3.GameProjectState) input.ReadEnum();
             break;
           }
           case 32: {
-            Type = (global::Bian.GameProjectType) input.ReadEnum();
+            Type = (global::MelandGame3.GameProjectType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -28979,7 +28874,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[49]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29331,7 +29226,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[50]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29364,10 +29259,10 @@ namespace Bian {
 
     /// <summary>Field number for the "currency_type" field.</summary>
     public const int CurrencyTypeFieldNumber = 1;
-    private global::Bian.CurrencyType currencyType_ = global::Bian.CurrencyType.CurrencyTypeUnknown;
+    private global::MelandGame3.CurrencyType currencyType_ = global::MelandGame3.CurrencyType.CurrencyTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CurrencyType CurrencyType {
+    public global::MelandGame3.CurrencyType CurrencyType {
       get { return currencyType_; }
       set {
         currencyType_ = value;
@@ -29410,7 +29305,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurrencyType != global::Bian.CurrencyType.CurrencyTypeUnknown) hash ^= CurrencyType.GetHashCode();
+      if (CurrencyType != global::MelandGame3.CurrencyType.CurrencyTypeUnknown) hash ^= CurrencyType.GetHashCode();
       if (Num != 0) hash ^= Num.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -29430,7 +29325,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurrencyType != global::Bian.CurrencyType.CurrencyTypeUnknown) {
+      if (CurrencyType != global::MelandGame3.CurrencyType.CurrencyTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) CurrencyType);
       }
@@ -29448,7 +29343,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurrencyType != global::Bian.CurrencyType.CurrencyTypeUnknown) {
+      if (CurrencyType != global::MelandGame3.CurrencyType.CurrencyTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) CurrencyType);
       }
@@ -29466,7 +29361,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurrencyType != global::Bian.CurrencyType.CurrencyTypeUnknown) {
+      if (CurrencyType != global::MelandGame3.CurrencyType.CurrencyTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurrencyType);
       }
       if (Num != 0) {
@@ -29484,7 +29379,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.CurrencyType != global::Bian.CurrencyType.CurrencyTypeUnknown) {
+      if (other.CurrencyType != global::MelandGame3.CurrencyType.CurrencyTypeUnknown) {
         CurrencyType = other.CurrencyType;
       }
       if (other.Num != 0) {
@@ -29506,7 +29401,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            CurrencyType = (global::Bian.CurrencyType) input.ReadEnum();
+            CurrencyType = (global::MelandGame3.CurrencyType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -29529,7 +29424,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            CurrencyType = (global::Bian.CurrencyType) input.ReadEnum();
+            CurrencyType = (global::MelandGame3.CurrencyType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -29560,7 +29455,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[51]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29607,15 +29502,15 @@ namespace Bian {
 
     /// <summary>Field number for the "reward_items" field.</summary>
     public const int RewardItemsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.Stuffs> _repeated_rewardItems_codec
-        = pb::FieldCodec.ForMessage(18, global::Bian.Stuffs.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Stuffs> rewardItems_ = new pbc::RepeatedField<global::Bian.Stuffs>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Stuffs> _repeated_rewardItems_codec
+        = pb::FieldCodec.ForMessage(18, global::MelandGame3.Stuffs.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Stuffs> rewardItems_ = new pbc::RepeatedField<global::MelandGame3.Stuffs>();
     /// <summary>
     ///物品
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Stuffs> RewardItems {
+    public pbc::RepeatedField<global::MelandGame3.Stuffs> RewardItems {
       get { return rewardItems_; }
     }
 
@@ -29636,15 +29531,15 @@ namespace Bian {
 
     /// <summary>Field number for the "currency" field.</summary>
     public const int CurrencyFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Bian.Currency> _repeated_currency_codec
-        = pb::FieldCodec.ForMessage(34, global::Bian.Currency.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Currency> currency_ = new pbc::RepeatedField<global::Bian.Currency>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Currency> _repeated_currency_codec
+        = pb::FieldCodec.ForMessage(34, global::MelandGame3.Currency.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Currency> currency_ = new pbc::RepeatedField<global::MelandGame3.Currency>();
     /// <summary>
     ///货币奖励
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Currency> Currency {
+    public pbc::RepeatedField<global::MelandGame3.Currency> Currency {
       get { return currency_; }
     }
 
@@ -29833,2192 +29728,6 @@ namespace Bian {
 
   }
 
-  public sealed partial class TaskSettings : pb::IMessage<TaskSettings>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<TaskSettings> _parser = new pb::MessageParser<TaskSettings>(() => new TaskSettings());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskSettings> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[52]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskSettings() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskSettings(TaskSettings other) : this() {
-      id_ = other.id_;
-      name_ = other.name_;
-      description_ = other.description_;
-      fromNpcId_ = other.fromNpcId_;
-      toNpcId_ = other.toNpcId_;
-      type_ = other.type_;
-      requirementsText_ = other.requirementsText_;
-      objectivesText_ = other.objectivesText_;
-      rewardId_ = other.rewardId_;
-      followTaskText_ = other.followTaskText_;
-      isEnabled_ = other.isEnabled_;
-      isCycle_ = other.isCycle_;
-      isAutoFinish_ = other.isAutoFinish_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskSettings Clone() {
-      return new TaskSettings(this);
-    }
-
-    /// <summary>Field number for the "Id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Name" field.</summary>
-    public const int NameFieldNumber = 2;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "Description" field.</summary>
-    public const int DescriptionFieldNumber = 3;
-    private string description_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Description {
-      get { return description_; }
-      set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FromNpcId" field.</summary>
-    public const int FromNpcIdFieldNumber = 4;
-    private int fromNpcId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int FromNpcId {
-      get { return fromNpcId_; }
-      set {
-        fromNpcId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ToNpcId" field.</summary>
-    public const int ToNpcIdFieldNumber = 5;
-    private int toNpcId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ToNpcId {
-      get { return toNpcId_; }
-      set {
-        toNpcId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Type" field.</summary>
-    public const int TypeFieldNumber = 6;
-    private string type_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Type {
-      get { return type_; }
-      set {
-        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "RequirementsText" field.</summary>
-    public const int RequirementsTextFieldNumber = 7;
-    private string requirementsText_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RequirementsText {
-      get { return requirementsText_; }
-      set {
-        requirementsText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ObjectivesText" field.</summary>
-    public const int ObjectivesTextFieldNumber = 8;
-    private string objectivesText_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ObjectivesText {
-      get { return objectivesText_; }
-      set {
-        objectivesText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "RewardId" field.</summary>
-    public const int RewardIdFieldNumber = 9;
-    private int rewardId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int RewardId {
-      get { return rewardId_; }
-      set {
-        rewardId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FollowTaskText" field.</summary>
-    public const int FollowTaskTextFieldNumber = 10;
-    private string followTaskText_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FollowTaskText {
-      get { return followTaskText_; }
-      set {
-        followTaskText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "IsEnabled" field.</summary>
-    public const int IsEnabledFieldNumber = 11;
-    private bool isEnabled_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsEnabled {
-      get { return isEnabled_; }
-      set {
-        isEnabled_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IsCycle" field.</summary>
-    public const int IsCycleFieldNumber = 12;
-    private bool isCycle_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsCycle {
-      get { return isCycle_; }
-      set {
-        isCycle_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IsAutoFinish" field.</summary>
-    public const int IsAutoFinishFieldNumber = 13;
-    private bool isAutoFinish_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsAutoFinish {
-      get { return isAutoFinish_; }
-      set {
-        isAutoFinish_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as TaskSettings);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskSettings other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Name != other.Name) return false;
-      if (Description != other.Description) return false;
-      if (FromNpcId != other.FromNpcId) return false;
-      if (ToNpcId != other.ToNpcId) return false;
-      if (Type != other.Type) return false;
-      if (RequirementsText != other.RequirementsText) return false;
-      if (ObjectivesText != other.ObjectivesText) return false;
-      if (RewardId != other.RewardId) return false;
-      if (FollowTaskText != other.FollowTaskText) return false;
-      if (IsEnabled != other.IsEnabled) return false;
-      if (IsCycle != other.IsCycle) return false;
-      if (IsAutoFinish != other.IsAutoFinish) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (FromNpcId != 0) hash ^= FromNpcId.GetHashCode();
-      if (ToNpcId != 0) hash ^= ToNpcId.GetHashCode();
-      if (Type.Length != 0) hash ^= Type.GetHashCode();
-      if (RequirementsText.Length != 0) hash ^= RequirementsText.GetHashCode();
-      if (ObjectivesText.Length != 0) hash ^= ObjectivesText.GetHashCode();
-      if (RewardId != 0) hash ^= RewardId.GetHashCode();
-      if (FollowTaskText.Length != 0) hash ^= FollowTaskText.GetHashCode();
-      if (IsEnabled != false) hash ^= IsEnabled.GetHashCode();
-      if (IsCycle != false) hash ^= IsCycle.GetHashCode();
-      if (IsAutoFinish != false) hash ^= IsAutoFinish.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Description);
-      }
-      if (FromNpcId != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(FromNpcId);
-      }
-      if (ToNpcId != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(ToNpcId);
-      }
-      if (Type.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(Type);
-      }
-      if (RequirementsText.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(RequirementsText);
-      }
-      if (ObjectivesText.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(ObjectivesText);
-      }
-      if (RewardId != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(RewardId);
-      }
-      if (FollowTaskText.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(FollowTaskText);
-      }
-      if (IsEnabled != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsEnabled);
-      }
-      if (IsCycle != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsCycle);
-      }
-      if (IsAutoFinish != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(IsAutoFinish);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Description);
-      }
-      if (FromNpcId != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(FromNpcId);
-      }
-      if (ToNpcId != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(ToNpcId);
-      }
-      if (Type.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(Type);
-      }
-      if (RequirementsText.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(RequirementsText);
-      }
-      if (ObjectivesText.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(ObjectivesText);
-      }
-      if (RewardId != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(RewardId);
-      }
-      if (FollowTaskText.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(FollowTaskText);
-      }
-      if (IsEnabled != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsEnabled);
-      }
-      if (IsCycle != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsCycle);
-      }
-      if (IsAutoFinish != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(IsAutoFinish);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Description.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (FromNpcId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FromNpcId);
-      }
-      if (ToNpcId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ToNpcId);
-      }
-      if (Type.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
-      }
-      if (RequirementsText.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequirementsText);
-      }
-      if (ObjectivesText.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ObjectivesText);
-      }
-      if (RewardId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RewardId);
-      }
-      if (FollowTaskText.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FollowTaskText);
-      }
-      if (IsEnabled != false) {
-        size += 1 + 1;
-      }
-      if (IsCycle != false) {
-        size += 1 + 1;
-      }
-      if (IsAutoFinish != false) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskSettings other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Description.Length != 0) {
-        Description = other.Description;
-      }
-      if (other.FromNpcId != 0) {
-        FromNpcId = other.FromNpcId;
-      }
-      if (other.ToNpcId != 0) {
-        ToNpcId = other.ToNpcId;
-      }
-      if (other.Type.Length != 0) {
-        Type = other.Type;
-      }
-      if (other.RequirementsText.Length != 0) {
-        RequirementsText = other.RequirementsText;
-      }
-      if (other.ObjectivesText.Length != 0) {
-        ObjectivesText = other.ObjectivesText;
-      }
-      if (other.RewardId != 0) {
-        RewardId = other.RewardId;
-      }
-      if (other.FollowTaskText.Length != 0) {
-        FollowTaskText = other.FollowTaskText;
-      }
-      if (other.IsEnabled != false) {
-        IsEnabled = other.IsEnabled;
-      }
-      if (other.IsCycle != false) {
-        IsCycle = other.IsCycle;
-      }
-      if (other.IsAutoFinish != false) {
-        IsAutoFinish = other.IsAutoFinish;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Description = input.ReadString();
-            break;
-          }
-          case 32: {
-            FromNpcId = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            ToNpcId = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            Type = input.ReadString();
-            break;
-          }
-          case 58: {
-            RequirementsText = input.ReadString();
-            break;
-          }
-          case 66: {
-            ObjectivesText = input.ReadString();
-            break;
-          }
-          case 72: {
-            RewardId = input.ReadInt32();
-            break;
-          }
-          case 82: {
-            FollowTaskText = input.ReadString();
-            break;
-          }
-          case 88: {
-            IsEnabled = input.ReadBool();
-            break;
-          }
-          case 96: {
-            IsCycle = input.ReadBool();
-            break;
-          }
-          case 104: {
-            IsAutoFinish = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Description = input.ReadString();
-            break;
-          }
-          case 32: {
-            FromNpcId = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            ToNpcId = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            Type = input.ReadString();
-            break;
-          }
-          case 58: {
-            RequirementsText = input.ReadString();
-            break;
-          }
-          case 66: {
-            ObjectivesText = input.ReadString();
-            break;
-          }
-          case 72: {
-            RewardId = input.ReadInt32();
-            break;
-          }
-          case 82: {
-            FollowTaskText = input.ReadString();
-            break;
-          }
-          case 88: {
-            IsEnabled = input.ReadBool();
-            break;
-          }
-          case 96: {
-            IsCycle = input.ReadBool();
-            break;
-          }
-          case 104: {
-            IsAutoFinish = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// 任务
-  /// </summary>
-  public sealed partial class Task : pb::IMessage<Task>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Task> _parser = new pb::MessageParser<Task>(() => new Task());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Task> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[53]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Task() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Task(Task other) : this() {
-      id_ = other.id_;
-      name_ = other.name_;
-      description_ = other.description_;
-      isMain_ = other.isMain_;
-      isAcceptable_ = other.isAcceptable_;
-      taskObjective_ = other.taskObjective_.Clone();
-      acceptableConversation_ = other.acceptableConversation_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Task Clone() {
-      return new Task(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
-    /// <summary>
-    /// 任务 ID
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
-    private string name_ = "";
-    /// <summary>
-    /// 任务名
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 3;
-    private string description_ = "";
-    /// <summary>
-    /// 任务描述
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Description {
-      get { return description_; }
-      set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "is_main" field.</summary>
-    public const int IsMainFieldNumber = 4;
-    private bool isMain_;
-    /// <summary>
-    /// 是否主线任务
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMain {
-      get { return isMain_; }
-      set {
-        isMain_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_acceptable" field.</summary>
-    public const int IsAcceptableFieldNumber = 5;
-    private bool isAcceptable_;
-    /// <summary>
-    /// 任务是否可接
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsAcceptable {
-      get { return isAcceptable_; }
-      set {
-        isAcceptable_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "task_objective" field.</summary>
-    public const int TaskObjectiveFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Bian.TaskObjective> _repeated_taskObjective_codec
-        = pb::FieldCodec.ForMessage(50, global::Bian.TaskObjective.Parser);
-    private readonly pbc::RepeatedField<global::Bian.TaskObjective> taskObjective_ = new pbc::RepeatedField<global::Bian.TaskObjective>();
-    /// <summary>
-    /// 目标
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.TaskObjective> TaskObjective {
-      get { return taskObjective_; }
-    }
-
-    /// <summary>Field number for the "acceptable_conversation" field.</summary>
-    public const int AcceptableConversationFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Bian.NpcConversation> _repeated_acceptableConversation_codec
-        = pb::FieldCodec.ForMessage(66, global::Bian.NpcConversation.Parser);
-    private readonly pbc::RepeatedField<global::Bian.NpcConversation> acceptableConversation_ = new pbc::RepeatedField<global::Bian.NpcConversation>();
-    /// <summary>
-    /// 奖励
-    /// repeated TaskReward task_rewards = 7;
-    /// int32 reward_id = 7;
-    /// 接任务对话
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.NpcConversation> AcceptableConversation {
-      get { return acceptableConversation_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Task);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Task other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Name != other.Name) return false;
-      if (Description != other.Description) return false;
-      if (IsMain != other.IsMain) return false;
-      if (IsAcceptable != other.IsAcceptable) return false;
-      if(!taskObjective_.Equals(other.taskObjective_)) return false;
-      if(!acceptableConversation_.Equals(other.acceptableConversation_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (IsMain != false) hash ^= IsMain.GetHashCode();
-      if (IsAcceptable != false) hash ^= IsAcceptable.GetHashCode();
-      hash ^= taskObjective_.GetHashCode();
-      hash ^= acceptableConversation_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Description);
-      }
-      if (IsMain != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsMain);
-      }
-      if (IsAcceptable != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsAcceptable);
-      }
-      taskObjective_.WriteTo(output, _repeated_taskObjective_codec);
-      acceptableConversation_.WriteTo(output, _repeated_acceptableConversation_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Description);
-      }
-      if (IsMain != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsMain);
-      }
-      if (IsAcceptable != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsAcceptable);
-      }
-      taskObjective_.WriteTo(ref output, _repeated_taskObjective_codec);
-      acceptableConversation_.WriteTo(ref output, _repeated_acceptableConversation_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Description.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (IsMain != false) {
-        size += 1 + 1;
-      }
-      if (IsAcceptable != false) {
-        size += 1 + 1;
-      }
-      size += taskObjective_.CalculateSize(_repeated_taskObjective_codec);
-      size += acceptableConversation_.CalculateSize(_repeated_acceptableConversation_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Task other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Description.Length != 0) {
-        Description = other.Description;
-      }
-      if (other.IsMain != false) {
-        IsMain = other.IsMain;
-      }
-      if (other.IsAcceptable != false) {
-        IsAcceptable = other.IsAcceptable;
-      }
-      taskObjective_.Add(other.taskObjective_);
-      acceptableConversation_.Add(other.acceptableConversation_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Description = input.ReadString();
-            break;
-          }
-          case 32: {
-            IsMain = input.ReadBool();
-            break;
-          }
-          case 40: {
-            IsAcceptable = input.ReadBool();
-            break;
-          }
-          case 50: {
-            taskObjective_.AddEntriesFrom(input, _repeated_taskObjective_codec);
-            break;
-          }
-          case 66: {
-            acceptableConversation_.AddEntriesFrom(input, _repeated_acceptableConversation_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Description = input.ReadString();
-            break;
-          }
-          case 32: {
-            IsMain = input.ReadBool();
-            break;
-          }
-          case 40: {
-            IsAcceptable = input.ReadBool();
-            break;
-          }
-          case 50: {
-            taskObjective_.AddEntriesFrom(ref input, _repeated_taskObjective_codec);
-            break;
-          }
-          case 66: {
-            acceptableConversation_.AddEntriesFrom(ref input, _repeated_acceptableConversation_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// 任务目标
-  /// </summary>
-  public sealed partial class TaskObjective : pb::IMessage<TaskObjective>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<TaskObjective> _parser = new pb::MessageParser<TaskObjective>(() => new TaskObjective());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskObjective> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[54]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjective() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjective(TaskObjective other) : this() {
-      quantity_ = other.quantity_;
-      rate_ = other.rate_;
-      targetId_ = other.targetId_;
-      isCompleted_ = other.isCompleted_;
-      taskObjectiveType_ = other.taskObjectiveType_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjective Clone() {
-      return new TaskObjective(this);
-    }
-
-    /// <summary>Field number for the "quantity" field.</summary>
-    public const int QuantityFieldNumber = 1;
-    private int quantity_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Quantity {
-      get { return quantity_; }
-      set {
-        quantity_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rate" field.</summary>
-    public const int RateFieldNumber = 2;
-    private int rate_;
-    /// <summary>
-    /// 进度
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Rate {
-      get { return rate_; }
-      set {
-        rate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "target_id" field.</summary>
-    public const int TargetIdFieldNumber = 3;
-    private int targetId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TargetId {
-      get { return targetId_; }
-      set {
-        targetId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_completed" field.</summary>
-    public const int IsCompletedFieldNumber = 4;
-    private bool isCompleted_;
-    /// <summary>
-    /// 是否已完成
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsCompleted {
-      get { return isCompleted_; }
-      set {
-        isCompleted_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "task_objective_type" field.</summary>
-    public const int TaskObjectiveTypeFieldNumber = 5;
-    private global::Bian.TaskObjectiveType taskObjectiveType_ = global::Bian.TaskObjectiveType.TaskObjectiveTypeUnknown;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskObjectiveType TaskObjectiveType {
-      get { return taskObjectiveType_; }
-      set {
-        taskObjectiveType_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as TaskObjective);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskObjective other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Quantity != other.Quantity) return false;
-      if (Rate != other.Rate) return false;
-      if (TargetId != other.TargetId) return false;
-      if (IsCompleted != other.IsCompleted) return false;
-      if (TaskObjectiveType != other.TaskObjectiveType) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Quantity != 0) hash ^= Quantity.GetHashCode();
-      if (Rate != 0) hash ^= Rate.GetHashCode();
-      if (TargetId != 0) hash ^= TargetId.GetHashCode();
-      if (IsCompleted != false) hash ^= IsCompleted.GetHashCode();
-      if (TaskObjectiveType != global::Bian.TaskObjectiveType.TaskObjectiveTypeUnknown) hash ^= TaskObjectiveType.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Quantity != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Quantity);
-      }
-      if (Rate != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Rate);
-      }
-      if (TargetId != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(TargetId);
-      }
-      if (IsCompleted != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsCompleted);
-      }
-      if (TaskObjectiveType != global::Bian.TaskObjectiveType.TaskObjectiveTypeUnknown) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) TaskObjectiveType);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Quantity != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Quantity);
-      }
-      if (Rate != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Rate);
-      }
-      if (TargetId != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(TargetId);
-      }
-      if (IsCompleted != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsCompleted);
-      }
-      if (TaskObjectiveType != global::Bian.TaskObjectiveType.TaskObjectiveTypeUnknown) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) TaskObjectiveType);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Quantity != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
-      }
-      if (Rate != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Rate);
-      }
-      if (TargetId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TargetId);
-      }
-      if (IsCompleted != false) {
-        size += 1 + 1;
-      }
-      if (TaskObjectiveType != global::Bian.TaskObjectiveType.TaskObjectiveTypeUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskObjectiveType);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskObjective other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Quantity != 0) {
-        Quantity = other.Quantity;
-      }
-      if (other.Rate != 0) {
-        Rate = other.Rate;
-      }
-      if (other.TargetId != 0) {
-        TargetId = other.TargetId;
-      }
-      if (other.IsCompleted != false) {
-        IsCompleted = other.IsCompleted;
-      }
-      if (other.TaskObjectiveType != global::Bian.TaskObjectiveType.TaskObjectiveTypeUnknown) {
-        TaskObjectiveType = other.TaskObjectiveType;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Quantity = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Rate = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            TargetId = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            IsCompleted = input.ReadBool();
-            break;
-          }
-          case 40: {
-            TaskObjectiveType = (global::Bian.TaskObjectiveType) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Quantity = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Rate = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            TargetId = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            IsCompleted = input.ReadBool();
-            break;
-          }
-          case 40: {
-            TaskObjectiveType = (global::Bian.TaskObjectiveType) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// 任务奖励
-  /// </summary>
-  public sealed partial class TaskReward : pb::IMessage<TaskReward>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<TaskReward> _parser = new pb::MessageParser<TaskReward>(() => new TaskReward());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskReward> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[55]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskReward() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskReward(TaskReward other) : this() {
-      taskRewardType_ = other.taskRewardType_;
-      itemId_ = other.itemId_;
-      quantity_ = other.quantity_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskReward Clone() {
-      return new TaskReward(this);
-    }
-
-    /// <summary>Field number for the "task_reward_type" field.</summary>
-    public const int TaskRewardTypeFieldNumber = 1;
-    private global::Bian.TaskRewardType taskRewardType_ = global::Bian.TaskRewardType.TaskRewardTypeUnknown;
-    /// <summary>
-    /// 奖励
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskRewardType TaskRewardType {
-      get { return taskRewardType_; }
-      set {
-        taskRewardType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 2;
-    private string itemId_ = "";
-    /// <summary>
-    /// 奖励物品 ID
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ItemId {
-      get { return itemId_; }
-      set {
-        itemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "quantity" field.</summary>
-    public const int QuantityFieldNumber = 3;
-    private long quantity_;
-    /// <summary>
-    /// 数量
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Quantity {
-      get { return quantity_; }
-      set {
-        quantity_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as TaskReward);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskReward other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (TaskRewardType != other.TaskRewardType) return false;
-      if (ItemId != other.ItemId) return false;
-      if (Quantity != other.Quantity) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (TaskRewardType != global::Bian.TaskRewardType.TaskRewardTypeUnknown) hash ^= TaskRewardType.GetHashCode();
-      if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
-      if (Quantity != 0L) hash ^= Quantity.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (TaskRewardType != global::Bian.TaskRewardType.TaskRewardTypeUnknown) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) TaskRewardType);
-      }
-      if (ItemId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ItemId);
-      }
-      if (Quantity != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Quantity);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TaskRewardType != global::Bian.TaskRewardType.TaskRewardTypeUnknown) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) TaskRewardType);
-      }
-      if (ItemId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ItemId);
-      }
-      if (Quantity != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Quantity);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (TaskRewardType != global::Bian.TaskRewardType.TaskRewardTypeUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskRewardType);
-      }
-      if (ItemId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
-      }
-      if (Quantity != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Quantity);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskReward other) {
-      if (other == null) {
-        return;
-      }
-      if (other.TaskRewardType != global::Bian.TaskRewardType.TaskRewardTypeUnknown) {
-        TaskRewardType = other.TaskRewardType;
-      }
-      if (other.ItemId.Length != 0) {
-        ItemId = other.ItemId;
-      }
-      if (other.Quantity != 0L) {
-        Quantity = other.Quantity;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            TaskRewardType = (global::Bian.TaskRewardType) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            ItemId = input.ReadString();
-            break;
-          }
-          case 24: {
-            Quantity = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            TaskRewardType = (global::Bian.TaskRewardType) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            ItemId = input.ReadString();
-            break;
-          }
-          case 24: {
-            Quantity = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// 用户已接任务列表
-  /// </summary>
-  public sealed partial class PlayerTask : pb::IMessage<PlayerTask>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PlayerTask> _parser = new pb::MessageParser<PlayerTask>(() => new PlayerTask());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<PlayerTask> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[56]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PlayerTask() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PlayerTask(PlayerTask other) : this() {
-      id_ = other.id_;
-      taskId_ = other.taskId_;
-      state_ = other.state_;
-      name_ = other.name_;
-      description_ = other.description_;
-      isMain_ = other.isMain_;
-      taskObjective_ = other.taskObjective_.Clone();
-      processingConversation_ = other.processingConversation_.Clone();
-      submittableConversation_ = other.submittableConversation_.Clone();
-      toNpcId_ = other.toNpcId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PlayerTask Clone() {
-      return new PlayerTask(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "task_id" field.</summary>
-    public const int TaskIdFieldNumber = 2;
-    private int taskId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TaskId {
-      get { return taskId_; }
-      set {
-        taskId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 3;
-    private global::Bian.TaskState state_ = global::Bian.TaskState.TaskStateUnknown;
-    /// <summary>
-    /// 任务状态
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskState State {
-      get { return state_; }
-      set {
-        state_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 4;
-    private string name_ = "";
-    /// <summary>
-    /// 任务名
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 5;
-    private string description_ = "";
-    /// <summary>
-    /// 任务描述
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Description {
-      get { return description_; }
-      set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "is_main" field.</summary>
-    public const int IsMainFieldNumber = 6;
-    private bool isMain_;
-    /// <summary>
-    /// 是否主线任务
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMain {
-      get { return isMain_; }
-      set {
-        isMain_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "task_objective" field.</summary>
-    public const int TaskObjectiveFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Bian.TaskObjective> _repeated_taskObjective_codec
-        = pb::FieldCodec.ForMessage(58, global::Bian.TaskObjective.Parser);
-    private readonly pbc::RepeatedField<global::Bian.TaskObjective> taskObjective_ = new pbc::RepeatedField<global::Bian.TaskObjective>();
-    /// <summary>
-    /// 目标
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.TaskObjective> TaskObjective {
-      get { return taskObjective_; }
-    }
-
-    /// <summary>Field number for the "processing_conversation" field.</summary>
-    public const int ProcessingConversationFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::Bian.NpcConversation> _repeated_processingConversation_codec
-        = pb::FieldCodec.ForMessage(74, global::Bian.NpcConversation.Parser);
-    private readonly pbc::RepeatedField<global::Bian.NpcConversation> processingConversation_ = new pbc::RepeatedField<global::Bian.NpcConversation>();
-    /// <summary>
-    /// 奖励
-    ///repeated TaskReward task_rewards = 8;
-    ///int32 reward_id = 8;
-    /// 任务进行中对话
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.NpcConversation> ProcessingConversation {
-      get { return processingConversation_; }
-    }
-
-    /// <summary>Field number for the "submittable_conversation" field.</summary>
-    public const int SubmittableConversationFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Bian.NpcConversation> _repeated_submittableConversation_codec
-        = pb::FieldCodec.ForMessage(82, global::Bian.NpcConversation.Parser);
-    private readonly pbc::RepeatedField<global::Bian.NpcConversation> submittableConversation_ = new pbc::RepeatedField<global::Bian.NpcConversation>();
-    /// <summary>
-    /// 交任务对话
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.NpcConversation> SubmittableConversation {
-      get { return submittableConversation_; }
-    }
-
-    /// <summary>Field number for the "to_npc_id" field.</summary>
-    public const int ToNpcIdFieldNumber = 11;
-    private string toNpcId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ToNpcId {
-      get { return toNpcId_; }
-      set {
-        toNpcId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as PlayerTask);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(PlayerTask other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (TaskId != other.TaskId) return false;
-      if (State != other.State) return false;
-      if (Name != other.Name) return false;
-      if (Description != other.Description) return false;
-      if (IsMain != other.IsMain) return false;
-      if(!taskObjective_.Equals(other.taskObjective_)) return false;
-      if(!processingConversation_.Equals(other.processingConversation_)) return false;
-      if(!submittableConversation_.Equals(other.submittableConversation_)) return false;
-      if (ToNpcId != other.ToNpcId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (TaskId != 0) hash ^= TaskId.GetHashCode();
-      if (State != global::Bian.TaskState.TaskStateUnknown) hash ^= State.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (IsMain != false) hash ^= IsMain.GetHashCode();
-      hash ^= taskObjective_.GetHashCode();
-      hash ^= processingConversation_.GetHashCode();
-      hash ^= submittableConversation_.GetHashCode();
-      if (ToNpcId.Length != 0) hash ^= ToNpcId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (TaskId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(TaskId);
-      }
-      if (State != global::Bian.TaskState.TaskStateUnknown) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) State);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(Description);
-      }
-      if (IsMain != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsMain);
-      }
-      taskObjective_.WriteTo(output, _repeated_taskObjective_codec);
-      processingConversation_.WriteTo(output, _repeated_processingConversation_codec);
-      submittableConversation_.WriteTo(output, _repeated_submittableConversation_codec);
-      if (ToNpcId.Length != 0) {
-        output.WriteRawTag(90);
-        output.WriteString(ToNpcId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (TaskId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(TaskId);
-      }
-      if (State != global::Bian.TaskState.TaskStateUnknown) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) State);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Name);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(Description);
-      }
-      if (IsMain != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsMain);
-      }
-      taskObjective_.WriteTo(ref output, _repeated_taskObjective_codec);
-      processingConversation_.WriteTo(ref output, _repeated_processingConversation_codec);
-      submittableConversation_.WriteTo(ref output, _repeated_submittableConversation_codec);
-      if (ToNpcId.Length != 0) {
-        output.WriteRawTag(90);
-        output.WriteString(ToNpcId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
-      if (TaskId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TaskId);
-      }
-      if (State != global::Bian.TaskState.TaskStateUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Description.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (IsMain != false) {
-        size += 1 + 1;
-      }
-      size += taskObjective_.CalculateSize(_repeated_taskObjective_codec);
-      size += processingConversation_.CalculateSize(_repeated_processingConversation_codec);
-      size += submittableConversation_.CalculateSize(_repeated_submittableConversation_codec);
-      if (ToNpcId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ToNpcId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(PlayerTask other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
-      if (other.TaskId != 0) {
-        TaskId = other.TaskId;
-      }
-      if (other.State != global::Bian.TaskState.TaskStateUnknown) {
-        State = other.State;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Description.Length != 0) {
-        Description = other.Description;
-      }
-      if (other.IsMain != false) {
-        IsMain = other.IsMain;
-      }
-      taskObjective_.Add(other.taskObjective_);
-      processingConversation_.Add(other.processingConversation_);
-      submittableConversation_.Add(other.submittableConversation_);
-      if (other.ToNpcId.Length != 0) {
-        ToNpcId = other.ToNpcId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 16: {
-            TaskId = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            State = (global::Bian.TaskState) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            Name = input.ReadString();
-            break;
-          }
-          case 42: {
-            Description = input.ReadString();
-            break;
-          }
-          case 48: {
-            IsMain = input.ReadBool();
-            break;
-          }
-          case 58: {
-            taskObjective_.AddEntriesFrom(input, _repeated_taskObjective_codec);
-            break;
-          }
-          case 74: {
-            processingConversation_.AddEntriesFrom(input, _repeated_processingConversation_codec);
-            break;
-          }
-          case 82: {
-            submittableConversation_.AddEntriesFrom(input, _repeated_submittableConversation_codec);
-            break;
-          }
-          case 90: {
-            ToNpcId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 16: {
-            TaskId = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            State = (global::Bian.TaskState) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            Name = input.ReadString();
-            break;
-          }
-          case 42: {
-            Description = input.ReadString();
-            break;
-          }
-          case 48: {
-            IsMain = input.ReadBool();
-            break;
-          }
-          case 58: {
-            taskObjective_.AddEntriesFrom(ref input, _repeated_taskObjective_codec);
-            break;
-          }
-          case 74: {
-            processingConversation_.AddEntriesFrom(ref input, _repeated_processingConversation_codec);
-            break;
-          }
-          case 82: {
-            submittableConversation_.AddEntriesFrom(ref input, _repeated_submittableConversation_codec);
-            break;
-          }
-          case 90: {
-            ToNpcId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class ChatSettings : pb::IMessage<ChatSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -32033,7 +29742,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[57]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32066,10 +29775,10 @@ namespace Bian {
 
     /// <summary>Field number for the "chat_type" field.</summary>
     public const int ChatTypeFieldNumber = 1;
-    private global::Bian.ChatChannelType chatType_ = global::Bian.ChatChannelType.ChatChannelTypeUnknown;
+    private global::MelandGame3.ChatChannelType chatType_ = global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ChatChannelType ChatType {
+    public global::MelandGame3.ChatChannelType ChatType {
       get { return chatType_; }
       set {
         chatType_ = value;
@@ -32112,7 +29821,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) hash ^= ChatType.GetHashCode();
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) hash ^= ChatType.GetHashCode();
       if (Cd != 0) hash ^= Cd.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -32132,7 +29841,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ChatType);
       }
@@ -32150,7 +29859,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ChatType);
       }
@@ -32168,7 +29877,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChatType);
       }
       if (Cd != 0) {
@@ -32186,7 +29895,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (other.ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         ChatType = other.ChatType;
       }
       if (other.Cd != 0) {
@@ -32208,7 +29917,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ChatType = (global::Bian.ChatChannelType) input.ReadEnum();
+            ChatType = (global::MelandGame3.ChatChannelType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -32231,7 +29940,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ChatType = (global::Bian.ChatChannelType) input.ReadEnum();
+            ChatType = (global::MelandGame3.ChatChannelType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -32262,7 +29971,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[58]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32336,10 +30045,10 @@ namespace Bian {
 
     /// <summary>Field number for the "chat_type" field.</summary>
     public const int ChatTypeFieldNumber = 4;
-    private global::Bian.ChatChannelType chatType_ = global::Bian.ChatChannelType.ChatChannelTypeUnknown;
+    private global::MelandGame3.ChatChannelType chatType_ = global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ChatChannelType ChatType {
+    public global::MelandGame3.ChatChannelType ChatType {
       get { return chatType_; }
       set {
         chatType_ = value;
@@ -32417,7 +30126,7 @@ namespace Bian {
       if (SenderId.Length != 0) hash ^= SenderId.GetHashCode();
       if (SenderName.Length != 0) hash ^= SenderName.GetHashCode();
       if (SenderIcon.Length != 0) hash ^= SenderIcon.GetHashCode();
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) hash ^= ChatType.GetHashCode();
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) hash ^= ChatType.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (ReceiverId.Length != 0) hash ^= ReceiverId.GetHashCode();
       if (MsgId.Length != 0) hash ^= MsgId.GetHashCode();
@@ -32451,7 +30160,7 @@ namespace Bian {
         output.WriteRawTag(26);
         output.WriteString(SenderIcon);
       }
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) ChatType);
       }
@@ -32489,7 +30198,7 @@ namespace Bian {
         output.WriteRawTag(26);
         output.WriteString(SenderIcon);
       }
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) ChatType);
       }
@@ -32524,7 +30233,7 @@ namespace Bian {
       if (SenderIcon.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SenderIcon);
       }
-      if (ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChatType);
       }
       if (Content.Length != 0) {
@@ -32557,7 +30266,7 @@ namespace Bian {
       if (other.SenderIcon.Length != 0) {
         SenderIcon = other.SenderIcon;
       }
-      if (other.ChatType != global::Bian.ChatChannelType.ChatChannelTypeUnknown) {
+      if (other.ChatType != global::MelandGame3.ChatChannelType.ChatChannelTypeUnknown) {
         ChatType = other.ChatType;
       }
       if (other.Content.Length != 0) {
@@ -32597,7 +30306,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            ChatType = (global::Bian.ChatChannelType) input.ReadEnum();
+            ChatType = (global::MelandGame3.ChatChannelType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -32640,7 +30349,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            ChatType = (global::Bian.ChatChannelType) input.ReadEnum();
+            ChatType = (global::MelandGame3.ChatChannelType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -32676,7 +30385,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[59]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32713,13 +30422,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Bian.MinimapMarkType type_ = global::Bian.MinimapMarkType.MinimapMarkTypeUnknown;
+    private global::MelandGame3.MinimapMarkType type_ = global::MelandGame3.MinimapMarkType.MinimapMarkTypeUnknown;
     /// <summary>
     /// 标记类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MinimapMarkType Type {
+    public global::MelandGame3.MinimapMarkType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -32728,13 +30437,13 @@ namespace Bian {
 
     /// <summary>Field number for the "display_type" field.</summary>
     public const int DisplayTypeFieldNumber = 2;
-    private global::Bian.MinimapMarkDisplayType displayType_ = global::Bian.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown;
+    private global::MelandGame3.MinimapMarkDisplayType displayType_ = global::MelandGame3.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown;
     /// <summary>
     /// 展示类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.MinimapMarkDisplayType DisplayType {
+    public global::MelandGame3.MinimapMarkDisplayType DisplayType {
       get { return displayType_; }
       set {
         displayType_ = value;
@@ -32823,8 +30532,8 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::Bian.MinimapMarkType.MinimapMarkTypeUnknown) hash ^= Type.GetHashCode();
-      if (DisplayType != global::Bian.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) hash ^= DisplayType.GetHashCode();
+      if (Type != global::MelandGame3.MinimapMarkType.MinimapMarkTypeUnknown) hash ^= Type.GetHashCode();
+      if (DisplayType != global::MelandGame3.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) hash ^= DisplayType.GetHashCode();
       if (MarkId.Length != 0) hash ^= MarkId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (R != 0) hash ^= R.GetHashCode();
@@ -32847,11 +30556,11 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::Bian.MinimapMarkType.MinimapMarkTypeUnknown) {
+      if (Type != global::MelandGame3.MinimapMarkType.MinimapMarkTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (DisplayType != global::Bian.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
+      if (DisplayType != global::MelandGame3.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) DisplayType);
       }
@@ -32881,11 +30590,11 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Bian.MinimapMarkType.MinimapMarkTypeUnknown) {
+      if (Type != global::MelandGame3.MinimapMarkType.MinimapMarkTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (DisplayType != global::Bian.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
+      if (DisplayType != global::MelandGame3.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) DisplayType);
       }
@@ -32915,10 +30624,10 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::Bian.MinimapMarkType.MinimapMarkTypeUnknown) {
+      if (Type != global::MelandGame3.MinimapMarkType.MinimapMarkTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (DisplayType != global::Bian.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
+      if (DisplayType != global::MelandGame3.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DisplayType);
       }
       if (MarkId.Length != 0) {
@@ -32945,10 +30654,10 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Type != global::Bian.MinimapMarkType.MinimapMarkTypeUnknown) {
+      if (other.Type != global::MelandGame3.MinimapMarkType.MinimapMarkTypeUnknown) {
         Type = other.Type;
       }
-      if (other.DisplayType != global::Bian.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
+      if (other.DisplayType != global::MelandGame3.MinimapMarkDisplayType.MinimapMarkDisplayTypeUnknown) {
         DisplayType = other.DisplayType;
       }
       if (other.MarkId.Length != 0) {
@@ -32979,11 +30688,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::Bian.MinimapMarkType) input.ReadEnum();
+            Type = (global::MelandGame3.MinimapMarkType) input.ReadEnum();
             break;
           }
           case 16: {
-            DisplayType = (global::Bian.MinimapMarkDisplayType) input.ReadEnum();
+            DisplayType = (global::MelandGame3.MinimapMarkDisplayType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -33018,11 +30727,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::Bian.MinimapMarkType) input.ReadEnum();
+            Type = (global::MelandGame3.MinimapMarkType) input.ReadEnum();
             break;
           }
           case 16: {
-            DisplayType = (global::Bian.MinimapMarkDisplayType) input.ReadEnum();
+            DisplayType = (global::MelandGame3.MinimapMarkDisplayType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -33065,7 +30774,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[60]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -33130,16 +30839,16 @@ namespace Bian {
 
     /// <summary>Field number for the "exp" field.</summary>
     public const int ExpFieldNumber = 2;
-    private int exp_;
+    private string exp_ = "";
     /// <summary>
     /// 经验值
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Exp {
+    public string Exp {
       get { return exp_; }
       set {
-        exp_ = value;
+        exp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -33440,7 +31149,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Lv != 0) hash ^= Lv.GetHashCode();
-      if (Exp != 0) hash ^= Exp.GetHashCode();
+      if (Exp.Length != 0) hash ^= Exp.GetHashCode();
       if (Att != 0) hash ^= Att.GetHashCode();
       if (AttSpeed != 0) hash ^= AttSpeed.GetHashCode();
       if (Def != 0) hash ^= Def.GetHashCode();
@@ -33480,9 +31189,9 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Lv);
       }
-      if (Exp != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Exp);
+      if (Exp.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Exp);
       }
       if (Att != 0) {
         output.WriteRawTag(24);
@@ -33566,9 +31275,9 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Lv);
       }
-      if (Exp != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Exp);
+      if (Exp.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Exp);
       }
       if (Att != 0) {
         output.WriteRawTag(24);
@@ -33651,8 +31360,8 @@ namespace Bian {
       if (Lv != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Lv);
       }
-      if (Exp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Exp);
+      if (Exp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Exp);
       }
       if (Att != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Att);
@@ -33720,7 +31429,7 @@ namespace Bian {
       if (other.Lv != 0) {
         Lv = other.Lv;
       }
-      if (other.Exp != 0) {
+      if (other.Exp.Length != 0) {
         Exp = other.Exp;
       }
       if (other.Att != 0) {
@@ -33793,8 +31502,8 @@ namespace Bian {
             Lv = input.ReadInt32();
             break;
           }
-          case 16: {
-            Exp = input.ReadInt32();
+          case 18: {
+            Exp = input.ReadString();
             break;
           }
           case 24: {
@@ -33884,8 +31593,8 @@ namespace Bian {
             Lv = input.ReadInt32();
             break;
           }
-          case 16: {
-            Exp = input.ReadInt32();
+          case 18: {
+            Exp = input.ReadString();
             break;
           }
           case 24: {
@@ -33977,7 +31686,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[61]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -33999,6 +31708,8 @@ namespace Bian {
     public EntityProfileUpdate(EntityProfileUpdate other) : this() {
       field_ = other.field_;
       curValue_ = other.curValue_;
+      curValueStr_ = other.curValueStr_;
+      useStringValue_ = other.useStringValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -34010,10 +31721,10 @@ namespace Bian {
 
     /// <summary>Field number for the "field" field.</summary>
     public const int FieldFieldNumber = 1;
-    private global::Bian.EntityProfileField field_ = global::Bian.EntityProfileField.EntityProfileFieldUnKnown;
+    private global::MelandGame3.EntityProfileField field_ = global::MelandGame3.EntityProfileField.EntityProfileFieldUnKnown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityProfileField Field {
+    public global::MelandGame3.EntityProfileField Field {
       get { return field_; }
       set {
         field_ = value;
@@ -34029,6 +31740,30 @@ namespace Bian {
       get { return curValue_; }
       set {
         curValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cur_value_str" field.</summary>
+    public const int CurValueStrFieldNumber = 3;
+    private string curValueStr_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CurValueStr {
+      get { return curValueStr_; }
+      set {
+        curValueStr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "use_string_value" field.</summary>
+    public const int UseStringValueFieldNumber = 4;
+    private bool useStringValue_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseStringValue {
+      get { return useStringValue_; }
+      set {
+        useStringValue_ = value;
       }
     }
 
@@ -34049,6 +31784,8 @@ namespace Bian {
       }
       if (Field != other.Field) return false;
       if (CurValue != other.CurValue) return false;
+      if (CurValueStr != other.CurValueStr) return false;
+      if (UseStringValue != other.UseStringValue) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -34056,8 +31793,10 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Field != global::Bian.EntityProfileField.EntityProfileFieldUnKnown) hash ^= Field.GetHashCode();
+      if (Field != global::MelandGame3.EntityProfileField.EntityProfileFieldUnKnown) hash ^= Field.GetHashCode();
       if (CurValue != 0) hash ^= CurValue.GetHashCode();
+      if (CurValueStr.Length != 0) hash ^= CurValueStr.GetHashCode();
+      if (UseStringValue != false) hash ^= UseStringValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -34076,13 +31815,21 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Field != global::Bian.EntityProfileField.EntityProfileFieldUnKnown) {
+      if (Field != global::MelandGame3.EntityProfileField.EntityProfileFieldUnKnown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Field);
       }
       if (CurValue != 0) {
         output.WriteRawTag(16);
         output.WriteInt32(CurValue);
+      }
+      if (CurValueStr.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CurValueStr);
+      }
+      if (UseStringValue != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(UseStringValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -34094,13 +31841,21 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Field != global::Bian.EntityProfileField.EntityProfileFieldUnKnown) {
+      if (Field != global::MelandGame3.EntityProfileField.EntityProfileFieldUnKnown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Field);
       }
       if (CurValue != 0) {
         output.WriteRawTag(16);
         output.WriteInt32(CurValue);
+      }
+      if (CurValueStr.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CurValueStr);
+      }
+      if (UseStringValue != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(UseStringValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -34112,11 +31867,17 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Field != global::Bian.EntityProfileField.EntityProfileFieldUnKnown) {
+      if (Field != global::MelandGame3.EntityProfileField.EntityProfileFieldUnKnown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Field);
       }
       if (CurValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurValue);
+      }
+      if (CurValueStr.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CurValueStr);
+      }
+      if (UseStringValue != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -34130,11 +31891,17 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Field != global::Bian.EntityProfileField.EntityProfileFieldUnKnown) {
+      if (other.Field != global::MelandGame3.EntityProfileField.EntityProfileFieldUnKnown) {
         Field = other.Field;
       }
       if (other.CurValue != 0) {
         CurValue = other.CurValue;
+      }
+      if (other.CurValueStr.Length != 0) {
+        CurValueStr = other.CurValueStr;
+      }
+      if (other.UseStringValue != false) {
+        UseStringValue = other.UseStringValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -34152,11 +31919,19 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Field = (global::Bian.EntityProfileField) input.ReadEnum();
+            Field = (global::MelandGame3.EntityProfileField) input.ReadEnum();
             break;
           }
           case 16: {
             CurValue = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            CurValueStr = input.ReadString();
+            break;
+          }
+          case 32: {
+            UseStringValue = input.ReadBool();
             break;
           }
         }
@@ -34175,11 +31950,19 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Field = (global::Bian.EntityProfileField) input.ReadEnum();
+            Field = (global::MelandGame3.EntityProfileField) input.ReadEnum();
             break;
           }
           case 16: {
             CurValue = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            CurValueStr = input.ReadString();
+            break;
+          }
+          case 32: {
+            UseStringValue = input.ReadBool();
             break;
           }
         }
@@ -34206,7 +31989,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[62]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -34243,13 +32026,13 @@ namespace Bian {
 
     /// <summary>Field number for the "effect_id" field.</summary>
     public const int EffectIdFieldNumber = 1;
-    private global::Bian.EntitySceneEffectId effectId_ = global::Bian.EntitySceneEffectId.EntitySceneEffectIdUnknown;
+    private global::MelandGame3.EntitySceneEffectId effectId_ = global::MelandGame3.EntitySceneEffectId.EntitySceneEffectIdUnknown;
     /// <summary>
     /// 场景效果 id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntitySceneEffectId EffectId {
+    public global::MelandGame3.EntitySceneEffectId EffectId {
       get { return effectId_; }
       set {
         effectId_ = value;
@@ -34313,10 +32096,10 @@ namespace Bian {
 
     /// <summary>Field number for the "bubble_effect_type" field.</summary>
     public const int BubbleEffectTypeFieldNumber = 7;
-    private global::Bian.BubbleTextEffectType bubbleEffectType_ = global::Bian.BubbleTextEffectType.BubbleTextEffectTypeNormal;
+    private global::MelandGame3.BubbleTextEffectType bubbleEffectType_ = global::MelandGame3.BubbleTextEffectType.BubbleTextEffectTypeNormal;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BubbleTextEffectType BubbleEffectType {
+    public global::MelandGame3.BubbleTextEffectType BubbleEffectType {
       get { return bubbleEffectType_; }
       set {
         bubbleEffectType_ = value;
@@ -34351,12 +32134,12 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EffectId != global::Bian.EntitySceneEffectId.EntitySceneEffectIdUnknown) hash ^= EffectId.GetHashCode();
+      if (EffectId != global::MelandGame3.EntitySceneEffectId.EntitySceneEffectIdUnknown) hash ^= EffectId.GetHashCode();
       if (TextContent.Length != 0) hash ^= TextContent.GetHashCode();
       if (ExpiredAt != 0) hash ^= ExpiredAt.GetHashCode();
       if (FromDevice != 0) hash ^= FromDevice.GetHashCode();
       if (FromNode != 0) hash ^= FromNode.GetHashCode();
-      if (BubbleEffectType != global::Bian.BubbleTextEffectType.BubbleTextEffectTypeNormal) hash ^= BubbleEffectType.GetHashCode();
+      if (BubbleEffectType != global::MelandGame3.BubbleTextEffectType.BubbleTextEffectTypeNormal) hash ^= BubbleEffectType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -34375,7 +32158,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EffectId != global::Bian.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
+      if (EffectId != global::MelandGame3.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EffectId);
       }
@@ -34395,7 +32178,7 @@ namespace Bian {
         output.WriteRawTag(48);
         output.WriteInt32(FromNode);
       }
-      if (BubbleEffectType != global::Bian.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
+      if (BubbleEffectType != global::MelandGame3.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
         output.WriteRawTag(56);
         output.WriteEnum((int) BubbleEffectType);
       }
@@ -34409,7 +32192,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EffectId != global::Bian.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
+      if (EffectId != global::MelandGame3.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EffectId);
       }
@@ -34429,7 +32212,7 @@ namespace Bian {
         output.WriteRawTag(48);
         output.WriteInt32(FromNode);
       }
-      if (BubbleEffectType != global::Bian.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
+      if (BubbleEffectType != global::MelandGame3.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
         output.WriteRawTag(56);
         output.WriteEnum((int) BubbleEffectType);
       }
@@ -34443,7 +32226,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EffectId != global::Bian.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
+      if (EffectId != global::MelandGame3.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EffectId);
       }
       if (TextContent.Length != 0) {
@@ -34458,7 +32241,7 @@ namespace Bian {
       if (FromNode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FromNode);
       }
-      if (BubbleEffectType != global::Bian.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
+      if (BubbleEffectType != global::MelandGame3.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BubbleEffectType);
       }
       if (_unknownFields != null) {
@@ -34473,7 +32256,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.EffectId != global::Bian.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
+      if (other.EffectId != global::MelandGame3.EntitySceneEffectId.EntitySceneEffectIdUnknown) {
         EffectId = other.EffectId;
       }
       if (other.TextContent.Length != 0) {
@@ -34488,7 +32271,7 @@ namespace Bian {
       if (other.FromNode != 0) {
         FromNode = other.FromNode;
       }
-      if (other.BubbleEffectType != global::Bian.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
+      if (other.BubbleEffectType != global::MelandGame3.BubbleTextEffectType.BubbleTextEffectTypeNormal) {
         BubbleEffectType = other.BubbleEffectType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -34507,7 +32290,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            EffectId = (global::Bian.EntitySceneEffectId) input.ReadEnum();
+            EffectId = (global::MelandGame3.EntitySceneEffectId) input.ReadEnum();
             break;
           }
           case 18: {
@@ -34527,7 +32310,7 @@ namespace Bian {
             break;
           }
           case 56: {
-            BubbleEffectType = (global::Bian.BubbleTextEffectType) input.ReadEnum();
+            BubbleEffectType = (global::MelandGame3.BubbleTextEffectType) input.ReadEnum();
             break;
           }
         }
@@ -34546,7 +32329,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            EffectId = (global::Bian.EntitySceneEffectId) input.ReadEnum();
+            EffectId = (global::MelandGame3.EntitySceneEffectId) input.ReadEnum();
             break;
           }
           case 18: {
@@ -34566,7 +32349,7 @@ namespace Bian {
             break;
           }
           case 56: {
-            BubbleEffectType = (global::Bian.BubbleTextEffectType) input.ReadEnum();
+            BubbleEffectType = (global::MelandGame3.BubbleTextEffectType) input.ReadEnum();
             break;
           }
         }
@@ -34593,7 +32376,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[63]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -35368,7 +33151,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[64]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -35964,7 +33747,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[65]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[60]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36412,7 +34195,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[66]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[61]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36473,10 +34256,10 @@ namespace Bian {
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 3;
-    private global::Bian.CodeBlockPrograms data_;
+    private global::MelandGame3.CodeBlockPrograms data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CodeBlockPrograms Data {
+    public global::MelandGame3.CodeBlockPrograms Data {
       get { return data_; }
       set {
         data_ = value;
@@ -36509,10 +34292,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 6;
-    private global::Bian.CodeblockTemplateType type_ = global::Bian.CodeblockTemplateType.CodeblockTemplateTypeUnknown;
+    private global::MelandGame3.CodeblockTemplateType type_ = global::MelandGame3.CodeblockTemplateType.CodeblockTemplateTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CodeblockTemplateType Type {
+    public global::MelandGame3.CodeblockTemplateType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -36552,7 +34335,7 @@ namespace Bian {
       if (data_ != null) hash ^= Data.GetHashCode();
       if (Thumbnail.Length != 0) hash ^= Thumbnail.GetHashCode();
       if (IsNew != false) hash ^= IsNew.GetHashCode();
-      if (Type != global::Bian.CodeblockTemplateType.CodeblockTemplateTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.CodeblockTemplateType.CodeblockTemplateTypeUnknown) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -36591,7 +34374,7 @@ namespace Bian {
         output.WriteRawTag(40);
         output.WriteBool(IsNew);
       }
-      if (Type != global::Bian.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
+      if (Type != global::MelandGame3.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Type);
       }
@@ -36625,7 +34408,7 @@ namespace Bian {
         output.WriteRawTag(40);
         output.WriteBool(IsNew);
       }
-      if (Type != global::Bian.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
+      if (Type != global::MelandGame3.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Type);
       }
@@ -36654,7 +34437,7 @@ namespace Bian {
       if (IsNew != false) {
         size += 1 + 1;
       }
-      if (Type != global::Bian.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
+      if (Type != global::MelandGame3.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
@@ -36677,7 +34460,7 @@ namespace Bian {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          Data = new global::Bian.CodeBlockPrograms();
+          Data = new global::MelandGame3.CodeBlockPrograms();
         }
         Data.MergeFrom(other.Data);
       }
@@ -36687,7 +34470,7 @@ namespace Bian {
       if (other.IsNew != false) {
         IsNew = other.IsNew;
       }
-      if (other.Type != global::Bian.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
+      if (other.Type != global::MelandGame3.CodeblockTemplateType.CodeblockTemplateTypeUnknown) {
         Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -36715,7 +34498,7 @@ namespace Bian {
           }
           case 26: {
             if (data_ == null) {
-              Data = new global::Bian.CodeBlockPrograms();
+              Data = new global::MelandGame3.CodeBlockPrograms();
             }
             input.ReadMessage(Data);
             break;
@@ -36729,7 +34512,7 @@ namespace Bian {
             break;
           }
           case 48: {
-            Type = (global::Bian.CodeblockTemplateType) input.ReadEnum();
+            Type = (global::MelandGame3.CodeblockTemplateType) input.ReadEnum();
             break;
           }
         }
@@ -36757,7 +34540,7 @@ namespace Bian {
           }
           case 26: {
             if (data_ == null) {
-              Data = new global::Bian.CodeBlockPrograms();
+              Data = new global::MelandGame3.CodeBlockPrograms();
             }
             input.ReadMessage(Data);
             break;
@@ -36771,7 +34554,7 @@ namespace Bian {
             break;
           }
           case 48: {
-            Type = (global::Bian.CodeblockTemplateType) input.ReadEnum();
+            Type = (global::MelandGame3.CodeblockTemplateType) input.ReadEnum();
             break;
           }
         }
@@ -36795,7 +34578,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[67]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[62]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37107,7 +34890,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[68]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37453,7 +35236,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[69]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[64]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37501,10 +35284,10 @@ namespace Bian {
 
     /// <summary>Field number for the "weather" field.</summary>
     public const int WeatherFieldNumber = 2;
-    private global::Bian.WeatherType weather_ = global::Bian.WeatherType.WeatherTypeNone;
+    private global::MelandGame3.WeatherType weather_ = global::MelandGame3.WeatherType.WeatherTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.WeatherType Weather {
+    public global::MelandGame3.WeatherType Weather {
       get { return weather_; }
       set {
         weather_ = value;
@@ -37575,7 +35358,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (SceneId != 0) hash ^= SceneId.GetHashCode();
-      if (Weather != global::Bian.WeatherType.WeatherTypeNone) hash ^= Weather.GetHashCode();
+      if (Weather != global::MelandGame3.WeatherType.WeatherTypeNone) hash ^= Weather.GetHashCode();
       if (Temperature != 0) hash ^= Temperature.GetHashCode();
       if (StartRate != 0) hash ^= StartRate.GetHashCode();
       if (StopRate != 0) hash ^= StopRate.GetHashCode();
@@ -37601,7 +35384,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(SceneId);
       }
-      if (Weather != global::Bian.WeatherType.WeatherTypeNone) {
+      if (Weather != global::MelandGame3.WeatherType.WeatherTypeNone) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Weather);
       }
@@ -37631,7 +35414,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(SceneId);
       }
-      if (Weather != global::Bian.WeatherType.WeatherTypeNone) {
+      if (Weather != global::MelandGame3.WeatherType.WeatherTypeNone) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Weather);
       }
@@ -37660,7 +35443,7 @@ namespace Bian {
       if (SceneId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SceneId);
       }
-      if (Weather != global::Bian.WeatherType.WeatherTypeNone) {
+      if (Weather != global::MelandGame3.WeatherType.WeatherTypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Weather);
       }
       if (Temperature != 0) {
@@ -37687,7 +35470,7 @@ namespace Bian {
       if (other.SceneId != 0) {
         SceneId = other.SceneId;
       }
-      if (other.Weather != global::Bian.WeatherType.WeatherTypeNone) {
+      if (other.Weather != global::MelandGame3.WeatherType.WeatherTypeNone) {
         Weather = other.Weather;
       }
       if (other.Temperature != 0) {
@@ -37719,7 +35502,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Weather = (global::Bian.WeatherType) input.ReadEnum();
+            Weather = (global::MelandGame3.WeatherType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -37754,7 +35537,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Weather = (global::Bian.WeatherType) input.ReadEnum();
+            Weather = (global::MelandGame3.WeatherType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -37790,7 +35573,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[70]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[65]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37836,13 +35619,13 @@ namespace Bian {
 
     /// <summary>Field number for the "weather_type" field.</summary>
     public const int WeatherTypeFieldNumber = 2;
-    private global::Bian.WeatherType weatherType_ = global::Bian.WeatherType.WeatherTypeNone;
+    private global::MelandGame3.WeatherType weatherType_ = global::MelandGame3.WeatherType.WeatherTypeNone;
     /// <summary>
     /// 天气是否启动
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.WeatherType WeatherType {
+    public global::MelandGame3.WeatherType WeatherType {
       get { return weatherType_; }
       set {
         weatherType_ = value;
@@ -37887,7 +35670,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (SceneId != 0) hash ^= SceneId.GetHashCode();
-      if (WeatherType != global::Bian.WeatherType.WeatherTypeNone) hash ^= WeatherType.GetHashCode();
+      if (WeatherType != global::MelandGame3.WeatherType.WeatherTypeNone) hash ^= WeatherType.GetHashCode();
       if (Temperature != 0) hash ^= Temperature.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -37911,7 +35694,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(SceneId);
       }
-      if (WeatherType != global::Bian.WeatherType.WeatherTypeNone) {
+      if (WeatherType != global::MelandGame3.WeatherType.WeatherTypeNone) {
         output.WriteRawTag(16);
         output.WriteEnum((int) WeatherType);
       }
@@ -37933,7 +35716,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(SceneId);
       }
-      if (WeatherType != global::Bian.WeatherType.WeatherTypeNone) {
+      if (WeatherType != global::MelandGame3.WeatherType.WeatherTypeNone) {
         output.WriteRawTag(16);
         output.WriteEnum((int) WeatherType);
       }
@@ -37954,7 +35737,7 @@ namespace Bian {
       if (SceneId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SceneId);
       }
-      if (WeatherType != global::Bian.WeatherType.WeatherTypeNone) {
+      if (WeatherType != global::MelandGame3.WeatherType.WeatherTypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WeatherType);
       }
       if (Temperature != 0) {
@@ -37975,7 +35758,7 @@ namespace Bian {
       if (other.SceneId != 0) {
         SceneId = other.SceneId;
       }
-      if (other.WeatherType != global::Bian.WeatherType.WeatherTypeNone) {
+      if (other.WeatherType != global::MelandGame3.WeatherType.WeatherTypeNone) {
         WeatherType = other.WeatherType;
       }
       if (other.Temperature != 0) {
@@ -38001,7 +35784,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            WeatherType = (global::Bian.WeatherType) input.ReadEnum();
+            WeatherType = (global::MelandGame3.WeatherType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -38028,7 +35811,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            WeatherType = (global::Bian.WeatherType) input.ReadEnum();
+            WeatherType = (global::MelandGame3.WeatherType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -38056,7 +35839,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[71]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[66]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -38282,7 +36065,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[72]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[67]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -38328,10 +36111,10 @@ namespace Bian {
 
     /// <summary>Field number for the "achieve_type" field.</summary>
     public const int AchieveTypeFieldNumber = 2;
-    private global::Bian.AchieveType achieveType_ = global::Bian.AchieveType.AchieveTypeUnknow;
+    private global::MelandGame3.AchieveType achieveType_ = global::MelandGame3.AchieveType.AchieveTypeUnknow;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AchieveType AchieveType {
+    public global::MelandGame3.AchieveType AchieveType {
       get { return achieveType_; }
       set {
         achieveType_ = value;
@@ -38340,12 +36123,12 @@ namespace Bian {
 
     /// <summary>Field number for the "achieve_index" field.</summary>
     public const int AchieveIndexFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.AchieveIndex> _repeated_achieveIndex_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.AchieveIndex.Parser);
-    private readonly pbc::RepeatedField<global::Bian.AchieveIndex> achieveIndex_ = new pbc::RepeatedField<global::Bian.AchieveIndex>();
+    private static readonly pb::FieldCodec<global::MelandGame3.AchieveIndex> _repeated_achieveIndex_codec
+        = pb::FieldCodec.ForMessage(26, global::MelandGame3.AchieveIndex.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.AchieveIndex> achieveIndex_ = new pbc::RepeatedField<global::MelandGame3.AchieveIndex>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.AchieveIndex> AchieveIndex {
+    public pbc::RepeatedField<global::MelandGame3.AchieveIndex> AchieveIndex {
       get { return achieveIndex_; }
     }
 
@@ -38375,7 +36158,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (AchieveId != 0) hash ^= AchieveId.GetHashCode();
-      if (AchieveType != global::Bian.AchieveType.AchieveTypeUnknow) hash ^= AchieveType.GetHashCode();
+      if (AchieveType != global::MelandGame3.AchieveType.AchieveTypeUnknow) hash ^= AchieveType.GetHashCode();
       hash ^= achieveIndex_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -38399,7 +36182,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(AchieveId);
       }
-      if (AchieveType != global::Bian.AchieveType.AchieveTypeUnknow) {
+      if (AchieveType != global::MelandGame3.AchieveType.AchieveTypeUnknow) {
         output.WriteRawTag(16);
         output.WriteEnum((int) AchieveType);
       }
@@ -38418,7 +36201,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(AchieveId);
       }
-      if (AchieveType != global::Bian.AchieveType.AchieveTypeUnknow) {
+      if (AchieveType != global::MelandGame3.AchieveType.AchieveTypeUnknow) {
         output.WriteRawTag(16);
         output.WriteEnum((int) AchieveType);
       }
@@ -38436,7 +36219,7 @@ namespace Bian {
       if (AchieveId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AchieveId);
       }
-      if (AchieveType != global::Bian.AchieveType.AchieveTypeUnknow) {
+      if (AchieveType != global::MelandGame3.AchieveType.AchieveTypeUnknow) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AchieveType);
       }
       size += achieveIndex_.CalculateSize(_repeated_achieveIndex_codec);
@@ -38455,7 +36238,7 @@ namespace Bian {
       if (other.AchieveId != 0) {
         AchieveId = other.AchieveId;
       }
-      if (other.AchieveType != global::Bian.AchieveType.AchieveTypeUnknow) {
+      if (other.AchieveType != global::MelandGame3.AchieveType.AchieveTypeUnknow) {
         AchieveType = other.AchieveType;
       }
       achieveIndex_.Add(other.achieveIndex_);
@@ -38479,7 +36262,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            AchieveType = (global::Bian.AchieveType) input.ReadEnum();
+            AchieveType = (global::MelandGame3.AchieveType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -38506,7 +36289,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            AchieveType = (global::Bian.AchieveType) input.ReadEnum();
+            AchieveType = (global::MelandGame3.AchieveType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -38537,7 +36320,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[73]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[68]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -38571,6 +36354,7 @@ namespace Bian {
       moveSpeed_ = other.moveSpeed_;
       pushDmg_ = other.pushDmg_;
       pushDist_ = other.pushDist_;
+      deathLossExp_ = other.deathLossExp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -38790,6 +36574,21 @@ namespace Bian {
       }
     }
 
+    /// <summary>Field number for the "death_loss_exp" field.</summary>
+    public const int DeathLossExpFieldNumber = 15;
+    private int deathLossExp_;
+    /// <summary>
+    /// 死亡扣除的比例
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DeathLossExp {
+      get { return deathLossExp_; }
+      set {
+        deathLossExp_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -38819,6 +36618,7 @@ namespace Bian {
       if (MoveSpeed != other.MoveSpeed) return false;
       if (PushDmg != other.PushDmg) return false;
       if (PushDist != other.PushDist) return false;
+      if (DeathLossExp != other.DeathLossExp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -38840,6 +36640,7 @@ namespace Bian {
       if (MoveSpeed != 0) hash ^= MoveSpeed.GetHashCode();
       if (PushDmg != 0) hash ^= PushDmg.GetHashCode();
       if (PushDist != 0) hash ^= PushDist.GetHashCode();
+      if (DeathLossExp != 0) hash ^= DeathLossExp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -38914,6 +36715,10 @@ namespace Bian {
         output.WriteRawTag(112);
         output.WriteInt32(PushDist);
       }
+      if (DeathLossExp != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(DeathLossExp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -38980,6 +36785,10 @@ namespace Bian {
         output.WriteRawTag(112);
         output.WriteInt32(PushDist);
       }
+      if (DeathLossExp != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(DeathLossExp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -39031,6 +36840,9 @@ namespace Bian {
       }
       if (PushDist != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PushDist);
+      }
+      if (DeathLossExp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeathLossExp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -39085,6 +36897,9 @@ namespace Bian {
       }
       if (other.PushDist != 0) {
         PushDist = other.PushDist;
+      }
+      if (other.DeathLossExp != 0) {
+        DeathLossExp = other.DeathLossExp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -39155,6 +36970,10 @@ namespace Bian {
           }
           case 112: {
             PushDist = input.ReadInt32();
+            break;
+          }
+          case 120: {
+            DeathLossExp = input.ReadInt32();
             break;
           }
         }
@@ -39228,6 +37047,10 @@ namespace Bian {
             PushDist = input.ReadInt32();
             break;
           }
+          case 120: {
+            DeathLossExp = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -39252,7 +37075,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[74]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[69]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -39313,10 +37136,10 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_lv_settings" field.</summary>
     public const int EntityLvSettingsFieldNumber = 3;
-    private global::Bian.EntityLvSettings entityLvSettings_;
+    private global::MelandGame3.EntityLvSettings entityLvSettings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLvSettings EntityLvSettings {
+    public global::MelandGame3.EntityLvSettings EntityLvSettings {
       get { return entityLvSettings_; }
       set {
         entityLvSettings_ = value;
@@ -39442,7 +37265,7 @@ namespace Bian {
       }
       if (other.entityLvSettings_ != null) {
         if (entityLvSettings_ == null) {
-          EntityLvSettings = new global::Bian.EntityLvSettings();
+          EntityLvSettings = new global::MelandGame3.EntityLvSettings();
         }
         EntityLvSettings.MergeFrom(other.EntityLvSettings);
       }
@@ -39471,7 +37294,7 @@ namespace Bian {
           }
           case 26: {
             if (entityLvSettings_ == null) {
-              EntityLvSettings = new global::Bian.EntityLvSettings();
+              EntityLvSettings = new global::MelandGame3.EntityLvSettings();
             }
             input.ReadMessage(EntityLvSettings);
             break;
@@ -39501,7 +37324,7 @@ namespace Bian {
           }
           case 26: {
             if (entityLvSettings_ == null) {
-              EntityLvSettings = new global::Bian.EntityLvSettings();
+              EntityLvSettings = new global::MelandGame3.EntityLvSettings();
             }
             input.ReadMessage(EntityLvSettings);
             break;
@@ -39527,7 +37350,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[75]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[70]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -39601,13 +37424,13 @@ namespace Bian {
 
     /// <summary>Field number for the "attribute" field.</summary>
     public const int AttributeFieldNumber = 4;
-    private global::Bian.AvatarAttribute attribute_;
+    private global::MelandGame3.AvatarAttribute attribute_;
     /// <summary>
     /// 属性只对装备有效
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AvatarAttribute Attribute {
+    public global::MelandGame3.AvatarAttribute Attribute {
       get { return attribute_; }
       set {
         attribute_ = value;
@@ -39749,7 +37572,7 @@ namespace Bian {
       }
       if (other.attribute_ != null) {
         if (attribute_ == null) {
-          Attribute = new global::Bian.AvatarAttribute();
+          Attribute = new global::MelandGame3.AvatarAttribute();
         }
         Attribute.MergeFrom(other.Attribute);
       }
@@ -39782,7 +37605,7 @@ namespace Bian {
           }
           case 34: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -39816,7 +37639,7 @@ namespace Bian {
           }
           case 34: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -39842,7 +37665,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[76]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[71]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -40008,15 +37831,15 @@ namespace Bian {
 
     /// <summary>Field number for the "attachments" field.</summary>
     public const int AttachmentsFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Bian.ItemLet> _repeated_attachments_codec
-        = pb::FieldCodec.ForMessage(82, global::Bian.ItemLet.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ItemLet> attachments_ = new pbc::RepeatedField<global::Bian.ItemLet>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ItemLet> _repeated_attachments_codec
+        = pb::FieldCodec.ForMessage(82, global::MelandGame3.ItemLet.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ItemLet> attachments_ = new pbc::RepeatedField<global::MelandGame3.ItemLet>();
     /// <summary>
     /// 附件
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ItemLet> Attachments {
+    public pbc::RepeatedField<global::MelandGame3.ItemLet> Attachments {
       get { return attachments_; }
     }
 
@@ -40363,7 +38186,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[77]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[72]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -40743,7 +38566,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[78]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[73]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -41154,7 +38977,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[79]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[74]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -41380,7 +39203,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[80]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[75]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -41606,7 +39429,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[81]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[76]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -41835,7 +39658,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[82]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[77]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -41904,13 +39727,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 3;
-    private global::Bian.SpecialBuildSubType type_ = global::Bian.SpecialBuildSubType.SpecialBuildSubTypeUnknown;
+    private global::MelandGame3.SpecialBuildSubType type_ = global::MelandGame3.SpecialBuildSubType.SpecialBuildSubTypeUnknown;
     /// <summary>
     ///功能物件 子类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.SpecialBuildSubType Type {
+    public global::MelandGame3.SpecialBuildSubType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -42070,7 +39893,7 @@ namespace Bian {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
       if (DataFrom != 0) hash ^= DataFrom.GetHashCode();
-      if (Type != global::Bian.SpecialBuildSubType.SpecialBuildSubTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.SpecialBuildSubType.SpecialBuildSubTypeUnknown) hash ^= Type.GetHashCode();
       hash ^= formulas_.GetHashCode();
       if (GridNum != 0) hash ^= GridNum.GetHashCode();
       hash ^= needFuel_.GetHashCode();
@@ -42105,7 +39928,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(DataFrom);
       }
-      if (Type != global::Bian.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
+      if (Type != global::MelandGame3.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
@@ -42153,7 +39976,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(DataFrom);
       }
-      if (Type != global::Bian.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
+      if (Type != global::MelandGame3.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
@@ -42199,7 +40022,7 @@ namespace Bian {
       if (DataFrom != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DataFrom);
       }
-      if (Type != global::Bian.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
+      if (Type != global::MelandGame3.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += formulas_.CalculateSize(_repeated_formulas_codec);
@@ -42240,7 +40063,7 @@ namespace Bian {
       if (other.DataFrom != 0) {
         DataFrom = other.DataFrom;
       }
-      if (other.Type != global::Bian.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
+      if (other.Type != global::MelandGame3.SpecialBuildSubType.SpecialBuildSubTypeUnknown) {
         Type = other.Type;
       }
       formulas_.Add(other.formulas_);
@@ -42287,7 +40110,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            Type = (global::Bian.SpecialBuildSubType) input.ReadEnum();
+            Type = (global::MelandGame3.SpecialBuildSubType) input.ReadEnum();
             break;
           }
           case 34:
@@ -42348,7 +40171,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            Type = (global::Bian.SpecialBuildSubType) input.ReadEnum();
+            Type = (global::MelandGame3.SpecialBuildSubType) input.ReadEnum();
             break;
           }
           case 34:
@@ -42409,7 +40232,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[83]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[78]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -42444,13 +40267,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::Bian.EntityId entity_;
+    private global::MelandGame3.EntityId entity_;
     /// <summary>
     ///工作台全局ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Entity {
+    public global::MelandGame3.EntityId Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -42459,10 +40282,10 @@ namespace Bian {
 
     /// <summary>Field number for the "location" field.</summary>
     public const int LocationFieldNumber = 2;
-    private global::Bian.EntityLocation location_;
+    private global::MelandGame3.EntityLocation location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Location {
+    public global::MelandGame3.EntityLocation Location {
       get { return location_; }
       set {
         location_ = value;
@@ -42625,13 +40448,13 @@ namespace Bian {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::Bian.EntityId();
+          Entity = new global::MelandGame3.EntityId();
         }
         Entity.MergeFrom(other.Entity);
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          Location = new global::Bian.EntityLocation();
+          Location = new global::MelandGame3.EntityLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -42658,14 +40481,14 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -42695,14 +40518,14 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
           }
           case 18: {
             if (location_ == null) {
-              Location = new global::Bian.EntityLocation();
+              Location = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Location);
             break;
@@ -42739,7 +40562,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[84]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[79]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -42779,13 +40602,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::Bian.EntityId entity_;
+    private global::MelandGame3.EntityId entity_;
     /// <summary>
     ///工作台全局ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Entity {
+    public global::MelandGame3.EntityId Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -43103,7 +40926,7 @@ namespace Bian {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::Bian.EntityId();
+          Entity = new global::MelandGame3.EntityId();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -43148,7 +40971,7 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
@@ -43202,7 +41025,7 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
@@ -43263,7 +41086,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[85]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[80]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -43498,7 +41321,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[86]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[81]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -43733,7 +41556,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[87]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[82]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -43785,13 +41608,13 @@ namespace Bian {
 
     /// <summary>Field number for the "unlock_type" field.</summary>
     public const int UnlockTypeFieldNumber = 2;
-    private global::Bian.FormulaUnlockType unlockType_ = global::Bian.FormulaUnlockType.FormulaUnlockTypeUnknown;
+    private global::MelandGame3.FormulaUnlockType unlockType_ = global::MelandGame3.FormulaUnlockType.FormulaUnlockTypeUnknown;
     /// <summary>
     ///解锁类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.FormulaUnlockType UnlockType {
+    public global::MelandGame3.FormulaUnlockType UnlockType {
       get { return unlockType_; }
       set {
         unlockType_ = value;
@@ -43842,10 +41665,10 @@ namespace Bian {
 
     /// <summary>Field number for the "product_type" field.</summary>
     public const int ProductTypeFieldNumber = 6;
-    private global::Bian.ComponentType productType_ = global::Bian.ComponentType.ProductTypeUnknown;
+    private global::MelandGame3.ComponentType productType_ = global::MelandGame3.ComponentType.ProductTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ComponentType ProductType {
+    public global::MelandGame3.ComponentType ProductType {
       get { return productType_; }
       set {
         productType_ = value;
@@ -43854,23 +41677,23 @@ namespace Bian {
 
     /// <summary>Field number for the "mat_items" field.</summary>
     public const int MatItemsFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Bian.MatItem> _repeated_matItems_codec
-        = pb::FieldCodec.ForMessage(58, global::Bian.MatItem.Parser);
-    private readonly pbc::RepeatedField<global::Bian.MatItem> matItems_ = new pbc::RepeatedField<global::Bian.MatItem>();
+    private static readonly pb::FieldCodec<global::MelandGame3.MatItem> _repeated_matItems_codec
+        = pb::FieldCodec.ForMessage(58, global::MelandGame3.MatItem.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.MatItem> matItems_ = new pbc::RepeatedField<global::MelandGame3.MatItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.MatItem> MatItems {
+    public pbc::RepeatedField<global::MelandGame3.MatItem> MatItems {
       get { return matItems_; }
     }
 
     /// <summary>Field number for the "show" field.</summary>
     public const int ShowFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Bian.ProductShow> _repeated_show_codec
-        = pb::FieldCodec.ForMessage(66, global::Bian.ProductShow.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ProductShow> show_ = new pbc::RepeatedField<global::Bian.ProductShow>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ProductShow> _repeated_show_codec
+        = pb::FieldCodec.ForMessage(66, global::MelandGame3.ProductShow.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ProductShow> show_ = new pbc::RepeatedField<global::MelandGame3.ProductShow>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ProductShow> Show {
+    public pbc::RepeatedField<global::MelandGame3.ProductShow> Show {
       get { return show_; }
     }
 
@@ -43918,11 +41741,11 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (UnlockType != global::Bian.FormulaUnlockType.FormulaUnlockTypeUnknown) hash ^= UnlockType.GetHashCode();
+      if (UnlockType != global::MelandGame3.FormulaUnlockType.FormulaUnlockTypeUnknown) hash ^= UnlockType.GetHashCode();
       if (UnlockCondition != 0) hash ^= UnlockCondition.GetHashCode();
       if (ConsumeTime != 0) hash ^= ConsumeTime.GetHashCode();
       if (ProductId != 0) hash ^= ProductId.GetHashCode();
-      if (ProductType != global::Bian.ComponentType.ProductTypeUnknown) hash ^= ProductType.GetHashCode();
+      if (ProductType != global::MelandGame3.ComponentType.ProductTypeUnknown) hash ^= ProductType.GetHashCode();
       hash ^= matItems_.GetHashCode();
       hash ^= show_.GetHashCode();
       if (RewardId != 0) hash ^= RewardId.GetHashCode();
@@ -43948,7 +41771,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (UnlockType != global::Bian.FormulaUnlockType.FormulaUnlockTypeUnknown) {
+      if (UnlockType != global::MelandGame3.FormulaUnlockType.FormulaUnlockTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) UnlockType);
       }
@@ -43964,7 +41787,7 @@ namespace Bian {
         output.WriteRawTag(40);
         output.WriteInt32(ProductId);
       }
-      if (ProductType != global::Bian.ComponentType.ProductTypeUnknown) {
+      if (ProductType != global::MelandGame3.ComponentType.ProductTypeUnknown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) ProductType);
       }
@@ -43988,7 +41811,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (UnlockType != global::Bian.FormulaUnlockType.FormulaUnlockTypeUnknown) {
+      if (UnlockType != global::MelandGame3.FormulaUnlockType.FormulaUnlockTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) UnlockType);
       }
@@ -44004,7 +41827,7 @@ namespace Bian {
         output.WriteRawTag(40);
         output.WriteInt32(ProductId);
       }
-      if (ProductType != global::Bian.ComponentType.ProductTypeUnknown) {
+      if (ProductType != global::MelandGame3.ComponentType.ProductTypeUnknown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) ProductType);
       }
@@ -44027,7 +41850,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (UnlockType != global::Bian.FormulaUnlockType.FormulaUnlockTypeUnknown) {
+      if (UnlockType != global::MelandGame3.FormulaUnlockType.FormulaUnlockTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UnlockType);
       }
       if (UnlockCondition != 0) {
@@ -44039,7 +41862,7 @@ namespace Bian {
       if (ProductId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProductId);
       }
-      if (ProductType != global::Bian.ComponentType.ProductTypeUnknown) {
+      if (ProductType != global::MelandGame3.ComponentType.ProductTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProductType);
       }
       size += matItems_.CalculateSize(_repeated_matItems_codec);
@@ -44062,7 +41885,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.UnlockType != global::Bian.FormulaUnlockType.FormulaUnlockTypeUnknown) {
+      if (other.UnlockType != global::MelandGame3.FormulaUnlockType.FormulaUnlockTypeUnknown) {
         UnlockType = other.UnlockType;
       }
       if (other.UnlockCondition != 0) {
@@ -44074,7 +41897,7 @@ namespace Bian {
       if (other.ProductId != 0) {
         ProductId = other.ProductId;
       }
-      if (other.ProductType != global::Bian.ComponentType.ProductTypeUnknown) {
+      if (other.ProductType != global::MelandGame3.ComponentType.ProductTypeUnknown) {
         ProductType = other.ProductType;
       }
       matItems_.Add(other.matItems_);
@@ -44102,7 +41925,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            UnlockType = (global::Bian.FormulaUnlockType) input.ReadEnum();
+            UnlockType = (global::MelandGame3.FormulaUnlockType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -44118,7 +41941,7 @@ namespace Bian {
             break;
           }
           case 48: {
-            ProductType = (global::Bian.ComponentType) input.ReadEnum();
+            ProductType = (global::MelandGame3.ComponentType) input.ReadEnum();
             break;
           }
           case 58: {
@@ -44153,7 +41976,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            UnlockType = (global::Bian.FormulaUnlockType) input.ReadEnum();
+            UnlockType = (global::MelandGame3.FormulaUnlockType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -44169,7 +41992,7 @@ namespace Bian {
             break;
           }
           case 48: {
-            ProductType = (global::Bian.ComponentType) input.ReadEnum();
+            ProductType = (global::MelandGame3.ComponentType) input.ReadEnum();
             break;
           }
           case 58: {
@@ -44205,7 +42028,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[88]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[83]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -44431,7 +42254,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[89]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[84]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -44508,15 +42331,15 @@ namespace Bian {
 
     /// <summary>Field number for the "item_list" field.</summary>
     public const int ItemListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Bian.GainItem> _repeated_itemList_codec
-        = pb::FieldCodec.ForMessage(34, global::Bian.GainItem.Parser);
-    private readonly pbc::RepeatedField<global::Bian.GainItem> itemList_ = new pbc::RepeatedField<global::Bian.GainItem>();
+    private static readonly pb::FieldCodec<global::MelandGame3.GainItem> _repeated_itemList_codec
+        = pb::FieldCodec.ForMessage(34, global::MelandGame3.GainItem.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.GainItem> itemList_ = new pbc::RepeatedField<global::MelandGame3.GainItem>();
     /// <summary>
     /// 物品变化
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.GainItem> ItemList {
+    public pbc::RepeatedField<global::MelandGame3.GainItem> ItemList {
       get { return itemList_; }
     }
 
@@ -44732,7 +42555,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[90]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[85]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -44765,10 +42588,10 @@ namespace Bian {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::Bian.EntityId entity_;
+    private global::MelandGame3.EntityId entity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Entity {
+    public global::MelandGame3.EntityId Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -44777,12 +42600,12 @@ namespace Bian {
 
     /// <summary>Field number for the "widgets" field.</summary>
     public const int WidgetsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.Widget> _repeated_widgets_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.Widget.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Widget> widgets_ = new pbc::RepeatedField<global::Bian.Widget>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Widget> _repeated_widgets_codec
+        = pb::FieldCodec.ForMessage(26, global::MelandGame3.Widget.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Widget> widgets_ = new pbc::RepeatedField<global::MelandGame3.Widget>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Widget> Widgets {
+    public pbc::RepeatedField<global::MelandGame3.Widget> Widgets {
       get { return widgets_; }
     }
 
@@ -44878,7 +42701,7 @@ namespace Bian {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::Bian.EntityId();
+          Entity = new global::MelandGame3.EntityId();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -44900,7 +42723,7 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
@@ -44926,7 +42749,7 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
@@ -44956,7 +42779,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[91]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[86]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -44988,12 +42811,12 @@ namespace Bian {
 
     /// <summary>Field number for the "widgets" field.</summary>
     public const int WidgetsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.Widget> _repeated_widgets_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.Widget.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Widget> widgets_ = new pbc::RepeatedField<global::Bian.Widget>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Widget> _repeated_widgets_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.Widget.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Widget> widgets_ = new pbc::RepeatedField<global::MelandGame3.Widget>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Widget> Widgets {
+    public pbc::RepeatedField<global::MelandGame3.Widget> Widgets {
       get { return widgets_; }
     }
 
@@ -45134,7 +42957,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[92]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[87]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -45218,10 +43041,10 @@ namespace Bian {
 
     /// <summary>Field number for the "rc" field.</summary>
     public const int RcFieldNumber = 5;
-    private global::Bian.VectorXY rc_;
+    private global::MelandGame3.VectorXY rc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Rc {
+    public global::MelandGame3.VectorXY Rc {
       get { return rc_; }
       set {
         rc_ = value;
@@ -45379,7 +43202,7 @@ namespace Bian {
       }
       if (other.rc_ != null) {
         if (rc_ == null) {
-          Rc = new global::Bian.VectorXY();
+          Rc = new global::MelandGame3.VectorXY();
         }
         Rc.MergeFrom(other.Rc);
       }
@@ -45416,7 +43239,7 @@ namespace Bian {
           }
           case 42: {
             if (rc_ == null) {
-              Rc = new global::Bian.VectorXY();
+              Rc = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Rc);
             break;
@@ -45454,7 +43277,7 @@ namespace Bian {
           }
           case 42: {
             if (rc_ == null) {
-              Rc = new global::Bian.VectorXY();
+              Rc = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Rc);
             break;
@@ -45480,7 +43303,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[93]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[88]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -45551,10 +43374,10 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 4;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -45696,7 +43519,7 @@ namespace Bian {
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -45729,7 +43552,7 @@ namespace Bian {
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -45763,7 +43586,7 @@ namespace Bian {
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -45789,7 +43612,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[94]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[89]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -45859,13 +43682,13 @@ namespace Bian {
 
     /// <summary>Field number for the "Pos" field.</summary>
     public const int PosFieldNumber = 3;
-    private global::Bian.VectorXY pos_;
+    private global::MelandGame3.VectorXY pos_;
     /// <summary>
     /// 摆放的位置 pix
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Pos {
+    public global::MelandGame3.VectorXY Pos {
       get { return pos_; }
       set {
         pos_ = value;
@@ -45874,13 +43697,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 4;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 朝向
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -45964,15 +43787,15 @@ namespace Bian {
 
     /// <summary>Field number for the "force_dir" field.</summary>
     public const int ForceDirFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Bian.VectorXY> _repeated_forceDir_codec
-        = pb::FieldCodec.ForMessage(82, global::Bian.VectorXY.Parser);
-    private readonly pbc::RepeatedField<global::Bian.VectorXY> forceDir_ = new pbc::RepeatedField<global::Bian.VectorXY>();
+    private static readonly pb::FieldCodec<global::MelandGame3.VectorXY> _repeated_forceDir_codec
+        = pb::FieldCodec.ForMessage(82, global::MelandGame3.VectorXY.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.VectorXY> forceDir_ = new pbc::RepeatedField<global::MelandGame3.VectorXY>();
     /// <summary>
     /// 实体场景作用力向量(放大1000倍 取整)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.VectorXY> ForceDir {
+    public pbc::RepeatedField<global::MelandGame3.VectorXY> ForceDir {
       get { return forceDir_; }
     }
 
@@ -46234,13 +44057,13 @@ namespace Bian {
       }
       if (other.pos_ != null) {
         if (pos_ == null) {
-          Pos = new global::Bian.VectorXY();
+          Pos = new global::MelandGame3.VectorXY();
         }
         Pos.MergeFrom(other.Pos);
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -46291,14 +44114,14 @@ namespace Bian {
           }
           case 26: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -46360,14 +44183,14 @@ namespace Bian {
           }
           case 26: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 34: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -46425,7 +44248,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[95]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[90]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -46461,10 +44284,10 @@ namespace Bian {
 
     /// <summary>Field number for the "from" field.</summary>
     public const int FromFieldNumber = 1;
-    private global::Bian.EntityId from_;
+    private global::MelandGame3.EntityId from_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId From {
+    public global::MelandGame3.EntityId From {
       get { return from_; }
       set {
         from_ = value;
@@ -46473,13 +44296,13 @@ namespace Bian {
 
     /// <summary>Field number for the "pos" field.</summary>
     public const int PosFieldNumber = 2;
-    private global::Bian.VectorXY pos_;
+    private global::MelandGame3.VectorXY pos_;
     /// <summary>
     /// 位置 pix
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Pos {
+    public global::MelandGame3.VectorXY Pos {
       get { return pos_; }
       set {
         pos_ = value;
@@ -46488,13 +44311,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 3;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 朝向
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -46518,15 +44341,15 @@ namespace Bian {
 
     /// <summary>Field number for the "force_dir" field.</summary>
     public const int ForceDirFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Bian.VectorXY> _repeated_forceDir_codec
-        = pb::FieldCodec.ForMessage(50, global::Bian.VectorXY.Parser);
-    private readonly pbc::RepeatedField<global::Bian.VectorXY> forceDir_ = new pbc::RepeatedField<global::Bian.VectorXY>();
+    private static readonly pb::FieldCodec<global::MelandGame3.VectorXY> _repeated_forceDir_codec
+        = pb::FieldCodec.ForMessage(50, global::MelandGame3.VectorXY.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.VectorXY> forceDir_ = new pbc::RepeatedField<global::MelandGame3.VectorXY>();
     /// <summary>
     /// 实体场景作用力向量(放大1000倍 取整)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.VectorXY> ForceDir {
+    public pbc::RepeatedField<global::MelandGame3.VectorXY> ForceDir {
       get { return forceDir_; }
     }
 
@@ -46661,19 +44484,19 @@ namespace Bian {
       }
       if (other.from_ != null) {
         if (from_ == null) {
-          From = new global::Bian.EntityId();
+          From = new global::MelandGame3.EntityId();
         }
         From.MergeFrom(other.From);
       }
       if (other.pos_ != null) {
         if (pos_ == null) {
-          Pos = new global::Bian.VectorXY();
+          Pos = new global::MelandGame3.VectorXY();
         }
         Pos.MergeFrom(other.Pos);
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -46698,21 +44521,21 @@ namespace Bian {
             break;
           case 10: {
             if (from_ == null) {
-              From = new global::Bian.EntityId();
+              From = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(From);
             break;
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -46742,21 +44565,21 @@ namespace Bian {
             break;
           case 10: {
             if (from_ == null) {
-              From = new global::Bian.EntityId();
+              From = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(From);
             break;
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -46790,7 +44613,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[96]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[91]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -46828,10 +44651,10 @@ namespace Bian {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::Bian.EntityId entity_;
+    private global::MelandGame3.EntityId entity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Entity {
+    public global::MelandGame3.EntityId Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -46840,13 +44663,13 @@ namespace Bian {
 
     /// <summary>Field number for the "pos" field.</summary>
     public const int PosFieldNumber = 2;
-    private global::Bian.VectorXY pos_;
+    private global::MelandGame3.VectorXY pos_;
     /// <summary>
     /// 位置坐标
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Pos {
+    public global::MelandGame3.VectorXY Pos {
       get { return pos_; }
       set {
         pos_ = value;
@@ -46855,13 +44678,13 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 3;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     /// <summary>
     /// 朝向(如果不更改这传nil)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -46909,15 +44732,15 @@ namespace Bian {
 
     /// <summary>Field number for the "force_dir" field.</summary>
     public const int ForceDirFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Bian.VectorXY> _repeated_forceDir_codec
-        = pb::FieldCodec.ForMessage(58, global::Bian.VectorXY.Parser);
-    private readonly pbc::RepeatedField<global::Bian.VectorXY> forceDir_ = new pbc::RepeatedField<global::Bian.VectorXY>();
+    private static readonly pb::FieldCodec<global::MelandGame3.VectorXY> _repeated_forceDir_codec
+        = pb::FieldCodec.ForMessage(58, global::MelandGame3.VectorXY.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.VectorXY> forceDir_ = new pbc::RepeatedField<global::MelandGame3.VectorXY>();
     /// <summary>
     /// 实体场景作用力向量(放大1000倍 取整)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.VectorXY> ForceDir {
+    public pbc::RepeatedField<global::MelandGame3.VectorXY> ForceDir {
       get { return forceDir_; }
     }
 
@@ -47078,19 +44901,19 @@ namespace Bian {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::Bian.EntityId();
+          Entity = new global::MelandGame3.EntityId();
         }
         Entity.MergeFrom(other.Entity);
       }
       if (other.pos_ != null) {
         if (pos_ == null) {
-          Pos = new global::Bian.VectorXY();
+          Pos = new global::MelandGame3.VectorXY();
         }
         Pos.MergeFrom(other.Pos);
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -47121,21 +44944,21 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -47173,21 +44996,21 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -47229,7 +45052,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[97]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[92]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -47263,10 +45086,10 @@ namespace Bian {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::Bian.EntityId entity_;
+    private global::MelandGame3.EntityId entity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Entity {
+    public global::MelandGame3.EntityId Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -47275,13 +45098,13 @@ namespace Bian {
 
     /// <summary>Field number for the "pos" field.</summary>
     public const int PosFieldNumber = 2;
-    private global::Bian.VectorXY pos_;
+    private global::MelandGame3.VectorXY pos_;
     /// <summary>
     /// 位置 pix
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Pos {
+    public global::MelandGame3.VectorXY Pos {
       get { return pos_; }
       set {
         pos_ = value;
@@ -47290,10 +45113,10 @@ namespace Bian {
 
     /// <summary>Field number for the "dir" field.</summary>
     public const int DirFieldNumber = 3;
-    private global::Bian.VectorXY dir_;
+    private global::MelandGame3.VectorXY dir_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Dir {
+    public global::MelandGame3.VectorXY Dir {
       get { return dir_; }
       set {
         dir_ = value;
@@ -47413,19 +45236,19 @@ namespace Bian {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::Bian.EntityId();
+          Entity = new global::MelandGame3.EntityId();
         }
         Entity.MergeFrom(other.Entity);
       }
       if (other.pos_ != null) {
         if (pos_ == null) {
-          Pos = new global::Bian.VectorXY();
+          Pos = new global::MelandGame3.VectorXY();
         }
         Pos.MergeFrom(other.Pos);
       }
       if (other.dir_ != null) {
         if (dir_ == null) {
-          Dir = new global::Bian.VectorXY();
+          Dir = new global::MelandGame3.VectorXY();
         }
         Dir.MergeFrom(other.Dir);
       }
@@ -47446,21 +45269,21 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -47482,21 +45305,21 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
           }
           case 18: {
             if (pos_ == null) {
-              Pos = new global::Bian.VectorXY();
+              Pos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Pos);
             break;
           }
           case 26: {
             if (dir_ == null) {
-              Dir = new global::Bian.VectorXY();
+              Dir = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Dir);
             break;
@@ -47522,7 +45345,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[98]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[93]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -47569,10 +45392,10 @@ namespace Bian {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 2;
-    private global::Bian.EntityId entity_;
+    private global::MelandGame3.EntityId entity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Entity {
+    public global::MelandGame3.EntityId Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -47593,12 +45416,12 @@ namespace Bian {
 
     /// <summary>Field number for the "dirs" field.</summary>
     public const int DirsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Bian.BuildingPoint> _repeated_dirs_codec
-        = pb::FieldCodec.ForMessage(34, global::Bian.BuildingPoint.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BuildingPoint> dirs_ = new pbc::RepeatedField<global::Bian.BuildingPoint>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BuildingPoint> _repeated_dirs_codec
+        = pb::FieldCodec.ForMessage(34, global::MelandGame3.BuildingPoint.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BuildingPoint> dirs_ = new pbc::RepeatedField<global::MelandGame3.BuildingPoint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BuildingPoint> Dirs {
+    public pbc::RepeatedField<global::MelandGame3.BuildingPoint> Dirs {
       get { return dirs_; }
     }
 
@@ -47723,7 +45546,7 @@ namespace Bian {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::Bian.EntityId();
+          Entity = new global::MelandGame3.EntityId();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -47752,7 +45575,7 @@ namespace Bian {
           }
           case 18: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
@@ -47786,7 +45609,7 @@ namespace Bian {
           }
           case 18: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
@@ -47823,7 +45646,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[99]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[94]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -48095,7 +45918,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[100]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[95]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -48438,7 +46261,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[101]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[96]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -48511,10 +46334,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Bian.AnimationType type_ = global::Bian.AnimationType.AnimationTypeUnknown;
+    private global::MelandGame3.AnimationType type_ = global::MelandGame3.AnimationType.AnimationTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AnimationType Type {
+    public global::MelandGame3.AnimationType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -48523,24 +46346,24 @@ namespace Bian {
 
     /// <summary>Field number for the "frames" field.</summary>
     public const int FramesFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Bian.AnimationFrame> _repeated_frames_codec
-        = pb::FieldCodec.ForMessage(42, global::Bian.AnimationFrame.Parser);
-    private readonly pbc::RepeatedField<global::Bian.AnimationFrame> frames_ = new pbc::RepeatedField<global::Bian.AnimationFrame>();
+    private static readonly pb::FieldCodec<global::MelandGame3.AnimationFrame> _repeated_frames_codec
+        = pb::FieldCodec.ForMessage(42, global::MelandGame3.AnimationFrame.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.AnimationFrame> frames_ = new pbc::RepeatedField<global::MelandGame3.AnimationFrame>();
     /// <summary>
     ///帧动画
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.AnimationFrame> Frames {
+    public pbc::RepeatedField<global::MelandGame3.AnimationFrame> Frames {
       get { return frames_; }
     }
 
     /// <summary>Field number for the "bone_anim" field.</summary>
     public const int BoneAnimFieldNumber = 6;
-    private global::Bian.AnimationBone boneAnim_;
+    private global::MelandGame3.AnimationBone boneAnim_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AnimationBone BoneAnim {
+    public global::MelandGame3.AnimationBone BoneAnim {
       get { return boneAnim_; }
       set {
         boneAnim_ = value;
@@ -48578,7 +46401,7 @@ namespace Bian {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Index != 0) hash ^= Index.GetHashCode();
-      if (Type != global::Bian.AnimationType.AnimationTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.AnimationType.AnimationTypeUnknown) hash ^= Type.GetHashCode();
       hash ^= frames_.GetHashCode();
       if (boneAnim_ != null) hash ^= BoneAnim.GetHashCode();
       if (_unknownFields != null) {
@@ -48611,7 +46434,7 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteInt32(Index);
       }
-      if (Type != global::Bian.AnimationType.AnimationTypeUnknown) {
+      if (Type != global::MelandGame3.AnimationType.AnimationTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -48642,7 +46465,7 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteInt32(Index);
       }
-      if (Type != global::Bian.AnimationType.AnimationTypeUnknown) {
+      if (Type != global::MelandGame3.AnimationType.AnimationTypeUnknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -48670,7 +46493,7 @@ namespace Bian {
       if (Index != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
       }
-      if (Type != global::Bian.AnimationType.AnimationTypeUnknown) {
+      if (Type != global::MelandGame3.AnimationType.AnimationTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += frames_.CalculateSize(_repeated_frames_codec);
@@ -48698,13 +46521,13 @@ namespace Bian {
       if (other.Index != 0) {
         Index = other.Index;
       }
-      if (other.Type != global::Bian.AnimationType.AnimationTypeUnknown) {
+      if (other.Type != global::MelandGame3.AnimationType.AnimationTypeUnknown) {
         Type = other.Type;
       }
       frames_.Add(other.frames_);
       if (other.boneAnim_ != null) {
         if (boneAnim_ == null) {
-          BoneAnim = new global::Bian.AnimationBone();
+          BoneAnim = new global::MelandGame3.AnimationBone();
         }
         BoneAnim.MergeFrom(other.BoneAnim);
       }
@@ -48736,7 +46559,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            Type = (global::Bian.AnimationType) input.ReadEnum();
+            Type = (global::MelandGame3.AnimationType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -48745,7 +46568,7 @@ namespace Bian {
           }
           case 50: {
             if (boneAnim_ == null) {
-              BoneAnim = new global::Bian.AnimationBone();
+              BoneAnim = new global::MelandGame3.AnimationBone();
             }
             input.ReadMessage(BoneAnim);
             break;
@@ -48778,7 +46601,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            Type = (global::Bian.AnimationType) input.ReadEnum();
+            Type = (global::MelandGame3.AnimationType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -48787,7 +46610,7 @@ namespace Bian {
           }
           case 50: {
             if (boneAnim_ == null) {
-              BoneAnim = new global::Bian.AnimationBone();
+              BoneAnim = new global::MelandGame3.AnimationBone();
             }
             input.ReadMessage(BoneAnim);
             break;
@@ -48813,7 +46636,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[102]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[97]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -48846,23 +46669,23 @@ namespace Bian {
 
     /// <summary>Field number for the "animations" field.</summary>
     public const int AnimationsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.Animation> _repeated_animations_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.Animation.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Animation> animations_ = new pbc::RepeatedField<global::Bian.Animation>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Animation> _repeated_animations_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.Animation.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Animation> animations_ = new pbc::RepeatedField<global::MelandGame3.Animation>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Animation> Animations {
+    public pbc::RepeatedField<global::MelandGame3.Animation> Animations {
       get { return animations_; }
     }
 
     /// <summary>Field number for the "Emojis" field.</summary>
     public const int EmojisFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.Animation> _repeated_emojis_codec
-        = pb::FieldCodec.ForMessage(18, global::Bian.Animation.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Animation> emojis_ = new pbc::RepeatedField<global::Bian.Animation>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Animation> _repeated_emojis_codec
+        = pb::FieldCodec.ForMessage(18, global::MelandGame3.Animation.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Animation> emojis_ = new pbc::RepeatedField<global::MelandGame3.Animation>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Animation> Emojis {
+    public pbc::RepeatedField<global::MelandGame3.Animation> Emojis {
       get { return emojis_; }
     }
 
@@ -49017,7 +46840,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[103]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[98]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -49258,13 +47081,13 @@ namespace Bian {
 
     /// <summary>Field number for the "animations" field.</summary>
     public const int AnimationsFieldNumber = 16;
-    private global::Bian.EntityAnimations animations_;
+    private global::MelandGame3.EntityAnimations animations_;
     /// <summary>
     /// 动画 没有配置=nil
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAnimations Animations {
+    public global::MelandGame3.EntityAnimations Animations {
       get { return animations_; }
       set {
         animations_ = value;
@@ -49273,10 +47096,10 @@ namespace Bian {
 
     /// <summary>Field number for the "attribute" field.</summary>
     public const int AttributeFieldNumber = 17;
-    private global::Bian.EntityAttributes attribute_;
+    private global::MelandGame3.EntityAttributes attribute_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAttributes Attribute {
+    public global::MelandGame3.EntityAttributes Attribute {
       get { return attribute_; }
       set {
         attribute_ = value;
@@ -49285,13 +47108,13 @@ namespace Bian {
 
     /// <summary>Field number for the "audios" field.</summary>
     public const int AudiosFieldNumber = 18;
-    private global::Bian.EntityAudios audios_;
+    private global::MelandGame3.EntityAudios audios_;
     /// <summary>
     /// 音频
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAudios Audios {
+    public global::MelandGame3.EntityAudios Audios {
       get { return audios_; }
       set {
         audios_ = value;
@@ -49300,13 +47123,13 @@ namespace Bian {
 
     /// <summary>Field number for the "time_lines" field.</summary>
     public const int TimeLinesFieldNumber = 19;
-    private global::Bian.EntityTimeLineList timeLines_;
+    private global::MelandGame3.EntityTimeLineList timeLines_;
     /// <summary>
     /// 时间线
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTimeLineList TimeLines {
+    public global::MelandGame3.EntityTimeLineList TimeLines {
       get { return timeLines_; }
       set {
         timeLines_ = value;
@@ -49669,25 +47492,25 @@ namespace Bian {
       }
       if (other.animations_ != null) {
         if (animations_ == null) {
-          Animations = new global::Bian.EntityAnimations();
+          Animations = new global::MelandGame3.EntityAnimations();
         }
         Animations.MergeFrom(other.Animations);
       }
       if (other.attribute_ != null) {
         if (attribute_ == null) {
-          Attribute = new global::Bian.EntityAttributes();
+          Attribute = new global::MelandGame3.EntityAttributes();
         }
         Attribute.MergeFrom(other.Attribute);
       }
       if (other.audios_ != null) {
         if (audios_ == null) {
-          Audios = new global::Bian.EntityAudios();
+          Audios = new global::MelandGame3.EntityAudios();
         }
         Audios.MergeFrom(other.Audios);
       }
       if (other.timeLines_ != null) {
         if (timeLines_ == null) {
-          TimeLines = new global::Bian.EntityTimeLineList();
+          TimeLines = new global::MelandGame3.EntityTimeLineList();
         }
         TimeLines.MergeFrom(other.TimeLines);
       }
@@ -49768,28 +47591,28 @@ namespace Bian {
           }
           case 130: {
             if (animations_ == null) {
-              Animations = new global::Bian.EntityAnimations();
+              Animations = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Animations);
             break;
           }
           case 138: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.EntityAttributes();
+              Attribute = new global::MelandGame3.EntityAttributes();
             }
             input.ReadMessage(Attribute);
             break;
           }
           case 146: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
           }
           case 154: {
             if (timeLines_ == null) {
-              TimeLines = new global::Bian.EntityTimeLineList();
+              TimeLines = new global::MelandGame3.EntityTimeLineList();
             }
             input.ReadMessage(TimeLines);
             break;
@@ -49871,28 +47694,28 @@ namespace Bian {
           }
           case 130: {
             if (animations_ == null) {
-              Animations = new global::Bian.EntityAnimations();
+              Animations = new global::MelandGame3.EntityAnimations();
             }
             input.ReadMessage(Animations);
             break;
           }
           case 138: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.EntityAttributes();
+              Attribute = new global::MelandGame3.EntityAttributes();
             }
             input.ReadMessage(Attribute);
             break;
           }
           case 146: {
             if (audios_ == null) {
-              Audios = new global::Bian.EntityAudios();
+              Audios = new global::MelandGame3.EntityAudios();
             }
             input.ReadMessage(Audios);
             break;
           }
           case 154: {
             if (timeLines_ == null) {
-              TimeLines = new global::Bian.EntityTimeLineList();
+              TimeLines = new global::MelandGame3.EntityTimeLineList();
             }
             input.ReadMessage(TimeLines);
             break;
@@ -49921,7 +47744,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[104]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[99]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -49966,10 +47789,10 @@ namespace Bian {
 
     /// <summary>Field number for the "vec" field.</summary>
     public const int VecFieldNumber = 2;
-    private global::Bian.VectorXYZ vec_;
+    private global::MelandGame3.VectorXYZ vec_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXYZ Vec {
+    public global::MelandGame3.VectorXYZ Vec {
       get { return vec_; }
       set {
         vec_ = value;
@@ -50079,7 +47902,7 @@ namespace Bian {
       }
       if (other.vec_ != null) {
         if (vec_ == null) {
-          Vec = new global::Bian.VectorXYZ();
+          Vec = new global::MelandGame3.VectorXYZ();
         }
         Vec.MergeFrom(other.Vec);
       }
@@ -50104,7 +47927,7 @@ namespace Bian {
           }
           case 18: {
             if (vec_ == null) {
-              Vec = new global::Bian.VectorXYZ();
+              Vec = new global::MelandGame3.VectorXYZ();
             }
             input.ReadMessage(Vec);
             break;
@@ -50130,7 +47953,7 @@ namespace Bian {
           }
           case 18: {
             if (vec_ == null) {
-              Vec = new global::Bian.VectorXYZ();
+              Vec = new global::MelandGame3.VectorXYZ();
             }
             input.ReadMessage(Vec);
             break;
@@ -50159,7 +47982,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[105]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[100]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -50244,23 +48067,23 @@ namespace Bian {
 
     /// <summary>Field number for the "etemplates" field.</summary>
     public const int EtemplatesFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Bian.EntityTemplate> _repeated_etemplates_codec
-        = pb::FieldCodec.ForMessage(42, global::Bian.EntityTemplate.Parser);
-    private readonly pbc::RepeatedField<global::Bian.EntityTemplate> etemplates_ = new pbc::RepeatedField<global::Bian.EntityTemplate>();
+    private static readonly pb::FieldCodec<global::MelandGame3.EntityTemplate> _repeated_etemplates_codec
+        = pb::FieldCodec.ForMessage(42, global::MelandGame3.EntityTemplate.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.EntityTemplate> etemplates_ = new pbc::RepeatedField<global::MelandGame3.EntityTemplate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.EntityTemplate> Etemplates {
+    public pbc::RepeatedField<global::MelandGame3.EntityTemplate> Etemplates {
       get { return etemplates_; }
     }
 
     /// <summary>Field number for the "epos" field.</summary>
     public const int EposFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Bian.EntityPosition> _repeated_epos_codec
-        = pb::FieldCodec.ForMessage(50, global::Bian.EntityPosition.Parser);
-    private readonly pbc::RepeatedField<global::Bian.EntityPosition> epos_ = new pbc::RepeatedField<global::Bian.EntityPosition>();
+    private static readonly pb::FieldCodec<global::MelandGame3.EntityPosition> _repeated_epos_codec
+        = pb::FieldCodec.ForMessage(50, global::MelandGame3.EntityPosition.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.EntityPosition> epos_ = new pbc::RepeatedField<global::MelandGame3.EntityPosition>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.EntityPosition> Epos {
+    public pbc::RepeatedField<global::MelandGame3.EntityPosition> Epos {
       get { return epos_; }
     }
 
@@ -50511,7 +48334,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[106]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[101]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -50559,10 +48382,10 @@ namespace Bian {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 2;
-    private global::Bian.KeypressState state_ = global::Bian.KeypressState.Up;
+    private global::MelandGame3.KeypressState state_ = global::MelandGame3.KeypressState.Up;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.KeypressState State {
+    public global::MelandGame3.KeypressState State {
       get { return state_; }
       set {
         state_ = value;
@@ -50594,7 +48417,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (KeyId != 0) hash ^= KeyId.GetHashCode();
-      if (State != global::Bian.KeypressState.Up) hash ^= State.GetHashCode();
+      if (State != global::MelandGame3.KeypressState.Up) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -50617,7 +48440,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(KeyId);
       }
-      if (State != global::Bian.KeypressState.Up) {
+      if (State != global::MelandGame3.KeypressState.Up) {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
@@ -50635,7 +48458,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(KeyId);
       }
-      if (State != global::Bian.KeypressState.Up) {
+      if (State != global::MelandGame3.KeypressState.Up) {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
@@ -50652,7 +48475,7 @@ namespace Bian {
       if (KeyId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(KeyId);
       }
-      if (State != global::Bian.KeypressState.Up) {
+      if (State != global::MelandGame3.KeypressState.Up) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
@@ -50670,7 +48493,7 @@ namespace Bian {
       if (other.KeyId != 0) {
         KeyId = other.KeyId;
       }
-      if (other.State != global::Bian.KeypressState.Up) {
+      if (other.State != global::MelandGame3.KeypressState.Up) {
         State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -50693,7 +48516,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            State = (global::Bian.KeypressState) input.ReadEnum();
+            State = (global::MelandGame3.KeypressState) input.ReadEnum();
             break;
           }
         }
@@ -50716,7 +48539,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            State = (global::Bian.KeypressState) input.ReadEnum();
+            State = (global::MelandGame3.KeypressState) input.ReadEnum();
             break;
           }
         }
@@ -50740,7 +48563,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[107]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[102]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -50785,10 +48608,10 @@ namespace Bian {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 2;
-    private global::Bian.KeypressState state_ = global::Bian.KeypressState.Up;
+    private global::MelandGame3.KeypressState state_ = global::MelandGame3.KeypressState.Up;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.KeypressState State {
+    public global::MelandGame3.KeypressState State {
       get { return state_; }
       set {
         state_ = value;
@@ -50820,7 +48643,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
-      if (State != global::Bian.KeypressState.Up) hash ^= State.GetHashCode();
+      if (State != global::MelandGame3.KeypressState.Up) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -50843,7 +48666,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Key);
       }
-      if (State != global::Bian.KeypressState.Up) {
+      if (State != global::MelandGame3.KeypressState.Up) {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
@@ -50861,7 +48684,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Key);
       }
-      if (State != global::Bian.KeypressState.Up) {
+      if (State != global::MelandGame3.KeypressState.Up) {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
@@ -50878,7 +48701,7 @@ namespace Bian {
       if (Key.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
       }
-      if (State != global::Bian.KeypressState.Up) {
+      if (State != global::MelandGame3.KeypressState.Up) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
@@ -50896,7 +48719,7 @@ namespace Bian {
       if (other.Key.Length != 0) {
         Key = other.Key;
       }
-      if (other.State != global::Bian.KeypressState.Up) {
+      if (other.State != global::MelandGame3.KeypressState.Up) {
         State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -50919,7 +48742,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            State = (global::Bian.KeypressState) input.ReadEnum();
+            State = (global::MelandGame3.KeypressState) input.ReadEnum();
             break;
           }
         }
@@ -50942,7 +48765,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            State = (global::Bian.KeypressState) input.ReadEnum();
+            State = (global::MelandGame3.KeypressState) input.ReadEnum();
             break;
           }
         }
@@ -50966,7 +48789,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[108]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[103]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -51007,10 +48830,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Bian.InputEventType type_ = global::Bian.InputEventType.InputEventTypeUnknown;
+    private global::MelandGame3.InputEventType type_ = global::MelandGame3.InputEventType.InputEventTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.InputEventType Type {
+    public global::MelandGame3.InputEventType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -51021,8 +48844,8 @@ namespace Bian {
     public const int KeypressFieldNumber = 50;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.KeypressEvent Keypress {
-      get { return dataCase_ == DataOneofCase.Keypress ? (global::Bian.KeypressEvent) data_ : null; }
+    public global::MelandGame3.KeypressEvent Keypress {
+      get { return dataCase_ == DataOneofCase.Keypress ? (global::MelandGame3.KeypressEvent) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Keypress;
@@ -51036,8 +48859,8 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Keypress Key {
-      get { return dataCase_ == DataOneofCase.Key ? (global::Bian.Keypress) data_ : null; }
+    public global::MelandGame3.Keypress Key {
+      get { return dataCase_ == DataOneofCase.Key ? (global::MelandGame3.Keypress) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Key;
@@ -51091,7 +48914,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::Bian.InputEventType.InputEventTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.InputEventType.InputEventTypeUnknown) hash ^= Type.GetHashCode();
       if (dataCase_ == DataOneofCase.Keypress) hash ^= Keypress.GetHashCode();
       if (dataCase_ == DataOneofCase.Key) hash ^= Key.GetHashCode();
       hash ^= (int) dataCase_;
@@ -51113,7 +48936,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::Bian.InputEventType.InputEventTypeUnknown) {
+      if (Type != global::MelandGame3.InputEventType.InputEventTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -51135,7 +48958,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Bian.InputEventType.InputEventTypeUnknown) {
+      if (Type != global::MelandGame3.InputEventType.InputEventTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -51157,7 +48980,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::Bian.InputEventType.InputEventTypeUnknown) {
+      if (Type != global::MelandGame3.InputEventType.InputEventTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (dataCase_ == DataOneofCase.Keypress) {
@@ -51178,19 +49001,19 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Type != global::Bian.InputEventType.InputEventTypeUnknown) {
+      if (other.Type != global::MelandGame3.InputEventType.InputEventTypeUnknown) {
         Type = other.Type;
       }
       switch (other.DataCase) {
         case DataOneofCase.Keypress:
           if (Keypress == null) {
-            Keypress = new global::Bian.KeypressEvent();
+            Keypress = new global::MelandGame3.KeypressEvent();
           }
           Keypress.MergeFrom(other.Keypress);
           break;
         case DataOneofCase.Key:
           if (Key == null) {
-            Key = new global::Bian.Keypress();
+            Key = new global::MelandGame3.Keypress();
           }
           Key.MergeFrom(other.Key);
           break;
@@ -51212,11 +49035,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::Bian.InputEventType) input.ReadEnum();
+            Type = (global::MelandGame3.InputEventType) input.ReadEnum();
             break;
           }
           case 402: {
-            global::Bian.KeypressEvent subBuilder = new global::Bian.KeypressEvent();
+            global::MelandGame3.KeypressEvent subBuilder = new global::MelandGame3.KeypressEvent();
             if (dataCase_ == DataOneofCase.Keypress) {
               subBuilder.MergeFrom(Keypress);
             }
@@ -51225,7 +49048,7 @@ namespace Bian {
             break;
           }
           case 410: {
-            global::Bian.Keypress subBuilder = new global::Bian.Keypress();
+            global::MelandGame3.Keypress subBuilder = new global::MelandGame3.Keypress();
             if (dataCase_ == DataOneofCase.Key) {
               subBuilder.MergeFrom(Key);
             }
@@ -51249,11 +49072,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::Bian.InputEventType) input.ReadEnum();
+            Type = (global::MelandGame3.InputEventType) input.ReadEnum();
             break;
           }
           case 402: {
-            global::Bian.KeypressEvent subBuilder = new global::Bian.KeypressEvent();
+            global::MelandGame3.KeypressEvent subBuilder = new global::MelandGame3.KeypressEvent();
             if (dataCase_ == DataOneofCase.Keypress) {
               subBuilder.MergeFrom(Keypress);
             }
@@ -51262,7 +49085,7 @@ namespace Bian {
             break;
           }
           case 410: {
-            global::Bian.Keypress subBuilder = new global::Bian.Keypress();
+            global::MelandGame3.Keypress subBuilder = new global::MelandGame3.Keypress();
             if (dataCase_ == DataOneofCase.Key) {
               subBuilder.MergeFrom(Key);
             }
@@ -51291,7 +49114,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[109]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[104]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -51353,10 +49176,10 @@ namespace Bian {
 
     /// <summary>Field number for the "panel_type" field.</summary>
     public const int PanelTypeFieldNumber = 1;
-    private global::Bian.PanelProfileType panelType_ = global::Bian.PanelProfileType.PanelTypeBgstyle;
+    private global::MelandGame3.PanelProfileType panelType_ = global::MelandGame3.PanelProfileType.PanelTypeBgstyle;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelProfileType PanelType {
+    public global::MelandGame3.PanelProfileType PanelType {
       get { return panelType_; }
       set {
         panelType_ = value;
@@ -51370,8 +49193,8 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelBGStyle Style {
-      get { return dataCase_ == DataOneofCase.Style ? (global::Bian.PanelBGStyle) data_ : null; }
+    public global::MelandGame3.PanelBGStyle Style {
+      get { return dataCase_ == DataOneofCase.Style ? (global::MelandGame3.PanelBGStyle) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Style;
@@ -51415,8 +49238,8 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelTitle Title {
-      get { return dataCase_ == DataOneofCase.Title ? (global::Bian.PanelTitle) data_ : null; }
+    public global::MelandGame3.PanelTitle Title {
+      get { return dataCase_ == DataOneofCase.Title ? (global::MelandGame3.PanelTitle) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Title;
@@ -51430,8 +49253,8 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelGridProfile GridProfile {
-      get { return dataCase_ == DataOneofCase.GridProfile ? (global::Bian.PanelGridProfile) data_ : null; }
+    public global::MelandGame3.PanelGridProfile GridProfile {
+      get { return dataCase_ == DataOneofCase.GridProfile ? (global::MelandGame3.PanelGridProfile) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.GridProfile;
@@ -51445,8 +49268,8 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelRowColSize RowHeight {
-      get { return dataCase_ == DataOneofCase.RowHeight ? (global::Bian.PanelRowColSize) data_ : null; }
+    public global::MelandGame3.PanelRowColSize RowHeight {
+      get { return dataCase_ == DataOneofCase.RowHeight ? (global::MelandGame3.PanelRowColSize) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.RowHeight;
@@ -51460,8 +49283,8 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelRowColSize ColWidth {
-      get { return dataCase_ == DataOneofCase.ColWidth ? (global::Bian.PanelRowColSize) data_ : null; }
+    public global::MelandGame3.PanelRowColSize ColWidth {
+      get { return dataCase_ == DataOneofCase.ColWidth ? (global::MelandGame3.PanelRowColSize) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ColWidth;
@@ -51475,8 +49298,8 @@ namespace Bian {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelAnchor Anchor {
-      get { return dataCase_ == DataOneofCase.Anchor ? (global::Bian.PanelAnchor) data_ : null; }
+    public global::MelandGame3.PanelAnchor Anchor {
+      get { return dataCase_ == DataOneofCase.Anchor ? (global::MelandGame3.PanelAnchor) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Anchor;
@@ -51559,7 +49382,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PanelType != global::Bian.PanelProfileType.PanelTypeBgstyle) hash ^= PanelType.GetHashCode();
+      if (PanelType != global::MelandGame3.PanelProfileType.PanelTypeBgstyle) hash ^= PanelType.GetHashCode();
       if (dataCase_ == DataOneofCase.Style) hash ^= Style.GetHashCode();
       if (dataCase_ == DataOneofCase.RowNum) hash ^= RowNum.GetHashCode();
       if (dataCase_ == DataOneofCase.ColNum) hash ^= ColNum.GetHashCode();
@@ -51588,7 +49411,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PanelType != global::Bian.PanelProfileType.PanelTypeBgstyle) {
+      if (PanelType != global::MelandGame3.PanelProfileType.PanelTypeBgstyle) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PanelType);
       }
@@ -51638,7 +49461,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PanelType != global::Bian.PanelProfileType.PanelTypeBgstyle) {
+      if (PanelType != global::MelandGame3.PanelProfileType.PanelTypeBgstyle) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PanelType);
       }
@@ -51688,7 +49511,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PanelType != global::Bian.PanelProfileType.PanelTypeBgstyle) {
+      if (PanelType != global::MelandGame3.PanelProfileType.PanelTypeBgstyle) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PanelType);
       }
       if (dataCase_ == DataOneofCase.Style) {
@@ -51730,13 +49553,13 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.PanelType != global::Bian.PanelProfileType.PanelTypeBgstyle) {
+      if (other.PanelType != global::MelandGame3.PanelProfileType.PanelTypeBgstyle) {
         PanelType = other.PanelType;
       }
       switch (other.DataCase) {
         case DataOneofCase.Style:
           if (Style == null) {
-            Style = new global::Bian.PanelBGStyle();
+            Style = new global::MelandGame3.PanelBGStyle();
           }
           Style.MergeFrom(other.Style);
           break;
@@ -51748,31 +49571,31 @@ namespace Bian {
           break;
         case DataOneofCase.Title:
           if (Title == null) {
-            Title = new global::Bian.PanelTitle();
+            Title = new global::MelandGame3.PanelTitle();
           }
           Title.MergeFrom(other.Title);
           break;
         case DataOneofCase.GridProfile:
           if (GridProfile == null) {
-            GridProfile = new global::Bian.PanelGridProfile();
+            GridProfile = new global::MelandGame3.PanelGridProfile();
           }
           GridProfile.MergeFrom(other.GridProfile);
           break;
         case DataOneofCase.RowHeight:
           if (RowHeight == null) {
-            RowHeight = new global::Bian.PanelRowColSize();
+            RowHeight = new global::MelandGame3.PanelRowColSize();
           }
           RowHeight.MergeFrom(other.RowHeight);
           break;
         case DataOneofCase.ColWidth:
           if (ColWidth == null) {
-            ColWidth = new global::Bian.PanelRowColSize();
+            ColWidth = new global::MelandGame3.PanelRowColSize();
           }
           ColWidth.MergeFrom(other.ColWidth);
           break;
         case DataOneofCase.Anchor:
           if (Anchor == null) {
-            Anchor = new global::Bian.PanelAnchor();
+            Anchor = new global::MelandGame3.PanelAnchor();
           }
           Anchor.MergeFrom(other.Anchor);
           break;
@@ -51797,11 +49620,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            PanelType = (global::Bian.PanelProfileType) input.ReadEnum();
+            PanelType = (global::MelandGame3.PanelProfileType) input.ReadEnum();
             break;
           }
           case 82: {
-            global::Bian.PanelBGStyle subBuilder = new global::Bian.PanelBGStyle();
+            global::MelandGame3.PanelBGStyle subBuilder = new global::MelandGame3.PanelBGStyle();
             if (dataCase_ == DataOneofCase.Style) {
               subBuilder.MergeFrom(Style);
             }
@@ -51818,7 +49641,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.PanelTitle subBuilder = new global::Bian.PanelTitle();
+            global::MelandGame3.PanelTitle subBuilder = new global::MelandGame3.PanelTitle();
             if (dataCase_ == DataOneofCase.Title) {
               subBuilder.MergeFrom(Title);
             }
@@ -51827,7 +49650,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.PanelGridProfile subBuilder = new global::Bian.PanelGridProfile();
+            global::MelandGame3.PanelGridProfile subBuilder = new global::MelandGame3.PanelGridProfile();
             if (dataCase_ == DataOneofCase.GridProfile) {
               subBuilder.MergeFrom(GridProfile);
             }
@@ -51836,7 +49659,7 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.PanelRowColSize subBuilder = new global::Bian.PanelRowColSize();
+            global::MelandGame3.PanelRowColSize subBuilder = new global::MelandGame3.PanelRowColSize();
             if (dataCase_ == DataOneofCase.RowHeight) {
               subBuilder.MergeFrom(RowHeight);
             }
@@ -51845,7 +49668,7 @@ namespace Bian {
             break;
           }
           case 130: {
-            global::Bian.PanelRowColSize subBuilder = new global::Bian.PanelRowColSize();
+            global::MelandGame3.PanelRowColSize subBuilder = new global::MelandGame3.PanelRowColSize();
             if (dataCase_ == DataOneofCase.ColWidth) {
               subBuilder.MergeFrom(ColWidth);
             }
@@ -51854,7 +49677,7 @@ namespace Bian {
             break;
           }
           case 138: {
-            global::Bian.PanelAnchor subBuilder = new global::Bian.PanelAnchor();
+            global::MelandGame3.PanelAnchor subBuilder = new global::MelandGame3.PanelAnchor();
             if (dataCase_ == DataOneofCase.Anchor) {
               subBuilder.MergeFrom(Anchor);
             }
@@ -51882,11 +49705,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            PanelType = (global::Bian.PanelProfileType) input.ReadEnum();
+            PanelType = (global::MelandGame3.PanelProfileType) input.ReadEnum();
             break;
           }
           case 82: {
-            global::Bian.PanelBGStyle subBuilder = new global::Bian.PanelBGStyle();
+            global::MelandGame3.PanelBGStyle subBuilder = new global::MelandGame3.PanelBGStyle();
             if (dataCase_ == DataOneofCase.Style) {
               subBuilder.MergeFrom(Style);
             }
@@ -51903,7 +49726,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.PanelTitle subBuilder = new global::Bian.PanelTitle();
+            global::MelandGame3.PanelTitle subBuilder = new global::MelandGame3.PanelTitle();
             if (dataCase_ == DataOneofCase.Title) {
               subBuilder.MergeFrom(Title);
             }
@@ -51912,7 +49735,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.PanelGridProfile subBuilder = new global::Bian.PanelGridProfile();
+            global::MelandGame3.PanelGridProfile subBuilder = new global::MelandGame3.PanelGridProfile();
             if (dataCase_ == DataOneofCase.GridProfile) {
               subBuilder.MergeFrom(GridProfile);
             }
@@ -51921,7 +49744,7 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.PanelRowColSize subBuilder = new global::Bian.PanelRowColSize();
+            global::MelandGame3.PanelRowColSize subBuilder = new global::MelandGame3.PanelRowColSize();
             if (dataCase_ == DataOneofCase.RowHeight) {
               subBuilder.MergeFrom(RowHeight);
             }
@@ -51930,7 +49753,7 @@ namespace Bian {
             break;
           }
           case 130: {
-            global::Bian.PanelRowColSize subBuilder = new global::Bian.PanelRowColSize();
+            global::MelandGame3.PanelRowColSize subBuilder = new global::MelandGame3.PanelRowColSize();
             if (dataCase_ == DataOneofCase.ColWidth) {
               subBuilder.MergeFrom(ColWidth);
             }
@@ -51939,7 +49762,7 @@ namespace Bian {
             break;
           }
           case 138: {
-            global::Bian.PanelAnchor subBuilder = new global::Bian.PanelAnchor();
+            global::MelandGame3.PanelAnchor subBuilder = new global::MelandGame3.PanelAnchor();
             if (dataCase_ == DataOneofCase.Anchor) {
               subBuilder.MergeFrom(Anchor);
             }
@@ -51972,7 +49795,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[110]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[105]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -52008,10 +49831,10 @@ namespace Bian {
 
     /// <summary>Field number for the "style" field.</summary>
     public const int StyleFieldNumber = 1;
-    private global::Bian.BGStyle style_ = global::Bian.BGStyle.Normal;
+    private global::MelandGame3.BGStyle style_ = global::MelandGame3.BGStyle.Normal;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BGStyle Style {
+    public global::MelandGame3.BGStyle Style {
       get { return style_; }
       set {
         style_ = value;
@@ -52093,7 +49916,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Style != global::Bian.BGStyle.Normal) hash ^= Style.GetHashCode();
+      if (Style != global::MelandGame3.BGStyle.Normal) hash ^= Style.GetHashCode();
       if (R != 0) hash ^= R.GetHashCode();
       if (G != 0) hash ^= G.GetHashCode();
       if (B != 0) hash ^= B.GetHashCode();
@@ -52116,7 +49939,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Style != global::Bian.BGStyle.Normal) {
+      if (Style != global::MelandGame3.BGStyle.Normal) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Style);
       }
@@ -52146,7 +49969,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Style != global::Bian.BGStyle.Normal) {
+      if (Style != global::MelandGame3.BGStyle.Normal) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Style);
       }
@@ -52176,7 +49999,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Style != global::Bian.BGStyle.Normal) {
+      if (Style != global::MelandGame3.BGStyle.Normal) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Style);
       }
       if (R != 0) {
@@ -52203,7 +50026,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Style != global::Bian.BGStyle.Normal) {
+      if (other.Style != global::MelandGame3.BGStyle.Normal) {
         Style = other.Style;
       }
       if (other.R != 0) {
@@ -52234,7 +50057,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Style = (global::Bian.BGStyle) input.ReadEnum();
+            Style = (global::MelandGame3.BGStyle) input.ReadEnum();
             break;
           }
           case 16: {
@@ -52269,7 +50092,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Style = (global::Bian.BGStyle) input.ReadEnum();
+            Style = (global::MelandGame3.BGStyle) input.ReadEnum();
             break;
           }
           case 16: {
@@ -52309,7 +50132,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[111]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[106]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -52720,7 +50543,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[112]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[107]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -52769,10 +50592,10 @@ namespace Bian {
 
     /// <summary>Field number for the "align" field.</summary>
     public const int AlignFieldNumber = 2;
-    private global::Bian.AlignStyle align_ = global::Bian.AlignStyle.Left;
+    private global::MelandGame3.AlignStyle align_ = global::MelandGame3.AlignStyle.Left;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AlignStyle Align {
+    public global::MelandGame3.AlignStyle Align {
       get { return align_; }
       set {
         align_ = value;
@@ -52856,7 +50679,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Content.Length != 0) hash ^= Content.GetHashCode();
-      if (Align != global::Bian.AlignStyle.Left) hash ^= Align.GetHashCode();
+      if (Align != global::MelandGame3.AlignStyle.Left) hash ^= Align.GetHashCode();
       if (Picture.Length != 0) hash ^= Picture.GetHashCode();
       if (Percent != 0) hash ^= Percent.GetHashCode();
       if (ColNum != 0) hash ^= ColNum.GetHashCode();
@@ -52883,7 +50706,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Content);
       }
-      if (Align != global::Bian.AlignStyle.Left) {
+      if (Align != global::MelandGame3.AlignStyle.Left) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Align);
       }
@@ -52917,7 +50740,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Content);
       }
-      if (Align != global::Bian.AlignStyle.Left) {
+      if (Align != global::MelandGame3.AlignStyle.Left) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Align);
       }
@@ -52950,7 +50773,7 @@ namespace Bian {
       if (Content.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
-      if (Align != global::Bian.AlignStyle.Left) {
+      if (Align != global::MelandGame3.AlignStyle.Left) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Align);
       }
       if (Picture.Length != 0) {
@@ -52980,7 +50803,7 @@ namespace Bian {
       if (other.Content.Length != 0) {
         Content = other.Content;
       }
-      if (other.Align != global::Bian.AlignStyle.Left) {
+      if (other.Align != global::MelandGame3.AlignStyle.Left) {
         Align = other.Align;
       }
       if (other.Picture.Length != 0) {
@@ -53015,7 +50838,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Align = (global::Bian.AlignStyle) input.ReadEnum();
+            Align = (global::MelandGame3.AlignStyle) input.ReadEnum();
             break;
           }
           case 26: {
@@ -53054,7 +50877,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Align = (global::Bian.AlignStyle) input.ReadEnum();
+            Align = (global::MelandGame3.AlignStyle) input.ReadEnum();
             break;
           }
           case 26: {
@@ -53094,7 +50917,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[113]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[108]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -53320,7 +51143,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[114]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[109]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -53354,10 +51177,10 @@ namespace Bian {
 
     /// <summary>Field number for the "pos" field.</summary>
     public const int PosFieldNumber = 1;
-    private global::Bian.PanelAnchorPos pos_ = global::Bian.PanelAnchorPos.LeftUp;
+    private global::MelandGame3.PanelAnchorPos pos_ = global::MelandGame3.PanelAnchorPos.LeftUp;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.PanelAnchorPos Pos {
+    public global::MelandGame3.PanelAnchorPos Pos {
       get { return pos_; }
       set {
         pos_ = value;
@@ -53413,7 +51236,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Pos != global::Bian.PanelAnchorPos.LeftUp) hash ^= Pos.GetHashCode();
+      if (Pos != global::MelandGame3.PanelAnchorPos.LeftUp) hash ^= Pos.GetHashCode();
       if (Horizontal != 0) hash ^= Horizontal.GetHashCode();
       if (Vertical != 0) hash ^= Vertical.GetHashCode();
       if (_unknownFields != null) {
@@ -53434,7 +51257,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Pos != global::Bian.PanelAnchorPos.LeftUp) {
+      if (Pos != global::MelandGame3.PanelAnchorPos.LeftUp) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Pos);
       }
@@ -53456,7 +51279,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Pos != global::Bian.PanelAnchorPos.LeftUp) {
+      if (Pos != global::MelandGame3.PanelAnchorPos.LeftUp) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Pos);
       }
@@ -53478,7 +51301,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Pos != global::Bian.PanelAnchorPos.LeftUp) {
+      if (Pos != global::MelandGame3.PanelAnchorPos.LeftUp) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Pos);
       }
       if (Horizontal != 0) {
@@ -53499,7 +51322,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Pos != global::Bian.PanelAnchorPos.LeftUp) {
+      if (other.Pos != global::MelandGame3.PanelAnchorPos.LeftUp) {
         Pos = other.Pos;
       }
       if (other.Horizontal != 0) {
@@ -53524,7 +51347,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Pos = (global::Bian.PanelAnchorPos) input.ReadEnum();
+            Pos = (global::MelandGame3.PanelAnchorPos) input.ReadEnum();
             break;
           }
           case 16: {
@@ -53551,7 +51374,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Pos = (global::Bian.PanelAnchorPos) input.ReadEnum();
+            Pos = (global::MelandGame3.PanelAnchorPos) input.ReadEnum();
             break;
           }
           case 16: {
@@ -53583,7 +51406,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[115]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[110]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -53621,10 +51444,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Bian.ViewType type_ = global::Bian.ViewType.ViewTypeUnknow;
+    private global::MelandGame3.ViewType type_ = global::MelandGame3.ViewType.ViewTypeUnknow;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ViewType Type {
+    public global::MelandGame3.ViewType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -53635,8 +51458,8 @@ namespace Bian {
     public const int DungeonScoreDataFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ViewDungeonScoreData DungeonScoreData {
-      get { return dataCase_ == DataOneofCase.DungeonScoreData ? (global::Bian.ViewDungeonScoreData) data_ : null; }
+    public global::MelandGame3.ViewDungeonScoreData DungeonScoreData {
+      get { return dataCase_ == DataOneofCase.DungeonScoreData ? (global::MelandGame3.ViewDungeonScoreData) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.DungeonScoreData;
@@ -53688,7 +51511,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::Bian.ViewType.ViewTypeUnknow) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.ViewType.ViewTypeUnknow) hash ^= Type.GetHashCode();
       if (dataCase_ == DataOneofCase.DungeonScoreData) hash ^= DungeonScoreData.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
@@ -53709,7 +51532,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::Bian.ViewType.ViewTypeUnknow) {
+      if (Type != global::MelandGame3.ViewType.ViewTypeUnknow) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -53727,7 +51550,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Bian.ViewType.ViewTypeUnknow) {
+      if (Type != global::MelandGame3.ViewType.ViewTypeUnknow) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -53745,7 +51568,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::Bian.ViewType.ViewTypeUnknow) {
+      if (Type != global::MelandGame3.ViewType.ViewTypeUnknow) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (dataCase_ == DataOneofCase.DungeonScoreData) {
@@ -53763,13 +51586,13 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Type != global::Bian.ViewType.ViewTypeUnknow) {
+      if (other.Type != global::MelandGame3.ViewType.ViewTypeUnknow) {
         Type = other.Type;
       }
       switch (other.DataCase) {
         case DataOneofCase.DungeonScoreData:
           if (DungeonScoreData == null) {
-            DungeonScoreData = new global::Bian.ViewDungeonScoreData();
+            DungeonScoreData = new global::MelandGame3.ViewDungeonScoreData();
           }
           DungeonScoreData.MergeFrom(other.DungeonScoreData);
           break;
@@ -53791,11 +51614,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::Bian.ViewType) input.ReadEnum();
+            Type = (global::MelandGame3.ViewType) input.ReadEnum();
             break;
           }
           case 82: {
-            global::Bian.ViewDungeonScoreData subBuilder = new global::Bian.ViewDungeonScoreData();
+            global::MelandGame3.ViewDungeonScoreData subBuilder = new global::MelandGame3.ViewDungeonScoreData();
             if (dataCase_ == DataOneofCase.DungeonScoreData) {
               subBuilder.MergeFrom(DungeonScoreData);
             }
@@ -53819,11 +51642,11 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::Bian.ViewType) input.ReadEnum();
+            Type = (global::MelandGame3.ViewType) input.ReadEnum();
             break;
           }
           case 82: {
-            global::Bian.ViewDungeonScoreData subBuilder = new global::Bian.ViewDungeonScoreData();
+            global::MelandGame3.ViewDungeonScoreData subBuilder = new global::MelandGame3.ViewDungeonScoreData();
             if (dataCase_ == DataOneofCase.DungeonScoreData) {
               subBuilder.MergeFrom(DungeonScoreData);
             }
@@ -53852,7 +51675,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[116]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[111]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -54214,7 +52037,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[117]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[112]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -54440,7 +52263,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[118]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[113]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -54666,7 +52489,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[119]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[114]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -54895,7 +52718,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[120]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[115]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -54928,10 +52751,10 @@ namespace Bian {
 
     /// <summary>Field number for the "top_node" field.</summary>
     public const int TopNodeFieldNumber = 1;
-    private global::Bian.VectorXY topNode_;
+    private global::MelandGame3.VectorXY topNode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY TopNode {
+    public global::MelandGame3.VectorXY TopNode {
       get { return topNode_; }
       set {
         topNode_ = value;
@@ -54940,10 +52763,10 @@ namespace Bian {
 
     /// <summary>Field number for the "bottom_node" field.</summary>
     public const int BottomNodeFieldNumber = 2;
-    private global::Bian.VectorXY bottomNode_;
+    private global::MelandGame3.VectorXY bottomNode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY BottomNode {
+    public global::MelandGame3.VectorXY BottomNode {
       get { return bottomNode_; }
       set {
         bottomNode_ = value;
@@ -55050,13 +52873,13 @@ namespace Bian {
       }
       if (other.topNode_ != null) {
         if (topNode_ == null) {
-          TopNode = new global::Bian.VectorXY();
+          TopNode = new global::MelandGame3.VectorXY();
         }
         TopNode.MergeFrom(other.TopNode);
       }
       if (other.bottomNode_ != null) {
         if (bottomNode_ == null) {
-          BottomNode = new global::Bian.VectorXY();
+          BottomNode = new global::MelandGame3.VectorXY();
         }
         BottomNode.MergeFrom(other.BottomNode);
       }
@@ -55077,14 +52900,14 @@ namespace Bian {
             break;
           case 10: {
             if (topNode_ == null) {
-              TopNode = new global::Bian.VectorXY();
+              TopNode = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(TopNode);
             break;
           }
           case 18: {
             if (bottomNode_ == null) {
-              BottomNode = new global::Bian.VectorXY();
+              BottomNode = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(BottomNode);
             break;
@@ -55106,14 +52929,14 @@ namespace Bian {
             break;
           case 10: {
             if (topNode_ == null) {
-              TopNode = new global::Bian.VectorXY();
+              TopNode = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(TopNode);
             break;
           }
           case 18: {
             if (bottomNode_ == null) {
-              BottomNode = new global::Bian.VectorXY();
+              BottomNode = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(BottomNode);
             break;
@@ -55139,7 +52962,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[121]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[116]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -55217,10 +53040,10 @@ namespace Bian {
 
     /// <summary>Field number for the "scope" field.</summary>
     public const int ScopeFieldNumber = 4;
-    private global::Bian.Scope scope_;
+    private global::MelandGame3.Scope scope_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Scope Scope {
+    public global::MelandGame3.Scope Scope {
       get { return scope_; }
       set {
         scope_ = value;
@@ -55229,10 +53052,10 @@ namespace Bian {
 
     /// <summary>Field number for the "tp_pos" field.</summary>
     public const int TpPosFieldNumber = 5;
-    private global::Bian.VectorXY tpPos_;
+    private global::MelandGame3.VectorXY tpPos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY TpPos {
+    public global::MelandGame3.VectorXY TpPos {
       get { return tpPos_; }
       set {
         tpPos_ = value;
@@ -55277,10 +53100,10 @@ namespace Bian {
 
     /// <summary>Field number for the "show_type" field.</summary>
     public const int ShowTypeFieldNumber = 9;
-    private global::Bian.LessonShowType showType_ = global::Bian.LessonShowType.LessonShowTypeAll;
+    private global::MelandGame3.LessonShowType showType_ = global::MelandGame3.LessonShowType.LessonShowTypeAll;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonShowType ShowType {
+    public global::MelandGame3.LessonShowType ShowType {
       get { return showType_; }
       set {
         showType_ = value;
@@ -55289,10 +53112,10 @@ namespace Bian {
 
     /// <summary>Field number for the "area_mode" field.</summary>
     public const int AreaModeFieldNumber = 10;
-    private global::Bian.LessonAreaMode areaMode_ = global::Bian.LessonAreaMode.LessonAreaModeNormal;
+    private global::MelandGame3.LessonAreaMode areaMode_ = global::MelandGame3.LessonAreaMode.LessonAreaModeNormal;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonAreaMode AreaMode {
+    public global::MelandGame3.LessonAreaMode AreaMode {
       get { return areaMode_; }
       set {
         areaMode_ = value;
@@ -55301,12 +53124,12 @@ namespace Bian {
 
     /// <summary>Field number for the "code_entities" field.</summary>
     public const int CodeEntitiesFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Bian.CodeEntityData> _repeated_codeEntities_codec
-        = pb::FieldCodec.ForMessage(90, global::Bian.CodeEntityData.Parser);
-    private readonly pbc::RepeatedField<global::Bian.CodeEntityData> codeEntities_ = new pbc::RepeatedField<global::Bian.CodeEntityData>();
+    private static readonly pb::FieldCodec<global::MelandGame3.CodeEntityData> _repeated_codeEntities_codec
+        = pb::FieldCodec.ForMessage(90, global::MelandGame3.CodeEntityData.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.CodeEntityData> codeEntities_ = new pbc::RepeatedField<global::MelandGame3.CodeEntityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.CodeEntityData> CodeEntities {
+    public pbc::RepeatedField<global::MelandGame3.CodeEntityData> CodeEntities {
       get { return codeEntities_; }
     }
 
@@ -55351,8 +53174,8 @@ namespace Bian {
       if (NextAreaId.Length != 0) hash ^= NextAreaId.GetHashCode();
       if (PrevAraeId.Length != 0) hash ^= PrevAraeId.GetHashCode();
       if (TerrainsCid != 0) hash ^= TerrainsCid.GetHashCode();
-      if (ShowType != global::Bian.LessonShowType.LessonShowTypeAll) hash ^= ShowType.GetHashCode();
-      if (AreaMode != global::Bian.LessonAreaMode.LessonAreaModeNormal) hash ^= AreaMode.GetHashCode();
+      if (ShowType != global::MelandGame3.LessonShowType.LessonShowTypeAll) hash ^= ShowType.GetHashCode();
+      if (AreaMode != global::MelandGame3.LessonAreaMode.LessonAreaModeNormal) hash ^= AreaMode.GetHashCode();
       hash ^= codeEntities_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -55404,11 +53227,11 @@ namespace Bian {
         output.WriteRawTag(64);
         output.WriteInt32(TerrainsCid);
       }
-      if (ShowType != global::Bian.LessonShowType.LessonShowTypeAll) {
+      if (ShowType != global::MelandGame3.LessonShowType.LessonShowTypeAll) {
         output.WriteRawTag(72);
         output.WriteEnum((int) ShowType);
       }
-      if (AreaMode != global::Bian.LessonAreaMode.LessonAreaModeNormal) {
+      if (AreaMode != global::MelandGame3.LessonAreaMode.LessonAreaModeNormal) {
         output.WriteRawTag(80);
         output.WriteEnum((int) AreaMode);
       }
@@ -55455,11 +53278,11 @@ namespace Bian {
         output.WriteRawTag(64);
         output.WriteInt32(TerrainsCid);
       }
-      if (ShowType != global::Bian.LessonShowType.LessonShowTypeAll) {
+      if (ShowType != global::MelandGame3.LessonShowType.LessonShowTypeAll) {
         output.WriteRawTag(72);
         output.WriteEnum((int) ShowType);
       }
-      if (AreaMode != global::Bian.LessonAreaMode.LessonAreaModeNormal) {
+      if (AreaMode != global::MelandGame3.LessonAreaMode.LessonAreaModeNormal) {
         output.WriteRawTag(80);
         output.WriteEnum((int) AreaMode);
       }
@@ -55498,10 +53321,10 @@ namespace Bian {
       if (TerrainsCid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TerrainsCid);
       }
-      if (ShowType != global::Bian.LessonShowType.LessonShowTypeAll) {
+      if (ShowType != global::MelandGame3.LessonShowType.LessonShowTypeAll) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ShowType);
       }
-      if (AreaMode != global::Bian.LessonAreaMode.LessonAreaModeNormal) {
+      if (AreaMode != global::MelandGame3.LessonAreaMode.LessonAreaModeNormal) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AreaMode);
       }
       size += codeEntities_.CalculateSize(_repeated_codeEntities_codec);
@@ -55528,13 +53351,13 @@ namespace Bian {
       }
       if (other.scope_ != null) {
         if (scope_ == null) {
-          Scope = new global::Bian.Scope();
+          Scope = new global::MelandGame3.Scope();
         }
         Scope.MergeFrom(other.Scope);
       }
       if (other.tpPos_ != null) {
         if (tpPos_ == null) {
-          TpPos = new global::Bian.VectorXY();
+          TpPos = new global::MelandGame3.VectorXY();
         }
         TpPos.MergeFrom(other.TpPos);
       }
@@ -55547,10 +53370,10 @@ namespace Bian {
       if (other.TerrainsCid != 0) {
         TerrainsCid = other.TerrainsCid;
       }
-      if (other.ShowType != global::Bian.LessonShowType.LessonShowTypeAll) {
+      if (other.ShowType != global::MelandGame3.LessonShowType.LessonShowTypeAll) {
         ShowType = other.ShowType;
       }
-      if (other.AreaMode != global::Bian.LessonAreaMode.LessonAreaModeNormal) {
+      if (other.AreaMode != global::MelandGame3.LessonAreaMode.LessonAreaModeNormal) {
         AreaMode = other.AreaMode;
       }
       codeEntities_.Add(other.codeEntities_);
@@ -55583,14 +53406,14 @@ namespace Bian {
           }
           case 34: {
             if (scope_ == null) {
-              Scope = new global::Bian.Scope();
+              Scope = new global::MelandGame3.Scope();
             }
             input.ReadMessage(Scope);
             break;
           }
           case 42: {
             if (tpPos_ == null) {
-              TpPos = new global::Bian.VectorXY();
+              TpPos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(TpPos);
             break;
@@ -55608,11 +53431,11 @@ namespace Bian {
             break;
           }
           case 72: {
-            ShowType = (global::Bian.LessonShowType) input.ReadEnum();
+            ShowType = (global::MelandGame3.LessonShowType) input.ReadEnum();
             break;
           }
           case 80: {
-            AreaMode = (global::Bian.LessonAreaMode) input.ReadEnum();
+            AreaMode = (global::MelandGame3.LessonAreaMode) input.ReadEnum();
             break;
           }
           case 90: {
@@ -55648,14 +53471,14 @@ namespace Bian {
           }
           case 34: {
             if (scope_ == null) {
-              Scope = new global::Bian.Scope();
+              Scope = new global::MelandGame3.Scope();
             }
             input.ReadMessage(Scope);
             break;
           }
           case 42: {
             if (tpPos_ == null) {
-              TpPos = new global::Bian.VectorXY();
+              TpPos = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(TpPos);
             break;
@@ -55673,11 +53496,11 @@ namespace Bian {
             break;
           }
           case 72: {
-            ShowType = (global::Bian.LessonShowType) input.ReadEnum();
+            ShowType = (global::MelandGame3.LessonShowType) input.ReadEnum();
             break;
           }
           case 80: {
-            AreaMode = (global::Bian.LessonAreaMode) input.ReadEnum();
+            AreaMode = (global::MelandGame3.LessonAreaMode) input.ReadEnum();
             break;
           }
           case 90: {
@@ -55705,7 +53528,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[122]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[117]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -55742,10 +53565,10 @@ namespace Bian {
 
     /// <summary>Field number for the "e" field.</summary>
     public const int EFieldNumber = 1;
-    private global::Bian.EntityId e_;
+    private global::MelandGame3.EntityId e_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId E {
+    public global::MelandGame3.EntityId E {
       get { return e_; }
       set {
         e_ = value;
@@ -55967,7 +53790,7 @@ namespace Bian {
       }
       if (other.e_ != null) {
         if (e_ == null) {
-          E = new global::Bian.EntityId();
+          E = new global::MelandGame3.EntityId();
         }
         E.MergeFrom(other.E);
       }
@@ -56003,7 +53826,7 @@ namespace Bian {
             break;
           case 10: {
             if (e_ == null) {
-              E = new global::Bian.EntityId();
+              E = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(E);
             break;
@@ -56045,7 +53868,7 @@ namespace Bian {
             break;
           case 10: {
             if (e_ == null) {
-              E = new global::Bian.EntityId();
+              E = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(E);
             break;
@@ -56091,7 +53914,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[123]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[118]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -56126,13 +53949,13 @@ namespace Bian {
 
     /// <summary>Field number for the "e" field.</summary>
     public const int EFieldNumber = 1;
-    private global::Bian.EntityId e_;
+    private global::MelandGame3.EntityId e_;
     /// <summary>
     /// 实体ID类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId E {
+    public global::MelandGame3.EntityId E {
       get { return e_; }
       set {
         e_ = value;
@@ -56171,13 +53994,13 @@ namespace Bian {
 
     /// <summary>Field number for the "rc" field.</summary>
     public const int RcFieldNumber = 4;
-    private global::Bian.VectorXY rc_;
+    private global::MelandGame3.VectorXY rc_;
     /// <summary>
     /// 坐标RC
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY Rc {
+    public global::MelandGame3.VectorXY Rc {
       get { return rc_; }
       set {
         rc_ = value;
@@ -56310,7 +54133,7 @@ namespace Bian {
       }
       if (other.e_ != null) {
         if (e_ == null) {
-          E = new global::Bian.EntityId();
+          E = new global::MelandGame3.EntityId();
         }
         E.MergeFrom(other.E);
       }
@@ -56322,7 +54145,7 @@ namespace Bian {
       }
       if (other.rc_ != null) {
         if (rc_ == null) {
-          Rc = new global::Bian.VectorXY();
+          Rc = new global::MelandGame3.VectorXY();
         }
         Rc.MergeFrom(other.Rc);
       }
@@ -56343,7 +54166,7 @@ namespace Bian {
             break;
           case 10: {
             if (e_ == null) {
-              E = new global::Bian.EntityId();
+              E = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(E);
             break;
@@ -56358,7 +54181,7 @@ namespace Bian {
           }
           case 34: {
             if (rc_ == null) {
-              Rc = new global::Bian.VectorXY();
+              Rc = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Rc);
             break;
@@ -56380,7 +54203,7 @@ namespace Bian {
             break;
           case 10: {
             if (e_ == null) {
-              E = new global::Bian.EntityId();
+              E = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(E);
             break;
@@ -56395,7 +54218,7 @@ namespace Bian {
           }
           case 34: {
             if (rc_ == null) {
-              Rc = new global::Bian.VectorXY();
+              Rc = new global::MelandGame3.VectorXY();
             }
             input.ReadMessage(Rc);
             break;
@@ -56421,7 +54244,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[124]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[119]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -56457,10 +54280,10 @@ namespace Bian {
 
     /// <summary>Field number for the "area" field.</summary>
     public const int AreaFieldNumber = 1;
-    private global::Bian.LessonArea area_;
+    private global::MelandGame3.LessonArea area_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonArea Area {
+    public global::MelandGame3.LessonArea Area {
       get { return area_; }
       set {
         area_ = value;
@@ -56469,12 +54292,12 @@ namespace Bian {
 
     /// <summary>Field number for the "tp_points" field.</summary>
     public const int TpPointsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.LessonAreaEntityData> _repeated_tpPoints_codec
-        = pb::FieldCodec.ForMessage(18, global::Bian.LessonAreaEntityData.Parser);
-    private readonly pbc::RepeatedField<global::Bian.LessonAreaEntityData> tpPoints_ = new pbc::RepeatedField<global::Bian.LessonAreaEntityData>();
+    private static readonly pb::FieldCodec<global::MelandGame3.LessonAreaEntityData> _repeated_tpPoints_codec
+        = pb::FieldCodec.ForMessage(18, global::MelandGame3.LessonAreaEntityData.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.LessonAreaEntityData> tpPoints_ = new pbc::RepeatedField<global::MelandGame3.LessonAreaEntityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.LessonAreaEntityData> TpPoints {
+    public pbc::RepeatedField<global::MelandGame3.LessonAreaEntityData> TpPoints {
       get { return tpPoints_; }
     }
 
@@ -56492,10 +54315,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lock_state" field.</summary>
     public const int LockStateFieldNumber = 4;
-    private global::Bian.LockState lockState_ = global::Bian.LockState.LockStateUnkown;
+    private global::MelandGame3.LockState lockState_ = global::MelandGame3.LockState.LockStateUnkown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LockState LockState {
+    public global::MelandGame3.LockState LockState {
       get { return lockState_; }
       set {
         lockState_ = value;
@@ -56544,7 +54367,7 @@ namespace Bian {
       if (area_ != null) hash ^= Area.GetHashCode();
       hash ^= tpPoints_.GetHashCode();
       if (IsResetting != false) hash ^= IsResetting.GetHashCode();
-      if (LockState != global::Bian.LockState.LockStateUnkown) hash ^= LockState.GetHashCode();
+      if (LockState != global::MelandGame3.LockState.LockStateUnkown) hash ^= LockState.GetHashCode();
       if (HasArrived != false) hash ^= HasArrived.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -56573,7 +54396,7 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteBool(IsResetting);
       }
-      if (LockState != global::Bian.LockState.LockStateUnkown) {
+      if (LockState != global::MelandGame3.LockState.LockStateUnkown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) LockState);
       }
@@ -56600,7 +54423,7 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteBool(IsResetting);
       }
-      if (LockState != global::Bian.LockState.LockStateUnkown) {
+      if (LockState != global::MelandGame3.LockState.LockStateUnkown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) LockState);
       }
@@ -56625,7 +54448,7 @@ namespace Bian {
       if (IsResetting != false) {
         size += 1 + 1;
       }
-      if (LockState != global::Bian.LockState.LockStateUnkown) {
+      if (LockState != global::MelandGame3.LockState.LockStateUnkown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockState);
       }
       if (HasArrived != false) {
@@ -56645,7 +54468,7 @@ namespace Bian {
       }
       if (other.area_ != null) {
         if (area_ == null) {
-          Area = new global::Bian.LessonArea();
+          Area = new global::MelandGame3.LessonArea();
         }
         Area.MergeFrom(other.Area);
       }
@@ -56653,7 +54476,7 @@ namespace Bian {
       if (other.IsResetting != false) {
         IsResetting = other.IsResetting;
       }
-      if (other.LockState != global::Bian.LockState.LockStateUnkown) {
+      if (other.LockState != global::MelandGame3.LockState.LockStateUnkown) {
         LockState = other.LockState;
       }
       if (other.HasArrived != false) {
@@ -56676,7 +54499,7 @@ namespace Bian {
             break;
           case 10: {
             if (area_ == null) {
-              Area = new global::Bian.LessonArea();
+              Area = new global::MelandGame3.LessonArea();
             }
             input.ReadMessage(Area);
             break;
@@ -56690,7 +54513,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            LockState = (global::Bian.LockState) input.ReadEnum();
+            LockState = (global::MelandGame3.LockState) input.ReadEnum();
             break;
           }
           case 40: {
@@ -56714,7 +54537,7 @@ namespace Bian {
             break;
           case 10: {
             if (area_ == null) {
-              Area = new global::Bian.LessonArea();
+              Area = new global::MelandGame3.LessonArea();
             }
             input.ReadMessage(Area);
             break;
@@ -56728,7 +54551,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            LockState = (global::Bian.LockState) input.ReadEnum();
+            LockState = (global::MelandGame3.LockState) input.ReadEnum();
             break;
           }
           case 40: {
@@ -56756,7 +54579,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[125]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[120]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -56818,10 +54641,10 @@ namespace Bian {
 
     /// <summary>Field number for the "lesson_area_data_type" field.</summary>
     public const int LessonAreaDataTypeFieldNumber = 1;
-    private global::Bian.LessonAreaDataType lessonAreaDataType_ = global::Bian.LessonAreaDataType.LessonAreaDataTypeName;
+    private global::MelandGame3.LessonAreaDataType lessonAreaDataType_ = global::MelandGame3.LessonAreaDataType.LessonAreaDataTypeName;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonAreaDataType LessonAreaDataType {
+    public global::MelandGame3.LessonAreaDataType LessonAreaDataType {
       get { return lessonAreaDataType_; }
       set {
         lessonAreaDataType_ = value;
@@ -56856,8 +54679,8 @@ namespace Bian {
     public const int ScopeFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Scope Scope {
-      get { return dataCase_ == DataOneofCase.Scope ? (global::Bian.Scope) data_ : null; }
+    public global::MelandGame3.Scope Scope {
+      get { return dataCase_ == DataOneofCase.Scope ? (global::MelandGame3.Scope) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Scope;
@@ -56868,8 +54691,8 @@ namespace Bian {
     public const int TpPosFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.VectorXY TpPos {
-      get { return dataCase_ == DataOneofCase.TpPos ? (global::Bian.VectorXY) data_ : null; }
+    public global::MelandGame3.VectorXY TpPos {
+      get { return dataCase_ == DataOneofCase.TpPos ? (global::MelandGame3.VectorXY) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.TpPos;
@@ -56904,8 +54727,8 @@ namespace Bian {
     public const int EntityDataFieldNumber = 16;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CodeEntityData EntityData {
-      get { return dataCase_ == DataOneofCase.EntityData ? (global::Bian.CodeEntityData) data_ : null; }
+    public global::MelandGame3.CodeEntityData EntityData {
+      get { return dataCase_ == DataOneofCase.EntityData ? (global::MelandGame3.CodeEntityData) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.EntityData;
@@ -56916,8 +54739,8 @@ namespace Bian {
     public const int ShowTypeFieldNumber = 17;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonShowType ShowType {
-      get { return dataCase_ == DataOneofCase.ShowType ? (global::Bian.LessonShowType) data_ : global::Bian.LessonShowType.LessonShowTypeAll; }
+    public global::MelandGame3.LessonShowType ShowType {
+      get { return dataCase_ == DataOneofCase.ShowType ? (global::MelandGame3.LessonShowType) data_ : global::MelandGame3.LessonShowType.LessonShowTypeAll; }
       set {
         data_ = value;
         dataCase_ = DataOneofCase.ShowType;
@@ -56928,8 +54751,8 @@ namespace Bian {
     public const int AreaModeFieldNumber = 18;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.LessonAreaMode AreaMode {
-      get { return dataCase_ == DataOneofCase.AreaMode ? (global::Bian.LessonAreaMode) data_ : global::Bian.LessonAreaMode.LessonAreaModeNormal; }
+    public global::MelandGame3.LessonAreaMode AreaMode {
+      get { return dataCase_ == DataOneofCase.AreaMode ? (global::MelandGame3.LessonAreaMode) data_ : global::MelandGame3.LessonAreaMode.LessonAreaModeNormal; }
       set {
         data_ = value;
         dataCase_ = DataOneofCase.AreaMode;
@@ -56997,7 +54820,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LessonAreaDataType != global::Bian.LessonAreaDataType.LessonAreaDataTypeName) hash ^= LessonAreaDataType.GetHashCode();
+      if (LessonAreaDataType != global::MelandGame3.LessonAreaDataType.LessonAreaDataTypeName) hash ^= LessonAreaDataType.GetHashCode();
       if (dataCase_ == DataOneofCase.Name) hash ^= Name.GetHashCode();
       if (dataCase_ == DataOneofCase.Comment) hash ^= Comment.GetHashCode();
       if (dataCase_ == DataOneofCase.Scope) hash ^= Scope.GetHashCode();
@@ -57026,7 +54849,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LessonAreaDataType != global::Bian.LessonAreaDataType.LessonAreaDataTypeName) {
+      if (LessonAreaDataType != global::MelandGame3.LessonAreaDataType.LessonAreaDataTypeName) {
         output.WriteRawTag(8);
         output.WriteEnum((int) LessonAreaDataType);
       }
@@ -57076,7 +54899,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LessonAreaDataType != global::Bian.LessonAreaDataType.LessonAreaDataTypeName) {
+      if (LessonAreaDataType != global::MelandGame3.LessonAreaDataType.LessonAreaDataTypeName) {
         output.WriteRawTag(8);
         output.WriteEnum((int) LessonAreaDataType);
       }
@@ -57126,7 +54949,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LessonAreaDataType != global::Bian.LessonAreaDataType.LessonAreaDataTypeName) {
+      if (LessonAreaDataType != global::MelandGame3.LessonAreaDataType.LessonAreaDataTypeName) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LessonAreaDataType);
       }
       if (dataCase_ == DataOneofCase.Name) {
@@ -57168,7 +54991,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.LessonAreaDataType != global::Bian.LessonAreaDataType.LessonAreaDataTypeName) {
+      if (other.LessonAreaDataType != global::MelandGame3.LessonAreaDataType.LessonAreaDataTypeName) {
         LessonAreaDataType = other.LessonAreaDataType;
       }
       switch (other.DataCase) {
@@ -57180,13 +55003,13 @@ namespace Bian {
           break;
         case DataOneofCase.Scope:
           if (Scope == null) {
-            Scope = new global::Bian.Scope();
+            Scope = new global::MelandGame3.Scope();
           }
           Scope.MergeFrom(other.Scope);
           break;
         case DataOneofCase.TpPos:
           if (TpPos == null) {
-            TpPos = new global::Bian.VectorXY();
+            TpPos = new global::MelandGame3.VectorXY();
           }
           TpPos.MergeFrom(other.TpPos);
           break;
@@ -57198,7 +55021,7 @@ namespace Bian {
           break;
         case DataOneofCase.EntityData:
           if (EntityData == null) {
-            EntityData = new global::Bian.CodeEntityData();
+            EntityData = new global::MelandGame3.CodeEntityData();
           }
           EntityData.MergeFrom(other.EntityData);
           break;
@@ -57226,7 +55049,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            LessonAreaDataType = (global::Bian.LessonAreaDataType) input.ReadEnum();
+            LessonAreaDataType = (global::MelandGame3.LessonAreaDataType) input.ReadEnum();
             break;
           }
           case 82: {
@@ -57238,7 +55061,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.Scope subBuilder = new global::Bian.Scope();
+            global::MelandGame3.Scope subBuilder = new global::MelandGame3.Scope();
             if (dataCase_ == DataOneofCase.Scope) {
               subBuilder.MergeFrom(Scope);
             }
@@ -57247,7 +55070,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.VectorXY subBuilder = new global::Bian.VectorXY();
+            global::MelandGame3.VectorXY subBuilder = new global::MelandGame3.VectorXY();
             if (dataCase_ == DataOneofCase.TpPos) {
               subBuilder.MergeFrom(TpPos);
             }
@@ -57264,7 +55087,7 @@ namespace Bian {
             break;
           }
           case 130: {
-            global::Bian.CodeEntityData subBuilder = new global::Bian.CodeEntityData();
+            global::MelandGame3.CodeEntityData subBuilder = new global::MelandGame3.CodeEntityData();
             if (dataCase_ == DataOneofCase.EntityData) {
               subBuilder.MergeFrom(EntityData);
             }
@@ -57298,7 +55121,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            LessonAreaDataType = (global::Bian.LessonAreaDataType) input.ReadEnum();
+            LessonAreaDataType = (global::MelandGame3.LessonAreaDataType) input.ReadEnum();
             break;
           }
           case 82: {
@@ -57310,7 +55133,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.Scope subBuilder = new global::Bian.Scope();
+            global::MelandGame3.Scope subBuilder = new global::MelandGame3.Scope();
             if (dataCase_ == DataOneofCase.Scope) {
               subBuilder.MergeFrom(Scope);
             }
@@ -57319,7 +55142,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.VectorXY subBuilder = new global::Bian.VectorXY();
+            global::MelandGame3.VectorXY subBuilder = new global::MelandGame3.VectorXY();
             if (dataCase_ == DataOneofCase.TpPos) {
               subBuilder.MergeFrom(TpPos);
             }
@@ -57336,7 +55159,7 @@ namespace Bian {
             break;
           }
           case 130: {
-            global::Bian.CodeEntityData subBuilder = new global::Bian.CodeEntityData();
+            global::MelandGame3.CodeEntityData subBuilder = new global::MelandGame3.CodeEntityData();
             if (dataCase_ == DataOneofCase.EntityData) {
               subBuilder.MergeFrom(EntityData);
             }
@@ -57375,7 +55198,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[126]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[121]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -57420,12 +55243,12 @@ namespace Bian {
 
     /// <summary>Field number for the "update_data" field.</summary>
     public const int UpdateDataFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Bian.LessonAreaData> _repeated_updateData_codec
-        = pb::FieldCodec.ForMessage(18, global::Bian.LessonAreaData.Parser);
-    private readonly pbc::RepeatedField<global::Bian.LessonAreaData> updateData_ = new pbc::RepeatedField<global::Bian.LessonAreaData>();
+    private static readonly pb::FieldCodec<global::MelandGame3.LessonAreaData> _repeated_updateData_codec
+        = pb::FieldCodec.ForMessage(18, global::MelandGame3.LessonAreaData.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.LessonAreaData> updateData_ = new pbc::RepeatedField<global::MelandGame3.LessonAreaData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.LessonAreaData> UpdateData {
+    public pbc::RepeatedField<global::MelandGame3.LessonAreaData> UpdateData {
       get { return updateData_; }
     }
 
@@ -57590,7 +55413,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[127]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[122]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -57810,7 +55633,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[128]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[123]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -57845,10 +55668,10 @@ namespace Bian {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private global::Bian.EntityId id_;
+    private global::MelandGame3.EntityId id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Id {
+    public global::MelandGame3.EntityId Id {
       get { return id_; }
       set {
         id_ = value;
@@ -57857,10 +55680,10 @@ namespace Bian {
 
     /// <summary>Field number for the "loc" field.</summary>
     public const int LocFieldNumber = 2;
-    private global::Bian.EntityLocation loc_;
+    private global::MelandGame3.EntityLocation loc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityLocation Loc {
+    public global::MelandGame3.EntityLocation Loc {
       get { return loc_; }
       set {
         loc_ = value;
@@ -58020,13 +55843,13 @@ namespace Bian {
       }
       if (other.id_ != null) {
         if (id_ == null) {
-          Id = new global::Bian.EntityId();
+          Id = new global::MelandGame3.EntityId();
         }
         Id.MergeFrom(other.Id);
       }
       if (other.loc_ != null) {
         if (loc_ == null) {
-          Loc = new global::Bian.EntityLocation();
+          Loc = new global::MelandGame3.EntityLocation();
         }
         Loc.MergeFrom(other.Loc);
       }
@@ -58053,14 +55876,14 @@ namespace Bian {
             break;
           case 10: {
             if (id_ == null) {
-              Id = new global::Bian.EntityId();
+              Id = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Id);
             break;
           }
           case 18: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -58090,14 +55913,14 @@ namespace Bian {
             break;
           case 10: {
             if (id_ == null) {
-              Id = new global::Bian.EntityId();
+              Id = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Id);
             break;
           }
           case 18: {
             if (loc_ == null) {
-              Loc = new global::Bian.EntityLocation();
+              Loc = new global::MelandGame3.EntityLocation();
             }
             input.ReadMessage(Loc);
             break;
@@ -58134,7 +55957,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[129]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[124]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -58185,13 +56008,13 @@ namespace Bian {
 
     /// <summary>Field number for the "preload_code_block" field.</summary>
     public const int PreloadCodeBlockFieldNumber = 2;
-    private global::Bian.CodeBlockPrograms preloadCodeBlock_;
+    private global::MelandGame3.CodeBlockPrograms preloadCodeBlock_;
     /// <summary>
     /// 预制代码块
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CodeBlockPrograms PreloadCodeBlock {
+    public global::MelandGame3.CodeBlockPrograms PreloadCodeBlock {
       get { return preloadCodeBlock_; }
       set {
         preloadCodeBlock_ = value;
@@ -58200,13 +56023,13 @@ namespace Bian {
 
     /// <summary>Field number for the "preload_entity_attr" field.</summary>
     public const int PreloadEntityAttrFieldNumber = 3;
-    private global::Bian.EntityAttribute preloadEntityAttr_;
+    private global::MelandGame3.EntityAttribute preloadEntityAttr_;
     /// <summary>
     /// 预制实体属性
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityAttribute PreloadEntityAttr {
+    public global::MelandGame3.EntityAttribute PreloadEntityAttr {
       get { return preloadEntityAttr_; }
       set {
         preloadEntityAttr_ = value;
@@ -58215,13 +56038,13 @@ namespace Bian {
 
     /// <summary>Field number for the "preload_timeline_list" field.</summary>
     public const int PreloadTimelineListFieldNumber = 4;
-    private global::Bian.EntityTimeLineList preloadTimelineList_;
+    private global::MelandGame3.EntityTimeLineList preloadTimelineList_;
     /// <summary>
     /// 预制代码块时间线
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityTimeLineList PreloadTimelineList {
+    public global::MelandGame3.EntityTimeLineList PreloadTimelineList {
       get { return preloadTimelineList_; }
       set {
         preloadTimelineList_ = value;
@@ -58385,19 +56208,19 @@ namespace Bian {
       }
       if (other.preloadCodeBlock_ != null) {
         if (preloadCodeBlock_ == null) {
-          PreloadCodeBlock = new global::Bian.CodeBlockPrograms();
+          PreloadCodeBlock = new global::MelandGame3.CodeBlockPrograms();
         }
         PreloadCodeBlock.MergeFrom(other.PreloadCodeBlock);
       }
       if (other.preloadEntityAttr_ != null) {
         if (preloadEntityAttr_ == null) {
-          PreloadEntityAttr = new global::Bian.EntityAttribute();
+          PreloadEntityAttr = new global::MelandGame3.EntityAttribute();
         }
         PreloadEntityAttr.MergeFrom(other.PreloadEntityAttr);
       }
       if (other.preloadTimelineList_ != null) {
         if (preloadTimelineList_ == null) {
-          PreloadTimelineList = new global::Bian.EntityTimeLineList();
+          PreloadTimelineList = new global::MelandGame3.EntityTimeLineList();
         }
         PreloadTimelineList.MergeFrom(other.PreloadTimelineList);
       }
@@ -58425,21 +56248,21 @@ namespace Bian {
           }
           case 18: {
             if (preloadCodeBlock_ == null) {
-              PreloadCodeBlock = new global::Bian.CodeBlockPrograms();
+              PreloadCodeBlock = new global::MelandGame3.CodeBlockPrograms();
             }
             input.ReadMessage(PreloadCodeBlock);
             break;
           }
           case 26: {
             if (preloadEntityAttr_ == null) {
-              PreloadEntityAttr = new global::Bian.EntityAttribute();
+              PreloadEntityAttr = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(PreloadEntityAttr);
             break;
           }
           case 34: {
             if (preloadTimelineList_ == null) {
-              PreloadTimelineList = new global::Bian.EntityTimeLineList();
+              PreloadTimelineList = new global::MelandGame3.EntityTimeLineList();
             }
             input.ReadMessage(PreloadTimelineList);
             break;
@@ -58469,21 +56292,21 @@ namespace Bian {
           }
           case 18: {
             if (preloadCodeBlock_ == null) {
-              PreloadCodeBlock = new global::Bian.CodeBlockPrograms();
+              PreloadCodeBlock = new global::MelandGame3.CodeBlockPrograms();
             }
             input.ReadMessage(PreloadCodeBlock);
             break;
           }
           case 26: {
             if (preloadEntityAttr_ == null) {
-              PreloadEntityAttr = new global::Bian.EntityAttribute();
+              PreloadEntityAttr = new global::MelandGame3.EntityAttribute();
             }
             input.ReadMessage(PreloadEntityAttr);
             break;
           }
           case 34: {
             if (preloadTimelineList_ == null) {
-              PreloadTimelineList = new global::Bian.EntityTimeLineList();
+              PreloadTimelineList = new global::MelandGame3.EntityTimeLineList();
             }
             input.ReadMessage(PreloadTimelineList);
             break;
@@ -58516,7 +56339,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[130]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[125]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -58580,13 +56403,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity_preload" field.</summary>
     public const int EntityPreloadFieldNumber = 3;
-    private global::Bian.EntityPreload entityPreload_;
+    private global::MelandGame3.EntityPreload entityPreload_;
     /// <summary>
     /// 实体预制信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityPreload EntityPreload {
+    public global::MelandGame3.EntityPreload EntityPreload {
       get { return entityPreload_; }
       set {
         entityPreload_ = value;
@@ -58712,7 +56535,7 @@ namespace Bian {
       }
       if (other.entityPreload_ != null) {
         if (entityPreload_ == null) {
-          EntityPreload = new global::Bian.EntityPreload();
+          EntityPreload = new global::MelandGame3.EntityPreload();
         }
         EntityPreload.MergeFrom(other.EntityPreload);
       }
@@ -58741,7 +56564,7 @@ namespace Bian {
           }
           case 26: {
             if (entityPreload_ == null) {
-              EntityPreload = new global::Bian.EntityPreload();
+              EntityPreload = new global::MelandGame3.EntityPreload();
             }
             input.ReadMessage(EntityPreload);
             break;
@@ -58771,7 +56594,7 @@ namespace Bian {
           }
           case 26: {
             if (entityPreload_ == null) {
-              EntityPreload = new global::Bian.EntityPreload();
+              EntityPreload = new global::MelandGame3.EntityPreload();
             }
             input.ReadMessage(EntityPreload);
             break;
@@ -58800,7 +56623,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ModelReflection.Descriptor.MessageTypes[131]; }
+      get { return global::MelandGame3.ModelReflection.Descriptor.MessageTypes[126]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -58836,13 +56659,13 @@ namespace Bian {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::Bian.EntityId entity_;
+    private global::MelandGame3.EntityId entity_;
     /// <summary>
     /// 实体信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityId Entity {
+    public global::MelandGame3.EntityId Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -59048,7 +56871,7 @@ namespace Bian {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::Bian.EntityId();
+          Entity = new global::MelandGame3.EntityId();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -59081,7 +56904,7 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;
@@ -59119,7 +56942,7 @@ namespace Bian {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::Bian.EntityId();
+              Entity = new global::MelandGame3.EntityId();
             }
             input.ReadMessage(Entity);
             break;

@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from condition.proto</summary>
   public static partial class ConditionReflection {
@@ -24,20 +24,20 @@ namespace Bian {
     static ConditionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9jb25kaXRpb24ucHJvdG8SBEJpYW4inAEKEENvbmRpdGlvblNldHRpbmcS",
-            "CwoDY2lkGAEgASgFEisKDmNvbmRpdGlvbl90eXBlGAIgASgOMhMuQmlhbi5D",
-            "b25kaXRpb25UeXBlEicKDGNvbXBhcmVfdHlwZRgDIAEoDjIRLkJpYW4uQ29t",
-            "cGFyZVR5cGUSFQoNY29tcGFyZV92YWx1ZRgEIAEoBRIOCgZwYXJhbXMYBSAD",
-            "KAUqqwEKC0NvbXBhcmVUeXBlEhwKGENvbXBhcmVUeXBlX0NvbXBhcmVFcXVh",
-            "bBAAEhwKGENvbXBhcmVUeXBlX0NvbXBhcmVHcmVhdBABEiEKHUNvbXBhcmVU",
-            "eXBlX0NvbXBhcmVHcmVhdEVxdWFsEAISGwoXQ29tcGFyZVR5cGVfQ29tcGFy",
-            "ZUxlc3MQAxIgChxDb21wYXJlVHlwZV9Db21wYXJlTGVzc0VxdWFsEAQqMQoN",
-            "Q29uZGl0aW9uVHlwZRIgChxDb25kaXRpb25UeXBlX0NvbmRpdGlvbkxldmVs",
-            "EABiBnByb3RvMw=="));
+            "Cg9jb25kaXRpb24ucHJvdG8SC01lbGFuZEdhbWUzIqoBChBDb25kaXRpb25T",
+            "ZXR0aW5nEgsKA2NpZBgBIAEoBRIyCg5jb25kaXRpb25fdHlwZRgCIAEoDjIa",
+            "Lk1lbGFuZEdhbWUzLkNvbmRpdGlvblR5cGUSLgoMY29tcGFyZV90eXBlGAMg",
+            "ASgOMhguTWVsYW5kR2FtZTMuQ29tcGFyZVR5cGUSFQoNY29tcGFyZV92YWx1",
+            "ZRgEIAEoBRIOCgZwYXJhbXMYBSADKAUqqwEKC0NvbXBhcmVUeXBlEhwKGENv",
+            "bXBhcmVUeXBlX0NvbXBhcmVFcXVhbBAAEhwKGENvbXBhcmVUeXBlX0NvbXBh",
+            "cmVHcmVhdBABEiEKHUNvbXBhcmVUeXBlX0NvbXBhcmVHcmVhdEVxdWFsEAIS",
+            "GwoXQ29tcGFyZVR5cGVfQ29tcGFyZUxlc3MQAxIgChxDb21wYXJlVHlwZV9D",
+            "b21wYXJlTGVzc0VxdWFsEAQqMQoNQ29uZGl0aW9uVHlwZRIgChxDb25kaXRp",
+            "b25UeXBlX0NvbmRpdGlvbkxldmVsEABiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.CompareType), typeof(global::Bian.ConditionType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ConditionSetting), global::Bian.ConditionSetting.Parser, new[]{ "Cid", "ConditionType", "CompareType", "CompareValue", "Params" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.CompareType), typeof(global::MelandGame3.ConditionType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ConditionSetting), global::MelandGame3.ConditionSetting.Parser, new[]{ "Cid", "ConditionType", "CompareType", "CompareValue", "Params" }, null, null, null, null)
           }));
     }
     #endregion
@@ -97,7 +97,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ConditionReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.ConditionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,13 +145,13 @@ namespace Bian {
 
     /// <summary>Field number for the "condition_type" field.</summary>
     public const int ConditionTypeFieldNumber = 2;
-    private global::Bian.ConditionType conditionType_ = global::Bian.ConditionType.ConditionLevel;
+    private global::MelandGame3.ConditionType conditionType_ = global::MelandGame3.ConditionType.ConditionLevel;
     /// <summary>
     /// 条件类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ConditionType ConditionType {
+    public global::MelandGame3.ConditionType ConditionType {
       get { return conditionType_; }
       set {
         conditionType_ = value;
@@ -160,13 +160,13 @@ namespace Bian {
 
     /// <summary>Field number for the "compare_type" field.</summary>
     public const int CompareTypeFieldNumber = 3;
-    private global::Bian.CompareType compareType_ = global::Bian.CompareType.CompareEqual;
+    private global::MelandGame3.CompareType compareType_ = global::MelandGame3.CompareType.CompareEqual;
     /// <summary>
     /// 比较类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.CompareType CompareType {
+    public global::MelandGame3.CompareType CompareType {
       get { return compareType_; }
       set {
         compareType_ = value;
@@ -230,8 +230,8 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Cid != 0) hash ^= Cid.GetHashCode();
-      if (ConditionType != global::Bian.ConditionType.ConditionLevel) hash ^= ConditionType.GetHashCode();
-      if (CompareType != global::Bian.CompareType.CompareEqual) hash ^= CompareType.GetHashCode();
+      if (ConditionType != global::MelandGame3.ConditionType.ConditionLevel) hash ^= ConditionType.GetHashCode();
+      if (CompareType != global::MelandGame3.CompareType.CompareEqual) hash ^= CompareType.GetHashCode();
       if (CompareValue != 0) hash ^= CompareValue.GetHashCode();
       hash ^= params_.GetHashCode();
       if (_unknownFields != null) {
@@ -256,11 +256,11 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Cid);
       }
-      if (ConditionType != global::Bian.ConditionType.ConditionLevel) {
+      if (ConditionType != global::MelandGame3.ConditionType.ConditionLevel) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConditionType);
       }
-      if (CompareType != global::Bian.CompareType.CompareEqual) {
+      if (CompareType != global::MelandGame3.CompareType.CompareEqual) {
         output.WriteRawTag(24);
         output.WriteEnum((int) CompareType);
       }
@@ -283,11 +283,11 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Cid);
       }
-      if (ConditionType != global::Bian.ConditionType.ConditionLevel) {
+      if (ConditionType != global::MelandGame3.ConditionType.ConditionLevel) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConditionType);
       }
-      if (CompareType != global::Bian.CompareType.CompareEqual) {
+      if (CompareType != global::MelandGame3.CompareType.CompareEqual) {
         output.WriteRawTag(24);
         output.WriteEnum((int) CompareType);
       }
@@ -309,10 +309,10 @@ namespace Bian {
       if (Cid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Cid);
       }
-      if (ConditionType != global::Bian.ConditionType.ConditionLevel) {
+      if (ConditionType != global::MelandGame3.ConditionType.ConditionLevel) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConditionType);
       }
-      if (CompareType != global::Bian.CompareType.CompareEqual) {
+      if (CompareType != global::MelandGame3.CompareType.CompareEqual) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CompareType);
       }
       if (CompareValue != 0) {
@@ -334,10 +334,10 @@ namespace Bian {
       if (other.Cid != 0) {
         Cid = other.Cid;
       }
-      if (other.ConditionType != global::Bian.ConditionType.ConditionLevel) {
+      if (other.ConditionType != global::MelandGame3.ConditionType.ConditionLevel) {
         ConditionType = other.ConditionType;
       }
-      if (other.CompareType != global::Bian.CompareType.CompareEqual) {
+      if (other.CompareType != global::MelandGame3.CompareType.CompareEqual) {
         CompareType = other.CompareType;
       }
       if (other.CompareValue != 0) {
@@ -364,11 +364,11 @@ namespace Bian {
             break;
           }
           case 16: {
-            ConditionType = (global::Bian.ConditionType) input.ReadEnum();
+            ConditionType = (global::MelandGame3.ConditionType) input.ReadEnum();
             break;
           }
           case 24: {
-            CompareType = (global::Bian.CompareType) input.ReadEnum();
+            CompareType = (global::MelandGame3.CompareType) input.ReadEnum();
             break;
           }
           case 32: {
@@ -400,11 +400,11 @@ namespace Bian {
             break;
           }
           case 16: {
-            ConditionType = (global::Bian.ConditionType) input.ReadEnum();
+            ConditionType = (global::MelandGame3.ConditionType) input.ReadEnum();
             break;
           }
           case 24: {
-            CompareType = (global::Bian.CompareType) input.ReadEnum();
+            CompareType = (global::MelandGame3.CompareType) input.ReadEnum();
             break;
           }
           case 32: {

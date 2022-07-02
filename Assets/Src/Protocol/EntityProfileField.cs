@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from entity_profile_field.proto</summary>
   public static partial class EntityProfileFieldReflection {
@@ -24,58 +24,58 @@ namespace Bian {
     static EntityProfileFieldReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChplbnRpdHlfcHJvZmlsZV9maWVsZC5wcm90bxIEQmlhbiI7Cg5FbnRpdHlH",
-            "dWlkYW5jZRIRCgluZWVkX3Nob3cYASABKAgSFgoOZ3VpZGFuY2VfaW5kZXgY",
-            "AiABKAkigwEKCk1lbWJlckRhdGESKQoIZmllbGRfaWQYASABKA4yFy5CaWFu",
-            "LkVudGl0eU1lbWJlckZpZWxkEg0KBXZhbHVlGAIgASgFEgsKA3N0chgDIAEo",
-            "CRIMCgRmbGFnGAQgASgIEg8KB2ludF9hcnIYBSADKAUSDwoHc3RyX2FychgG",
-            "IAMoCSr6AgobRW50aXR5UHJvZmlsZVVwZGF0ZVRyaWdnZXJzEkIKPkVudGl0",
-            "eVByb2ZpbGVVcGRhdGVUcmlnZ2Vyc19FbnRpdHlQcm9maWxlVXBkYXRlVHJp",
-            "Z2dlcnNVbktub3duEAASQwo/RW50aXR5UHJvZmlsZVVwZGF0ZVRyaWdnZXJz",
-            "X0VudGl0eVByb2ZpbGVVcGRhdGVUcmlnZ2Vyc0JlQXR0YWNrEAESRwpDRW50",
-            "aXR5UHJvZmlsZVVwZGF0ZVRyaWdnZXJzX0VudGl0eVByb2ZpbGVVcGRhdGVU",
-            "cmlnZ2Vyc1VzQ29uc3VtYWJsZRACEkgKREVudGl0eVByb2ZpbGVVcGRhdGVU",
-            "cmlnZ2Vyc19FbnRpdHlQcm9maWxlVXBkYXRlVHJpZ2dlcnNBdXRvUmVjb3Zl",
-            "ckhwEAMSPwo7RW50aXR5UHJvZmlsZVVwZGF0ZVRyaWdnZXJzX0VudGl0eVBy",
-            "b2ZpbGVVcGRhdGVUcmlnZ2Vyc0J1ZmYQBCriBgoSRW50aXR5UHJvZmlsZUZp",
-            "ZWxkEjAKLEVudGl0eVByb2ZpbGVGaWVsZF9FbnRpdHlQcm9maWxlRmllbGRV",
-            "bktub3duEAASKwonRW50aXR5UHJvZmlsZUZpZWxkX0VudGl0eVByb2ZpbGVG",
-            "aWVsZEx2EAESLAooRW50aXR5UHJvZmlsZUZpZWxkX0VudGl0eVByb2ZpbGVG",
-            "aWVsZEV4cBACEiwKKEVudGl0eVByb2ZpbGVGaWVsZF9FbnRpdHlQcm9maWxl",
-            "RmllbGRBdHQQAxIxCi1FbnRpdHlQcm9maWxlRmllbGRfRW50aXR5UHJvZmls",
-            "ZUZpZWxkQXR0U3BlZWQQBBIsCihFbnRpdHlQcm9maWxlRmllbGRfRW50aXR5",
-            "UHJvZmlsZUZpZWxkRGVmEAUSMAosRW50aXR5UHJvZmlsZUZpZWxkX0VudGl0",
-            "eVByb2ZpbGVGaWVsZEhwTGltaXQQBhIxCi1FbnRpdHlQcm9maWxlRmllbGRf",
-            "RW50aXR5UHJvZmlsZUZpZWxkQ3JpdFJhdGUQBxIzCi9FbnRpdHlQcm9maWxl",
-            "RmllbGRfRW50aXR5UHJvZmlsZUZpZWxkQ3JpdERhbWFnZRAIEjAKLEVudGl0",
-            "eVByb2ZpbGVGaWVsZF9FbnRpdHlQcm9maWxlRmllbGRIaXRSYXRlEAkSMQot",
-            "RW50aXR5UHJvZmlsZUZpZWxkX0VudGl0eVByb2ZpbGVGaWVsZE1pc3NSYXRl",
-            "EAoSMgouRW50aXR5UHJvZmlsZUZpZWxkX0VudGl0eVByb2ZpbGVGaWVsZE1v",
-            "dmVTcGVlZBALEjAKLEVudGl0eVByb2ZpbGVGaWVsZF9FbnRpdHlQcm9maWxl",
-            "RmllbGRQdXNoRG1nEAwSMQotRW50aXR5UHJvZmlsZUZpZWxkX0VudGl0eVBy",
-            "b2ZpbGVGaWVsZFB1c2hEaXN0EA0SMgouRW50aXR5UHJvZmlsZUZpZWxkX0Vu",
-            "dGl0eVByb2ZpbGVGaWVsZEhwQ3VycmVudBAOEi8KK0VudGl0eVByb2ZpbGVG",
-            "aWVsZF9FbnRpdHlQcm9maWxlRmllbGRSZW5hbWUQDxIzCi9FbnRpdHlQcm9m",
-            "aWxlRmllbGRfRW50aXR5UHJvZmlsZUZpZWxkSHBSZWNvdmVyeRAQKtwEChFF",
-            "bnRpdHlNZW1iZXJGaWVsZBIsCihFbnRpdHlNZW1iZXJGaWVsZF9FbnRpdHlN",
-            "ZW1iZXJGaWVsZEZyYW1lEAASLworRW50aXR5TWVtYmVyRmllbGRfRW50aXR5",
-            "TWVtYmVyRmllbGRTdGFtcGVkZRABEi0KKUVudGl0eU1lbWJlckZpZWxkX0Vu",
-            "dGl0eU1lbWJlckZpZWxkTG9ja2VyEAMSLQopRW50aXR5TWVtYmVyRmllbGRf",
-            "RW50aXR5TWVtYmVyRmllbGRJc0hpZGUQBBIxCi1FbnRpdHlNZW1iZXJGaWVs",
-            "ZF9FbnRpdHlNZW1iZXJGaWVsZENhbkRlc3Ryb3kQBhIvCitFbnRpdHlNZW1i",
-            "ZXJGaWVsZF9FbnRpdHlNZW1iZXJGaWVsZEd1aWRhbmNlEAcSLgoqRW50aXR5",
-            "TWVtYmVyRmllbGRfRW50aXR5TWVtYmVyRmllbGRHb2RWaWV3EAgSLgoqRW50",
-            "aXR5TWVtYmVyRmllbGRfRW50aXR5TWVtYmVyRmllbGRXYWxrRGlyEAkSLwor",
-            "RW50aXR5TWVtYmVyRmllbGRfRW50aXR5TWVtYmVyRmllbGRLZXlwcmVzcxAK",
-            "Ei8KK0VudGl0eU1lbWJlckZpZWxkX0VudGl0eU1lbWJlckZpZWxkUGxheUFu",
-            "aW0QCxIyCi5FbnRpdHlNZW1iZXJGaWVsZF9FbnRpdHlNZW1iZXJGaWVsZFNj",
-            "ZW5lRWZmZWN0EAwSMAosRW50aXR5TWVtYmVyRmllbGRfRW50aXR5TWVtYmVy",
-            "RmllbGRQbGF5RW1vamkQDWIGcHJvdG8z"));
+            "ChplbnRpdHlfcHJvZmlsZV9maWVsZC5wcm90bxILTWVsYW5kR2FtZTMiOwoO",
+            "RW50aXR5R3VpZGFuY2USEQoJbmVlZF9zaG93GAEgASgIEhYKDmd1aWRhbmNl",
+            "X2luZGV4GAIgASgJIooBCgpNZW1iZXJEYXRhEjAKCGZpZWxkX2lkGAEgASgO",
+            "Mh4uTWVsYW5kR2FtZTMuRW50aXR5TWVtYmVyRmllbGQSDQoFdmFsdWUYAiAB",
+            "KAUSCwoDc3RyGAMgASgJEgwKBGZsYWcYBCABKAgSDwoHaW50X2FychgFIAMo",
+            "BRIPCgdzdHJfYXJyGAYgAygJKvoCChtFbnRpdHlQcm9maWxlVXBkYXRlVHJp",
+            "Z2dlcnMSQgo+RW50aXR5UHJvZmlsZVVwZGF0ZVRyaWdnZXJzX0VudGl0eVBy",
+            "b2ZpbGVVcGRhdGVUcmlnZ2Vyc1VuS25vd24QABJDCj9FbnRpdHlQcm9maWxl",
+            "VXBkYXRlVHJpZ2dlcnNfRW50aXR5UHJvZmlsZVVwZGF0ZVRyaWdnZXJzQmVB",
+            "dHRhY2sQARJHCkNFbnRpdHlQcm9maWxlVXBkYXRlVHJpZ2dlcnNfRW50aXR5",
+            "UHJvZmlsZVVwZGF0ZVRyaWdnZXJzVXNDb25zdW1hYmxlEAISSApERW50aXR5",
+            "UHJvZmlsZVVwZGF0ZVRyaWdnZXJzX0VudGl0eVByb2ZpbGVVcGRhdGVUcmln",
+            "Z2Vyc0F1dG9SZWNvdmVySHAQAxI/CjtFbnRpdHlQcm9maWxlVXBkYXRlVHJp",
+            "Z2dlcnNfRW50aXR5UHJvZmlsZVVwZGF0ZVRyaWdnZXJzQnVmZhAEKuIGChJF",
+            "bnRpdHlQcm9maWxlRmllbGQSMAosRW50aXR5UHJvZmlsZUZpZWxkX0VudGl0",
+            "eVByb2ZpbGVGaWVsZFVuS25vd24QABIrCidFbnRpdHlQcm9maWxlRmllbGRf",
+            "RW50aXR5UHJvZmlsZUZpZWxkTHYQARIsCihFbnRpdHlQcm9maWxlRmllbGRf",
+            "RW50aXR5UHJvZmlsZUZpZWxkRXhwEAISLAooRW50aXR5UHJvZmlsZUZpZWxk",
+            "X0VudGl0eVByb2ZpbGVGaWVsZEF0dBADEjEKLUVudGl0eVByb2ZpbGVGaWVs",
+            "ZF9FbnRpdHlQcm9maWxlRmllbGRBdHRTcGVlZBAEEiwKKEVudGl0eVByb2Zp",
+            "bGVGaWVsZF9FbnRpdHlQcm9maWxlRmllbGREZWYQBRIwCixFbnRpdHlQcm9m",
+            "aWxlRmllbGRfRW50aXR5UHJvZmlsZUZpZWxkSHBMaW1pdBAGEjEKLUVudGl0",
+            "eVByb2ZpbGVGaWVsZF9FbnRpdHlQcm9maWxlRmllbGRDcml0UmF0ZRAHEjMK",
+            "L0VudGl0eVByb2ZpbGVGaWVsZF9FbnRpdHlQcm9maWxlRmllbGRDcml0RGFt",
+            "YWdlEAgSMAosRW50aXR5UHJvZmlsZUZpZWxkX0VudGl0eVByb2ZpbGVGaWVs",
+            "ZEhpdFJhdGUQCRIxCi1FbnRpdHlQcm9maWxlRmllbGRfRW50aXR5UHJvZmls",
+            "ZUZpZWxkTWlzc1JhdGUQChIyCi5FbnRpdHlQcm9maWxlRmllbGRfRW50aXR5",
+            "UHJvZmlsZUZpZWxkTW92ZVNwZWVkEAsSMAosRW50aXR5UHJvZmlsZUZpZWxk",
+            "X0VudGl0eVByb2ZpbGVGaWVsZFB1c2hEbWcQDBIxCi1FbnRpdHlQcm9maWxl",
+            "RmllbGRfRW50aXR5UHJvZmlsZUZpZWxkUHVzaERpc3QQDRIyCi5FbnRpdHlQ",
+            "cm9maWxlRmllbGRfRW50aXR5UHJvZmlsZUZpZWxkSHBDdXJyZW50EA4SLwor",
+            "RW50aXR5UHJvZmlsZUZpZWxkX0VudGl0eVByb2ZpbGVGaWVsZFJlbmFtZRAP",
+            "EjMKL0VudGl0eVByb2ZpbGVGaWVsZF9FbnRpdHlQcm9maWxlRmllbGRIcFJl",
+            "Y292ZXJ5EBAq3AQKEUVudGl0eU1lbWJlckZpZWxkEiwKKEVudGl0eU1lbWJl",
+            "ckZpZWxkX0VudGl0eU1lbWJlckZpZWxkRnJhbWUQABIvCitFbnRpdHlNZW1i",
+            "ZXJGaWVsZF9FbnRpdHlNZW1iZXJGaWVsZFN0YW1wZWRlEAESLQopRW50aXR5",
+            "TWVtYmVyRmllbGRfRW50aXR5TWVtYmVyRmllbGRMb2NrZXIQAxItCilFbnRp",
+            "dHlNZW1iZXJGaWVsZF9FbnRpdHlNZW1iZXJGaWVsZElzSGlkZRAEEjEKLUVu",
+            "dGl0eU1lbWJlckZpZWxkX0VudGl0eU1lbWJlckZpZWxkQ2FuRGVzdHJveRAG",
+            "Ei8KK0VudGl0eU1lbWJlckZpZWxkX0VudGl0eU1lbWJlckZpZWxkR3VpZGFu",
+            "Y2UQBxIuCipFbnRpdHlNZW1iZXJGaWVsZF9FbnRpdHlNZW1iZXJGaWVsZEdv",
+            "ZFZpZXcQCBIuCipFbnRpdHlNZW1iZXJGaWVsZF9FbnRpdHlNZW1iZXJGaWVs",
+            "ZFdhbGtEaXIQCRIvCitFbnRpdHlNZW1iZXJGaWVsZF9FbnRpdHlNZW1iZXJG",
+            "aWVsZEtleXByZXNzEAoSLworRW50aXR5TWVtYmVyRmllbGRfRW50aXR5TWVt",
+            "YmVyRmllbGRQbGF5QW5pbRALEjIKLkVudGl0eU1lbWJlckZpZWxkX0VudGl0",
+            "eU1lbWJlckZpZWxkU2NlbmVFZmZlY3QQDBIwCixFbnRpdHlNZW1iZXJGaWVs",
+            "ZF9FbnRpdHlNZW1iZXJGaWVsZFBsYXlFbW9qaRANYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.EntityProfileUpdateTriggers), typeof(global::Bian.EntityProfileField), typeof(global::Bian.EntityMemberField), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityGuidance), global::Bian.EntityGuidance.Parser, new[]{ "NeedShow", "GuidanceIndex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MemberData), global::Bian.MemberData.Parser, new[]{ "FieldId", "Value", "Str", "Flag", "IntArr", "StrArr" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.EntityProfileUpdateTriggers), typeof(global::MelandGame3.EntityProfileField), typeof(global::MelandGame3.EntityMemberField), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityGuidance), global::MelandGame3.EntityGuidance.Parser, new[]{ "NeedShow", "GuidanceIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MemberData), global::MelandGame3.MemberData.Parser, new[]{ "FieldId", "Value", "Str", "Flag", "IntArr", "StrArr" }, null, null, null, null)
           }));
     }
     #endregion
@@ -178,7 +178,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.EntityProfileFieldReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.EntityProfileFieldReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -404,7 +404,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.EntityProfileFieldReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.EntityProfileFieldReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -441,10 +441,10 @@ namespace Bian {
 
     /// <summary>Field number for the "field_id" field.</summary>
     public const int FieldIdFieldNumber = 1;
-    private global::Bian.EntityMemberField fieldId_ = global::Bian.EntityMemberField.EntityMemberFieldFrame;
+    private global::MelandGame3.EntityMemberField fieldId_ = global::MelandGame3.EntityMemberField.EntityMemberFieldFrame;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.EntityMemberField FieldId {
+    public global::MelandGame3.EntityMemberField FieldId {
       get { return fieldId_; }
       set {
         fieldId_ = value;
@@ -537,7 +537,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FieldId != global::Bian.EntityMemberField.EntityMemberFieldFrame) hash ^= FieldId.GetHashCode();
+      if (FieldId != global::MelandGame3.EntityMemberField.EntityMemberFieldFrame) hash ^= FieldId.GetHashCode();
       if (Value != 0) hash ^= Value.GetHashCode();
       if (Str.Length != 0) hash ^= Str.GetHashCode();
       if (Flag != false) hash ^= Flag.GetHashCode();
@@ -561,7 +561,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FieldId != global::Bian.EntityMemberField.EntityMemberFieldFrame) {
+      if (FieldId != global::MelandGame3.EntityMemberField.EntityMemberFieldFrame) {
         output.WriteRawTag(8);
         output.WriteEnum((int) FieldId);
       }
@@ -589,7 +589,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FieldId != global::Bian.EntityMemberField.EntityMemberFieldFrame) {
+      if (FieldId != global::MelandGame3.EntityMemberField.EntityMemberFieldFrame) {
         output.WriteRawTag(8);
         output.WriteEnum((int) FieldId);
       }
@@ -617,7 +617,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FieldId != global::Bian.EntityMemberField.EntityMemberFieldFrame) {
+      if (FieldId != global::MelandGame3.EntityMemberField.EntityMemberFieldFrame) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FieldId);
       }
       if (Value != 0) {
@@ -643,7 +643,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.FieldId != global::Bian.EntityMemberField.EntityMemberFieldFrame) {
+      if (other.FieldId != global::MelandGame3.EntityMemberField.EntityMemberFieldFrame) {
         FieldId = other.FieldId;
       }
       if (other.Value != 0) {
@@ -673,7 +673,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            FieldId = (global::Bian.EntityMemberField) input.ReadEnum();
+            FieldId = (global::MelandGame3.EntityMemberField) input.ReadEnum();
             break;
           }
           case 16: {
@@ -713,7 +713,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            FieldId = (global::Bian.EntityMemberField) input.ReadEnum();
+            FieldId = (global::MelandGame3.EntityMemberField) input.ReadEnum();
             break;
           }
           case 16: {

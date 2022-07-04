@@ -47,6 +47,9 @@ namespace Vuplex.WebView {
 
         /// <summary>
         /// Brings the native webview to the front of the view hierarchy.
+        /// A webview is automatically placed in the front when it's created,
+        /// but this method can be used to control which webview is in front
+        /// if your scene contains multiple 2D webviews.
         /// </summary>
         /// <remarks>
         /// This method is currently only implemented for Android and iOS.

@@ -18,7 +18,7 @@ namespace Vuplex.WebView {
     /// include that the 3D WebView plugin for the platform isn't installed
     /// or that you're using an expired trial version of the asset.
     /// </summary>
-    class WebViewUnavailableException : System.Exception {
+    public class WebViewUnavailableException : System.Exception {
 
         public WebViewUnavailableException(string message) : base(message) {}
     }

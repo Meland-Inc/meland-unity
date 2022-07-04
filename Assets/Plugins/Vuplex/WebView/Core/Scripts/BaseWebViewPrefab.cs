@@ -71,6 +71,14 @@ namespace Vuplex.WebView {
         public string InitialUrl;
 
         /// <summary>
+        /// Sets the webview's pixel density (Windows and macOS only).
+        /// </summary>
+        /// <remarks>
+        [Label("Pixel Density (Windows and macOS only)")]
+        [Tooltip("(Windows and macOS only) Sets the webview's pixel density.")]
+        public float PixelDensity = 1;
+
+        /// <summary>
         /// Determines how the prefab handles drag interactions.
         /// </summary>
         /// <remarks>
@@ -312,6 +320,7 @@ namespace Vuplex.WebView {
         // Used for DragMode.DragToScroll and DragMode.Disabled
         bool _clickIsPending;
         bool _consoleMessageLoggedHandlerAttached;
+        bool _dragThresholdReached;
         int _heightInPixels { get { return (int)(_sizeInUnityUnits.y * _appliedResolution); }}
         bool _loggedDragWarning;
         static bool _loggedHoverWarning;
@@ -502,6 +511,8 @@ namespace Vuplex.WebView {
                 return _webViewForInitialization;
             }
             var webView = Web.CreateWebView(_options.preferredPlugins);
+
+            // Enable Native 2D Mode if needed.
             var enableNative2DMode = preferNative2DMode && webView is IWithNative2DMode;
             if (enableNative2DMode) {
                 var native2DWebView = webView as IWithNative2DMode;
@@ -510,6 +521,8 @@ namespace Vuplex.WebView {
                 native2DWebView.SetVisible(_view.Visible);
                 return webView;
             }
+
+            _updatePixelDensityIfNeeded(webView);
 
             // (iOS only) Enable fallback video if needed.
             var webViewWithFallbackVideo = webView as IWithFallbackVideo;
@@ -547,7 +560,11 @@ namespace Vuplex.WebView {
             _pointerInputDetector.Scrolled += InputDetector_Scrolled;
         }
 
-        void InputDetector_BeganDrag(object sender, EventArgs<Vector2> eventArgs) => _previousNormalizedDragPoint = _pointerDownNormalizedPoint;
+        void InputDetector_BeganDrag(object sender, EventArgs<Vector2> eventArgs) {
+
+            _dragThresholdReached = false;
+            _previousNormalizedDragPoint = _pointerDownNormalizedPoint;
+        }
 
         void InputDetector_Dragged(object sender, EventArgs<Vector2> eventArgs) {
 
@@ -558,23 +575,24 @@ namespace Vuplex.WebView {
             var previousNormalizedDragPoint = _previousNormalizedDragPoint;
             _previousNormalizedDragPoint = newNormalizedDragPoint;
             var totalDragDeltaInPixels = _convertNormalizedToPixels(_pointerDownNormalizedPoint - newNormalizedDragPoint);
-            var dragThresholdReached = totalDragDeltaInPixels.magnitude > DragThreshold;
-
+            if (!_dragThresholdReached) {
+                // _dragThresholdReached needs to be saved, otherwise it could flip from true back
+                // to false if the user drags back to the original point where the drag started.
+                _dragThresholdReached = totalDragDeltaInPixels.magnitude > DragThreshold;
+            }
             if (DragMode == DragMode.DragWithinPage) {
-                if (dragThresholdReached) {
+                if (_dragThresholdReached) {
                     _movePointerIfNeeded(newNormalizedDragPoint);
                 }
                 return;
             }
-
             // DragMode is DragToScroll
             var normalizedDragDelta = previousNormalizedDragPoint - newNormalizedDragPoint;
             _scrollIfNeeded(normalizedDragDelta, _pointerDownNormalizedPoint);
-
             // Check whether to cancel a pending viewport click so that drag-to-scroll
             // doesn't unintentionally trigger a click.
             if (_clickIsPending) {
-                if (dragThresholdReached) {
+                if (_dragThresholdReached) {
                     _clickIsPending = false;
                 }
             }
@@ -674,7 +692,7 @@ namespace Vuplex.WebView {
 
         bool _native2DModeEnabled(IWebView webView) => webView is IWithNative2DMode && (webView as IWithNative2DMode).Native2DModeEnabled;
 
-        void OnDestroy() {
+        protected virtual void OnDestroy() {
 
             if (WebView != null && !WebView.IsDisposed) {
                 WebView.Dispose();
@@ -694,11 +712,7 @@ namespace Vuplex.WebView {
 
         protected void _resizeWebViewIfNeeded() {
 
-            if (WebView == null) {
-                return;
-            }
-            var resizeNeeded = WebView.Size != new Vector2(_widthInPixels, _heightInPixels);
-            if (WebView != null) {
+            if (WebView != null && WebView.Size != new Vector2(_widthInPixels, _heightInPixels)) {
                 WebView.Resize(_widthInPixels, _heightInPixels);
             }
         }
@@ -745,13 +759,28 @@ namespace Vuplex.WebView {
             }
         }
 
-        virtual protected void Update() {
+        protected virtual void Update() {
 
             _updateResolutionIfNeeded();
+            _updatePixelDensityIfNeeded(WebView);
             // Check if LogConsoleMessages is changed from false to true at runtime.
             if (LogConsoleMessages && !_consoleMessageLoggedHandlerAttached && WebView != null) {
                 _consoleMessageLoggedHandlerAttached = true;
                 WebView.ConsoleMessageLogged += WebView_ConsoleMessageLogged;
+            }
+        }
+
+        void _updatePixelDensityIfNeeded(IWebView webView) {
+
+            var webViewWithPixelDensity = webView as IWithPixelDensity;
+            if (webViewWithPixelDensity == null || PixelDensity == webViewWithPixelDensity.PixelDensity) {
+                return;
+            }
+            try {
+                webViewWithPixelDensity.SetPixelDensity(PixelDensity);
+            } catch (ArgumentException ex) {
+                WebViewLogger.LogError(ex.ToString());
+                PixelDensity = 1;
             }
         }
 

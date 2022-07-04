@@ -22,7 +22,7 @@ namespace Vuplex.WebView {
     /// <code>
     /// await webViewPrefab.WaitUntilInitialized();
     /// var webViewWithUserAgent = webViewPrefab.WebView as IWithSettableUserAgent;
-    /// if (webViewWithUserAgent) {
+    /// if (webViewWithUserAgent != null) {
     ///     // Set a flag indicating a mobile User-Agent.
     ///     webViewWithUserAgent.SetUserAgent(true);
     ///     // OR set a custom User-Agent string.

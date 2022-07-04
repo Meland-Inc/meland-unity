@@ -22,7 +22,7 @@ using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView.Editor {
 
-    static class EditorUtils {
+    public static class EditorUtils {
 
         public static void AssertThatOculusLowOverheadModeIsDisabled() {
 

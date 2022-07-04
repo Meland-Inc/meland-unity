@@ -3,7 +3,7 @@
 /// </summary>
 public class SceneElementAssembleLogic : IEntityTypeAssembleLogic
 {
-    public void AssembleSceneEntity(SceneEntity entity, Bian.EntityType entityType)
+    public void AssembleSceneEntity(SceneEntity entity, MelandGame3.EntityType entityType)
     {
         _ = entity.AddComponent<SceneElementSvrDataProcess>();
     }

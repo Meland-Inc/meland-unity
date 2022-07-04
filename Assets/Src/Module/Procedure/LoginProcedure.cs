@@ -73,7 +73,7 @@ public class LoginProcedure : ProcedureBase
         Login.CloseCreateRoleForm();
     }
 
-    private void OnSignPlayer(Bian.SigninPlayerResponse rsp)
+    private void OnSigninPlayerSuccess(MelandGame3.SigninPlayerResponse rsp)
     {
         MLog.Info(eLogTag.login, "on signin player success,start to enter map");
         _signalSigninPlayerSuccess = true;

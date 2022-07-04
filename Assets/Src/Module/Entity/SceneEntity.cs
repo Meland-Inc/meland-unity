@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
-using Bian;
+using MelandGame3;
 
 /// <summary>
 /// 场景实体 和服务器对应的实体逻辑

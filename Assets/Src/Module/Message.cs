@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Bian;
+using MelandGame3;
 using UnityEngine;
 
 public static class Message
@@ -15,6 +15,13 @@ public static class Message
     /// 回复了地图进入成功
     /// </summary>
     public static Action<EnterMapResponse> RspMapEnterFinish = delegate { };
+
+    #endregion
+
+    #region  登陆
+
+    public static Action<GetPlayerHttpRsp> GetPlayerSuccess = delegate { };
+    public static Action<MelandGame3.SigninPlayerResponse> SigninPlayerSuccess = delegate { };
 
     #endregion
 

@@ -12,7 +12,7 @@ using UnityEngine;
 
 public class TerritoryPlayerAreaData : IReference
 {
-    public Bian.BigWorldPlayerArea SvrData { get; private set; }
+    public MelandGame3.BigWorldPlayerArea SvrData { get; private set; }
     public int MapId { get; private set; }     //地图ID
     public string OwnerId { get; private set; }    //玩家ID
     public string OwnerName { get; private set; }   //玩家名字
@@ -29,13 +29,13 @@ public class TerritoryPlayerAreaData : IReference
         OccupiedLands = new();
         ChallengeTileMap = new();
     }
-    public static TerritoryPlayerAreaData Create(Bian.BigWorldPlayerArea svrData)
+    public static TerritoryPlayerAreaData Create(MelandGame3.BigWorldPlayerArea svrData)
     {
         TerritoryPlayerAreaData data = ReferencePool.Acquire<TerritoryPlayerAreaData>();
         data.SetData(svrData);
         return data;
     }
-    public void SetData(Bian.BigWorldPlayerArea svrData)
+    public void SetData(MelandGame3.BigWorldPlayerArea svrData)
     {
         SvrData = svrData;
         MapId = svrData.MapId;

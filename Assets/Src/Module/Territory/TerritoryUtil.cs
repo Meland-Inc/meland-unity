@@ -29,7 +29,7 @@ public static class TerritoryUtil
         return offset;
     }
 
-    public static void HandleAddRemoveTerritoryGrid(RepeatedField<Bian.BigWorldTile> adds, RepeatedField<int> dels)
+    public static void HandleAddRemoveTerritoryGrid(RepeatedField<MelandGame3.BigWorldTile> adds, RepeatedField<int> dels)
     {
         List<ulong> addList = new();
         List<ulong> delList = new();
@@ -59,7 +59,7 @@ public static class TerritoryUtil
         Message.UpdateTerritoryGridDataList?.Invoke(addList, delList);
     }
 
-    public static void HandleAddRemoveTerritoryPlayerArea(RepeatedField<Bian.BigWorldPlayerArea> adds, RepeatedField<string> dels)
+    public static void HandleAddRemoveTerritoryPlayerArea(RepeatedField<MelandGame3.BigWorldPlayerArea> adds, RepeatedField<string> dels)
     {
         if (dels != null && dels.Count > 0)
         {

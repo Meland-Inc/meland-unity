@@ -2,11 +2,11 @@ using System;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-public class SigninPlayerAction : GameChannelNetMsgRActionBase<Bian.SigninPlayerRequest, Bian.SigninPlayerResponse>
+public class SigninPlayerAction : GameChannelNetMsgRActionBase<MelandGame3.SigninPlayerRequest, MelandGame3.SigninPlayerResponse>
 {
     public static void Req(string playerID)
     {
-        Bian.SigninPlayerRequest req = GenerateReq();
+        MelandGame3.SigninPlayerRequest req = GenerateReq();
         req.PlayerId = playerID;
         req.ClientTime = Convert.ToInt32(Time.time);
         req.IsDeveloper = true;
@@ -19,12 +19,12 @@ public class SigninPlayerAction : GameChannelNetMsgRActionBase<Bian.SigninPlayer
         return "SigninPlayerRequest";
     }
 
-    protected override Bian.EnvelopeType GetEnvelopeType()
+    protected override MelandGame3.EnvelopeType GetEnvelopeType()
     {
-        return Bian.EnvelopeType.SigninPlayer;
+        return MelandGame3.EnvelopeType.SigninPlayer;
     }
 
-    protected override bool Receive(int errorCode, string errorMsg, Bian.SigninPlayerResponse rsp, Bian.SigninPlayerRequest req)
+    protected override bool Receive(int errorCode, string errorMsg, MelandGame3.SigninPlayerResponse rsp, MelandGame3.SigninPlayerRequest req)
     {
         BasicModule.Login.OnSignPlayer(rsp);
         return true;

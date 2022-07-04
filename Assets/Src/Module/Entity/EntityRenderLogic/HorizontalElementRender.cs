@@ -22,7 +22,6 @@ public class HorizontalElementRender : SceneEntityRenderBase
     {
         UnloadTexture();
 
-        gameObject.SetActive(false);
         _renderData = null;
 
         transform.localScale = new Vector3(1, transform.localScale.y, 1);

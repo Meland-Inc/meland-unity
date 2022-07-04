@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-25 14:56:28.748
+// 生成时间：2022-07-04 17:14:18.938
 //------------------------------------------------------------
 
 using GameFramework;
@@ -25,8 +25,16 @@ public class DRTask : DataRowBase
     public override int Id => _id;
 
     /// <summary>
-  /**获取任务名称
-最多五个字。*/
+  /**获取任务等级。*/
+    /// </summary>
+    public int Level
+    {
+        get;
+        private set;
+    }
+
+    /// <summary>
+  /**获取任务名。*/
     /// </summary>
     public string Name
     {
@@ -37,26 +45,23 @@ public class DRTask : DataRowBase
     /// <summary>
   /**获取任务描述。*/
     /// </summary>
-    public string[] Description
+    public string Decs
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取任务简述。*/
+  /**获取任务链体系。*/
     /// </summary>
-    public string[] ShortDescription
+    public int[] SubSystem
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取任务类型
-1.基础任务
-2.banner任务
-3.上课任务。*/
+  /**获取任务类型。*/
     /// </summary>
     public int Type
     {
@@ -65,110 +70,90 @@ public class DRTask : DataRowBase
     }
 
     /// <summary>
-  /**获取完成需求条件
-1.默认完成
-2.建造
-3.对话
-4.获取物品
-5.合成
-6.打怪
-7.采集
-8.扣除物品
-9.探索区域
-10.达成等级
-11.达成神庙等级
-12.代码块使用
-13.养殖(暂不做)
-14.种植(暂不做)。*/
+  /**获取道具需求。*/
     /// </summary>
-    public int[] FinishTargetType
+    public int[][] Item
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取完成需求ID
-1.默认完成-不需要配
-2.建造-配置EntityID
-3.对话-不用配置，不能配空
-4.获取物品-配置需要获取的ItemID
-5.合成-配置需要合成的ItemID
-6.打怪-配置击杀的MonsterID
-7.采集-配置需要击杀的EntityMaterialID
-8.扣除物品-扣除物品的itemID
-9.区域-配置方式不确定
-10.达成等级-不配置，完成数量配置等级
-11.配置神庙TemplateDungeonsID
-12.配置CodeblockID
-13.配置MonsterID
-14.配置MateriallID
-。*/
+  /**获取使用道具。*/
     /// </summary>
-    public int[] FinishTargetId
+    public int[][] UseItem
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取完成需求数量。*/
+  /**获取怪物需求。*/
     /// </summary>
-    public int[] FinishTargetCont
+    public int[][] Monster
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取任务奖励。*/
+  /**获取坐标需求。*/
     /// </summary>
-    public int RewardId
+    public int[][] MoveTo
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取任务是否自动交付。*/
+  /**获取quiz需求。*/
     /// </summary>
-    public bool IsAutoFinish
+    public int[][] Quiz
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取任务可接等级。*/
+  /**获取地块需求。*/
     /// </summary>
-    public int StartPlayerLevel
+    public int RequestLand
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取前置任务ID。*/
+  /**获取任务道具奖励。*/
     /// </summary>
-    public int[] PreTaskId
+    public int ItemReward
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取是否循环任务。*/
+  /**获取任务Ditamin奖励。*/
     /// </summary>
-    public bool IsCyclicTasks
+    public int DitaminReward
     {
         get;
         private set;
     }
 
     /// <summary>
-  /**获取指引教案。*/
+  /**获取任务Exp奖励。*/
     /// </summary>
-    public string TeachingPlan
+    public int ExpReward
+    {
+        get;
+        private set;
+    }
+
+    /// <summary>
+  /**获取难度系数（预留）。*/
+    /// </summary>
+    public int Difficulty
     {
         get;
         private set;
@@ -180,19 +165,21 @@ public class DRTask : DataRowBase
 
         int index = 0;
         _id = int.Parse(columnStrings[index++]);
+        Level = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Name = columnStrings[index++];
-        Description = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
-        ShortDescription = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
+        Decs = columnStrings[index++];
+        SubSystem = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         Type = DataTableParseUtil.ParseInt(columnStrings[index++]);
-        FinishTargetType = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
-        FinishTargetId = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
-        FinishTargetCont = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
-        RewardId = DataTableParseUtil.ParseInt(columnStrings[index++]);
-        IsAutoFinish = DataTableParseUtil.ParseBool(columnStrings[index++]);
-        StartPlayerLevel = DataTableParseUtil.ParseInt(columnStrings[index++]);
-        PreTaskId = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
-        IsCyclicTasks = DataTableParseUtil.ParseBool(columnStrings[index++]);
-        TeachingPlan = columnStrings[index++];
+        Item = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        UseItem = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Monster = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        MoveTo = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        Quiz = DataTableParseUtil.ParseArrayList<int>(columnStrings[index++]);
+        RequestLand = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ItemReward = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DitaminReward = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        ExpReward = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Difficulty = DataTableParseUtil.ParseInt(columnStrings[index++]);
 
         return true;
     }
@@ -205,19 +192,21 @@ public class DRTask : DataRowBase
             using (BinaryReader binaryReader = new(memoryStream, Encoding.UTF8))
             {
                 _id = binaryReader.Read7BitEncodedInt32();
+                Level = binaryReader.Read7BitEncodedInt32();
                 Name = binaryReader.ReadString();
-                Description = binaryReader.ReadArray<String>();
-                ShortDescription = binaryReader.ReadArray<String>();
+                Decs = binaryReader.ReadString();
+                SubSystem = binaryReader.ReadArray<Int32>();
                 Type = binaryReader.Read7BitEncodedInt32();
-                FinishTargetType = binaryReader.ReadArray<Int32>();
-                FinishTargetId = binaryReader.ReadArray<Int32>();
-                FinishTargetCont = binaryReader.ReadArray<Int32>();
-                RewardId = binaryReader.Read7BitEncodedInt32();
-                IsAutoFinish = binaryReader.ReadBoolean();
-                StartPlayerLevel = binaryReader.Read7BitEncodedInt32();
-                PreTaskId = binaryReader.ReadArray<Int32>();
-                IsCyclicTasks = binaryReader.ReadBoolean();
-                TeachingPlan = binaryReader.ReadString();
+                Item = binaryReader.ReadArrayList<Int32>();
+                UseItem = binaryReader.ReadArrayList<Int32>();
+                Monster = binaryReader.ReadArrayList<Int32>();
+                MoveTo = binaryReader.ReadArrayList<Int32>();
+                Quiz = binaryReader.ReadArrayList<Int32>();
+                RequestLand = binaryReader.Read7BitEncodedInt32();
+                ItemReward = binaryReader.Read7BitEncodedInt32();
+                DitaminReward = binaryReader.Read7BitEncodedInt32();
+                ExpReward = binaryReader.Read7BitEncodedInt32();
+                Difficulty = binaryReader.Read7BitEncodedInt32();
             }
         }
 

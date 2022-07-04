@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-25 14:56:28.740
+// 生成时间：2022-07-04 17:14:18.922
 //------------------------------------------------------------
 
 using GameFramework;
@@ -37,6 +37,15 @@ public class DRRoleLv : DataRowBase
   /**获取升级经验。*/
     /// </summary>
     public int Exp
+    {
+        get;
+        private set;
+    }
+
+    /// <summary>
+  /**获取死亡惩罚经验。*/
+    /// </summary>
+    public int DeathExpLoss
     {
         get;
         private set;
@@ -140,6 +149,7 @@ public class DRRoleLv : DataRowBase
         _id = int.Parse(columnStrings[index++]);
         Lv = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Exp = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        DeathExpLoss = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Hp = DataTableParseUtil.ParseInt(columnStrings[index++]);
         HpRecovery = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Att = DataTableParseUtil.ParseInt(columnStrings[index++]);
@@ -164,6 +174,7 @@ public class DRRoleLv : DataRowBase
                 _id = binaryReader.Read7BitEncodedInt32();
                 Lv = binaryReader.Read7BitEncodedInt32();
                 Exp = binaryReader.Read7BitEncodedInt32();
+                DeathExpLoss = binaryReader.Read7BitEncodedInt32();
                 Hp = binaryReader.Read7BitEncodedInt32();
                 HpRecovery = binaryReader.Read7BitEncodedInt32();
                 Att = binaryReader.Read7BitEncodedInt32();

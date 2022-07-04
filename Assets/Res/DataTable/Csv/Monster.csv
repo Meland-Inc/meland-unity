@@ -1,4 +1,4 @@
-id,名字,Moster的描述,Moster的Icon1,RoleAssetID,身体大小(半径像素),等级,血量,普通攻击,攻击速度,防御,暴击,暴击伤害,命中,闪避,移动速度,"怪物AI
+id,名字,Moster的描述,Moster的Icon1,RoleAssetID,身体大小(半径像素),等级,击杀经验,血量,普通攻击,攻击速度,防御,暴击,暴击伤害,命中,闪避,移动速度,"怪物AI
 1主动攻击型
 2被动攻击型
 3不攻击型",锁敌范围,脱战距离,击退伤害,击退距离,掉落配置,技能释放序列,不显示在代码块下拉中,建筑背包分类,代码库ID,"类型
@@ -7,12 +7,12 @@ id,名字,Moster的描述,Moster的Icon1,RoleAssetID,身体大小(半径像素),等级,血量,普通
 3用斧头采集的资源
 4不用工具采集的资源
 ",怪物阵营,属性控件
-id,name,desc,icon,roleAssetID,bodyCapacity,lv,hp,att,attSpd,def,critRate,critDmg,hitPoint,missPoint,moveSpeed,attType,lockEnemyRange,combatDist,pushDmg,pushDist,dropId,skillSequence,NoShowCode,objectBagType,codeBlockId,type,camp,attWidget
-int,string,string,string,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int[],bool,int,int,int,int,int
-9900001,Boar,Meland Boar,icon_monster_15,20001,66,1,250,48,100,46,0,0,100,100,370,1,240,1000,80,30,9900001,100007,,5,1004,,1,10003
-9900002,Cucco,Meland Chicken,icon_monster_13,20002,30,1,120,30,90,40,50,500,90,100,350,2,60,600,1,30,9900002,100007,,5,1004,,1,10003
-9900003,Sheep,Meland Sheep,icon_monster_14,20003,42,1,160,30,90,40,50,800,100,100,350,2,60,800,80,30,9900003,100007,,5,1004,,1,10003
-9900004,Bull,Meland Bull,icon_monster_8,20004,55,1,280,39,85,43,50,500,95,100,350,2,60,800,100,30,9900004,100007,,5,1004,,1,10003
-9900005,Barbarian,Meland Barbarian,MV01_bg_animal_01_FerociousSavage_ic,20005,30,1,240,57,110,49,100,500,100,100,320,1,240,1200,120,60,9900005,100007,,5,1004,,1,10003
-9900006,Wolf,Meland Wolf,icon_monster_16,20006,44,1,320,54,120,40,100,1000,120,110,400,1,420,1200,100,60,9900006,100007,,5,1004,,1,10003
-9900007,Tyrannosaurus,Meland Tyrannosaurus,MV01_bg_animal_02_AncientTyrannosaurus_ic,20007,120,1,1000,90,50,60,0,0,100,100,320,1,300,1000,200,30,9900007,100007,,5,1004,,1,10003
+id,name,desc,icon,roleAssetID,bodyCapacity,lv,exp,hp,att,attSpd,def,critRate,critDmg,hitPoint,missPoint,moveSpeed,attType,lockEnemyRange,combatDist,pushDmg,pushDist,dropId,skillSequence,NoShowCode,objectBagType,codeBlockId,type,camp,attWidget
+int,string,string,string,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int[],bool,int,int,int,int,int
+9900001,Boar,Meland Boar,icon_monster_15,20001,66,9,20,250,48,100,46,0,0,100,100,370,1,240,1000,80,30,9900001,100007,,5,1004,,1,10003
+9900002,Cucco,Meland Chicken,icon_monster_13,20002,30,1,5,120,30,90,40,50,500,90,100,350,2,60,600,1,30,9900002,100007,,5,1004,,1,10003
+9900003,Sheep,Meland Sheep,icon_monster_14,20003,42,3,10,160,30,90,40,50,800,100,100,350,2,60,800,80,30,9900003,100007,,5,1004,,1,10003
+9900004,Bull,Meland Bull,icon_monster_8,20004,55,6,15,280,39,85,43,50,500,95,100,350,2,60,800,100,30,9900004,100007,,5,1004,,1,10003
+9900005,Barbarian,Meland Barbarian,MV01_bg_animal_01_FerociousSavage_ic,20005,30,12,25,240,57,110,49,100,500,100,100,320,1,240,1200,120,60,9900005,100007,,5,1004,,1,10003
+9900006,Wolf,Meland Wolf,icon_monster_16,20006,44,15,30,320,54,120,40,100,1000,120,110,400,1,420,1200,100,60,9900006,100007,,5,1004,,1,10003
+9900007,Tyrannosaurus,Meland Tyrannosaurus,MV01_bg_animal_02_AncientTyrannosaurus_ic,20007,120,18,35,1000,90,50,60,0,0,100,100,320,1,300,1000,200,30,9900007,100007,,5,1004,,1,10003

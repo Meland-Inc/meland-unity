@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-05-25 14:56:28.764
+// 生成时间：2022-07-04 17:14:18.981
 //------------------------------------------------------------
 
 public static class DataTableConfig
@@ -20,6 +20,7 @@ public static class DataTableConfig
         "CodeblockPy",
         "Codeblockset",
         "Codetips",
+        "CraftSkill",
         "CreatType",
         "DrawBoardColor",
         "Drop",
@@ -43,6 +44,7 @@ public static class DataTableConfig
         "ItemEatable",
         "Language",
         "LessonMode",
+        "LuaMap",
         "MailTemplate",
         "Map",
         "MapSign",
@@ -53,6 +55,8 @@ public static class DataTableConfig
         "NoviceManual",
         "NoviceNode",
         "NoviceStep",
+        "ObjectInfo",
+        "ObjectState",
         "PaoMaDeng",
         "PlaceableNFTskill",
         "PlayerAreaBuy",
@@ -69,8 +73,13 @@ public static class DataTableConfig
         "RoleLv",
         "Scene",
         "Skill",
+        "SlotLv",
         "Struct",
         "Task",
+        "TaskList",
+        "TaskReward",
+        "TemplateDungeons",
+        "TemplatePass",
         "TextSound",
         "WeakGuide",
         "Weather",

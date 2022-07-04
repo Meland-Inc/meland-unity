@@ -374,11 +374,31 @@ int,string,null,int,string,int,int,int,string,int[],bool,bool,bool,bool,int,int,
 31002112,蓝色钥匙,,7,蓝色钥匙,4,,1,JMG3L43_1_1_02_ic,1,0,0,1,0,7,,,,0,10004,1002,,,0,JMG3L43_1_1_02_ic,
 31002113,红色钥匙,,7,红色钥匙,4,,1,JMG3L43_1_1_03_ic,1,0,0,1,0,7,,,,0,10004,1002,,,0,JMG3L43_1_1_03_ic,
 31002114,橙色钥匙,,7,橙色钥匙,4,,1,JMG3L43_1_1_04_ic,1,0,0,1,0,6,,,,0,10004,1002,,,0,JMG3L43_1_1_04_ic,
-61000001,Grilled Chicken Thigh Blueprint,烤鸡腿配方,6,"For unlocking ""Recipe: Grilled Chicken Thigh""",3,,99,MV01_ca_blueprint_01_grilledChickenThigh,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_01_grilledChickenThigh,1
-61000002,Grilled Chicken Wing Blueprint,烤鸡翅配方,6,"For unlocking ""Recipe: Grilled Chicken Wing""",3,,99,MV01_ca_blueprint_02_grilledChickenWing,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_02_grilledChickenWing,1
-61000003,Roast Chicken Blueprint,烤整鸡配方,6,"For unlocking ""Recipe: Roast Chicken""",3,,99,MV01_ca_blueprint_03_roastChicken,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_03_roastChicken,1
-61000004,Barbecue Blueprint,烤肉配方,6,"For unlocking ""Recipe: Barbecue""",3,,99,MV01_ca_blueprint_04_barbecue,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_04_barbecue,1
-61000005,Recovery Meatball Blueprint,复苏肉丸配方,6,"For unlocking ""Recipe: Recovery Meatball""",3,,99,MV01_ca_blueprint_05_recoveryMeatball,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_05_recoveryMeatball,1
+60000001,武器合成符Lv10,,6,武器合成符Lv10,3,,99,icon_hechengfu_wuqi_0,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000002,武器合成符Lv20,,6,武器合成符Lv20,3,,99,icon_hechengfu_wuqi_1,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000003,武器合成符Lv30,,6,武器合成符Lv30,3,,99,icon_hechengfu_wuqi_2,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000004,武器合成符Lv40,,6,武器合成符Lv40,3,,99,icon_hechengfu_wuqi_3,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000005,武器合成符Lv50,,6,武器合成符Lv50,3,,99,icon_hechengfu_wuqi_4,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000006,武器合成符Lv60,,6,武器合成符Lv60,3,,99,icon_hechengfu_wuqi_5,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000007,武器合成符Lv70,,6,武器合成符Lv70,3,,99,icon_hechengfu_wuqi_6,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000008,武器合成符Lv80,,6,武器合成符Lv80,3,,99,icon_hechengfu_wuqi_7,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000009,武器合成符Lv90,,6,武器合成符Lv90,3,,99,icon_hechengfu_wuqi_8,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000010,武器合成符Lv100,,6,武器合成符Lv100,3,,99,icon_hechengfu_wuqi_9,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000011,装备合成符Lv10,,6,装备合成符Lv10,3,,99,icon_hechengfu_fangju_0,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000012,装备合成符Lv20,,6,装备合成符Lv20,3,,99,icon_hechengfu_fangju_1,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000013,装备合成符Lv30,,6,装备合成符Lv30,3,,99,icon_hechengfu_fangju_2,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000014,装备合成符Lv40,,6,装备合成符Lv40,3,,99,icon_hechengfu_fangju_3,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000015,装备合成符Lv50,,6,装备合成符Lv50,3,,99,icon_hechengfu_fangju_4,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000016,装备合成符Lv60,,6,装备合成符Lv60,3,,99,icon_hechengfu_fangju_5,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000017,装备合成符Lv70,,6,装备合成符Lv70,3,,99,icon_hechengfu_fangju_6,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000018,装备合成符Lv80,,6,装备合成符Lv80,3,,99,icon_hechengfu_fangju_7,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000019,装备合成符Lv90,,6,装备合成符Lv90,3,,99,icon_hechengfu_fangju_8,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+60000020,装备合成符Lv100,,6,装备合成符Lv100,3,,99,icon_hechengfu_fangju_9,1,0,0,1,0,6,,,,0,10004,1002,,,0,Scroll,
+61000001,Grilled Chicken Thigh Blueprint,烤鸡腿配方,6,For unlocking "Recipe: Grilled Chicken Thigh",3,,99,MV01_ca_blueprint_01_grilledChickenThigh,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_01_grilledChickenThigh,1
+61000002,Grilled Chicken Wing Blueprint,烤鸡翅配方,6,For unlocking "Recipe: Grilled Chicken Wing",3,,99,MV01_ca_blueprint_02_grilledChickenWing,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_02_grilledChickenWing,1
+61000003,Roast Chicken Blueprint,烤整鸡配方,6,For unlocking "Recipe: Roast Chicken",3,,99,MV01_ca_blueprint_03_roastChicken,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_03_roastChicken,1
+61000004,Barbecue Blueprint,烤肉配方,6,For unlocking "Recipe: Barbecue",3,,99,MV01_ca_blueprint_04_barbecue,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_04_barbecue,1
+61000005,Recovery Meatball Blueprint,复苏肉丸配方,6,For unlocking "Recipe: Recovery Meatball",3,,99,MV01_ca_blueprint_05_recoveryMeatball,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_05_recoveryMeatball,1
 61000006,Advanced Sheep Horn Dagger Blueprint,2级羊角匕首配方,6,"For unlocking ""Recipe: LV.2 Sheep Horn Dagger"", giving you the chance to synthesize the Enhanced, Advanced, Super and Ultimate Sheep Horn Dagger",3,,99,MV01_ca_blueprint_06_sheepHornDagger,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_06_sheepHornDagger,1
 61000007,Advanced Boar Tusk Dagger Blueprint,2级猪牙匕首配方,6,"For unlocking ""Recipe: LV.2 Boar Tusk Dagger"", giving you the chance to synthesize the Enhanced, Advanced and Super Boar Tusk Dagger",3,,99,MV01_ca_blueprint_07_boarTuskDagger,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_07_boarTuskDagger,1
 61000008,Advanced OX Horn Spear Blueprint,2级牛角矛配方,6,"For unlocking ""Recipe: LV.2 Bull Horn Spear"", giving you the chance to synthesise the Advanced, Super and Ultimate Bull Horn Spear",3,,99,MV01_ca_blueprint_08_oxHornSpear,1,0,0,1,0,6,,,,0,10004,1002,,,0,MV01_ca_blueprint_08_oxHornSpear,1

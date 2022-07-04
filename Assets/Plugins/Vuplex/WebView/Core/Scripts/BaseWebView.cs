@@ -246,8 +246,10 @@ namespace Vuplex.WebView {
 
         public virtual void PostMessage(string message) {
 
-            var escapedString = message.Replace("'", "\\'").Replace("\n", "\\n");
-            ExecuteJavaScript($"vuplex._emit('message', {{ data: \'{escapedString}\' }})");
+            var escapedString = message.Replace("\\", "\\\\")
+                                       .Replace("'", "\\\\'")
+                                       .Replace("\n", "\\\\n");
+            ExecuteJavaScript($"vuplex._emit('message', {{ data: \'{escapedString}\' }})", null);
         }
 
         public virtual void Reload() {
@@ -664,7 +666,8 @@ namespace Vuplex.WebView {
         // Invoked by the native plugin.
         virtual protected void HandleTextureChanged(string textureString) {
 
-            var nativeTexture = new IntPtr(Int64.Parse(textureString));
+            // Use UInt64.Parse() because Int64.Parse() can result in an OverflowException.
+            var nativeTexture = new IntPtr((Int64)UInt64.Parse(textureString));
             if (nativeTexture == _currentNativeTexture) {
                 return;
             }

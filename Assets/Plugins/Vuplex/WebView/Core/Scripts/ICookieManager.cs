@@ -37,8 +37,8 @@ namespace Vuplex.WebView {
         /// <remarks>
         /// Important notes:
         /// <list type="bullet">
-        ///   <item>On Windows and macOS, this method can only be called after one or more webviews have been initialized.</item>
         ///   <item>On Windows and macOS, if this method is called without a `cookieName` it only deletes cookies that were set without an explicit Domain attribute.</item>
+        ///   <item>On versions of iOS older than iOS 11, session cookies are excluded because WKHTTPCookieStore is only supported in iOS 11 and newer.</item>
         /// </list>
         /// </remarks>
         /// <example>
@@ -62,8 +62,8 @@ namespace Vuplex.WebView {
         /// <remarks>
         /// Important notes:
         /// <list type="bullet">
-        ///   <item>On Windows and macOS, this method can only be called after one or more webviews have been initialized.</item>
         ///   <item>On Android, the cookies returned only have their Name and Value fields set, and the other fields are set to their default values.</item>
+        ///   <item>On versions of iOS older than iOS 11, session cookies are excluded because WKHTTPCookieStore is only supported in iOS 11 and newer.</item>
         /// </list>
         /// </remarks>
         /// <example>
@@ -89,9 +89,6 @@ namespace Vuplex.WebView {
         /// If setting the cookie fails, it could be because the data in the provided Cookie
         /// was malformed. For more details regarding a failure, please check the Unity logs.
         /// </summary>
-        /// <remarks>
-        /// On Windows and macOS, this method can only be called after one or more webviews have been initialized.
-        /// </remarks>
         /// <example>
         /// <code>
         /// if (Web.CookieManager == null) {

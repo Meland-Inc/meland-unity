@@ -17,7 +17,7 @@ using UnityEngine;
 
 namespace Vuplex.WebView.Internal {
 
-    interface IWebPlugin {
+    public interface IWebPlugin {
 
         ICookieManager CookieManager { get; }
 

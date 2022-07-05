@@ -21,7 +21,7 @@ public partial class UICenter : GameFrameworkComponent
         //init config
     }
 
-    public int GetFormCacheID<T>() where T : FGUIForm, new()
+    public int GetFormCacheID<T>() where T : FGUIBase, new()
     {
         return GetFormCacheID(typeof(T).Name);
     }
@@ -51,7 +51,7 @@ public partial class UICenter : GameFrameworkComponent
         return _dicFormCacheID.ContainsKey(typeof(T).Name);
     }
 
-    public void SetFormCacheID<T>(int serialID) where T : FGUIForm, new()
+    public void SetFormCacheID<T>(int serialID) where T : FGUIBase, new()
     {
         SetFormCacheID(typeof(T).Name, serialID);
     }
@@ -66,7 +66,7 @@ public partial class UICenter : GameFrameworkComponent
         value.Add(serialID);
     }
 
-    public void RemoveFromCacheID<T>() where T : FGUIForm, new()
+    public void RemoveFromCacheID<T>() where T : FGUIBase, new()
     {
         RemoveFromCacheID(typeof(T).Name);
     }

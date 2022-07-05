@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-07-01 16:20:48
+ * @LastEditTime: 2022-07-05 13:53:20
  * @LastEditors: mangit
  * @Description: UI 工具类
  * @Date: 2022-06-15 16:19:22
@@ -10,7 +10,7 @@ using UnityGameFramework.Runtime;
 
 public partial class UICenter
 {
-    public static string GetFormAsset<T>() where T : FGUIForm, new()
+    public static string GetFormAsset<T>() where T : FGUIBase, new()
     {
         return GetFormAsset(typeof(T).Name);
     }
@@ -20,62 +20,62 @@ public partial class UICenter
         return $"{FORM_ASSET_PREFIX}{formName}.prefab";
     }
 
-    public static int OpenUIForm<T>() where T : FGUIForm, new()
+    public static int OpenUIForm<T>() where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Form, null);
     }
 
-    public static int OpenUIForm<T>(object userData) where T : FGUIForm, new()
+    public static int OpenUIForm<T>(object userData) where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Form, userData);
     }
 
-    public static int OpenUITooltip<T>() where T : FGUIForm, new()
+    public static int OpenUITooltip<T>() where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Tooltip, null);
     }
 
-    public static int OpenUITooltip<T>(object userData) where T : FGUIForm, new()
+    public static int OpenUITooltip<T>(object userData) where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Tooltip, userData);
     }
 
-    public static int OpenUIToast<T>() where T : FGUIForm, new()
+    public static int OpenUIToast<T>() where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Toast, null);
     }
 
-    public static int OpenUIToast<T>(object userData) where T : FGUIForm, new()
+    public static int OpenUIToast<T>(object userData) where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Toast, userData);
     }
 
-    public static int OpenUIAlert<T>() where T : FGUIForm, new()
+    public static int OpenUIAlert<T>() where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Alert, null);
     }
 
-    public static int OpenUIAlert<T>(object userData) where T : FGUIForm, new()
+    public static int OpenUIAlert<T>(object userData) where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Alert, userData);
     }
 
-    public static int OpenUIDialog<T>() where T : FGUIForm, new()
+    public static int OpenUIDialog<T>() where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Dialog, null);
     }
 
-    public static int OpenUIDialog<T>(object userData) where T : FGUIForm, new()
+    public static int OpenUIDialog<T>(object userData) where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Dialog, userData);
     }
 
-    public static int OpenUILog<T>() where T : FGUIForm, new()
+    public static int OpenUILog<T>() where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Log, null);
     }
 
-    public static int OpenUILog<T>(object userData) where T : FGUIForm, new()
+    public static int OpenUILog<T>(object userData) where T : FGUIBase, new()
     {
         return OpenUIForm<T>(eUIGroup.Log, userData);
     }
@@ -89,7 +89,7 @@ public partial class UICenter
     /// <param name="userData">传递给窗体的数据</param>
     /// <typeparam name="T">窗体class</typeparam> 
     /// <returns>int 窗体的序列号</returns>
-    public static int OpenUIForm<T>(eUIGroup group) where T : FGUIForm, new()
+    public static int OpenUIForm<T>(eUIGroup group) where T : FGUIBase, new()
     {
         return OpenUIForm<T>(group, null);
     }
@@ -103,7 +103,7 @@ public partial class UICenter
     /// <param name="userData">传递给窗体的数据</param>
     /// <typeparam name="T">窗体class</typeparam> 
     /// <returns>int 窗体的序列号</returns>
-    public static int OpenUIForm<T>(eUIGroup group, object userData) where T : FGUIForm, new()
+    public static int OpenUIForm<T>(eUIGroup group, object userData) where T : FGUIBase, new()
     {
         string assetName = GetFormAsset<T>();
         if (string.IsNullOrEmpty(assetName))
@@ -141,7 +141,7 @@ public partial class UICenter
     /// </summary>
     /// <param name="uiCom"></param>
     /// <typeparam name="T">窗体class</typeparam>
-    public static void CloseUIForm<T>(bool disposed = false) where T : FGUIForm, new()
+    public static void CloseUIForm<T>(bool disposed = false) where T : FGUIBase, new()
     {
         int serialID = BasicModule.UICenter.GetFormCacheID<T>();
         CloseUIForm(serialID, disposed);
@@ -157,7 +157,7 @@ public partial class UICenter
         GFEntry.UI.CloseUIForm(serialID, disposed);
     }
 
-    public static T GetUIForm<T>() where T : FGUIForm, new()
+    public static T GetUIForm<T>() where T : FGUIBase, new()
     {
         int serialID = BasicModule.UICenter.GetFormCacheID<T>();
         return GFEntry.UI.GetUIForm(serialID) as T;

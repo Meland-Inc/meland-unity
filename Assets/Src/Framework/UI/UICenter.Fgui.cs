@@ -1,6 +1,6 @@
 /*
 * @Author: mangit
- * @LastEditTime: 2022-07-01 19:42:33
+ * @LastEditTime: 2022-07-05 14:08:34
  * @LastEditors: mangit
 * @Description: fairygui 处理中心
 * @Date: 2022-06-16 20:48:53
@@ -13,6 +13,8 @@ using UnityEngine;
 
 public partial class UICenter
 {
+    public static float StageWidth => (float)Stage.inst.width;
+    public static float StageHeight => (float)Stage.inst.height;
     private readonly FguiExtensionCfg[] _extensionCfg = new FguiExtensionCfg[]
     {
         new (eFUIPackage.Backpack, FGUIDefine.NFT_ITEM_RES,typeof( BpNftItemRenderer)),

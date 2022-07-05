@@ -9,10 +9,12 @@ public partial class UICenter : GameFrameworkComponent
     private void Start()
     {
         _dicFormCacheID = new();
+        InitFont();
         InitConfig();
         InitPackage();
         InitFguiExtension();
     }
+
     public static void InitConfig()
     {
         DontDestroyOnLoad(Stage.inst.GetRenderCamera().gameObject);

@@ -8,6 +8,7 @@
 using FairyGUI;
 public class AlertCommon : FGUIBase
 {
+    protected override FitScreen FitScreenMode => FitScreen.FitSize;//弹窗类型，默认适应屏幕大小
     private GButton _btnOK;
     private GTextField _tfTitle;
     private GTextField _tfContent;

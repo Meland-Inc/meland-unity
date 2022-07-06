@@ -13,7 +13,7 @@ public abstract class FGUIBase : UIFormLogic
     protected virtual bool Batching => true;//该界面是否开启批次合并
     protected virtual HitTestMode HitTestMode => HitTestMode.Default;//点击模式
     protected virtual RenderMode RenderMode => RenderMode.ScreenSpaceOverlay;//渲染模式
-    protected virtual FitScreen FitScreenMode => FitScreen.FitSize;
+    protected virtual FitScreen FitScreenMode => FitScreen.None;
 
     /// <summary>
     /// 界面初始化，只会调用一次，和OnDispose成对

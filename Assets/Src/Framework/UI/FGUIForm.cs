@@ -5,6 +5,8 @@ using FairyGUI;
 /// </summary>
 public abstract class FGUIForm : FGUIBase
 {
+    protected override FitScreen FitScreenMode => FitScreen.FitSize;//窗口类型，默认适应屏幕大小
+
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);

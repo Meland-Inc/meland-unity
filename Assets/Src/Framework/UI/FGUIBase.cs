@@ -55,13 +55,13 @@ public abstract class FGUIBase : UIFormLogic
     protected override void OnOpen(object userData)
     {
         base.OnOpen(userData);
+        GCom.onSizeChanged.Add(OnStageResize);
+        CalcFormSorting();
+        OnStageResize();
         ForeachChildrenCpt((FGUILogicCpt cpt) =>
         {
             cpt.OnOpen();
         });
-        OnStageResize();
-        GCom.onSizeChanged.Add(OnStageResize);
-        CalcFormSorting();
     }
 
     protected override void OnClose(bool isShutdown, object userData)

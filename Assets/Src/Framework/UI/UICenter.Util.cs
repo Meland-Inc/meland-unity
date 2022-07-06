@@ -1,6 +1,5 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-07-05 13:53:20
  * @LastEditors: mangit
  * @Description: UI 工具类
  * @Date: 2022-06-15 16:19:22
@@ -112,13 +111,6 @@ public partial class UICenter
             return -1;
         }
 
-        int cacheID = BasicModule.UICenter.CheckFormCacheID(assetName);
-        if (cacheID != -1)
-        {
-            MLog.Warning(eLogTag.ui, "open form repeatedly, formName: " + typeof(T).Name);
-            return cacheID;
-        }
-
         UIComponent uiCom = GFEntry.UI;
         string groupName = group.ToString();
         if (!uiCom.HasUIGroup(groupName))
@@ -132,21 +124,36 @@ public partial class UICenter
         }
 
         int serialID = uiCom.OpenUIForm(assetName, groupName, userData);
-        BasicModule.UICenter.SetFormCacheID<T>(serialID);
         return serialID;
     }
 
     /// <summary>
-    /// 通过窗体class name关闭窗体
+    /// 通过窗体class,会把所有的该类型所有的窗体都关闭
     /// </summary>
     /// <param name="uiCom"></param>
     /// <typeparam name="T">窗体class</typeparam>
     public static void CloseUIForm<T>(bool disposed = false) where T : FGUIBase, new()
     {
-        int serialID = BasicModule.UICenter.GetFormCacheID<T>();
-        CloseUIForm(serialID, disposed);
+        UIComponent uiCom = GFEntry.UI;
+        string assetName = GetFormAsset<T>();
+        UIForm[] forms = uiCom.GetUIForms(assetName);
+        if (forms == null)
+        {
+            MLog.Warning(eLogTag.ui, "form is null,assetName: " + assetName);
+            return;
+        }
+
+        foreach (UIForm form in forms)
+        {
+            uiCom.CloseUIForm(form.SerialId, disposed);
+        }
     }
 
+    /// <summary>
+    /// 通过窗体唯一id关闭窗体
+    /// </summary>
+    /// <param name="serialID"></param>
+    /// <param name="disposed"></param>
     public static void CloseUIForm(int serialID, bool disposed = false)
     {
         if (serialID == -1)
@@ -157,9 +164,33 @@ public partial class UICenter
         GFEntry.UI.CloseUIForm(serialID, disposed);
     }
 
-    public static T GetUIForm<T>() where T : FGUIBase, new()
+    public static T[] GetUIForms<T>() where T : FGUIBase, new()
     {
-        int serialID = BasicModule.UICenter.GetFormCacheID<T>();
-        return GFEntry.UI.GetUIForm(serialID) as T;
+        UIComponent uiCom = GFEntry.UI;
+        UIForm[] forms = uiCom.GetUIForms(GetFormAsset<T>());
+        if (forms == null)
+        {
+            MLog.Error(eLogTag.ui, "form is null,assetName: " + GetFormAsset<T>());
+            return null;
+        }
+
+        T[] uis = new T[forms.Length];
+        for (int i = 0; i < forms.Length; i++)
+        {
+            uis[i] = GetUIForm<T>(forms[i].SerialId);
+        }
+        return uis;
+    }
+
+    public static T GetUIForm<T>(int serialID) where T : FGUIBase, new()
+    {
+        UIComponent uiCom = GFEntry.UI;
+        UIForm form = uiCom.GetUIForm(serialID);
+        if (form == null)
+        {
+            MLog.Error(eLogTag.ui, "form is null,serialID: " + serialID);
+            return null;
+        }
+        return form.Logic as T;
     }
 }

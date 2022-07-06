@@ -1,4 +1,10 @@
-﻿using System.IO;
+﻿/** 
+ * @Author xiangqian
+ * @Description 
+ * @Date 2022-07-06 11:55:33
+ * @FilePath /Assets/Src/Module/Entity/SvrDataProcess/SceneElementSvrDataProcess.cs
+ */
+using System.IO;
 using Bian;
 
 /// <summary>
@@ -21,36 +27,31 @@ public class SceneElementSvrDataProcess : EntitySvrDataProcess
             return;
         }
 
-        //动画物件
-        if (!string.IsNullOrEmpty(dr.AnimeName))
-        {
-            return;
-        }
-
         EntityConfigData configData = gameObject.AddComponent<EntityConfigData>();
         configData.InitEntityConfig(dr);
 
-        EntityRenderTempData data = new()
-        {
-            SceneEntityID = svrEntity.Id,
-            ExtraAsset = null
-        };
+        IEntityRenderData renderData = configData;
 
-        if (dr.AssetType == (int)DREntityDefine.eAssetType.Model3D)
+        if (renderData.AssetType == (int)DREntityDefine.eAssetType.Model3D)
         {
-            GFEntry.Entity.ShowEntity<ModelElementRender>(svrEntity.Id.GetHashCode(), configData.AssetFullPath, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, data);
+            GFEntry.Entity.ShowEntity<ModelElementRender>(svrEntity.Id.GetHashCode(), renderData.AssetFullPath, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, svrEntity.Id);
+        }
+        else if (!string.IsNullOrEmpty(dr.AnimeName))//动画物件
+        {
+            //TODO:没有资源
+            // GFEntry.Entity.ShowEntity<Avatar2DEntityRender>(svrEntity.Id.GetHashCode(), renderData.AssetFullPath, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, svrEntity.Id);
         }
         else
         {
             if (dr.IsHorizontal)
             {
                 string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.HORIZONTAL_ELEMENT_PREFAB_ASSET);
-                GFEntry.Entity.ShowEntity<HorizontalElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, data);
+                GFEntry.Entity.ShowEntity<HorizontalElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, svrEntity.Id);
             }
             else
             {
                 string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.PAPER_ELEMENT_PREFAB_ASSET);
-                GFEntry.Entity.ShowEntity<PaperElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, data);
+                GFEntry.Entity.ShowEntity<PaperElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, svrEntity.Id);
             }
         }
     }

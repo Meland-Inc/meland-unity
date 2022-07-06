@@ -42,7 +42,6 @@ public class SceneEntity
         {
             GameObject prefab = Resources.Load<GameObject>(EntityDefine.MAIN_PLAYER_ROLE_SPECIAL_PREFAB_PATH);
             _root = Object.Instantiate(prefab);
-            Resources.UnloadAsset(prefab);
         }
         else
         {

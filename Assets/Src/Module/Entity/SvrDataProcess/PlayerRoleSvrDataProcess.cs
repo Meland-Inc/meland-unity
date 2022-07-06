@@ -1,3 +1,9 @@
+/** 
+ * @Author xiangqian
+ * @Description 
+ * @Date 2022-07-06 11:55:33
+ * @FilePath /Assets/Src/Module/Entity/SvrDataProcess/PlayerRoleSvrDataProcess.cs
+ */
 using System.IO;
 using Bian;
 using UnityEngine;
@@ -19,11 +25,6 @@ public class PlayerRoleSvrDataProcess : EntitySvrDataProcess
         }
 
         string prefabAsset = Path.Combine(AssetDefine.PATH_ROLE, EntityDefine.PLAYER_ROLE_PREFAB_ASSET);
-        EntityRenderTempData data = new()
-        {
-            SceneEntityID = svrEntity.Id,
-            ExtraAsset = string.Empty
-        };
-        GFEntry.Entity.ShowEntity<PlayerRoleRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.PlayerRole, data);
+        GFEntry.Entity.ShowEntity<Avatar2DEntityRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.PlayerRole, svrEntity.Id);
     }
 }

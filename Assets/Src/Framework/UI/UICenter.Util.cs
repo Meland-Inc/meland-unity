@@ -19,32 +19,32 @@ public partial class UICenter
         return $"{FORM_ASSET_PREFIX}{formName}.prefab";
     }
 
-    public static int OpenUIForm<T>() where T : FGUIBase, new()
+    public static int OpenUIForm<T>() where T : FGUIForm, new()
     {
         return OpenUIForm<T>(eUIGroup.Form, null);
     }
 
-    public static int OpenUIForm<T>(object userData) where T : FGUIBase, new()
+    public static int OpenUIForm<T>(object userData) where T : FGUIForm, new()
     {
         return OpenUIForm<T>(eUIGroup.Form, userData);
     }
 
-    public static int OpenUITooltip<T>() where T : FGUIBase, new()
+    public static int OpenUITooltip<T>() where T : FGUITooltip, new()
     {
         return OpenUIForm<T>(eUIGroup.Tooltip, null);
     }
 
-    public static int OpenUITooltip<T>(object userData) where T : FGUIBase, new()
+    public static int OpenUITooltip<T>(object userData) where T : FGUITooltip, new()
     {
         return OpenUIForm<T>(eUIGroup.Tooltip, userData);
     }
 
-    public static int OpenUIToast<T>() where T : FGUIBase, new()
+    public static int OpenUIToast<T>() where T : FGUIToast, new()
     {
         return OpenUIForm<T>(eUIGroup.Toast, null);
     }
 
-    public static int OpenUIToast<T>(object userData) where T : FGUIBase, new()
+    public static int OpenUIToast<T>(object userData) where T : FGUIToast, new()
     {
         return OpenUIForm<T>(eUIGroup.Toast, userData);
     }

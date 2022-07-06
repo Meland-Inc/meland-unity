@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-21 15:07:54
+ * @LastEditTime: 2022-07-05 14:00:52
  * @LastEditors: mangit
  * @Description: 背包界面
  * @Date: 2022-06-15 11:32:37
@@ -131,7 +131,11 @@ public class FormBackpack : FGUIForm
 
     private void OnItemClick(EventContext context)
     {
-        //todo show tooltip
+        if (context.data is not BpNftItemRenderer item)
+        {
+            return;
+        }
+        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(item, item.ItemData));
     }
 
     private void OnTagClick(EventContext context)

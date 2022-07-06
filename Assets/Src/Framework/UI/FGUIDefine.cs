@@ -8,6 +8,15 @@ public enum eUIGroup
     Log
 }
 
+public enum eTooltipDir
+{
+    Top,
+    Bottom,
+    Left,
+    Right,
+    Auto,
+}
+
 public enum eFUIPackage
 {
     Common,

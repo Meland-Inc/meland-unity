@@ -1,10 +1,10 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-20 11:07:45
+ * @LastEditTime: 2022-07-05 11:34:53
  * @LastEditors: mangit
  * @Description: NFT数据
  * @Date: 2022-06-16 15:21:19
- * @FilePath: /Assets/Src/Module/Backpack/Define/NFTData.cs
+ * @FilePath: /Assets/Src/Module/Backpack/Data/NFTData.cs
  */
 using System;
 namespace NFT
@@ -116,6 +116,37 @@ namespace NFT
 
         // 学习图鉴
         LearnRecipe,
+
+        //创造者
+        Creator,
+
+        //等级
+        Level,
+    }
+
+    public enum eNFTBattleTrait
+    {
+        // NFT 对应的属性加成
+        MaxHP,
+
+        HPRecovery,
+
+        Attack,
+
+        AttackSpeed,
+
+        Defence,
+
+        CritPoints,
+
+        CritDamage,
+
+        HitPoints,
+
+        DodgePoints,
+
+        MoveSpeed,
+        RestoreHP,
     }
 
     public enum eNFTType

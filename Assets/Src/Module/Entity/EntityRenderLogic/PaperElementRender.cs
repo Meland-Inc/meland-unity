@@ -1,4 +1,3 @@
-using System.IO;
 using UnityEngine;
 
 /// <summary>
@@ -6,20 +5,9 @@ using UnityEngine;
 /// </summary>
 public class PaperElementRender : SceneEntityRenderBase
 {
-    public TargetSameDirection TargetSameDirection;
     public SpriteRenderer SpriteRenderer;
-
-    private string _texturePath;
-
-    private void OnBecameVisible()
-    {
-        TargetSameDirection.enabled = true;
-    }
-
-    private void OnBecameInvisible()
-    {
-        TargetSameDirection.enabled = false;
-    }
+    private CameraSameDirection _addedCameraSameDirection;
+    private IEntityRenderData _renderData;
 
     protected override void OnInit(object userData)
     {
@@ -33,10 +21,19 @@ public class PaperElementRender : SceneEntityRenderBase
             return;
         }
 
-        EntityRenderTempData data = userData as EntityRenderTempData;
-        TargetSameDirection.SetTargetTsm(Camera.main.transform);
+        _renderData = RefSceneEntity.GetComponent<IEntityRenderData>();
 
-        _texturePath = Path.Combine(AssetDefine.PATH_SPRITE, data.ExtraAsset + AssetDefine.SUFFIX_TEXTURE);
+        if (_renderData.IsLookCamera)
+        {
+            _addedCameraSameDirection = gameObject.AddComponent<CameraSameDirection>();
+            _addedCameraSameDirection.SetTargetTsm(Camera.main.transform);
+        }
+        else
+        {
+            Vector3 euler = transform.eulerAngles;
+            euler.x = 0;
+            transform.eulerAngles = euler;
+        }
 
         LoadTexture();
     }
@@ -45,19 +42,33 @@ public class PaperElementRender : SceneEntityRenderBase
     {
         UnloadTexture();
 
-        _texturePath = default;
+        if (_addedCameraSameDirection != null)
+        {
+            Destroy(_addedCameraSameDirection);
+            _addedCameraSameDirection = null;
+        }
+
+        _renderData = null;
+
         base.OnRecycle();
     }
 
     private async void LoadTexture()
     {
-        Sprite sprite = await BasicModule.Asset.LoadAsset<Sprite>(_texturePath, GetHashCode());
-        SpriteRenderer.sprite = sprite;
+        try
+        {
+            Sprite sprite = await BasicModule.Asset.LoadAsset<Sprite>(_renderData.AssetFullPath, GetHashCode());
+            SpriteRenderer.sprite = sprite;
+        }
+        catch (AssetLoadException e)
+        {
+            MLog.Error(eLogTag.asset, $"PaperElementRender laod error ={SceneEntityID} error={e}");
+        }
     }
 
     private void UnloadTexture()
     {
-        BasicModule.Asset.UnloadAsset<Sprite>(_texturePath, GetHashCode());
+        BasicModule.Asset.UnloadAsset<Sprite>(_renderData.AssetFullPath, GetHashCode());
         SpriteRenderer.sprite = null;
     }
 }

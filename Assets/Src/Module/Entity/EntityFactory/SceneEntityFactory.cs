@@ -48,7 +48,7 @@ public static class SceneEntityFactory
         entity.SetRootName($"mainPlayerRole_{entityID}");
 
         //主角特殊逻辑
-        entity.Root.AddComponent<MoveNetRequest>().enabled = false;
+        entity.AddComponent<MoveNetRequest>().enabled = false;
         return entity;
     }
 }

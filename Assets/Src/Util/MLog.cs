@@ -21,6 +21,7 @@ public enum eLogTag
     resource,
     createRole,
     backpack,
+    dr,//dr配置表
 }
 
 /// <summary>

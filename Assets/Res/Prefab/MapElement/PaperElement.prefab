@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3234540156842977924}
   - component: {fileID: 9036551702492315362}
-  - component: {fileID: 8862178093707908436}
   - component: {fileID: 3734048982232571771}
   - component: {fileID: 6329249032489310052}
   m_Layer: 0
-  m_Name: PaperSceneElement
+  m_Name: PaperElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &8862178093707908436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065916042186049349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4d8f8677a1f48f9904b2386af46575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTsm: {fileID: 0}
-  IsNeedAutoInitAfterStart: 0
 --- !u!114 &3734048982232571771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba05bf1457330470c9413eb31ce2bc3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSameDirection: {fileID: 8862178093707908436}
+  TargetSameDirection: {fileID: 0}
   SpriteRenderer: {fileID: 9036551702492315362}
 --- !u!114 &6329249032489310052
 MonoBehaviour:

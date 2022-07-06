@@ -5,7 +5,7 @@ public class MonsterAssembleLogic : IEntityTypeAssembleLogic
 {
     public void AssembleSceneEntity(SceneEntity entity, Bian.EntityType entityType)
     {
-        _ = entity.Root.AddComponent<NetInputMove>();
+        _ = entity.AddComponent<NetInputMove>();
 
     }
 }

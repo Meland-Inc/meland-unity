@@ -7,3 +7,7 @@
 	path = Assets/Thirdparty/Fairygui
 	url = https://github.com/Meland-Inc/FairyGUI-unity.git
 	branch = meland-main
+[submodule "Assets/Plugins/SharedCore"]
+	path = Assets/Plugins/SharedCore
+	url = https://github.com/Meland-Inc/meland-shared_unity_core.git
+	branch = main

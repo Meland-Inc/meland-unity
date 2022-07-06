@@ -25,6 +25,7 @@ meland client main project make by unity
 
 - [meland fork of GF](https://github.com/Meland-Inc/GameFramework)
 - [meland fork of UGF](https://github.com/Meland-Inc/UnityGameFramework)
+- [meland sharded core](https://github.com/Meland-Inc/meland-shared_unity_core)
 
 ---
 

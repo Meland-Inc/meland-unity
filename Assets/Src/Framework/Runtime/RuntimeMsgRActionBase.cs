@@ -1,23 +1,27 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:03:58
- * @LastEditTime: 2022-06-06 17:17:11
- * @LastEditors: xiang huan
+ * @LastEditTime: 2022-07-07 10:18:03
+ * @LastEditors: mangit
  * @Description: 请求类aciton
- * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimeMsgRActionBase.cs
+ * @FilePath: /Assets/Src/Framework/Runtime/RuntimeMsgRActionBase.cs
  * 
  */
+using System;
 using GameFramework.Network;
 using UnityEngine;
 
 public abstract class RuntimeMsgRActionBase<TReq, TRsp> : RuntimeMsgTActionBase<TRsp> where TReq : RuntimeMessage, new() where TRsp : RuntimeMessage
 {
+    protected event Action<TRsp> OnResponse;
     public override int Id => _reqPacket.GetTransferDataSeqId();
     private RuntimePacket _reqPacket;
-    protected static void SendAction<TAction>(TReq req) where TAction : RuntimeMsgRActionBase<TReq, TRsp>, new()
+    protected static TAction SendAction<TAction>(TReq req) where TAction : RuntimeMsgRActionBase<TReq, TRsp>, new()
     {
         TAction action = GetAction<TAction>(req);
+        action.OnResponse = null;
         BasicModule.NetMsgCenter.SendMsg(action);
+        return action;
     }
 
     /// <summary>
@@ -50,7 +54,13 @@ public abstract class RuntimeMsgRActionBase<TReq, TRsp> : RuntimeMsgTActionBase<
 
     protected sealed override bool Receive(int errorCode, string errorMsg, TRsp rsp)
     {
-        return base.Receive(errorCode, errorMsg, rsp);
+        bool result = base.Receive(errorCode, errorMsg, rsp);
+        if (result)
+        {
+            OnResponse?.Invoke(rsp);
+        }
+
+        return result;
     }
 
     protected virtual bool Receive(int errorCode, string errorMsg, TRsp rsp, TReq req)
@@ -76,5 +86,15 @@ public abstract class RuntimeMsgRActionBase<TReq, TRsp> : RuntimeMsgTActionBase<
     public override void InitSeqId(int id)
     {
         _reqPacket.SetTransferDataSeqId(id);
+    }
+
+    public void SetCB(Action<TRsp> cb)
+    {
+        if (OnResponse == null)
+        {
+            OnResponse = delegate { };
+        }
+
+        OnResponse += cb;
     }
 }

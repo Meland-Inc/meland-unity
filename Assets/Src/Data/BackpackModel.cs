@@ -179,4 +179,18 @@ public class BackpackModel : DataModelBase
 
         return result;
     }
+
+    public int GetItemCount(int itemID)
+    {
+        int total = 0;
+        foreach (BpNftItem item in ItemList)
+        {
+            if (item.Cid == itemID)
+            {
+                total += item.Count;
+            }
+        }
+
+        return total;
+    }
 }

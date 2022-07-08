@@ -396,6 +396,6 @@ public class FormCreateRole : FGUIForm
     private eRoleFeaturePart GetCurFeaturePart()
     {
         GObject selectedTab = _lstBodySubclass.GetChildAt(_lstBodySubclass.selectedIndex);
-        return RoleConfig.RoleFeaturePartDict[selectedTab.name];
+        return selectedTab.name.ToEnum<eRoleFeaturePart>();
     }
 }

@@ -32,8 +32,6 @@ public class PlayerCraftModule : MonoBehaviour
     public void UpgradeSkill(string skillID, int meldCost)
     {
         HandleUpgrade(skillID, meldCost);
-        // _upgradeTask = new UniTaskCompletionSource();
-        // return _upgradeTask.Task;
     }
 
     public async void HandleUpgrade(string skillID, int meldCost)

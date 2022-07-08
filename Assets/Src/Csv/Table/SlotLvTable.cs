@@ -30,7 +30,7 @@ public class SlotLvTable
     {
         IDataTable<DRSlotLv> dtAircraft = GFEntry.DataTable.GetDataTable<DRSlotLv>();
         _rows = dtAircraft.GetAllDataRows();
-        foreach (var row in _rows)
+        foreach (DRSlotLv row in _rows)
         {
             Dic.Add(CreateSlotCfgID(row.Slot, row.Lv), row);
         }
@@ -45,6 +45,11 @@ public class SlotLvTable
     public DRSlotLv GetDataRow(int slot, int lv)
     {
         int id = CreateSlotCfgID(slot, lv);
-        return Dic[id];
+        if (Dic.ContainsKey(id))
+        {
+            return Dic[id];
+        }
+
+        return null;
     }
 }

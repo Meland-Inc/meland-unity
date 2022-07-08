@@ -1,6 +1,5 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
-// 生成时间：2022-06-24 10:39:59.251
 //------------------------------------------------------------
 
 using GameFramework;
@@ -52,9 +51,9 @@ public class DRSlotLv : DataRowBase
     }
 
     /// <summary>
-  /**获取升级ditamin。*/
+  /**获取升级meld。*/
     /// </summary>
-    public int Ditamin
+    public int UseMELD
     {
         get;
         private set;
@@ -159,7 +158,7 @@ public class DRSlotLv : DataRowBase
         Slot = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Lv = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Exp = DataTableParseUtil.ParseInt(columnStrings[index++]);
-        Ditamin = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        UseMELD = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Hp = DataTableParseUtil.ParseInt(columnStrings[index++]);
         HpRecovery = DataTableParseUtil.ParseInt(columnStrings[index++]);
         Att = DataTableParseUtil.ParseInt(columnStrings[index++]);
@@ -185,7 +184,7 @@ public class DRSlotLv : DataRowBase
                 Slot = binaryReader.Read7BitEncodedInt32();
                 Lv = binaryReader.Read7BitEncodedInt32();
                 Exp = binaryReader.Read7BitEncodedInt32();
-                Ditamin = binaryReader.Read7BitEncodedInt32();
+                UseMELD = binaryReader.Read7BitEncodedInt32();
                 Hp = binaryReader.Read7BitEncodedInt32();
                 HpRecovery = binaryReader.Read7BitEncodedInt32();
                 Att = binaryReader.Read7BitEncodedInt32();

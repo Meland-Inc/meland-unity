@@ -12,8 +12,10 @@ public class ComRoleInfoLogic : FGUILogicCpt
     private GTextField _tfName;
     private GTextField _tfLv;
     private GTextField _tfWallet;
+    private GTextField _tfUpgradeTips;
     private GButton _btnCopy;
     private GButton _btnUpgrade;
+    private GButton _btnLevelMax;
     private GProgressBar _comExp;
     private GList _lstAttr;
 
@@ -23,8 +25,10 @@ public class ComRoleInfoLogic : FGUILogicCpt
         _tfName = GCom.GetChild("tfName") as GTextField;
         _tfLv = GCom.GetChild("tfLv") as GTextField;
         _tfWallet = GCom.GetChild("tfWallet") as GTextField;
+        _tfUpgradeTips = GCom.GetChild("tfUpgradeTips") as GTextField;
         _btnCopy = GCom.GetChild("btnCopy") as GButton;
         _btnUpgrade = GCom.GetChild("btnUpgrade") as GButton;
+        _btnLevelMax = GCom.GetChild("btnLevelMax") as GButton;
         _comExp = GCom.GetChild("comExp") as GProgressBar;
         _lstAttr = GCom.GetChild("lstAttr") as GList;
     }
@@ -34,7 +38,7 @@ public class ComRoleInfoLogic : FGUILogicCpt
         base.OnOpen();
         AddMessage();
         AddUIEvent();
-        UpdateView();
+        // UpdateView();
     }
 
     public override void OnClose()
@@ -85,6 +89,7 @@ public class ComRoleInfoLogic : FGUILogicCpt
         UpdateAttr();
         UpdateExp();
         UpdateBtn();
+        UpdateTips();
     }
 
     private void UpdateAttr()
@@ -134,21 +139,20 @@ public class ComRoleInfoLogic : FGUILogicCpt
 
     private void UpdateBtn()
     {
-        Controller ctrlEnable = _btnUpgrade.GetController("ctrlEnable");
-        int roleLv = DataManager.MainPlayer.RoleData.Profile.Lv;
+        _btnUpgrade.touchable = SceneModule.RoleLevel.CheckCanUpgradeRole();
+        _btnUpgrade.grayed = !_btnUpgrade.touchable;
+        _btnLevelMax.visible = RoleLevelModule.MAX_ROLE_LV == DataManager.MainPlayer.RoleData.Profile.Lv;
+        _btnUpgrade.visible = !_btnLevelMax.visible;
+    }
+
+    private void UpdateTips()
+    {
+        int roleLv = DataManager.MainPlayer.RoleLv;
         int needExp = RoleLvTable.Inst.GetRow(roleLv).Exp;
-        if (SceneModule.RoleLevel.CheckCanUpgradeRole())
-        {
-            ctrlEnable.SetSelectedPage("true");
-        }
-        else
-        {
-            ctrlEnable.SetSelectedPage("false");
-            _btnUpgrade.GetChild("title").asTextField
-              .SetVar("exp", needExp.ToString())
-              .SetVar("lv", Math.Max(1, roleLv - RoleLevelModule.MAX_LV_GAP_BETWEEN_SLOT_AND_ROLE).ToString())
-              .FlushVars();
-        }
+        _tfUpgradeTips
+            .SetVar("exp", needExp.ToString())
+            .SetVar("lv", Math.Max(1, roleLv - RoleLevelModule.MAX_LV_GAP_BETWEEN_SLOT_AND_ROLE).ToString())
+            .FlushVars();
     }
 
     private void OnRoleUpgraded()

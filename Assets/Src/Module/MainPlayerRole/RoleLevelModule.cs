@@ -14,11 +14,11 @@ public class RoleLevelModule : MonoBehaviour
     /// <summary>
     /// 角色最高等级
     /// </summary>
-    public const int MAX_ROLE_LV = 100;
+    public const int MAX_ROLE_LV = 10;
     /// <summary>
     /// 插槽最高等级
     /// </summary>
-    public const int MAX_SLOT_LV = 100;
+    public const int MAX_SLOT_LV = 10;
     /// <summary>
     /// 插槽和角色的最大等级差
     /// </summary>
@@ -27,7 +27,6 @@ public class RoleLevelModule : MonoBehaviour
     /// 角色装备插槽等级大于角色等级-5的最小数量
     /// </summary>
     public const int MIN_NUM_OF_ROLE_LV_BIGGER_SLOT_LV_THAN_NEGATIVE_5 = 4;
-    public const int TEST_DITAMIN = 999999;
     /// <summary>
     /// 插槽升级
     /// </summary>
@@ -37,6 +36,8 @@ public class RoleLevelModule : MonoBehaviour
     /// </summary>
     public Action OnRoleUpgraded = delegate { };
     public Action<string> OnRoleProfileUpdated = delegate { };
+
+    private AvatarPosition _slotPos;
 
     private void Awake()
     {
@@ -73,7 +74,7 @@ public class RoleLevelModule : MonoBehaviour
         }
 
         int count = 0;
-        foreach (KeyValuePair<AvatarPosition, ItemSlot> item in DataManager.MainPlayer.ItemSlotDice)
+        foreach (KeyValuePair<AvatarPosition, ItemSlot> item in DataManager.MainPlayer.ItemSlotDic)
         {
             if (item.Value.Level >= profile.Lv - MAX_LV_GAP_BETWEEN_SLOT_AND_ROLE)
             {
@@ -92,7 +93,7 @@ public class RoleLevelModule : MonoBehaviour
     public bool CheckCanUpgradeSlot(AvatarPosition pos)
     {
         EntityProfile profile = DataManager.MainPlayer.RoleData.Profile;
-        ItemSlot slotData = DataManager.MainPlayer.ItemSlotDice[pos];
+        ItemSlot slotData = DataManager.MainPlayer.ItemSlotDic[pos];
         if (slotData.Level >= MAX_SLOT_LV)
         {
             return false;
@@ -114,7 +115,7 @@ public class RoleLevelModule : MonoBehaviour
             return false;
         }
 
-        if (TEST_DITAMIN < drSlotLv.Ditamin)
+        if (SceneModule.Craft.MeldCount < drSlotLv.UseMELD)
         {
             return false;
         }
@@ -128,7 +129,8 @@ public class RoleLevelModule : MonoBehaviour
             return false;
         }
 
-        UpgradeItemSlotAction.Req(pos);
+        _slotPos = pos;
+        UpgradeItemSlotAction.Req(pos).SetCB(OnUpgradeSlotSuccess);
         return true;
     }
 
@@ -139,7 +141,20 @@ public class RoleLevelModule : MonoBehaviour
             return false;
         }
 
-        UpgradePlayerLevelAction.Req();
+        UpgradePlayerLevelAction.Req().SetCB(OnUpgradeRoleSuccess);
         return true;
+    }
+
+    private void OnUpgradeRoleSuccess(UpgradePlayerLevelResponse rsp)
+    {
+        RoleUpgradeAttrDiffInfo upgradeInfo = RoleUpgradeAttrDiffInfo.GetRoleUpgradeInfo(rsp.CurLevel - 1);
+        _ = UICenter.OpenUIForm<FormRoleAttrUpgradeSuccess>(upgradeInfo);
+    }
+
+    private void OnUpgradeSlotSuccess(UpgradeItemSlotResponse rsp)
+    {
+        ItemSlot slot = DataManager.MainPlayer.ItemSlotDic[_slotPos];
+        RoleUpgradeAttrDiffInfo upgradeInfo = RoleUpgradeAttrDiffInfo.GetSlotUpgradeInfo((int)_slotPos, slot.Level);
+        _ = UICenter.OpenUIForm<FormRoleAttrUpgradeSuccess>(upgradeInfo);
     }
 }

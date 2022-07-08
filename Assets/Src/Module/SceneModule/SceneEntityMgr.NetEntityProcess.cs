@@ -36,19 +36,16 @@ public partial class SceneEntityMgr : SceneModuleBase
 
         foreach (EntityWithLocation svrEntity in entitys)
         {
+            if (svrEntity.Type is not EntityType.EntityTypePlayer and not EntityType.EntityTypeMonster)
+            {
+                MLog.Warning(eLogTag.entity, $"should not update not sync entity,type:{svrEntity.Type}");
+                continue;
+            }
+
             try
             {
                 SceneEntity entity = AddSceneEntity(svrEntity.Id, svrEntity.Type);
-
-                if (svrEntity.Type is EntityType.EntityTypePlayer or EntityType.EntityTypeMonster)
-                {
-                    entity.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
-                }
-                else
-                {
-                    entity.DirectSetSvrPosition(svrEntity.Location);
-                    entity.DirectSetSvrDir(svrEntity.Direction);
-                }
+                entity.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
 
                 if (entity.TryGetComponent(out EntitySvrDataProcess dataProcess))
                 {
@@ -69,6 +66,12 @@ public partial class SceneEntityMgr : SceneModuleBase
 
         foreach (EntityId idInfo in entityIds)
         {
+            if (idInfo.Type is not EntityType.EntityTypePlayer and not EntityType.EntityTypeMonster)
+            {
+                MLog.Warning(eLogTag.entity, $"should not remove not sync entity,type:{idInfo.Type}");
+                continue;
+            }
+
             try
             {
                 RemoveSceneEntity(idInfo.Id);

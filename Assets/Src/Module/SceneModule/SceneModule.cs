@@ -31,6 +31,16 @@ public class SceneModule : MonoBehaviour
     /// </summary>
     /// <value></value>
     public static RoleLevelModule RoleLevel { get; private set; }
+
+    /// <summary>
+    /// 角色锻造处理中心
+    /// </summary>
+    public static PlayerCraftModule Craft;
+
+    /// <summary>
+    /// 充值中心
+    /// </summary>
+    public static RechargeCenter Recharge;
     private void Awake()
     {
         if (Root != null)
@@ -50,6 +60,8 @@ public class SceneModule : MonoBehaviour
         SceneRender = null;
         BackpackMgr = null;
         RoleLevel = null;
+        Craft = null;
+        Recharge = null;
     }
 
     /// <summary>
@@ -61,5 +73,7 @@ public class SceneModule : MonoBehaviour
         SceneRender = Root.AddComponent<SceneRender>();
         BackpackMgr = Root.AddComponent<BackpackMgr>();
         RoleLevel = Root.AddComponent<RoleLevelModule>();
+        Craft = Root.AddComponent<PlayerCraftModule>();
+        Recharge = Root.AddComponent<RechargeCenter>();
     }
 }

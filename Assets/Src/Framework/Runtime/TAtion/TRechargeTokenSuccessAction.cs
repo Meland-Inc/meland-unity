@@ -21,7 +21,7 @@ namespace Runtime
                 return false;
             }
 
-            SceneModule.Craft.OnRechargeSuccess(rsp.BlockNum);
+            SceneModule.Recharge.RechargeSuccess(rsp.BlockNum);
             return true;
         }
     }

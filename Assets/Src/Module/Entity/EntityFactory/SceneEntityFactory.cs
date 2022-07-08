@@ -10,11 +10,8 @@ public static class SceneEntityFactory
     //各实体类型的初始装配逻辑
     private static readonly Dictionary<EntityType, IEntityTypeAssembleLogic> s_assembleLogic = new()
     {
-        { EntityType.EntityTypeMapObject, new SceneElementAssembleLogic() },
-        { EntityType.EntityTypeSpecialBuild, new SceneElementAssembleLogic() },
         { EntityType.EntityTypePlayer, new PlayerRoleAssembleLogic() },
         { EntityType.EntityTypeMonster, new MonsterAssembleLogic() },
-        { EntityType.EntityTypePuppet, new PuppetAssembleLogic() },
     };
 
     /// <summary>

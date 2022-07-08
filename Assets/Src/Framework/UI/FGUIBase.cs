@@ -157,7 +157,8 @@ public abstract class FGUIBase : UIFormLogic
 
     protected void ForeachChildrenCpt(Action<FGUILogicCpt> callback)
     {
-        FGUILogicCpt[] cpts = GetComponentsInChildren<FGUILogicCpt>();
+        //带上参数true，把未激活的子组件也获取到
+        FGUILogicCpt[] cpts = GetComponentsInChildren<FGUILogicCpt>(true);
         if (cpts == null)
         {
             return;

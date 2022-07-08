@@ -1,13 +1,12 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-20 10:05:57
- * @LastEditTime: 2022-06-13 11:55:47
- * @LastEditors: xiang huan
  * @Description: 
  * @FilePath: /meland-unity/Assets/Src/Csv/DataTableExtension.cs
  * 
  */
 
+using GameFramework;
 using GameFramework.DataTable;
 using System;
 using System.Collections.Generic;
@@ -34,7 +33,7 @@ public static class DataTableExtension
         }
 
         string dataRowClassName = DATA_ROW_CLASS_PREFIX_NAME + splitNames[0];
-        Type dataRowType = Type.GetType(dataRowClassName);
+        Type dataRowType = Utility.Assembly.GetType(dataRowClassName);
         if (dataRowType == null)
         {
             Log.Warning("Can not get data row type with class name '{0}'.", dataRowClassName);

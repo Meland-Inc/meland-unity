@@ -11,9 +11,11 @@ public class FormPlayerInfo : FGUIForm
 {
     private const string VIEW_TYPE_ROLE = "role";
     private const string VIEW_TYPE_SLOT = "slot";
+    private const string VIEW_TYPE_SKILL = "skill";
     private GList _lstSlot;
     private ComRoleInfoLogic _roleInfoLogic;
     private ComSlotInfoLogic _slotInfoLogic;
+    private ComSkillInfLogic _skillInfoLogic;
     private Controller _ctrlViewType;
 
     protected override void OnInit(object userData)
@@ -71,6 +73,7 @@ public class FormPlayerInfo : FGUIForm
     {
         _roleInfoLogic = GCom.AddSubUILogic<ComRoleInfoLogic>("comRoleInfo");
         _slotInfoLogic = GCom.AddSubUILogic<ComSlotInfoLogic>("comSlotInfo");
+        _skillInfoLogic = GCom.AddSubUILogic<ComSkillInfLogic>("comSkillInfo");
     }
 
     private void OnClickSlotItem(EventContext context)
@@ -106,7 +109,7 @@ public class FormPlayerInfo : FGUIForm
 
     private void UpdateView()
     {
-        UpdateSlotView();//basic info
+        UpdateSlotView();
         UpdateSubView();
     }
 
@@ -117,7 +120,7 @@ public class FormPlayerInfo : FGUIForm
             AvatarPosition slotPos = LstIndex2AvatarPos(index);
             EquipmentSlot slotItem = _lstSlot.GetChildAt(index) as EquipmentSlot;
             _ = DataManager.Backpack.WearableItemDic.TryGetValue(slotPos, out BpWearableNftItem data);
-            _ = DataManager.MainPlayer.ItemSlotDice.TryGetValue(slotPos, out ItemSlot slotData);
+            _ = DataManager.MainPlayer.ItemSlotDic.TryGetValue(slotPos, out ItemSlot slotData);
             slotItem.SetNftData(data);
             slotItem.SetSlotData(slotData);
         }
@@ -132,6 +135,10 @@ public class FormPlayerInfo : FGUIForm
         else if (_ctrlViewType.selectedPage == VIEW_TYPE_SLOT)
         {
             _slotInfoLogic.UpdateView(LstIndex2AvatarPos(_lstSlot.selectedIndex));
+        }
+        else
+        {
+            _skillInfoLogic.UpdateView();
         }
     }
 

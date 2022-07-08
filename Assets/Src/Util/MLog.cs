@@ -23,6 +23,8 @@ public enum eLogTag
     backpack,
     dr,//dr配置表
     role,
+    craft,
+    recharge,
 }
 
 /// <summary>

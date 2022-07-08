@@ -93,7 +93,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
         {
             _ = DataManager.Backpack.WearableItemDic.TryGetValue(item.Key, out BpWearableNftItem avatarItem);
             item.Value.SetNftData(avatarItem);
-            item.Value.SetSlotData(null);//todo:
+            item.Value.SetSlotData(DataManager.MainPlayer.ItemSlotDic[item.Key]);
         }
     }
     private void OnAvatarDataUpdated()

@@ -27,9 +27,9 @@ public class UpgradePlayerLevelAction : GameChannelNetMsgRActionBase<UpgradePlay
         return true;
     }
 
-    public static void Req()
+    public static UpgradePlayerLevelAction Req()
     {
         UpgradePlayerLevelRequest req = GenerateReq();
-        SendAction<UpgradePlayerLevelAction>(req);
+        return SendAction<UpgradePlayerLevelAction>(req);
     }
 }

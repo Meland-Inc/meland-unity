@@ -27,10 +27,10 @@ public class UpgradeItemSlotAction : GameChannelNetMsgRActionBase<UpgradeItemSlo
         return true;
     }
 
-    public static void Req(AvatarPosition pos)
+    public static UpgradeItemSlotAction Req(AvatarPosition pos)
     {
         UpgradeItemSlotRequest req = GenerateReq();
         req.Position = pos;
-        SendAction<UpgradeItemSlotAction>(req);
+        return SendAction<UpgradeItemSlotAction>(req);
     }
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:03:58
- * @LastEditTime: 2022-07-07 10:18:03
+ * @LastEditTime: 2022-07-07 11:42:56
  * @LastEditors: mangit
  * @Description: 请求类aciton
  * @FilePath: /Assets/Src/Framework/Runtime/RuntimeMsgRActionBase.cs
@@ -13,13 +13,15 @@ using UnityEngine;
 
 public abstract class RuntimeMsgRActionBase<TReq, TRsp> : RuntimeMsgTActionBase<TRsp> where TReq : RuntimeMessage, new() where TRsp : RuntimeMessage
 {
-    protected event Action<TRsp> OnResponse;
+    protected event Action<TRsp> OnSuccess;
+    protected event Action<int, string> OnError;
     public override int Id => _reqPacket.GetTransferDataSeqId();
     private RuntimePacket _reqPacket;
     protected static TAction SendAction<TAction>(TReq req) where TAction : RuntimeMsgRActionBase<TReq, TRsp>, new()
     {
         TAction action = GetAction<TAction>(req);
-        action.OnResponse = null;
+        action.OnSuccess = null;
+        action.OnError = null;
         BasicModule.NetMsgCenter.SendMsg(action);
         return action;
     }
@@ -57,7 +59,11 @@ public abstract class RuntimeMsgRActionBase<TReq, TRsp> : RuntimeMsgTActionBase<
         bool result = base.Receive(errorCode, errorMsg, rsp);
         if (result)
         {
-            OnResponse?.Invoke(rsp);
+            OnSuccess?.Invoke(rsp);
+        }
+        else
+        {
+            OnError?.Invoke(errorCode, errorMsg);
         }
 
         return result;
@@ -88,13 +94,26 @@ public abstract class RuntimeMsgRActionBase<TReq, TRsp> : RuntimeMsgTActionBase<
         _reqPacket.SetTransferDataSeqId(id);
     }
 
-    public void SetCB(Action<TRsp> cb)
+    public void SetCB(Action<TRsp> successCB = null, Action<int, string> errorCB = null)
     {
-        if (OnResponse == null)
+        if (successCB != null)
         {
-            OnResponse = delegate { };
+            if (OnSuccess == null)
+            {
+                OnSuccess = delegate { };
+            }
+
+            OnSuccess += successCB;
         }
 
-        OnResponse += cb;
+        if (errorCB != null)
+        {
+            if (OnError == null)
+            {
+                OnError = delegate { };
+            }
+
+            OnError += errorCB;
+        }
     }
 }

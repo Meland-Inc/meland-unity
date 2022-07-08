@@ -28,6 +28,6 @@ public class GetItemSlotAction : GameChannelNetMsgRActionBase<GetItemSlotRequest
     public static void Req()
     {
         GetItemSlotRequest req = GenerateReq();
-        SendAction<GetItemSlotAction>(req);
+        _ = SendAction<GetItemSlotAction>(req);
     }
 }

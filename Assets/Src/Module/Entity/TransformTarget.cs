@@ -9,16 +9,6 @@ public class TransformTarget : MonoBehaviour
     private Transform _targetTsm;
     public Transform TargetTsm => _targetTsm;
 
-    public bool IsNeedAutoInitAfterStart = true;
-
-    protected virtual void Start()
-    {
-        if (IsNeedAutoInitAfterStart && TargetTsm)
-        {
-            OnSetTarget();
-        }
-    }
-
     public void SetTargetTsm(Transform target)
     {
         _targetTsm = target;

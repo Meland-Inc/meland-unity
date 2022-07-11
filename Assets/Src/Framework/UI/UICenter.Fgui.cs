@@ -1,6 +1,6 @@
 /*
 * @Author: mangit
- * @LastEditTime: 2022-07-05 14:08:34
+ * @LastEditTime: 2022-07-08 16:25:51
  * @LastEditors: mangit
 * @Description: fairygui 处理中心
 * @Date: 2022-06-16 20:48:53
@@ -20,18 +20,13 @@ public partial class UICenter
         new (eFUIPackage.Backpack, FGUIDefine.NFT_ITEM_RES,typeof( BpNftItemRenderer)),
         new (eFUIPackage.Backpack, FGUIDefine.NFT_EQUIP_ITEM_RES,typeof( BpNftItemRenderer)),
         new (eFUIPackage.Backpack, FGUIDefine.EQUIPMENT_SLOT_RES,typeof( EquipmentSlot)),
+        new (eFUIPackage.Common, FGUIDefine.UI_AVATAR_RES,typeof( ComUIAvatar)),
     };
 
     private readonly string[] _fontCfg = {
         "SourceHanSansCN-Heavy.ttf",
         "FangFang.ttf",
     };
-    public static void InitPackage()
-    {
-        _ = UIPackage.AddPackage(UI_ASSET_PREFIX + eFUIPackage.Common.ToString());
-        _ = UIPackage.AddPackage(UI_ASSET_PREFIX + eFUIPackage.Backpack.ToString());
-    }
-
     public void InitFguiExtension()
     {
         UIObjectFactory.SetLoaderExtension(typeof(MLoader));//扩展加载器加载资源方式
@@ -44,7 +39,7 @@ public partial class UICenter
             }
             catch (Exception e)
             {
-                MLog.Info(eLogTag.ui, $"extend fgui package item error: {e.Message}");
+                MLog.Error(eLogTag.ui, $"extend fgui package item error: {e.Message}");
             }
         }
     }

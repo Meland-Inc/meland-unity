@@ -1,10 +1,10 @@
 ﻿/*
  * @Author: xiang huan
  * @Date: 2022-05-09 19:35:27
- * @LastEditTime 2022-06-23 16:07:32
- * @LastEditors Please set LastEditors
+ * @LastEditTime: 2022-07-08 16:25:41
+ * @LastEditors: mangit
  * @Description: 游戏资源加载
- * @FilePath /Assets/Src/Module/Procedure/ProcedurePreload.cs
+ * @FilePath: /Assets/Src/Module/Procedure/ProcedurePreload.cs
  * 
  */
 
@@ -59,6 +59,10 @@ public class ProcedurePreload : ProcedureBase
         if (_loadedUICount != _uiPackageCount)
         {
             return;
+        }
+        else
+        {
+            BasicModule.UICenter.AssetLoadedFinish();
         }
 
         ChangeState<LoginProcedure>(procedureOwner);

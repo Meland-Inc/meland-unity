@@ -27,7 +27,7 @@ public class FormCreateRole : FGUIForm
     private GList _lstSexy;
     private int _roleId;
     private eRoleGender _sex;
-    private GComponent _comAvatar;
+    private ComUIAvatar _comUIAvatar;
     // private _avatar;//TODO
     // private _model;//TODO
 
@@ -45,6 +45,7 @@ public class FormCreateRole : FGUIForm
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
+        _comUIAvatar = GCom.GetChild("comUIAvatar") as ComUIAvatar;
         _lock = GCom.GetChild("lock").asLoader;
         _ladLoading = GCom.GetChild("ladLoading").asLoader;
         _tfRoleName = GCom.GetChild("tfRoleName").asTextField;
@@ -139,7 +140,8 @@ public class FormCreateRole : FGUIForm
             _cfgAvatarDict = new();
         }
         _cfgAvatarDict.Clear();
-        int[] avatarsID = GFEntry.DataTable.GetDataTable<DRRole>().GetDataRow(_roleId).RoleDefaultAvatar;
+        DRRole drRole = GFEntry.DataTable.GetDataTable<DRRole>().GetDataRow(_roleId);
+        int[] avatarsID = drRole.RoleDefaultAvatar;
         List<DRAvatar> avatars = new();
         foreach (int id in avatarsID)
         {
@@ -178,6 +180,8 @@ public class FormCreateRole : FGUIForm
         {
             SetAvatarData(kvp.Key);
         }
+
+        OnMainPlayerAvatarChanged();
     }
 
     private void SetAvatarData(eRoleFeaturePart part)
@@ -381,7 +385,12 @@ public class FormCreateRole : FGUIForm
 
     private void OnMainPlayerAvatarChanged()
     {
-        //todo:
+        List<int> partList = new();
+        foreach (int partID in _idDic.Values)
+        {
+            partList.Add(partID);
+        }
+        _comUIAvatar.ChangeAvatar(partList);
     }
 
     private eRoleFeaturePart GetCurFeaturePart()

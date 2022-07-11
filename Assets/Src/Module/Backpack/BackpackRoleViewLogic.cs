@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-21 14:51:57
+ * @LastEditTime: 2022-07-11 10:11:45
  * @LastEditors: mangit
  * @Description: 背包角色视图逻辑
  * @Date: 2022-06-21 13:54:14
@@ -13,6 +13,7 @@ using System.Collections.Generic;
 public class BackpackRoleViewLogic : FGUILogicCpt
 {
     private GTextField _tfRoleName;
+    private ComUIAvatar _comUIAvatar;
     private GComponent _comHp;
     private GComponent _comDef;
     private GComponent _comAttack;
@@ -23,6 +24,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
     {
         base.OnAdd();
         _tfRoleName = GCom.GetChild("tfRoleName") as GTextField;
+        _comUIAvatar = GCom.GetChild("comUIAvatar") as ComUIAvatar;
         _comHp = GCom.GetChild("comHp") as GComponent;
         _comDef = GCom.GetChild("comDef") as GComponent;
         _comAttack = GCom.GetChild("comAttack") as GComponent;
@@ -37,6 +39,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
         AddMessage();
         AddUIEvent();
         UpdateSlotView();
+        UpdateRoleView();
     }
 
     public override void OnClose()
@@ -102,5 +105,19 @@ public class BackpackRoleViewLogic : FGUILogicCpt
     {
         _tfRoleName.text = DataManager.MainPlayer.name;
         //to do : update role attr
+    }
+
+    private void UpdateRoleView()
+    {
+        PlayerFeature feature = DataManager.MainPlayer.Feature;
+        _comUIAvatar.ChangeAvatar(new List<int>()
+        {
+            feature.Hair,
+            feature.Face,
+            feature.Clothes,
+            feature.Pants,
+            feature.Glove,
+            feature.Shoes,
+        });
     }
 }

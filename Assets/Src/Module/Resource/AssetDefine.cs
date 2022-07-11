@@ -4,7 +4,7 @@ public static class AssetDefine
 {
     public const string PATH_ROOT = "Assets";
     public static readonly string PATH_ROOT_RES = Path.Combine(PATH_ROOT, "Res");
-    public static readonly string PATH_SHARE_RES = Path.Combine(PATH_ROOT, "Plugins", "SharedCore", "Resources");
+    public static readonly string PATH_SHARE_RES = Path.Combine(PATH_ROOT, "Plugins", "SharedCore", "Res");
     public static readonly string PATH_CONFIG = Path.Combine(PATH_ROOT_RES, "Config");
     public static readonly string PATH_DATA_TABLE = Path.Combine(PATH_SHARE_RES, "DataTable");
     public static readonly string PATH_SCENE = Path.Combine(PATH_ROOT_RES, "Scene");

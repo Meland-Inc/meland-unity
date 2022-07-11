@@ -122,16 +122,16 @@ public class RoleLevelModule : MonoBehaviour
         return true;
     }
 
-    public bool UpgradeSlot(AvatarPosition pos)
+    public async void UpgradeSlot(AvatarPosition pos, int meldCost)
     {
         if (!CheckCanUpgradeSlot(pos))
         {
-            return false;
+            return;
         }
 
+        await SceneModule.Recharge.RechargeMeld(meldCost);
         _slotPos = pos;
         UpgradeItemSlotAction.Req(pos).SetCB(OnUpgradeSlotSuccess);
-        return true;
     }
 
     public bool UpgradeRole()

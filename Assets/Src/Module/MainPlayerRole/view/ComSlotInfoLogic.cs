@@ -79,6 +79,7 @@ public class ComSlotInfoLogic : FGUILogicCpt
     public void UpdateView(AvatarPosition slotPos)
     {
         _slotData = DataManager.MainPlayer.ItemSlotDic[slotPos];
+        _slotLvCfg = SlotLvTable.Inst.GetDataRow((int)_slotData.Position, _slotData.Level);
         UpdateSlotLv();
         UpdateExp();
         UpdateAttr();
@@ -95,16 +96,14 @@ public class ComSlotInfoLogic : FGUILogicCpt
 
     private void UpdateExp()
     {
-        DRSlotLv drSlot = SlotLvTable.Inst.GetDataRow((int)_slotData.Position, _slotData.Level);
-        _comExp.value = Convert.ToDouble(DataManager.MainPlayer.RoleData.Profile.Exp);
-        _comExp.max = drSlot.Exp;
+        _comExp.value = Convert.ToDouble(DataManager.MainPlayer.RoleExp);
+        _comExp.max = _slotLvCfg.Exp;
     }
 
     private void UpdateMeld()
     {
-        DRSlotLv drSlot = SlotLvTable.Inst.GetDataRow((int)_slotData.Position, _slotData.Level);
         _comMeld.value = SceneModule.Craft.MeldCount;
-        _comMeld.max = drSlot.UseMELD;
+        _comMeld.max = _slotLvCfg.UseMELD;
     }
 
     private void UpdateAttr()
@@ -136,9 +135,8 @@ public class ComSlotInfoLogic : FGUILogicCpt
 
     private void UpdateTips()
     {
-        DRSlotLv drSlot = SlotLvTable.Inst.GetDataRow((int)_slotData.Position, _slotData.Level);
-        int needExp = drSlot.Exp;
-        int meldCost = drSlot.UseMELD;
+        int needExp = _slotLvCfg.Exp;
+        int meldCost = _slotLvCfg.UseMELD;
         _tfUpgradeTips.asTextField
                 .SetVar("exp", needExp.ToString())
                 .SetVar("lv", Math.Max(1, _slotData.Level - RoleLevelModule.MAX_LV_GAP_BETWEEN_SLOT_AND_ROLE).ToString())
@@ -148,7 +146,7 @@ public class ComSlotInfoLogic : FGUILogicCpt
 
     private void OnBtnUpgradeClick()
     {
-        _ = SceneModule.RoleLevel.UpgradeSlot(_slotData.Position);
+        SceneModule.RoleLevel.UpgradeSlot(_slotData.Position, _slotLvCfg.UseMELD);
     }
 
     private void OnBtnExpHelpClick()

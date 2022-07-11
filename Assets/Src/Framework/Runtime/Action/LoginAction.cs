@@ -1,10 +1,11 @@
+using System;
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 19:45:03
- * @LastEditTime: 2022-06-06 17:29:40
- * @LastEditors: xiang huan
+ * @LastEditTime: 2022-07-01 15:09:59
+ * @LastEditors: mangit
  * @Description: 请求登入
- * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/Action/LoginAction.cs
+ * @FilePath: /Assets/Src/Framework/Runtime/Action/LoginAction.cs
  * 
  */
 
@@ -12,6 +13,7 @@ namespace Runtime
 {
     public class LoginAction : RuntimeMsgRActionBase<RuntimeMessage, LoginResponse>
     {
+        public static event Action<string> OnLoginSuccess = delegate { };
         public static void Req()
         {
             RuntimeMessage req = GenerateReq();
@@ -30,8 +32,7 @@ namespace Runtime
                 return false;
             }
             BasicModule.RuntimeGameCenter.EnableMode(RuntimeDefine.eEgretEnableMode.Login, false);
-            BasicModule.LoginCenter.SetUserID(rsp.UserId);
-            BasicModule.LoginCenter.ConnectGameServer();
+            OnLoginSuccess.Invoke(rsp.UserId);
             return true;
         }
     }

@@ -23,7 +23,7 @@ public static class SceneEntityFactory
     /// <param name="entityID">场景实体ID</param>
     /// <param name="entityType">实体类型</param>
     /// <returns></returns>
-    public static SceneEntity CreateSceneEntity(string entityID, EntityType entityType)
+    public static SceneEntity CreateSceneEntity(string entityID, EntityType entityType, bool isMainRole)
     {
         if (!s_assembleLogic.TryGetValue(entityType, out IEntityTypeAssembleLogic assembleLogic))
         {
@@ -31,7 +31,7 @@ public static class SceneEntityFactory
             return null;
         }
 
-        SceneEntity entity = new($"{entityType}_{entityID}");
+        SceneEntity entity = new(isMainRole, $"{entityType}_{entityID}");
         entity.BaseData.Init(entityID, entityType);
         assembleLogic.AssembleSceneEntity(entity, entityType);
         return entity;
@@ -44,12 +44,11 @@ public static class SceneEntityFactory
     /// <returns></returns>
     public static SceneEntity CreateMainPlayerRole(string entityID)
     {
-        SceneEntity entity = CreateSceneEntity(entityID, EntityType.EntityTypePlayer);
+        SceneEntity entity = CreateSceneEntity(entityID, EntityType.EntityTypePlayer, true);
         entity.SetRootName($"mainPlayerRole_{entityID}");
 
         //主角特殊逻辑
-        _ = entity.Root.AddComponent<MainPlayerMoveInput>();
-        entity.Root.AddComponent<MoveNetRequest>().enabled = false;
+        entity.AddComponent<MoveNetRequest>().enabled = false;
         return entity;
     }
 }

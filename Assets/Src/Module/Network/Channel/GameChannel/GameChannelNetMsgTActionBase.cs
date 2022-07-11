@@ -45,8 +45,26 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
         // 获取响应数据
         Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
         string propertyName = envelope.PayloadCase.ToString();
-        TRsp resp = (TRsp)envelope.GetType().GetProperty(propertyName).GetValue(envelope, null);
-        _ = Receive(envelope.ErrorCode, envelope.ErrorMessage, resp);
+        try
+        {
+            TRsp resp = default;
+            if (string.IsNullOrEmpty(propertyName) || propertyName == "None")
+            {
+                if (envelope.ErrorCode == ErrorCode.SUCCESS_CODE)
+                {
+                    MLog.Error(eLogTag.network, $"game msg success but propertyName is null,type={envelope.Type}");
+                }
+            }
+            else
+            {
+                resp = (TRsp)envelope.GetType().GetProperty(propertyName).GetValue(envelope, null);
+            }
+            _ = Receive(envelope.ErrorCode, envelope.ErrorMessage, resp);
+        }
+        catch (System.Exception e)
+        {
+            MLog.Error(eLogTag.network, $"handle parse error type={envelope.Type} propertyName={propertyName} e={e}");
+        }
     }
 
     public virtual Packet GetReqPacket()

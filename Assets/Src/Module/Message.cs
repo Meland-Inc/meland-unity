@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Bian;
 using UnityEngine;
 
@@ -17,17 +18,12 @@ public static class Message
 
     #endregion
 
-    #region  登陆
-
-    public static Action<GetPlayerHttpRsp> GetPlayerSuccess = delegate { };
-    public static Action<Bian.SigninPlayerResponse> SigninPlayerSuccess = delegate { };
-
-    #endregion
-
     #region  runtime
 
     public static Action<bool> WebReady = delegate { };
     public static Action<string> RuntimeMessageEmitted = delegate { };
+
+    public static Action<Runtime.TUserAssetResponse> RuntimeUserAssetUpdate = delegate { };
 
     #endregion
 
@@ -42,5 +38,12 @@ public static class Message
     /// </summary>
     public static Action SceneEntityLoadFinish = delegate { };
 
+    #endregion
+
+    #region 领地
+    public static Action<TerritoryGridData> UpdateTerritoryGridData = delegate { };
+    public static Action<List<ulong>, List<ulong>> UpdateTerritoryGridDataList = delegate { };
+    public static Action<string> UpdateTerritoryPlayerAreaData = delegate { };
+    public static Action<eTerritoryBorderRenderMode> UpdateTerritoryBorderRenderMode = delegate { };
     #endregion
 }

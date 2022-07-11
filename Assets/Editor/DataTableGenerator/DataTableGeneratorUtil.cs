@@ -66,6 +66,28 @@ namespace Meland.Editor.DataTableTools
                 }
 
                 DataTableGenerator.GenerateDataFile(dataTableProcessor, dataTableName);
+            }
+        }
+
+        public static void GenerateDataTableCodes()
+        {
+            string csvPath = Utility.Path.GetRegularPath(DataTableGenerator.DATA_TABLE_CSV_PATH);
+            DirectoryInfo direction = new(csvPath);
+            FileInfo[] files = direction.GetFiles("*.csv", SearchOption.AllDirectories);
+            List<string> tableNames = new();
+            for (int i = 0; i < files.Length; i++)
+            {
+                string fileName = files[i].Name;
+                string extension = files[i].Extension;
+                string fullName = files[i].FullName;
+                string dataTableName = fileName[..^extension.Length];
+                tableNames.Add(dataTableName);
+                DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(fullName);
+                if (!DataTableGenerator.CheckRawData(dataTableProcessor, dataTableName))
+                {
+                    Debug.LogError(Utility.Text.Format("Check raw data failure. DataTableName='{0}'", dataTableName));
+                    break;
+                }
                 DataTableGenerator.GenerateCodeFile(dataTableProcessor, dataTableName);
             }
             DataTableGenerator.GenerateConfigFile(tableNames.ToArray());

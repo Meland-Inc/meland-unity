@@ -320,18 +320,38 @@ namespace Vuplex.WebView {
             var y = Screen.height - topLeftCorner.y;
             var width = bottomRightCorner.x - topLeftCorner.x;
             var height = topLeftCorner.y - bottomRightCorner.y;
-            // GetWorldCorners() has an issue where it's incorrect if the screen resolution
-            // is changed at runtime using Screen.SetResolution(). So, detect if the screen
-            // resolution has been changed and scale the rect's values accordingly.
-            var screenResolutionHasChanged = _hasScreenResolutionChanged();
-            if (screenResolutionHasChanged) {
-                float scaleFactor = _originalScreenResolution.width / Screen.currentResolution.width;
+
+            var scaleFactor = _getScreenSpaceScaleFactor();
+            if (scaleFactor != 1f) {
                 x *= scaleFactor;
                 y *= scaleFactor;
                 width *= scaleFactor;
                 height *= scaleFactor;
             }
             return new Rect(x, y, width, height);
+        }
+
+        float _getScreenSpaceScaleFactor() {
+
+            // GetWorldCorners() has an issue where it's incorrect if the screen resolution
+            // is changed at runtime using Screen.SetResolution(). So, detect if the screen
+            // resolution has been changed and scale the rect's values accordingly.
+            var screenResolutionHasChanged = !_resolutionsAreEqual(Screen.currentResolution, _originalScreenResolution);
+            if (screenResolutionHasChanged) {
+                float scaleFactor = (float)_originalScreenResolution.width / (float)Screen.currentResolution.width;
+                return scaleFactor;
+            }
+            // On Android and iOS, GetWorldCorners() is also incorrect if the "Resolution Scaling Mode"
+            // is set to "Fixed DPI" in Player Settings -> Resolution and Presentation.
+            #if UNITY_ANDROID || UNITY_IOS
+                var display = Display.main;
+                var resolutionScalingModeIsFixedDpi = display.renderingWidth != display.systemWidth;
+                if (resolutionScalingModeIsFixedDpi) {
+                    float scaleFactor = (float)display.systemWidth / (float)display.renderingWidth;
+                    return scaleFactor;
+                }
+            #endif
+            return 1f;
         }
 
         protected override ViewportMaterialView _getVideoLayer() {
@@ -344,27 +364,25 @@ namespace Vuplex.WebView {
             return transform.Find("CanvasWebViewPrefabView").GetComponent<ViewportMaterialView>();
         }
 
-        bool _hasScreenResolutionChanged() {
-
-            var currentRes = Screen.currentResolution;
-            var originalRes = _originalScreenResolution;
-            if (currentRes.width == originalRes.width && currentRes.height == originalRes.height) {
-                return false;
-            }
-            // On mobile, the width and height may be switched due to screen rotation.
-            if (currentRes.width == originalRes.height && currentRes.height == originalRes.width) {
-                return false;
-            }
-            return true;
-        }
-
         void _initCanvasPrefab() {
 
             OnInit();
             Initialized += _logNative2DRecommendationIfNeeded;
             var preferNative2DMode = Native2DModeEnabled && _canNative2DModeBeEnabled(true);
             var rect = preferNative2DMode ? _getScreenSpaceRect() : _rectTransform.rect;
+            if (_logErrorIfSizeIsInvalid(rect.size)) {
+                return;
+            }
             _initBase(rect, preferNative2DMode);
+        }
+
+        bool _logErrorIfSizeIsInvalid(Vector2 size) {
+
+            if (!(size.x > 0f && size.y > 0f)) {
+                WebViewLogger.LogError($"CanvasWebViewPrefab dimensions are invalid! Width: {size.x.ToString("f4")}, Height: {size.y.ToString("f4")}. To correct this, please adjust the CanvasWebViewPrefab's RectTransform to make it so that its width and height are both greater than zero. https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/class-RectTransform.html");
+                return true;
+            }
+            return false;
         }
 
         void _logNative2DModeWarning(string message) {
@@ -398,6 +416,18 @@ namespace Vuplex.WebView {
             }
         }
 
+        bool _resolutionsAreEqual(Resolution res1, Resolution res2) {
+
+            if (res1.width == res2.width && res1.height == res2.height) {
+                return true;
+            }
+            // On mobile, the width and height may be switched due to screen rotation.
+            if (res1.width == res2.height && res1.height == res2.width) {
+                return true;
+            }
+            return false;
+        }
+
         protected override void _setVideoLayerPosition(Rect videoRect) {
 
             var videoRectTransform = _videoLayer.transform as RectTransform;
@@ -418,6 +448,9 @@ namespace Vuplex.WebView {
                 return;
             }
             _sizeInUnityUnits = _rectTransform.rect.size;
+            if (_logErrorIfSizeIsInvalid(_sizeInUnityUnits)) {
+                return;
+            }
             // Handle updating the rect for a native 2D webview.
             var native2DWebView = _getNative2DWebViewIfActive();
             if (native2DWebView != null) {

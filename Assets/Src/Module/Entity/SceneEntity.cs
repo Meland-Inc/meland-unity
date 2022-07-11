@@ -11,11 +11,11 @@ public class SceneEntity
     /// 逻辑实体根节点 可以挂载逻辑实体相关逻辑 一定不为空
     /// </summary>
     /// <value></value>
-    public GameObject Root { get; private set; }
+    private GameObject _root;
     /// <summary>
     /// 场景实体变换 也是Root节点的变换 一定不为空
     /// </summary>
-    public Transform Transform => Root.transform;
+    public Transform Transform => _root.transform;
     /// <summary>
     /// 场景实体基础数据 快捷访问方式
     /// </summary>
@@ -32,14 +32,22 @@ public class SceneEntity
     /// </summary>
     public SceneEntityRenderBase SurfaceRender => Surface != null ? Surface.GetSurfaceRender() as SceneEntityRenderBase : null;
 
-    public SceneEntity(string name = null)
+    public SceneEntity(bool isMainRole, string name = null)
     {
         if (string.IsNullOrEmpty(name))
         {
             name = "SceneEntity" + GetHashCode();
         }
-        Root = new GameObject(name);
-        BaseData = Root.AddComponent<SceneEntityBaseData>();
+        if (isMainRole)//为了能和美术场景预览使用同一个预制件脚本配置 空物体主角的放在resouce下当做配置同步加载上来
+        {
+            GameObject prefab = Resources.Load<GameObject>(EntityDefine.MAIN_PLAYER_ROLE_SPECIAL_PREFAB_PATH);
+            _root = Object.Instantiate(prefab);
+        }
+        else
+        {
+            _root = new GameObject(name);
+        }
+        BaseData = _root.AddComponent<SceneEntityBaseData>();
     }
 
     public void Init()
@@ -56,8 +64,8 @@ public class SceneEntity
             SetSurface(null);
         }
 
-        Object.Destroy(Root);
-        Root = null;
+        Object.Destroy(_root);
+        _root = null;
     }
 
     /// <summary>
@@ -75,7 +83,7 @@ public class SceneEntity
 
     public void SetRootName(string name)
     {
-        Root.name = name;
+        _root.name = name;
     }
 
     public void SetRootParent(Transform parent)
@@ -99,5 +107,20 @@ public class SceneEntity
     public void DirectSetSvrDir(VectorXY dir)
     {
         Transform.forward = NetUtil.SvrDirToClient(dir);
+    }
+
+    public T GetComponent<T>()
+    {
+        return _root.GetComponent<T>();
+    }
+
+    public T AddComponent<T>() where T : Component
+    {
+        return _root.AddComponent<T>();
+    }
+
+    public bool TryGetComponent<T>(out T component)
+    {
+        return _root.TryGetComponent(out component);
     }
 }

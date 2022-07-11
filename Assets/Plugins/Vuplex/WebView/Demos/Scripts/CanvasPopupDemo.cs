@@ -38,6 +38,7 @@ namespace Vuplex.WebView.Demos {
             // Create a webview for the main content.
             var mainWebViewPrefab = CanvasWebViewPrefab.Instantiate();
             mainWebViewPrefab.Resolution = 1.5f;
+            mainWebViewPrefab.PixelDensity = 2;
             mainWebViewPrefab.Native2DModeEnabled = true;
             mainWebViewPrefab.transform.SetParent(_canvas.transform, false);
 

@@ -80,7 +80,7 @@ crashlytics-build.properties
 .LSOverride
 
 # Icon must end with two \r
-Icon
+# Icon
 
 
 # Thumbnails
@@ -136,5 +136,5 @@ $RECYCLE.BIN/
 /Assets/Packages
 /Assets/Editor/Temp
 /Assets/Editor/Temp.meta
-/Assets/Thirdparty/Spine/Spine Examples
-/Assets/Thirdparty/Spine/Spine Examples.meta
+Spine Examples
+Spine Examples.meta

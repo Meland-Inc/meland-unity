@@ -16,6 +16,14 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
         networkChannel.RegisterHandler(TRemoveMarkFromMinimapAction.GetAction<TRemoveMarkFromMinimapAction>());
         networkChannel.RegisterHandler(TInitMapElementAction.GetAction<TInitMapElementAction>());
         networkChannel.RegisterHandler(TMapEntityUpdateAction.GetAction<TMapEntityUpdateAction>());
+
+        networkChannel.RegisterHandler(TAddPlayerAreaAction.GetAction<TAddPlayerAreaAction>());
+        networkChannel.RegisterHandler(TBaseAreaListAction.GetAction<TBaseAreaListAction>());
+        networkChannel.RegisterHandler(TTerritoryTileAction.GetAction<TTerritoryTileAction>());
+        networkChannel.RegisterHandler(TTerritoryTileUpdateAction.GetAction<TTerritoryTileUpdateAction>());
+        networkChannel.RegisterHandler(TPlayerAreaListUpdateAction.GetAction<TPlayerAreaListUpdateAction>());
+        networkChannel.RegisterHandler(TPlayerAreaUpdateAction.GetAction<TPlayerAreaUpdateAction>());
+        networkChannel.RegisterHandler(TRemovePlayerAreaAction.GetAction<TRemovePlayerAreaAction>());
     }
 
     public override void PrepareForConnecting()

@@ -18,7 +18,7 @@ using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
-    class WebPluginFactory {
+    public class WebPluginFactory {
 
         public virtual IWebPlugin GetPlugin() => GetPlugin(null);
 

@@ -1,0 +1,1 @@
+{"roleId":1001,"name":"Randy","gender":"male","feature":"{"hair":101003,"clothes":102002,"glove":105000,"pants":103001,"face":100001,"shoes":104002}\","osType":3}

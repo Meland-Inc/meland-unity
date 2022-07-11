@@ -53,13 +53,13 @@ public class GameProcedure : ProcedureBase
     private void ShowUI()
     {
         //TODO:
-        _ = GFEntry.UI.OpenUIForm<FormMain>("open ui form");
+        _ = UICenter.OpenUIForm<FormMain>("open ui form");
     }
 
     private void HideUI()
     {
         //TODO:
-        GFEntry.UI.CloseUIForm<FormMain>();
+        UICenter.CloseUIForm<FormMain>();
     }
 
     private async void CreateSceneEntity()

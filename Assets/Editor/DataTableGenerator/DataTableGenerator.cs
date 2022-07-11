@@ -68,8 +68,6 @@ namespace Meland.Editor.DataTableTools
         private static void DataTableCodeGenerator(DataTableProcessor dataTableProcessor, StringBuilder codeContent, object userData)
         {
             string dataTableName = (string)userData;
-
-            _ = codeContent.Replace("__DATA_TABLE_CREATE_TIME__", DateTime.UtcNow.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss.fff"));
             _ = codeContent.Replace("__DATA_TABLE_CLASS_NAME__", "DR" + dataTableName);
             _ = codeContent.Replace("__DATA_TABLE_ID_COMMENT__", "获取" + dataTableProcessor.GetComment(dataTableProcessor.IdColumn) + "。");
             _ = codeContent.Replace("__DATA_TABLE_PROPERTIES__", GenerateDataTableProperties(dataTableProcessor));
@@ -232,7 +230,6 @@ namespace Meland.Editor.DataTableTools
         {
             string template = File.ReadAllText(DATA_TABLE_CONFIG_TEMPLATE_NAME, Encoding.UTF8);
             StringBuilder stringBuilder = new(template);
-            _ = stringBuilder.Replace("__DATA_TABLE_CREATE_TIME__", DateTime.UtcNow.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss.fff"));
             _ = stringBuilder.Replace("__DATA_TABLE_NAMES__", GeneratorTableNames(tableNames));
 
             try

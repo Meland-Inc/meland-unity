@@ -15,7 +15,13 @@ public enum eLogTag
     entity,
     procedure,//流程相关
     test,
-    asset
+    asset,
+    avatar,
+    territory,
+    resource,
+    createRole,
+    backpack,
+    dr,//dr配置表
 }
 
 /// <summary>

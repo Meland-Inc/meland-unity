@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 
 public static class AssetDefine
@@ -13,16 +12,23 @@ public static class AssetDefine
     public static readonly string PATH_MAP_ELEMENT = Path.Combine(PATH_ROOT, "Prefab/MapElement");
     public static readonly string PATH_EFFECT = Path.Combine(PATH_ROOT, "Prefab/Effect");
     public static readonly string PATH_ROLE = Path.Combine(PATH_ROOT, "Prefab/Role");
+    public static readonly string PATH_MONSTER = Path.Combine(PATH_ROOT, "Prefab/Spine/Monster");
+    public static readonly string PATH_PUPPET = Path.Combine(PATH_ROOT, "Prefab/Spine/Puppet");
+    public static readonly string PATH_ANIM_MAP_ELEMENT = Path.Combine(PATH_ROOT, "Prefab/Spine/MapElement");
     public static readonly string PATH_TEXTURE = Path.Combine(PATH_ROOT, "Texture");
     public static readonly string PATH_SPRITE = Path.Combine(PATH_ROOT, "Sprite");
     public static readonly string PATH_DRAGON_BONES = Path.Combine(PATH_ROOT, "DragonBones");
     public static readonly string PATH_UI = Path.Combine(PATH_ROOT, "Fairygui");
 
+    public const string SUFFIX_SPRITE = ".png";
     public const string SUFFIX_TEXTURE = ".png";
     public const string SUFFIX_SCENE = ".unity";
     public const string SUFFIX_PREFAB = ".prefab";
     public const string SUFFIX_MUSIC = ".mp3";
     public const string SUFFIX_SOUND_EFFECT = ".wav";
+    public static readonly string PATH_AVATAR_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Avatar");
+    public static readonly string PATH_ROLE_NAME = Path.Combine(PATH_ROOT, "Text/RoleName");
+    public static readonly string PATH_ITEM_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Item");
 }
 
 /// <summary>
@@ -34,6 +40,7 @@ public enum eLoadPriority : int
     Normal = 2000,
     SceneElement,
     PlayerRole,
+    Monster,
     High = 3000,
     Terrain,
 }

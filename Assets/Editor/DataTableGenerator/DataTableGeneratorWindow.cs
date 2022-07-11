@@ -44,6 +44,12 @@ namespace Meland.Editor.DataTableTools
                 DataTableGeneratorUtil.GenerateDataTables();
                 AssetDatabase.Refresh();
             }
+
+            if (GUILayout.Button("生成配置脚本"))
+            {
+                DataTableGeneratorUtil.GenerateDataTableCodes();
+                AssetDatabase.Refresh();
+            }
         }
     }
 }

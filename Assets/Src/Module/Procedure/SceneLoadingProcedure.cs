@@ -88,12 +88,12 @@ public class SceneLoadingProcedure : ProcedureBase
 
     private void ShowLoadingUI()
     {
-        _ = GFEntry.UI.OpenUIForm<FormLoading>();
+        _ = UICenter.OpenUIForm<FormLoading>();
     }
 
     private void HideLoadingUI()
     {
-        GFEntry.UI.CloseUIForm<FormLoading>();
+        UICenter.CloseUIForm<FormLoading>();
     }
 
     /// <summary>

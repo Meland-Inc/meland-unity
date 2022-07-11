@@ -124,7 +124,12 @@ namespace Vuplex.WebView.Internal {
             // Anything over 19.4 megapixels (6k) is almost certainly a mistake.
             // Cast to floats to avoid integer overflow.
             if ((float)width * (float)height > 19400000) {
-                throw new ArgumentException($"The application specified an abnormally large webview size ({width}px x {height}px), and webviews of this size are normally only created by mistake. A WebViewPrefab's default resolution is 1300px per Unity unit, so it's likely that you specified a large physical size by mistake or need to adjust the resolution. For more information, please see WebViewPrefab.Resolution: https://developer.vuplex.com/webview/WebViewPrefab#Resolution");
+                var message = $"The application specified an abnormally large webview size ({width}px x {height}px), and webviews of this size are normally only created by mistake. A WebViewPrefab's default resolution is 1300px per Unity unit, so it's likely that you specified a large physical size by mistake or need to adjust the resolution. For more information, please see WebViewPrefab.Resolution: https://developer.vuplex.com/webview/WebViewPrefab#Resolution .";
+                #if VUPLEX_ALLOW_LARGE_WEBVIEWS
+                    WebViewLogger.LogWarning(message);
+                #else
+                    throw new ArgumentException(message + " If this large webview size is intentional, you can disable this exception by adding the scripting symbol VUPLEX_ALLOW_LARGE_WEBVIEWS to player settings. However, please note that if the webview size is larger than the graphics system can handle, the app may crash.");
+                #endif
             }
         }
 

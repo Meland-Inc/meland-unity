@@ -10,7 +10,7 @@ public partial class SceneEntityMgr : SceneModuleBase
 
         DataManager.MainPlayer.InitRoleData(playerData.Id);
         SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
-        sceneRole.Root.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
+        sceneRole.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
 
         EntityWithLocation svrEntity = new()//封装一个统一包 服务器本来用统一的更好
         {
@@ -20,10 +20,12 @@ public partial class SceneEntityMgr : SceneModuleBase
             Type = EntityType.EntityTypePlayer
 
         };
-        sceneRole.Root.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
+        sceneRole.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
 
-        sceneRole.Root.GetComponent<MainPlayerMoveInput>().MoveSpeed = sceneRole.Root.GetComponent<EntityMoveData>().Speed;
-        sceneRole.Root.GetComponent<MoveNetRequest>().enabled = true;
+        MainPlayerMoveInput moveInput = sceneRole.GetComponent<MainPlayerMoveInput>();
+        moveInput.MoveSpeed = sceneRole.GetComponent<EntityMoveData>().Speed;
+        moveInput.PushDownForce = Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
+        sceneRole.GetComponent<MoveNetRequest>().enabled = true;
 
         Message.MainPlayerRoleInitFinish.Invoke();
     }
@@ -40,7 +42,7 @@ public partial class SceneEntityMgr : SceneModuleBase
 
                 if (svrEntity.Type is EntityType.EntityTypePlayer or EntityType.EntityTypeMonster)
                 {
-                    entity.Root.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
+                    entity.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
                 }
                 else
                 {
@@ -48,7 +50,7 @@ public partial class SceneEntityMgr : SceneModuleBase
                     entity.DirectSetSvrDir(svrEntity.Direction);
                 }
 
-                if (entity.Root.TryGetComponent(out EntitySvrDataProcess dataProcess))
+                if (entity.TryGetComponent(out EntitySvrDataProcess dataProcess))
                 {
                     dataProcess.SvrDataInit(svrEntity);
                 }

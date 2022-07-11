@@ -27,6 +27,7 @@ namespace Vuplex.WebView.Editor {
             _resolution = serializedObject.FindProperty("Resolution");
             _initialUrl = serializedObject.FindProperty("InitialUrl");
             _nativeOnScreenKeyboardEnabled = serializedObject.FindProperty("NativeOnScreenKeyboardEnabled");
+            _pixelDensity = serializedObject.FindProperty("PixelDensity");
             _remoteDebuggingEnabled = serializedObject.FindProperty("RemoteDebuggingEnabled");
             _scrollingEnabled = serializedObject.FindProperty("ScrollingEnabled");
             _scrollingSensitivity = serializedObject.FindProperty("ScrollingSensitivity");
@@ -44,6 +45,7 @@ namespace Vuplex.WebView.Editor {
             EditorGUILayout.Space();
             _renderCustomPlatformSpecificSettings();
             EditorGUILayout.PropertyField(_nativeOnScreenKeyboardEnabled);
+            EditorGUILayout.PropertyField(_pixelDensity);
             EditorGUILayout.Space();
 
             EditorGUILayout.PropertyField(_remoteDebuggingEnabled);
@@ -85,6 +87,7 @@ namespace Vuplex.WebView.Editor {
         SerializedProperty _resolution;
         SerializedProperty _initialUrl;
         SerializedProperty _nativeOnScreenKeyboardEnabled;
+        SerializedProperty _pixelDensity;
         SerializedProperty _remoteDebuggingEnabled;
         SerializedProperty _scrollingEnabled;
         SerializedProperty _scrollingSensitivity;

@@ -11,10 +11,10 @@ public class LandAreaDataNodeCpt : MonoBehaviour, IServerDataNodeCpt
     public object GetServerData()
     {
         LandAreaData data = new();
-        data.MinR = (int)Mathf.Floor(transform.position.z - (transform.localScale.z / 2));
-        data.MaxR = (int)Mathf.Floor(transform.position.z + (transform.localScale.z / 2));
-        data.MinC = (int)Mathf.Floor(transform.position.x - (transform.localScale.x / 2));
-        data.MaxC = (int)Mathf.Floor(transform.position.x + (transform.localScale.x / 2));
+        data.MinX = (int)Mathf.Floor(transform.position.x - (transform.localScale.x / 2));
+        data.MaxX = (int)Mathf.Floor(transform.position.x + (transform.localScale.x / 2));
+        data.MinZ = (int)Mathf.Floor(transform.position.z - (transform.localScale.z / 2));
+        data.MaxZ = (int)Mathf.Floor(transform.position.z + (transform.localScale.z / 2));
         return data;
     }
 }

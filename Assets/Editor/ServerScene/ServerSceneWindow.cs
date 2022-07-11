@@ -17,9 +17,9 @@ namespace Meland.Editor.ServerScene
 {
     public class ServerSceneWindow : EditorWindow
     {
-        private const string SERVER_SCENE_FILE_PATH = "Assets/Res/ServerScene/WorldServer.unity";
-        private const string SERVER_SCENE_PATH = "Assets/Res/ServerScene";
-        private const string SERVER_SCENE_JSON_FILE_PATH = "Assets/Res/ServerScene/WorldServer.json";
+        private const string SERVER_SCENE_FILE_PATH = "Assets/RawResource/ServerScene/WorldServer.unity";
+        private const string SERVER_SCENE_PATH = "Assets/RawResource/ServerScene";
+        private const string SERVER_SCENE_JSON_FILE_PATH = "Assets/RawResource/ServerScene/WorldServer.json";
         private const string SERVER_SCENE_ROOT_NAME = "ServerDataNodeRoot";
         [MenuItem("devtool/serverScene")]
         public static void Init()

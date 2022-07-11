@@ -7,8 +7,8 @@
  */
 public class LandAreaData
 {
-    public int MinR;
-    public int MaxR;
-    public int MinC;
-    public int MaxC;
+    public int MinX;
+    public int MaxX;
+    public int MinZ;
+    public int MaxZ;
 }

@@ -3,7 +3,7 @@
 /// </summary>
 public class Avatar2DEntityRender : SceneEntityRenderBase
 {
-    private Avatar2D _avatar2D;
+    protected Avatar2D _avatar2D;
     private SpineAnimationCpt _spineAnimationCpt;
 
     protected override void OnInit(object userData)
@@ -18,12 +18,7 @@ public class Avatar2DEntityRender : SceneEntityRenderBase
             return;
         }
 
-        _avatar2D = gameObject.AddComponent<Avatar2D>();
-
-        _spineAnimationCpt = gameObject.AddComponent<SpineAnimationCpt>();
-        _spineAnimationCpt.Init(_avatar2D.SkeletonAnimation);
-
-        _spineAnimationCpt.PlayAnim(EntityDefine.ANIM_NAME_IDLE, true);
+        ProcessAvatar();
     }
 
     protected override void OnRecycle()
@@ -32,5 +27,14 @@ public class Avatar2DEntityRender : SceneEntityRenderBase
         _avatar2D = null;
 
         base.OnRecycle();
+    }
+
+    /// <summary>
+    /// 给子类处理avatar使用
+    /// </summary>
+    protected virtual void ProcessAvatar()
+    {
+        _avatar2D = gameObject.AddComponent<Avatar2D>();
+        RefSceneEntity.GetComponent<SpineAnimationCpt>().Init(_avatar2D.SkeletonAnimation);
     }
 }

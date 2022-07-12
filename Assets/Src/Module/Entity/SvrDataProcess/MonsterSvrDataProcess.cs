@@ -10,10 +10,12 @@ using Bian;
 /// <summary>
 /// monster怪物的服务器数据处理 monster是有攻击行为
 /// </summary>
-public class MonsterSvrDataProcess : EntitySvrDataProcess
+public class MonsterSvrDataProcess : RoleSvrDataProcess
 {
-    public override void SvrDataInit(EntityWithLocation svrEntity)
+    public override void SvrDataInit(SceneEntity sceneEntity, EntityWithLocation svrEntity)
     {
+        base.SvrDataInit(sceneEntity, svrEntity);
+
         Monster svrMonster = svrEntity.Monster;
 
         DRMonster drMonseter = GFEntry.DataTable.GetDataTable<DRMonster>().GetDataRow(svrMonster.Cid);

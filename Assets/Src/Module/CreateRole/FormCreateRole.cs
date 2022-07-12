@@ -1,10 +1,10 @@
 using System.IO;
 /*
  * @Author: mangit
- * @LastEditors: mangit
+ * @LastEditors Please set LastEditors
  * @Description: 创角界面
  * @Date: 2022-06-06 19:54:10
- * @FilePath: /Assets/Src/Module/CreateRole/FormCreateRole.cs
+ * @FilePath /Assets/Src/Module/CreateRole/FormCreateRole.cs
  */
 using FairyGUI;
 using RoleDefine;
@@ -390,9 +390,7 @@ public class FormCreateRole : FGUIForm
         {
             partList.Add(partID);
         }
-
-        DRRoleAsset drRoleAsset = GFEntry.DataTable.GetDataTable<DRRoleAsset>().GetDataRow(_roleId);
-        _comUIAvatar.ChangeAvatar(Path.Combine(AssetDefine.PATH_AVATAR_SKELETON, drRoleAsset.ArmatureRes), partList);
+        _comUIAvatar.ChangeAvatar(_roleId, partList);
     }
 
     private eRoleFeaturePart GetCurFeaturePart()

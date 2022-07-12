@@ -4,7 +4,7 @@ public partial class UICenter : GameFrameworkComponent
 {
     public const string FORM_ASSET_PREFIX = "Assets/Res/Prefab/UI/";
     public const string UI_ASSET_PREFIX = "Assets/Res/Fairygui/";
-    public void Start()
+    private void Start()
     {
         InitConfig();
     }

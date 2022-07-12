@@ -23,6 +23,11 @@ public class MainPlayerModel : DataModelBase
     /// </summary>
     public SceneEntity Role { get; private set; }
 
+    /// <summary>
+    /// 角色feature
+    /// </summary>
+    public Bian.PlayerFeature Feature { get; private set; }
+
     public void Awake()
     {
         AccountData = new AccountData();
@@ -44,5 +49,10 @@ public class MainPlayerModel : DataModelBase
     public void SetRole(SceneEntity role)
     {
         Role = role;
+    }
+
+    public void SetFeature(Bian.PlayerFeature feature)
+    {
+        Feature = feature;
     }
 }

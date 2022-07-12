@@ -37,4 +37,5 @@ public static class FGUIDefine
     public const string NFT_ITEM_RES = "BpNftItemRenderer";
     public const string NFT_EQUIP_ITEM_RES = "EquipNftItemRenderer";
     public const string EQUIPMENT_SLOT_RES = "EquipmentSlot";
+    public const string UI_AVATAR_RES = "ComUIAvatar";
 }

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using FairyGUI;
 using UnityGameFramework.Runtime;
 public partial class UICenter : GameFrameworkComponent
@@ -7,9 +6,12 @@ public partial class UICenter : GameFrameworkComponent
     public const string UI_ASSET_PREFIX = "Assets/Res/Fairygui/";
     private void Start()
     {
-        InitFont();
         InitConfig();
-        InitPackage();
+    }
+
+    public void AssetLoadedFinish()
+    {
+        InitFont();
         InitFguiExtension();
     }
 

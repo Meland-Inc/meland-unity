@@ -1,6 +1,0 @@
-id,备注,使用后派发的消息,参数
-id,null,gm,args
-int,null,string,int[]
-3010093,家园旗帜,flagHome,"17,17,17,17"
-3010094,搬家旗帜,moveHome,"17,17,17,17"
-3010095,被收藏的领地,saveHome,"17,17,17,17"

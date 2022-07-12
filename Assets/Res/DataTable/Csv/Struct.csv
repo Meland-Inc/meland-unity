@@ -1,7 +1,0 @@
-id,名称,描述,属性值1,属性备注1,属性值2,属性备注2,属性值3,属性备注3,属性值4,属性备注4,属性值5,属性备注5,属性值6,属性备注6,属性值7,属性备注7,属性值8,属性备注8,属性值9,属性备注9,属性值10,属性备注10
-id,name,desc,property1,comment1,property2,comment2,property3,comment3,property4,comment4,property5,comment5,property6,comment6,property7,comment7,property8,comment8,property9,comment9,property10,comment10
-int,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string
-10001,operateBubbleEditor,操作气泡编辑器,10002,默认气泡类型,10002,获取气泡配置,10003,给予气泡配置,10004,交换气泡配置,,,,,,,,,,,,
-10002,operateBubbleGet,获取气泡默认值,1,道具数量,2040004,道具id,2,气泡位置,"[5,6,7,8,9]",道具类型,,,,,,,,,,,,
-10003,operateBubbleGive,给予气泡默认值,1,道具数量,2040004,道具id,2,气泡位置,"[5,6,7,8,9]",道具类型,,,,,,,,,,,,
-10004,operateBubbleExchange,交换气泡默认值,1,给予道具数量,2040004,给予道具id,"[5,6,7,8,9]",给予道具类型,1,获得道具数量,2040019,获得道具id,"[5,6,7,8,9]",获取道具类型,2,气泡位置,,,,,,

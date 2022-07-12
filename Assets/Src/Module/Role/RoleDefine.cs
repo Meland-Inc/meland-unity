@@ -9,8 +9,8 @@ namespace RoleDefine
 
     public static class RoleID
     {
-        public const int MALE = 1001;
-        public const int FEMALE = 1002;
+        public const int MALE = 10001;
+        public const int FEMALE = 10002;
     }
 
     public enum eRoleFeaturePart

@@ -136,7 +136,7 @@ int,string,string,string,string,string,int,null
 12023,girl_single_coat_default5,icon_girl_coat_5,,,,2,衣服
 12024,girl_single_coat_default6,icon_girl_coat_6,,,,2,衣服
 12025,girl_single_glove_default,,,,,3,手套
-12026,girl_single_glove_default1,icon_girl_glove_1,,,,3,手套
+12026,girl_single_glove_default1,icon_girl_glove_1 ,,,,3,手套
 12027,girl_single_glove_default2,icon_girl_glove_2,,,,3,手套
 12028,girl_single_glove_default3,icon_girl_glove_3,,,,3,手套
 12029,girl_single_glove_default4,icon_girl_glove_4,,,,3,手套
@@ -191,7 +191,7 @@ int,string,string,string,string,string,int,null
 101004,,,boy_single_hair_default4,icon_boy_hair_4,,1,男_发型
 101005,,,boy_single_hair_special1,,,1,男_发型防护服
 101006,girl_single_hair_defaultT4,,boy_single_hair_defaultT4,,,1,熊猫头套
-101007,boy_single_hair_defaultT6,,boy_single_hair_defaultT6,,,1,教师套装?头发
+101007,boy_single_hair_defaultT6,,boy_single_hair_defaultT6,,,1,教师套装·头发
 102000,,,boy_single_coat_default,,,2,男_衣服
 102001,,,boy_single_coat_default1,icon_boy_coat_1,,2,男_衣服
 102002,,,boy_single_coat_default2,icon_boy_coat_2,,2,男_衣服
@@ -199,7 +199,7 @@ int,string,string,string,string,string,int,null
 102004,,,boy_single_coat_default4,icon_boy_coat_4,,2,男_衣服
 102005,,,boy_single_coat_special1,,,2,男_衣服防护服
 102006,girl_single_coat_defaultT4,,boy_single_coat_defaultT4,,,2,熊猫上衣
-102007,boy_single_coat_defaultT6,,boy_single_coat_defaultT6,,,2,教师套装?外套
+102007,boy_single_coat_defaultT6,,boy_single_coat_defaultT6,,,2,教师套装·外套
 103000,,,boy_single_pants_default,,,4,男_裤子
 103001,,,boy_single_pants_default1,icon_boy_pants_1,,4,男_裤子
 103002,,,boy_single_pants_default2,icon_boy_pants_2,,4,男_裤子
@@ -207,7 +207,7 @@ int,string,string,string,string,string,int,null
 103004,,,boy_single_pants_default4,icon_boy_pants_4,,4,男_裤子
 103005,,,boy_single_pants_special1,,,4,男_裤子防护服
 103006,girl_single_pants_defaultT4,,boy_single_pants_defaultT4,,,4,熊猫裤子
-103007,boy_single_pants_defaultT6,,boy_single_pants_defaultT6,,,4,教师套装?裤子
+103007,boy_single_pants_defaultT6,,boy_single_pants_defaultT6,,,4,教师套装·裤子
 104000,,,boy_single_shoes_default,,,14,男_鞋子
 104001,,,boy_single_shoes_default1,icon_boy_shoes_1,,14,男_鞋子
 104002,,,boy_single_shoes_default2,icon_boy_shoes_2,,14,男_鞋子
@@ -215,7 +215,7 @@ int,string,string,string,string,string,int,null
 104004,,,boy_single_shoes_default4,icon_boy_shoes_4,,14,男_鞋子
 104005,,,boy_single_shoes_special1,,,14,男_鞋子防护服
 104006,girl_single_shoes_defaultT4,,boy_single_shoes_defaultT4,,,14,熊猫鞋子
-104007,boy_single_shoes_defaultT6,,boy_single_shoes_defaultT6,,,14,教师套装?鞋子
+104007,boy_single_shoes_defaultT6,,boy_single_shoes_defaultT6,,,14,教师套装·鞋子
 105000,,,boy_single_glove_default,icon_boy_glove,,3,男_手套
 105001,,,boy_single_glove_default1,icon_boy_glove_1,,3,男_手套
 105002,,,boy_single_glove_special1,,,3,男_手套防护服
@@ -280,7 +280,7 @@ int,string,string,string,string,string,int,null
 204006,girl_single_shoes_default6,icon_girl_shoes_6,,,,14,女_鞋子
 204007,girl_single_shoes_special1,,,,,14,女_鞋子防护服
 205000,girl_single_glove_default,icon_girl_glove,,,,3,女_手套
-205001,girl_single_glove_default1,icon_girl_glove_1,,,,3,女_手套
+205001,girl_single_glove_default1,icon_girl_glove_1 ,,,,3,女_手套
 205002,girl_single_glove_special1,,,,,3,女_手套防护服
 301001,girl_single_hair_01_animalSkin,,boy_single_hair_01_animalSkin,,,1,Animal Skin Hat（兽皮帽）
 301002,girl_single_coat_01_animalSkin,,boy_single_coat_01_animalSkin,,,2,Animal Skin Clothes（兽皮衣服）

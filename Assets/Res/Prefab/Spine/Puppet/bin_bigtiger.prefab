@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8371459575625232831}
   - component: {fileID: 5272416742729613199}
   - component: {fileID: 5601096431842686278}
-  - component: {fileID: 8507599986924768342}
+  - component: {fileID: -8315169972183621991}
   m_Layer: 0
   m_Name: bin_bigtiger
   m_TagString: Untagged
@@ -136,8 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fee85d4e7ed41dd89fc8034bf26b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSameDirection: {fileID: 8507599986924768342}
---- !u!114 &8507599986924768342
+--- !u!114 &-8315169972183621991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,8 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8031338345789994122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4d8f8677a1f48f9904b2386af46575, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f19f5177dc24412d96da5f4b19f4f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTsm: {fileID: 0}
-  IsNeedAutoInitAfterStart: 0
+  LookCamera: 1
+  PreviewAutoFindCamera: 1
+  IsHorizontalPaper: 0
+  IsSpine2D: 1

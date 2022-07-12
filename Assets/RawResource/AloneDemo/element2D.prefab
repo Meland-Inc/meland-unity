@@ -43,10 +43,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 2
+  m_Radius: 0.38
+  m_Height: 1.6
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &2975765634128408901
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2975765634128408900}
   - component: {fileID: 2975765634128408899}
-  - component: {fileID: 2975765634128408898}
+  - component: {fileID: 4169692011060675202}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -132,7 +132,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &2975765634128408898
+--- !u!114 &4169692011060675202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,8 +141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2975765634128408901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4d8f8677a1f48f9904b2386af46575, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f19f5177dc24412d96da5f4b19f4f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTsm: {fileID: 0}
-  IsNeedAutoInitAfterStart: 1
+  LookCamera: 1
+  PreviewAutoFindCamera: 1
+  IsHorizontalPaper: 0
+  IsSpine2D: 0

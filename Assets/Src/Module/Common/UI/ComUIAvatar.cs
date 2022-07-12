@@ -6,57 +6,46 @@ using UnityEngine;
 public class ComUIAvatar : GComponent
 {
     private Avatar2DMixed _refAvatarCpt;
+    private bool _isAvatarLoaded;
+    private GGraph _container;
+    private GameObject _avatarGo;
     public override void ConstructFromXML(XML xml)
     {
         base.ConstructFromXML(xml);
-        InitAvatar();
+        _container = GetChild("container") as GGraph;
+        _avatarGo = new GameObject();
+        _refAvatarCpt = _avatarGo.AddComponent<Avatar2DMixed>();
+        _avatarGo.transform.localScale = new Vector3(GlobalDefine.POS_UNIT_TO_PIX, GlobalDefine.POS_UNIT_TO_PIX, GlobalDefine.POS_UNIT_TO_PIX);
     }
 
-    private void InitAvatar()
+    private void LoadAvatar(string skeletonAsset, List<string> elements)
     {
         MLog.Info(eLogTag.avatar, "start load ui avatar");
-        GGraph container = GetChild("container").asGraph;
-        try
-        {
-            GameObject go = new();
-            _refAvatarCpt = go.AddComponent<Avatar2DMixed>();
-            //为了适配ui,fairygui所有界面对应的game Object的scale都被缩小了108倍,这里外部game object要恢复原来的scale
-            go.transform.localScale = new Vector3(108, 108, 108);
-            go.GetComponent<Avatar2DMixed>().LoadAvatar(AssetDefine.PATH_AVATAR_SKELETON, new()
+        _refAvatarCpt.LoadAvatar(skeletonAsset, elements, (target) =>
             {
-                "full-skins/boy",//TODO:需要按方案修改
-            }, (target) =>
-            {
-                _ = target.SkeletonAnimation.AnimationState.SetAnimation(0, "idle", true);
-                container.SetNativeObject(new GoWrapper(target.gameObject));
+                if (!_isAvatarLoaded)
+                {
+                    _isAvatarLoaded = true;
+                    _ = target.SkeletonAnimation.AnimationState.SetAnimation(0, "idle", true);
+                    _container.SetNativeObject(new GoWrapper(target.gameObject));
+                }
             });
-        }
-        catch (System.Exception e)
-        {
-            MLog.Error(eLogTag.avatar, $"load avatar error {e.Message}");
-        }
     }
 
     /// <summary>
     /// 通过部件资源更换avatar
     /// </summary>
     /// <param name="partList"></param>
-    public void ChangeAvatar(List<string> partResList)
+    public void ChangeAvatar(string skeletonAsset, List<string> partResList)
     {
-        if (_refAvatarCpt == null)
-        {
-            MLog.Error(eLogTag.avatar, "change avatar error, avatar cpt is null");
-            return;
-        }
-
-        _refAvatarCpt.LoadAvatar(AssetDefine.PATH_AVATAR_SKELETON, partResList, null);
+        LoadAvatar(skeletonAsset, partResList);
     }
 
     /// <summary>
     /// 通过部件id更换avatar
     /// </summary>
     /// <param name="partIDList"></param>
-    public void ChangeAvatar(List<int> partIDList)
+    public void ChangeAvatar(string skeletonAsset, List<int> partIDList)
     {
         List<string> partList = new();
         foreach (int partID in partIDList)
@@ -69,6 +58,12 @@ public class ComUIAvatar : GComponent
             partList.Add(drAvatar.ResouceBoy);
         }
 
-        ChangeAvatar(partList);
+        ChangeAvatar(skeletonAsset, partList);
+    }
+
+    public override void Dispose()
+    {
+        Object.Destroy(_avatarGo);
+        base.Dispose();
     }
 }

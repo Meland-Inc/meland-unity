@@ -390,7 +390,9 @@ public class FormCreateRole : FGUIForm
         {
             partList.Add(partID);
         }
-        _comUIAvatar.ChangeAvatar(partList);
+
+        DRRoleAsset drRoleAsset = GFEntry.DataTable.GetDataTable<DRRoleAsset>().GetDataRow(_roleId);
+        _comUIAvatar.ChangeAvatar(Path.Combine(AssetDefine.PATH_AVATAR_SKELETON, drRoleAsset.ArmatureRes), partList);
     }
 
     private eRoleFeaturePart GetCurFeaturePart()

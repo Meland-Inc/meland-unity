@@ -1,6 +1,5 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-07-11 10:11:45
  * @LastEditors: mangit
  * @Description: 背包角色视图逻辑
  * @Date: 2022-06-21 13:54:14
@@ -9,6 +8,7 @@
 using Bian;
 using FairyGUI;
 using System.Collections.Generic;
+using System.IO;
 
 public class BackpackRoleViewLogic : FGUILogicCpt
 {
@@ -110,7 +110,9 @@ public class BackpackRoleViewLogic : FGUILogicCpt
     private void UpdateRoleView()
     {
         PlayerFeature feature = DataManager.MainPlayer.Feature;
-        _comUIAvatar.ChangeAvatar(new List<int>()
+        DRRoleAsset drRoleAsset = GFEntry.DataTable.GetDataTable<DRRoleAsset>().GetDataRow(10001);
+        string skeletonAsset = Path.Combine(AssetDefine.PATH_AVATAR_SKELETON, drRoleAsset.ArmatureRes);
+        _comUIAvatar.ChangeAvatar(skeletonAsset, new List<int>()
         {
             feature.Hair,
             feature.Face,

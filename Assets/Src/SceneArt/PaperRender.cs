@@ -34,7 +34,7 @@ public class PaperRender : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (_cameraSameDirection)
+        if (_cameraSameDirection != null)
         {
             Destroy(_cameraSameDirection);
             _cameraSameDirection = null;

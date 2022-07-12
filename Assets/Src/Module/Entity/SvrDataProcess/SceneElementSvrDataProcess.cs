@@ -43,7 +43,7 @@ public class SceneElementSvrDataProcess : EntitySvrDataProcess
         }
         else
         {
-            if (dr.IsHorizontal)
+            if (renderData.IsHorizontal)
             {
                 string prefabAsset = Path.Combine(AssetDefine.PATH_MAP_ELEMENT, EntityDefine.HORIZONTAL_ELEMENT_PREFAB_ASSET);
                 GFEntry.Entity.ShowEntity<HorizontalElementRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ELEMENT, (int)eLoadPriority.SceneElement, svrEntity.Id);

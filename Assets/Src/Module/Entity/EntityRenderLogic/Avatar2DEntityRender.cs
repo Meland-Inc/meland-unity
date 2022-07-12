@@ -1,23 +1,10 @@
-using UnityEngine;
-
 /// <summary>
 /// spine 2D动画的实体渲染逻辑
 /// </summary>
 public class Avatar2DEntityRender : SceneEntityRenderBase
 {
-    public TargetSameDirection TargetSameDirection;
     private Avatar2D _avatar2D;
     private SpineAnimationCpt _spineAnimationCpt;
-
-    private void OnBecameVisible()
-    {
-        TargetSameDirection.enabled = true;
-    }
-
-    private void OnBecameInvisible()
-    {
-        TargetSameDirection.enabled = false;
-    }
 
     protected override void OnInit(object userData)
     {
@@ -31,7 +18,6 @@ public class Avatar2DEntityRender : SceneEntityRenderBase
             return;
         }
 
-        TargetSameDirection.SetTargetTsm(Camera.main.transform);
         _avatar2D = gameObject.AddComponent<Avatar2D>();
 
         _spineAnimationCpt = gameObject.AddComponent<SpineAnimationCpt>();

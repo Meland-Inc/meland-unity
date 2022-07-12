@@ -1,12 +1,12 @@
 using UnityEngine;
 
 /// <summary>
-/// 纸片元素渲染逻辑
+/// 纸片元素渲染逻辑 程序使用的GF实体渲染逻辑类
 /// </summary>
 public class PaperElementRender : SceneEntityRenderBase
 {
     public SpriteRenderer SpriteRenderer;
-    private CameraSameDirection _addedCameraSameDirection;
+    private PaperRender _addedPaperRender;
     private IEntityRenderData _renderData;
 
     protected override void OnInit(object userData)
@@ -23,10 +23,11 @@ public class PaperElementRender : SceneEntityRenderBase
 
         _renderData = RefSceneEntity.GetComponent<IEntityRenderData>();
 
-        if (_renderData.IsLookCamera)
+        if (_renderData.IsLookCamera)//由于目前是使用统一的纸片预制件 所以需要走这个配置来决定是否添加PaperRender
         {
-            _addedCameraSameDirection = gameObject.AddComponent<CameraSameDirection>();
-            _addedCameraSameDirection.SetTargetTsm(Camera.main.transform);
+            _addedPaperRender = SpriteRenderer.gameObject.AddComponent<PaperRender>();
+            _addedPaperRender.PreviewAutoFindCamera = false;
+            _addedPaperRender.SetLookedTargetCamera(Camera.main);
         }
         else
         {
@@ -42,10 +43,10 @@ public class PaperElementRender : SceneEntityRenderBase
     {
         UnloadTexture();
 
-        if (_addedCameraSameDirection != null)
+        if (_addedPaperRender != null)
         {
-            Destroy(_addedCameraSameDirection);
-            _addedCameraSameDirection = null;
+            Destroy(_addedPaperRender);
+            _addedPaperRender = null;
         }
 
         _renderData = null;

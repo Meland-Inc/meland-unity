@@ -110,7 +110,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
     private void UpdateRoleView()
     {
         PlayerFeature feature = DataManager.MainPlayer.Feature;
-        DRRoleAsset drRoleAsset = GFEntry.DataTable.GetDataTable<DRRoleAsset>().GetDataRow(10001);
+        DRRoleAsset drRoleAsset = GFEntry.DataTable.GetDataTable<DRRoleAsset>().GetDataRow(RoleDefine.RoleID.MALE);
         string skeletonAsset = Path.Combine(AssetDefine.PATH_AVATAR_SKELETON, drRoleAsset.ArmatureRes);
         _comUIAvatar.ChangeAvatar(skeletonAsset, new List<int>()
         {

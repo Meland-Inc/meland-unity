@@ -64,6 +64,7 @@ public class ComUIAvatar : GComponent
     public override void Dispose()
     {
         Object.Destroy(_avatarGo);
+        _avatarGo = null;
         base.Dispose();
     }
 }

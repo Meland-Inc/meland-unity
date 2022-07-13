@@ -10,16 +10,6 @@ public static class VectorExtension
     /// <returns></returns>
     public static bool ApproximatelyEquals(this Vector3 a, Vector3 b)
     {
-        if (a == b)
-        {
-            return true;
-        }
-
-        if (a == default || b == default)
-        {
-            return false;
-        }
-
         return a.x.ApproximatelyEquals(b.x) && a.y.ApproximatelyEquals(b.y) && a.z.ApproximatelyEquals(b.z);
     }
 }

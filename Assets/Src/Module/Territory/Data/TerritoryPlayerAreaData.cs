@@ -2,7 +2,7 @@
  * @Author: xiang huan
  * @Date: 2022-06-16 14:24:43
  * @Description: 玩家领地数据
- * @FilePath: /meland-unity/Assets/Src/Module/Territory/Data/TerritoryPlayerAreaData.cs
+ * @FilePath /Assets/Src/Module/Territory/Data/TerritoryPlayerAreaData.cs
  * 
  */
 
@@ -42,9 +42,9 @@ public class TerritoryPlayerAreaData : IReference
         OwnerId = svrData.OwnerId;
         OwnerName = svrData.OwnerName;
         Icon = svrData.Icon;
-        AnalysisLands(svrData.VipLandTiles, VipLands);
-        AnalysisLands(svrData.TicketLandTiles, TicketLands);
-        AnalysisLands(svrData.OccupiedLandTiles, OccupiedLands);
+        // AnalysisLands(svrData.VipLandTiles, VipLands);
+        // AnalysisLands(svrData.TicketLandTiles, TicketLands);
+        // AnalysisLands(svrData.OccupiedLandTiles, OccupiedLands);
         if (svrData.OwnerId == TerritoryDefine.WORLD_SYSTEM_BORDER_AREA_UID) //官方领地
         {
             Color = TerritoryDefine.BIG_WORLD_OFFICIAL_BORDER_COLOR;

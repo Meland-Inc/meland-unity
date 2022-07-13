@@ -42,20 +42,19 @@ public class ComSlotInfoLogic : FGUILogicCpt
 
         _lstAttr.itemRenderer = OnItemRenderer;
         _lstAttr.itemProvider = OnItemProvider;
-
-        AddUIEvent();
-        AddMessage();
     }
 
     public override void OnOpen()
     {
         base.OnOpen();
+        AddUIEvent();
         AddMessage();
     }
 
     public override void OnClose()
     {
         base.OnClose();
+        RemoveUIEvent();
         RemoveMessage();
     }
 
@@ -64,6 +63,13 @@ public class ComSlotInfoLogic : FGUILogicCpt
         _btnUpgrade.onClick.Add(OnBtnUpgradeClick);
         _btnExpHelp.onClick.Add(OnBtnExpHelpClick);
         _btnMeldHelp.onClick.Add(OnBtnMeldHelpClick);
+    }
+
+    private void RemoveUIEvent()
+    {
+        _btnUpgrade.onClick.Remove(OnBtnUpgradeClick);
+        _btnExpHelp.onClick.Remove(OnBtnExpHelpClick);
+        _btnMeldHelp.onClick.Remove(OnBtnMeldHelpClick);
     }
 
     private void AddMessage()

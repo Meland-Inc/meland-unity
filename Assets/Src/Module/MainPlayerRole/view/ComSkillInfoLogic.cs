@@ -64,19 +64,19 @@ public class ComSkillInfLogic : FGUILogicCpt
         _lstRecipes.itemRenderer = OnRecipesItemRenderer;
         _lstMat.itemRenderer = OnMatItemRenderer;
         _lstSkillItem.selectedIndex = 0;
-
-        AddUIEvent();
     }
 
     public override void OnOpen()
     {
         base.OnOpen();
+        AddUIEvent();
         AddMessage();
     }
 
     public override void OnClose()
     {
         base.OnClose();
+        RemoveUIEvent();
         RemoveMessage();
     }
 
@@ -90,8 +90,20 @@ public class ComSkillInfLogic : FGUILogicCpt
         _btnAdd.onClick.Add(OnAddClick);
         _btnSub.onClick.Add(OnSubClick);
         _btnExpHelp.onClick.Add(OnExpHelpClick);
-
         _sldSynthetic.onChanged.Add(OnSyntheticChanged);
+    }
+
+    private void RemoveUIEvent()
+    {
+        _lstSkillItem.onClickItem.Remove(OnSkillItemClick);
+        _lstRecipes.onClickItem.Remove(OnRecipeItemClick);
+        _lstMat.onClickItem.Remove(OnMatItemClick);
+        _btnUpgrade.onClick.Remove(OnUpgradeClick);
+        _btnSynthetic.onClick.Remove(OnSyntheticClick);
+        _btnAdd.onClick.Remove(OnAddClick);
+        _btnSub.onClick.Remove(OnSubClick);
+        _btnExpHelp.onClick.Remove(OnExpHelpClick);
+        _sldSynthetic.onChanged.Remove(OnSyntheticChanged);
     }
 
     private void AddMessage()

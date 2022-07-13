@@ -55,7 +55,7 @@ public class RoleUpgradeAttrDiffInfo
             }
             catch (Exception e)
             {
-                MLog.Error(eLogTag.test, e.Message);
+                MLog.Error(eLogTag.role, e.Message);
                 return null;
             }
         }

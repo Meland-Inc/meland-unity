@@ -26,7 +26,7 @@ public class MainPlayerModel : DataModelBase
     /// <summary>
     /// 角色feature
     /// </summary>
-    public Bian.PlayerFeature Feature { get; private set; }
+    public MelandGame3.PlayerFeature Feature { get; private set; }
 
     public void Awake()
     {
@@ -51,7 +51,7 @@ public class MainPlayerModel : DataModelBase
         Role = role;
     }
 
-    public void SetFeature(Bian.PlayerFeature feature)
+    public void SetFeature(MelandGame3.PlayerFeature feature)
     {
         Feature = feature;
     }

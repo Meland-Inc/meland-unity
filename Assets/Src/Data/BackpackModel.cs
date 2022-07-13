@@ -1,11 +1,11 @@
 /*
  * @Author: mangit
- * @LastEditors: mangit
+ * @LastEditors Please set LastEditors
  * @Description: 背包数据中心
  * @Date: 2022-06-15 11:28:41
- * @FilePath: /Assets/Src/Data/BackpackModel.cs
+ * @FilePath /Assets/Src/Data/BackpackModel.cs
 */
-using Bian;
+using MelandGame3;
 using System.Collections.Generic;
 
 public class BackpackModel : DataModelBase

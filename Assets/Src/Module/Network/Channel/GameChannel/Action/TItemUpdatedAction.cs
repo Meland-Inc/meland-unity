@@ -6,7 +6,7 @@
  * @Date: 2022-06-16 17:39:06
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/TItemUpdatedAction.cs
  */
-using Bian;
+using MelandGame3;
 
 public class TItemUpdatedAction : GameChannelNetMsgTActionBase<TItemUpdateResponse>
 {

@@ -1,5 +1,5 @@
 
-using Bian;
+using MelandGame3;
 
 public class TPlayerAreaUpdateAction : GameChannelNetMsgTActionBase<TPlayerAreaUpdateResponse>
 {

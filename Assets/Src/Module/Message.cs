@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using MelandGame3;
 
 public static class Message

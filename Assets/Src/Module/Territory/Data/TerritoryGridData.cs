@@ -10,14 +10,14 @@ using GameFramework;
 using UnityEngine;
 public class TerritoryGridData : IReference
 {
-    public Bian.BigWorldTile SvrData { get; private set; }
+    public MelandGame3.BigWorldTile SvrData { get; private set; }
     public Vector2 Location { get; private set; }  //XZ坐标
     public int MaxHp { get; private set; }
     public int CurHp { get; private set; }
     public string Owner { get; private set; }
-    public Bian.BigWorldLandState State { get; private set; }
-    public Bian.BigWorldFightState FightState { get; private set; }
-    public Bian.BigWorldFightInfo FightInfo { get; private set; }
+    public MelandGame3.BigWorldLandState State { get; private set; }
+    public MelandGame3.BigWorldFightState FightState { get; private set; }
+    public MelandGame3.BigWorldFightInfo FightInfo { get; private set; }
 
     private const int MAX_HP_ID = 8000003;
     public TerritoryGridData()
@@ -25,13 +25,13 @@ public class TerritoryGridData : IReference
         Location = new();
     }
 
-    public static TerritoryGridData Create(Bian.BigWorldTile svrData)
+    public static TerritoryGridData Create(MelandGame3.BigWorldTile svrData)
     {
         TerritoryGridData data = ReferencePool.Acquire<TerritoryGridData>();
         data.SetData(svrData);
         return data;
     }
-    public void SetData(Bian.BigWorldTile svrData)
+    public void SetData(MelandGame3.BigWorldTile svrData)
     {
         SvrData = svrData;
         CurHp = svrData.Profile.CurHp;
@@ -56,7 +56,7 @@ public class TerritoryGridData : IReference
     }
     public bool IsBattleState()
     {
-        return FightState == Bian.BigWorldFightState.BigWorldFightStateFighting;
+        return FightState == MelandGame3.BigWorldFightState.BigWorldFightStateFighting;
     }
 
 }

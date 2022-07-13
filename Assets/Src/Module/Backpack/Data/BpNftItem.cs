@@ -8,7 +8,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System;
-using Bian;
+using MelandGame3;
 using NFT;
 using UnityEngine;
 public class BpNftItem : BpItemData

@@ -6,7 +6,7 @@
  * @Date: 2022-06-17 16:48:17
  * @FilePath: /Assets/Src/Module/Backpack/Data/BpEquipNftItem.cs
  */
-using Bian;
+using MelandGame3;
 using NFT;
 
 public class BpEquipNftItem : BpNftItem

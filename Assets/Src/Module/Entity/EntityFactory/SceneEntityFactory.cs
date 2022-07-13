@@ -1,51 +1,33 @@
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
-using MelandGame3;
 
 /// <summary>
 /// 生产各种实体类型的初始场景实体的工厂
 /// </summary>
-public static class SceneEntityFactory
+public class SceneEntityFactory : EntityFactory
 {
     //各实体类型的初始装配逻辑
-    private static readonly Dictionary<EntityType, IEntityTypeAssembleLogic> s_assembleLogic = new()
+    private readonly Dictionary<eEntityType, IEntityTypeAssembleLogic> _assembleLogic = new()
     {
-        { EntityType.EntityTypePlayer, new PlayerRoleAssembleLogic() },
-        { EntityType.EntityTypeMonster, new MonsterAssembleLogic() },
+        { eEntityType.player, new PlayerRoleAssembleLogic() },
+        { eEntityType.monster, new MonsterAssembleLogic() },
     };
 
     /// <summary>
-    /// 创建场景实体
+    /// 根据实体类型组装实体，并返回装配后的实体，如果没有对应的装配逻辑，则返回空
     /// </summary>
-    /// <param name="entityID">场景实体ID</param>
-    /// <param name="entityType">实体类型</param>
+    /// <param name="entity"></param>
+    /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public static SceneEntity CreateSceneEntity(string entityID, EntityType entityType, bool isMainRole)
+    protected override T AssemblyEntity<T>(T entity)
     {
-        if (!s_assembleLogic.TryGetValue(entityType, out IEntityTypeAssembleLogic assembleLogic))
+        if (!_assembleLogic.TryGetValue(entity.BaseData.Type, out IEntityTypeAssembleLogic assembleLogic))
         {
-            Log.Fatal($"Can not find assemble logic for entity type {entityType}");
+            Log.Fatal($"Can not find assemble logic for entity type {entity.BaseData.Type}");
             return null;
         }
 
-        SceneEntity entity = new(isMainRole, $"{entityType}_{entityID}");
-        entity.BaseData.Init(entityID, entityType);
-        assembleLogic.AssembleSceneEntity(entity, entityType);
-        return entity;
-    }
-
-    /// <summary>
-    /// 创建主角色实体
-    /// </summary>
-    /// <param name="entityID"></param>
-    /// <returns></returns>
-    public static SceneEntity CreateMainPlayerRole(string entityID)
-    {
-        SceneEntity entity = CreateSceneEntity(entityID, EntityType.EntityTypePlayer, true);
-        entity.SetRootName($"mainPlayerRole_{entityID}");
-
-        //主角特殊逻辑
-        entity.AddComponent<NetReqMove>().enabled = false;
+        assembleLogic.AssembleSceneEntity(entity, entity.BaseData.Type);
         return entity;
     }
 }

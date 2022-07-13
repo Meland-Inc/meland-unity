@@ -126,6 +126,8 @@ public class SceneLoadingProcedure : ProcedureBase
         //TODO:等一帧主摄像机准备好 貌似更稳妥 需要确认
         await UniTask.DelayFrame(1);
 
+        SceneModule.Root.GetComponent<SceneModule>().AddRuntimeInitModule();
+
         EnterMapAction.Req();
     }
 

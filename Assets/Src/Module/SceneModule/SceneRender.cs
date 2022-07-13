@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 场景渲染管理
@@ -19,6 +20,8 @@ public class SceneRender : SceneModuleBase
     private void Awake()
     {
         Root = new GameObject("Scene").transform;
+        SceneManager.MoveGameObjectToScene(Root.gameObject, SceneModule.Root.scene);
+
         foreach (eSceneGroup group in Enum.GetValues(typeof(eSceneGroup)))
         {
             _groupMap.Add(group, Root.gameObject.CreateChildNode(group.ToString()).transform);

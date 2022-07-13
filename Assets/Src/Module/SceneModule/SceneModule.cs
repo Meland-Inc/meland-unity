@@ -36,10 +36,6 @@ public class SceneModule : MonoBehaviour
         }
 
         Root = gameObject;
-
-        EntityMgr = Root.AddComponent<SceneEntityMgr>();
-        SceneRender = Root.AddComponent<SceneRender>();
-        BackpackMgr = Root.AddComponent<BackpackMgr>();
     }
 
     private void OnDestroy()
@@ -48,5 +44,15 @@ public class SceneModule : MonoBehaviour
         EntityMgr = null;
         SceneRender = null;
         BackpackMgr = null;
+    }
+
+    /// <summary>
+    /// 添加运行时初始化模块 只有正式代码走过来的才会调用  美术预览场景时是不会触发的
+    /// </summary>
+    public void AddRuntimeInitModule()
+    {
+        EntityMgr = Root.AddComponent<SceneEntityMgr>();
+        SceneRender = Root.AddComponent<SceneRender>();
+        BackpackMgr = Root.AddComponent<BackpackMgr>();
     }
 }

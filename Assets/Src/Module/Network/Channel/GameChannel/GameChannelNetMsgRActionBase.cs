@@ -8,7 +8,8 @@ using GameFramework.Network;
 /// <typeparam name="TRsp"></typeparam>
 public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetMsgTActionBase<TRsp> where TReq : new()
 {
-    protected event Action<TRsp> OnResponse;
+    protected event Action<TRsp> OnSuccess;
+    protected event Action<int, string> OnError;
     // 网络消息包协议编号 (请求类型action可以被多次注册，需要区分每一次请求的id，所以使用SeqId)
     public override int Id => _reqPacket.GetTransferDataSeqId();
     // 用于给GF.Network 使用的包
@@ -32,7 +33,8 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
     public static TAction GetAction<TAction>(TReq req) where TAction : GameChannelNetMsgRActionBase<TReq, TRsp>, new()
     {
         TAction action = GetAction<TAction>();
-        action.OnResponse = null;
+        action.OnSuccess = null;
+        action.OnError = null;
         action.InitReqPacket(req);
         return action;
     }
@@ -75,7 +77,11 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         bool result = Receive(errorCode, errorMsg, rsp);
         if (result)
         {
-            OnResponse?.Invoke(rsp);
+            OnSuccess?.Invoke(rsp);
+        }
+        else
+        {
+            OnError?.Invoke(errorCode, errorMsg);
         }
         return result;
     }
@@ -125,12 +131,26 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         _reqPacket.SetTransferDataSeqId(id);
     }
 
-    public void SetCB(Action<TRsp> cb)
+    public void SetCB(Action<TRsp> successCB, Action<int, string> errorCB = null)
     {
-        if (OnResponse == null)
+        if (successCB != null)
         {
-            OnResponse = delegate { };
+            if (OnSuccess == null)
+            {
+                OnSuccess = delegate { };
+            }
+
+            OnSuccess += successCB;
         }
-        OnResponse += cb;
+
+        if (errorCB != null)
+        {
+            if (OnError == null)
+            {
+                OnError = delegate { };
+            }
+
+            OnError += errorCB;
+        }
     }
 }

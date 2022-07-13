@@ -4,14 +4,14 @@ using UnityGameFramework.Runtime;
 
 public class SigninPlayerAction : GameChannelNetMsgRActionBase<Bian.SigninPlayerRequest, Bian.SigninPlayerResponse>
 {
-    public static void Req(string playerID)
+    public static SigninPlayerAction Req(string playerID)
     {
         Bian.SigninPlayerRequest req = GenerateReq();
         req.PlayerId = playerID;
         req.ClientTime = Convert.ToInt32(Time.time);
         req.IsDeveloper = true;
         req.Chonglian = 0;
-        SendAction<SigninPlayerAction>(req);
+        return SendAction<SigninPlayerAction>(req);
     }
 
     protected override string GetEnvelopeReqName()

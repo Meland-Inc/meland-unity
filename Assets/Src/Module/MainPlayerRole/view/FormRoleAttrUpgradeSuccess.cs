@@ -20,7 +20,6 @@ public class FormRoleAttrUpgradeSuccess : FGUIForm
         _lstAttr = GetList("lstAttr");
         _tfLvDiff = GetChild("tfLvDiff").asTextField;
         _transShow = GCom.GetTransition("show");
-        GCom.touchable = false;
     }
     protected override void OnOpen(object userData)
     {
@@ -42,12 +41,12 @@ public class FormRoleAttrUpgradeSuccess : FGUIForm
             _transShow.Play();
         }
 
-        Stage.inst.onTouchBegin.Add(Close);
+        GCom.onClick.Add(Close);
     }
 
     protected override void OnClose(bool isShutdown, object userData)
     {
-        Stage.inst.onTouchBegin.Remove(Close);
+        GCom.onClick.Remove(Close);
         base.OnClose(isShutdown, userData);
     }
 

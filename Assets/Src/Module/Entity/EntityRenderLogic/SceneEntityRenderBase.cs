@@ -21,7 +21,7 @@ public class SceneEntityRenderBase : EntityLogic
     /// 对应的场景实体ID
     /// </summary>
     /// <value></value>
-    public string SceneEntityID { get; private set; }
+    public long SceneEntityID { get; private set; }
 
     private Vector3 _initedPostion;
     private Vector3 _initedScale;
@@ -31,15 +31,14 @@ public class SceneEntityRenderBase : EntityLogic
     {
         base.OnInit(userData);
 
-        string sceneEntityID = userData as string;
-        if (sceneEntityID is null or default(string))
+        long sceneEntityID = (long)userData;
+        if (sceneEntityID == 0)
         {
             MLog.Error(eLogTag.entity, $"sceneEntityID error={sceneEntityID}");
             return;
         }
 
-        SceneEntity sceneEntity = SceneModule.EntityMgr.GetSceneEntity(sceneEntityID);
-        if (sceneEntity == null)
+        if (SceneModule.EntityMgr.GetEntity(sceneEntityID) is not SceneEntity sceneEntity)
         {
             GFEntry.Entity.HideEntity(Entity.Id);
             throw new System.Exception($"EntityLogic Can not find scene entity '{sceneEntityID}'.");
@@ -64,7 +63,7 @@ public class SceneEntityRenderBase : EntityLogic
         transform.localScale = _initedScale;
 
         RefSceneEntity = null;
-        SceneEntityID = null;
+        SceneEntityID = 0;
 
         gameObject.SetActive(false);
 
@@ -78,6 +77,6 @@ public class SceneEntityRenderBase : EntityLogic
     public void SetSceneEntityInfo(SceneEntity sceneEntity)
     {
         RefSceneEntity = sceneEntity;
-        SceneEntityID = sceneEntity.BaseData.ID;
+        SceneEntityID = sceneEntity.BaseData.Id;
     }
 }

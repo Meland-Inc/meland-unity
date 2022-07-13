@@ -33,6 +33,7 @@ public class MonsterSvrDataProcess : RoleSvrDataProcess
         }
 
         string prefabAsset = Path.Combine(AssetDefine.PATH_MONSTER, drRoleAsset.ArmatureRes + AssetDefine.SUFFIX_PREFAB);
-        GFEntry.Entity.ShowEntity<Avatar2DEntityRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.Monster, svrEntity.Id);
+        // GFEntry.Entity.ShowEntity<Avatar2DEntityRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.Monster, svrEntity.Id);
+        GFEntry.Entity.ShowEntity<Avatar2DEntityRender>(prefabAsset, svrEntity.Id, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.Monster);
     }
 }

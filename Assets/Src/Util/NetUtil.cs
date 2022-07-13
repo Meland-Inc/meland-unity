@@ -172,4 +172,14 @@ public static class NetUtil
             feature.Shoes,
         };
     }
+
+    public static eEntityType SvrEntityType2Client(EntityType type)
+    {
+        return type switch
+        {
+            EntityType.EntityTypePlayer => eEntityType.player,
+            EntityType.EntityTypeMonster => eEntityType.monster,
+            _ => eEntityType.unknown,
+        };
+    }
 }

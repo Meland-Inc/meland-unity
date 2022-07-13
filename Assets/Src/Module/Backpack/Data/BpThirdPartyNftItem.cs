@@ -6,7 +6,7 @@
  * @Date: 2022-06-20 16:55:32
  * @FilePath: /Assets/Src/Module/Backpack/Data/BpThirdPartyNftItem.cs
  */
-using Bian;
+using MelandGame3;
 using NFT;
 
 public class BpThirdPartyNftItem : BpNftItem

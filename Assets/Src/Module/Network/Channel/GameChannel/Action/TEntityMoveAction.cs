@@ -28,7 +28,7 @@ public class TEntityMoveAction : GameChannelNetMsgTActionBase<TEntityMoveRespons
                     continue;
                 }
 
-                if (entity.Root.TryGetComponent(out NetInputMove netMove))
+                if (entity.TryGetComponent(out NetInputMove netMove))
                 {
                     netMove.ReceiveMoveStep(entityMove.CurLocation, entityMove.DestLocation, entityMove.Type, entityMove.Dir);
                 }

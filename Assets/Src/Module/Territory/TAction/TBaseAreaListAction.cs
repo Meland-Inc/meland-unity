@@ -20,7 +20,7 @@ public class TBaseAreaListAction : GameChannelNetMsgTActionBase<TBaseAreaListRes
         }
         if (rsp.SystemArea != null && rsp.SystemArea.Count > 0)
         {
-            DataManager.Territory.InitSystemAreaData(rsp.SystemArea);
+            // DataManager.Territory.InitSystemAreaData(rsp.SystemArea);
         }
         return true;
     }

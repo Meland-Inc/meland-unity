@@ -2,7 +2,7 @@
  * @Author: xiang huan
  * @Date: 2022-06-16 14:18:24
  * @Description: xiang huan
- * @FilePath: /meland-unity/Assets/Src/Module/Territory/TerritoryModel.cs
+ * @FilePath /Assets/Src/Module/Territory/TerritoryModel.cs
  * 
  */
 
@@ -193,7 +193,7 @@ public class TerritoryModel : DataModelBase
     {
         MelandGame3.BigWorldPlayerArea areaData = new();
         areaData.OwnerId = TerritoryDefine.WORLD_SYSTEM_BORDER_AREA_UID;
-        areaData.VipLandTiles.AddRange(rcIndexList);
+        // areaData.VipLandTiles.AddRange(rcIndexList);
         _ = GetAddPlayerAreaData(areaData);
     }
 

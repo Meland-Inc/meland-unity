@@ -1,0 +1,12 @@
+xc2.png
+size:128,64
+filter:Linear,Linear
+pma:true
+c1
+bounds:93,3,28,35
+offsets:0,0,30,35
+c2
+bounds:0,0,38,44
+rotate:90
+y
+bounds:44,2,49,36

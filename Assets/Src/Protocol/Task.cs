@@ -24,42 +24,43 @@ namespace Bian {
     static TaskReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgp0YXNrLnByb3RvEgRCaWFuIkIKEVRhc2tPYmplY3RpdmVJdGVtEhAKCGl0",
-            "ZW1fY2lkGAEgASgFEgsKA251bRgCIAEoBRIOCgZuZnRfaWQYAyABKAkiNAoU",
-            "VGFza09iamVjdGl2ZU1vbnN0ZXISDwoHbW9uX2NpZBgBIAEoBRILCgNudW0Y",
-            "AiABKAUiKwoTVGFza09iamVjdGl2ZU1vdmVUbxIJCgFyGAEgASgFEgkKAWMY",
-            "AiABKAUiOAoRVGFza09iamVjdGl2ZVF1aXoSEQoJcXVpel90eXBlGAEgASgF",
-            "EhAKCHF1aXpfbnVtGAIgASgFIvcBCgtUYXNrU2V0dGluZxIcCgRraW5kGAEg",
-            "ASgOMg4uQmlhbi5UYXNrVHlwZRINCgNudW0YCyABKAVIABInCgRpdGVtGAwg",
-            "ASgLMhcuQmlhbi5UYXNrT2JqZWN0aXZlSXRlbUgAEi4KCG1vbl9pbmZvGA0g",
-            "ASgLMhouQmlhbi5UYXNrT2JqZWN0aXZlTW9uc3RlckgAEiwKB3Rhcl9wb3MY",
-            "DiABKAsyGS5CaWFuLlRhc2tPYmplY3RpdmVNb3ZlVG9IABIsCglxdWl6X2lu",
-            "Zm8YDyABKAsyFy5CaWFuLlRhc2tPYmplY3RpdmVRdWl6SABCBgoEZGF0YSJi",
-            "CgRUYXNrEgoKAmlkGAEgASgFEhwKBGtpbmQYAiABKA4yDi5CaWFuLlRhc2tU",
-            "eXBlEiIKB3NldHRpbmcYAyABKAsyES5CaWFuLlRhc2tTZXR0aW5nEgwKBHJh",
-            "dGUYBCABKAUifAoIVGFza0xpc3QSCgoCaWQYASABKAUSIAoEa2luZBgCIAEo",
-            "DjISLkJpYW4uVGFza0xpc3RUeXBlEgwKBHJhdGUYAyABKAUSHAoIY3VyX3Rh",
-            "c2sYBCABKAsyCi5CaWFuLlRhc2sSFgoOcmVjZWl2ZV9yZXdhcmQYBSABKAUi",
-            "MAoKUGxheWVyVGFzaxIiCgp0YXNrX2xpc3RzGAEgAygLMg4uQmlhbi5UYXNr",
-            "TGlzdCrhAQoIVGFza1R5cGUSHAoYVGFza1R5cGVfVGFza1R5cGVVbmtub3du",
-            "EAASHAoYVGFza1R5cGVfVGFza1R5cGVHZXRJdGVtEAESHAoYVGFza1R5cGVf",
-            "VGFza1R5cGVVc2VJdGVtEAISIAocVGFza1R5cGVfVGFza1R5cGVLaWxsTW9u",
-            "c3RlchADEhsKF1Rhc2tUeXBlX1Rhc2tUeXBlTW92ZVRvEAQSGQoVVGFza1R5",
-            "cGVfVGFza1R5cGVRdWl6EAUSIQodVGFza1R5cGVfVGFza1R5cGVPY2N1cGll",
-            "ZExhbmQQBiqjAQoMVGFza0xpc3RUeXBlEiQKIFRhc2tMaXN0VHlwZV9UYXNr",
-            "TGlzdFR5cGVVbmtub3duEAASIgoeVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlw",
-            "ZURhaWx5EAESJQohVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZVJld2FyZGVk",
-            "EAISIgoeVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZU90aGVyEANiBnByb3Rv",
-            "Mw=="));
+            "Cgp0YXNrLnByb3RvEgRCaWFuIj8KDlRhc2tPcHRpb25JdGVtEhAKCGl0ZW1f",
+            "Y2lkGAEgASgFEgsKA251bRgCIAEoBRIOCgZuZnRfaWQYAyABKAkiMQoRVGFz",
+            "a09wdGlvbk1vbnN0ZXISDwoHbW9uX2NpZBgBIAEoBRILCgNudW0YAiABKAUi",
+            "KAoQVGFza09wdGlvbk1vdmVUbxIJCgFyGAEgASgFEgkKAWMYAiABKAUiNQoO",
+            "VGFza09wdGlvblF1aXoSEQoJcXVpel90eXBlGAEgASgFEhAKCHF1aXpfbnVt",
+            "GAIgASgFIu0BCg1UYXNrT3B0aW9uQ25mEhwKBGtpbmQYASABKA4yDi5CaWFu",
+            "LlRhc2tUeXBlEg0KA251bRgLIAEoBUgAEiQKBGl0ZW0YDCABKAsyFC5CaWFu",
+            "LlRhc2tPcHRpb25JdGVtSAASKwoIbW9uX2luZm8YDSABKAsyFy5CaWFuLlRh",
+            "c2tPcHRpb25Nb25zdGVySAASKQoHdGFyX3BvcxgOIAEoCzIWLkJpYW4uVGFz",
+            "a09wdGlvbk1vdmVUb0gAEikKCXF1aXpfaW5mbxgPIAEoCzIULkJpYW4uVGFz",
+            "a09wdGlvblF1aXpIAEIGCgRkYXRhIkMKClRhc2tPcHRpb24SJwoKb3B0aW9u",
+            "X2NuZhgBIAEoCzITLkJpYW4uVGFza09wdGlvbkNuZhIMCgRyYXRlGAIgASgF",
+            "Il0KBFRhc2sSDwoHdGFza19pZBgBIAEoBRIhCgl0YXNrX2tpbmQYAiABKA4y",
+            "Di5CaWFuLlRhc2tUeXBlEiEKB29wdGlvbnMYAyADKAsyEC5CaWFuLlRhc2tP",
+            "cHRpb24ifAoIVGFza0xpc3QSCgoCaWQYASABKAUSIAoEa2luZBgCIAEoDjIS",
+            "LkJpYW4uVGFza0xpc3RUeXBlEgwKBHJhdGUYAyABKAUSHAoIY3VyX3Rhc2sY",
+            "BCABKAsyCi5CaWFuLlRhc2sSFgoOcmVjZWl2ZV9yZXdhcmQYBSABKAUiMAoK",
+            "UGxheWVyVGFzaxIiCgp0YXNrX2xpc3RzGAEgAygLMg4uQmlhbi5UYXNrTGlz",
+            "dCrhAQoIVGFza1R5cGUSHAoYVGFza1R5cGVfVGFza1R5cGVVbmtub3duEAAS",
+            "HAoYVGFza1R5cGVfVGFza1R5cGVHZXRJdGVtEAESHAoYVGFza1R5cGVfVGFz",
+            "a1R5cGVVc2VJdGVtEAISIAocVGFza1R5cGVfVGFza1R5cGVLaWxsTW9uc3Rl",
+            "chADEhsKF1Rhc2tUeXBlX1Rhc2tUeXBlTW92ZVRvEAQSGQoVVGFza1R5cGVf",
+            "VGFza1R5cGVRdWl6EAUSIQodVGFza1R5cGVfVGFza1R5cGVPY2N1cGllZExh",
+            "bmQQBiqjAQoMVGFza0xpc3RUeXBlEiQKIFRhc2tMaXN0VHlwZV9UYXNrTGlz",
+            "dFR5cGVVbmtub3duEAASIgoeVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZURh",
+            "aWx5EAESJQohVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZVJld2FyZGVkEAIS",
+            "IgoeVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZU90aGVyEANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.TaskType), typeof(global::Bian.TaskListType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskObjectiveItem), global::Bian.TaskObjectiveItem.Parser, new[]{ "ItemCid", "Num", "NftId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskObjectiveMonster), global::Bian.TaskObjectiveMonster.Parser, new[]{ "MonCid", "Num" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskObjectiveMoveTo), global::Bian.TaskObjectiveMoveTo.Parser, new[]{ "R", "C" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskObjectiveQuiz), global::Bian.TaskObjectiveQuiz.Parser, new[]{ "QuizType", "QuizNum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskSetting), global::Bian.TaskSetting.Parser, new[]{ "Kind", "Num", "Item", "MonInfo", "TarPos", "QuizInfo" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Task), global::Bian.Task.Parser, new[]{ "Id", "Kind", "Setting", "Rate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionItem), global::Bian.TaskOptionItem.Parser, new[]{ "ItemCid", "Num", "NftId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionMonster), global::Bian.TaskOptionMonster.Parser, new[]{ "MonCid", "Num" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionMoveTo), global::Bian.TaskOptionMoveTo.Parser, new[]{ "R", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionQuiz), global::Bian.TaskOptionQuiz.Parser, new[]{ "QuizType", "QuizNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionCnf), global::Bian.TaskOptionCnf.Parser, new[]{ "Kind", "Num", "Item", "MonInfo", "TarPos", "QuizInfo" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOption), global::Bian.TaskOption.Parser, new[]{ "OptionCnf", "Rate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Task), global::Bian.Task.Parser, new[]{ "TaskId", "TaskKind", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskList), global::Bian.TaskList.Parser, new[]{ "Id", "Kind", "Rate", "CurTask", "ReceiveReward" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerTask), global::Bian.PlayerTask.Parser, new[]{ "TaskLists" }, null, null, null, null)
           }));
@@ -115,16 +116,16 @@ namespace Bian {
   #endregion
 
   #region Messages
-  public sealed partial class TaskObjectiveItem : pb::IMessage<TaskObjectiveItem>
+  public sealed partial class TaskOptionItem : pb::IMessage<TaskOptionItem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TaskObjectiveItem> _parser = new pb::MessageParser<TaskObjectiveItem>(() => new TaskObjectiveItem());
+    private static readonly pb::MessageParser<TaskOptionItem> _parser = new pb::MessageParser<TaskOptionItem>(() => new TaskOptionItem());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskObjectiveItem> Parser { get { return _parser; } }
+    public static pb::MessageParser<TaskOptionItem> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,7 +141,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveItem() {
+    public TaskOptionItem() {
       OnConstruction();
     }
 
@@ -148,7 +149,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveItem(TaskObjectiveItem other) : this() {
+    public TaskOptionItem(TaskOptionItem other) : this() {
       itemCid_ = other.itemCid_;
       num_ = other.num_;
       nftId_ = other.nftId_;
@@ -157,8 +158,8 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveItem Clone() {
-      return new TaskObjectiveItem(this);
+    public TaskOptionItem Clone() {
+      return new TaskOptionItem(this);
     }
 
     /// <summary>Field number for the "item_cid" field.</summary>
@@ -203,12 +204,12 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as TaskObjectiveItem);
+      return Equals(other as TaskOptionItem);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskObjectiveItem other) {
+    public bool Equals(TaskOptionItem other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -307,7 +308,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskObjectiveItem other) {
+    public void MergeFrom(TaskOptionItem other) {
       if (other == null) {
         return;
       }
@@ -381,16 +382,16 @@ namespace Bian {
 
   }
 
-  public sealed partial class TaskObjectiveMonster : pb::IMessage<TaskObjectiveMonster>
+  public sealed partial class TaskOptionMonster : pb::IMessage<TaskOptionMonster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TaskObjectiveMonster> _parser = new pb::MessageParser<TaskObjectiveMonster>(() => new TaskObjectiveMonster());
+    private static readonly pb::MessageParser<TaskOptionMonster> _parser = new pb::MessageParser<TaskOptionMonster>(() => new TaskOptionMonster());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskObjectiveMonster> Parser { get { return _parser; } }
+    public static pb::MessageParser<TaskOptionMonster> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -406,7 +407,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveMonster() {
+    public TaskOptionMonster() {
       OnConstruction();
     }
 
@@ -414,7 +415,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveMonster(TaskObjectiveMonster other) : this() {
+    public TaskOptionMonster(TaskOptionMonster other) : this() {
       monCid_ = other.monCid_;
       num_ = other.num_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -422,8 +423,8 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveMonster Clone() {
-      return new TaskObjectiveMonster(this);
+    public TaskOptionMonster Clone() {
+      return new TaskOptionMonster(this);
     }
 
     /// <summary>Field number for the "mon_cid" field.</summary>
@@ -453,12 +454,12 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as TaskObjectiveMonster);
+      return Equals(other as TaskOptionMonster);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskObjectiveMonster other) {
+    public bool Equals(TaskOptionMonster other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -544,7 +545,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskObjectiveMonster other) {
+    public void MergeFrom(TaskOptionMonster other) {
       if (other == null) {
         return;
       }
@@ -607,16 +608,16 @@ namespace Bian {
 
   }
 
-  public sealed partial class TaskObjectiveMoveTo : pb::IMessage<TaskObjectiveMoveTo>
+  public sealed partial class TaskOptionMoveTo : pb::IMessage<TaskOptionMoveTo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TaskObjectiveMoveTo> _parser = new pb::MessageParser<TaskObjectiveMoveTo>(() => new TaskObjectiveMoveTo());
+    private static readonly pb::MessageParser<TaskOptionMoveTo> _parser = new pb::MessageParser<TaskOptionMoveTo>(() => new TaskOptionMoveTo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskObjectiveMoveTo> Parser { get { return _parser; } }
+    public static pb::MessageParser<TaskOptionMoveTo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -632,7 +633,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveMoveTo() {
+    public TaskOptionMoveTo() {
       OnConstruction();
     }
 
@@ -640,7 +641,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveMoveTo(TaskObjectiveMoveTo other) : this() {
+    public TaskOptionMoveTo(TaskOptionMoveTo other) : this() {
       r_ = other.r_;
       c_ = other.c_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -648,8 +649,8 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveMoveTo Clone() {
-      return new TaskObjectiveMoveTo(this);
+    public TaskOptionMoveTo Clone() {
+      return new TaskOptionMoveTo(this);
     }
 
     /// <summary>Field number for the "r" field.</summary>
@@ -679,12 +680,12 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as TaskObjectiveMoveTo);
+      return Equals(other as TaskOptionMoveTo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskObjectiveMoveTo other) {
+    public bool Equals(TaskOptionMoveTo other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -770,7 +771,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskObjectiveMoveTo other) {
+    public void MergeFrom(TaskOptionMoveTo other) {
       if (other == null) {
         return;
       }
@@ -833,16 +834,16 @@ namespace Bian {
 
   }
 
-  public sealed partial class TaskObjectiveQuiz : pb::IMessage<TaskObjectiveQuiz>
+  public sealed partial class TaskOptionQuiz : pb::IMessage<TaskOptionQuiz>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TaskObjectiveQuiz> _parser = new pb::MessageParser<TaskObjectiveQuiz>(() => new TaskObjectiveQuiz());
+    private static readonly pb::MessageParser<TaskOptionQuiz> _parser = new pb::MessageParser<TaskOptionQuiz>(() => new TaskOptionQuiz());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskObjectiveQuiz> Parser { get { return _parser; } }
+    public static pb::MessageParser<TaskOptionQuiz> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -858,7 +859,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveQuiz() {
+    public TaskOptionQuiz() {
       OnConstruction();
     }
 
@@ -866,7 +867,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveQuiz(TaskObjectiveQuiz other) : this() {
+    public TaskOptionQuiz(TaskOptionQuiz other) : this() {
       quizType_ = other.quizType_;
       quizNum_ = other.quizNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -874,8 +875,8 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskObjectiveQuiz Clone() {
-      return new TaskObjectiveQuiz(this);
+    public TaskOptionQuiz Clone() {
+      return new TaskOptionQuiz(this);
     }
 
     /// <summary>Field number for the "quiz_type" field.</summary>
@@ -905,12 +906,12 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as TaskObjectiveQuiz);
+      return Equals(other as TaskOptionQuiz);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskObjectiveQuiz other) {
+    public bool Equals(TaskOptionQuiz other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -996,7 +997,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskObjectiveQuiz other) {
+    public void MergeFrom(TaskOptionQuiz other) {
       if (other == null) {
         return;
       }
@@ -1059,16 +1060,16 @@ namespace Bian {
 
   }
 
-  public sealed partial class TaskSetting : pb::IMessage<TaskSetting>
+  public sealed partial class TaskOptionCnf : pb::IMessage<TaskOptionCnf>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TaskSetting> _parser = new pb::MessageParser<TaskSetting>(() => new TaskSetting());
+    private static readonly pb::MessageParser<TaskOptionCnf> _parser = new pb::MessageParser<TaskOptionCnf>(() => new TaskOptionCnf());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TaskSetting> Parser { get { return _parser; } }
+    public static pb::MessageParser<TaskOptionCnf> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1084,7 +1085,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskSetting() {
+    public TaskOptionCnf() {
       OnConstruction();
     }
 
@@ -1092,7 +1093,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskSetting(TaskSetting other) : this() {
+    public TaskOptionCnf(TaskOptionCnf other) : this() {
       kind_ = other.kind_;
       switch (other.DataCase) {
         case DataOneofCase.Num:
@@ -1117,8 +1118,8 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TaskSetting Clone() {
-      return new TaskSetting(this);
+    public TaskOptionCnf Clone() {
+      return new TaskOptionCnf(this);
     }
 
     /// <summary>Field number for the "kind" field.</summary>
@@ -1149,8 +1150,8 @@ namespace Bian {
     public const int ItemFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskObjectiveItem Item {
-      get { return dataCase_ == DataOneofCase.Item ? (global::Bian.TaskObjectiveItem) data_ : null; }
+    public global::Bian.TaskOptionItem Item {
+      get { return dataCase_ == DataOneofCase.Item ? (global::Bian.TaskOptionItem) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Item;
@@ -1161,8 +1162,8 @@ namespace Bian {
     public const int MonInfoFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskObjectiveMonster MonInfo {
-      get { return dataCase_ == DataOneofCase.MonInfo ? (global::Bian.TaskObjectiveMonster) data_ : null; }
+    public global::Bian.TaskOptionMonster MonInfo {
+      get { return dataCase_ == DataOneofCase.MonInfo ? (global::Bian.TaskOptionMonster) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.MonInfo;
@@ -1173,8 +1174,8 @@ namespace Bian {
     public const int TarPosFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskObjectiveMoveTo TarPos {
-      get { return dataCase_ == DataOneofCase.TarPos ? (global::Bian.TaskObjectiveMoveTo) data_ : null; }
+    public global::Bian.TaskOptionMoveTo TarPos {
+      get { return dataCase_ == DataOneofCase.TarPos ? (global::Bian.TaskOptionMoveTo) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.TarPos;
@@ -1185,8 +1186,8 @@ namespace Bian {
     public const int QuizInfoFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskObjectiveQuiz QuizInfo {
-      get { return dataCase_ == DataOneofCase.QuizInfo ? (global::Bian.TaskObjectiveQuiz) data_ : null; }
+    public global::Bian.TaskOptionQuiz QuizInfo {
+      get { return dataCase_ == DataOneofCase.QuizInfo ? (global::Bian.TaskOptionQuiz) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.QuizInfo;
@@ -1220,12 +1221,12 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as TaskSetting);
+      return Equals(other as TaskOptionCnf);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TaskSetting other) {
+    public bool Equals(TaskOptionCnf other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1365,7 +1366,7 @@ namespace Bian {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TaskSetting other) {
+    public void MergeFrom(TaskOptionCnf other) {
       if (other == null) {
         return;
       }
@@ -1378,25 +1379,25 @@ namespace Bian {
           break;
         case DataOneofCase.Item:
           if (Item == null) {
-            Item = new global::Bian.TaskObjectiveItem();
+            Item = new global::Bian.TaskOptionItem();
           }
           Item.MergeFrom(other.Item);
           break;
         case DataOneofCase.MonInfo:
           if (MonInfo == null) {
-            MonInfo = new global::Bian.TaskObjectiveMonster();
+            MonInfo = new global::Bian.TaskOptionMonster();
           }
           MonInfo.MergeFrom(other.MonInfo);
           break;
         case DataOneofCase.TarPos:
           if (TarPos == null) {
-            TarPos = new global::Bian.TaskObjectiveMoveTo();
+            TarPos = new global::Bian.TaskOptionMoveTo();
           }
           TarPos.MergeFrom(other.TarPos);
           break;
         case DataOneofCase.QuizInfo:
           if (QuizInfo == null) {
-            QuizInfo = new global::Bian.TaskObjectiveQuiz();
+            QuizInfo = new global::Bian.TaskOptionQuiz();
           }
           QuizInfo.MergeFrom(other.QuizInfo);
           break;
@@ -1426,7 +1427,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.TaskObjectiveItem subBuilder = new global::Bian.TaskObjectiveItem();
+            global::Bian.TaskOptionItem subBuilder = new global::Bian.TaskOptionItem();
             if (dataCase_ == DataOneofCase.Item) {
               subBuilder.MergeFrom(Item);
             }
@@ -1435,7 +1436,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.TaskObjectiveMonster subBuilder = new global::Bian.TaskObjectiveMonster();
+            global::Bian.TaskOptionMonster subBuilder = new global::Bian.TaskOptionMonster();
             if (dataCase_ == DataOneofCase.MonInfo) {
               subBuilder.MergeFrom(MonInfo);
             }
@@ -1444,7 +1445,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.TaskObjectiveMoveTo subBuilder = new global::Bian.TaskObjectiveMoveTo();
+            global::Bian.TaskOptionMoveTo subBuilder = new global::Bian.TaskOptionMoveTo();
             if (dataCase_ == DataOneofCase.TarPos) {
               subBuilder.MergeFrom(TarPos);
             }
@@ -1453,7 +1454,7 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.TaskObjectiveQuiz subBuilder = new global::Bian.TaskObjectiveQuiz();
+            global::Bian.TaskOptionQuiz subBuilder = new global::Bian.TaskOptionQuiz();
             if (dataCase_ == DataOneofCase.QuizInfo) {
               subBuilder.MergeFrom(QuizInfo);
             }
@@ -1485,7 +1486,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.TaskObjectiveItem subBuilder = new global::Bian.TaskObjectiveItem();
+            global::Bian.TaskOptionItem subBuilder = new global::Bian.TaskOptionItem();
             if (dataCase_ == DataOneofCase.Item) {
               subBuilder.MergeFrom(Item);
             }
@@ -1494,7 +1495,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.TaskObjectiveMonster subBuilder = new global::Bian.TaskObjectiveMonster();
+            global::Bian.TaskOptionMonster subBuilder = new global::Bian.TaskOptionMonster();
             if (dataCase_ == DataOneofCase.MonInfo) {
               subBuilder.MergeFrom(MonInfo);
             }
@@ -1503,7 +1504,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.TaskObjectiveMoveTo subBuilder = new global::Bian.TaskObjectiveMoveTo();
+            global::Bian.TaskOptionMoveTo subBuilder = new global::Bian.TaskOptionMoveTo();
             if (dataCase_ == DataOneofCase.TarPos) {
               subBuilder.MergeFrom(TarPos);
             }
@@ -1512,12 +1513,253 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.TaskObjectiveQuiz subBuilder = new global::Bian.TaskObjectiveQuiz();
+            global::Bian.TaskOptionQuiz subBuilder = new global::Bian.TaskOptionQuiz();
             if (dataCase_ == DataOneofCase.QuizInfo) {
               subBuilder.MergeFrom(QuizInfo);
             }
             input.ReadMessage(subBuilder);
             QuizInfo = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TaskOption : pb::IMessage<TaskOption>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TaskOption> _parser = new pb::MessageParser<TaskOption>(() => new TaskOption());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TaskOption> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskOption() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskOption(TaskOption other) : this() {
+      optionCnf_ = other.optionCnf_ != null ? other.optionCnf_.Clone() : null;
+      rate_ = other.rate_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskOption Clone() {
+      return new TaskOption(this);
+    }
+
+    /// <summary>Field number for the "option_cnf" field.</summary>
+    public const int OptionCnfFieldNumber = 1;
+    private global::Bian.TaskOptionCnf optionCnf_;
+    /// <summary>
+    /// 配置
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Bian.TaskOptionCnf OptionCnf {
+      get { return optionCnf_; }
+      set {
+        optionCnf_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rate" field.</summary>
+    public const int RateFieldNumber = 2;
+    private int rate_;
+    /// <summary>
+    /// 进度
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Rate {
+      get { return rate_; }
+      set {
+        rate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TaskOption);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TaskOption other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OptionCnf, other.OptionCnf)) return false;
+      if (Rate != other.Rate) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (optionCnf_ != null) hash ^= OptionCnf.GetHashCode();
+      if (Rate != 0) hash ^= Rate.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (optionCnf_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OptionCnf);
+      }
+      if (Rate != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Rate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (optionCnf_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OptionCnf);
+      }
+      if (Rate != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Rate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (optionCnf_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OptionCnf);
+      }
+      if (Rate != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Rate);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TaskOption other) {
+      if (other == null) {
+        return;
+      }
+      if (other.optionCnf_ != null) {
+        if (optionCnf_ == null) {
+          OptionCnf = new global::Bian.TaskOptionCnf();
+        }
+        OptionCnf.MergeFrom(other.OptionCnf);
+      }
+      if (other.Rate != 0) {
+        Rate = other.Rate;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (optionCnf_ == null) {
+              OptionCnf = new global::Bian.TaskOptionCnf();
+            }
+            input.ReadMessage(OptionCnf);
+            break;
+          }
+          case 16: {
+            Rate = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (optionCnf_ == null) {
+              OptionCnf = new global::Bian.TaskOptionCnf();
+            }
+            input.ReadMessage(OptionCnf);
+            break;
+          }
+          case 16: {
+            Rate = input.ReadInt32();
             break;
           }
         }
@@ -1544,7 +1786,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1564,10 +1806,9 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Task(Task other) : this() {
-      id_ = other.id_;
-      kind_ = other.kind_;
-      setting_ = other.setting_ != null ? other.setting_.Clone() : null;
-      rate_ = other.rate_;
+      taskId_ = other.taskId_;
+      taskKind_ = other.taskKind_;
+      options_ = other.options_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1577,64 +1818,48 @@ namespace Bian {
       return new Task(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
+    /// <summary>Field number for the "task_id" field.</summary>
+    public const int TaskIdFieldNumber = 1;
+    private int taskId_;
     /// <summary>
     /// 任务 ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
+    public int TaskId {
+      get { return taskId_; }
       set {
-        id_ = value;
+        taskId_ = value;
       }
     }
 
-    /// <summary>Field number for the "kind" field.</summary>
-    public const int KindFieldNumber = 2;
-    private global::Bian.TaskType kind_ = global::Bian.TaskType.TaskTypeUnknown;
+    /// <summary>Field number for the "task_kind" field.</summary>
+    public const int TaskKindFieldNumber = 2;
+    private global::Bian.TaskType taskKind_ = global::Bian.TaskType.TaskTypeUnknown;
     /// <summary>
     /// 任务类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskType Kind {
-      get { return kind_; }
+    public global::Bian.TaskType TaskKind {
+      get { return taskKind_; }
       set {
-        kind_ = value;
+        taskKind_ = value;
       }
     }
 
-    /// <summary>Field number for the "setting" field.</summary>
-    public const int SettingFieldNumber = 3;
-    private global::Bian.TaskSetting setting_;
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Bian.TaskOption> _repeated_options_codec
+        = pb::FieldCodec.ForMessage(26, global::Bian.TaskOption.Parser);
+    private readonly pbc::RepeatedField<global::Bian.TaskOption> options_ = new pbc::RepeatedField<global::Bian.TaskOption>();
     /// <summary>
-    /// 配置
+    /// 子项信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskSetting Setting {
-      get { return setting_; }
-      set {
-        setting_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rate" field.</summary>
-    public const int RateFieldNumber = 4;
-    private int rate_;
-    /// <summary>
-    /// 进度
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Rate {
-      get { return rate_; }
-      set {
-        rate_ = value;
-      }
+    public pbc::RepeatedField<global::Bian.TaskOption> Options {
+      get { return options_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1652,10 +1877,9 @@ namespace Bian {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
-      if (Kind != other.Kind) return false;
-      if (!object.Equals(Setting, other.Setting)) return false;
-      if (Rate != other.Rate) return false;
+      if (TaskId != other.TaskId) return false;
+      if (TaskKind != other.TaskKind) return false;
+      if(!options_.Equals(other.options_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1663,10 +1887,9 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) hash ^= Kind.GetHashCode();
-      if (setting_ != null) hash ^= Setting.GetHashCode();
-      if (Rate != 0) hash ^= Rate.GetHashCode();
+      if (TaskId != 0) hash ^= TaskId.GetHashCode();
+      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) hash ^= TaskKind.GetHashCode();
+      hash ^= options_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1685,22 +1908,15 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
+      if (TaskId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(Id);
+        output.WriteInt32(TaskId);
       }
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Kind);
+        output.WriteEnum((int) TaskKind);
       }
-      if (setting_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Setting);
-      }
-      if (Rate != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(Rate);
-      }
+      options_.WriteTo(output, _repeated_options_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1711,22 +1927,15 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
+      if (TaskId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(Id);
+        output.WriteInt32(TaskId);
       }
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Kind);
+        output.WriteEnum((int) TaskKind);
       }
-      if (setting_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Setting);
-      }
-      if (Rate != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(Rate);
-      }
+      options_.WriteTo(ref output, _repeated_options_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1737,18 +1946,13 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      if (TaskId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TaskId);
       }
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
+      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskKind);
       }
-      if (setting_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Setting);
-      }
-      if (Rate != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Rate);
-      }
+      size += options_.CalculateSize(_repeated_options_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1761,21 +1965,13 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
+      if (other.TaskId != 0) {
+        TaskId = other.TaskId;
       }
-      if (other.Kind != global::Bian.TaskType.TaskTypeUnknown) {
-        Kind = other.Kind;
+      if (other.TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
+        TaskKind = other.TaskKind;
       }
-      if (other.setting_ != null) {
-        if (setting_ == null) {
-          Setting = new global::Bian.TaskSetting();
-        }
-        Setting.MergeFrom(other.Setting);
-      }
-      if (other.Rate != 0) {
-        Rate = other.Rate;
-      }
+      options_.Add(other.options_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1792,22 +1988,15 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Id = input.ReadInt32();
+            TaskId = input.ReadInt32();
             break;
           }
           case 16: {
-            Kind = (global::Bian.TaskType) input.ReadEnum();
+            TaskKind = (global::Bian.TaskType) input.ReadEnum();
             break;
           }
           case 26: {
-            if (setting_ == null) {
-              Setting = new global::Bian.TaskSetting();
-            }
-            input.ReadMessage(Setting);
-            break;
-          }
-          case 32: {
-            Rate = input.ReadInt32();
+            options_.AddEntriesFrom(input, _repeated_options_codec);
             break;
           }
         }
@@ -1826,22 +2015,15 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Id = input.ReadInt32();
+            TaskId = input.ReadInt32();
             break;
           }
           case 16: {
-            Kind = (global::Bian.TaskType) input.ReadEnum();
+            TaskKind = (global::Bian.TaskType) input.ReadEnum();
             break;
           }
           case 26: {
-            if (setting_ == null) {
-              Setting = new global::Bian.TaskSetting();
-            }
-            input.ReadMessage(Setting);
-            break;
-          }
-          case 32: {
-            Rate = input.ReadInt32();
+            options_.AddEntriesFrom(ref input, _repeated_options_codec);
             break;
           }
         }
@@ -1865,7 +2047,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2229,7 +2411,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

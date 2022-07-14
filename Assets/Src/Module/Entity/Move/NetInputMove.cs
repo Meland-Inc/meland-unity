@@ -10,11 +10,21 @@ public class NetInputMove : MonoBehaviour
     private const float MAX_ALLOW_POSITION_OFFSET = 1f;//最大运行位置偏差距离 否则会强拉
 
     private MovementType _curMoveType = MovementType.MovementTypeUnknown;
+    private PathMove _pathMove;
 
 #if UNITY_EDITOR
     private UnityEngine.Vector3 _svrCurPos;
     private UnityEngine.Vector3 _svrDestPos;
 #endif
+
+    private void OnDestroy()
+    {
+        if (_pathMove != null)
+        {
+            Destroy(_pathMove);
+            _pathMove = null;
+        }
+    }
 
     /// <summary>
     /// 强制设置到某个位置
@@ -29,6 +39,12 @@ public class NetInputMove : MonoBehaviour
 
     public void ReceiveMoveStep(EntityMoveStep cur, EntityMoveStep dest, MovementType moveType, MelandGame3.Vector3 dir)
     {
+        if (_pathMove == null)
+        {
+            _pathMove = gameObject.AddComponent<PathMove>();
+            _pathMove.IsRigidbodyMove = false;
+        }
+
         transform.forward = NetUtil.SvrToClientDir(dir);
         ChangeMoveType(moveType);
 
@@ -42,12 +58,14 @@ public class NetInputMove : MonoBehaviour
         UnityEngine.Vector3 svrDest = dest == null ? default : NetUtil.SvrToClientVector3(dest.Location.Loc);
         if (svrDest == default)
         {
-            _ = transform.DOKill();
+            _pathMove.StopMove();
         }
         else
         {
             float duration = (dest.Stamp - cur.Stamp) * TimeDefine.MS_2_S;
-            _ = transform.DOMove(svrDest, duration).SetEase(Ease.Linear);
+            float distance = UnityEngine.Vector3.Distance(svrCur, svrDest);
+            _pathMove.SetMoveSpeed(distance / duration);
+            _pathMove.MovePoint(svrDest);
         }
 
 

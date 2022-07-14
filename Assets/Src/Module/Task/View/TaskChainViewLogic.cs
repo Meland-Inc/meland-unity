@@ -1,15 +1,21 @@
 
 using System;
 using FairyGUI;
+
+/// <summary>
+/// 任务链视图逻辑
+/// </summary>
 public class TaskChainViewLogic : FGUILogicCpt
 {
     private TaskChainData _taskChainData;
+    private TaskDefine.eTaskChainState _chainState;
     private GButton _btnBox;
     private Controller _ctrBtnBoxState;
     private Controller _ctrShow;
+    // 任务进度
     private GProgressBar _progressBar;
+    // 任务倒计时
     private GTextField _tfTime;
-
 
     protected override void OnAdd()
     {
@@ -25,61 +31,67 @@ public class TaskChainViewLogic : FGUILogicCpt
     public override void OnOpen()
     {
         base.OnOpen();
-        AddUIEvent();
+        AddEvent();
     }
 
     public override void OnClose()
     {
-        RemoveUIEvent();
+        RemoveEvent();
         base.OnClose();
     }
 
-    private void AddUIEvent()
+    private void AddEvent()
     {
         _btnBox.onClick.Add(onBtnBoxClick);
+
     }
 
-    private void RemoveUIEvent()
+    private void RemoveEvent()
     {
         _btnBox.onClick.Remove(onBtnBoxClick);
+        Message.OnEnterFrame -= OnFrameTimer;
+    }
+
+    public void SetData(TaskChainData taskChainData)
+    {
+        if (taskChainData == null)
+        {
+            return;
+        }
+        _taskChainData = taskChainData;
+        _chainState = _taskChainData.TaskChainState;
+
+        Message.OnEnterFrame -= OnFrameTimer;
+        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == Bian.TaskListType.TaskListTypeDaily)
+        {
+            Message.OnEnterFrame += OnFrameTimer;
+        }
+        OnUpdateTimeUI(0);
+        OnUpdateUI();
     }
 
     private void onBtnBoxClick(EventContext context)
     {
-        TaskDefine.eTaskChainBoxState boxState = _taskChainData.ChainBoxState;
-        // 已领取
-        if (boxState == TaskDefine.eTaskChainBoxState.HADRECEIVE)
-        {
-            return;
-        }
-        // 可领取
-        if (boxState == TaskDefine.eTaskChainBoxState.AVAILABLE)
+        // 可领取 请求领取
+        if (_chainState == TaskDefine.eTaskChainState.AVAILABLE)
         {
             TaskChainRewardReceiveAction.Req(_taskChainData.TaskChainKind);
             return;
         }
-        // 正在进行
-        if (boxState == TaskDefine.eTaskChainBoxState.ONDOING)
+        // 正在进行 弹框展示奖励
+        if (_chainState == TaskDefine.eTaskChainState.ONDOING)
         {
-            AlertRewardData alertVo = new("REWARDS", "REWARDS", "", null, _taskChainData.TaskChainRewards);
+            DRLanguage dRLanguage = GFEntry.DataTable.GetDataTable<DRLanguage>().GetDataRow(10090018);
+            AlertRewardData alertVo = new("REWARDS", dRLanguage.Value, null, null, _taskChainData.TaskChainRewards);
             _ = UICenter.OpenUIAlert<AlertReward>(alertVo);
             return;
         }
-
-    }
-
-    internal void setData(TaskChainData curTaskChain)
-    {
-        _taskChainData = curTaskChain;
-        OnUpdateUI();
     }
 
     private void OnUpdateUI()
     {
-        TaskDefine.eTaskChainBoxState boxState = _taskChainData.ChainBoxState;
-
         // show or hide
-        if (boxState == TaskDefine.eTaskChainBoxState.NONE)
+        if (_chainState == TaskDefine.eTaskChainState.NONE)
         {
             _ctrShow.selectedPage = "false";
             return;
@@ -87,23 +99,43 @@ public class TaskChainViewLogic : FGUILogicCpt
         _ctrShow.selectedPage = "true";
 
         // 进度条
-        _progressBar.max = _taskChainData.MaxChainRate;
-        _progressBar.value = _taskChainData.CurChainRate;
+        _progressBar.max = _taskChainData.MaxTaskChainRate;
+        _progressBar.value = _taskChainData.CurTaskChainRate;
 
         // 宝箱展示样式
-        _ctrBtnBoxState.selectedIndex = (int)boxState;
+        _ctrBtnBoxState.selectedIndex = (int)_chainState;
+    }
 
-        // 宝箱展示倒计时
-        if (boxState == TaskDefine.eTaskChainBoxState.ONDOING)
+    private void OnFrameTimer(float deltaTime)
+    {
+        long mSeconds = _taskChainData.TaskChainEndTimeStamp - TimeUtil.GetServerTimeStamp();
+        long seconds;
+        if (mSeconds <= 0)
         {
-            if (_taskChainData.TaskChainKind == Bian.TaskListType.TaskListTypeRewarded)
-            {
-                _tfTime.text = "";
-            }
-            else
-            {
-                _tfTime.text = "00:00:00";
-            }
+            seconds = 0;
+            Message.OnEnterFrame -= OnFrameTimer;
         }
+        else
+        {
+            seconds = mSeconds / 1000;
+        }
+
+        OnUpdateTimeUI((int)seconds);
+    }
+    private void OnUpdateTimeUI(int seconds)
+    {
+        if (seconds <= 0)
+        {
+            _tfTime.text = "";
+            return;
+        }
+        // 宝箱展示倒计时
+        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == Bian.TaskListType.TaskListTypeDaily)
+        {
+            _tfTime.text = TimeUtil.SecondsToHMS(seconds);
+            return;
+        }
+        _tfTime.text = "";
+
     }
 }

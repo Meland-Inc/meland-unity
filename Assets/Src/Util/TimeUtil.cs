@@ -2,6 +2,9 @@ using System;
 public static class TimeUtil
 {
     public static readonly DateTime DateForm = new(1970, 1, 1, 0, 0, 0, 0);
+    public static readonly int SecondsOfMinute = 60;
+    public static readonly int SecondsOfHour = 3600;
+    public static readonly int SecondsOfDay = 86400;
 
     public static long GetTimeStamp()
     {
@@ -40,6 +43,22 @@ public static class TimeUtil
         int offsetDay = DayOfWeek.Saturday - curDateTime.DayOfWeek;
         DateTime weekEndDataTime = dayEndDataTime.AddDays(offsetDay);
         return weekEndDataTime;
+    }
+
+    // 秒 转 时:分:秒 
+    public static string SecondsToHMS(int nSeconds)
+    {
+        if (nSeconds < 0)
+        {
+            nSeconds = 0;
+        }
+        // int day = Convert.ToInt32(decimal.Floor(nSeconds / SecondsOfDay));
+        nSeconds %= SecondsOfDay;
+        int hour = Convert.ToInt32(decimal.Floor(nSeconds / SecondsOfHour));
+        nSeconds %= SecondsOfHour;
+        int minute = Convert.ToInt32(decimal.Floor(nSeconds / SecondsOfMinute));
+        nSeconds %= SecondsOfMinute;
+        return $"{hour.ToString().PadLeft(2, '0')}:{minute.ToString().PadLeft(2, '0')}:{nSeconds.ToString().PadLeft(2, '0')}";
     }
 
 }

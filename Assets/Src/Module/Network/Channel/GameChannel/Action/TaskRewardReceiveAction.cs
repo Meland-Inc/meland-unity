@@ -17,12 +17,10 @@ public class TaskRewardReceiveAction : GameChannelNetMsgRActionBase<TaskRewardRe
         return true;
     }
 
-    public static void Req(TaskListType taskListType, int taskId, TaskType taskType)
+    public static void Req(TaskListType taskListType)
     {
         TaskRewardRequest req = GenerateReq();
         req.TaskListKind = taskListType;
-        req.TaskId = taskId;
-        req.Kind = taskType;
         SendAction<TaskRewardReceiveAction>(req);
     }
 }

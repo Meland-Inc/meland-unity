@@ -1,14 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
+using Bian;
 using FairyGUI;
+/// <summary>
+/// 任务内容面板逻辑
+/// </summary>
 public class TaskContentViewLogic : FGUILogicCpt
 {
     private TaskChainData _taskChainData;
     private Controller _ctrTaskState;
     private GTextField _tfTitle;
     private GTextField _tfDesc;
-    private GList _lstObject;
+    private GList _lstTaskSubItem;
     private GList _lstTaskChainReward;
     private GList _lstTaskReward;
     private GButton _btnAbandon;
@@ -18,8 +21,9 @@ public class TaskContentViewLogic : FGUILogicCpt
     {
         base.OnAdd();
         _ctrTaskState = GCom.GetController("ctrTaskState");
+        _tfTitle = GCom.GetChild("tfTitle") as GTextField;
         _tfDesc = GCom.GetChild("fDesc") as GTextField;
-        _lstObject = GCom.GetChild("lstObject") as GList;
+        _lstTaskSubItem = GCom.GetChild("lstObject") as GList;
         _lstTaskChainReward = GCom.GetChild("lstTaskChainReward") as GList;
         _lstTaskReward = GCom.GetChild("lstTaskReward") as GList;
         _btnAbandon = GCom.GetChild("btnAbandon") as GButton;
@@ -31,42 +35,91 @@ public class TaskContentViewLogic : FGUILogicCpt
         _lstTaskReward.numItems = 0;
         _lstTaskReward.itemRenderer = TaskRewardItemRenderer;
 
-        _lstObject.numItems = 0;
-        _lstObject.itemRenderer = ListObjectItemRenderer;
+        _lstTaskSubItem.numItems = 0;
+        _lstTaskSubItem.itemRenderer = ListTaskSubItemRenderer;
     }
 
     public void SetData(TaskChainData taskChainData)
     {
+        if (taskChainData == null)
+        {
+            return;
+        }
         _taskChainData = taskChainData;
+
+        // 寻路任务，开启定时检查坐标
+        Message.OnEnterFrame -= OnFramePathFind;
+        if (_taskChainData.CurTaskSubPathFindItem != null)
+        {
+            Message.OnEnterFrame += OnFramePathFind;
+        }
+
         OnUpdateUI();
     }
 
-    public void Update()
+    private void OnFramePathFind(float obj)
     {
+        OnUpdateBtnSubmit();
+    }
 
-        if (DataManager.MainPlayer.Role == null)
-        {
-            return;
-        }
-        if (_taskChainData == null)
-        {
-            return;
-        }
-        if (_taskChainData.CurTaskObjectivePathFind == null)
-        {
-            return;
-        }
-        // todo RC
-        // DataManager.MainPlayer.Role.Transform.position.x
-        // DataManager.MainPlayer.Role.Transform.position.y
-        int R = 1;
-        int C = 1;
-        Bian.TaskOptionMoveTo moveTo = _taskChainData.CurTaskObjectivePathFind.Option.OptionCnf.TarPos;
-        if (moveTo.R == R && moveTo.C == C)
-        {
+    // 更新提交按钮状态
+    private void OnUpdateBtnSubmit()
+    {
+        bool isMeet = CheckMeetSubmitCondition();
 
+        string btnName = "RECEIVE";
+        // 任务为提交道具，名称为 SUBMIT
+        List<TaskDefine.TaskSubItemData> curTaskSubItems = _taskChainData.CurTaskSubItems;
+        if (curTaskSubItems.Count == 1 && curTaskSubItems[0].Option.OptionCnf.Kind == TaskType.TaskTypeGetItem)
+        {
+            btnName = "SUBMIT";
         }
 
+        _btnSubmit.GetController("color").selectedPage = isMeet ? "yellow" : "gray";
+        _btnSubmit.GetController("str").selectedPage = btnName;
+        _btnSubmit.enabled = isMeet;
+    }
+
+    private bool CheckMeetSubmitCondition()
+    {
+        bool isMeet = false;
+
+        List<TaskDefine.TaskSubItemData> curTaskSubItems = _taskChainData.CurTaskSubItems;
+        for (int i = 0; i < curTaskSubItems.Count; i++)
+        {
+            TaskDefine.TaskSubItemData objectData = curTaskSubItems[i];
+            TaskOptionCnf optionCfg = objectData.Option.OptionCnf;
+
+            switch (optionCfg.Kind)
+            {
+                case TaskType.TaskTypeQuiz:
+                case TaskType.TaskTypeKillMonster:
+                case TaskType.TaskTypeUseItem:
+                case TaskType.TaskTypeOccupiedLand:
+                    isMeet = objectData.CurRate >= objectData.MaxRate;
+                    break;
+                case TaskType.TaskTypeMoveTo:
+                    if (DataManager.MainPlayer.Role != null)
+                    {
+                        // todo RC
+                        // DataManager.MainPlayer.Role.Transform.position.x
+                        // DataManager.MainPlayer.Role.Transform.position.y
+                        int RoleR = 1;
+                        int RoleC = 1;
+                        TaskOptionMoveTo moveTo = _taskChainData.CurTaskSubPathFindItem.Option.OptionCnf.TarPos;
+                        isMeet = moveTo.R == RoleR && moveTo.C == RoleC;
+                    }
+                    break;
+                case TaskType.TaskTypeGetItem:
+                    isMeet = true;
+                    break;
+                case TaskType.TaskTypeUnknown:
+                default:
+                    isMeet = false;
+                    break;
+            }
+        }
+        return isMeet;
     }
 
     private void OnUpdateUI()
@@ -92,12 +145,12 @@ public class TaskContentViewLogic : FGUILogicCpt
             return;
         }
         _tfTitle.SetVar("title", _taskChainData.DRTask.Name)
-            .SetVar("cur", _taskChainData.CurChainRate.ToString())
-            .SetVar("max", _taskChainData.MaxChainRate.ToString())
+            .SetVar("cur", _taskChainData.CurTaskChainRate.ToString())
+            .SetVar("max", _taskChainData.MaxTaskChainRate.ToString())
             .FlushVars();
 
         _tfDesc.text = _taskChainData.DRTask.Decs;
-        // _lstObject.numItems
+        _lstTaskSubItem.numItems = _taskChainData.CurTaskSubItems.Count;
         _lstTaskChainReward.numItems = _taskChainData.CurTaskRewards.Count;
     }
 
@@ -126,10 +179,10 @@ public class TaskContentViewLogic : FGUILogicCpt
     }
 
 
-    private void ListObjectItemRenderer(int index, GObject item)
+    private void ListTaskSubItemRenderer(int index, GObject item)
     {
 
-        TaskDefine.TaskObjectData objectData = _taskChainData.CurTaskObjectives[index];
+        TaskDefine.TaskSubItemData objectData = _taskChainData.CurTaskSubItems[index];
         GComponent gItem = item.asCom;
         Controller ctrState = gItem.GetController("ctrState");
         GTextField tfTitle = gItem.GetChild("title") as GTextField;
@@ -140,50 +193,50 @@ public class TaskContentViewLogic : FGUILogicCpt
             .FlushVars();
 
         ctrState.selectedPage = objectData.CurRate >= objectData.MaxRate ? "finished" : "unfinished";
-
     }
 
     public override void OnOpen()
     {
         base.OnOpen();
-        AddUIEvent();
+        AddEvent();
     }
 
     public override void OnClose()
     {
-        RemoveUIEvent();
+        RemoveEvent();
         base.OnClose();
     }
 
-    private void AddUIEvent()
+    private void AddEvent()
     {
         _btnReceive.onClick.Add(OnBtnReceiveClick);
         _btnAbandon.onClick.Add(OnBtnAbandonClick);
         _btnSubmit.onClick.Add(OnBtnSubmitClick);
     }
 
-    private void RemoveUIEvent()
+    private void RemoveEvent()
     {
         _btnReceive.onClick.Remove(OnBtnReceiveClick);
         _btnAbandon.onClick.Remove(OnBtnAbandonClick);
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
+        Message.OnEnterFrame -= OnFramePathFind;
     }
 
     private void OnBtnSubmitClick(EventContext context)
     {
-        if (_taskChainData.CurTask.TaskKind == Bian.TaskType.TaskTypeGetItem)
+        if (_taskChainData.CurTask.TaskKind == TaskType.TaskTypeGetItem)
         {
             SceneModule.TaskMgr.OpenTaskSubmit(_taskChainData);
             return;
         }
-        TaskRewardReceiveAction.Req(_taskChainData.TaskChainKind, _taskChainData.CurTask.TaskId, _taskChainData.CurTask.TaskKind);
+        TaskRewardReceiveAction.Req(_taskChainData.TaskChainKind);
     }
 
     private void OnBtnAbandonClick(EventContext context)
     {
         AlertData alertData = new("ABANDON", "Are you sure you want to abort the mission?", "", () =>
         {
-            TaskAbandonAction.Req(_taskChainData.TaskChainKind, _taskChainData.TaskChainId);
+            TaskAbandonAction.Req(_taskChainData.TaskChainKind);
         });
         _ = UICenter.OpenUIAlert<AlertCommon>(alertData);
 

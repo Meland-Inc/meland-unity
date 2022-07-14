@@ -4,6 +4,11 @@ using MelandGame3;
 
 public static class Message
 {
+
+    #region 通用
+    public static Action<float> OnEnterFrame = delegate { };
+    #endregion
+
     #region  地图场景
 
     /// <summary>

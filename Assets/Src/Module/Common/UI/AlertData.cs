@@ -14,18 +14,13 @@ public class AlertData
     public string Title { get; private set; }
     public string Content { get; private set; }
     public string OKBtnText { get; private set; }
-    public Action OKBtnCb;
+    public Action OKBtnCb = delegate { };
 
     public AlertData(string title = "", string content = "", string okBtnText = "", Action oKBtnCb = null)
     {
         Title = title;
         Content = content;
         OKBtnText = okBtnText;
-        if (OKBtnCb == null)
-        {
-            OKBtnCb = delegate { };
-        }
-
         if (oKBtnCb != null)
         {
             OKBtnCb += oKBtnCb;

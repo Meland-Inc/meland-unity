@@ -14,7 +14,7 @@ public static class TaskDefine
         FINISH
     }
 
-    public enum eTaskChainBoxState
+    public enum eTaskChainState
     {
         NONE,
         AVAILABLE,
@@ -43,7 +43,7 @@ public static class TaskDefine
         {11,"SequenceBalloon"},
     };
 
-    public class TaskObjectData
+    public class TaskSubItemData
     {
         public string Decs;
         public int CurRate;
@@ -52,6 +52,11 @@ public static class TaskDefine
 
     }
 
+    // public class TaskBpItemData
+    // {
+    //     public BpItemData ItemData;
+    //     public int Count;
+    // }
 
 
 }

@@ -3,36 +3,43 @@
 using FairyGUI;
 using FairyGUI.Utils;
 
+/// <summary>
+/// 任务菜单选项  
+/// </summary>
+
 public class TaskMenuItemRender : GButton
 {
     public TaskChainData TaskChainData;
-    private GTextField tfSelectedTitle;
-    private GTextField tfNormalTitle;
-    private Controller ctrSelected;
+    private GTextField _tfSelectedTitle;
+    private GTextField _tfNormalTitle;
+    private Controller _ctrSelected;
     public override void ConstructFromXML(XML xml)
     {
         base.ConstructFromXML(xml);
-        tfSelectedTitle = GetChild("selectedTitle") as GTextField;
-        tfNormalTitle = GetChild("normalTitle") as GTextField;
-        ctrSelected = GetController("selected");
+        _tfSelectedTitle = GetChild("selectedTitle") as GTextField;
+        _tfNormalTitle = GetChild("normalTitle") as GTextField;
+        _ctrSelected = GetController("selected");
 
     }
 
-    public void setData(TaskChainData taskChainData)
+    public void SetData(TaskChainData taskChainData)
     {
+        if (taskChainData == null)
+        {
+            return;
+        }
         TaskChainData = taskChainData;
         OnUpdateUI();
     }
 
-    public void setSelected(bool isSelected)
+    public void SetSelected(bool isSelected)
     {
-        // ctrSelected.selectedPage = taskChainData == _curTaskChain ? "true" : "false";
-        ctrSelected.selectedPage = isSelected ? "true" : "false";
+        _ctrSelected.selectedPage = isSelected ? "true" : "false";
     }
 
     private void OnUpdateUI()
     {
-        tfSelectedTitle.text = TaskChainData.TaskChainName;
-        tfNormalTitle.text = TaskChainData.TaskChainName;
+        _tfSelectedTitle.text = TaskChainData.TaskChainName;
+        _tfNormalTitle.text = TaskChainData.TaskChainName;
     }
 }

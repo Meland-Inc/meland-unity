@@ -8,4 +8,6 @@ public class RewardNftData
     public string Icon;
     public int Count;
     public eNFTQuality Quality;
+    public BpItemData BpItemData;
+
 }

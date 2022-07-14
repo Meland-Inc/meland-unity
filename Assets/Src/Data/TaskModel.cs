@@ -5,7 +5,7 @@ using Google.Protobuf.Collections;
 
 public class TaskModel : DataModelBase
 {
-    public List<TaskChainData> TaskChainList { get; private set; } = new();
+    public readonly List<TaskChainData> TaskChainList = new();
 
     public void InitData(RepeatedField<TaskList> rawTaskChainDatas)
     {
@@ -15,7 +15,7 @@ public class TaskModel : DataModelBase
         {
             TaskChainList.Add(new TaskChainData().UpdateData(rawTaskChainDatas[i]));
         }
-        SceneModule.TaskMgr.OnUpdateTaskChainData.Invoke();
+        SceneModule.TaskMgr.OnInitTaskChainData.Invoke();
     }
 
     public void UpdateData(TaskList rawTaskChainData)

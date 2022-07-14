@@ -16,7 +16,7 @@ public class AlertReward : AlertBase
 
     private void OnRenderRewardItem(int index, GObject item)
     {
-        AlertRewardData alertData = _alertData as AlertRewardData;
+        AlertRewardData alertData = AlertData as AlertRewardData;
         RewardNftItemRenderer renderer = (RewardNftItemRenderer)item;
         renderer.SetData(alertData.Rewards[index]);
     }
@@ -24,7 +24,7 @@ public class AlertReward : AlertBase
     protected override void OnOpen(object userData)
     {
         base.OnOpen(userData);
-        AlertRewardData alertData = _alertData as AlertRewardData;
+        AlertRewardData alertData = AlertData as AlertRewardData;
         _lstReward.numItems = alertData.Rewards.Count;
     }
 }

@@ -1,6 +1,5 @@
 
 
-using System;
 using FairyGUI;
 using FairyGUI.Utils;
 
@@ -26,7 +25,7 @@ public class TaskTrackerItemRender : GComponent
 
     private void ObjectiveRender(int index, GObject item)
     {
-        TaskDefine.TaskObjectData objectData = _chainData.CurTaskObjectives[index];
+        TaskDefine.TaskSubItemData objectData = _chainData.CurTaskSubItems[index];
         GComponent gItem = item.asCom;
         Controller ctrState = gItem.GetController("ctrState");
         GTextField tfTitle = gItem.GetChild("title") as GTextField;
@@ -45,13 +44,13 @@ public class TaskTrackerItemRender : GComponent
         // 链名颜色
         _ctrTaskType.selectedPage = _chainData.DRTaskList.System.ToString();
         // 链名
-        _tfTaskChainName.text = _chainData.TaskChainName;
+        _tfTaskChainName.SetVar("name", _chainData.TaskChainName).FlushVars();
         // 任务名
         _tfTaskName.SetVar("title", _chainData.DRTask.Name)
-            .SetVar("cur", _chainData.CurChainRate.ToString())
-            .SetVar("max", _chainData.MaxChainRate.ToString())
+            .SetVar("cur", _chainData.CurTaskChainRate.ToString())
+            .SetVar("max", _chainData.MaxTaskChainRate.ToString())
             .FlushVars();
         // 小任务列表
-        _lstObject.numItems = chainData.CurTaskObjectives.Count;
+        _lstObject.numItems = chainData.CurTaskSubItems.Count;
     }
 }

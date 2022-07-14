@@ -19,11 +19,10 @@ public class TaskAbandonAction : GameChannelNetMsgRActionBase<AbandonmentTaskReq
         return true;
     }
 
-    public static void Req(TaskListType taskListType, int taskId)
+    public static void Req(TaskListType taskListType)
     {
         AbandonmentTaskRequest req = GenerateReq();
         req.Kind = taskListType;
-        req.Id = taskId;
         SendAction<TaskAbandonAction>(req);
     }
 }

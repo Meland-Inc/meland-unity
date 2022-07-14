@@ -1,4 +1,3 @@
-using System;
 
 using System.Collections.Generic;
 using Bian;
@@ -17,8 +16,7 @@ public class TaskUpgradeTaskProgressAction : GameChannelNetMsgRActionBase<Upgrad
         {
             return false;
         }
-
-        DataManager.TaskModel.UpdateData(rsp.TaskListInfo);
+        // DataManager.TaskModel.UpdateData(rsp.TaskListInfo);
         return true;
     }
 

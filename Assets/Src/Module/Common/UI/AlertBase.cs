@@ -2,7 +2,7 @@
 using FairyGUI;
 public class AlertBase : FGUIBase
 {
-    protected AlertData _alertData;
+    protected AlertData AlertData;
     protected override FitScreen FitScreenMode => FitScreen.FitSize;//弹窗类型，默认适应屏幕大小
     private GButton _btnOK;
     private GTextField _tfTitle;
@@ -13,7 +13,7 @@ public class AlertBase : FGUIBase
         base.OnInit(userData);
         if (userData is AlertData alertData)
         {
-            _alertData = userData as AlertData;
+            AlertData = userData as AlertData;
         }
 
         _btnOK = GCom.GetChild("btnOK") as GButton;
@@ -52,7 +52,7 @@ public class AlertBase : FGUIBase
 
     private void onBtnOkClick()
     {
-        _alertData.OKBtnCb?.Invoke();
+        AlertData.OKBtnCb?.Invoke();
         Close();
     }
 }

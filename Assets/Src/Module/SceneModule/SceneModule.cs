@@ -86,4 +86,9 @@ public class SceneModule : MonoBehaviour
         Recharge = Root.AddComponent<RechargeCenter>();
         TaskMgr = null;
     }
+
+    private void Update()
+    {
+        Message.OnEnterFrame.Invoke(Time.deltaTime);
+    }
 }

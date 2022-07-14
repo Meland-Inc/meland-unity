@@ -38,27 +38,44 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     {
         base.OnOpen();
         AddUIEvent();
+        AddDataAction();
     }
 
     public override void OnClose()
     {
         RemoveUIEvent();
+        RemoveDataAction();
         base.OnClose();
     }
 
     private void AddUIEvent()
     {
         _lstBpItems.onClickItem.Add(OnBpItemClick);
-        _lstSubmitItems.onClickItem.Add(OnSubmitItemClick);
+        // _lstSubmitItems.onClickItem.Add(OnSubmitItemClick);
         _btnSubmit.onClick.Add(OnBtnSubmitClick);
     }
 
     private void RemoveUIEvent()
     {
         _lstBpItems.onClickItem.Remove(OnBpItemClick);
-        _lstSubmitItems.onClickItem.Remove(OnSubmitItemClick);
+        // _lstSubmitItems.onClickItem.Remove(OnSubmitItemClick);
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
     }
+
+    private void AddDataAction()
+    {
+        SceneModule.BackpackMgr.OnDataAdded += RefreshBpItem;
+        SceneModule.BackpackMgr.OnDataRemoved += RefreshBpItem;
+        SceneModule.BackpackMgr.OnDataUpdated += RefreshBpItem;
+    }
+
+    private void RemoveDataAction()
+    {
+        SceneModule.BackpackMgr.OnDataAdded -= RefreshBpItem;
+        SceneModule.BackpackMgr.OnDataRemoved -= RefreshBpItem;
+        SceneModule.BackpackMgr.OnDataUpdated -= RefreshBpItem;
+    }
+
     public void SetData(TaskChainData taskChainData)
     {
         _taskChainData = taskChainData;
@@ -70,7 +87,6 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         RefreshBpItem();
         RefreshSubmitItem();
     }
-
 
     private void RefreshBpItem()
     {
@@ -90,7 +106,8 @@ public class TaskSubmitViewLogic : FGUILogicCpt
                     Cid = bpItem.Cid,
                     Icon = bpItem.Icon,
                     Count = bpItem.Count,
-                    Quality = bpItem.Quality
+                    Quality = bpItem.Quality,
+                    BpItemData = bpItem
                 });
             }
             else
@@ -104,21 +121,14 @@ public class TaskSubmitViewLogic : FGUILogicCpt
 
     private void RefreshSubmitItem()
     {
-
         _lstSubmitItems.numItems = _taskChainData.TaskSubmitItems.Count;
     }
 
-
     private void OnBpItemClick(EventContext context)
     {
-        if (context.data is not RewardNftItemRenderer item)
-        {
-            return;
-        }
-
-        UpdateSelectedItemData(item);
-        // todo 
-        // _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(item, item.ItemData));
+        RewardNftItemRenderer render = (RewardNftItemRenderer)context.data;
+        UpdateSelectedItemData(render);
+        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(render, render.ItemData.BpItemData));
     }
 
     private void UpdateSelectedItemData(RewardNftItemRenderer item)
@@ -135,18 +145,14 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         OnUpdateBtnSubmit();
     }
 
-    private void OnSubmitItemClick(EventContext context)
-    {
-        if (context.data is not RewardNftItemRenderer item)
-        {
-            return;
-        }
-        // todo 
-        // _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(item, item.ItemData));
-    }
+    // private void OnSubmitItemClick(EventContext context)
+    // {
+    // }
+
     private void OnBtnSubmitClick(EventContext context)
     {
         TaskUpgradeTaskProgressAction.ReqItem(_taskChainData.TaskChainKind, _selectedBpItemData);
+        UICenter.CloseUIForm<FormTaskSubmit>();
     }
     // 刷新选中的数量
     private void OnUpdateSelectCount()
@@ -190,7 +196,6 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         }
         _btnSubmit.GetController("color").selectedPage = "gray";
         _btnSubmit.enabled = false;
-
     }
 
     private void OnRenderBpItem(int index, GObject item)
@@ -198,7 +203,6 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         RewardNftItemRenderer renderer = (RewardNftItemRenderer)item;
         renderer.SetData(_bpItemData[index]);
     }
-
 
     private void OnRenderSubmitItem(int index, GObject item)
     {

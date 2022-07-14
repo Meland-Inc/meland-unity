@@ -41,6 +41,10 @@ public class SceneModule : MonoBehaviour
     /// 充值中心
     /// </summary>
     public static RechargeCenter Recharge;
+    /// 任务管理器
+    /// </summary>
+    public static TaskMgr TaskMgr;
+
     private void Awake()
     {
         if (Root != null)
@@ -51,6 +55,11 @@ public class SceneModule : MonoBehaviour
         }
 
         Root = gameObject;
+
+        EntityMgr = Root.AddComponent<SceneEntityMgr>();
+        SceneRender = Root.AddComponent<SceneRender>();
+        BackpackMgr = Root.AddComponent<BackpackMgr>();
+        TaskMgr = Root.AddComponent<TaskMgr>();
     }
 
     private void OnDestroy()
@@ -75,5 +84,6 @@ public class SceneModule : MonoBehaviour
         RoleLevel = Root.AddComponent<RoleLevelModule>();
         Craft = Root.AddComponent<PlayerCraftModule>();
         Recharge = Root.AddComponent<RechargeCenter>();
+        TaskMgr = null;
     }
 }

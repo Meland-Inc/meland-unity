@@ -21,6 +21,7 @@ public enum eLogTag
     resource,
     createRole,
     backpack,
+    task,
     dr,//dr配置表
     role,
     craft,

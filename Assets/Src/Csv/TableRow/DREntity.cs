@@ -1,5 +1,6 @@
 ﻿//------------------------------------------------------------
 // 此文件由工具自动生成
+// 生成时间：2022-06-08 12:00:18.089
 //------------------------------------------------------------
 
 using GameFramework;
@@ -227,7 +228,7 @@ public class DREntity : DataRowBase
     /// <summary>
   /**获取光效锚点偏移。*/
     /// </summary>
-    public int[] LightOffset 
+    public int[] LightOffset
     {
         get;
         private set;
@@ -314,6 +315,49 @@ public class DREntity : DataRowBase
         private set;
     }
 
+    /// <summary>
+  /**获取资源类型
+1：2D贴图（默认）
+2：2D动画
+3：3D模型。*/
+    /// </summary>
+    public int AssetType
+    {
+        get;
+        private set;
+    }
+
+    /// <summary>
+  /**获取资源路径
+- 不用后缀
+- 相对各自文件夹目录。*/
+    /// </summary>
+    public string Asset
+    {
+        get;
+        private set;
+    }
+
+    /// <summary>
+  /**获取朝向相机。*/
+    /// </summary>
+    public bool LookCamera
+    {
+        get;
+        private set;
+    }
+
+    /// <summary>
+  /**获取是否水平放置
+- 比如地板
+- 对3D无效。*/
+    /// </summary>
+    public bool IsHorizontal
+    {
+        get;
+        private set;
+    }
+
     public override bool ParseDataRow(string dataRowString, object userData)
     {
         string[] columnStrings = CSVSerializer.ParseCSVCol(dataRowString);
@@ -343,7 +387,7 @@ public class DREntity : DataRowBase
         SceneEffectAnchor = DataTableParseUtil.ParseInt(columnStrings[index++]);
         index++;
         LightEffect = DataTableParseUtil.ParseArray<string>(columnStrings[index++]);
-        LightOffset  = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        LightOffset = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         DropId = DataTableParseUtil.ParseInt(columnStrings[index++]);
         ObjectBagShowType = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
         RectIcon = columnStrings[index++];
@@ -353,6 +397,10 @@ public class DREntity : DataRowBase
         RectWalkHigh = DataTableParseUtil.ParseInt(columnStrings[index++]);
         RectSceneEffectAnchor = DataTableParseUtil.ParseInt(columnStrings[index++]);
         RectLightOffset = DataTableParseUtil.ParseArray<int>(columnStrings[index++]);
+        AssetType = DataTableParseUtil.ParseInt(columnStrings[index++]);
+        Asset = columnStrings[index++];
+        LookCamera = DataTableParseUtil.ParseBool(columnStrings[index++]);
+        IsHorizontal = DataTableParseUtil.ParseBool(columnStrings[index++]);
 
         return true;
     }
@@ -387,7 +435,7 @@ public class DREntity : DataRowBase
                 IdleEffect = binaryReader.Read7BitEncodedInt32();
                 SceneEffectAnchor = binaryReader.Read7BitEncodedInt32();
                 LightEffect = binaryReader.ReadArray<String>();
-                LightOffset  = binaryReader.ReadArray<Int32>();
+                LightOffset = binaryReader.ReadArray<Int32>();
                 DropId = binaryReader.Read7BitEncodedInt32();
                 ObjectBagShowType = binaryReader.ReadArray<Int32>();
                 RectIcon = binaryReader.ReadString();
@@ -397,6 +445,10 @@ public class DREntity : DataRowBase
                 RectWalkHigh = binaryReader.Read7BitEncodedInt32();
                 RectSceneEffectAnchor = binaryReader.Read7BitEncodedInt32();
                 RectLightOffset = binaryReader.ReadArray<Int32>();
+                AssetType = binaryReader.Read7BitEncodedInt32();
+                Asset = binaryReader.ReadString();
+                LookCamera = binaryReader.ReadBoolean();
+                IsHorizontal = binaryReader.ReadBoolean();
             }
         }
 

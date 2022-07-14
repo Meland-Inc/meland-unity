@@ -22,6 +22,9 @@ public static class DataManager
     private static BackpackModel s_backpack;
     public static BackpackModel Backpack => s_backpack = s_backpack != null ? s_backpack : GetModel<BackpackModel>();
 
+    private static TaskModel s_task;
+    public static TaskModel TaskModel => s_task = s_task != null ? s_task : GetModel<TaskModel>();
+
     private static TerritoryModel s_territory;
     /// <summary>
     /// 领地数据

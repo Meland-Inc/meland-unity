@@ -28,8 +28,8 @@ public class FormRoleAttrUpgradeSuccess : FGUIForm
         if (userData is RoleUpgradeAttrDiffInfo upgradeInfo)
         {
             _tfLvDiff
-                .SetVar("lvCur", (upgradeInfo.Lv - 1).ToString())
-                .SetVar("lvNext", upgradeInfo.Lv.ToString())
+                .SetVar("lvCur", upgradeInfo.Lv.ToString())
+                .SetVar("lvNext", (upgradeInfo.Lv + 1).ToString())
                 .FlushVars();
             foreach (RoleAttrDiffInfo diff in upgradeInfo.AttrDiffList)
             {

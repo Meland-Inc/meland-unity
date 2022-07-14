@@ -23,6 +23,7 @@ public class UpgradePlayerLevelAction : GameChannelNetMsgRActionBase<UpgradePlay
         }
 
         DataManager.MainPlayer.UpdateProfile(EntityProfileField.EntityProfileFieldLv, rsp.CurLevel);
+        DataManager.MainPlayer.UpdateProfile(EntityProfileField.EntityProfileFieldExp, 0, rsp.CurExp);
         SceneModule.RoleLevel.OnRoleUpgraded.Invoke();
         return true;
     }

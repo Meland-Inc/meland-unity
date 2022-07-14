@@ -15,6 +15,18 @@ public class TEntityProfileUpdateAction : GameChannelNetMsgTActionBase<TEntityPr
 
     protected override bool Receive(int errorCode, string errorMsg, TEntityProfileUpdateResponse rsp)
     {
-        return base.Receive(errorCode, errorMsg, rsp);
+        if (!base.Receive(errorCode, errorMsg, rsp))
+        {
+            return false;
+        }
+
+        if (rsp.EntityId.Id == DataManager.MainPlayer.RoleID)
+        {
+            foreach (EntityProfileUpdate item in rsp.Profiles)
+            {
+                DataManager.MainPlayer.UpdateProfile(item.Field, item.CurValue, item.CurValueStr);
+            }
+        }
+        return true;
     }
 }

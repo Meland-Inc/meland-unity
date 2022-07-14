@@ -20,6 +20,7 @@ public class RuntimeNetworkHelper : INetworkChannelHelper
         networkChannel.RegisterHandler(TWebViewEnableModeAction.GetAction<TWebViewEnableModeAction>());
         networkChannel.RegisterHandler(TUserAssetAction.GetAction<TUserAssetAction>());
         networkChannel.RegisterHandler(TRechargeTokenSuccessAction.GetAction<TRechargeTokenSuccessAction>());
+        networkChannel.RegisterHandler(TRuntimeQuizAnswerResultAction.GetAction<TRuntimeQuizAnswerResultAction>());
     }
     public void PrepareForConnecting()
     {

@@ -2,7 +2,7 @@
  * @Author: xiang huan
  * @Date: 2022-05-30 15:34:35
  * @Description: 通知界面显示和隐藏
- * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/TAtion/TUserAssetAction.cs
+ * @FilePath: /Assets/Src/Framework/Runtime/TAtion/TUserAssetAction.cs
  * 
  */
 
@@ -40,5 +40,11 @@ namespace Runtime
         public int GoldnumMaybePer24Hours { get; private set; }
         public int DitaminLand24Hours { get; private set; }
         public string WalletAddress { get; private set; } //钱包地址
+    }
+
+    public class TQuizAnswerResultResponse : RuntimeMessage
+    {
+        public int QuizId { get; private set; } // 答题类型
+        public bool Result { get; private set; }  // 结果
     }
 }

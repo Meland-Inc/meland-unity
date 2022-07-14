@@ -23,6 +23,7 @@ public static class Message
     public static Action<string> RuntimeMessageEmitted = delegate { };
 
     public static Action<Runtime.TUserAssetResponse> RuntimeUserAssetUpdate = delegate { };
+    public static Action<Runtime.TQuizAnswerResultResponse> RuntimeQuizAnswerResult = delegate { };
 
     #endregion
 

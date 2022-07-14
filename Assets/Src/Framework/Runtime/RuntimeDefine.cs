@@ -28,6 +28,7 @@ public sealed class RuntimeDefine
         TRechargeTokenSuccess = 2005,
         GetUserGameInternalToken = 2006,
         UpgradeSkill = 2007,
+        TQuizAnswerResult = 1007,
     };
 
     public enum eEgretEnableMode

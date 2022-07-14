@@ -18,6 +18,7 @@ public class UpgradeItemSlotAction : GameChannelNetMsgRActionBase<UpgradeItemSlo
     {
         if (!base.Receive(errorCode, errorMsg, rsp, req))
         {
+            _ = UICenter.OpenUIToast<ToastCommon>(errorMsg);
             return false;
         }
 

@@ -14,6 +14,7 @@ public class ComMainBagShortcut : FGUILogicCpt
     private void OnBtnBagClick()
     {
         MLog.Debug(eLogTag.ui, "OnClickBtnBag");
-        SceneModule.BackpackMgr.OpenBackpack();
+        // SceneModule.BackpackMgr.OpenBackpack();
+        SceneModule.TaskMgr.OpenTask();
     }
 }

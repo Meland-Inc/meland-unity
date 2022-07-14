@@ -7,20 +7,19 @@ public class GrassCollider : MonoBehaviour
 {
 
     public SkeletonAnimation skeletonAnimation;
-    public AnimationReferenceAsset idle,run,run1;
+    public AnimationReferenceAsset idle,run;
     public string currentState;    
 
     // Start is called before the first frame update
     void Start()
     {
         SetAnimationState("idle");
-        currentState = "idle";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(currentState!="run1" && currentState!= "run"){
+        if(currentState!= "run"){
             SetAnimationState("idle");
         }
     }
@@ -33,8 +32,6 @@ public class GrassCollider : MonoBehaviour
         if(state.Equals("idle")){
             SetAnimation(idle,true,1f);
         }else if(state.Equals("run")){
-            SetAnimation(run,true,1f);
-        }else if(state.Equals("run1")){
             SetAnimation(run,true,1f);
         }
         currentState = state;
@@ -49,13 +46,13 @@ public class GrassCollider : MonoBehaviour
             }
             Spine.TrackEntry animationEntry = skeletonAnimation.state.SetAnimation(0,animation,loop);
             animationEntry.TimeScale = timeScale;
-            animationEntry.Complete += AnimationEntry_Complete;
+            animationEntry.Complete += AnimationEntryComplete;
             currentState = animation.name;
         }
     }
 
-    private void AnimationEntry_Complete(Spine.TrackEntry trackEntry){
-        if(currentState.Equals("run")||currentState.Equals("run1")){
+    private void AnimationEntryComplete(Spine.TrackEntry trackEntry){
+        if(currentState.Equals("run")){
             SetAnimationState("idle");
         }
     }

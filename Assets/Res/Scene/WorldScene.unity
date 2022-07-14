@@ -346,7 +346,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTsm: {fileID: 0}
-  IsNeedAutoInitAfterStart: 0
   _offset: {x: 0.3, y: 14.41, z: -13.7}
   IsLocalSpace: 0
 --- !u!81 &1262187669

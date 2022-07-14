@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1773242891448801976}
   - component: {fileID: 1773242891448801979}
   - component: {fileID: 1773242891448801978}
+  - component: {fileID: 3402080195069085893}
   m_Layer: 0
   m_Name: Z_dsjGZ_1_1_011
   m_TagString: Untagged
@@ -113,3 +114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc7c4f666abd0a4aa8babb451e57680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3402080195069085893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773242891448801991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f19f5177dc24412d96da5f4b19f4f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LookCamera: 1
+  PreviewAutoFindCamera: 1
+  IsHorizontalPaper: 0
+  IsSpine2D: 0

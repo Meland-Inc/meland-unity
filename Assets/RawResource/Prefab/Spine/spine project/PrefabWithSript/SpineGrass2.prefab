@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 583515053830348818}
   - component: {fileID: 583515053830348817}
   - component: {fileID: 583515053830348816}
-  - component: {fileID: 583515053830348823}
-  - component: {fileID: 583515053830348822}
   - component: {fileID: 583515053830348819}
+  - component: {fileID: 14887315251196915}
+  - component: {fileID: 760369187}
   m_Layer: 0
   m_Name: Spine GameObject (c3)
   m_TagString: Untagged
@@ -125,37 +125,6 @@ MonoBehaviour:
   _animationName: 
   loop: 1
   timeScale: 1
---- !u!114 &583515053830348823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583515053830348820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ed304379a20d884a86c071df6461954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 583515053830348816}
-  idle: {fileID: 11400000, guid: f1dc7bb5536baf64ca56756a46b3a775, type: 2}
-  run: {fileID: 11400000, guid: 2e703daeebee03748afcf3ed43660f14, type: 2}
-  run1: {fileID: 0}
-  currentState: idle
---- !u!114 &583515053830348822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583515053830348820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4d8f8677a1f48f9904b2386af46575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTsm: {fileID: 0}
-  IsNeedAutoInitAfterStart: 1
 --- !u!136 &583515053830348819
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -170,6 +139,38 @@ CapsuleCollider:
   m_Height: 3.4200828
   m_Direction: 1
   m_Center: {x: -0.0016665459, y: 1.4430413, z: 0}
+--- !u!114 &14887315251196915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583515053830348820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f19f5177dc24412d96da5f4b19f4f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LookCamera: 1
+  PreviewAutoFindCamera: 1
+  IsHorizontalPaper: 0
+  IsSpine2D: 0
+--- !u!114 &760369187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583515053830348820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05887c33f2113454b8b787d0c9376d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkeletonAnimation: {fileID: 583515053830348816}
+  Idle: {fileID: 11400000, guid: f1dc7bb5536baf64ca56756a46b3a775, type: 2}
+  Run: {fileID: 11400000, guid: 2e703daeebee03748afcf3ed43660f14, type: 2}
+  CurrentState: 
 --- !u!1 &583515054067990904
 GameObject:
   m_ObjectHideFlags: 0

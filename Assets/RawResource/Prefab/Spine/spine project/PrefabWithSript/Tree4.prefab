@@ -197,11 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5b7c3fac831704ab179cc0f23397bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 6696505627468394599}
-  idle: {fileID: 11400000, guid: aa21a386c35d7e640b4a0685986ccd18, type: 2}
-  run: {fileID: 11400000, guid: ee13913e10762c74980dcfbbc9a84806, type: 2}
-  run1: {fileID: 11400000, guid: f15247accc5179e4e9f75f493a721da7, type: 2}
-  currentState: idle
+  SkeletonAnimation: {fileID: 0}
+  Idle: {fileID: 0}
 --- !u!114 &2283205373740558934
 MonoBehaviour:
   m_ObjectHideFlags: 0

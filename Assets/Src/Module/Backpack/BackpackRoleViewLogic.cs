@@ -1,9 +1,9 @@
 /*
  * @Author: mangit
- * @LastEditors: mangit
+ * @LastEditors Please set LastEditors
  * @Description: 背包角色视图逻辑
  * @Date: 2022-06-21 13:54:14
- * @FilePath: /Assets/Src/Module/Backpack/BackpackRoleViewLogic.cs
+ * @FilePath /Assets/Src/Module/Backpack/BackpackRoleViewLogic.cs
  */
 using Bian;
 using FairyGUI;
@@ -109,17 +109,11 @@ public class BackpackRoleViewLogic : FGUILogicCpt
 
     private void UpdateRoleView()
     {
-        PlayerFeature feature = DataManager.MainPlayer.Feature;
-        DRRoleAsset drRoleAsset = GFEntry.DataTable.GetDataTable<DRRoleAsset>().GetDataRow(RoleDefine.RoleID.MALE);
-        string skeletonAsset = Path.Combine(AssetDefine.PATH_AVATAR_SKELETON, drRoleAsset.ArmatureRes);
-        _comUIAvatar.ChangeAvatar(skeletonAsset, new List<int>()
+        if (DataManager.MainPlayer.Role == null)
         {
-            feature.Hair,
-            feature.Face,
-            feature.Clothes,
-            feature.Pants,
-            feature.Glove,
-            feature.Shoes,
-        });
+            return;
+        }
+        PlayerRoleAvatarData avatarData = DataManager.MainPlayer.Role.GetComponent<PlayerRoleAvatarData>();
+        _comUIAvatar.ChangeAvatar(avatarData.RoleCfgID, NetUtil.SvrToClientRoleFeature(avatarData.Feature));
     }
 }

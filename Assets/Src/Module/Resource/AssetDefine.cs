@@ -19,8 +19,8 @@ public static class AssetDefine
     public static readonly string PATH_ANIM_MAP_ELEMENT = Path.Combine(PATH_ROOT_RES, "Prefab/Spine/MapElement");
     public static readonly string PATH_TEXTURE = Path.Combine(PATH_ROOT_RES, "Texture");
     public static readonly string PATH_SPRITE = Path.Combine(PATH_ROOT_RES, "Sprite");
-    public static readonly string PATH_DRAGON_BONES = Path.Combine(PATH_ROOT_RES, "DragonBones");
     public static readonly string PATH_UI = Path.Combine(PATH_ROOT_RES, "Fairygui");
+    public static readonly string PATH_SPINE_DATA_ROLE = Path.Combine(PATH_ROOT_RES, "SpineData", "Role");
 
     public const string SUFFIX_SPRITE = ".png";
     public const string SUFFIX_TEXTURE = ".png";
@@ -28,8 +28,8 @@ public static class AssetDefine
     public const string SUFFIX_PREFAB = ".prefab";
     public const string SUFFIX_MUSIC = ".mp3";
     public const string SUFFIX_SOUND_EFFECT = ".wav";
+    public const string SUFFIX_ASSET = ".asset";
     public static readonly string PATH_AVATAR_ICON = Path.Combine(PATH_ROOT_RES, "Sprite/Icon/Avatar");
-    public static readonly string PATH_AVATAR_SKELETON = "Assets/RawResource/spine";
     public static readonly string PATH_ROLE_NAME = Path.Combine(PATH_ROOT_RES, "Text/RoleName");
     public static readonly string PATH_ITEM_ICON = Path.Combine(PATH_ROOT_RES, "Sprite/Icon/Item");
 }

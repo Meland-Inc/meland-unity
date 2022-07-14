@@ -1,4 +1,0 @@
-id,数据源,注释1,注释2,功能物件类型,配方id数组,存储格子数量,哪些是这个容器的燃料,燃烧效率,提示框最大字数,提示框默认内容,提示框每次显示时间,提示框触发范围(像素),代码库ID
-id,cfgDataFrom,desc1,desc2,type,formulaIds,storageNum,needFuel,buningRatio,maxChars,defaultContent,displayTime,triggerRange,codeBlockId
-int,int,null,null,int,int[],int,int[],int,int,string,int,int,int
-101,0,自身,自身,101,,,,,,,,,1002

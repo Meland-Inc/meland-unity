@@ -27,7 +27,6 @@ public class SigninPlayerAction : GameChannelNetMsgRActionBase<Bian.SigninPlayer
     protected override bool Receive(int errorCode, string errorMsg, Bian.SigninPlayerResponse rsp, Bian.SigninPlayerRequest req)
     {
         BasicModule.Login.OnSignPlayer(rsp);
-        DataManager.MainPlayer.SetFeature(rsp.Player.Feature);
         return true;
     }
 }

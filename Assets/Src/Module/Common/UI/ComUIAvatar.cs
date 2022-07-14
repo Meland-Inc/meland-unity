@@ -21,6 +21,13 @@ public class ComUIAvatar : GComponent
     private void LoadAvatar(string skeletonAsset, List<string> elements)
     {
         MLog.Info(eLogTag.avatar, "start load ui avatar");
+
+        if (_refAvatarCpt == null)
+        {
+            MLog.Error(eLogTag.avatar, "change avatar error, avatar cpt is null");
+            return;
+        }
+
         _refAvatarCpt.LoadAvatar(skeletonAsset, elements, (target) =>
             {
                 if (!_isAvatarLoaded)
@@ -33,32 +40,15 @@ public class ComUIAvatar : GComponent
     }
 
     /// <summary>
-    /// 通过部件资源更换avatar
-    /// </summary>
-    /// <param name="partList"></param>
-    public void ChangeAvatar(string skeletonAsset, List<string> partResList)
-    {
-        LoadAvatar(skeletonAsset, partResList);
-    }
-
-    /// <summary>
     /// 通过部件id更换avatar
     /// </summary>
     /// <param name="partIDList"></param>
-    public void ChangeAvatar(string skeletonAsset, List<int> partIDList)
+    public void ChangeAvatar(int roleCfgID, List<int> partIDList)
     {
-        List<string> partList = new();
-        foreach (int partID in partIDList)
-        {
-            DRAvatar drAvatar = GFEntry.DataTable.GetDataTable<DRAvatar>().GetDataRow(partID);
-            if (drAvatar == null)
-            {
-                continue;
-            }
-            partList.Add(drAvatar.ResouceBoy);
-        }
+        List<string> partList = Avatar2DUtil.GetPartResList(roleCfgID, partIDList);
+        string skeletonRes = Avatar2DUtil.GetRoleSkeletonRes(roleCfgID);
 
-        ChangeAvatar(skeletonAsset, partList);
+        LoadAvatar(skeletonRes, partList);
     }
 
     public override void Dispose()

@@ -1,6 +1,0 @@
-配方ID,配方名字,注释,配方分类(客户端用),解锁类型,解锁条件1,合成耗时,合成的物品id,合成物品类型(1是物品，2是怪物，3是资源),合成素材1,所需数量1,合成素材2,所需数量2,合成素材3,所需数量3,合成素材4,所需数量4,合成素材5,所需数量5,合成素材6,所需数量6,合成素材7,所需数量7,合成素材8,所需数量8,合成素材9,所需数量9,合成素材10,所需数量10,变化时间系数0,变化object0,变化时间系数1,变化object1,变化时间系数2,变化object2,变化时间系数3,变化object3,"奖励
-（rewardId）","配方来源
-（客户端）",解锁后的合成途径描述,排序优先级
-id,name,desc,type,UnlockType,UnlockCondition,time,productId,productType,matItemId1,matItemNum1,matItemId2,matItemNum2,matItemId3,matItemNum3,matItemId4,matItemNum4,matItemId5,matItemNum5,matItemId6,matItemNum6,matItemId7,matItemNum7,matItemId8,matItemNum8,matItemId9,matItemNum9,matItemId10,matItemNum10,time0,time0Object,time1,time1Object,time2,time2Object,time3,time3Object,rewardId,source,sourceText,sort
-int,string,string,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,string,string,int
-7050001,古代源码刀,测试配方,5,1,1,1500,9100003,1,2050019,3,2050020,3,,,,,,,,,,,,,,,,,,,,,,,,,,1级解锁,需要:自身,1

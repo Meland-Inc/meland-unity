@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Bian;
+using System.Collections.Generic;
 
 /// <summary>
 /// 处理网络数据转换的工具类
@@ -149,5 +150,23 @@ public static class NetUtil
     {
         (int r, int c) = RCIndexToRC(rcIndex);
         return RCToXZKey(r, c);
+    }
+
+    /// <summary>
+    /// 服务器角色外观数据转客户端列表
+    /// </summary>
+    /// <param name="feature"></param>
+    /// <returns></returns>
+    public static List<int> SvrToClientRoleFeature(PlayerFeature feature)
+    {
+        return new List<int>()
+        {
+            feature.Hair,
+            feature.Face,
+            feature.Clothes,
+            feature.Pants,
+            feature.Glove,
+            feature.Shoes,
+        };
     }
 }

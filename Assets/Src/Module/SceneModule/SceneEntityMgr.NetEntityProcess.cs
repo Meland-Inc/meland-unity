@@ -20,12 +20,16 @@ public partial class SceneEntityMgr : SceneModuleBase
             Type = EntityType.EntityTypePlayer
 
         };
-        sceneRole.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
+        sceneRole.GetComponent<EntitySvrDataProcess>().SvrDataInit(sceneRole, svrEntity);
 
         MainPlayerMoveInput moveInput = sceneRole.GetComponent<MainPlayerMoveInput>();
         moveInput.MoveSpeed = sceneRole.GetComponent<EntityMoveData>().Speed;
         moveInput.PushDownForce = Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
         sceneRole.GetComponent<MoveNetRequest>().enabled = true;
+
+        PlayerRoleAvatarData avatarData = sceneRole.AddComponent<PlayerRoleAvatarData>();
+        avatarData.SetRoleCfgID(playerData.RoleId);
+        avatarData.SetRoleFeature(playerData.Feature);
 
         Message.MainPlayerRoleInitFinish.Invoke();
     }
@@ -49,7 +53,7 @@ public partial class SceneEntityMgr : SceneModuleBase
 
                 if (entity.TryGetComponent(out EntitySvrDataProcess dataProcess))
                 {
-                    dataProcess.SvrDataInit(svrEntity);
+                    dataProcess.SvrDataInit(entity, svrEntity);
                 }
             }
             catch (System.Exception)

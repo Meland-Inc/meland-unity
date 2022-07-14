@@ -8,10 +8,15 @@ using System.IO;
 using Bian;
 using UnityEngine;
 
-public class PlayerRoleSvrDataProcess : EntitySvrDataProcess
+/// <summary>
+/// 玩家服务器数据处理 包括主角和其他玩家
+/// </summary>
+public class PlayerRoleSvrDataProcess : RoleSvrDataProcess
 {
-    public override void SvrDataInit(EntityWithLocation svrEntity)
+    public override void SvrDataInit(SceneEntity sceneEntity, EntityWithLocation svrEntity)
     {
+        base.SvrDataInit(sceneEntity, svrEntity);
+
         Player svrPlayer = svrEntity.Player;
 
         if (Mathf.Approximately(svrPlayer.Profile.MoveSpeed, 0f))
@@ -25,6 +30,6 @@ public class PlayerRoleSvrDataProcess : EntitySvrDataProcess
         }
 
         string prefabAsset = Path.Combine(AssetDefine.PATH_ROLE, EntityDefine.PLAYER_ROLE_PREFAB_ASSET);
-        GFEntry.Entity.ShowEntity<Avatar2DEntityRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.PlayerRole, svrEntity.Id);
+        GFEntry.Entity.ShowEntity<PlayerRoleEntityRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.PlayerRole, svrEntity.Id);
     }
 }

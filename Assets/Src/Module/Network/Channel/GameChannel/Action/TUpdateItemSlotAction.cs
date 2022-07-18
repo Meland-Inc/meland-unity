@@ -20,7 +20,7 @@ public class TUpdateItemSlotAction : GameChannelNetMsgTActionBase<TUpdateItemSlo
             return false;
         }
 
-        DataManager.MainPlayer.SetItemSlot(rsp.Slots);//直接重新覆盖数据
+        DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().SetItemSlot(rsp.Slots);//直接重新覆盖数据
         return true;
     }
 }

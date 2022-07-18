@@ -21,7 +21,7 @@ public class GetItemSlotAction : GameChannelNetMsgRActionBase<GetItemSlotRequest
             return false;
         }
 
-        DataManager.MainPlayer.SetItemSlot(rsp.Slots);
+        DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().SetItemSlot(rsp.Slots);
         return true;
     }
 

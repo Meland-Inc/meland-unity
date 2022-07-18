@@ -74,7 +74,8 @@ public class RoleLevelModule : MonoBehaviour
         }
 
         int count = 0;
-        foreach (KeyValuePair<AvatarPosition, ItemSlot> item in DataManager.MainPlayer.ItemSlotDic)
+        Dictionary<AvatarPosition, ItemSlot> slotDic = DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().ItemSlotDic;
+        foreach (KeyValuePair<AvatarPosition, ItemSlot> item in slotDic)
         {
             if (item.Value.Level >= profile.Lv - MAX_LV_GAP_BETWEEN_SLOT_AND_ROLE)
             {
@@ -93,7 +94,7 @@ public class RoleLevelModule : MonoBehaviour
     public bool CheckCanUpgradeSlot(AvatarPosition pos)
     {
         EntityProfile profile = DataManager.MainPlayer.RoleData.Profile;
-        ItemSlot slotData = DataManager.MainPlayer.ItemSlotDic[pos];
+        ItemSlot slotData = DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().ItemSlotDic[pos];
         if (slotData.Level >= MAX_SLOT_LV)
         {
             return false;
@@ -153,7 +154,7 @@ public class RoleLevelModule : MonoBehaviour
 
     private void OnUpgradeSlotSuccess(UpgradeItemSlotResponse rsp)
     {
-        ItemSlot slot = DataManager.MainPlayer.ItemSlotDic[_slotPos];
+        ItemSlot slot = DataManager.MainPlayer.GetComponent<MainRoleSlotData>().ItemSlotDic[_slotPos];
         RoleUpgradeAttrDiffInfo upgradeInfo = RoleUpgradeAttrDiffInfo.GetSlotUpgradeInfo((int)_slotPos, slot.Level);
         _ = UICenter.OpenUIForm<FormRoleAttrUpgradeSuccess>(upgradeInfo);
     }

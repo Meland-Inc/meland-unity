@@ -31,6 +31,9 @@ public partial class SceneEntityMgr : SceneModuleBase
         avatarData.SetRoleCfgID(playerData.RoleId);
         avatarData.SetRoleFeature(playerData.Feature);
 
+        sceneRole.AddComponent<RoleProfileData>().InitProfile(playerData.Profile);
+        _ = sceneRole.AddComponent<MainRoleSlotData>();//插槽数据
+
         Message.MainPlayerRoleInitFinish.Invoke();
     }
 

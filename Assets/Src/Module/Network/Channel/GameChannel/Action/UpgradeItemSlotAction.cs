@@ -23,7 +23,7 @@ public class UpgradeItemSlotAction : GameChannelNetMsgRActionBase<UpgradeItemSlo
         }
 
         //todo:show upgrade success tips
-        DataManager.MainPlayer.SetItemSlot(rsp.Slots);
+        DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().SetItemSlot(rsp.Slots);
         SceneModule.RoleLevel.OnSlotUpgraded.Invoke(req.Position);
         return true;
     }

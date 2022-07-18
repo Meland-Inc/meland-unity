@@ -51,6 +51,11 @@ public class TaskChainData
     {
         get
         {
+            // 未开始 todo
+            if (false)
+            {
+                return TaskDefine.eTaskChainState.NONE;
+            }
             long curTime = TimeUtil.GetServerTimeStamp();
             // 超时结束
             if (curTime > TaskChainEndTimeStamp)
@@ -119,28 +124,32 @@ public class TaskChainData
     public TaskChainData UpdateData(TaskList rawSvrData)
     {
         _rawSvrData = rawSvrData;
-        // 获取任务链配置
+        // 任务链配置
         DRTaskList = GFEntry.DataTable.GetDataTable<DRTaskList>().GetDataRow(rawSvrData.Id);
-        // 链名称
+        // 任务链名称
         TaskChainName = TaskDefine.TaskSystemId2Name[DRTaskList.System];
-        // 获取任务配置
-        DRTask = GFEntry.DataTable.GetDataTable<DRTask>().GetDataRow(rawSvrData.CurTask.TaskId);
         // 任务链结束时间
         TaskChainEndTimeStamp = TimeUtil.DataTime2TimeStamp(rawSvrData.Kind == TaskListType.TaskListTypeDaily ? TimeUtil.GetDayEndTime() : TimeUtil.GetWeekEndTime());
         // 任务链奖励
         List<RewardNftData> taskChainRewards = TaskUtil.GetRewardNftData(DRTaskList.ItemReward, DRTaskList.DitaminReward, DRTaskList.ExpReward);
-        // 当前任务奖励
-        List<RewardNftData> curTaskRewards = TaskUtil.GetRewardNftData(DRTask.ItemReward, DRTask.DitaminReward, DRTask.ExpReward);
-        // 需要提交的物品
-        List<RewardNftData> taskSubmitItems = TaskUtil.GenerateTaskSubmitItems(rawSvrData);
-        // 子任务
-        List<TaskDefine.TaskSubItemData> curTaskSubItems = TaskUtil.GenerateTaskSubItems(rawSvrData, DRTask);
-
         TaskUtil.TaskListAddRange(TaskChainRewards, taskChainRewards);
-        TaskUtil.TaskListAddRange(CurTaskRewards, curTaskRewards);
-        TaskUtil.TaskListAddRange(TaskSubmitItems, taskSubmitItems);
-        TaskUtil.TaskListAddRange(CurTaskSubItems, curTaskSubItems);
 
+        // 具体任务
+        if (rawSvrData.CurTask != null)
+        {
+            // 当前任务配置
+            DRTask = GFEntry.DataTable.GetDataTable<DRTask>().GetDataRow(rawSvrData.CurTask.TaskId);
+            // 当前任务需要提交的物品
+            List<RewardNftData> taskSubmitItems = TaskUtil.GenerateTaskSubmitItems(rawSvrData);
+            // 当前任务子任务
+            List<TaskDefine.TaskSubItemData> curTaskSubItems = TaskUtil.GenerateTaskSubItems(rawSvrData, DRTask);
+            // 当前任务奖励
+            List<RewardNftData> curTaskRewards = TaskUtil.GetRewardNftData(DRTask.ItemReward, DRTask.DitaminReward, DRTask.ExpReward);
+
+            TaskUtil.TaskListAddRange(TaskSubmitItems, taskSubmitItems);
+            TaskUtil.TaskListAddRange(CurTaskSubItems, curTaskSubItems);
+            TaskUtil.TaskListAddRange(CurTaskRewards, curTaskRewards);
+        }
         return this;
     }
 }

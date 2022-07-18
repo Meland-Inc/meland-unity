@@ -11,7 +11,7 @@ namespace Meland.Editor.ServerScene
 {
     public sealed class ServerSceneUtil
     {
-        public static void RetainCollisionComponen(GameObject gameObject)
+        public static void RetainCollisionComponent(GameObject gameObject)
         {
             //倒序删除 (避免RequireComponent的依赖导致无法删除)
             Component[] components = gameObject.GetComponents<Component>();
@@ -28,7 +28,7 @@ namespace Meland.Editor.ServerScene
             for (int i = 0; i < childCount; i++)
             {
                 Transform childTransform = gameObject.transform.GetChild(i);
-                RetainCollisionComponen(childTransform.gameObject);
+                RetainCollisionComponent(childTransform.gameObject);
             }
 
         }

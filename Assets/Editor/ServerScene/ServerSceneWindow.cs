@@ -98,7 +98,7 @@ namespace Meland.Editor.ServerScene
                         GameObject newObject = Instantiate(gameObject);
                         newObject.name = gameObject.name;
                         SceneManager.MoveGameObjectToScene(newObject, serverWorldScene);
-                        ServerSceneUtil.RetainCollisionComponen(newObject);
+                        ServerSceneUtil.RetainCollisionComponent(newObject);
                     }
                     _ = EditorSceneManager.SaveScene(serverWorldScene);
                     _ = EditorSceneManager.CloseScene(serverWorldScene, true);

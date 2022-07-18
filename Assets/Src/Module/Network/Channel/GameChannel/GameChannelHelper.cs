@@ -1,3 +1,4 @@
+using System;
 using GameFramework.Network;
 using UnityGameFramework.Runtime;
 public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
@@ -24,6 +25,13 @@ public class GameChannelHelper : SocketProtobufChannelHelper<Bian.Envelope>
         networkChannel.RegisterHandler(TPlayerAreaListUpdateAction.GetAction<TPlayerAreaListUpdateAction>());
         networkChannel.RegisterHandler(TPlayerAreaUpdateAction.GetAction<TPlayerAreaUpdateAction>());
         networkChannel.RegisterHandler(TRemovePlayerAreaAction.GetAction<TRemovePlayerAreaAction>());
+        networkChannel.RegisterHandler(TItemUpdatedAction.GetAction<TItemUpdatedAction>());
+        networkChannel.RegisterHandler(TItemAddAction.GetAction<TItemAddAction>());
+        networkChannel.RegisterHandler(TItemDelAction.GetAction<TItemDelAction>());
+        networkChannel.RegisterHandler(TUpdateItemSlotAction.GetAction<TUpdateItemSlotAction>());
+        networkChannel.RegisterHandler(TEntityProfileUpdateAction.GetAction<TEntityProfileUpdateAction>());
+        networkChannel.RegisterHandler(TPlayerProfileUpdateByFieldIdAction.GetAction<TPlayerProfileUpdateByFieldIdAction>());
+        networkChannel.RegisterHandler(TEntityProfileUpdateByFieldIdAction.GetAction<TEntityProfileUpdateByFieldIdAction>());
     }
 
     public override void PrepareForConnecting()

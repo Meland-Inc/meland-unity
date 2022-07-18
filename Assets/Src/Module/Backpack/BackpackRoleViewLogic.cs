@@ -38,6 +38,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
         base.OnOpen();
         AddMessage();
         AddUIEvent();
+        UpdateRoleAttr();
         UpdateSlotView();
         UpdateRoleView();
     }
@@ -92,7 +93,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
         {
             _ = DataManager.Backpack.WearableItemDic.TryGetValue(item.Key, out BpWearableNftItem avatarItem);
             item.Value.SetNftData(avatarItem);
-            item.Value.SetSlotData(null);//todo:
+            item.Value.SetSlotData(DataManager.MainPlayer.ItemSlotDic[item.Key]);
         }
     }
     private void OnAvatarDataUpdated()
@@ -103,8 +104,19 @@ public class BackpackRoleViewLogic : FGUILogicCpt
 
     private void UpdateRoleAttr()
     {
-        _tfRoleName.text = DataManager.MainPlayer.name;
-        //to do : update role attr
+        _tfRoleName.text = DataManager.MainPlayer.RoleData.Name;
+        EntityProfile profile = DataManager.MainPlayer.RoleData.Profile;
+        int curHP = profile.HpCurrent;
+        int maxHP = profile.HpLimit;
+        Controller ctrlHP = GCom.GetController("ctrlHP");
+        ctrlHP.SetSelectedPage(curHP < maxHP ? "red" : "normal");
+        _comHp.GetChild("title").asTextField
+            .SetVar("cur", curHP.ToString())
+            .SetVar("max", maxHP.ToString())
+            .FlushVars();
+        _comDef.text = profile.Def.ToString();
+        _comAttack.text = profile.Att.ToString();
+        _comAttackSpeed.text = profile.AttSpeed.ToString();
     }
 
     private void UpdateRoleView()

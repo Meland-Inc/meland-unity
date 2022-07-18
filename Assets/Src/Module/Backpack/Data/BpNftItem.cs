@@ -159,7 +159,7 @@ public class BpNftItem : BpItemData
         {
             if (item.trait_type == eNFTTraitType.Type.ToString())
             {
-                type = item.value.ToEnum<eNFTType>();
+                type = item.value.Replace(" ", "").ToEnum<eNFTType>();
                 break;
             }
         }

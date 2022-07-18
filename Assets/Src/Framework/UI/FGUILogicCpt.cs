@@ -4,8 +4,15 @@ using FairyGUI;
 public abstract class FGUILogicCpt : MonoBehaviour
 {
     protected GComponent GCom;
-    protected void Awake()
+    private bool _inited = false;
+    public void Init()
     {
+        if (_inited)
+        {
+            MLog.Error(eLogTag.ui, "FGUILogicCpt is inited already!");
+            return;
+        }
+        _inited = true;
         DisplayObjectInfo info = GetComponent<DisplayObjectInfo>();
         if (info)
         {
@@ -21,6 +28,7 @@ public abstract class FGUILogicCpt : MonoBehaviour
     protected void OnDestroy()
     {
         OnRemove();
+        _inited = false;
     }
 
     protected virtual void OnAdd()

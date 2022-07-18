@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Bian;
+
 namespace RoleDefine
 {
     public enum eRoleGender
@@ -40,6 +42,24 @@ namespace RoleDefine
             {"mouth",eRoleFeaturePart.mouth},
             {"eyebrow",eRoleFeaturePart.eyebrow},
             {"shoes",eRoleFeaturePart.shoes},
+        };
+
+        public static readonly Dictionary<EntityProfileField, string> RoleProfileFieldDict = new()
+        {
+            {EntityProfileField.EntityProfileFieldLv, "Lv"},
+            {EntityProfileField.EntityProfileFieldExp, "Exp"},
+            {EntityProfileField.EntityProfileFieldAtt, "Att"},
+            {EntityProfileField.EntityProfileFieldAttSpeed, "AttSpeed"},
+            {EntityProfileField.EntityProfileFieldDef, "Def"},
+            {EntityProfileField.EntityProfileFieldHpLimit, "HpLimit"},
+            {EntityProfileField.EntityProfileFieldCritRate, "CritRate"},
+            {EntityProfileField.EntityProfileFieldCritDamage, "CritDmg"},
+            {EntityProfileField.EntityProfileFieldMissRate, "MissRate"},
+            {EntityProfileField.EntityProfileFieldMoveSpeed, "MoveSpeed"},
+            {EntityProfileField.EntityProfileFieldPushDmg, "PushDmg"},
+            {EntityProfileField.EntityProfileFieldPushDist, "PushDist"},
+            {EntityProfileField.EntityProfileFieldHpCurrent, "HpCurrent"},
+            {EntityProfileField.EntityProfileFieldHpRecovery, "HpRecovery"},
         };
     }
 }

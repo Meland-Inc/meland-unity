@@ -4,14 +4,14 @@ using UnityGameFramework.Runtime;
 
 public class SigninPlayerAction : GameChannelNetMsgRActionBase<Bian.SigninPlayerRequest, Bian.SigninPlayerResponse>
 {
-    public static void Req(string playerID)
+    public static SigninPlayerAction Req(string playerID)
     {
         Bian.SigninPlayerRequest req = GenerateReq();
         req.PlayerId = playerID;
         req.ClientTime = Convert.ToInt32(Time.time);
         req.IsDeveloper = true;
         req.Chonglian = 0;
-        SendAction<SigninPlayerAction>(req);
+        return SendAction<SigninPlayerAction>(req);
     }
 
     protected override string GetEnvelopeReqName()
@@ -26,6 +26,12 @@ public class SigninPlayerAction : GameChannelNetMsgRActionBase<Bian.SigninPlayer
 
     protected override bool Receive(int errorCode, string errorMsg, Bian.SigninPlayerResponse rsp, Bian.SigninPlayerRequest req)
     {
+        if (!base.Receive(errorCode, errorMsg, rsp, req))
+        {
+            return false;
+        }
+
+        DataManager.MainPlayer.InitRoleData(rsp.Player);//这里可能没有player的战斗数据，enterMap的时候会有完整的过来
         BasicModule.Login.OnSignPlayer(rsp);
         return true;
     }

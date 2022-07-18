@@ -6,6 +6,8 @@ using static BasicModule;
 public class LoginProcedure : ProcedureBase
 {
     private bool _signalSigninPlayerSuccess = false;
+    private string _roleID;
+    private int _loginRetryCount = 0;
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
@@ -16,7 +18,6 @@ public class LoginProcedure : ProcedureBase
 
         Login.OnCheckRoleInfo += OnCheckRoleInfo;
         Login.OnRoleReady += OnRoleReady;
-        Login.OnSignPlayer += OnSignPlayer;
         Login.StartLogin();
     }
 
@@ -26,7 +27,6 @@ public class LoginProcedure : ProcedureBase
         eventCom.Unsubscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
 
         Login.OnCheckRoleInfo -= OnCheckRoleInfo;
-        Login.OnSignPlayer -= OnSignPlayer;
         base.OnLeave(procedureOwner, isShutdown);
     }
 
@@ -68,8 +68,9 @@ public class LoginProcedure : ProcedureBase
 
     private void OnRoleReady(string roleId)
     {
+        _roleID = roleId;
         MLog.Info(eLogTag.login, "on role ready,start to sign in player");
-        SigninPlayerAction.Req(roleId);
+        SigninPlayerAction.Req(roleId).SetCB(OnSignPlayer, OnSignPlayerFail);
         Login.CloseCreateRoleForm();
     }
 
@@ -77,5 +78,16 @@ public class LoginProcedure : ProcedureBase
     {
         MLog.Info(eLogTag.login, "on signin player success,start to enter map");
         _signalSigninPlayerSuccess = true;
+    }
+
+    private void OnSignPlayerFail(int code, string err)
+    {
+        if (_loginRetryCount++ < 5)
+        {
+            MLog.Error(eLogTag.login, $"on signin player fail,code={code},err={err}");
+            MLog.Error(eLogTag.login, "retry to sign in player");
+            SigninPlayerAction.Req(_roleID).SetCB(OnSignPlayer, OnSignPlayerFail);
+            // _ = UICenter.OpenUIAlert<AlertCommon>(new AlertData("SignIn", "Retry sign in",));
+        }
     }
 }

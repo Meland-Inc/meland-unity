@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-30 21:34:47
+ * @LastEditTime: 2022-07-07 19:55:59
  * @LastEditors: mangit
  * @Description: runtime登录渠道
  * @Date: 2022-06-14 14:39:07
@@ -13,15 +13,15 @@ public class LoginChannelRuntime : LoginChannelBase
 
     public override void Start()
     {
-        Runtime.LoginAction.Req();
-        Runtime.LoginAction.OnLoginSuccess += OnRuntimeLoginSuccess;
+        MLog.Info(eLogTag.login, "start login channel runtime");
+        Runtime.LoginAction.Req().SetCB(OnRuntimeLoginSuccess);
     }
 
-    private void OnRuntimeLoginSuccess(string userID)
+    private void OnRuntimeLoginSuccess(Runtime.LoginResponse rsp)
     {
-        UserID = userID;
+        MLog.Info(eLogTag.login, $"runtime login success,userId:{rsp.UserId}");
+        UserID = rsp.UserId;
         OnLoginSuccess.Invoke();
-        Runtime.LoginAction.OnLoginSuccess -= OnRuntimeLoginSuccess;
     }
 
     private string GetToken()

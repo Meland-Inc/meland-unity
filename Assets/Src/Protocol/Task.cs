@@ -38,19 +38,20 @@ namespace Bian {
             "X2NuZhgBIAEoCzITLkJpYW4uVGFza09wdGlvbkNuZhIMCgRyYXRlGAIgASgF",
             "Il0KBFRhc2sSDwoHdGFza19pZBgBIAEoBRIhCgl0YXNrX2tpbmQYAiABKA4y",
             "Di5CaWFuLlRhc2tUeXBlEiEKB29wdGlvbnMYAyADKAsyEC5CaWFuLlRhc2tP",
-            "cHRpb24ifAoIVGFza0xpc3QSCgoCaWQYASABKAUSIAoEa2luZBgCIAEoDjIS",
-            "LkJpYW4uVGFza0xpc3RUeXBlEgwKBHJhdGUYAyABKAUSHAoIY3VyX3Rhc2sY",
-            "BCABKAsyCi5CaWFuLlRhc2sSFgoOcmVjZWl2ZV9yZXdhcmQYBSABKAUiMAoK",
-            "UGxheWVyVGFzaxIiCgp0YXNrX2xpc3RzGAEgAygLMg4uQmlhbi5UYXNrTGlz",
-            "dCrhAQoIVGFza1R5cGUSHAoYVGFza1R5cGVfVGFza1R5cGVVbmtub3duEAAS",
-            "HAoYVGFza1R5cGVfVGFza1R5cGVHZXRJdGVtEAESHAoYVGFza1R5cGVfVGFz",
-            "a1R5cGVVc2VJdGVtEAISIAocVGFza1R5cGVfVGFza1R5cGVLaWxsTW9uc3Rl",
-            "chADEhsKF1Rhc2tUeXBlX1Rhc2tUeXBlTW92ZVRvEAQSGQoVVGFza1R5cGVf",
-            "VGFza1R5cGVRdWl6EAUSIQodVGFza1R5cGVfVGFza1R5cGVPY2N1cGllZExh",
-            "bmQQBiqjAQoMVGFza0xpc3RUeXBlEiQKIFRhc2tMaXN0VHlwZV9UYXNrTGlz",
-            "dFR5cGVVbmtub3duEAASIgoeVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZURh",
-            "aWx5EAESJQohVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZVJld2FyZGVkEAIS",
-            "IgoeVGFza0xpc3RUeXBlX1Rhc2tMaXN0VHlwZU90aGVyEANiBnByb3RvMw=="));
+            "cHRpb24ioAEKCFRhc2tMaXN0EgoKAmlkGAEgASgFEiAKBGtpbmQYAiABKA4y",
+            "Ei5CaWFuLlRhc2tMaXN0VHlwZRITCgtjYW5fcmVjZWl2ZRgDIAEoCBINCgVk",
+            "b2luZxgEIAEoCBIMCgRyYXRlGAUgASgFEhwKCGN1cl90YXNrGAYgASgLMgou",
+            "Qmlhbi5UYXNrEhYKDnJlY2VpdmVfcmV3YXJkGAcgASgFIjAKClBsYXllclRh",
+            "c2sSIgoKdGFza19saXN0cxgBIAMoCzIOLkJpYW4uVGFza0xpc3Qq4QEKCFRh",
+            "c2tUeXBlEhwKGFRhc2tUeXBlX1Rhc2tUeXBlVW5rbm93bhAAEhwKGFRhc2tU",
+            "eXBlX1Rhc2tUeXBlR2V0SXRlbRABEhwKGFRhc2tUeXBlX1Rhc2tUeXBlVXNl",
+            "SXRlbRACEiAKHFRhc2tUeXBlX1Rhc2tUeXBlS2lsbE1vbnN0ZXIQAxIbChdU",
+            "YXNrVHlwZV9UYXNrVHlwZU1vdmVUbxAEEhkKFVRhc2tUeXBlX1Rhc2tUeXBl",
+            "UXVpehAFEiEKHVRhc2tUeXBlX1Rhc2tUeXBlT2NjdXBpZWRMYW5kEAYqowEK",
+            "DFRhc2tMaXN0VHlwZRIkCiBUYXNrTGlzdFR5cGVfVGFza0xpc3RUeXBlVW5r",
+            "bm93bhAAEiIKHlRhc2tMaXN0VHlwZV9UYXNrTGlzdFR5cGVEYWlseRABEiUK",
+            "IVRhc2tMaXN0VHlwZV9UYXNrTGlzdFR5cGVSZXdhcmRlZBACEiIKHlRhc2tM",
+            "aXN0VHlwZV9UYXNrTGlzdFR5cGVPdGhlchADYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.TaskType), typeof(global::Bian.TaskListType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,7 +62,7 @@ namespace Bian {
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionCnf), global::Bian.TaskOptionCnf.Parser, new[]{ "Kind", "Num", "Item", "MonInfo", "TarPos", "QuizInfo" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOption), global::Bian.TaskOption.Parser, new[]{ "OptionCnf", "Rate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Task), global::Bian.Task.Parser, new[]{ "TaskId", "TaskKind", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskList), global::Bian.TaskList.Parser, new[]{ "Id", "Kind", "Rate", "CurTask", "ReceiveReward" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskList), global::Bian.TaskList.Parser, new[]{ "Id", "Kind", "CanReceive", "Doing", "Rate", "CurTask", "ReceiveReward" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerTask), global::Bian.PlayerTask.Parser, new[]{ "TaskLists" }, null, null, null, null)
           }));
     }
@@ -2069,6 +2070,8 @@ namespace Bian {
     public TaskList(TaskList other) : this() {
       id_ = other.id_;
       kind_ = other.kind_;
+      canReceive_ = other.canReceive_;
+      doing_ = other.doing_;
       rate_ = other.rate_;
       curTask_ = other.curTask_ != null ? other.curTask_.Clone() : null;
       receiveReward_ = other.receiveReward_;
@@ -2111,8 +2114,38 @@ namespace Bian {
       }
     }
 
+    /// <summary>Field number for the "can_receive" field.</summary>
+    public const int CanReceiveFieldNumber = 3;
+    private bool canReceive_;
+    /// <summary>
+    /// 任务链是否可以在接取
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CanReceive {
+      get { return canReceive_; }
+      set {
+        canReceive_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "doing" field.</summary>
+    public const int DoingFieldNumber = 4;
+    private bool doing_;
+    /// <summary>
+    /// 任务链是否正在进行
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Doing {
+      get { return doing_; }
+      set {
+        doing_ = value;
+      }
+    }
+
     /// <summary>Field number for the "rate" field.</summary>
-    public const int RateFieldNumber = 3;
+    public const int RateFieldNumber = 5;
     private int rate_;
     /// <summary>
     /// 进度
@@ -2127,7 +2160,7 @@ namespace Bian {
     }
 
     /// <summary>Field number for the "cur_task" field.</summary>
-    public const int CurTaskFieldNumber = 4;
+    public const int CurTaskFieldNumber = 6;
     private global::Bian.Task curTask_;
     /// <summary>
     /// current task
@@ -2142,10 +2175,10 @@ namespace Bian {
     }
 
     /// <summary>Field number for the "receive_reward" field.</summary>
-    public const int ReceiveRewardFieldNumber = 5;
+    public const int ReceiveRewardFieldNumber = 7;
     private int receiveReward_;
     /// <summary>
-    /// 记录领取奖励的任务rate时间点，0表示未曾领取奖励
+    /// 任务奖励的领取进度(0, 1, 2)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2173,6 +2206,8 @@ namespace Bian {
       }
       if (Id != other.Id) return false;
       if (Kind != other.Kind) return false;
+      if (CanReceive != other.CanReceive) return false;
+      if (Doing != other.Doing) return false;
       if (Rate != other.Rate) return false;
       if (!object.Equals(CurTask, other.CurTask)) return false;
       if (ReceiveReward != other.ReceiveReward) return false;
@@ -2185,6 +2220,8 @@ namespace Bian {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
       if (Kind != global::Bian.TaskListType.TaskListTypeUnknown) hash ^= Kind.GetHashCode();
+      if (CanReceive != false) hash ^= CanReceive.GetHashCode();
+      if (Doing != false) hash ^= Doing.GetHashCode();
       if (Rate != 0) hash ^= Rate.GetHashCode();
       if (curTask_ != null) hash ^= CurTask.GetHashCode();
       if (ReceiveReward != 0) hash ^= ReceiveReward.GetHashCode();
@@ -2214,16 +2251,24 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteEnum((int) Kind);
       }
-      if (Rate != 0) {
+      if (CanReceive != false) {
         output.WriteRawTag(24);
+        output.WriteBool(CanReceive);
+      }
+      if (Doing != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Doing);
+      }
+      if (Rate != 0) {
+        output.WriteRawTag(40);
         output.WriteInt32(Rate);
       }
       if (curTask_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteMessage(CurTask);
       }
       if (ReceiveReward != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteInt32(ReceiveReward);
       }
       if (_unknownFields != null) {
@@ -2244,16 +2289,24 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteEnum((int) Kind);
       }
-      if (Rate != 0) {
+      if (CanReceive != false) {
         output.WriteRawTag(24);
+        output.WriteBool(CanReceive);
+      }
+      if (Doing != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Doing);
+      }
+      if (Rate != 0) {
+        output.WriteRawTag(40);
         output.WriteInt32(Rate);
       }
       if (curTask_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteMessage(CurTask);
       }
       if (ReceiveReward != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteInt32(ReceiveReward);
       }
       if (_unknownFields != null) {
@@ -2271,6 +2324,12 @@ namespace Bian {
       }
       if (Kind != global::Bian.TaskListType.TaskListTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
+      }
+      if (CanReceive != false) {
+        size += 1 + 1;
+      }
+      if (Doing != false) {
+        size += 1 + 1;
       }
       if (Rate != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Rate);
@@ -2298,6 +2357,12 @@ namespace Bian {
       }
       if (other.Kind != global::Bian.TaskListType.TaskListTypeUnknown) {
         Kind = other.Kind;
+      }
+      if (other.CanReceive != false) {
+        CanReceive = other.CanReceive;
+      }
+      if (other.Doing != false) {
+        Doing = other.Doing;
       }
       if (other.Rate != 0) {
         Rate = other.Rate;
@@ -2335,17 +2400,25 @@ namespace Bian {
             break;
           }
           case 24: {
+            CanReceive = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Doing = input.ReadBool();
+            break;
+          }
+          case 40: {
             Rate = input.ReadInt32();
             break;
           }
-          case 34: {
+          case 50: {
             if (curTask_ == null) {
               CurTask = new global::Bian.Task();
             }
             input.ReadMessage(CurTask);
             break;
           }
-          case 40: {
+          case 56: {
             ReceiveReward = input.ReadInt32();
             break;
           }
@@ -2373,17 +2446,25 @@ namespace Bian {
             break;
           }
           case 24: {
+            CanReceive = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Doing = input.ReadBool();
+            break;
+          }
+          case 40: {
             Rate = input.ReadInt32();
             break;
           }
-          case 34: {
+          case 50: {
             if (curTask_ == null) {
               CurTask = new global::Bian.Task();
             }
             input.ReadMessage(CurTask);
             break;
           }
-          case 40: {
+          case 56: {
             ReceiveReward = input.ReadInt32();
             break;
           }

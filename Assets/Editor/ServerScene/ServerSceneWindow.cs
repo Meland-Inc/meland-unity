@@ -98,7 +98,7 @@ namespace Meland.Editor.ServerScene
                         GameObject newObject = Instantiate(gameObject);
                         newObject.name = gameObject.name;
                         SceneManager.MoveGameObjectToScene(newObject, serverWorldScene);
-                        ServerSceneUtil.DestroyObjectComponent(newObject);
+                        ServerSceneUtil.RetainCollisionComponen(newObject);
                     }
                     _ = EditorSceneManager.SaveScene(serverWorldScene);
                     _ = EditorSceneManager.CloseScene(serverWorldScene, true);
@@ -111,18 +111,18 @@ namespace Meland.Editor.ServerScene
                 }
             }
 
-            if (GUILayout.Button("导出当前场景网格数据"))
+            if (GUILayout.Button("导出当前场景寻路数据"))
             {
                 try
                 {
                     Scene scene = SceneManager.GetActiveScene();
                     string navMesh = Path.Combine(scene.path.Substring(0, scene.path.LastIndexOf('.')), "NavMesh.asset");
                     File.Copy(navMesh, SERVER_WORLD_SCENE_NAV_MESH_FILE_PATH, true);
-                    EditorUtility.DisplayDialog("Info", "导出网格数据成功", "OK");
+                    EditorUtility.DisplayDialog("Info", "导出寻路数据成功", "OK");
                 }
                 catch (System.Exception)
                 {
-                    EditorUtility.DisplayDialog("Error", "导出网格数据错误", "OK");
+                    EditorUtility.DisplayDialog("Error", "导出寻路数据错误", "OK");
                     throw;
                 }
             }

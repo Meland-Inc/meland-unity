@@ -31,6 +31,11 @@ namespace Meland.Editor.ServerScene
                 RetainCollisionComponent(childTransform.gameObject);
             }
 
+            if (gameObject.transform.childCount == 0 && !gameObject.TryGetComponent(out Collider _))
+            {
+                Object.DestroyImmediate(gameObject, true);
+            }
+
         }
     }
 }

@@ -68,6 +68,7 @@ namespace Meland.Editor.ServerScene
                             }
                         }
                         UnityGameFramework.Editor.OpenFolder.Execute(SERVER_SCENE_CONFIG_PATH);
+                        SharedCoresVersionTool.UpdateConfigVersion();
                         AssetDatabase.Refresh();
 
                         Debug.Log(Utility.Text.Format("Generate Server Data file '{0}' success.", outputFileName));
@@ -102,6 +103,7 @@ namespace Meland.Editor.ServerScene
                     }
                     _ = EditorSceneManager.SaveScene(serverWorldScene);
                     _ = EditorSceneManager.CloseScene(serverWorldScene, true);
+                    SharedCoresVersionTool.UpdateSceneVersion();
                     EditorUtility.DisplayDialog("Info", "导出场景碰撞数据成功", "OK");
                 }
                 catch (System.Exception)
@@ -118,6 +120,7 @@ namespace Meland.Editor.ServerScene
                     Scene scene = SceneManager.GetActiveScene();
                     string navMesh = Path.Combine(scene.path.Substring(0, scene.path.LastIndexOf('.')), "NavMesh.asset");
                     File.Copy(navMesh, SERVER_WORLD_SCENE_NAV_MESH_FILE_PATH, true);
+                    SharedCoresVersionTool.UpdateNavMeshVersion();
                     EditorUtility.DisplayDialog("Info", "导出寻路数据成功", "OK");
                 }
                 catch (System.Exception)

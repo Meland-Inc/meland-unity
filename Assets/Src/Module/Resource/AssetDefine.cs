@@ -32,11 +32,7 @@ public static class AssetDefine
     public static readonly string PATH_AVATAR_ICON = Path.Combine(PATH_ROOT_RES, "Sprite/Icon/Avatar");
     public static readonly string PATH_ROLE_NAME = Path.Combine(PATH_ROOT_RES, "Text/RoleName");
     public static readonly string PATH_ITEM_ICON = Path.Combine(PATH_ROOT_RES, "Sprite/Icon/Item");
-    public static readonly int ITEMID_DITAMIN = 79999901;
     public static readonly int ITEMID_EXP = 79999902;
-    public static readonly string PATH_AVATAR_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Avatar");
-    public static readonly string PATH_ROLE_NAME = Path.Combine(PATH_ROOT, "Text/RoleName");
-    public static readonly string PATH_ITEM_ICON = Path.Combine(PATH_ROOT, "Sprite/Icon/Item");
 
 }
 

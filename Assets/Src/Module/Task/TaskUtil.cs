@@ -10,10 +10,9 @@ public static class TaskUtil
     /// 读表整理 奖励数据
     /// </summary>
     /// <param name="dropId"></param>
-    /// <param name="ditamin"></param>
     /// <param name="exp"></param>
     /// <returns></returns>
-    public static List<RewardNftData> GetRewardNftData(int dropId, int ditamin, int exp)
+    public static List<RewardNftData> GetRewardNftData(int dropId, int exp)
     {
         List<RewardNftData> taskRewards = new();
         DRDrop dropItem = GFEntry.DataTable.GetDataTable<DRDrop>().GetDataRow(dropId);
@@ -26,7 +25,6 @@ public static class TaskUtil
             taskRewards.Add(CreateRewardNftDataByItemId(itemId, count));
         }
 
-        taskRewards.Add(CreateRewardNftDataByItemId(AssetDefine.ITEMID_DITAMIN, ditamin));
         taskRewards.Add(CreateRewardNftDataByItemId(AssetDefine.ITEMID_EXP, exp));
         return taskRewards;
     }

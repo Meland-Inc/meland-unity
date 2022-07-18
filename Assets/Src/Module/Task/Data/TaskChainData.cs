@@ -131,7 +131,7 @@ public class TaskChainData
         // 任务链结束时间
         TaskChainEndTimeStamp = TimeUtil.DataTime2TimeStamp(rawSvrData.Kind == TaskListType.TaskListTypeDaily ? TimeUtil.GetDayEndTime() : TimeUtil.GetWeekEndTime());
         // 任务链奖励
-        List<RewardNftData> taskChainRewards = TaskUtil.GetRewardNftData(DRTaskList.ItemReward, DRTaskList.DitaminReward, DRTaskList.ExpReward);
+        List<RewardNftData> taskChainRewards = TaskUtil.GetRewardNftData(DRTaskList.ItemReward, DRTaskList.ExpReward);
         TaskUtil.TaskListAddRange(TaskChainRewards, taskChainRewards);
 
         // 具体任务
@@ -144,7 +144,7 @@ public class TaskChainData
             // 当前任务子任务
             List<TaskDefine.TaskSubItemData> curTaskSubItems = TaskUtil.GenerateTaskSubItems(rawSvrData, DRTask);
             // 当前任务奖励
-            List<RewardNftData> curTaskRewards = TaskUtil.GetRewardNftData(DRTask.ItemReward, DRTask.DitaminReward, DRTask.ExpReward);
+            List<RewardNftData> curTaskRewards = TaskUtil.GetRewardNftData(DRTask.ItemReward, DRTask.ExpReward);
 
             TaskUtil.TaskListAddRange(TaskSubmitItems, taskSubmitItems);
             TaskUtil.TaskListAddRange(CurTaskSubItems, curTaskSubItems);

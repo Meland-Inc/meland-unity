@@ -12,7 +12,7 @@ using MelandGame3;
 /// </summary>
 public class MonsterSvrDataProcess : RoleSvrDataProcess
 {
-    public override void SvrDataInit(SceneEntity sceneEntity, EntityWithLocation svrEntity)
+    public override void SvrDataInit(EntityBase sceneEntity, EntityWithLocation svrEntity)
     {
         base.SvrDataInit(sceneEntity, svrEntity);
 

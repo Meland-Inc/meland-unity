@@ -22,7 +22,7 @@ public class TEntityProfileUpdateByFieldIdAction : GameChannelNetMsgTActionBase<
 
         if (rsp.EntityId.Id == DataManager.MainPlayer.RoleID)
         {
-            DataManager.MainPlayer.UpdateProfile(rsp.ProfileId, rsp.CurrentValue, rsp.StrValue);
+            DataManager.MainPlayer.Role.GetComponent<RoleProfileData>().UpdateProfile(rsp.ProfileId, rsp.CurrentValue, rsp.StrValue);
         }
         else
         {

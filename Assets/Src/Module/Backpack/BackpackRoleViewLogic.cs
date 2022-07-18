@@ -1,9 +1,9 @@
 /*
  * @Author: mangit
- * @LastEditors Please set LastEditors
+ * @LastEditors: mangit
  * @Description: 背包角色视图逻辑
  * @Date: 2022-06-21 13:54:14
- * @FilePath /Assets/Src/Module/Backpack/BackpackRoleViewLogic.cs
+ * @FilePath: /Assets/Src/Module/Backpack/BackpackRoleViewLogic.cs
  */
 using Bian;
 using FairyGUI;
@@ -89,11 +89,12 @@ public class BackpackRoleViewLogic : FGUILogicCpt
 
     private void UpdateSlotView()
     {
-        foreach (KeyValuePair<AvatarPosition, EquipmentSlot> item in slotDic)
+        Dictionary<AvatarPosition, ItemSlot> slotDic = DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().ItemSlotDic;
+        foreach (KeyValuePair<AvatarPosition, EquipmentSlot> item in this.slotDic)
         {
             _ = DataManager.Backpack.WearableItemDic.TryGetValue(item.Key, out BpWearableNftItem avatarItem);
             item.Value.SetNftData(avatarItem);
-            item.Value.SetSlotData(DataManager.MainPlayer.ItemSlotDic[item.Key]);
+            item.Value.SetSlotData(slotDic[item.Key]);
         }
     }
     private void OnAvatarDataUpdated()

@@ -292,7 +292,7 @@ public class ComSkillInfLogic : FGUILogicCpt
         SetBtnEnable(_btnUpgrade, canUpgrade);
         SetBtnLoadingStatus(_btnUpgrade, Recharge.IsMeldRecharging);
 
-        _btnLevelMax.visible = _skillInfo.Lv >= DataManager.MainPlayer.RoleLv;
+        _btnLevelMax.visible = _skillInfo.Lv >= DataManager.MainPlayer.Role.GetComponent<RoleProfileData>().RoleLv;
         _btnUpgrade.visible = !_btnLevelMax.visible;
     }
 

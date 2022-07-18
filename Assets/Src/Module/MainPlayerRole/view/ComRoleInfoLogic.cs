@@ -147,7 +147,7 @@ public class ComRoleInfoLogic : FGUILogicCpt
 
     private void UpdateTips()
     {
-        int roleLv = DataManager.MainPlayer.RoleLv;
+        int roleLv = DataManager.MainPlayer.Role.GetComponent<RoleProfileData>().RoleLv;
         int needExp = RoleLvTable.Inst.GetRow(roleLv).Exp;
         _tfUpgradeTips
             .SetVar("exp", needExp.ToString())

@@ -84,7 +84,8 @@ public class ComSlotInfoLogic : FGUILogicCpt
 
     public void UpdateView(AvatarPosition slotPos)
     {
-        _slotData = DataManager.MainPlayer.ItemSlotDic[slotPos];
+        Dictionary<AvatarPosition, ItemSlot> slotDic = DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().ItemSlotDic;
+        _slotData = slotDic[slotPos];
         _slotLvCfg = SlotLvTable.Inst.GetDataRow((int)_slotData.Position, _slotData.Level);
         UpdateSlotLv();
         UpdateExp();
@@ -102,7 +103,7 @@ public class ComSlotInfoLogic : FGUILogicCpt
 
     private void UpdateExp()
     {
-        _comExp.value = Convert.ToDouble(DataManager.MainPlayer.RoleExp);
+        _comExp.value = Convert.ToDouble(DataManager.MainPlayer.Role.GetComponent<RoleProfileData>().RoleExp);
         _comExp.max = _slotLvCfg.Exp;
     }
 

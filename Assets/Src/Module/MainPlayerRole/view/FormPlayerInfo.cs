@@ -120,7 +120,7 @@ public class FormPlayerInfo : FGUIForm
             AvatarPosition slotPos = LstIndex2AvatarPos(index);
             EquipmentSlot slotItem = _lstSlot.GetChildAt(index) as EquipmentSlot;
             _ = DataManager.Backpack.WearableItemDic.TryGetValue(slotPos, out BpWearableNftItem data);
-            _ = DataManager.MainPlayer.ItemSlotDic.TryGetValue(slotPos, out ItemSlot slotData);
+            _ = DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().ItemSlotDic.TryGetValue(slotPos, out ItemSlot slotData);
             slotItem.SetNftData(data);
             slotItem.SetSlotData(slotData);
         }

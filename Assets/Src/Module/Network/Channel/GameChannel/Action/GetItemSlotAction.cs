@@ -5,7 +5,7 @@
  * @Date: 2022-06-23 14:25:15
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/GetItemSlotAction.cs
  */
-using Bian;
+using MelandGame3;
 
 public class GetItemSlotAction : GameChannelNetMsgRActionBase<GetItemSlotRequest, GetItemSlotResponse>
 {

@@ -5,7 +5,7 @@
  * @Date: 2022-06-22 14:51:10
  * @FilePath: /Assets/Src/Module/MainPlayerRole/view/FormPlayerInfo.cs
  */
-using Bian;
+using MelandGame3;
 using FairyGUI;
 public class FormPlayerInfo : FGUIForm
 {

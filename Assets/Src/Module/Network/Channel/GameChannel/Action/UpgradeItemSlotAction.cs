@@ -5,7 +5,7 @@
  * @Date: 2022-06-23 14:25:28
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/UpgradeItemSlotAction.cs
  */
-using Bian;
+using MelandGame3;
 
 public class UpgradeItemSlotAction : GameChannelNetMsgRActionBase<UpgradeItemSlotRequest, UpgradeItemSlotResponse>
 {

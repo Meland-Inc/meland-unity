@@ -5,7 +5,7 @@
  * @Date: 2022-06-23 14:27:26
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/TUpdateItemSlotAction.cs
  */
-using Bian;
+using MelandGame3;
 public class TUpdateItemSlotAction : GameChannelNetMsgTActionBase<TUpdateItemSlotResponse>
 {
     protected override EnvelopeType GetEnvelopeType()

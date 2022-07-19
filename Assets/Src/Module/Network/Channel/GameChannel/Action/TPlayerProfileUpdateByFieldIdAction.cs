@@ -5,7 +5,7 @@
  * @Date: 2022-06-27 19:52:02
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/TPlayerProfileUpdateByFieldIdAction.cs
  */
-using Bian;
+using MelandGame3;
 public class TPlayerProfileUpdateByFieldIdAction : GameChannelNetMsgTActionBase<TPlayerProfileUpdateByFieldIdResponse>
 {
     protected override EnvelopeType GetEnvelopeType()

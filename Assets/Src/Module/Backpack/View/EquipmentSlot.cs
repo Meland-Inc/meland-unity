@@ -6,7 +6,7 @@
  * @Date: 2022-06-20 22:43:25
  * @FilePath: /Assets/Src/Module/Backpack/View/EquipmentSlot.cs
  */
-using Bian;
+using MelandGame3;
 using FairyGUI;
 using FairyGUI.Utils;
 

@@ -4,7 +4,7 @@ using UnityGameFramework.Runtime;
 /// <summary>
 /// 生产各种实体类型的初始场景实体的工厂
 /// </summary>
-public class SceneEntityFactory : EntityFactory
+public class SceneEntityFactory : EntityFactory<SceneEntity>
 {
     //各实体类型的初始装配逻辑
     private readonly Dictionary<eEntityType, IEntityTypeAssembleLogic> _assembleLogic = new()
@@ -19,7 +19,7 @@ public class SceneEntityFactory : EntityFactory
     /// <param name="entity"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    protected override T AssemblyEntity<T>(T entity)
+    protected override SceneEntity AssemblyEntity(SceneEntity entity)
     {
         if (!_assembleLogic.TryGetValue(entity.BaseData.Type, out IEntityTypeAssembleLogic assembleLogic))
         {
@@ -29,5 +29,12 @@ public class SceneEntityFactory : EntityFactory
 
         assembleLogic.AssembleSceneEntity(entity, entity.BaseData.Type);
         return entity;
+    }
+
+    public SceneEntity CreateMainRoleEntity(long id)
+    {
+        MainRoleEntity entity = new();
+        entity.InitBaseInfo(id, eEntityType.player);
+        return AssemblyEntity(entity);
     }
 }

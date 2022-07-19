@@ -7,5 +7,5 @@ public interface IEntityTypeAssembleLogic
     /// 装配场景实体
     /// </summary>
     /// <param name="entity"></param>
-    public void AssembleSceneEntity(EntityBase entity, eEntityType entityType);
+    public void AssembleSceneEntity(SceneEntity entity, eEntityType entityType);
 }

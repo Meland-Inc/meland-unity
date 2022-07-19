@@ -3,7 +3,7 @@
 /// </summary>
 public class PlayerRoleAssembleLogic : IEntityTypeAssembleLogic
 {
-    public void AssembleSceneEntity(EntityBase entity, eEntityType entityType)
+    public void AssembleSceneEntity(SceneEntity entity, eEntityType entityType)
     {
         _ = entity.AddComponent<NetInputMove>();
         _ = entity.AddComponent<PlayerRoleSvrDataProcess>();

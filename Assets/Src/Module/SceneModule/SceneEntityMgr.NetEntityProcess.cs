@@ -2,7 +2,7 @@ using MelandGame3;
 using System;
 using Google.Protobuf.Collections;
 
-public partial class SceneEntityMgr : EntityMgr
+public partial class SceneEntityMgr : EntityMgr<SceneEntity, SceneEntityFactory>
 {
     public void NetInitMainRole(Player playerData, EntityLocation location)
     {
@@ -48,7 +48,7 @@ public partial class SceneEntityMgr : EntityMgr
 
             try
             {
-                EntityBase entity = AddEntity(Convert.ToInt64(svrEntity.Id), NetUtil.SvrEntityType2Client(svrEntity.Type));
+                SceneEntity entity = AddEntity(Convert.ToInt64(svrEntity.Id), NetUtil.SvrEntityType2Client(svrEntity.Type));
                 entity.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
 
                 if (entity.TryGetComponent(out EntitySvrDataProcess dataProcess))

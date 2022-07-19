@@ -5,7 +5,7 @@ using MelandGame3;
 /// </summary>
 public class RoleSvrDataProcess : EntitySvrDataProcess
 {
-    public override void SvrDataInit(EntityBase sceneEntity, EntityWithLocation svrEntity)
+    public override void SvrDataInit(SceneEntity sceneEntity, EntityWithLocation svrEntity)
     {
         SpineAnimationCpt animCpt = sceneEntity.AddComponent<SpineAnimationCpt>();
 

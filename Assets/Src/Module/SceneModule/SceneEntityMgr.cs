@@ -4,11 +4,11 @@ using UnityEngine;
 /// 场景实体管理 管理着和服务器同步的所有实体
 /// </summary>
 [DisallowMultipleComponent]
-public partial class SceneEntityMgr : EntityMgr
+public partial class SceneEntityMgr : EntityMgr<SceneEntity, SceneEntityFactory>
 {
-    protected override EntityBase CreateEntity(long entityID, eEntityType entityType)
+    protected override SceneEntity CreateEntity(long entityID, eEntityType entityType)
     {
-        return Factory.CreateSceneEntity<SceneEntity>(entityID, entityType);
+        return Factory.CreateSceneEntity(entityID, entityType);
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ public partial class SceneEntityMgr : EntityMgr
             RemoveMainPlayerRole();
         }
 
-        SceneEntity newRole = Factory.CreateSceneEntity<MainRoleEntity>(entityID, eEntityType.player);
+        SceneEntity newRole = Factory.CreateMainRoleEntity(entityID);
         newRole.Init();
         newRole.SetRootName($"mainPlayerRole_{newRole.BaseData.Id}");
         DataManager.MainPlayer.SetRole(newRole);
@@ -47,11 +47,6 @@ public partial class SceneEntityMgr : EntityMgr
         _ = EntityDic.Remove(role.BaseData.Id);
         DataManager.MainPlayer.SetRole(null);
         role.Dispose();
-    }
-
-    protected override EntityFactory GetFactory()
-    {
-        return new SceneEntityFactory();
     }
 
     /// <summary>

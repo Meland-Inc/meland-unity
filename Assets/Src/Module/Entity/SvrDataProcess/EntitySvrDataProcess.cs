@@ -11,5 +11,5 @@ public abstract class EntitySvrDataProcess : MonoBehaviour
     /// </summary>
     /// <param name="SceneEntity">客户端的逻辑实体</param>
     /// <param name="svrEntity">服务器实体数据</param>
-    public abstract void SvrDataInit(EntityBase sceneEntity, EntityWithLocation svrEntity);
+    public abstract void SvrDataInit(SceneEntity sceneEntity, EntityWithLocation svrEntity);
 }

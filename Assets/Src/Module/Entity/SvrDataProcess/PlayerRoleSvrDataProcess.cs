@@ -30,6 +30,7 @@ public class PlayerRoleSvrDataProcess : RoleSvrDataProcess
         }
 
         string prefabAsset = Path.Combine(AssetDefine.PATH_ROLE, EntityDefine.PLAYER_ROLE_PREFAB_ASSET);
-        GFEntry.Entity.ShowEntity<PlayerRoleEntityRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.PlayerRole, svrEntity.Id);
+        // GFEntry.Entity.ShowEntity<PlayerRoleEntityRender>(svrEntity.Id.GetHashCode(), prefabAsset, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.PlayerRole, svrEntity.Id);
+        GFEntry.Entity.ShowEntity<PlayerRoleEntityRender>(prefabAsset, svrEntity.Id, EntityDefine.GF_ENTITY_GROUP_ROLE, (int)eLoadPriority.PlayerRole);
     }
 }

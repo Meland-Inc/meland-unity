@@ -115,9 +115,9 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
             }
             _ = Receive(envelope.ErrorCode, envelope.ErrorMessage, resp, req);
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
-            MLog.Error(eLogTag.network, $"handle parse error type={envelope.Type} propertyName={propertyName} e={e}");
+            MLog.Error(eLogTag.network, $"handle parse error type={envelope.Type} propertyName={propertyName} e={e},error stack={e.StackTrace}");
         }
     }
 

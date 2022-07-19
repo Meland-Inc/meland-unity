@@ -1,14 +1,15 @@
 using MelandGame3;
+using System;
 using Google.Protobuf.Collections;
 
-public partial class SceneEntityMgr : SceneModuleBase
+public partial class SceneEntityMgr : EntityMgr<SceneEntity, SceneEntityFactory>
 {
     public void NetInitMainRole(Player playerData, EntityLocation location)
     {
         MLog.Info(eLogTag.entity, $"NetInitMainRole id={playerData.Id} [{location.Loc.X} {location.Loc.Y} {location.Loc.Z}]");
 
         DataManager.MainPlayer.InitRoleData(playerData);
-        SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
+        SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(Convert.ToInt64(playerData.Id));
         sceneRole.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
 
         EntityWithLocation svrEntity = new()//封装一个统一包 服务器本来用统一的更好
@@ -47,7 +48,7 @@ public partial class SceneEntityMgr : SceneModuleBase
 
             try
             {
-                SceneEntity entity = AddSceneEntity(svrEntity.Id, svrEntity.Type);
+                SceneEntity entity = AddEntity(Convert.ToInt64(svrEntity.Id), NetUtil.SvrEntityType2Client(svrEntity.Type));
                 entity.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
 
                 if (entity.TryGetComponent(out EntitySvrDataProcess dataProcess))
@@ -77,7 +78,7 @@ public partial class SceneEntityMgr : SceneModuleBase
 
             try
             {
-                RemoveSceneEntity(idInfo.Id);
+                RemoveEntity(Convert.ToInt64(idInfo.Id));
             }
             catch (System.Exception)
             {

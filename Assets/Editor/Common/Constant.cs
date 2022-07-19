@@ -7,17 +7,21 @@ public static class Constant
     // 项目路径
     public static readonly string ProjectPath = System.Environment.CurrentDirectory;
     // 项目Assets资源路径
-    public static readonly string AssetsPath = ProjectPath + $"{Spt}Assets";
+    public static readonly string AssetsPath = Path.Combine(ProjectPath, "Assets");
     // 编辑器插件 辅助临时文件
-    public static readonly string TempPath = ProjectPath + $"{Spt}Temp";
+    public static readonly string TempPath = Path.Combine(ProjectPath, "Temp");
     // protos 临时目录
-    public static readonly string TempOutPbmessageDir = TempPath + $"{Spt}OutPbmessage";
+    public static readonly string TempOutPbmessageDir = Path.Combine(TempPath, "OutPbmessage");
     // 输出的 pbmessage.cs 路径
-    public static readonly string PbmessageCsPath = AssetsPath + $"{Spt}Src{Spt}Protocol";
+    public static readonly string PbmessageCsPath = Path.Combine(AssetsPath, "Src/Protocol");
     // window protoc 解析器
-    public static readonly string ProtocWindow = ProjectPath + $"{Spt}Packages{Spt}Google.Protobuf.Tools.3.20.1{Spt}tools{Spt}windows_x64{Spt}protoc.exe";
+    public static readonly string ProtocWindow = Path.Combine(ProjectPath, "Packages/Google.Protobuf.Tools.3.20.1/tools/windows_x64/protoc.exe");
     // mac protoc 解析器
-    public static readonly string ProtocMac = ProjectPath + $"{Spt}Packages{Spt}Google.Protobuf.Tools.3.20.1{Spt}tools{Spt}macosx_x64{Spt}protoc";
+    public static readonly string ProtocMac = Path.Combine(ProjectPath, "Packages/Google.Protobuf.Tools.3.20.1/tools/macosx_x64/protoc");
+    // 通用的用于执行命令的sh文件
+    public static readonly string CommonHandleSh = Path.Combine(AssetsPath, "Editor/Common/CommonBash.sh");
+    // 系统的 /bin/sh 命令
+    public static readonly string BinSh = Path.Combine("/bin/sh");
 
     // 用户预设key
     public enum ePlayerPrefsKey

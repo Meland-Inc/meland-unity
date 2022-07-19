@@ -5,9 +5,25 @@ public static class CommandTool
 
     public static void ProcessCommand(string command, string argument)
     {
-        ProcessStartInfo info = new(command);
+
+        string processCmd = null;
+        string processArgs = null;
+        if (CapabilitiesTool.IsMac())
+        {
+            // 在mac上，启动进程，直接执行命令 出现无反应。
+            // 这里采取间接方案，执行 shell.sh 文件，把命令传入其中，来进行命令执行。
+            processCmd = Constant.BinSh;
+            processArgs = $"{Constant.CommonHandleSh} {command} {argument}";
+        }
+        else
+        {
+            processCmd = command;
+            processArgs = argument;
+        }
+
+        ProcessStartInfo info = new(processCmd);
         //启动应用程序时要使用的一组命令行参数。
-        info.Arguments = argument;
+        info.Arguments = processArgs;
         //是否弹窗
         info.CreateNoWindow = true;
         //获取或设置指示不能启动进程时是否向用户显示错误对话框的值。
@@ -38,23 +54,25 @@ public static class CommandTool
         //获取或设置一个值，该值指示 StreamWriter 在每次调用 Write(Char) 之后是否都将其缓冲区刷新到基础流。
         process.StandardInput.AutoFlush = true;
 
+        string output = "";
+        string outputError = "";
         if (!info.UseShellExecute)
         {
-            string output = process.StandardOutput.ReadToEnd();
-            string outputError = process.StandardError.ReadToEnd();
-
-            if (!string.IsNullOrEmpty(output))
-            {
-                UnityEngine.Debug.Log(output);
-            }
-            if (!string.IsNullOrEmpty(outputError))
-            {
-                UnityEngine.Debug.Log(outputError);
-            }
+            output = process.StandardOutput.ReadToEnd();
+            outputError = process.StandardError.ReadToEnd();
         }
 
         process.WaitForExit();
         //关闭
         process.Close();
+
+        if (!string.IsNullOrEmpty(output))
+        {
+            UnityEngine.Debug.Log(output);
+        }
+        if (!string.IsNullOrEmpty(outputError))
+        {
+            throw new System.Exception(outputError);
+        }
     }
 }

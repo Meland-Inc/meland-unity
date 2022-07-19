@@ -2,7 +2,7 @@
  * @Author xiangqian
  * @Description 
  * @Date 2022-05-18 17:28:24
- * @FilePath /README.md
+ * @FilePath: /README.md
 -->
 # meland-unity
 
@@ -59,3 +59,13 @@ meland client main project make by unity
 - open Lauch scene ,on Assets/Res/Scene/Lauch
 - click 'play' to run the game
 - glad you joined
+
+
+#### devTool
+- compile proto cs
+  - Adding dependency tools
+    - Find 'NuGet' in the Unity menu,click 'Restore Packages' option
+  - Enable the execution permission of the mac compilation tool protoc on "meland-unity/Packages/Google.Protobuf.Tools.3.20.1/tools/macosx_x64/protoc"
+  - Find 'devtool' in the Unity menu,click 'proto' option to open the window
+  - Select the proto source file path, for example: .../bian_doc/pbmessage
+  - click '开始转换'

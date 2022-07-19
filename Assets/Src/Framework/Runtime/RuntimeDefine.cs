@@ -2,7 +2,7 @@
  * @Author: xiang huan
  * @Date: 2022-05-28 11:04:31
  * @Description: runtime 相关定义
- * @FilePath: /meland-unity/Assets/Src/Framework/Runtime/RuntimeDefine.cs
+ * @FilePath: /Assets/Src/Framework/Runtime/RuntimeDefine.cs
  * 
  */
 
@@ -20,6 +20,14 @@ public sealed class RuntimeDefine
         QuizCreateFight = 1004,
         TWebViewEnableMode = 1005,
         TUserAsset = 1006,
+
+        GetUnlockedRecipes = 2001,
+        UseRecipes = 2002,
+        GetUserSkillInfo = 2003,
+        RechargeToken = 2004,
+        TRechargeTokenSuccess = 2005,
+        GetUserGameInternalToken = 2006,
+        UpgradeSkill = 2007,
     };
 
     public enum eEgretEnableMode

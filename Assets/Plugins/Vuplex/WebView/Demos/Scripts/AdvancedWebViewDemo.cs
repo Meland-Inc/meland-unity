@@ -59,6 +59,7 @@ namespace Vuplex.WebView.Demos {
 
             // Create a 0.6 x 0.3 webview for the main web content.
             _mainWebViewPrefab = WebViewPrefab.Instantiate(0.6f, 0.3f);
+            _mainWebViewPrefab.PixelDensity = 2;
             _mainWebViewPrefab.transform.parent = transform;
             _mainWebViewPrefab.transform.localPosition = new Vector3(0, -0.05f, 0.4f);
             _mainWebViewPrefab.transform.localEulerAngles = new Vector3(0, 180, 0);

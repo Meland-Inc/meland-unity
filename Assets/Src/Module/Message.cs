@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Bian;
-using UnityEngine;
+using MelandGame3;
 
 public static class Message
 {
@@ -15,13 +14,6 @@ public static class Message
     /// 回复了地图进入成功
     /// </summary>
     public static Action<EnterMapResponse> RspMapEnterFinish = delegate { };
-
-    #endregion
-
-    #region  登陆
-
-    public static Action<GetPlayerHttpRsp> GetPlayerSuccess = delegate { };
-    public static Action<Bian.SigninPlayerResponse> SigninPlayerSuccess = delegate { };
 
     #endregion
 
@@ -52,5 +44,12 @@ public static class Message
     public static Action<List<ulong>, List<ulong>> UpdateTerritoryGridDataList = delegate { };
     public static Action<string> UpdateTerritoryPlayerAreaData = delegate { };
     public static Action<eTerritoryBorderRenderMode> UpdateTerritoryBorderRenderMode = delegate { };
+    #endregion
+
+    #region 角色
+    /// <summary>
+    /// 角色属性更新
+    /// </summary>
+    public static Action<EntityProfileField> RoleProfileUpdated = delegate { };
     #endregion
 }

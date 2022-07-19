@@ -1,10 +1,10 @@
 /*
  * @Author: xiang huan
  * @Date: 2022-05-28 11:00:53
- * @LastEditTime 2022-06-08 13:51:20
- * @LastEditors Please set LastEditors
+ * @LastEditTime: 2022-07-03 17:18:36
+ * @LastEditors: mangit
  * @Description: 通知类action
- * @FilePath /Assets/Src/Framework/Runtime/RuntimeMsgTActionBase.cs
+ * @FilePath: /Assets/Src/Framework/Runtime/RuntimeMsgTActionBase.cs
  * 
  */
 using GameFramework.Network;
@@ -27,7 +27,7 @@ public abstract class RuntimeMsgTActionBase<TRsp> : INetMsgAction where TRsp : R
 
     protected virtual bool Receive(int errorCode, string errorMsg, TRsp rsp)
     {
-        return true;
+        return errorCode == 0;
     }
 
     public virtual void Handle(object sender, Packet packet)

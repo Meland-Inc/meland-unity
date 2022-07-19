@@ -1,6 +1,6 @@
 
 
-using Bian;
+using MelandGame3;
 using UnityGameFramework.Runtime;
 
 public class SendHeartBreakAction : GameChannelNetMsgRActionBase<PingRequest, PingResponse>

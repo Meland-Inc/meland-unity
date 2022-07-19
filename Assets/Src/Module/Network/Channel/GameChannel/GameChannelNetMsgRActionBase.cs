@@ -1,3 +1,4 @@
+using System;
 using GameFramework.Network;
 
 /// <summary>
@@ -7,14 +8,17 @@ using GameFramework.Network;
 /// <typeparam name="TRsp"></typeparam>
 public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetMsgTActionBase<TRsp> where TReq : new()
 {
+    protected event Action<TRsp> OnSuccess;
+    protected event Action<int, string> OnError;
     // 网络消息包协议编号 (请求类型action可以被多次注册，需要区分每一次请求的id，所以使用SeqId)
     public override int Id => _reqPacket.GetTransferDataSeqId();
     // 用于给GF.Network 使用的包
     private GameChannelPacket _reqPacket;
-    protected static void SendAction<TAction>(TReq req) where TAction : GameChannelNetMsgRActionBase<TReq, TRsp>, new()
+    protected static TAction SendAction<TAction>(TReq req) where TAction : GameChannelNetMsgRActionBase<TReq, TRsp>, new()
     {
         TAction action = GetAction<TAction>(req);
         BasicModule.NetMsgCenter.SendMsg(action);
+        return action;
     }
 
     /// <summary>
@@ -29,6 +33,8 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
     public static TAction GetAction<TAction>(TReq req) where TAction : GameChannelNetMsgRActionBase<TReq, TRsp>, new()
     {
         TAction action = GetAction<TAction>();
+        action.OnSuccess = null;
+        action.OnError = null;
         action.InitReqPacket(req);
         return action;
     }
@@ -38,11 +44,14 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         _reqPacket = CreatePacket(req);
     }
 
-    protected abstract string GetEnvelopeReqName();
+    protected virtual string GetEnvelopeReqName()
+    {
+        return typeof(TReq).Name;
+    }
 
     protected GameChannelPacket CreatePacket(TReq req)
     {
-        Bian.Envelope envelope = new();
+        MelandGame3.Envelope envelope = new();
         envelope.Type = GetEnvelopeType();
         envelope.GetType().GetProperty(GetEnvelopeReqName()).SetValue(envelope, req);
         GameChannelPacket packet = new();
@@ -65,7 +74,16 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
     /// <returns>是否成功</returns>
     protected virtual bool Receive(int errorCode, string errorMsg, TRsp rsp, TReq req)
     {
-        return Receive(errorCode, errorMsg, rsp);
+        bool result = Receive(errorCode, errorMsg, rsp);
+        if (result)
+        {
+            OnSuccess?.Invoke(rsp);
+        }
+        else
+        {
+            OnError?.Invoke(errorCode, errorMsg);
+        }
+        return result;
     }
 
     public override void Handle(object sender, Packet packet)
@@ -76,11 +94,10 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         (sender as INetworkChannel).UnRegisterHandler(this);
 
         // 获取请求数据
-        Bian.Envelope reqEnvelope = _reqPacket.TransferData;
+        MelandGame3.Envelope reqEnvelope = _reqPacket.TransferData;
         TReq req = (TReq)reqEnvelope.GetType().GetProperty(GetEnvelopeReqName()).GetValue(reqEnvelope);
 
-        // 获取响应数据
-        Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
+        MelandGame3.Envelope envelope = (packet as GameChannelPacket).TransferData;
         string propertyName = envelope.PayloadCase.ToString();
         try
         {
@@ -112,5 +129,28 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
     public override void InitSeqId(int id)
     {
         _reqPacket.SetTransferDataSeqId(id);
+    }
+
+    public void SetCB(Action<TRsp> successCB, Action<int, string> errorCB = null)
+    {
+        if (successCB != null)
+        {
+            if (OnSuccess == null)
+            {
+                OnSuccess = delegate { };
+            }
+
+            OnSuccess += successCB;
+        }
+
+        if (errorCB != null)
+        {
+            if (OnError == null)
+            {
+                OnError = delegate { };
+            }
+
+            OnError += errorCB;
+        }
     }
 }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
-using Bian;
+using MelandGame3;
 
 /// <summary>
 /// 生产各种实体类型的初始场景实体的工厂
@@ -10,11 +10,8 @@ public static class SceneEntityFactory
     //各实体类型的初始装配逻辑
     private static readonly Dictionary<EntityType, IEntityTypeAssembleLogic> s_assembleLogic = new()
     {
-        { EntityType.EntityTypeMapObject, new SceneElementAssembleLogic() },
-        { EntityType.EntityTypeSpecialBuild, new SceneElementAssembleLogic() },
         { EntityType.EntityTypePlayer, new PlayerRoleAssembleLogic() },
         { EntityType.EntityTypeMonster, new MonsterAssembleLogic() },
-        { EntityType.EntityTypePuppet, new PuppetAssembleLogic() },
     };
 
     /// <summary>
@@ -48,7 +45,7 @@ public static class SceneEntityFactory
         entity.SetRootName($"mainPlayerRole_{entityID}");
 
         //主角特殊逻辑
-        entity.Root.AddComponent<MoveNetRequest>().enabled = false;
+        entity.AddComponent<NetReqMove>().enabled = false;
         return entity;
     }
 }

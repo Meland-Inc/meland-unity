@@ -15,7 +15,7 @@ public static class SceneDefine
     {
         {eSceneName.launch, Path.Combine(AssetDefine.PATH_SCENE,"Launch"+AssetDefine.SUFFIX_SCENE)},
         {eSceneName.sceneLoading, Path.Combine(AssetDefine.PATH_SCENE,"SceneLoading"+AssetDefine.SUFFIX_SCENE)},
-        {eSceneName.world, Path.Combine(AssetDefine.PATH_SCENE,"World"+AssetDefine.SUFFIX_SCENE)},
+        {eSceneName.world, Path.Combine(AssetDefine.PATH_SCENE,"WorldScene"+AssetDefine.SUFFIX_SCENE)},
     };
 
     /// <summary>

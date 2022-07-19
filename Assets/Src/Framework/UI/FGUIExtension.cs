@@ -10,7 +10,10 @@ public static class FGUIExtension
     /// <returns></returns>
     public static T AddUILogic<T>(this GComponent gcom) where T : FGUILogicCpt, new()
     {
-        return gcom.displayObject.gameObject.AddComponent<T>();
+        T cpt = gcom.displayObject.gameObject.AddComponent<T>();
+        //本来是用unity组件自带的Awake作为初始化入口的，但是组件未激活的时候，Awake不会被调用，所以这里手动调用一下
+        cpt.Init();
+        return cpt;
     }
 
     /// <summary>
@@ -88,5 +91,28 @@ public static class FGUIExtension
         }
 
         return child.RemoveUILogic<T>();
+    }
+
+    /// <summary>
+    /// 根据child name获取子组件
+    /// </summary>
+    /// <param name="gcom"></param>
+    /// <param name="childName"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T GetSubUILogic<T>(this GComponent gcom, string childName) where T : FGUILogicCpt, new()
+    {
+        if (gcom.GetChild(childName) is not GComponent child)
+        {
+            MLog.Error(eLogTag.ui, $"child {childName} is null");
+            return null;
+        }
+
+        return child.GetUILogic<T>();
+    }
+
+    public static T GetUILogic<T>(this GComponent gcom) where T : FGUILogicCpt, new()
+    {
+        return gcom.displayObject.gameObject.GetComponent<T>();
     }
 }

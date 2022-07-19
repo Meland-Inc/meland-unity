@@ -18,6 +18,14 @@ public enum eLogTag
     asset,
     avatar,
     territory,
+    resource,
+    createRole,
+    backpack,
+    dr,//dr配置表
+    role,
+    craft,
+    recharge,
+    move,
 }
 
 /// <summary>

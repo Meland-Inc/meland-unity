@@ -2,10 +2,12 @@ using UnityGameFramework.Runtime;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
 using GameFramework.Event;
-
+using static BasicModule;
 public class LoginProcedure : ProcedureBase
 {
     private bool _signalSigninPlayerSuccess = false;
+    private string _roleID;
+    private int _loginRetryCount = 0;
 
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
@@ -14,22 +16,17 @@ public class LoginProcedure : ProcedureBase
         EventComponent eventCom = GameEntry.GetComponent<EventComponent>();
         eventCom.Subscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
 
-        Message.GetPlayerSuccess += OnGetPlayerSuccess;
-        Message.SigninPlayerSuccess += OnSigninPlayerSuccess;
-
-        //_ = GFEntry.UI.OpenUIForm<FormLogin>();
-        Runtime.LoginAction.Req();
+        Login.OnCheckRoleInfo += OnCheckRoleInfo;
+        Login.OnRoleReady += OnRoleReady;
+        Login.StartLogin();
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
     {
         EventComponent eventCom = GameEntry.GetComponent<EventComponent>();
         eventCom.Unsubscribe(NetworkConnectedEventArgs.EventId, OnNetworkConnected);
-        Message.GetPlayerSuccess -= OnGetPlayerSuccess;
-        Message.SigninPlayerSuccess -= OnSigninPlayerSuccess;
 
-        //GFEntry.UI.CloseUIForm<FormLogin>();
-
+        Login.OnCheckRoleInfo -= OnCheckRoleInfo;
         base.OnLeave(procedureOwner, isShutdown);
     }
 
@@ -52,19 +49,45 @@ public class LoginProcedure : ProcedureBase
         MLog.Info(eLogTag.network, $"OnNetworkConnected: {args.NetworkChannel.Name}");
         if (args.NetworkChannel.Name == NetworkDefine.CHANNEL_NAME_GAME)
         {
-            BasicModule.LoginCenter.GetPlayerInfo();
+            Login.CheckRole();
         }
     }
 
-    private void OnGetPlayerSuccess(GetPlayerHttpRsp rsp)
+    private void OnCheckRoleInfo(GetPlayerHttpRspInfo info)
     {
-        MLog.Info(eLogTag.login, "get player success,start to sign in player");
-        SigninPlayerAction.Req(rsp.Info.Id);
+        MLog.Info(eLogTag.login, "check role info");
+        if (string.IsNullOrEmpty(info.Id))
+        {
+            Login.OpenCreateRoleForm();
+        }
+        else
+        {
+            OnRoleReady(info.Id);
+        }
     }
 
-    private void OnSigninPlayerSuccess(Bian.SigninPlayerResponse rsp)
+    private void OnRoleReady(string roleId)
     {
-        MLog.Info(eLogTag.login, "signin player success,start to enter map");
+        _roleID = roleId;
+        MLog.Info(eLogTag.login, "on role ready,start to sign in player");
+        SigninPlayerAction.Req(roleId).SetCB(OnSignPlayer, OnSignPlayerFail);
+        Login.CloseCreateRoleForm();
+    }
+
+    private void OnSignPlayer(MelandGame3.SigninPlayerResponse rsp)
+    {
+        MLog.Info(eLogTag.login, "on signin player success,start to enter map");
         _signalSigninPlayerSuccess = true;
+    }
+
+    private void OnSignPlayerFail(int code, string err)
+    {
+        if (_loginRetryCount++ < 5)
+        {
+            MLog.Error(eLogTag.login, $"on signin player fail,code={code},err={err}");
+            MLog.Error(eLogTag.login, "retry to sign in player");
+            SigninPlayerAction.Req(_roleID).SetCB(OnSignPlayer, OnSignPlayerFail);
+            // _ = UICenter.OpenUIAlert<AlertCommon>(new AlertData("SignIn", "Retry sign in",));
+        }
     }
 }

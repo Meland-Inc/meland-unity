@@ -3,10 +3,10 @@
 /// </summary>
 public class PlayerRoleAssembleLogic : IEntityTypeAssembleLogic
 {
-    public void AssembleSceneEntity(SceneEntity entity, Bian.EntityType entityType)
+    public void AssembleSceneEntity(SceneEntity entity, MelandGame3.EntityType entityType)
     {
-        _ = entity.Root.AddComponent<NetInputMove>();
-        _ = entity.Root.AddComponent<PlayerRoleSvrDataProcess>();
-        _ = entity.Root.AddComponent<EntityMoveData>();
+        _ = entity.AddComponent<NetInputMove>();
+        _ = entity.AddComponent<PlayerRoleSvrDataProcess>();
+        _ = entity.AddComponent<EntityMoveData>();
     }
 }

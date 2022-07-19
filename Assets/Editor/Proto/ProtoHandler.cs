@@ -29,8 +29,8 @@ public class ProtoHandler
 
     /// <summary>
     // proto3 CompileError : https://github.com/protobuf-net/protobuf-net/issues/60
-    // pbmessage.proto:2383:3: "InputEvent" is already defined in "Bian".
-    // pbmessage.proto:2383:3: Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.Therefore, "InputEvent" must be unique within "Bian", not just within "EnvelopeType".
+    // pbmessage.proto:2383:3: "InputEvent" is already defined in "MelandGame3".
+    // pbmessage.proto:2383:3: Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.Therefore, "InputEvent" must be unique within "MelandGame3", not just within "EnvelopeType".
     // 为enum 添加前缀
     /// </summary>
     /// <param name="content"></param>

@@ -1,4 +1,11 @@
+/** 
+ * @Author xiangqian
+ * @Description 
+ * @Date 2022-07-06 11:55:33
+ * @FilePath /Assets/Src/Module/Entity/EntityRenderLogic/SceneEntityRenderBase.cs
+ */
 using UnityGameFramework.Runtime;
+using UnityEngine;
 
 /// <summary>
 /// 场景实体渲染逻辑基类
@@ -16,23 +23,31 @@ public class SceneEntityRenderBase : EntityLogic
     /// <value></value>
     public string SceneEntityID { get; private set; }
 
+    private Vector3 _initedPostion;
+    private Vector3 _initedScale;
+    private Quaternion _initedRotation;
+
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
-        EntityRenderTempData data = userData as EntityRenderTempData;
-        if (data == null)
+        string sceneEntityID = userData as string;
+        if (sceneEntityID is null or default(string))
         {
-            MLog.Error(eLogTag.entity, "EntityRenderTempData is null or type error");
+            MLog.Error(eLogTag.entity, $"sceneEntityID error={sceneEntityID}");
             return;
         }
 
-        SceneEntity sceneEntity = SceneModule.EntityMgr.GetSceneEntity(data.SceneEntityID);
+        SceneEntity sceneEntity = SceneModule.EntityMgr.GetSceneEntity(sceneEntityID);
         if (sceneEntity == null)
         {
             GFEntry.Entity.HideEntity(Entity.Id);
-            throw new System.Exception($"EntityLogic Can not find scene entity '{data.SceneEntityID}'.");
+            throw new System.Exception($"EntityLogic Can not find scene entity '{sceneEntityID}'.");
         }
+
+        _initedPostion = transform.position;
+        _initedRotation = transform.rotation;
+        _initedScale = transform.localScale;
 
         gameObject.SetActive(true);
 
@@ -44,6 +59,9 @@ public class SceneEntityRenderBase : EntityLogic
     {
         RefSceneEntity.SetSurface(null);
         transform.SetParent(null);
+
+        transform.SetPositionAndRotation(_initedPostion, _initedRotation);
+        transform.localScale = _initedScale;
 
         RefSceneEntity = null;
         SceneEntityID = null;

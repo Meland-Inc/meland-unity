@@ -25,5 +25,10 @@ public class FormMain : FGUIForm
         {
             Runtime.QuizCreateRoomAction.Req(roomInput.text);
         });
+
+        GCom.GetChild("comMainBigWorld").asCom.GetChild("comRoleInfo").onClick.Add(() =>
+        {
+            SceneModule.Craft.OpenFormPlayerInfo();
+        });
     }
 }

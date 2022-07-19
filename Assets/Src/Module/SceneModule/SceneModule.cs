@@ -21,6 +21,26 @@ public class SceneModule : MonoBehaviour
     /// </summary>
     public static SceneRender SceneRender;
 
+    /// <summary>
+    /// 背包管理
+    /// </summary>
+    /// 
+    public static BackpackMgr BackpackMgr;
+    /// <summary>
+    /// 角色等级
+    /// </summary>
+    /// <value></value>
+    public static RoleLevelModule RoleLevel { get; private set; }
+
+    /// <summary>
+    /// 角色锻造处理中心
+    /// </summary>
+    public static PlayerCraftModule Craft;
+
+    /// <summary>
+    /// 充值中心
+    /// </summary>
+    public static RechargeCenter Recharge;
     private void Awake()
     {
         if (Root != null)
@@ -31,9 +51,6 @@ public class SceneModule : MonoBehaviour
         }
 
         Root = gameObject;
-
-        EntityMgr = Root.AddComponent<SceneEntityMgr>();
-        SceneRender = Root.AddComponent<SceneRender>();
     }
 
     private void OnDestroy()
@@ -41,5 +58,22 @@ public class SceneModule : MonoBehaviour
         Root = null;
         EntityMgr = null;
         SceneRender = null;
+        BackpackMgr = null;
+        RoleLevel = null;
+        Craft = null;
+        Recharge = null;
+    }
+
+    /// <summary>
+    /// 添加运行时初始化模块 只有正式代码走过来的才会调用  美术预览场景时是不会触发的
+    /// </summary>
+    public void AddRuntimeInitModule()
+    {
+        EntityMgr = Root.AddComponent<SceneEntityMgr>();
+        SceneRender = Root.AddComponent<SceneRender>();
+        BackpackMgr = Root.AddComponent<BackpackMgr>();
+        RoleLevel = Root.AddComponent<RoleLevelModule>();
+        Craft = Root.AddComponent<PlayerCraftModule>();
+        Recharge = Root.AddComponent<RechargeCenter>();
     }
 }

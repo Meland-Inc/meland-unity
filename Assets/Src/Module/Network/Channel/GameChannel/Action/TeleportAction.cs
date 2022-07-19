@@ -1,5 +1,4 @@
-using Bian;
-using UnityEngine;
+using MelandGame3;
 
 /// <summary>
 /// 传送协议
@@ -9,15 +8,10 @@ public class TeleportAction : GameChannelNetMsgRActionBase<TeleportRequest, Tele
     /// <summary>
     /// </summary>
     /// <param name="curPos">当前世界坐标</param>
-    public static void Req(Vector3 curPos)
+    public static void Req(UnityEngine.Vector3 curPos)
     {
         TeleportRequest req = GenerateReq();
-        Vector3 svrPos = NetUtil.ClientPosToSvrPos(curPos);
-        req.ToPos = new()
-        {
-            X = (int)svrPos.x,
-            Y = (int)svrPos.y
-        };
+        req.ToPos = NetUtil.ClienToSvrVector3(curPos);
         SendAction<TeleportAction>(req);
     }
 

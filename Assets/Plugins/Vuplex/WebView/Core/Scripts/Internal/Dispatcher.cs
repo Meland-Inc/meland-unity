@@ -11,7 +11,7 @@ namespace Vuplex.WebView.Internal {
     /// <remarks>
     /// From [this Unity forum post](https://answers.unity.com/questions/305882/how-do-i-invoke-functions-on-the-main-thread.html#answer-1417505).
     /// </remarks>
-    class Dispatcher : MonoBehaviour {
+    public class Dispatcher : MonoBehaviour {
 
         public static void RunAsync(Action action) {
             ThreadPool.QueueUserWorkItem(o => action());

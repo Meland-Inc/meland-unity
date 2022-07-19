@@ -1,6 +1,8 @@
+using System;
+
 namespace HttpPacketDefine
 {
-    [System.Serializable]
+    [Serializable]
     public abstract class HttpRspBase
     {
 
@@ -9,5 +11,17 @@ namespace HttpPacketDefine
     public class EmptyHttpReq
     {
 
+    }
+
+    public class AccountRsp<T> : HttpRspBase
+    {
+        public int Code;
+        public string Msg;
+        public T Info;
+    }
+
+    public class AccountRspInfo
+    {
+        //
     }
 }

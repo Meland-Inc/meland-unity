@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
-using Bian;
+using MelandGame3;
 
 /// <summary>
 /// 场景实体 和服务器对应的实体逻辑
@@ -11,11 +11,11 @@ public class SceneEntity
     /// 逻辑实体根节点 可以挂载逻辑实体相关逻辑 一定不为空
     /// </summary>
     /// <value></value>
-    public GameObject Root { get; private set; }
+    private GameObject _root;
     /// <summary>
     /// 场景实体变换 也是Root节点的变换 一定不为空
     /// </summary>
-    public Transform Transform => Root.transform;
+    public Transform Transform => _root.transform;
     /// <summary>
     /// 场景实体基础数据 快捷访问方式
     /// </summary>
@@ -41,14 +41,13 @@ public class SceneEntity
         if (isMainRole)//为了能和美术场景预览使用同一个预制件脚本配置 空物体主角的放在resouce下当做配置同步加载上来
         {
             GameObject prefab = Resources.Load<GameObject>(EntityDefine.MAIN_PLAYER_ROLE_SPECIAL_PREFAB_PATH);
-            Root = Object.Instantiate(prefab);
-            Resources.UnloadAsset(prefab);
+            _root = Object.Instantiate(prefab);
         }
         else
         {
-            Root = new GameObject(name);
+            _root = new GameObject(name);
         }
-        BaseData = Root.AddComponent<SceneEntityBaseData>();
+        BaseData = _root.AddComponent<SceneEntityBaseData>();
     }
 
     public void Init()
@@ -65,8 +64,8 @@ public class SceneEntity
             SetSurface(null);
         }
 
-        Object.Destroy(Root);
-        Root = null;
+        Object.Destroy(_root);
+        _root = null;
     }
 
     /// <summary>
@@ -84,7 +83,7 @@ public class SceneEntity
 
     public void SetRootName(string name)
     {
-        Root.name = name;
+        _root.name = name;
     }
 
     public void SetRootParent(Transform parent)
@@ -98,15 +97,30 @@ public class SceneEntity
     /// <param name="location"></param>
     public void DirectSetSvrPosition(EntityLocation location)
     {
-        Transform.position = NetUtil.SvrLocToClient(location);
+        Transform.position = NetUtil.SvrToClientLoc(location);
     }
 
     /// <summary>
     /// 直接设置服务器朝向 大部分物件是静态不会动的没必要添加NetInputMove脚本 直接设置下即可 节省性能
     /// </summary>
     /// <param name="dir"></param>
-    public void DirectSetSvrDir(VectorXY dir)
+    public void DirectSetSvrDir(MelandGame3.Vector3 dir)
     {
-        Transform.forward = NetUtil.SvrDirToClient(dir);
+        Transform.forward = NetUtil.SvrToClientDir(dir);
+    }
+
+    public T GetComponent<T>()
+    {
+        return _root.GetComponent<T>();
+    }
+
+    public T AddComponent<T>() where T : Component
+    {
+        return _root.AddComponent<T>();
+    }
+
+    public bool TryGetComponent<T>(out T component)
+    {
+        return _root.TryGetComponent(out component);
     }
 }

@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from quota.proto</summary>
   public static partial class QuotaReflection {
@@ -24,22 +24,22 @@ namespace Bian {
     static QuotaReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtxdW90YS5wcm90bxIEQmlhbiKHAQoMUXVvdGFTZXR0aW5nEiMKCnF1b3Rh",
-            "X3R5cGUYASABKA4yDy5CaWFuLlF1b3RhVHlwZRIVCg1xdW90YV9zdWJ0eXBl",
-            "GAIgASgFEhEKCW5lZWRfc3luYxgDIAEoCBIoCgpjbGVhbl90eXBlGAQgASgO",
-            "MhQuQmlhbi5RdW90YUNsZWFuVHlwZSq7AQoJUXVvdGFUeXBlEh4KGlF1b3Rh",
-            "VHlwZV9RdW90YUtpbGxNb25zdGVyEAASHgoaUXVvdGFUeXBlX1F1b3RhQmly",
-            "dGhQb3NJZHgQARIiCh5RdW90YVR5cGVfUXVvdGFFbXB0eVBsYXllckFyZWEQ",
-            "AhIlCiFRdW90YVR5cGVfUXVvdGFHZXRFbXB0eVBsYXllckFyZWEQAxIjCh9R",
-            "dW90YVR5cGVfUXVvdGFMZXNzb25UZW1wbGF0ZUlkEAQqnAEKDlF1b3RhQ2xl",
-            "YW5UeXBlEiEKHVF1b3RhQ2xlYW5UeXBlX1F1b3RhQ2xlYW5Ob25lEAASIAoc",
-            "UXVvdGFDbGVhblR5cGVfUXVvdGFDbGVhbkRheRABEiEKHVF1b3RhQ2xlYW5U",
-            "eXBlX1F1b3RhQ2xlYW5XZWVrEAISIgoeUXVvdGFDbGVhblR5cGVfUXVvdGFD",
-            "bGVhbk1vbnRoEANiBnByb3RvMw=="));
+            "CgtxdW90YS5wcm90bxILTWVsYW5kR2FtZTMilQEKDFF1b3RhU2V0dGluZxIq",
+            "CgpxdW90YV90eXBlGAEgASgOMhYuTWVsYW5kR2FtZTMuUXVvdGFUeXBlEhUK",
+            "DXF1b3RhX3N1YnR5cGUYAiABKAUSEQoJbmVlZF9zeW5jGAMgASgIEi8KCmNs",
+            "ZWFuX3R5cGUYBCABKA4yGy5NZWxhbmRHYW1lMy5RdW90YUNsZWFuVHlwZSq7",
+            "AQoJUXVvdGFUeXBlEh4KGlF1b3RhVHlwZV9RdW90YUtpbGxNb25zdGVyEAAS",
+            "HgoaUXVvdGFUeXBlX1F1b3RhQmlydGhQb3NJZHgQARIiCh5RdW90YVR5cGVf",
+            "UXVvdGFFbXB0eVBsYXllckFyZWEQAhIlCiFRdW90YVR5cGVfUXVvdGFHZXRF",
+            "bXB0eVBsYXllckFyZWEQAxIjCh9RdW90YVR5cGVfUXVvdGFMZXNzb25UZW1w",
+            "bGF0ZUlkEAQqnAEKDlF1b3RhQ2xlYW5UeXBlEiEKHVF1b3RhQ2xlYW5UeXBl",
+            "X1F1b3RhQ2xlYW5Ob25lEAASIAocUXVvdGFDbGVhblR5cGVfUXVvdGFDbGVh",
+            "bkRheRABEiEKHVF1b3RhQ2xlYW5UeXBlX1F1b3RhQ2xlYW5XZWVrEAISIgoe",
+            "UXVvdGFDbGVhblR5cGVfUXVvdGFDbGVhbk1vbnRoEANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.QuotaType), typeof(global::Bian.QuotaCleanType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.QuotaSetting), global::Bian.QuotaSetting.Parser, new[]{ "QuotaType", "QuotaSubtype", "NeedSync", "CleanType" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.QuotaType), typeof(global::MelandGame3.QuotaCleanType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.QuotaSetting), global::MelandGame3.QuotaSetting.Parser, new[]{ "QuotaType", "QuotaSubtype", "NeedSync", "CleanType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -111,7 +111,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.QuotaReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.QuotaReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,10 +146,10 @@ namespace Bian {
 
     /// <summary>Field number for the "quota_type" field.</summary>
     public const int QuotaTypeFieldNumber = 1;
-    private global::Bian.QuotaType quotaType_ = global::Bian.QuotaType.QuotaKillMonster;
+    private global::MelandGame3.QuotaType quotaType_ = global::MelandGame3.QuotaType.QuotaKillMonster;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.QuotaType QuotaType {
+    public global::MelandGame3.QuotaType QuotaType {
       get { return quotaType_; }
       set {
         quotaType_ = value;
@@ -185,13 +185,13 @@ namespace Bian {
 
     /// <summary>Field number for the "clean_type" field.</summary>
     public const int CleanTypeFieldNumber = 4;
-    private global::Bian.QuotaCleanType cleanType_ = global::Bian.QuotaCleanType.QuotaCleanNone;
+    private global::MelandGame3.QuotaCleanType cleanType_ = global::MelandGame3.QuotaCleanType.QuotaCleanNone;
     /// <summary>
     ///清理类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.QuotaCleanType CleanType {
+    public global::MelandGame3.QuotaCleanType CleanType {
       get { return cleanType_; }
       set {
         cleanType_ = value;
@@ -224,10 +224,10 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (QuotaType != global::Bian.QuotaType.QuotaKillMonster) hash ^= QuotaType.GetHashCode();
+      if (QuotaType != global::MelandGame3.QuotaType.QuotaKillMonster) hash ^= QuotaType.GetHashCode();
       if (QuotaSubtype != 0) hash ^= QuotaSubtype.GetHashCode();
       if (NeedSync != false) hash ^= NeedSync.GetHashCode();
-      if (CleanType != global::Bian.QuotaCleanType.QuotaCleanNone) hash ^= CleanType.GetHashCode();
+      if (CleanType != global::MelandGame3.QuotaCleanType.QuotaCleanNone) hash ^= CleanType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -246,7 +246,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (QuotaType != global::Bian.QuotaType.QuotaKillMonster) {
+      if (QuotaType != global::MelandGame3.QuotaType.QuotaKillMonster) {
         output.WriteRawTag(8);
         output.WriteEnum((int) QuotaType);
       }
@@ -258,7 +258,7 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteBool(NeedSync);
       }
-      if (CleanType != global::Bian.QuotaCleanType.QuotaCleanNone) {
+      if (CleanType != global::MelandGame3.QuotaCleanType.QuotaCleanNone) {
         output.WriteRawTag(32);
         output.WriteEnum((int) CleanType);
       }
@@ -272,7 +272,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (QuotaType != global::Bian.QuotaType.QuotaKillMonster) {
+      if (QuotaType != global::MelandGame3.QuotaType.QuotaKillMonster) {
         output.WriteRawTag(8);
         output.WriteEnum((int) QuotaType);
       }
@@ -284,7 +284,7 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteBool(NeedSync);
       }
-      if (CleanType != global::Bian.QuotaCleanType.QuotaCleanNone) {
+      if (CleanType != global::MelandGame3.QuotaCleanType.QuotaCleanNone) {
         output.WriteRawTag(32);
         output.WriteEnum((int) CleanType);
       }
@@ -298,7 +298,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (QuotaType != global::Bian.QuotaType.QuotaKillMonster) {
+      if (QuotaType != global::MelandGame3.QuotaType.QuotaKillMonster) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) QuotaType);
       }
       if (QuotaSubtype != 0) {
@@ -307,7 +307,7 @@ namespace Bian {
       if (NeedSync != false) {
         size += 1 + 1;
       }
-      if (CleanType != global::Bian.QuotaCleanType.QuotaCleanNone) {
+      if (CleanType != global::MelandGame3.QuotaCleanType.QuotaCleanNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CleanType);
       }
       if (_unknownFields != null) {
@@ -322,7 +322,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.QuotaType != global::Bian.QuotaType.QuotaKillMonster) {
+      if (other.QuotaType != global::MelandGame3.QuotaType.QuotaKillMonster) {
         QuotaType = other.QuotaType;
       }
       if (other.QuotaSubtype != 0) {
@@ -331,7 +331,7 @@ namespace Bian {
       if (other.NeedSync != false) {
         NeedSync = other.NeedSync;
       }
-      if (other.CleanType != global::Bian.QuotaCleanType.QuotaCleanNone) {
+      if (other.CleanType != global::MelandGame3.QuotaCleanType.QuotaCleanNone) {
         CleanType = other.CleanType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -350,7 +350,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            QuotaType = (global::Bian.QuotaType) input.ReadEnum();
+            QuotaType = (global::MelandGame3.QuotaType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -362,7 +362,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            CleanType = (global::Bian.QuotaCleanType) input.ReadEnum();
+            CleanType = (global::MelandGame3.QuotaCleanType) input.ReadEnum();
             break;
           }
         }
@@ -381,7 +381,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            QuotaType = (global::Bian.QuotaType) input.ReadEnum();
+            QuotaType = (global::MelandGame3.QuotaType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -393,7 +393,7 @@ namespace Bian {
             break;
           }
           case 32: {
-            CleanType = (global::Bian.QuotaCleanType) input.ReadEnum();
+            CleanType = (global::MelandGame3.QuotaCleanType) input.ReadEnum();
             break;
           }
         }

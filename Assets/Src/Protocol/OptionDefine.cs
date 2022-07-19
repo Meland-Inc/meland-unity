@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from option_define.proto</summary>
   public static partial class OptionDefineReflection {
@@ -24,15 +24,15 @@ namespace Bian {
     static OptionDefineReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNvcHRpb25fZGVmaW5lLnByb3RvEgRCaWFuKtEBCgpPcHRpb25UeXBlEiEK",
-            "HU9wdGlvblR5cGVfT3B0aW9uVHlwZV9Vbmtub3duEAASJwojT3B0aW9uVHlw",
-            "ZV9PcHRpb25UeXBlX1RhYklkX2RlZmF1bHQQARIkCh9PcHRpb25UeXBlX09w",
-            "dGlvblR5cGVfUG93ZXJfQWxsEOkHEioKJU9wdGlvblR5cGVfT3B0aW9uVHlw",
-            "ZV9Qb3dlcl9BbGxQbGF5ZXIQ6gcSJQogT3B0aW9uVHlwZV9PcHRpb25UeXBl",
-            "X1Bvd2VyX1NlbGYQ6wdiBnByb3RvMw=="));
+            "ChNvcHRpb25fZGVmaW5lLnByb3RvEgtNZWxhbmRHYW1lMyrRAQoKT3B0aW9u",
+            "VHlwZRIhCh1PcHRpb25UeXBlX09wdGlvblR5cGVfVW5rbm93bhAAEicKI09w",
+            "dGlvblR5cGVfT3B0aW9uVHlwZV9UYWJJZF9kZWZhdWx0EAESJAofT3B0aW9u",
+            "VHlwZV9PcHRpb25UeXBlX1Bvd2VyX0FsbBDpBxIqCiVPcHRpb25UeXBlX09w",
+            "dGlvblR5cGVfUG93ZXJfQWxsUGxheWVyEOoHEiUKIE9wdGlvblR5cGVfT3B0",
+            "aW9uVHlwZV9Qb3dlcl9TZWxmEOsHYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.OptionType), }, null, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.OptionType), }, null, null));
     }
     #endregion
 

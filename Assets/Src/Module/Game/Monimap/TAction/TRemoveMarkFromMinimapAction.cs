@@ -1,5 +1,5 @@
 
-using Bian;
+using MelandGame3;
 using UnityGameFramework.Runtime;
 
 public class TRemoveMarkFromMinimapAction : GameChannelNetMsgTActionBase<RemoveMarkFromMiniMapResponse>

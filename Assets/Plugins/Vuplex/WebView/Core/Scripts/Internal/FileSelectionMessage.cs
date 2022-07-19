@@ -22,7 +22,7 @@ namespace Vuplex.WebView.Internal {
     /// from the native plugins to the webview scripts.
     /// </summary>
     [Serializable]
-    class FileSelectionMessage {
+    public class FileSelectionMessage {
 
         public string[] AcceptFilters;
 

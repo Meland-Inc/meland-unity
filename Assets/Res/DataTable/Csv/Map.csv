@@ -1,5 +1,0 @@
-id,地图ID,地图类型,配对主城,配对野外
-id,mapId,mapType,capitalMapId,instanceMapId
-int,int,string,string,string
-1,0,instance,1,0
-2,1,capital,1,0

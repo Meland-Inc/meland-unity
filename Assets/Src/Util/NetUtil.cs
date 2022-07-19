@@ -1,6 +1,5 @@
-using System;
 using UnityEngine;
-using Bian;
+using System.Collections.Generic;
 
 /// <summary>
 /// 处理网络数据转换的工具类
@@ -8,26 +7,13 @@ using Bian;
 public static class NetUtil
 {
     /// <summary>
-    /// 服务器坐标到客户端坐标转换系数
-    /// </summary>
-    public static readonly float SVR_POS_2_CLIENT_POS_SCALE = 1 / 60f;
-    /// <summary>
-    /// 客户端坐标转服务器坐标转换系数
-    /// </summary>
-    public static readonly float CLIENT_POS_2_SVR_POS_SCALE = 1 / SVR_POS_2_CLIENT_POS_SCALE;
-    /// <summary>
-    /// 老数据中地表抬高的高度
-    /// </summary>
-    public static readonly float TERRAIN_OFFSET_Y = 75f;
-
-    /// <summary>
     /// 服务器 location 转客户端坐标
     /// </summary>
     /// <param name="location"></param>
     /// <returns></returns>
-    public static Vector3 SvrLocToClient(EntityLocation location)
+    public static Vector3 SvrToClientLoc(MelandGame3.EntityLocation location)
     {
-        return new Vector3(location.Pos.X, location.Z - TERRAIN_OFFSET_Y, -location.Pos.Y) * SVR_POS_2_CLIENT_POS_SCALE;
+        return new Vector3(location.Loc.X, location.Loc.Y, location.Loc.Z);
     }
 
     /// <summary>
@@ -35,59 +21,77 @@ public static class NetUtil
     /// </summary>
     /// <param name="clientPos"></param>
     /// <returns></returns>
-    public static EntityLocation ClientPosToSvrLoc(Vector3 clientPos)
+    public static MelandGame3.EntityLocation ClientToSvrLoc(Vector3 clientPos)
     {
-        return new EntityLocation()
+        return new MelandGame3.EntityLocation()
         {
             MapId = 0,
-            Pos = new VectorXY()
-            {
-                X = (int)(clientPos.x * CLIENT_POS_2_SVR_POS_SCALE),
-                Y = (int)(-clientPos.z * CLIENT_POS_2_SVR_POS_SCALE)
-            },
-            Z = (int)((clientPos.y * CLIENT_POS_2_SVR_POS_SCALE) + TERRAIN_OFFSET_Y),
-            Zindex = 1
+            Loc = ClienToSvrVector3(clientPos)
         };
     }
 
     /// <summary>
-    /// 客户端位置转成服务器位置 返回结构使用的客户端结构 但是是服务器坐标系
+    /// 客户端坐标转成服务器坐标
     /// </summary>
-    /// <param name="clientPos"></param>
+    /// <param name="clientVector3"></param>
     /// <returns></returns>
-    public static Vector3 ClientPosToSvrPos(Vector3 clientPos)
+    public static MelandGame3.Vector3 ClienToSvrVector3(Vector3 clientVector3)
     {
-        return new Vector3()
+        return new MelandGame3.Vector3()
         {
-            x = (int)(clientPos.x * CLIENT_POS_2_SVR_POS_SCALE),
-            y = (int)(-clientPos.z * CLIENT_POS_2_SVR_POS_SCALE),
-            z = (int)((clientPos.y * CLIENT_POS_2_SVR_POS_SCALE) + TERRAIN_OFFSET_Y)
+            X = clientVector3.x,
+            Y = clientVector3.y,
+            Z = clientVector3.z
         };
     }
 
     /// <summary>
-    /// 服务器方向向量转客户端
+    /// 服务器坐标转客户端
     /// </summary>
-    /// <param name="xy"></param>
+    /// <param name="svrVector3"></param>
     /// <returns></returns>
-    public static Vector3 SvrDirToClient(VectorXY xy)
+    public static Vector3 SvrToClientVector3(MelandGame3.Vector3 svrVector3)
     {
-        return xy == null ? Vector3.back : SvrVectorXYToClient(xy);
+        return svrVector3 == null
+        ? Vector3.zero
+        : new Vector3(svrVector3.X, svrVector3.Y, svrVector3.Z);
     }
 
     /// <summary>
-    /// 服务器XY二维转到客户端坐标
+    /// 服务器方向向量转客户端 返回必不为空或者长度为0
     /// </summary>
-    /// <param name="xy"></param>
+    /// <param name="svrDir"></param>
     /// <returns></returns>
-    public static Vector3 SvrVectorXYToClient(VectorXY xy)
+    public static Vector3 SvrToClientDir(MelandGame3.Vector3 svrDir)
     {
-        if (xy == null)
+        if (svrDir == null)
         {
-            return Vector3.zero;
+            return Vector3.back;
         }
 
-        return new Vector3(xy.X, 0, -xy.Y) * SVR_POS_2_CLIENT_POS_SCALE;
+        if (svrDir.X.ApproximatelyEquals(0) && svrDir.Y.ApproximatelyEquals(0) && svrDir.Z.ApproximatelyEquals(0))
+        {
+            return Vector3.back;
+        }
+
+        return SvrToClientVector3(svrDir);
+    }
+
+    /// <summary>
+    /// 客户端方向向量转服务器
+    /// </summary>
+    /// <param name="clientDir"></param>
+    /// <returns></returns>
+    public static MelandGame3.Vector3 ClientToSvrDir(Vector3 clientDir)
+    {
+        return clientDir == null
+            ? new MelandGame3.Vector3()
+            {
+                X = 0,
+                Y = 0,
+                Z = -1
+            }
+            : ClienToSvrVector3(clientDir);
     }
 
     /// <summary>
@@ -149,5 +153,23 @@ public static class NetUtil
     {
         (int r, int c) = RCIndexToRC(rcIndex);
         return RCToXZKey(r, c);
+    }
+
+    /// <summary>
+    /// 服务器角色外观数据转客户端列表
+    /// </summary>
+    /// <param name="feature"></param>
+    /// <returns></returns>
+    public static List<int> SvrToClientRoleFeature(MelandGame3.PlayerFeature feature)
+    {
+        return new List<int>()
+        {
+            feature.Hair,
+            feature.Face,
+            feature.Clothes,
+            feature.Pants,
+            feature.Glove,
+            feature.Shoes,
+        };
     }
 }

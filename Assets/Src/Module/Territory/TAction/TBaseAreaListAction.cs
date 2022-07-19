@@ -1,5 +1,5 @@
 
-using Bian;
+using MelandGame3;
 
 public class TBaseAreaListAction : GameChannelNetMsgTActionBase<TBaseAreaListResponse>
 {
@@ -20,7 +20,7 @@ public class TBaseAreaListAction : GameChannelNetMsgTActionBase<TBaseAreaListRes
         }
         if (rsp.SystemArea != null && rsp.SystemArea.Count > 0)
         {
-            DataManager.Territory.InitSystemAreaData(rsp.SystemArea);
+            // DataManager.Territory.InitSystemAreaData(rsp.SystemArea);
         }
         return true;
     }

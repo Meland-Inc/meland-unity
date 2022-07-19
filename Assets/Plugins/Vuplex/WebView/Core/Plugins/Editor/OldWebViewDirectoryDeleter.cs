@@ -40,6 +40,11 @@ namespace Vuplex.WebViewUpgrade {
         static void _askPermissionToDeleteWebViewDirectoryIfNeeded() {
 
             var vuplexDirectoryPath = DirectoryDeleterUtils.FindDirectory(Path.Combine(Application.dataPath, "Vuplex"));
+            if (vuplexDirectoryPath == null) {
+                // The Vuplex directory couldn't be found. This can happen if the user renamed the Vuplex directory or
+                // moved it to the Packages folder.
+                return;
+            }
             var webViewDirectoryPath = Path.Combine(vuplexDirectoryPath, "WebView");
             var oldSubdirectoriesExist = _oldSubdirectoryNames.Any(dirName => Directory.Exists(Path.Combine(webViewDirectoryPath, dirName)));
             if (!oldSubdirectoriesExist) {
@@ -84,24 +89,10 @@ namespace Vuplex.WebViewUpgrade {
                 if (ignorePaths != null) {
                     directories = directories.ToList().Where(d => !ignorePaths.Contains(d)).ToArray();
                 }
-                return _returnOnePathOrThrow(directories, expectedPath, directoryToSearch, true);
+                return _returnOnePath(directories, expectedPath, directoryToSearch, true);
             }
 
-            public static string FindFile(string expectedPath, string directoryToSearch = null) {
-
-                if (File.Exists(expectedPath)) {
-                    return expectedPath;
-                }
-                // The file isn't in the expected location, so fall back to finding it.
-                var fileName = Path.GetFileName(expectedPath);
-                if (directoryToSearch == null) {
-                    directoryToSearch = Application.dataPath;
-                }
-                var files = Directory.GetFiles(directoryToSearch, fileName, SearchOption.AllDirectories);
-                return _returnOnePathOrThrow(files, expectedPath, directoryToSearch);
-            }
-
-            static string _returnOnePathOrThrow(string[] paths, string expectedPath, string directorySearched, bool isDirectory = false) {
+            static string _returnOnePath(string[] paths, string expectedPath, string directorySearched, bool isDirectory = false) {
 
                 var itemName = isDirectory ? "directory" : "file";
                 if (paths.Length == 1) {
@@ -112,7 +103,7 @@ namespace Vuplex.WebViewUpgrade {
                     var joinedPaths = String.Join(", ", paths);
                     throw new Exception($"Unable to determine which version of the {itemName} {targetFileOrDirectoryName} to use because multiple instances ({paths.Length}) were unexpectedly found in the directory {directorySearched}. Please review the list of instances found and remove duplicates so that there is only one: {joinedPaths}");
                 }
-                throw new Exception($"Unable to locate the {itemName} {targetFileOrDirectoryName}. It's not in the expected location ({expectedPath}), and no instances were found in the directory {directorySearched}. To resolve this issue, please try deleting your existing Assets/Vuplex directory and reinstalling 3D WebView.");
+                return null;
             }
         }
 

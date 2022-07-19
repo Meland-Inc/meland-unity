@@ -1,6 +1,0 @@
-,顺序索引,映射代码块,代码块描述,是否可以生产pb,函数调用名称1,调用名称,单位,单位消耗,类别,是否是默认代码块,类型 ,代码块权限,关联数据结构,提示图标,模板,可隐藏结构,参数1,参数2,参数3,参数4,参数5,参数6,参数7,参数8,参数9,参数10,参数11,参数12,参数13,参数14,参数15,参数16,参数17,参数18,参数19,参数20,参数21,参数22,参数23,参数24,参数25,模板2,代码块排序,是否能在公共区域使用
-id,orderArr,sourceId,codeblockDesc,null,funcCallName,actionName,unit,price,category,default,type,permission,struct,promptIcon,template1,hiddenStr,args1,args2,args3,args4,args5,args6,args7,args8,args9,args10,args11,args12,args13,args14,args15,args16,args17,args18,args19,args20,args21,args22,args23,args24,args25,template2,sort,publicUseful
-int,int[],int,string,null,string,string,string,int,string,bool,string,int,int,string,string,string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string[][],string,int,bool
-910001,,10242,碰撞事件,,,,,,event,1,block,,,,当%%{1}进入处理机时$$%%{2}$$,"1,1,99",output;10095;物件,blank;10125;2;800,,,,,,,,,,,,,,,,,,,,,,,,,1000,1
-910002,,10244,物件类,是,,,个,,prop,1,blank,,,class,食材%%{1},,prop;Entity;;食材;20090000-20090059,,,,,,,,,,,,,,,,,,,,,,,,,,600,1
-910003,,10214,检测类,,,,,,detect,1,boolean,,,,%%{1}属于%%{2},,blank;;2;800,blank;910002;3;700,,,,,,,,,,,,,,,,,,,,,,,,,1010,1

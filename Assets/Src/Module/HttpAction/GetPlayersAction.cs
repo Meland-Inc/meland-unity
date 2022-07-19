@@ -1,26 +1,22 @@
 ﻿using HttpPacketDefine;
 
-public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, GetPlayerHttpRsp>
+public class GetPlayersAction : AccountHttpActionBase<EmptyHttpReq, AccountRsp<GetPlayerHttpRspInfo>>
 {
     protected override string Api => "getplayer";
 
-    protected override void Receive(GetPlayerHttpRsp rsp, EmptyHttpReq req)
+    protected override void Receive(AccountRsp<GetPlayerHttpRspInfo> rsp, EmptyHttpReq req)
     {
-        Message.GetPlayerSuccess?.Invoke(rsp);
+        if (rsp.Code == 0)
+        {
+            BasicModule.Login.OnCheckRoleInfo(rsp.Info);
+        }
     }
 
     public static void Req()
     {
-        EmptyHttpReq req = GetReq();
+        EmptyHttpReq req = GenerateReq();
         SendAction<GetPlayersAction>(req);
     }
-}
-
-public class GetPlayerHttpRsp : HttpRspBase
-{
-    public int Code;
-    public string Msg;
-    public GetPlayerHttpRspInfo Info;
 }
 
 [System.Serializable]

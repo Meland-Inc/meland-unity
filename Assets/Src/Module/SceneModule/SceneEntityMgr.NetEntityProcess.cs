@@ -1,16 +1,15 @@
-using Bian;
+using MelandGame3;
 using Google.Protobuf.Collections;
-using UnityEngine;
 
 public partial class SceneEntityMgr : SceneModuleBase
 {
     public void NetInitMainRole(Player playerData, EntityLocation location)
     {
-        MLog.Info(eLogTag.entity, $"NetInitMainRole id={playerData.Id} [{location.Pos.X} {location.Pos.Y} {location.Z}]");
+        MLog.Info(eLogTag.entity, $"NetInitMainRole id={playerData.Id} [{location.Loc.X} {location.Loc.Y} {location.Loc.Z}]");
 
-        DataManager.MainPlayer.InitRoleData(playerData.Id);
+        DataManager.MainPlayer.InitRoleData(playerData);
         SceneEntity sceneRole = SceneModule.EntityMgr.AddMainPlayerRole(playerData.Id);
-        sceneRole.Root.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
+        sceneRole.GetComponent<NetInputMove>().ForcePosition(location, playerData.Dir);
 
         EntityWithLocation svrEntity = new()//封装一个统一包 服务器本来用统一的更好
         {
@@ -20,12 +19,16 @@ public partial class SceneEntityMgr : SceneModuleBase
             Type = EntityType.EntityTypePlayer
 
         };
-        sceneRole.Root.GetComponent<EntitySvrDataProcess>().SvrDataInit(svrEntity);
+        sceneRole.GetComponent<EntitySvrDataProcess>().SvrDataInit(sceneRole, svrEntity);
 
-        MainPlayerMoveInput moveInput = sceneRole.Root.GetComponent<MainPlayerMoveInput>();
-        moveInput.MoveSpeed = sceneRole.Root.GetComponent<EntityMoveData>().Speed;
-        moveInput.PushDownForce = Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
-        sceneRole.Root.GetComponent<MoveNetRequest>().enabled = true;
+        MainPlayerMoveInput moveInput = sceneRole.GetComponent<MainPlayerMoveInput>();
+        //moveInput.MoveSpeed = sceneRole.GetComponent<EntityMoveData>().Speed;//TODO:测试
+        moveInput.PushDownForce = UnityEngine.Vector3.zero;//TODO:现在场景没有地表碰撞 不能加向下力 否则一直往下掉
+        sceneRole.GetComponent<NetReqMove>().enabled = true;
+
+        PlayerRoleAvatarData avatarData = sceneRole.AddComponent<PlayerRoleAvatarData>();
+        avatarData.SetRoleCfgID(playerData.RoleId);
+        avatarData.SetRoleFeature(playerData.Feature);
 
         Message.MainPlayerRoleInitFinish.Invoke();
     }
@@ -36,23 +39,20 @@ public partial class SceneEntityMgr : SceneModuleBase
 
         foreach (EntityWithLocation svrEntity in entitys)
         {
+            if (svrEntity.Type is not EntityType.EntityTypePlayer and not EntityType.EntityTypeMonster)
+            {
+                MLog.Warning(eLogTag.entity, $"should not update not sync entity,type:{svrEntity.Type}");
+                continue;
+            }
+
             try
             {
                 SceneEntity entity = AddSceneEntity(svrEntity.Id, svrEntity.Type);
+                entity.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
 
-                if (svrEntity.Type is EntityType.EntityTypePlayer or EntityType.EntityTypeMonster)
+                if (entity.TryGetComponent(out EntitySvrDataProcess dataProcess))
                 {
-                    entity.Root.GetComponent<NetInputMove>().ForcePosition(svrEntity.Location, svrEntity.Direction);
-                }
-                else
-                {
-                    entity.DirectSetSvrPosition(svrEntity.Location);
-                    entity.DirectSetSvrDir(svrEntity.Direction);
-                }
-
-                if (entity.Root.TryGetComponent(out EntitySvrDataProcess dataProcess))
-                {
-                    dataProcess.SvrDataInit(svrEntity);
+                    dataProcess.SvrDataInit(entity, svrEntity);
                 }
             }
             catch (System.Exception)
@@ -69,6 +69,12 @@ public partial class SceneEntityMgr : SceneModuleBase
 
         foreach (EntityId idInfo in entityIds)
         {
+            if (idInfo.Type is not EntityType.EntityTypePlayer and not EntityType.EntityTypeMonster)
+            {
+                MLog.Warning(eLogTag.entity, $"should not remove not sync entity,type:{idInfo.Type}");
+                continue;
+            }
+
             try
             {
                 RemoveSceneEntity(idInfo.Id);

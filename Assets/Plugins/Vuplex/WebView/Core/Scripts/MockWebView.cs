@@ -84,11 +84,16 @@ namespace Vuplex.WebView {
 
         public void Click(int xInPixels, int yInPixels, bool preventStealingFocus = false) {
 
+            var pointIsValid = xInPixels >= 0 && xInPixels <= Size.x && yInPixels >= 0 && yInPixels <= Size.y;
+            if (!pointIsValid) {
+                throw new ArgumentException($"The point provided ({xInPixels}px, {yInPixels}px) is not within the bounds of the webview (width: {Size.x}px, height: {Size.y}px).");
+            }
             _log($"Click({xInPixels}, {yInPixels}, {preventStealingFocus})");
         }
 
         public void Click(Vector2 point, bool preventStealingFocus = false) {
 
+            _assertValidNormalizedPoint(point);
             _log($"Click({point.ToString("n4")}, {preventStealingFocus})");
         }
 
@@ -224,7 +229,11 @@ namespace Vuplex.WebView {
 
         public void Scroll(Vector2 delta) => _log($"Scroll({delta.ToString("n4")})");
 
-        public void Scroll(Vector2 delta, Vector2 point) => _log($"Scroll({delta.ToString("n4")}, {point.ToString("n4")})");
+        public void Scroll(Vector2 delta, Vector2 point) {
+
+            _assertValidNormalizedPoint(point);
+            _log($"Scroll({delta.ToString("n4")}, {point.ToString("n4")})");
+        }
 
         public void SelectAll() => _log("SelectAll()");
 
@@ -264,6 +273,14 @@ namespace Vuplex.WebView {
         partial void OnLoadHtml();
         partial void OnLoadUrl(string url);
         partial void OnPaste();
+
+        void _assertValidNormalizedPoint(Vector2 normalizedPoint) {
+
+            var isValid = normalizedPoint.x >= 0f && normalizedPoint.x <= 1f && normalizedPoint.y >= 0f && normalizedPoint.y <= 1f;
+            if (!isValid) {
+                throw new ArgumentException($"The normalized point provided is invalid. The x and y values of normalized points must be in the range of [0, 1], but the value provided was {normalizedPoint.ToString("n4")}. For more info, please see https://support.vuplex.com/articles/normalized-points");
+            }
+        }
 
         void _handlePageLoad(string url) {
 

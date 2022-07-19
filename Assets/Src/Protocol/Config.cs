@@ -28,81 +28,83 @@ namespace MelandGame3 {
             "bGluZ19vYmplY3QucHJvdG8aCmJ1ZmYucHJvdG8aC3NraWxsLnByb3RvGhRy",
             "ZXNvdXJjZV9wb2ludC5wcm90bxoJYXN0LnByb3RvGg9jb25kaXRpb24ucHJv",
             "dG8aCGNkLnByb3RvGgtxdW90YS5wcm90bxoNbW9uc3Rlci5wcm90bxoMd2lk",
-            "Z2V0LnByb3RvGhByYW5kb21fbWFwLnByb3RvGg9iaWdfd29ybGQucHJvdG8i",
-            "kwEKD1dlYXRoZXJTZXR0aW5ncxIKCgJpZBgBIAEoBRITCgt3ZWF0aGVyVHlw",
-            "ZRgCIAEoBRISCgp0ZW1wQ2hhbmdlGAMgASgFEhUKDXRoaXJzdHlDaGFuZ2UY",
-            "BCABKAUSFAoMaHVuZ3J5Q2hhbmdlGAUgASgFEg4KBmJ1ZmZJZBgGIAEoBRIO",
-            "CgZ0aWNrTXMYByABKAUibwoPQWNoaWV2ZVNldHRpbmdzEgoKAmlkGAEgASgF",
-            "EgwKBHR5cGUYAiABKAUSEQoJdGFyZ2V0X2lkGAMgASgFEhkKEXJlcXVpcmVt",
-            "ZW50c190ZXh0GAQgASgJEhQKDHJld2FyZHNfdGV4dBgFIAEoCSI0ChBNYW5v",
-            "ckJ1eVNldHRpbmdzEg8KB2J1eV9udW0YASABKAUSDwoHY29zdF9pZBgCIAEo",
-            "BSLFAQoPRHVuZ2VvblNldHRpbmdzEgoKAmlkGAEgASgFEgwKBG5hbWUYAiAB",
-            "KAkSEAoIbWF4TGV2ZWwYAyABKAUSEwoLbWF4VmlwTGV2ZWwYBCABKAUSFAoM",
-            "dXBncmFkZVNjb3JlGAUgASgFEhQKDGNkS2V5RmxhZ1N0chgGIAEoCRIVCg1i",
-            "YXNlUmV3YXJkU3RyGAcgASgJEhYKDnN1cGVyUmV3YXJkU3RyGAggASgJEhYK",
-            "DmZpbmFsUmV3YXJkU3RyGAkgASgJIksKCkR1bmdlb25NYXASCgoCSWQYASAB",
-            "KAMSDwoHTWFwTmFtZRgCIAEoCRIRCglJbkR1bmdlb24YAyABKAUSDQoFU2Nv",
-            "cmUYBCABKAUigwEKEUdhbWVWYWx1ZVNldHRpbmdzEgoKAklkGAEgASgFEg0K",
-            "BVZhbHVlGAIgASgFEhMKC1N0cmluZ1ZhbHVlGAMgASgJEhIKClZhbHVlQXJy",
-            "YXkYBCABKAkSEwoLU3RyaW5nQXJyYXkYBSABKAkSFQoNSW50VmFsdWVBcnJh",
-            "eRgGIAMoBSJdCgxDb2RlUmVzb3VyY2USEAoIY29kZV9jaWQYASABKAUSEAoI",
-            "Y2F0ZWdvcnkYAiABKAkSEQoJY2FuX2luZGV4GAMgAygFEhYKDmNhbl9pbmRl",
-            "eF90eXBlGAQgAygJInUKDFJlc291cmNlc1RhZxIvCgx0YXJfY29kZV9yZXMY",
-            "ASADKAsyGS5NZWxhbmRHYW1lMy5Db2RlUmVzb3VyY2USNAoPdGFyX3dpZGdl",
-            "dF90eXBlGAIgAygOMhsuTWVsYW5kR2FtZTMuV2lkZ2V0RnVuY1R5cGUisQEK",
-            "FkV4Y2x1c2lvbkVudGl0eVNldHRpbmcSCwoDY2lkGAEgASgFEhkKEWV4X3R5",
-            "cGVfbm90X2J1aWxkGAIgASgFEhkKEWV4X2NpZHNfbm90X2J1aWxkGAMgASgJ",
-            "EhMKC2V4X3R5cGVfZGVsGAQgASgFEhMKC2V4X2NpZHNfZGVsGAUgASgJEhQK",
-            "DGV4X3R5cGVfbW92ZRgGIAEoBRIUCgxleF9jaWRzX21vdmUYByABKAkipBAK",
-            "EkNvbmZpZ0RhdGFTZXR0aW5ncxI0Cg93aWRnZXRfc2V0dGluZ3MYASADKAsy",
-            "Gy5NZWxhbmRHYW1lMy5XaWRnZXRTZXR0aW5ncxI0Cg9vYmplY3Rfc2V0dGlu",
-            "Z3MYAiADKAsyGy5NZWxhbmRHYW1lMy5PYmplY3RTZXR0aW5ncxI6ChFvYmpf",
-            "Z2Vhcl9zZXR0aW5ncxgDIAMoCzIfLk1lbGFuZEdhbWUzLk9iamVjdEdlYXJT",
-            "ZXR0aW5ncxI+ChNmbGxpbmdfb2JqX3JlY2lwZXRzGAQgAygLMiEuTWVsYW5k",
-            "R2FtZTMuRmFsbGluZ09iamVjdFJlY2lwZXQSLgoMYm90X3NldHRpbmdzGAUg",
-            "AygLMhguTWVsYW5kR2FtZTMuQm90U2V0dGluZ3MSNgoSYm90X2xldmVsX3Nl",
-            "dHRpbmdzGAYgAygLMhouTWVsYW5kR2FtZTMuQm90THZTZXR0aW5ncxIwCg1i",
-            "dWZmX3NldHRpbmdzGAcgAygLMhkuTWVsYW5kR2FtZTMuQnVmZlNldHRpbmdz",
-            "EjIKDnNraWxsX3NldHRpbmdzGAggAygLMhouTWVsYW5kR2FtZTMuU2tpbGxT",
-            "ZXR0aW5ncxImCgxucGNfc2V0dGluZ3MYCSADKAsyEC5NZWxhbmRHYW1lMy5O",
-            "cGMSQwoXcmVzb3VyY2VfcG9pbnRfc2V0dGluZ3MYCiADKAsyIi5NZWxhbmRH",
-            "YW1lMy5SZXNvdXJjZVBvaW50U2V0dGluZ3MSLwoNY29kZV9zZXR0aW5ncxgL",
-            "IAMoCzIYLk1lbGFuZEdhbWUzLkNvZGVTZXR0aW5nEi8KEWNvZGVfbGliX3Nl",
-            "dHRpbmdzGAwgAygLMhQuTWVsYW5kR2FtZTMuQ29kZUxpYhI8ChVwbGF5ZXJf",
-            "bGV2ZWxfc2V0dGluZ3MYDSADKAsyHS5NZWxhbmRHYW1lMy5FbnRpdHlMdlNl",
-            "dHRpbmdzEjAKDXJvbGVfc2V0dGluZ3MYDiADKAsyGS5NZWxhbmRHYW1lMy5S",
-            "b2xlU2V0dGluZ3MSMAoNY2hhdF9zZXR0aW5ncxgPIAMoCzIZLk1lbGFuZEdh",
-            "bWUzLkNoYXRTZXR0aW5ncxJBChZzcGVjaWFsX2J1aWxkX3NldHRpbmdzGBEg",
-            "AygLMiEuTWVsYW5kR2FtZTMuU3BlY2lhbEJ1aWxkU2V0dGluZ3MSNQoUc3Bh",
-            "d25fcG9pbnRfc2V0dGluZ3MYEyADKAsyFy5NZWxhbmRHYW1lMy5TcGF3blBv",
-            "aW50EkUKGGNvbnN1bWFibGVfaXRlbV9zZXR0aW5ncxgUIAMoCzIjLk1lbGFu",
-            "ZEdhbWUzLkNvbnN1bWFibGVJdGVtU2V0dGluZ3MSLAoPcmV3YXJkX3NldHRp",
-            "bmdzGBUgAygLMhMuTWVsYW5kR2FtZTMuUmV3YXJkEjkKFnNjZW5lX3dlYXRo",
-            "ZXJfc2V0dGluZ3MYFiADKAsyGS5NZWxhbmRHYW1lMy5TY2VuZVdlYXRoZXIS",
-            "OwoVd2VhdGhlcl9zZXR0aW5nc19saXN0GBcgAygLMhwuTWVsYW5kR2FtZTMu",
-            "V2VhdGhlclNldHRpbmdzEjYKEGFjaGlldmVfc2V0dGluZ3MYGCADKAsyHC5N",
-            "ZWxhbmRHYW1lMy5BY2hpZXZlU2V0dGluZ3MSOQoWbWFpbF90ZW1wbGF0ZV9z",
-            "ZXR0aW5ncxgZIAMoCzIZLk1lbGFuZEdhbWUzLk1haWxUZW1wbGF0ZRIwCg10",
-            "YXNrX3NldHRpbmdzGBogAygLMhkuTWVsYW5kR2FtZTMuVGFza1NldHRpbmdz",
-            "EjkKEmNvbmRpdGlvbl9zZXR0aW5ncxgbIAMoCzIdLk1lbGFuZEdhbWUzLkNv",
-            "bmRpdGlvblNldHRpbmcSKwoLY2Rfc2V0dGluZ3MYHCADKAsyFi5NZWxhbmRH",
-            "YW1lMy5DZFNldHRpbmcSMQoOcXVvdGFfc2V0dGluZ3MYHSADKAsyGS5NZWxh",
-            "bmRHYW1lMy5RdW90YVNldHRpbmcSOQoSbWFub3JfYnV5X3NldHRpbmdzGB4g",
-            "AygLMh0uTWVsYW5kR2FtZTMuTWFub3JCdXlTZXR0aW5ncxI0Cg9lbnRpdHlf",
-            "c2V0dGluZ3MYHyADKAsyGy5NZWxhbmRHYW1lMy5PYmplY3RTZXR0aW5ncxI2",
-            "ChBkdW5nZW9uX3NldHRpbmdzGCAgAygLMhwuTWVsYW5kR2FtZTMuRHVuZ2Vv",
-            "blNldHRpbmdzEiwKC2R1bmdlb25fbWFwGCEgAygLMhcuTWVsYW5kR2FtZTMu",
-            "RHVuZ2Vvbk1hcBI7ChNnYW1lX3ZhbHVlX3NldHRpbmdzGCIgAygLMh4uTWVs",
-            "YW5kR2FtZTMuR2FtZVZhbHVlU2V0dGluZ3MSNgoQbW9uc3Rlcl9zZXR0aW5n",
-            "cxgjIAMoCzIcLk1lbGFuZEdhbWUzLk1vbnN0ZXJTZXR0aW5ncxI7ChNyYW5k",
-            "b21fbWFwX3NldHRpbmdzGCQgAygLMh4uTWVsYW5kR2FtZTMuUmFuZG9tTWFw",
-            "U2V0dGluZ3MSKgoHcmVzX3RhZxglIAEoCzIZLk1lbGFuZEdhbWUzLlJlc291",
-            "cmNlc1RhZxJFChhleGNsdXNpb25fZW50aXR5X3NldHRpbmcYJiADKAsyIy5N",
-            "ZWxhbmRHYW1lMy5FeGNsdXNpb25FbnRpdHlTZXR0aW5nEkQKGHBsYWNlYWJs",
-            "ZV9za2lsbF9zZXR0aW5ncxgnIAMoCzIiLk1lbGFuZEdhbWUzLlBsYWNlYWJs",
-            "ZVNraWxsU2V0dGluZ2IGcHJvdG8z"));
+            "Z2V0LnByb3RvGhByYW5kb21fbWFwLnByb3RvGg9iaWdfd29ybGQucHJvdG8a",
+            "D2l0ZW1fc2xvdC5wcm90byKTAQoPV2VhdGhlclNldHRpbmdzEgoKAmlkGAEg",
+            "ASgFEhMKC3dlYXRoZXJUeXBlGAIgASgFEhIKCnRlbXBDaGFuZ2UYAyABKAUS",
+            "FQoNdGhpcnN0eUNoYW5nZRgEIAEoBRIUCgxodW5ncnlDaGFuZ2UYBSABKAUS",
+            "DgoGYnVmZklkGAYgASgFEg4KBnRpY2tNcxgHIAEoBSJvCg9BY2hpZXZlU2V0",
+            "dGluZ3MSCgoCaWQYASABKAUSDAoEdHlwZRgCIAEoBRIRCgl0YXJnZXRfaWQY",
+            "AyABKAUSGQoRcmVxdWlyZW1lbnRzX3RleHQYBCABKAkSFAoMcmV3YXJkc190",
+            "ZXh0GAUgASgJIjQKEE1hbm9yQnV5U2V0dGluZ3MSDwoHYnV5X251bRgBIAEo",
+            "BRIPCgdjb3N0X2lkGAIgASgFIsUBCg9EdW5nZW9uU2V0dGluZ3MSCgoCaWQY",
+            "ASABKAUSDAoEbmFtZRgCIAEoCRIQCghtYXhMZXZlbBgDIAEoBRITCgttYXhW",
+            "aXBMZXZlbBgEIAEoBRIUCgx1cGdyYWRlU2NvcmUYBSABKAUSFAoMY2RLZXlG",
+            "bGFnU3RyGAYgASgJEhUKDWJhc2VSZXdhcmRTdHIYByABKAkSFgoOc3VwZXJS",
+            "ZXdhcmRTdHIYCCABKAkSFgoOZmluYWxSZXdhcmRTdHIYCSABKAkiSwoKRHVu",
+            "Z2Vvbk1hcBIKCgJJZBgBIAEoAxIPCgdNYXBOYW1lGAIgASgJEhEKCUluRHVu",
+            "Z2VvbhgDIAEoBRINCgVTY29yZRgEIAEoBSKDAQoRR2FtZVZhbHVlU2V0dGlu",
+            "Z3MSCgoCSWQYASABKAUSDQoFVmFsdWUYAiABKAUSEwoLU3RyaW5nVmFsdWUY",
+            "AyABKAkSEgoKVmFsdWVBcnJheRgEIAEoCRITCgtTdHJpbmdBcnJheRgFIAEo",
+            "CRIVCg1JbnRWYWx1ZUFycmF5GAYgAygFIl0KDENvZGVSZXNvdXJjZRIQCghj",
+            "b2RlX2NpZBgBIAEoBRIQCghjYXRlZ29yeRgCIAEoCRIRCgljYW5faW5kZXgY",
+            "AyADKAUSFgoOY2FuX2luZGV4X3R5cGUYBCADKAkidQoMUmVzb3VyY2VzVGFn",
+            "Ei8KDHRhcl9jb2RlX3JlcxgBIAMoCzIZLk1lbGFuZEdhbWUzLkNvZGVSZXNv",
+            "dXJjZRI0Cg90YXJfd2lkZ2V0X3R5cGUYAiADKA4yGy5NZWxhbmRHYW1lMy5X",
+            "aWRnZXRGdW5jVHlwZSKxAQoWRXhjbHVzaW9uRW50aXR5U2V0dGluZxILCgNj",
+            "aWQYASABKAUSGQoRZXhfdHlwZV9ub3RfYnVpbGQYAiABKAUSGQoRZXhfY2lk",
+            "c19ub3RfYnVpbGQYAyABKAkSEwoLZXhfdHlwZV9kZWwYBCABKAUSEwoLZXhf",
+            "Y2lkc19kZWwYBSABKAkSFAoMZXhfdHlwZV9tb3ZlGAYgASgFEhQKDGV4X2Np",
+            "ZHNfbW92ZRgHIAEoCSLeEAoSQ29uZmlnRGF0YVNldHRpbmdzEjQKD3dpZGdl",
+            "dF9zZXR0aW5ncxgBIAMoCzIbLk1lbGFuZEdhbWUzLldpZGdldFNldHRpbmdz",
+            "EjQKD29iamVjdF9zZXR0aW5ncxgCIAMoCzIbLk1lbGFuZEdhbWUzLk9iamVj",
+            "dFNldHRpbmdzEjoKEW9ial9nZWFyX3NldHRpbmdzGAMgAygLMh8uTWVsYW5k",
+            "R2FtZTMuT2JqZWN0R2VhclNldHRpbmdzEj4KE2ZsbGluZ19vYmpfcmVjaXBl",
+            "dHMYBCADKAsyIS5NZWxhbmRHYW1lMy5GYWxsaW5nT2JqZWN0UmVjaXBldBIu",
+            "Cgxib3Rfc2V0dGluZ3MYBSADKAsyGC5NZWxhbmRHYW1lMy5Cb3RTZXR0aW5n",
+            "cxI2ChJib3RfbGV2ZWxfc2V0dGluZ3MYBiADKAsyGi5NZWxhbmRHYW1lMy5C",
+            "b3RMdlNldHRpbmdzEjAKDWJ1ZmZfc2V0dGluZ3MYByADKAsyGS5NZWxhbmRH",
+            "YW1lMy5CdWZmU2V0dGluZ3MSMgoOc2tpbGxfc2V0dGluZ3MYCCADKAsyGi5N",
+            "ZWxhbmRHYW1lMy5Ta2lsbFNldHRpbmdzEiYKDG5wY19zZXR0aW5ncxgJIAMo",
+            "CzIQLk1lbGFuZEdhbWUzLk5wYxJDChdyZXNvdXJjZV9wb2ludF9zZXR0aW5n",
+            "cxgKIAMoCzIiLk1lbGFuZEdhbWUzLlJlc291cmNlUG9pbnRTZXR0aW5ncxIv",
+            "Cg1jb2RlX3NldHRpbmdzGAsgAygLMhguTWVsYW5kR2FtZTMuQ29kZVNldHRp",
+            "bmcSLwoRY29kZV9saWJfc2V0dGluZ3MYDCADKAsyFC5NZWxhbmRHYW1lMy5D",
+            "b2RlTGliEjwKFXBsYXllcl9sZXZlbF9zZXR0aW5ncxgNIAMoCzIdLk1lbGFu",
+            "ZEdhbWUzLkVudGl0eUx2U2V0dGluZ3MSMAoNcm9sZV9zZXR0aW5ncxgOIAMo",
+            "CzIZLk1lbGFuZEdhbWUzLlJvbGVTZXR0aW5ncxIwCg1jaGF0X3NldHRpbmdz",
+            "GA8gAygLMhkuTWVsYW5kR2FtZTMuQ2hhdFNldHRpbmdzEkEKFnNwZWNpYWxf",
+            "YnVpbGRfc2V0dGluZ3MYESADKAsyIS5NZWxhbmRHYW1lMy5TcGVjaWFsQnVp",
+            "bGRTZXR0aW5ncxI1ChRzcGF3bl9wb2ludF9zZXR0aW5ncxgTIAMoCzIXLk1l",
+            "bGFuZEdhbWUzLlNwYXduUG9pbnQSRQoYY29uc3VtYWJsZV9pdGVtX3NldHRp",
+            "bmdzGBQgAygLMiMuTWVsYW5kR2FtZTMuQ29uc3VtYWJsZUl0ZW1TZXR0aW5n",
+            "cxIsCg9yZXdhcmRfc2V0dGluZ3MYFSADKAsyEy5NZWxhbmRHYW1lMy5SZXdh",
+            "cmQSOQoWc2NlbmVfd2VhdGhlcl9zZXR0aW5ncxgWIAMoCzIZLk1lbGFuZEdh",
+            "bWUzLlNjZW5lV2VhdGhlchI7ChV3ZWF0aGVyX3NldHRpbmdzX2xpc3QYFyAD",
+            "KAsyHC5NZWxhbmRHYW1lMy5XZWF0aGVyU2V0dGluZ3MSNgoQYWNoaWV2ZV9z",
+            "ZXR0aW5ncxgYIAMoCzIcLk1lbGFuZEdhbWUzLkFjaGlldmVTZXR0aW5ncxI5",
+            "ChZtYWlsX3RlbXBsYXRlX3NldHRpbmdzGBkgAygLMhkuTWVsYW5kR2FtZTMu",
+            "TWFpbFRlbXBsYXRlEjAKDXRhc2tfc2V0dGluZ3MYGiADKAsyGS5NZWxhbmRH",
+            "YW1lMy5UYXNrU2V0dGluZ3MSOQoSY29uZGl0aW9uX3NldHRpbmdzGBsgAygL",
+            "Mh0uTWVsYW5kR2FtZTMuQ29uZGl0aW9uU2V0dGluZxIrCgtjZF9zZXR0aW5n",
+            "cxgcIAMoCzIWLk1lbGFuZEdhbWUzLkNkU2V0dGluZxIxCg5xdW90YV9zZXR0",
+            "aW5ncxgdIAMoCzIZLk1lbGFuZEdhbWUzLlF1b3RhU2V0dGluZxI5ChJtYW5v",
+            "cl9idXlfc2V0dGluZ3MYHiADKAsyHS5NZWxhbmRHYW1lMy5NYW5vckJ1eVNl",
+            "dHRpbmdzEjQKD2VudGl0eV9zZXR0aW5ncxgfIAMoCzIbLk1lbGFuZEdhbWUz",
+            "Lk9iamVjdFNldHRpbmdzEjYKEGR1bmdlb25fc2V0dGluZ3MYICADKAsyHC5N",
+            "ZWxhbmRHYW1lMy5EdW5nZW9uU2V0dGluZ3MSLAoLZHVuZ2Vvbl9tYXAYISAD",
+            "KAsyFy5NZWxhbmRHYW1lMy5EdW5nZW9uTWFwEjsKE2dhbWVfdmFsdWVfc2V0",
+            "dGluZ3MYIiADKAsyHi5NZWxhbmRHYW1lMy5HYW1lVmFsdWVTZXR0aW5ncxI2",
+            "ChBtb25zdGVyX3NldHRpbmdzGCMgAygLMhwuTWVsYW5kR2FtZTMuTW9uc3Rl",
+            "clNldHRpbmdzEjsKE3JhbmRvbV9tYXBfc2V0dGluZ3MYJCADKAsyHi5NZWxh",
+            "bmRHYW1lMy5SYW5kb21NYXBTZXR0aW5ncxIqCgdyZXNfdGFnGCUgASgLMhku",
+            "TWVsYW5kR2FtZTMuUmVzb3VyY2VzVGFnEkUKGGV4Y2x1c2lvbl9lbnRpdHlf",
+            "c2V0dGluZxgmIAMoCzIjLk1lbGFuZEdhbWUzLkV4Y2x1c2lvbkVudGl0eVNl",
+            "dHRpbmcSRAoYcGxhY2VhYmxlX3NraWxsX3NldHRpbmdzGCcgAygLMiIuTWVs",
+            "YW5kR2FtZTMuUGxhY2VhYmxlU2tpbGxTZXR0aW5nEjgKEml0ZW1fc2xvdF9z",
+            "ZXR0aW5ncxgoIAMoCzIcLk1lbGFuZEdhbWUzLkl0ZW1TbG90U2V0dGluZ2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::MelandGame3.ModelReflection.Descriptor, global::MelandGame3.FallingObjectReflection.Descriptor, global::MelandGame3.BuffReflection.Descriptor, global::MelandGame3.SkillReflection.Descriptor, global::MelandGame3.ResourcePointReflection.Descriptor, global::MelandGame3.AstReflection.Descriptor, global::MelandGame3.ConditionReflection.Descriptor, global::MelandGame3.CdReflection.Descriptor, global::MelandGame3.QuotaReflection.Descriptor, global::MelandGame3.MonsterReflection.Descriptor, global::MelandGame3.WidgetReflection.Descriptor, global::MelandGame3.RandomMapReflection.Descriptor, global::MelandGame3.BigWorldReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::MelandGame3.ModelReflection.Descriptor, global::MelandGame3.FallingObjectReflection.Descriptor, global::MelandGame3.BuffReflection.Descriptor, global::MelandGame3.SkillReflection.Descriptor, global::MelandGame3.ResourcePointReflection.Descriptor, global::MelandGame3.AstReflection.Descriptor, global::MelandGame3.ConditionReflection.Descriptor, global::MelandGame3.CdReflection.Descriptor, global::MelandGame3.QuotaReflection.Descriptor, global::MelandGame3.MonsterReflection.Descriptor, global::MelandGame3.WidgetReflection.Descriptor, global::MelandGame3.RandomMapReflection.Descriptor, global::MelandGame3.BigWorldReflection.Descriptor, global::MelandGame3.ItemSlotReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.WeatherSettings), global::MelandGame3.WeatherSettings.Parser, new[]{ "Id", "WeatherType", "TempChange", "ThirstyChange", "HungryChange", "BuffId", "TickMs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AchieveSettings), global::MelandGame3.AchieveSettings.Parser, new[]{ "Id", "Type", "TargetId", "RequirementsText", "RewardsText" }, null, null, null, null),
@@ -113,7 +115,7 @@ namespace MelandGame3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CodeResource), global::MelandGame3.CodeResource.Parser, new[]{ "CodeCid", "Category", "CanIndex", "CanIndexType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ResourcesTag), global::MelandGame3.ResourcesTag.Parser, new[]{ "TarCodeRes", "TarWidgetType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ExclusionEntitySetting), global::MelandGame3.ExclusionEntitySetting.Parser, new[]{ "Cid", "ExTypeNotBuild", "ExCidsNotBuild", "ExTypeDel", "ExCidsDel", "ExTypeMove", "ExCidsMove" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ConfigDataSettings), global::MelandGame3.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "SpecialBuildSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "TaskSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ConfigDataSettings), global::MelandGame3.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "SpecialBuildSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "TaskSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings", "ItemSlotSettings" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3236,6 +3238,7 @@ namespace MelandGame3 {
       resTag_ = other.resTag_ != null ? other.resTag_.Clone() : null;
       exclusionEntitySetting_ = other.exclusionEntitySetting_.Clone();
       placeableSkillSettings_ = other.placeableSkillSettings_.Clone();
+      itemSlotSettings_ = other.itemSlotSettings_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3656,6 +3659,17 @@ namespace MelandGame3 {
       get { return placeableSkillSettings_; }
     }
 
+    /// <summary>Field number for the "item_slot_settings" field.</summary>
+    public const int ItemSlotSettingsFieldNumber = 40;
+    private static readonly pb::FieldCodec<global::MelandGame3.ItemSlotSetting> _repeated_itemSlotSettings_codec
+        = pb::FieldCodec.ForMessage(322, global::MelandGame3.ItemSlotSetting.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ItemSlotSetting> itemSlotSettings_ = new pbc::RepeatedField<global::MelandGame3.ItemSlotSetting>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::MelandGame3.ItemSlotSetting> ItemSlotSettings {
+      get { return itemSlotSettings_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3708,6 +3722,7 @@ namespace MelandGame3 {
       if (!object.Equals(ResTag, other.ResTag)) return false;
       if(!exclusionEntitySetting_.Equals(other.exclusionEntitySetting_)) return false;
       if(!placeableSkillSettings_.Equals(other.placeableSkillSettings_)) return false;
+      if(!itemSlotSettings_.Equals(other.itemSlotSettings_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3752,6 +3767,7 @@ namespace MelandGame3 {
       if (resTag_ != null) hash ^= ResTag.GetHashCode();
       hash ^= exclusionEntitySetting_.GetHashCode();
       hash ^= placeableSkillSettings_.GetHashCode();
+      hash ^= itemSlotSettings_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3810,6 +3826,7 @@ namespace MelandGame3 {
       }
       exclusionEntitySetting_.WriteTo(output, _repeated_exclusionEntitySetting_codec);
       placeableSkillSettings_.WriteTo(output, _repeated_placeableSkillSettings_codec);
+      itemSlotSettings_.WriteTo(output, _repeated_itemSlotSettings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3860,6 +3877,7 @@ namespace MelandGame3 {
       }
       exclusionEntitySetting_.WriteTo(ref output, _repeated_exclusionEntitySetting_codec);
       placeableSkillSettings_.WriteTo(ref output, _repeated_placeableSkillSettings_codec);
+      itemSlotSettings_.WriteTo(ref output, _repeated_itemSlotSettings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3909,6 +3927,7 @@ namespace MelandGame3 {
       }
       size += exclusionEntitySetting_.CalculateSize(_repeated_exclusionEntitySetting_codec);
       size += placeableSkillSettings_.CalculateSize(_repeated_placeableSkillSettings_codec);
+      size += itemSlotSettings_.CalculateSize(_repeated_itemSlotSettings_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3963,6 +3982,7 @@ namespace MelandGame3 {
       }
       exclusionEntitySetting_.Add(other.exclusionEntitySetting_);
       placeableSkillSettings_.Add(other.placeableSkillSettings_);
+      itemSlotSettings_.Add(other.itemSlotSettings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4129,6 +4149,10 @@ namespace MelandGame3 {
             placeableSkillSettings_.AddEntriesFrom(input, _repeated_placeableSkillSettings_codec);
             break;
           }
+          case 322: {
+            itemSlotSettings_.AddEntriesFrom(input, _repeated_itemSlotSettings_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4293,6 +4317,10 @@ namespace MelandGame3 {
           }
           case 314: {
             placeableSkillSettings_.AddEntriesFrom(ref input, _repeated_placeableSkillSettings_codec);
+            break;
+          }
+          case 322: {
+            itemSlotSettings_.AddEntriesFrom(ref input, _repeated_itemSlotSettings_codec);
             break;
           }
         }

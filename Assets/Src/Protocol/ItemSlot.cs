@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from item_slot.proto</summary>
   public static partial class ItemSlotReflection {
@@ -24,24 +24,24 @@ namespace Bian {
     static ItemSlotReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9pdGVtX3Nsb3QucHJvdG8SBEJpYW4aCml0ZW0ucHJvdG8igQIKEUl0ZW1T",
-            "bG90QXR0cmlidXRlEhYKDmhwX2xpbWl0X2FkZGVkGAEgASgFEhkKEWhwX3Jl",
-            "Y292ZXJ5X2FkZGVkGAIgASgFEhEKCWF0dF9hZGRlZBgDIAEoBRIXCg9hdHRf",
-            "c3BlZWRfYWRkZWQYBCABKAUSEQoJZGVmX2FkZGVkGAUgASgFEhcKD2NyaXRf",
-            "cmF0ZV9hZGRlZBgGIAEoBRIWCg5jcml0X2RtZ19hZGRlZBgHIAEoBRIWCg5o",
-            "aXRfcmF0ZV9hZGRlZBgIIAEoBRIXCg9taXNzX3JhdGVfYWRkZWQYCSABKAUS",
-            "GAoQbW92ZV9zcGVlZF9hZGRlZBgKIAEoBSJ/Cg9JdGVtU2xvdFNldHRpbmcS",
-            "EAoIcG9zaXRpb24YASABKAUSCgoCbHYYAiABKAUSDgoGdXBfZXhwGAMgASgF",
-            "EhIKCnVwX2RpdGFtaW4YBCABKAUSKgoJYXR0cmlidXRlGAUgASgLMhcuQmlh",
-            "bi5JdGVtU2xvdEF0dHJpYnV0ZSJBCghJdGVtU2xvdBImCghwb3NpdGlvbhgB",
-            "IAEoDjIULkJpYW4uQXZhdGFyUG9zaXRpb24SDQoFbGV2ZWwYAiABKAViBnBy",
-            "b3RvMw=="));
+            "Cg9pdGVtX3Nsb3QucHJvdG8SC01lbGFuZEdhbWUzGgppdGVtLnByb3RvIoEC",
+            "ChFJdGVtU2xvdEF0dHJpYnV0ZRIWCg5ocF9saW1pdF9hZGRlZBgBIAEoBRIZ",
+            "ChFocF9yZWNvdmVyeV9hZGRlZBgCIAEoBRIRCglhdHRfYWRkZWQYAyABKAUS",
+            "FwoPYXR0X3NwZWVkX2FkZGVkGAQgASgFEhEKCWRlZl9hZGRlZBgFIAEoBRIX",
+            "Cg9jcml0X3JhdGVfYWRkZWQYBiABKAUSFgoOY3JpdF9kbWdfYWRkZWQYByAB",
+            "KAUSFgoOaGl0X3JhdGVfYWRkZWQYCCABKAUSFwoPbWlzc19yYXRlX2FkZGVk",
+            "GAkgASgFEhgKEG1vdmVfc3BlZWRfYWRkZWQYCiABKAUigwEKD0l0ZW1TbG90",
+            "U2V0dGluZxIQCghwb3NpdGlvbhgBIAEoBRIKCgJsdhgCIAEoBRIOCgZ1cF9l",
+            "eHAYAyABKAUSDwoHdXBfbWVsZBgEIAEoBRIxCglhdHRyaWJ1dGUYBSABKAsy",
+            "Hi5NZWxhbmRHYW1lMy5JdGVtU2xvdEF0dHJpYnV0ZSJICghJdGVtU2xvdBIt",
+            "Cghwb3NpdGlvbhgBIAEoDjIbLk1lbGFuZEdhbWUzLkF2YXRhclBvc2l0aW9u",
+            "Eg0KBWxldmVsGAIgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.ItemReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::MelandGame3.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ItemSlotAttribute), global::Bian.ItemSlotAttribute.Parser, new[]{ "HpLimitAdded", "HpRecoveryAdded", "AttAdded", "AttSpeedAdded", "DefAdded", "CritRateAdded", "CritDmgAdded", "HitRateAdded", "MissRateAdded", "MoveSpeedAdded" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ItemSlotSetting), global::Bian.ItemSlotSetting.Parser, new[]{ "Position", "Lv", "UpExp", "UpDitamin", "Attribute" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ItemSlot), global::Bian.ItemSlot.Parser, new[]{ "Position", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ItemSlotAttribute), global::MelandGame3.ItemSlotAttribute.Parser, new[]{ "HpLimitAdded", "HpRecoveryAdded", "AttAdded", "AttSpeedAdded", "DefAdded", "CritRateAdded", "CritDmgAdded", "HitRateAdded", "MissRateAdded", "MoveSpeedAdded" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ItemSlotSetting), global::MelandGame3.ItemSlotSetting.Parser, new[]{ "Position", "Lv", "UpExp", "UpMeld", "Attribute" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ItemSlot), global::MelandGame3.ItemSlot.Parser, new[]{ "Position", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -62,7 +62,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemSlotReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.ItemSlotReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -614,7 +614,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemSlotReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.ItemSlotReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -637,7 +637,7 @@ namespace Bian {
       position_ = other.position_;
       lv_ = other.lv_;
       upExp_ = other.upExp_;
-      upDitamin_ = other.upDitamin_;
+      upMeld_ = other.upMeld_;
       attribute_ = other.attribute_ != null ? other.attribute_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -690,30 +690,30 @@ namespace Bian {
       }
     }
 
-    /// <summary>Field number for the "up_ditamin" field.</summary>
-    public const int UpDitaminFieldNumber = 4;
-    private int upDitamin_;
+    /// <summary>Field number for the "up_meld" field.</summary>
+    public const int UpMeldFieldNumber = 4;
+    private int upMeld_;
     /// <summary>
-    /// 升级下一级消耗的ditamin
+    /// 升级下一级消耗的meld
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int UpDitamin {
-      get { return upDitamin_; }
+    public int UpMeld {
+      get { return upMeld_; }
       set {
-        upDitamin_ = value;
+        upMeld_ = value;
       }
     }
 
     /// <summary>Field number for the "attribute" field.</summary>
     public const int AttributeFieldNumber = 5;
-    private global::Bian.ItemSlotAttribute attribute_;
+    private global::MelandGame3.ItemSlotAttribute attribute_;
     /// <summary>
     /// 属性加成信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ItemSlotAttribute Attribute {
+    public global::MelandGame3.ItemSlotAttribute Attribute {
       get { return attribute_; }
       set {
         attribute_ = value;
@@ -738,7 +738,7 @@ namespace Bian {
       if (Position != other.Position) return false;
       if (Lv != other.Lv) return false;
       if (UpExp != other.UpExp) return false;
-      if (UpDitamin != other.UpDitamin) return false;
+      if (UpMeld != other.UpMeld) return false;
       if (!object.Equals(Attribute, other.Attribute)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -750,7 +750,7 @@ namespace Bian {
       if (Position != 0) hash ^= Position.GetHashCode();
       if (Lv != 0) hash ^= Lv.GetHashCode();
       if (UpExp != 0) hash ^= UpExp.GetHashCode();
-      if (UpDitamin != 0) hash ^= UpDitamin.GetHashCode();
+      if (UpMeld != 0) hash ^= UpMeld.GetHashCode();
       if (attribute_ != null) hash ^= Attribute.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -782,9 +782,9 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteInt32(UpExp);
       }
-      if (UpDitamin != 0) {
+      if (UpMeld != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(UpDitamin);
+        output.WriteInt32(UpMeld);
       }
       if (attribute_ != null) {
         output.WriteRawTag(42);
@@ -812,9 +812,9 @@ namespace Bian {
         output.WriteRawTag(24);
         output.WriteInt32(UpExp);
       }
-      if (UpDitamin != 0) {
+      if (UpMeld != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(UpDitamin);
+        output.WriteInt32(UpMeld);
       }
       if (attribute_ != null) {
         output.WriteRawTag(42);
@@ -839,8 +839,8 @@ namespace Bian {
       if (UpExp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(UpExp);
       }
-      if (UpDitamin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UpDitamin);
+      if (UpMeld != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UpMeld);
       }
       if (attribute_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attribute);
@@ -866,12 +866,12 @@ namespace Bian {
       if (other.UpExp != 0) {
         UpExp = other.UpExp;
       }
-      if (other.UpDitamin != 0) {
-        UpDitamin = other.UpDitamin;
+      if (other.UpMeld != 0) {
+        UpMeld = other.UpMeld;
       }
       if (other.attribute_ != null) {
         if (attribute_ == null) {
-          Attribute = new global::Bian.ItemSlotAttribute();
+          Attribute = new global::MelandGame3.ItemSlotAttribute();
         }
         Attribute.MergeFrom(other.Attribute);
       }
@@ -903,12 +903,12 @@ namespace Bian {
             break;
           }
           case 32: {
-            UpDitamin = input.ReadInt32();
+            UpMeld = input.ReadInt32();
             break;
           }
           case 42: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.ItemSlotAttribute();
+              Attribute = new global::MelandGame3.ItemSlotAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -941,12 +941,12 @@ namespace Bian {
             break;
           }
           case 32: {
-            UpDitamin = input.ReadInt32();
+            UpMeld = input.ReadInt32();
             break;
           }
           case 42: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.ItemSlotAttribute();
+              Attribute = new global::MelandGame3.ItemSlotAttribute();
             }
             input.ReadMessage(Attribute);
             break;
@@ -972,7 +972,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemSlotReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.ItemSlotReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1005,10 +1005,10 @@ namespace Bian {
 
     /// <summary>Field number for the "position" field.</summary>
     public const int PositionFieldNumber = 1;
-    private global::Bian.AvatarPosition position_ = global::Bian.AvatarPosition.AvatarPositionNone;
+    private global::MelandGame3.AvatarPosition position_ = global::MelandGame3.AvatarPosition.AvatarPositionNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AvatarPosition Position {
+    public global::MelandGame3.AvatarPosition Position {
       get { return position_; }
       set {
         position_ = value;
@@ -1051,7 +1051,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) hash ^= Position.GetHashCode();
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) hash ^= Position.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1071,7 +1071,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Position);
       }
@@ -1089,7 +1089,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Position);
       }
@@ -1107,7 +1107,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Position);
       }
       if (Level != 0) {
@@ -1125,7 +1125,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Position != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (other.Position != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         Position = other.Position;
       }
       if (other.Level != 0) {
@@ -1147,7 +1147,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Position = (global::Bian.AvatarPosition) input.ReadEnum();
+            Position = (global::MelandGame3.AvatarPosition) input.ReadEnum();
             break;
           }
           case 16: {
@@ -1170,7 +1170,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Position = (global::Bian.AvatarPosition) input.ReadEnum();
+            Position = (global::MelandGame3.AvatarPosition) input.ReadEnum();
             break;
           }
           case 16: {

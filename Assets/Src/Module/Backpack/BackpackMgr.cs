@@ -27,7 +27,7 @@ public class BackpackMgr : MonoBehaviour
         Message.RspMapEnterFinish -= OnMapEnterFinish;
     }
 
-    private void OnMapEnterFinish(Bian.EnterMapResponse rsp)
+    private void OnMapEnterFinish(MelandGame3.EnterMapResponse rsp)
     {
         ReqData();
     }

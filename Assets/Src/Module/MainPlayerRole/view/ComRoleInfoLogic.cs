@@ -94,7 +94,7 @@ public class ComRoleInfoLogic : FGUILogicCpt
 
     private void UpdateAttr()
     {
-        Bian.EntityProfile profile = DataManager.MainPlayer.RoleData.Profile;
+        MelandGame3.EntityProfile profile = DataManager.MainPlayer.RoleData.Profile;
         SetAttr("hp", profile.HpCurrent.ToString(), profile.HpLimit.ToString());
         SetAttr("hpRecovery", profile.HpRecovery.ToString());
         SetAttr("atk", profile.Att.ToString());
@@ -130,7 +130,7 @@ public class ComRoleInfoLogic : FGUILogicCpt
 
     private void UpdateExp()
     {
-        Bian.EntityProfile profile = DataManager.MainPlayer.RoleData.Profile;
+        MelandGame3.EntityProfile profile = DataManager.MainPlayer.RoleData.Profile;
         int lv = profile.Lv == 0 ? 1 : profile.Lv;
         int needExp = RoleLvTable.Inst.GetRow(lv).Exp;
         _comExp.value = string.IsNullOrEmpty(profile.Exp) ? 0.0d : Convert.ToDouble(profile.Exp);

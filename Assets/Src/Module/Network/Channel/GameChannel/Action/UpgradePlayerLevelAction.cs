@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
  * @Date: 2022-06-23 14:24:58
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/UpgradePlayerLevelAction.cs
  */
-using Bian;
+using MelandGame3;
 
 public class UpgradePlayerLevelAction : GameChannelNetMsgRActionBase<UpgradePlayerLevelRequest, UpgradePlayerLevelResponse>
 {

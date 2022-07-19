@@ -6,7 +6,7 @@
  * @Date: 2022-06-16 16:54:30
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/ItemsGetAction.cs
  */
-using Bian;
+using MelandGame3;
 public class ItemsGetAction : GameChannelNetMsgRActionBase<ItemsGetRequest, ItemsGetResponse>
 {
     protected override EnvelopeType GetEnvelopeType()

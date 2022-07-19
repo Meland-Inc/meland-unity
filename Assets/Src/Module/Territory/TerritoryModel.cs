@@ -2,7 +2,7 @@
  * @Author: xiang huan
  * @Date: 2022-06-16 14:18:24
  * @Description: xiang huan
- * @FilePath: /meland-unity/Assets/Src/Module/Territory/TerritoryModel.cs
+ * @FilePath /Assets/Src/Module/Territory/TerritoryModel.cs
  * 
  */
 
@@ -67,7 +67,7 @@ public class TerritoryModel : DataModelBase
     }
 
     /** 刷新地格 */
-    public void UpdateGridData(Bian.BigWorldTile data)
+    public void UpdateGridData(MelandGame3.BigWorldTile data)
     {
         ulong key = NetUtil.RCToXZKey(data.R, data.C);
         _ = GridDataMap.TryGetValue(key, out TerritoryGridData gridData);
@@ -79,7 +79,7 @@ public class TerritoryModel : DataModelBase
     }
 
     /** 添加一个地格数据 */
-    public TerritoryGridData AddGridData(Bian.BigWorldTile data)
+    public TerritoryGridData AddGridData(MelandGame3.BigWorldTile data)
     {
         ulong key = NetUtil.RCToXZKey(data.R, data.C);
         if (GridDataMap.TryGetValue(key, out TerritoryGridData gridData))
@@ -108,7 +108,7 @@ public class TerritoryModel : DataModelBase
     * 获取或添加一个玩家区域数据
     * @param tData 玩家区域数据
     */
-    public TerritoryPlayerAreaData GetAddPlayerAreaData(Bian.BigWorldPlayerArea data)
+    public TerritoryPlayerAreaData GetAddPlayerAreaData(MelandGame3.BigWorldPlayerArea data)
     {
         _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out TerritoryPlayerAreaData areaData);
         if (areaData != null)
@@ -133,7 +133,7 @@ public class TerritoryModel : DataModelBase
     * 添加一个玩家区域数据
     * @param tData 玩家区域数据
 */
-    public TerritoryPlayerAreaData AddPlayerAreaData(Bian.BigWorldPlayerArea data)
+    public TerritoryPlayerAreaData AddPlayerAreaData(MelandGame3.BigWorldPlayerArea data)
     {
         _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out TerritoryPlayerAreaData areaData);
         if (areaData != null)
@@ -147,7 +147,7 @@ public class TerritoryModel : DataModelBase
     }
 
     /** 刷新玩家区域数据 */
-    public void UpdatePlayerAreaData(Bian.BigWorldPlayerArea data)
+    public void UpdatePlayerAreaData(MelandGame3.BigWorldPlayerArea data)
     {
         _ = PlayerAreaDataMap.TryGetValue(data.OwnerId, out TerritoryPlayerAreaData areaData);
         if (areaData == null)
@@ -191,9 +191,9 @@ public class TerritoryModel : DataModelBase
     /** 初始化官方区域数据 */
     public void InitSystemAreaData(RepeatedField<int> rcIndexList)
     {
-        Bian.BigWorldPlayerArea areaData = new();
+        MelandGame3.BigWorldPlayerArea areaData = new();
         areaData.OwnerId = TerritoryDefine.WORLD_SYSTEM_BORDER_AREA_UID;
-        areaData.VipLandTiles.AddRange(rcIndexList);
+        // areaData.VipLandTiles.AddRange(rcIndexList);
         _ = GetAddPlayerAreaData(areaData);
     }
 

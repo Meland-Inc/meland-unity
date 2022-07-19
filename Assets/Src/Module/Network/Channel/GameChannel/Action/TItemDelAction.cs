@@ -8,7 +8,7 @@ using System.Security.Cryptography;
  * @Date: 2022-06-16 20:00:33
  * @FilePath: /Assets/Src/Module/Network/Channel/GameChannel/Action/TItemDelAction.cs
  */
-using Bian;
+using MelandGame3;
 public class TItemDelAction : GameChannelNetMsgTActionBase<TItemDelResponse>
 {
     protected override EnvelopeType GetEnvelopeType()

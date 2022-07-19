@@ -14,14 +14,14 @@ public class PlayerRoleAvatarData : MonoBehaviour
     /// 角色外观数据
     /// </summary>
     /// <value></value>
-    public Bian.PlayerFeature Feature { get; private set; }
+    public MelandGame3.PlayerFeature Feature { get; private set; }
 
     public void SetRoleCfgID(int roleCfgID)
     {
         RoleCfgID = roleCfgID;
     }
 
-    public void SetRoleFeature(Bian.PlayerFeature feature)
+    public void SetRoleFeature(MelandGame3.PlayerFeature feature)
     {
         Feature = feature;
     }

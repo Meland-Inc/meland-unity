@@ -1,5 +1,5 @@
 
-using Bian;
+using MelandGame3;
 
 public class TTerritoryTileAction : GameChannelNetMsgTActionBase<TBigWorldTileResponse>
 {
@@ -14,7 +14,7 @@ public class TTerritoryTileAction : GameChannelNetMsgTActionBase<TBigWorldTileRe
         {
             return false;
         }
-        TerritoryUtil.HandleAddRemoveTerritoryGrid(rsp.AddTilePros, rsp.PressTileRcIndexList);
+        // TerritoryUtil.HandleAddRemoveTerritoryGrid(rsp.AddTilePros, rsp.PressTileRcIndexList);
         return true;
     }
 }

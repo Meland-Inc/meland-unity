@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
-using Bian;
+using MelandGame3;
 
 /// <summary>
 /// 场景实体 和服务器对应的实体逻辑
@@ -97,16 +97,16 @@ public class SceneEntity
     /// <param name="location"></param>
     public void DirectSetSvrPosition(EntityLocation location)
     {
-        Transform.position = NetUtil.SvrLocToClient(location);
+        Transform.position = NetUtil.SvrToClientLoc(location);
     }
 
     /// <summary>
     /// 直接设置服务器朝向 大部分物件是静态不会动的没必要添加NetInputMove脚本 直接设置下即可 节省性能
     /// </summary>
     /// <param name="dir"></param>
-    public void DirectSetSvrDir(VectorXY dir)
+    public void DirectSetSvrDir(MelandGame3.Vector3 dir)
     {
-        Transform.forward = NetUtil.SvrDirToClient(dir);
+        Transform.forward = NetUtil.SvrToClientDir(dir);
     }
 
     public T GetComponent<T>()

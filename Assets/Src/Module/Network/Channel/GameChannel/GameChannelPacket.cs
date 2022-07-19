@@ -1,4 +1,4 @@
-public class GameChannelPacket : ChannelPacket<Bian.Envelope>
+public class GameChannelPacket : ChannelPacket<MelandGame3.Envelope>
 {
     // 此值与handler id 需要一致，接收到响应的时候，用来匹配对应的handler处理
     // 而Handler有两种，一种是请求式R-Action,一种是通知式T-Action

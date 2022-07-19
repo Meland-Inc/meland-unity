@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from typeDefine.proto</summary>
   public static partial class TypeDefineReflection {
@@ -24,24 +24,24 @@ namespace Bian {
     static TypeDefineReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChB0eXBlRGVmaW5lLnByb3RvEgRCaWFuKtYECgpFbnRpdHlUeXBlEhwKGEVu",
-            "dGl0eVR5cGVfRW50aXR5VHlwZUFsbBAAEiIKHkVudGl0eVR5cGVfRW50aXR5",
-            "VHlwZU1hcE9iamVjdBABEh8KG0VudGl0eVR5cGVfRW50aXR5VHlwZVBsYXll",
-            "chACEhwKGEVudGl0eVR5cGVfRW50aXR5VHlwZU5wYxAEEiAKHEVudGl0eVR5",
-            "cGVfRW50aXR5VHlwZU1vbnN0ZXIQCBImCiJFbnRpdHlUeXBlX0VudGl0eVR5",
-            "cGVSZXNvdXJjZVBvaW50EBASJgoiRW50aXR5VHlwZV9FbnRpdHlUeXBlRmFs",
-            "bGluZ09iamVjdBAgEiEKHUVudGl0eVR5cGVfRW50aXR5VHlwZU1hdGVyaWFs",
-            "EEASHQoYRW50aXR5VHlwZV9FbnRpdHlUeXBlQm90EIABEiQKH0VudGl0eVR5",
-            "cGVfRW50aXR5VHlwZUZhbGxpbmdCb3gQgAISHwoaRW50aXR5VHlwZV9FbnRp",
-            "dHlUeXBlVmFyaWEQgAQSHwoaRW50aXR5VHlwZV9FbnRpdHlUeXBlUGxhbnQQ",
-            "gAgSHQoYRW50aXR5VHlwZV9FbnRpdHlUeXBlUGV0EIAQEiYKIUVudGl0eVR5",
-            "cGVfRW50aXR5VHlwZVNwZWNpYWxCdWlsZBCAIBIgChtFbnRpdHlUeXBlX0Vu",
-            "dGl0eVR5cGVQdXBwZXQQgEASIgocRW50aXR5VHlwZV9FbnRpdHlUeXBlVGVy",
-            "cmFpbhCAgAESHgoYRW50aXR5VHlwZV9FbnRpdHlUeXBlTWF4EICABGIGcHJv",
-            "dG8z"));
+            "ChB0eXBlRGVmaW5lLnByb3RvEgtNZWxhbmRHYW1lMyrWBAoKRW50aXR5VHlw",
+            "ZRIcChhFbnRpdHlUeXBlX0VudGl0eVR5cGVBbGwQABIiCh5FbnRpdHlUeXBl",
+            "X0VudGl0eVR5cGVNYXBPYmplY3QQARIfChtFbnRpdHlUeXBlX0VudGl0eVR5",
+            "cGVQbGF5ZXIQAhIcChhFbnRpdHlUeXBlX0VudGl0eVR5cGVOcGMQBBIgChxF",
+            "bnRpdHlUeXBlX0VudGl0eVR5cGVNb25zdGVyEAgSJgoiRW50aXR5VHlwZV9F",
+            "bnRpdHlUeXBlUmVzb3VyY2VQb2ludBAQEiYKIkVudGl0eVR5cGVfRW50aXR5",
+            "VHlwZUZhbGxpbmdPYmplY3QQIBIhCh1FbnRpdHlUeXBlX0VudGl0eVR5cGVN",
+            "YXRlcmlhbBBAEh0KGEVudGl0eVR5cGVfRW50aXR5VHlwZUJvdBCAARIkCh9F",
+            "bnRpdHlUeXBlX0VudGl0eVR5cGVGYWxsaW5nQm94EIACEh8KGkVudGl0eVR5",
+            "cGVfRW50aXR5VHlwZVZhcmlhEIAEEh8KGkVudGl0eVR5cGVfRW50aXR5VHlw",
+            "ZVBsYW50EIAIEh0KGEVudGl0eVR5cGVfRW50aXR5VHlwZVBldBCAEBImCiFF",
+            "bnRpdHlUeXBlX0VudGl0eVR5cGVTcGVjaWFsQnVpbGQQgCASIAobRW50aXR5",
+            "VHlwZV9FbnRpdHlUeXBlUHVwcGV0EIBAEiIKHEVudGl0eVR5cGVfRW50aXR5",
+            "VHlwZVRlcnJhaW4QgIABEh4KGEVudGl0eVR5cGVfRW50aXR5VHlwZU1heBCA",
+            "gARiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.EntityType), }, null, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.EntityType), }, null, null));
     }
     #endregion
 

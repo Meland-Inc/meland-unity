@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
-using Bian;
+using MelandGame3;
 
 /// <summary>
 /// 生产各种实体类型的初始场景实体的工厂
@@ -45,7 +45,7 @@ public static class SceneEntityFactory
         entity.SetRootName($"mainPlayerRole_{entityID}");
 
         //主角特殊逻辑
-        entity.AddComponent<MoveNetRequest>().enabled = false;
+        entity.AddComponent<NetReqMove>().enabled = false;
         return entity;
     }
 }

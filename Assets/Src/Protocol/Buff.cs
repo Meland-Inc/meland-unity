@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from buff.proto</summary>
   public static partial class BuffReflection {
@@ -24,25 +24,26 @@ namespace Bian {
     static BuffReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgpidWZmLnByb3RvEgRCaWFuIrIBCgxCdWZmU2V0dGluZ3MSDwoHYnVmZl9p",
-            "ZBgBIAEoBRIpCgtlZmZlY3RfdHlwZRgCIAEoDjIULkJpYW4uQnVmZkVmZmVj",
-            "dFR5cGUSEAoIZ3JvdXBfaWQYAyABKAUSFgoOZ3JvdXBfcHJpb3JpdHkYBCAB",
-            "KAUSDgoGcGFyYW1zGAUgAygFEhIKCnRvdGFsX3RpbWUYBiABKAUSGAoQdHJp",
-            "Z2dlcl9pbnRlcnZhbBgHIAEoBSItCgpFbnRpdHlCdWZmEg8KB2J1ZmZfaWQY",
-            "ASABKAUSDgoGZW5kX21zGAIgASgJKu4CCg5CdWZmRWZmZWN0VHlwZRIkCiBC",
-            "dWZmRWZmZWN0VHlwZV9CdWZmRWZmZWN0VW5rbm93bhAAEiIKHkJ1ZmZFZmZl",
-            "Y3RUeXBlX0J1ZmZFZmZlY3RTdWJIcBABEiIKHkJ1ZmZFZmZlY3RUeXBlX0J1",
-            "ZmZFZmZlY3RBZGRIcBACEiYKIkJ1ZmZFZmZlY3RUeXBlX0J1ZmZFZmZlY3RT",
-            "dWJIdW5ncnkQAxImCiJCdWZmRWZmZWN0VHlwZV9CdWZmRWZmZWN0QWRkSHVu",
-            "Z3J5EAQSJwojQnVmZkVmZmVjdFR5cGVfQnVmZkVmZmVjdFN1YlRoaXJzdHkQ",
-            "BRInCiNCdWZmRWZmZWN0VHlwZV9CdWZmRWZmZWN0QWRkVGhpcnN0eRAGEiUK",
-            "IUJ1ZmZFZmZlY3RUeXBlX0J1ZmZFZmZlY3RTdWJTcGVlZBAHEiUKIUJ1ZmZF",
-            "ZmZlY3RUeXBlX0J1ZmZFZmZlY3RBZGRTcGVlZBAIYgZwcm90bzM="));
+            "CgpidWZmLnByb3RvEgtNZWxhbmRHYW1lMyK5AQoMQnVmZlNldHRpbmdzEg8K",
+            "B2J1ZmZfaWQYASABKAUSMAoLZWZmZWN0X3R5cGUYAiABKA4yGy5NZWxhbmRH",
+            "YW1lMy5CdWZmRWZmZWN0VHlwZRIQCghncm91cF9pZBgDIAEoBRIWCg5ncm91",
+            "cF9wcmlvcml0eRgEIAEoBRIOCgZwYXJhbXMYBSADKAUSEgoKdG90YWxfdGlt",
+            "ZRgGIAEoBRIYChB0cmlnZ2VyX2ludGVydmFsGAcgASgFIi0KCkVudGl0eUJ1",
+            "ZmYSDwoHYnVmZl9pZBgBIAEoBRIOCgZlbmRfbXMYAiABKAkq7gIKDkJ1ZmZF",
+            "ZmZlY3RUeXBlEiQKIEJ1ZmZFZmZlY3RUeXBlX0J1ZmZFZmZlY3RVbmtub3du",
+            "EAASIgoeQnVmZkVmZmVjdFR5cGVfQnVmZkVmZmVjdFN1YkhwEAESIgoeQnVm",
+            "ZkVmZmVjdFR5cGVfQnVmZkVmZmVjdEFkZEhwEAISJgoiQnVmZkVmZmVjdFR5",
+            "cGVfQnVmZkVmZmVjdFN1Ykh1bmdyeRADEiYKIkJ1ZmZFZmZlY3RUeXBlX0J1",
+            "ZmZFZmZlY3RBZGRIdW5ncnkQBBInCiNCdWZmRWZmZWN0VHlwZV9CdWZmRWZm",
+            "ZWN0U3ViVGhpcnN0eRAFEicKI0J1ZmZFZmZlY3RUeXBlX0J1ZmZFZmZlY3RB",
+            "ZGRUaGlyc3R5EAYSJQohQnVmZkVmZmVjdFR5cGVfQnVmZkVmZmVjdFN1YlNw",
+            "ZWVkEAcSJQohQnVmZkVmZmVjdFR5cGVfQnVmZkVmZmVjdEFkZFNwZWVkEAhi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.BuffEffectType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BuffSettings), global::Bian.BuffSettings.Parser, new[]{ "BuffId", "EffectType", "GroupId", "GroupPriority", "Params", "TotalTime", "TriggerInterval" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityBuff), global::Bian.EntityBuff.Parser, new[]{ "BuffId", "EndMs" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.BuffEffectType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BuffSettings), global::MelandGame3.BuffSettings.Parser, new[]{ "BuffId", "EffectType", "GroupId", "GroupPriority", "Params", "TotalTime", "TriggerInterval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityBuff), global::MelandGame3.EntityBuff.Parser, new[]{ "BuffId", "EndMs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -111,7 +112,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BuffReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.BuffReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,10 +162,10 @@ namespace Bian {
 
     /// <summary>Field number for the "effect_type" field.</summary>
     public const int EffectTypeFieldNumber = 2;
-    private global::Bian.BuffEffectType effectType_ = global::Bian.BuffEffectType.BuffEffectUnknown;
+    private global::MelandGame3.BuffEffectType effectType_ = global::MelandGame3.BuffEffectType.BuffEffectUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BuffEffectType EffectType {
+    public global::MelandGame3.BuffEffectType EffectType {
       get { return effectType_; }
       set {
         effectType_ = value;
@@ -269,7 +270,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
-      if (EffectType != global::Bian.BuffEffectType.BuffEffectUnknown) hash ^= EffectType.GetHashCode();
+      if (EffectType != global::MelandGame3.BuffEffectType.BuffEffectUnknown) hash ^= EffectType.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (GroupPriority != 0) hash ^= GroupPriority.GetHashCode();
       hash ^= params_.GetHashCode();
@@ -297,7 +298,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(BuffId);
       }
-      if (EffectType != global::Bian.BuffEffectType.BuffEffectUnknown) {
+      if (EffectType != global::MelandGame3.BuffEffectType.BuffEffectUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EffectType);
       }
@@ -332,7 +333,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(BuffId);
       }
-      if (EffectType != global::Bian.BuffEffectType.BuffEffectUnknown) {
+      if (EffectType != global::MelandGame3.BuffEffectType.BuffEffectUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EffectType);
       }
@@ -366,7 +367,7 @@ namespace Bian {
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(BuffId);
       }
-      if (EffectType != global::Bian.BuffEffectType.BuffEffectUnknown) {
+      if (EffectType != global::MelandGame3.BuffEffectType.BuffEffectUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EffectType);
       }
       if (GroupId != 0) {
@@ -397,7 +398,7 @@ namespace Bian {
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
       }
-      if (other.EffectType != global::Bian.BuffEffectType.BuffEffectUnknown) {
+      if (other.EffectType != global::MelandGame3.BuffEffectType.BuffEffectUnknown) {
         EffectType = other.EffectType;
       }
       if (other.GroupId != 0) {
@@ -433,7 +434,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            EffectType = (global::Bian.BuffEffectType) input.ReadEnum();
+            EffectType = (global::MelandGame3.BuffEffectType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -477,7 +478,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            EffectType = (global::Bian.BuffEffectType) input.ReadEnum();
+            EffectType = (global::MelandGame3.BuffEffectType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -522,7 +523,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.BuffReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.BuffReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

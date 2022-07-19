@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// 主角移动脚本 接受输入控制 以主相机为输入参照
 /// </summary>
-public class MainPlayerMoveInput : MonoBehaviour
+public class MainPlayerMoveInput : MonoBehaviour, IReqMoveInfo
 {
     public Rigidbody RefRigid;
     public Vector3 PushDownForce = Vector3.down * 20f;//下压力 防止弹起
@@ -11,11 +11,20 @@ public class MainPlayerMoveInput : MonoBehaviour
     /// 移动速度 u/s
     /// </summary>
     public float MoveSpeed = 5;
+    private bool _isMoving;
+
+    public float FinallyMoveSpeed => _isMoving ? MoveSpeed : 0;
+    public Vector3 FinallyMoveDir => transform.forward;
+    public MelandGame3.MovementType RoleSyncMovementType => _isMoving ? MelandGame3.MovementType.MovementTypeRun : MelandGame3.MovementType.MovementTypeIdle;
+
+    [SerializeField] private Vector3 _roleCenterPoint = new(0, 0.5f, 0);
+    public Vector3 RoleCenterPoint => _roleCenterPoint;
 
     private void FixedUpdate()
     {
         if (!Camera.main)
         {
+            ChangeMoveStatus(false);
             return;
         }
 
@@ -48,6 +57,7 @@ public class MainPlayerMoveInput : MonoBehaviour
 
         if (moveDir == Vector3.zero)
         {
+            ChangeMoveStatus(false);
             return;
         }
 
@@ -55,5 +65,24 @@ public class MainPlayerMoveInput : MonoBehaviour
         moveDir *= MoveSpeed * Time.fixedDeltaTime;
         RefRigid.MovePosition(transform.position + moveDir);
         transform.forward = moveDir;
+        ChangeMoveStatus(true);
+    }
+
+    private void ChangeMoveStatus(bool moving)
+    {
+        if (_isMoving == moving)
+        {
+            return;
+        }
+
+        _isMoving = moving;
+
+        //TODO:临时的切动画
+        SceneEntity mainPlayer = SceneModule.EntityMgr.GetSceneEntity(DataManager.MainPlayer.RoleID);
+        if (mainPlayer.Surface)
+        {
+            string animName = _isMoving ? EntityDefine.ANIM_NAME_RUN : EntityDefine.ANIM_NAME_IDLE;
+            mainPlayer.Surface.GetComponent<IAnimationCpt>().PlayAnim(animName, true);
+        }
     }
 }

@@ -18,7 +18,7 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
         return action;
     }
 
-    protected abstract Bian.EnvelopeType GetEnvelopeType();
+    protected abstract MelandGame3.EnvelopeType GetEnvelopeType();
 
     /// <summary>
     /// 接收到消息
@@ -43,7 +43,7 @@ public abstract class GameChannelNetMsgTActionBase<TRsp> : INetMsgAction
         BasicModule.NetMsgCenter.OnReceiveMsg(this);
 
         // 获取响应数据
-        Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
+        MelandGame3.Envelope envelope = (packet as GameChannelPacket).TransferData;
         string propertyName = envelope.PayloadCase.ToString();
         try
         {

@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from item.proto</summary>
   public static partial class ItemReflection {
@@ -24,88 +24,90 @@ namespace Bian {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgppdGVtLnByb3RvEgRCaWFuGg9iaWdfd29ybGQucHJvdG8iZQoRTkZUQ29u",
-            "c3VtYWJsZUluZm8SDwoHcXVhbGl0eRgBIAEoCRIwCg9jb25zdW1hYmxlX3R5",
-            "cGUYAiABKA4yFy5CaWFuLk5GVENvbnN1bWFibGVUeXBlEg0KBXZhbHVlGAMg",
-            "ASgFIjEKCE5mdFNraWxsEhAKCHNraWxsX2lkGAEgASgFEhMKC3NraWxsX2xl",
-            "dmVsGAIgASgFIqsBChBOZnRQbGFjZWFibGVJbmZvEg0KBXRva2VuGAEgASgJ",
-            "EhIKCm9iamVjdF9jaWQYAiABKAUSKQoQcGxhY2VhYmxlX3Jhcml0eRgDIAEo",
-            "DjIPLkJpYW4uTkZUUmFyaXR5EikKCHRhcl9sYW5kGAQgAygOMhcuQmlhbi5C",
-            "aWdXb3JsZExhbmRTdGF0ZRIeCgZza2lsbHMYBSADKAsyDi5CaWFuLk5mdFNr",
-            "aWxsInkKD05mdFRoaXJkTmZ0SW5mbxIMCgRuYW1lGAEgASgJEg8KB3Jlc191",
-            "cmwYAiABKAkSDAoEZGVzYxgDIAEoCRIUCgx0aW1lX291dF9zZWMYBCABKAUS",
-            "EQoJdG9rZW5fdXJsGAUgASgJEhAKCHRva2VuX2lkGAYgASgJIl4KD05mdFdl",
-            "YXJhYmxlSW5mbxINCgV0b2tlbhgBIAEoCRISCgpvYmplY3RfY2lkGAIgASgF",
-            "EigKD3dlYXJhYmxlX3Jhcml0eRgDIAEoDjIPLkJpYW4uTkZUUmFyaXR5IkAK",
-            "DEJhY2twYWNrU2l6ZRIgCgZiYWdfaWQYASABKA4yEC5CaWFuLkJhY2twYWNr",
-            "SWQSDgoGbGVuZ3RoGAIgASgFIlgKD0F2YXRhckF0dHJpYnV0ZRIOCgZyYXJp",
-            "dHkYASABKAkSEgoKZHVyYWJpbGl0eRgCIAEoBRIhCgRkYXRhGAMgAygLMhMu",
-            "Qmlhbi5BdHRyaWJ1dGVEYXRhIkEKDUF0dHJpYnV0ZURhdGESIQoEdHlwZRgB",
-            "IAEoDjITLkJpYW4uQXR0cmlidXRlVHlwZRINCgV2YWx1ZRgCIAEoBSKwAgoE",
-            "SXRlbRIhCglpdGVtX3R5cGUYASABKA4yDi5CaWFuLkl0ZW1UeXBlEgoKAmlk",
-            "GAIgASgJEhIKCm9iamVjdF9jaWQYAyABKAUSCwoDbnVtGAQgASgFEg4KBnBs",
-            "YXllchgFIAEoCRIiCghiYWNrcGFjaxgGIAEoDjIQLkJpYW4uQmFja3BhY2tJ",
-            "ZBIoCglhdHRyaWJ1dGUYCCABKAsyFS5CaWFuLkF2YXRhckF0dHJpYnV0ZRIo",
-            "CgphdmF0YXJfcG9zGAkgASgOMhQuQmlhbi5BdmF0YXJQb3NpdGlvbhIRCglu",
-            "ZnRfdXNpbmcYCiABKAgSFQoNbmZ0X2pzb25fZGF0YRgLIAEoCRIYChBuZnRf",
-            "dGltZV9vdXRfc2VjGAwgASgFEgwKBHRlc3QYDSABKAUq1AEKB05GVFR5cGUS",
-            "GgoWTkZUVHlwZV9ORlRUeXBlVW5rbm93bhAAEh0KGU5GVFR5cGVfTkZUVHlw",
-            "ZUNvbnN1bWFibGUQARIcChhORlRUeXBlX05GVFR5cGVFcXVpcG1lbnQQAhIb",
-            "ChdORlRUeXBlX05GVFR5cGVNYXRlcmlhbBADEhwKGE5GVFR5cGVfTkZUVHlw",
-            "ZVBsYWNlYWJsZRAEEhgKFE5GVFR5cGVfTkZUVHlwZVRoaXJkEAUSGwoXTkZU",
-            "VHlwZV9ORlRUeXBlV2VhcmFibGUQBirCAQoJTkZUUmFyaXR5Eh4KGk5GVFJh",
-            "cml0eV9ORlRSYXJpdHlVbmtub3duEAASHQoZTkZUUmFyaXR5X05GVFJhcml0",
-            "eUNvbW1vbhABEhsKF05GVFJhcml0eV9ORlRSYXJpdHlSYXJlEAISGwoXTkZU",
-            "UmFyaXR5X05GVFJhcml0eUVwaWMQAxIdChlORlRSYXJpdHlfTkZUUmFyaXR5",
-            "TXl0aGljEAQSHQoZTkZUUmFyaXR5X05GVFJhcml0eVVuaXF1ZRAFKqkBChFO",
-            "RlRDb25zdW1hYmxlVHlwZRIwCixORlRDb25zdW1hYmxlVHlwZV9ORlRDb25z",
-            "dW1hYmxlVHlwZVJlc3RvcmVIUBAAEjIKLk5GVENvbnN1bWFibGVUeXBlX05G",
-            "VENvbnN1bWFibGVUeXBlTGVhcm5SZWNpcGUQARIuCipORlRDb25zdW1hYmxl",
-            "VHlwZV9ORlRDb25zdW1hYmxlVHlwZUFkZEJ1ZmYQAiqjAgoKQmFja3BhY2tJ",
-            "ZBIgChxCYWNrcGFja0lkX0JhY2twYWNrSWRHYXJiYWdlEAASHgoaQmFja3Bh",
-            "Y2tJZF9CYWNrcGFja0lkQmFzaWMQARIfChtCYWNrcGFja0lkX0JhY2twYWNr",
-            "SWRBdmF0YXIQAhIhCh1CYWNrcGFja0lkX0JhY2twYWNrSWRTaG9ydGN1dBAD",
-            "EiEKHUJhY2twYWNrSWRfQmFja3BhY2tJZEJvdEJhc2ljEAQSIgoeQmFja3Bh",
-            "Y2tJZF9CYWNrcGFja0lkQm90QXZhdGFyEAUSIgoeQmFja3BhY2tJZF9CYWNr",
-            "cGFja0lkV29ya2JlbmNoEAYSJAofQmFja3BhY2tJZF9CYWNrcGFja0lkRmFs",
-            "bGluZ0JveBDpByr7AQoKVGFrZVJlYXNvbhIeChpUYWtlUmVhc29uX1Rha2VS",
-            "ZWFzb25PblVzZRAAEh0KGVRha2VSZWFzb25fVGFrZVJlYXNvbkRyb3AQARIe",
-            "ChpUYWtlUmVhc29uX1Rha2VSZWFzb25CdXJzdBACEiEKHVRha2VSZWFzb25f",
-            "VGFrZVJlYXNvblRhc2tUYWtlEAMSJAogVGFrZVJlYXNvbl9UYWtlUmVhc29u",
-            "TWFub3JDcmVhdGUQBBIiCh5UYWtlUmVhc29uX1Rha2VSZWFzb25NYW5vck1v",
-            "dmUQBRIhCh1UYWtlUmVhc29uX1Rha2VSZWFzb25NYW5vckJ1eRAGKj8KCEl0",
-            "ZW1UeXBlEhkKFUl0ZW1UeXBlX0l0ZW1UeXBlR2FtZRAAEhgKFEl0ZW1UeXBl",
-            "X0l0ZW1UeXBlTkZUEAEq6wMKDUF0dHJpYnV0ZVR5cGUSJgoiQXR0cmlidXRl",
-            "VHlwZV9BdHRyaWJ1dGVUeXBlVW5rbm93bhAAEiYKIkF0dHJpYnV0ZVR5cGVf",
-            "QXR0cmlidXRlVHlwZUhwTGltaXQQARIpCiVBdHRyaWJ1dGVUeXBlX0F0dHJp",
-            "YnV0ZVR5cGVIcFJlY292ZXJ5EAISIgoeQXR0cmlidXRlVHlwZV9BdHRyaWJ1",
-            "dGVUeXBlQXR0EAMSJwojQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBlQXR0",
-            "U3BlZWQQBBIiCh5BdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVEZWYQBRIj",
-            "Ch9BdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVDcml0EAYSJgoiQXR0cmli",
-            "dXRlVHlwZV9BdHRyaWJ1dGVUeXBlQ3JpdERtZxAHEiYKIkF0dHJpYnV0ZVR5",
-            "cGVfQXR0cmlidXRlVHlwZUhpdFJhdGUQCBInCiNBdHRyaWJ1dGVUeXBlX0F0",
-            "dHJpYnV0ZVR5cGVNaXNzUmF0ZRAJEigKJEF0dHJpYnV0ZVR5cGVfQXR0cmli",
-            "dXRlVHlwZU1vdmVTcGVlZBAKEiYKIkF0dHJpYnV0ZVR5cGVfQXR0cmlidXRl",
-            "VHlwZVNraWxsSWQQYyrPAgoOQXZhdGFyUG9zaXRpb24SJQohQXZhdGFyUG9z",
-            "aXRpb25fQXZhdGFyUG9zaXRpb25Ob25lEAASJQohQXZhdGFyUG9zaXRpb25f",
-            "QXZhdGFyUG9zaXRpb25IZWFkEAESJQohQXZhdGFyUG9zaXRpb25fQXZhdGFy",
-            "UG9zaXRpb25Db2F0EAISJQohQXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRp",
-            "b25QYW50EAMSJQohQXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRpb25TaG9l",
-            "EAQSJQohQXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRpb25IYW5kEAUSKgom",
-            "QXZhdGFyUG9zaXRpb25fQXZhdGFyUG9zaXRpb25BY2Nlc3NvcnkQBhInCiNB",
-            "dmF0YXJQb3NpdGlvbl9BdmF0YXJQb3NpdGlvbldlYXBvbhAHYgZwcm90bzM="));
+            "CgppdGVtLnByb3RvEgtNZWxhbmRHYW1lMxoPYmlnX3dvcmxkLnByb3RvImwK",
+            "EU5GVENvbnN1bWFibGVJbmZvEg8KB3F1YWxpdHkYASABKAkSNwoPY29uc3Vt",
+            "YWJsZV90eXBlGAIgASgOMh4uTWVsYW5kR2FtZTMuTkZUQ29uc3VtYWJsZVR5",
+            "cGUSDQoFdmFsdWUYAyABKAUiMQoITmZ0U2tpbGwSEAoIc2tpbGxfaWQYASAB",
+            "KAUSEwoLc2tpbGxfbGV2ZWwYAiABKAUiwAEKEE5mdFBsYWNlYWJsZUluZm8S",
+            "DQoFdG9rZW4YASABKAkSEgoKb2JqZWN0X2NpZBgCIAEoBRIwChBwbGFjZWFi",
+            "bGVfcmFyaXR5GAMgASgOMhYuTWVsYW5kR2FtZTMuTkZUUmFyaXR5EjAKCHRh",
+            "cl9sYW5kGAQgAygOMh4uTWVsYW5kR2FtZTMuQmlnV29ybGRMYW5kU3RhdGUS",
+            "JQoGc2tpbGxzGAUgAygLMhUuTWVsYW5kR2FtZTMuTmZ0U2tpbGwieQoPTmZ0",
+            "VGhpcmROZnRJbmZvEgwKBG5hbWUYASABKAkSDwoHcmVzX3VybBgCIAEoCRIM",
+            "CgRkZXNjGAMgASgJEhQKDHRpbWVfb3V0X3NlYxgEIAEoBRIRCgl0b2tlbl91",
+            "cmwYBSABKAkSEAoIdG9rZW5faWQYBiABKAkiZQoPTmZ0V2VhcmFibGVJbmZv",
+            "Eg0KBXRva2VuGAEgASgJEhIKCm9iamVjdF9jaWQYAiABKAUSLwoPd2VhcmFi",
+            "bGVfcmFyaXR5GAMgASgOMhYuTWVsYW5kR2FtZTMuTkZUUmFyaXR5IkcKDEJh",
+            "Y2twYWNrU2l6ZRInCgZiYWdfaWQYASABKA4yFy5NZWxhbmRHYW1lMy5CYWNr",
+            "cGFja0lkEg4KBmxlbmd0aBgCIAEoBSJfCg9BdmF0YXJBdHRyaWJ1dGUSDgoG",
+            "cmFyaXR5GAEgASgJEhIKCmR1cmFiaWxpdHkYAiABKAUSKAoEZGF0YRgDIAMo",
+            "CzIaLk1lbGFuZEdhbWUzLkF0dHJpYnV0ZURhdGEiSAoNQXR0cmlidXRlRGF0",
+            "YRIoCgR0eXBlGAEgASgOMhouTWVsYW5kR2FtZTMuQXR0cmlidXRlVHlwZRIN",
+            "CgV2YWx1ZRgCIAEoBSK+AgoESXRlbRIoCglpdGVtX3R5cGUYASABKA4yFS5N",
+            "ZWxhbmRHYW1lMy5JdGVtVHlwZRIKCgJpZBgCIAEoCRISCgpvYmplY3RfY2lk",
+            "GAMgASgFEgsKA251bRgEIAEoBRIOCgZwbGF5ZXIYBSABKAkSKQoIYmFja3Bh",
+            "Y2sYBiABKA4yFy5NZWxhbmRHYW1lMy5CYWNrcGFja0lkEi8KCWF0dHJpYnV0",
+            "ZRgIIAEoCzIcLk1lbGFuZEdhbWUzLkF2YXRhckF0dHJpYnV0ZRIvCgphdmF0",
+            "YXJfcG9zGAkgASgOMhsuTWVsYW5kR2FtZTMuQXZhdGFyUG9zaXRpb24SEQoJ",
+            "bmZ0X3VzaW5nGAogASgIEhUKDW5mdF9qc29uX2RhdGEYCyABKAkSGAoQbmZ0",
+            "X3RpbWVfb3V0X3NlYxgMIAEoBSrUAQoHTkZUVHlwZRIaChZORlRUeXBlX05G",
+            "VFR5cGVVbmtub3duEAASHQoZTkZUVHlwZV9ORlRUeXBlQ29uc3VtYWJsZRAB",
+            "EhwKGE5GVFR5cGVfTkZUVHlwZUVxdWlwbWVudBACEhsKF05GVFR5cGVfTkZU",
+            "VHlwZU1hdGVyaWFsEAMSHAoYTkZUVHlwZV9ORlRUeXBlUGxhY2VhYmxlEAQS",
+            "GAoUTkZUVHlwZV9ORlRUeXBlVGhpcmQQBRIbChdORlRUeXBlX05GVFR5cGVX",
+            "ZWFyYWJsZRAGKsIBCglORlRSYXJpdHkSHgoaTkZUUmFyaXR5X05GVFJhcml0",
+            "eVVua25vd24QABIdChlORlRSYXJpdHlfTkZUUmFyaXR5Q29tbW9uEAESGwoX",
+            "TkZUUmFyaXR5X05GVFJhcml0eVJhcmUQAhIbChdORlRSYXJpdHlfTkZUUmFy",
+            "aXR5RXBpYxADEh0KGU5GVFJhcml0eV9ORlRSYXJpdHlNeXRoaWMQBBIdChlO",
+            "RlRSYXJpdHlfTkZUUmFyaXR5VW5pcXVlEAUqqQEKEU5GVENvbnN1bWFibGVU",
+            "eXBlEjAKLE5GVENvbnN1bWFibGVUeXBlX05GVENvbnN1bWFibGVUeXBlUmVz",
+            "dG9yZUhQEAASMgouTkZUQ29uc3VtYWJsZVR5cGVfTkZUQ29uc3VtYWJsZVR5",
+            "cGVMZWFyblJlY2lwZRABEi4KKk5GVENvbnN1bWFibGVUeXBlX05GVENvbnN1",
+            "bWFibGVUeXBlQWRkQnVmZhACKqMCCgpCYWNrcGFja0lkEiAKHEJhY2twYWNr",
+            "SWRfQmFja3BhY2tJZEdhcmJhZ2UQABIeChpCYWNrcGFja0lkX0JhY2twYWNr",
+            "SWRCYXNpYxABEh8KG0JhY2twYWNrSWRfQmFja3BhY2tJZEF2YXRhchACEiEK",
+            "HUJhY2twYWNrSWRfQmFja3BhY2tJZFNob3J0Y3V0EAMSIQodQmFja3BhY2tJ",
+            "ZF9CYWNrcGFja0lkQm90QmFzaWMQBBIiCh5CYWNrcGFja0lkX0JhY2twYWNr",
+            "SWRCb3RBdmF0YXIQBRIiCh5CYWNrcGFja0lkX0JhY2twYWNrSWRXb3JrYmVu",
+            "Y2gQBhIkCh9CYWNrcGFja0lkX0JhY2twYWNrSWRGYWxsaW5nQm94EOkHKvsB",
+            "CgpUYWtlUmVhc29uEh4KGlRha2VSZWFzb25fVGFrZVJlYXNvbk9uVXNlEAAS",
+            "HQoZVGFrZVJlYXNvbl9UYWtlUmVhc29uRHJvcBABEh4KGlRha2VSZWFzb25f",
+            "VGFrZVJlYXNvbkJ1cnN0EAISIQodVGFrZVJlYXNvbl9UYWtlUmVhc29uVGFz",
+            "a1Rha2UQAxIkCiBUYWtlUmVhc29uX1Rha2VSZWFzb25NYW5vckNyZWF0ZRAE",
+            "EiIKHlRha2VSZWFzb25fVGFrZVJlYXNvbk1hbm9yTW92ZRAFEiEKHVRha2VS",
+            "ZWFzb25fVGFrZVJlYXNvbk1hbm9yQnV5EAYqPwoISXRlbVR5cGUSGQoVSXRl",
+            "bVR5cGVfSXRlbVR5cGVHYW1lEAASGAoUSXRlbVR5cGVfSXRlbVR5cGVORlQQ",
+            "ASrrAwoNQXR0cmlidXRlVHlwZRImCiJBdHRyaWJ1dGVUeXBlX0F0dHJpYnV0",
+            "ZVR5cGVVbmtub3duEAASJgoiQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBl",
+            "SHBMaW1pdBABEikKJUF0dHJpYnV0ZVR5cGVfQXR0cmlidXRlVHlwZUhwUmVj",
+            "b3ZlcnkQAhIiCh5BdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVBdHQQAxIn",
+            "CiNBdHRyaWJ1dGVUeXBlX0F0dHJpYnV0ZVR5cGVBdHRTcGVlZBAEEiIKHkF0",
+            "dHJpYnV0ZVR5cGVfQXR0cmlidXRlVHlwZURlZhAFEiMKH0F0dHJpYnV0ZVR5",
+            "cGVfQXR0cmlidXRlVHlwZUNyaXQQBhImCiJBdHRyaWJ1dGVUeXBlX0F0dHJp",
+            "YnV0ZVR5cGVDcml0RG1nEAcSJgoiQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVU",
+            "eXBlSGl0UmF0ZRAIEicKI0F0dHJpYnV0ZVR5cGVfQXR0cmlidXRlVHlwZU1p",
+            "c3NSYXRlEAkSKAokQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBlTW92ZVNw",
+            "ZWVkEAoSJgoiQXR0cmlidXRlVHlwZV9BdHRyaWJ1dGVUeXBlU2tpbGxJZBBj",
+            "Ks8CCg5BdmF0YXJQb3NpdGlvbhIlCiFBdmF0YXJQb3NpdGlvbl9BdmF0YXJQ",
+            "b3NpdGlvbk5vbmUQABIlCiFBdmF0YXJQb3NpdGlvbl9BdmF0YXJQb3NpdGlv",
+            "bkhlYWQQARIlCiFBdmF0YXJQb3NpdGlvbl9BdmF0YXJQb3NpdGlvbkNvYXQQ",
+            "AhIlCiFBdmF0YXJQb3NpdGlvbl9BdmF0YXJQb3NpdGlvblBhbnQQAxIlCiFB",
+            "dmF0YXJQb3NpdGlvbl9BdmF0YXJQb3NpdGlvblNob2UQBBIlCiFBdmF0YXJQ",
+            "b3NpdGlvbl9BdmF0YXJQb3NpdGlvbkhhbmQQBRIqCiZBdmF0YXJQb3NpdGlv",
+            "bl9BdmF0YXJQb3NpdGlvbkFjY2Vzc29yeRAGEicKI0F2YXRhclBvc2l0aW9u",
+            "X0F2YXRhclBvc2l0aW9uV2VhcG9uEAdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Bian.BigWorldReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.NFTType), typeof(global::Bian.NFTRarity), typeof(global::Bian.NFTConsumableType), typeof(global::Bian.BackpackId), typeof(global::Bian.TakeReason), typeof(global::Bian.ItemType), typeof(global::Bian.AttributeType), typeof(global::Bian.AvatarPosition), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NFTConsumableInfo), global::Bian.NFTConsumableInfo.Parser, new[]{ "Quality", "ConsumableType", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NftSkill), global::Bian.NftSkill.Parser, new[]{ "SkillId", "SkillLevel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NftPlaceableInfo), global::Bian.NftPlaceableInfo.Parser, new[]{ "Token", "ObjectCid", "PlaceableRarity", "TarLand", "Skills" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NftThirdNftInfo), global::Bian.NftThirdNftInfo.Parser, new[]{ "Name", "ResUrl", "Desc", "TimeOutSec", "TokenUrl", "TokenId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.NftWearableInfo), global::Bian.NftWearableInfo.Parser, new[]{ "Token", "ObjectCid", "WearableRarity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BackpackSize), global::Bian.BackpackSize.Parser, new[]{ "BagId", "Length" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AvatarAttribute), global::Bian.AvatarAttribute.Parser, new[]{ "Rarity", "Durability", "Data" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.AttributeData), global::Bian.AttributeData.Parser, new[]{ "Type", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Item), global::Bian.Item.Parser, new[]{ "ItemType", "Id", "ObjectCid", "Num", "Player", "Backpack", "Attribute", "AvatarPos", "NftUsing", "NftJsonData", "NftTimeOutSec", "Test" }, null, null, null, null)
+          new pbr::FileDescriptor[] { global::MelandGame3.BigWorldReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.NFTType), typeof(global::MelandGame3.NFTRarity), typeof(global::MelandGame3.NFTConsumableType), typeof(global::MelandGame3.BackpackId), typeof(global::MelandGame3.TakeReason), typeof(global::MelandGame3.ItemType), typeof(global::MelandGame3.AttributeType), typeof(global::MelandGame3.AvatarPosition), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NFTConsumableInfo), global::MelandGame3.NFTConsumableInfo.Parser, new[]{ "Quality", "ConsumableType", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NftSkill), global::MelandGame3.NftSkill.Parser, new[]{ "SkillId", "SkillLevel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NftPlaceableInfo), global::MelandGame3.NftPlaceableInfo.Parser, new[]{ "Token", "ObjectCid", "PlaceableRarity", "TarLand", "Skills" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NftThirdNftInfo), global::MelandGame3.NftThirdNftInfo.Parser, new[]{ "Name", "ResUrl", "Desc", "TimeOutSec", "TokenUrl", "TokenId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.NftWearableInfo), global::MelandGame3.NftWearableInfo.Parser, new[]{ "Token", "ObjectCid", "WearableRarity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BackpackSize), global::MelandGame3.BackpackSize.Parser, new[]{ "BagId", "Length" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AvatarAttribute), global::MelandGame3.AvatarAttribute.Parser, new[]{ "Rarity", "Durability", "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.AttributeData), global::MelandGame3.AttributeData.Parser, new[]{ "Type", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Item), global::MelandGame3.Item.Parser, new[]{ "ItemType", "Id", "ObjectCid", "Num", "Player", "Backpack", "Attribute", "AvatarPos", "NftUsing", "NftJsonData", "NftTimeOutSec" }, null, null, null, null)
           }));
     }
     #endregion
@@ -352,7 +354,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -398,10 +400,10 @@ namespace Bian {
 
     /// <summary>Field number for the "consumable_type" field.</summary>
     public const int ConsumableTypeFieldNumber = 2;
-    private global::Bian.NFTConsumableType consumableType_ = global::Bian.NFTConsumableType.NftconsumableTypeRestoreHp;
+    private global::MelandGame3.NFTConsumableType consumableType_ = global::MelandGame3.NFTConsumableType.NftconsumableTypeRestoreHp;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.NFTConsumableType ConsumableType {
+    public global::MelandGame3.NFTConsumableType ConsumableType {
       get { return consumableType_; }
       set {
         consumableType_ = value;
@@ -446,7 +448,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Quality.Length != 0) hash ^= Quality.GetHashCode();
-      if (ConsumableType != global::Bian.NFTConsumableType.NftconsumableTypeRestoreHp) hash ^= ConsumableType.GetHashCode();
+      if (ConsumableType != global::MelandGame3.NFTConsumableType.NftconsumableTypeRestoreHp) hash ^= ConsumableType.GetHashCode();
       if (Value != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -470,7 +472,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Quality);
       }
-      if (ConsumableType != global::Bian.NFTConsumableType.NftconsumableTypeRestoreHp) {
+      if (ConsumableType != global::MelandGame3.NFTConsumableType.NftconsumableTypeRestoreHp) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConsumableType);
       }
@@ -492,7 +494,7 @@ namespace Bian {
         output.WriteRawTag(10);
         output.WriteString(Quality);
       }
-      if (ConsumableType != global::Bian.NFTConsumableType.NftconsumableTypeRestoreHp) {
+      if (ConsumableType != global::MelandGame3.NFTConsumableType.NftconsumableTypeRestoreHp) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConsumableType);
       }
@@ -513,7 +515,7 @@ namespace Bian {
       if (Quality.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Quality);
       }
-      if (ConsumableType != global::Bian.NFTConsumableType.NftconsumableTypeRestoreHp) {
+      if (ConsumableType != global::MelandGame3.NFTConsumableType.NftconsumableTypeRestoreHp) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConsumableType);
       }
       if (Value != 0) {
@@ -534,7 +536,7 @@ namespace Bian {
       if (other.Quality.Length != 0) {
         Quality = other.Quality;
       }
-      if (other.ConsumableType != global::Bian.NFTConsumableType.NftconsumableTypeRestoreHp) {
+      if (other.ConsumableType != global::MelandGame3.NFTConsumableType.NftconsumableTypeRestoreHp) {
         ConsumableType = other.ConsumableType;
       }
       if (other.Value != 0) {
@@ -560,7 +562,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            ConsumableType = (global::Bian.NFTConsumableType) input.ReadEnum();
+            ConsumableType = (global::MelandGame3.NFTConsumableType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -587,7 +589,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            ConsumableType = (global::Bian.NFTConsumableType) input.ReadEnum();
+            ConsumableType = (global::MelandGame3.NFTConsumableType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -615,7 +617,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -844,7 +846,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -907,13 +909,13 @@ namespace Bian {
 
     /// <summary>Field number for the "placeable_rarity" field.</summary>
     public const int PlaceableRarityFieldNumber = 3;
-    private global::Bian.NFTRarity placeableRarity_ = global::Bian.NFTRarity.NftrarityUnknown;
+    private global::MelandGame3.NFTRarity placeableRarity_ = global::MelandGame3.NFTRarity.NftrarityUnknown;
     /// <summary>
     /// nft 品质 第三方NFT 没有cid
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.NFTRarity PlaceableRarity {
+    public global::MelandGame3.NFTRarity PlaceableRarity {
       get { return placeableRarity_; }
       set {
         placeableRarity_ = value;
@@ -922,29 +924,29 @@ namespace Bian {
 
     /// <summary>Field number for the "tar_land" field.</summary>
     public const int TarLandFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Bian.BigWorldLandState> _repeated_tarLand_codec
-        = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::Bian.BigWorldLandState) x);
-    private readonly pbc::RepeatedField<global::Bian.BigWorldLandState> tarLand_ = new pbc::RepeatedField<global::Bian.BigWorldLandState>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BigWorldLandState> _repeated_tarLand_codec
+        = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::MelandGame3.BigWorldLandState) x);
+    private readonly pbc::RepeatedField<global::MelandGame3.BigWorldLandState> tarLand_ = new pbc::RepeatedField<global::MelandGame3.BigWorldLandState>();
     /// <summary>
     /// 可放置的地格类型列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BigWorldLandState> TarLand {
+    public pbc::RepeatedField<global::MelandGame3.BigWorldLandState> TarLand {
       get { return tarLand_; }
     }
 
     /// <summary>Field number for the "skills" field.</summary>
     public const int SkillsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Bian.NftSkill> _repeated_skills_codec
-        = pb::FieldCodec.ForMessage(42, global::Bian.NftSkill.Parser);
-    private readonly pbc::RepeatedField<global::Bian.NftSkill> skills_ = new pbc::RepeatedField<global::Bian.NftSkill>();
+    private static readonly pb::FieldCodec<global::MelandGame3.NftSkill> _repeated_skills_codec
+        = pb::FieldCodec.ForMessage(42, global::MelandGame3.NftSkill.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.NftSkill> skills_ = new pbc::RepeatedField<global::MelandGame3.NftSkill>();
     /// <summary>
     /// 道具关联技能
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.NftSkill> Skills {
+    public pbc::RepeatedField<global::MelandGame3.NftSkill> Skills {
       get { return skills_; }
     }
 
@@ -977,7 +979,7 @@ namespace Bian {
       int hash = 1;
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       if (ObjectCid != 0) hash ^= ObjectCid.GetHashCode();
-      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) hash ^= PlaceableRarity.GetHashCode();
+      if (PlaceableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) hash ^= PlaceableRarity.GetHashCode();
       hash ^= tarLand_.GetHashCode();
       hash ^= skills_.GetHashCode();
       if (_unknownFields != null) {
@@ -1006,7 +1008,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (PlaceableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) PlaceableRarity);
       }
@@ -1030,7 +1032,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (PlaceableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) PlaceableRarity);
       }
@@ -1052,7 +1054,7 @@ namespace Bian {
       if (ObjectCid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectCid);
       }
-      if (PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (PlaceableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlaceableRarity);
       }
       size += tarLand_.CalculateSize(_repeated_tarLand_codec);
@@ -1075,7 +1077,7 @@ namespace Bian {
       if (other.ObjectCid != 0) {
         ObjectCid = other.ObjectCid;
       }
-      if (other.PlaceableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (other.PlaceableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         PlaceableRarity = other.PlaceableRarity;
       }
       tarLand_.Add(other.tarLand_);
@@ -1104,7 +1106,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            PlaceableRarity = (global::Bian.NFTRarity) input.ReadEnum();
+            PlaceableRarity = (global::MelandGame3.NFTRarity) input.ReadEnum();
             break;
           }
           case 34:
@@ -1140,7 +1142,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            PlaceableRarity = (global::Bian.NFTRarity) input.ReadEnum();
+            PlaceableRarity = (global::MelandGame3.NFTRarity) input.ReadEnum();
             break;
           }
           case 34:
@@ -1176,7 +1178,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1568,7 +1570,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1626,10 +1628,10 @@ namespace Bian {
 
     /// <summary>Field number for the "wearable_rarity" field.</summary>
     public const int WearableRarityFieldNumber = 3;
-    private global::Bian.NFTRarity wearableRarity_ = global::Bian.NFTRarity.NftrarityUnknown;
+    private global::MelandGame3.NFTRarity wearableRarity_ = global::MelandGame3.NFTRarity.NftrarityUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.NFTRarity WearableRarity {
+    public global::MelandGame3.NFTRarity WearableRarity {
       get { return wearableRarity_; }
       set {
         wearableRarity_ = value;
@@ -1663,7 +1665,7 @@ namespace Bian {
       int hash = 1;
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       if (ObjectCid != 0) hash ^= ObjectCid.GetHashCode();
-      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) hash ^= WearableRarity.GetHashCode();
+      if (WearableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) hash ^= WearableRarity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1690,7 +1692,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (WearableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) WearableRarity);
       }
@@ -1712,7 +1714,7 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteInt32(ObjectCid);
       }
-      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (WearableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) WearableRarity);
       }
@@ -1732,7 +1734,7 @@ namespace Bian {
       if (ObjectCid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectCid);
       }
-      if (WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (WearableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WearableRarity);
       }
       if (_unknownFields != null) {
@@ -1753,7 +1755,7 @@ namespace Bian {
       if (other.ObjectCid != 0) {
         ObjectCid = other.ObjectCid;
       }
-      if (other.WearableRarity != global::Bian.NFTRarity.NftrarityUnknown) {
+      if (other.WearableRarity != global::MelandGame3.NFTRarity.NftrarityUnknown) {
         WearableRarity = other.WearableRarity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1780,7 +1782,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            WearableRarity = (global::Bian.NFTRarity) input.ReadEnum();
+            WearableRarity = (global::MelandGame3.NFTRarity) input.ReadEnum();
             break;
           }
         }
@@ -1807,7 +1809,7 @@ namespace Bian {
             break;
           }
           case 24: {
-            WearableRarity = (global::Bian.NFTRarity) input.ReadEnum();
+            WearableRarity = (global::MelandGame3.NFTRarity) input.ReadEnum();
             break;
           }
         }
@@ -1831,7 +1833,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1864,10 +1866,10 @@ namespace Bian {
 
     /// <summary>Field number for the "bag_id" field.</summary>
     public const int BagIdFieldNumber = 1;
-    private global::Bian.BackpackId bagId_ = global::Bian.BackpackId.BackpackIdGarbage;
+    private global::MelandGame3.BackpackId bagId_ = global::MelandGame3.BackpackId.BackpackIdGarbage;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BackpackId BagId {
+    public global::MelandGame3.BackpackId BagId {
       get { return bagId_; }
       set {
         bagId_ = value;
@@ -1910,7 +1912,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BagId != global::Bian.BackpackId.BackpackIdGarbage) hash ^= BagId.GetHashCode();
+      if (BagId != global::MelandGame3.BackpackId.BackpackIdGarbage) hash ^= BagId.GetHashCode();
       if (Length != 0) hash ^= Length.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1930,7 +1932,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BagId != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (BagId != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         output.WriteRawTag(8);
         output.WriteEnum((int) BagId);
       }
@@ -1948,7 +1950,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BagId != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (BagId != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         output.WriteRawTag(8);
         output.WriteEnum((int) BagId);
       }
@@ -1966,7 +1968,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BagId != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (BagId != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BagId);
       }
       if (Length != 0) {
@@ -1984,7 +1986,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.BagId != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (other.BagId != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         BagId = other.BagId;
       }
       if (other.Length != 0) {
@@ -2006,7 +2008,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            BagId = (global::Bian.BackpackId) input.ReadEnum();
+            BagId = (global::MelandGame3.BackpackId) input.ReadEnum();
             break;
           }
           case 16: {
@@ -2029,7 +2031,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            BagId = (global::Bian.BackpackId) input.ReadEnum();
+            BagId = (global::MelandGame3.BackpackId) input.ReadEnum();
             break;
           }
           case 16: {
@@ -2060,7 +2062,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2124,15 +2126,15 @@ namespace Bian {
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Bian.AttributeData> _repeated_data_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.AttributeData.Parser);
-    private readonly pbc::RepeatedField<global::Bian.AttributeData> data_ = new pbc::RepeatedField<global::Bian.AttributeData>();
+    private static readonly pb::FieldCodec<global::MelandGame3.AttributeData> _repeated_data_codec
+        = pb::FieldCodec.ForMessage(26, global::MelandGame3.AttributeData.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.AttributeData> data_ = new pbc::RepeatedField<global::MelandGame3.AttributeData>();
     /// <summary>
     /// 属性增量
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.AttributeData> Data {
+    public pbc::RepeatedField<global::MelandGame3.AttributeData> Data {
       get { return data_; }
     }
 
@@ -2324,7 +2326,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2357,13 +2359,13 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Bian.AttributeType type_ = global::Bian.AttributeType.AttributeTypeUnknown;
+    private global::MelandGame3.AttributeType type_ = global::MelandGame3.AttributeType.AttributeTypeUnknown;
     /// <summary>
     /// type
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AttributeType Type {
+    public global::MelandGame3.AttributeType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -2409,7 +2411,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::Bian.AttributeType.AttributeTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.AttributeType.AttributeTypeUnknown) hash ^= Type.GetHashCode();
       if (Value != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2429,7 +2431,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::Bian.AttributeType.AttributeTypeUnknown) {
+      if (Type != global::MelandGame3.AttributeType.AttributeTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -2447,7 +2449,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::Bian.AttributeType.AttributeTypeUnknown) {
+      if (Type != global::MelandGame3.AttributeType.AttributeTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -2465,7 +2467,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::Bian.AttributeType.AttributeTypeUnknown) {
+      if (Type != global::MelandGame3.AttributeType.AttributeTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Value != 0) {
@@ -2483,7 +2485,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Type != global::Bian.AttributeType.AttributeTypeUnknown) {
+      if (other.Type != global::MelandGame3.AttributeType.AttributeTypeUnknown) {
         Type = other.Type;
       }
       if (other.Value != 0) {
@@ -2505,7 +2507,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::Bian.AttributeType) input.ReadEnum();
+            Type = (global::MelandGame3.AttributeType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -2528,7 +2530,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::Bian.AttributeType) input.ReadEnum();
+            Type = (global::MelandGame3.AttributeType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -2559,7 +2561,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ItemReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MelandGame3.ItemReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2590,7 +2592,6 @@ namespace Bian {
       nftUsing_ = other.nftUsing_;
       nftJsonData_ = other.nftJsonData_;
       nftTimeOutSec_ = other.nftTimeOutSec_;
-      test_ = other.test_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2602,10 +2603,10 @@ namespace Bian {
 
     /// <summary>Field number for the "item_type" field.</summary>
     public const int ItemTypeFieldNumber = 1;
-    private global::Bian.ItemType itemType_ = global::Bian.ItemType.ItemTypeGame;
+    private global::MelandGame3.ItemType itemType_ = global::MelandGame3.ItemType.ItemTypeGame;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ItemType ItemType {
+    public global::MelandGame3.ItemType ItemType {
       get { return itemType_; }
       set {
         itemType_ = value;
@@ -2665,10 +2666,10 @@ namespace Bian {
 
     /// <summary>Field number for the "backpack" field.</summary>
     public const int BackpackFieldNumber = 6;
-    private global::Bian.BackpackId backpack_ = global::Bian.BackpackId.BackpackIdGarbage;
+    private global::MelandGame3.BackpackId backpack_ = global::MelandGame3.BackpackId.BackpackIdGarbage;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.BackpackId Backpack {
+    public global::MelandGame3.BackpackId Backpack {
       get { return backpack_; }
       set {
         backpack_ = value;
@@ -2677,13 +2678,13 @@ namespace Bian {
 
     /// <summary>Field number for the "attribute" field.</summary>
     public const int AttributeFieldNumber = 8;
-    private global::Bian.AvatarAttribute attribute_;
+    private global::MelandGame3.AvatarAttribute attribute_;
     /// <summary>
     /// 装备属性配置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AvatarAttribute Attribute {
+    public global::MelandGame3.AvatarAttribute Attribute {
       get { return attribute_; }
       set {
         attribute_ = value;
@@ -2692,10 +2693,10 @@ namespace Bian {
 
     /// <summary>Field number for the "avatar_pos" field.</summary>
     public const int AvatarPosFieldNumber = 9;
-    private global::Bian.AvatarPosition avatarPos_ = global::Bian.AvatarPosition.AvatarPositionNone;
+    private global::MelandGame3.AvatarPosition avatarPos_ = global::MelandGame3.AvatarPosition.AvatarPositionNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.AvatarPosition AvatarPos {
+    public global::MelandGame3.AvatarPosition AvatarPos {
       get { return avatarPos_; }
       set {
         avatarPos_ = value;
@@ -2747,18 +2748,6 @@ namespace Bian {
       }
     }
 
-    /// <summary>Field number for the "test" field.</summary>
-    public const int TestFieldNumber = 13;
-    private int test_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Test {
-      get { return test_; }
-      set {
-        test_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2785,7 +2774,6 @@ namespace Bian {
       if (NftUsing != other.NftUsing) return false;
       if (NftJsonData != other.NftJsonData) return false;
       if (NftTimeOutSec != other.NftTimeOutSec) return false;
-      if (Test != other.Test) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2793,18 +2781,17 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ItemType != global::Bian.ItemType.ItemTypeGame) hash ^= ItemType.GetHashCode();
+      if (ItemType != global::MelandGame3.ItemType.ItemTypeGame) hash ^= ItemType.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (ObjectCid != 0) hash ^= ObjectCid.GetHashCode();
       if (Num != 0) hash ^= Num.GetHashCode();
       if (Player.Length != 0) hash ^= Player.GetHashCode();
-      if (Backpack != global::Bian.BackpackId.BackpackIdGarbage) hash ^= Backpack.GetHashCode();
+      if (Backpack != global::MelandGame3.BackpackId.BackpackIdGarbage) hash ^= Backpack.GetHashCode();
       if (attribute_ != null) hash ^= Attribute.GetHashCode();
-      if (AvatarPos != global::Bian.AvatarPosition.AvatarPositionNone) hash ^= AvatarPos.GetHashCode();
+      if (AvatarPos != global::MelandGame3.AvatarPosition.AvatarPositionNone) hash ^= AvatarPos.GetHashCode();
       if (NftUsing != false) hash ^= NftUsing.GetHashCode();
       if (NftJsonData.Length != 0) hash ^= NftJsonData.GetHashCode();
       if (NftTimeOutSec != 0) hash ^= NftTimeOutSec.GetHashCode();
-      if (Test != 0) hash ^= Test.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2823,7 +2810,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ItemType != global::Bian.ItemType.ItemTypeGame) {
+      if (ItemType != global::MelandGame3.ItemType.ItemTypeGame) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ItemType);
       }
@@ -2843,7 +2830,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteString(Player);
       }
-      if (Backpack != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (Backpack != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Backpack);
       }
@@ -2851,7 +2838,7 @@ namespace Bian {
         output.WriteRawTag(66);
         output.WriteMessage(Attribute);
       }
-      if (AvatarPos != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (AvatarPos != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         output.WriteRawTag(72);
         output.WriteEnum((int) AvatarPos);
       }
@@ -2866,10 +2853,6 @@ namespace Bian {
       if (NftTimeOutSec != 0) {
         output.WriteRawTag(96);
         output.WriteInt32(NftTimeOutSec);
-      }
-      if (Test != 0) {
-        output.WriteRawTag(104);
-        output.WriteInt32(Test);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2881,7 +2864,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ItemType != global::Bian.ItemType.ItemTypeGame) {
+      if (ItemType != global::MelandGame3.ItemType.ItemTypeGame) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ItemType);
       }
@@ -2901,7 +2884,7 @@ namespace Bian {
         output.WriteRawTag(42);
         output.WriteString(Player);
       }
-      if (Backpack != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (Backpack != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Backpack);
       }
@@ -2909,7 +2892,7 @@ namespace Bian {
         output.WriteRawTag(66);
         output.WriteMessage(Attribute);
       }
-      if (AvatarPos != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (AvatarPos != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         output.WriteRawTag(72);
         output.WriteEnum((int) AvatarPos);
       }
@@ -2925,10 +2908,6 @@ namespace Bian {
         output.WriteRawTag(96);
         output.WriteInt32(NftTimeOutSec);
       }
-      if (Test != 0) {
-        output.WriteRawTag(104);
-        output.WriteInt32(Test);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2939,7 +2918,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ItemType != global::Bian.ItemType.ItemTypeGame) {
+      if (ItemType != global::MelandGame3.ItemType.ItemTypeGame) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ItemType);
       }
       if (Id.Length != 0) {
@@ -2954,13 +2933,13 @@ namespace Bian {
       if (Player.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Player);
       }
-      if (Backpack != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (Backpack != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Backpack);
       }
       if (attribute_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attribute);
       }
-      if (AvatarPos != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (AvatarPos != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AvatarPos);
       }
       if (NftUsing != false) {
@@ -2971,9 +2950,6 @@ namespace Bian {
       }
       if (NftTimeOutSec != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(NftTimeOutSec);
-      }
-      if (Test != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Test);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2987,7 +2963,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.ItemType != global::Bian.ItemType.ItemTypeGame) {
+      if (other.ItemType != global::MelandGame3.ItemType.ItemTypeGame) {
         ItemType = other.ItemType;
       }
       if (other.Id.Length != 0) {
@@ -3002,16 +2978,16 @@ namespace Bian {
       if (other.Player.Length != 0) {
         Player = other.Player;
       }
-      if (other.Backpack != global::Bian.BackpackId.BackpackIdGarbage) {
+      if (other.Backpack != global::MelandGame3.BackpackId.BackpackIdGarbage) {
         Backpack = other.Backpack;
       }
       if (other.attribute_ != null) {
         if (attribute_ == null) {
-          Attribute = new global::Bian.AvatarAttribute();
+          Attribute = new global::MelandGame3.AvatarAttribute();
         }
         Attribute.MergeFrom(other.Attribute);
       }
-      if (other.AvatarPos != global::Bian.AvatarPosition.AvatarPositionNone) {
+      if (other.AvatarPos != global::MelandGame3.AvatarPosition.AvatarPositionNone) {
         AvatarPos = other.AvatarPos;
       }
       if (other.NftUsing != false) {
@@ -3022,9 +2998,6 @@ namespace Bian {
       }
       if (other.NftTimeOutSec != 0) {
         NftTimeOutSec = other.NftTimeOutSec;
-      }
-      if (other.Test != 0) {
-        Test = other.Test;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3042,7 +3015,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ItemType = (global::Bian.ItemType) input.ReadEnum();
+            ItemType = (global::MelandGame3.ItemType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3062,18 +3035,18 @@ namespace Bian {
             break;
           }
           case 48: {
-            Backpack = (global::Bian.BackpackId) input.ReadEnum();
+            Backpack = (global::MelandGame3.BackpackId) input.ReadEnum();
             break;
           }
           case 66: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
           }
           case 72: {
-            AvatarPos = (global::Bian.AvatarPosition) input.ReadEnum();
+            AvatarPos = (global::MelandGame3.AvatarPosition) input.ReadEnum();
             break;
           }
           case 80: {
@@ -3086,10 +3059,6 @@ namespace Bian {
           }
           case 96: {
             NftTimeOutSec = input.ReadInt32();
-            break;
-          }
-          case 104: {
-            Test = input.ReadInt32();
             break;
           }
         }
@@ -3108,7 +3077,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ItemType = (global::Bian.ItemType) input.ReadEnum();
+            ItemType = (global::MelandGame3.ItemType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3128,18 +3097,18 @@ namespace Bian {
             break;
           }
           case 48: {
-            Backpack = (global::Bian.BackpackId) input.ReadEnum();
+            Backpack = (global::MelandGame3.BackpackId) input.ReadEnum();
             break;
           }
           case 66: {
             if (attribute_ == null) {
-              Attribute = new global::Bian.AvatarAttribute();
+              Attribute = new global::MelandGame3.AvatarAttribute();
             }
             input.ReadMessage(Attribute);
             break;
           }
           case 72: {
-            AvatarPos = (global::Bian.AvatarPosition) input.ReadEnum();
+            AvatarPos = (global::MelandGame3.AvatarPosition) input.ReadEnum();
             break;
           }
           case 80: {
@@ -3152,10 +3121,6 @@ namespace Bian {
           }
           case 96: {
             NftTimeOutSec = input.ReadInt32();
-            break;
-          }
-          case 104: {
-            Test = input.ReadInt32();
             break;
           }
         }

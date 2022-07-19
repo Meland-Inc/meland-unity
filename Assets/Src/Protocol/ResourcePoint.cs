@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from resource_point.proto</summary>
   public static partial class ResourcePointReflection {
@@ -24,23 +24,23 @@ namespace Bian {
     static ResourcePointReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRyZXNvdXJjZV9wb2ludC5wcm90bxIEQmlhbiInCgtSZXNvdXJjZU9iahIL",
-            "CgNjaWQYASABKAUSCwoDbnVtGAIgASgFIsoBChVSZXNvdXJjZVBvaW50U2V0",
-            "dGluZ3MSCgoCaWQYASABKAUSJQoEdHlwZRgCIAEoDjIXLkJpYW4uUmVzb3Vy",
-            "Y2VQb2ludFR5cGUSDgoGcmFkaXVzGAMgASgFEhcKD3VwZGF0ZV9pbnRlcnZh",
-            "bBgEIAEoBRIoCg1yZXNvdXJjZV9saXN0GAUgAygLMhEuQmlhbi5SZXNvdXJj",
-            "ZU9iahIVCg1wYXRyb2xfcmFkaXVzGAYgASgFEhQKDHBhdHJvbF9zcGVlZBgH",
-            "IAEoBSraAQoRUmVzb3VyY2VQb2ludFR5cGUSLgoqUmVzb3VyY2VQb2ludFR5",
-            "cGVfUmVzb3VyY2VQb2ludFR5cGVVbmtub3duEAASLgoqUmVzb3VyY2VQb2lu",
-            "dFR5cGVfUmVzb3VyY2VQb2ludFR5cGVNb25zdGVyEAESLworUmVzb3VyY2VQ",
-            "b2ludFR5cGVfUmVzb3VyY2VQb2ludFR5cGVNYXRlcmlhbBACEjQKMFJlc291",
-            "cmNlUG9pbnRUeXBlX1Jlc291cmNlUG9pbnRUeXBlRmFsbGluZ09iamVjdBAD",
-            "YgZwcm90bzM="));
+            "ChRyZXNvdXJjZV9wb2ludC5wcm90bxILTWVsYW5kR2FtZTMiJwoLUmVzb3Vy",
+            "Y2VPYmoSCwoDY2lkGAEgASgFEgsKA251bRgCIAEoBSLYAQoVUmVzb3VyY2VQ",
+            "b2ludFNldHRpbmdzEgoKAmlkGAEgASgFEiwKBHR5cGUYAiABKA4yHi5NZWxh",
+            "bmRHYW1lMy5SZXNvdXJjZVBvaW50VHlwZRIOCgZyYWRpdXMYAyABKAUSFwoP",
+            "dXBkYXRlX2ludGVydmFsGAQgASgFEi8KDXJlc291cmNlX2xpc3QYBSADKAsy",
+            "GC5NZWxhbmRHYW1lMy5SZXNvdXJjZU9iahIVCg1wYXRyb2xfcmFkaXVzGAYg",
+            "ASgFEhQKDHBhdHJvbF9zcGVlZBgHIAEoBSraAQoRUmVzb3VyY2VQb2ludFR5",
+            "cGUSLgoqUmVzb3VyY2VQb2ludFR5cGVfUmVzb3VyY2VQb2ludFR5cGVVbmtu",
+            "b3duEAASLgoqUmVzb3VyY2VQb2ludFR5cGVfUmVzb3VyY2VQb2ludFR5cGVN",
+            "b25zdGVyEAESLworUmVzb3VyY2VQb2ludFR5cGVfUmVzb3VyY2VQb2ludFR5",
+            "cGVNYXRlcmlhbBACEjQKMFJlc291cmNlUG9pbnRUeXBlX1Jlc291cmNlUG9p",
+            "bnRUeXBlRmFsbGluZ09iamVjdBADYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.ResourcePointType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourceObj), global::Bian.ResourceObj.Parser, new[]{ "Cid", "Num" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.ResourcePointSettings), global::Bian.ResourcePointSettings.Parser, new[]{ "Id", "Type", "Radius", "UpdateInterval", "ResourceList", "PatrolRadius", "PatrolSpeed" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.ResourcePointType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ResourceObj), global::MelandGame3.ResourceObj.Parser, new[]{ "Cid", "Num" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ResourcePointSettings), global::MelandGame3.ResourcePointSettings.Parser, new[]{ "Id", "Type", "Radius", "UpdateInterval", "ResourceList", "PatrolRadius", "PatrolSpeed" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,7 +83,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ResourcePointReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.ResourcePointReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -312,7 +312,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.ResourcePointReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.ResourcePointReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -362,10 +362,10 @@ namespace Bian {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Bian.ResourcePointType type_ = global::Bian.ResourcePointType.ResourcePointTypeUnknown;
+    private global::MelandGame3.ResourcePointType type_ = global::MelandGame3.ResourcePointType.ResourcePointTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.ResourcePointType Type {
+    public global::MelandGame3.ResourcePointType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -398,12 +398,12 @@ namespace Bian {
 
     /// <summary>Field number for the "resource_list" field.</summary>
     public const int ResourceListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Bian.ResourceObj> _repeated_resourceList_codec
-        = pb::FieldCodec.ForMessage(42, global::Bian.ResourceObj.Parser);
-    private readonly pbc::RepeatedField<global::Bian.ResourceObj> resourceList_ = new pbc::RepeatedField<global::Bian.ResourceObj>();
+    private static readonly pb::FieldCodec<global::MelandGame3.ResourceObj> _repeated_resourceList_codec
+        = pb::FieldCodec.ForMessage(42, global::MelandGame3.ResourceObj.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.ResourceObj> resourceList_ = new pbc::RepeatedField<global::MelandGame3.ResourceObj>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.ResourceObj> ResourceList {
+    public pbc::RepeatedField<global::MelandGame3.ResourceObj> ResourceList {
       get { return resourceList_; }
     }
 
@@ -461,7 +461,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) hash ^= Type.GetHashCode();
+      if (Type != global::MelandGame3.ResourcePointType.ResourcePointTypeUnknown) hash ^= Type.GetHashCode();
       if (Radius != 0) hash ^= Radius.GetHashCode();
       if (UpdateInterval != 0) hash ^= UpdateInterval.GetHashCode();
       hash ^= resourceList_.GetHashCode();
@@ -489,7 +489,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) {
+      if (Type != global::MelandGame3.ResourcePointType.ResourcePointTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -524,7 +524,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) {
+      if (Type != global::MelandGame3.ResourcePointType.ResourcePointTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -558,7 +558,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) {
+      if (Type != global::MelandGame3.ResourcePointType.ResourcePointTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Radius != 0) {
@@ -589,7 +589,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Type != global::Bian.ResourcePointType.ResourcePointTypeUnknown) {
+      if (other.Type != global::MelandGame3.ResourcePointType.ResourcePointTypeUnknown) {
         Type = other.Type;
       }
       if (other.Radius != 0) {
@@ -625,7 +625,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ResourcePointType) input.ReadEnum();
+            Type = (global::MelandGame3.ResourcePointType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -668,7 +668,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Type = (global::Bian.ResourcePointType) input.ReadEnum();
+            Type = (global::MelandGame3.ResourcePointType) input.ReadEnum();
             break;
           }
           case 24: {

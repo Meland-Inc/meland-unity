@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from audio.proto</summary>
   public static partial class AudioReflection {
@@ -24,18 +24,18 @@ namespace Bian {
     static AudioReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgthdWRpby5wcm90bxIEQmlhbiJsCgVBdWRpbxIKCgJpZBgBIAEoCRIMCgRu",
-            "YW1lGAIgASgJEg0KBWluZGV4GAMgASgFEgsKA3VybBgEIAEoCRIMCgR0aW1l",
-            "GAUgASgFEgwKBHR5cGUYBiABKAUSEQoJbWFzdGVyX2lkGAcgASgJIisKDEVu",
-            "dGl0eUF1ZGlvcxIbCgZhdWRpb3MYASADKAsyCy5CaWFuLkF1ZGlvIjQKDFBs",
-            "YXlpbmdBdWRpbxIQCghhdWRpb19pZBgBIAEoCRISCgphdWRpb19uYW1lGAIg",
-            "ASgJYgZwcm90bzM="));
+            "CgthdWRpby5wcm90bxILTWVsYW5kR2FtZTMibAoFQXVkaW8SCgoCaWQYASAB",
+            "KAkSDAoEbmFtZRgCIAEoCRINCgVpbmRleBgDIAEoBRILCgN1cmwYBCABKAkS",
+            "DAoEdGltZRgFIAEoBRIMCgR0eXBlGAYgASgFEhEKCW1hc3Rlcl9pZBgHIAEo",
+            "CSIyCgxFbnRpdHlBdWRpb3MSIgoGYXVkaW9zGAEgAygLMhIuTWVsYW5kR2Ft",
+            "ZTMuQXVkaW8iNAoMUGxheWluZ0F1ZGlvEhAKCGF1ZGlvX2lkGAEgASgJEhIK",
+            "CmF1ZGlvX25hbWUYAiABKAliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Audio), global::Bian.Audio.Parser, new[]{ "Id", "Name", "Index", "Url", "Time", "Type", "MasterId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.EntityAudios), global::Bian.EntityAudios.Parser, new[]{ "Audios" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayingAudio), global::Bian.PlayingAudio.Parser, new[]{ "AudioId", "AudioName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Audio), global::MelandGame3.Audio.Parser, new[]{ "Id", "Name", "Index", "Url", "Time", "Type", "MasterId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.EntityAudios), global::MelandGame3.EntityAudios.Parser, new[]{ "Audios" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayingAudio), global::MelandGame3.PlayingAudio.Parser, new[]{ "AudioId", "AudioName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -59,7 +59,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.AudioReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.AudioReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -473,7 +473,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.AudioReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.AudioReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -505,12 +505,12 @@ namespace Bian {
 
     /// <summary>Field number for the "audios" field.</summary>
     public const int AudiosFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.Audio> _repeated_audios_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.Audio.Parser);
-    private readonly pbc::RepeatedField<global::Bian.Audio> audios_ = new pbc::RepeatedField<global::Bian.Audio>();
+    private static readonly pb::FieldCodec<global::MelandGame3.Audio> _repeated_audios_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.Audio.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.Audio> audios_ = new pbc::RepeatedField<global::MelandGame3.Audio>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.Audio> Audios {
+    public pbc::RepeatedField<global::MelandGame3.Audio> Audios {
       get { return audios_; }
     }
 
@@ -654,7 +654,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.AudioReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.AudioReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

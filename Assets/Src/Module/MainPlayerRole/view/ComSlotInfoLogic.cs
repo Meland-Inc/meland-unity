@@ -8,7 +8,7 @@ using System;
  * @FilePath: /Assets/Src/Module/MainPlayerRole/view/ComSlotInfoLogic.cs
  */
 using FairyGUI;
-using Bian;
+using MelandGame3;
 public class ComSlotInfoLogic : FGUILogicCpt
 {
     private const int ATTR_ITEM_COUNT = 11;

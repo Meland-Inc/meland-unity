@@ -13,7 +13,7 @@ public class LoginCenter : GameFrameworkComponent
     public Action OnCreatePlayerSuccess;
     public Action<string> OnCreatePlayerFailed;
     public Action<string> OnRoleReady = delegate { };
-    public Action<Bian.SigninPlayerResponse> OnSignPlayer = delegate { };
+    public Action<MelandGame3.SigninPlayerResponse> OnSignPlayer = delegate { };
 
     public ILoginChannel LoginChannel { get; private set; }
 

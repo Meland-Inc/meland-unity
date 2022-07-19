@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from map_block.proto</summary>
   public static partial class MapBlockReflection {
@@ -24,42 +24,43 @@ namespace Bian {
     static MapBlockReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9tYXBfYmxvY2sucHJvdG8SBEJpYW4iRwoIQmxvY2tPYmoSDgoGb2JqX2lk",
-            "GAEgASgFEhAKCGFyZWFfaWR4GAIgASgFEgkKAXoYAyABKAUSDgoGemluZGV4",
-            "GAQgASgFImkKEkJsb2NrUmVzb3VyY2VQb2ludBIZChFyZXNvdXJjZV9wb2lu",
-            "dF9pZBgBIAEoBRITCgt0ZW1wbGF0ZV9pZBgCIAEoBRIOCgZtaXJyb3IYAyAB",
-            "KAgSEwoLY29ycmVjdF9wb3MYBCABKAgirQEKDUJsb2NrU2V0dGluZ3MSCQoB",
-            "chgBIAEoBRIJCgFjGAIgASgFEg4KBnppbmRleBgDIAEoBRIJCgF6GAQgASgF",
-            "EgwKBG1hcmsYBSABKA0SDAoEc2lnbhgGIAEoCRIcCgRvYmpzGAcgAygLMg4u",
-            "Qmlhbi5CbG9ja09iahIxCg9yZXNvdXJjZV9wb2ludHMYCCADKAsyGC5CaWFu",
-            "LkJsb2NrUmVzb3VyY2VQb2ludCIuCgxNYXBDaHVua0xpc3QSHgoGY2h1bmtz",
-            "GAEgAygLMg4uQmlhbi5NYXBDaHVuayKOAQoITWFwQ2h1bmsSCgoCaWQYASAB",
-            "KAkSDgoGbWFwX2lkGAIgASgFEhAKCG9yaWdpbl9yGAMgASgDEhAKCG9yaWdp",
-            "bl9jGAQgASgDEg0KBXdpZHRoGAUgASgFEg4KBmhlaWdodBgGIAEoBRIjCgZi",
-            "bG9ja3MYByADKAsyEy5CaWFuLkJsb2NrU2V0dGluZ3MiPQoHVGVycmFpbhIK",
-            "CgJpZBgBIAEoCRILCgNjaWQYAiABKAUSCQoBehgDIAEoBRIOCgZ6aW5kZXgY",
-            "BCABKAUiPQoNTWFwQmxvY2tzRGF0YRIQCghyY19pbmRleBgBIAMoBRIaCgNv",
-            "YmoYAiABKAsyDS5CaWFuLlRlcnJhaW4iLQoMVGVycmFpbnNEYXRhEhAKCHJj",
-            "X2luZGV4GAEgAygFEgsKA2NpZBgCIAEoBSI1CgdNYXBTaWduEgkKAXIYASAB",
-            "KAUSCQoBYxgCIAEoBRIUCgxzaWduX2lkX2xpc3QYAyADKAUqRQoHTWFwVHlw",
-            "ZRIaChZNYXBUeXBlX01hcFR5cGVEaWFtb25kEAASHgoaTWFwVHlwZV9NYXBU",
-            "eXBlUmVjdGFuZ3VsYXIQASpeCg1CbG9ja01hcmtUeXBlEioKJkJsb2NrTWFy",
-            "a1R5cGVfQmxvY2tNYXJrX0ZvcmJpZGRlbkJ1aWxkEAASIQodQmxvY2tNYXJr",
-            "VHlwZV9CbG9ja01hcmtfQmxvY2sQASplChBCbG9ja09iak1hcmtUeXBlEigK",
-            "JEJsb2NrT2JqTWFya1R5cGVfQmxvY2tPYmpNYXJrX01pcnJvchAAEicKI0Js",
-            "b2NrT2JqTWFya1R5cGVfQmxvY2tPYmpNYXJrX1ZhcmlhEAFiBnByb3RvMw=="));
+            "Cg9tYXBfYmxvY2sucHJvdG8SC01lbGFuZEdhbWUzIkcKCEJsb2NrT2JqEg4K",
+            "Bm9ial9pZBgBIAEoBRIQCghhcmVhX2lkeBgCIAEoBRIJCgF6GAMgASgFEg4K",
+            "BnppbmRleBgEIAEoBSJpChJCbG9ja1Jlc291cmNlUG9pbnQSGQoRcmVzb3Vy",
+            "Y2VfcG9pbnRfaWQYASABKAUSEwoLdGVtcGxhdGVfaWQYAiABKAUSDgoGbWly",
+            "cm9yGAMgASgIEhMKC2NvcnJlY3RfcG9zGAQgASgIIrsBCg1CbG9ja1NldHRp",
+            "bmdzEgkKAXIYASABKAUSCQoBYxgCIAEoBRIOCgZ6aW5kZXgYAyABKAUSCQoB",
+            "ehgEIAEoBRIMCgRtYXJrGAUgASgNEgwKBHNpZ24YBiABKAkSIwoEb2JqcxgH",
+            "IAMoCzIVLk1lbGFuZEdhbWUzLkJsb2NrT2JqEjgKD3Jlc291cmNlX3BvaW50",
+            "cxgIIAMoCzIfLk1lbGFuZEdhbWUzLkJsb2NrUmVzb3VyY2VQb2ludCI1CgxN",
+            "YXBDaHVua0xpc3QSJQoGY2h1bmtzGAEgAygLMhUuTWVsYW5kR2FtZTMuTWFw",
+            "Q2h1bmsilQEKCE1hcENodW5rEgoKAmlkGAEgASgJEg4KBm1hcF9pZBgCIAEo",
+            "BRIQCghvcmlnaW5fchgDIAEoAxIQCghvcmlnaW5fYxgEIAEoAxINCgV3aWR0",
+            "aBgFIAEoBRIOCgZoZWlnaHQYBiABKAUSKgoGYmxvY2tzGAcgAygLMhouTWVs",
+            "YW5kR2FtZTMuQmxvY2tTZXR0aW5ncyI9CgdUZXJyYWluEgoKAmlkGAEgASgJ",
+            "EgsKA2NpZBgCIAEoBRIJCgF6GAMgASgFEg4KBnppbmRleBgEIAEoBSJECg1N",
+            "YXBCbG9ja3NEYXRhEhAKCHJjX2luZGV4GAEgAygFEiEKA29iahgCIAEoCzIU",
+            "Lk1lbGFuZEdhbWUzLlRlcnJhaW4iLQoMVGVycmFpbnNEYXRhEhAKCHJjX2lu",
+            "ZGV4GAEgAygFEgsKA2NpZBgCIAEoBSI1CgdNYXBTaWduEgkKAXIYASABKAUS",
+            "CQoBYxgCIAEoBRIUCgxzaWduX2lkX2xpc3QYAyADKAUqRQoHTWFwVHlwZRIa",
+            "ChZNYXBUeXBlX01hcFR5cGVEaWFtb25kEAASHgoaTWFwVHlwZV9NYXBUeXBl",
+            "UmVjdGFuZ3VsYXIQASpeCg1CbG9ja01hcmtUeXBlEioKJkJsb2NrTWFya1R5",
+            "cGVfQmxvY2tNYXJrX0ZvcmJpZGRlbkJ1aWxkEAASIQodQmxvY2tNYXJrVHlw",
+            "ZV9CbG9ja01hcmtfQmxvY2sQASplChBCbG9ja09iak1hcmtUeXBlEigKJEJs",
+            "b2NrT2JqTWFya1R5cGVfQmxvY2tPYmpNYXJrX01pcnJvchAAEicKI0Jsb2Nr",
+            "T2JqTWFya1R5cGVfQmxvY2tPYmpNYXJrX1ZhcmlhEAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.MapType), typeof(global::Bian.BlockMarkType), typeof(global::Bian.BlockObjMarkType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BlockObj), global::Bian.BlockObj.Parser, new[]{ "ObjId", "AreaIdx", "Z", "Zindex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BlockResourcePoint), global::Bian.BlockResourcePoint.Parser, new[]{ "ResourcePointId", "TemplateId", "Mirror", "CorrectPos" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.BlockSettings), global::Bian.BlockSettings.Parser, new[]{ "R", "C", "Zindex", "Z", "Mark", "Sign", "Objs", "ResourcePoints" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapChunkList), global::Bian.MapChunkList.Parser, new[]{ "Chunks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapChunk), global::Bian.MapChunk.Parser, new[]{ "Id", "MapId", "OriginR", "OriginC", "Width", "Height", "Blocks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Terrain), global::Bian.Terrain.Parser, new[]{ "Id", "Cid", "Z", "Zindex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapBlocksData), global::Bian.MapBlocksData.Parser, new[]{ "RcIndex", "Obj" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TerrainsData), global::Bian.TerrainsData.Parser, new[]{ "RcIndex", "Cid" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.MapSign), global::Bian.MapSign.Parser, new[]{ "R", "C", "SignIdList" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.MapType), typeof(global::MelandGame3.BlockMarkType), typeof(global::MelandGame3.BlockObjMarkType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BlockObj), global::MelandGame3.BlockObj.Parser, new[]{ "ObjId", "AreaIdx", "Z", "Zindex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BlockResourcePoint), global::MelandGame3.BlockResourcePoint.Parser, new[]{ "ResourcePointId", "TemplateId", "Mirror", "CorrectPos" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.BlockSettings), global::MelandGame3.BlockSettings.Parser, new[]{ "R", "C", "Zindex", "Z", "Mark", "Sign", "Objs", "ResourcePoints" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapChunkList), global::MelandGame3.MapChunkList.Parser, new[]{ "Chunks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapChunk), global::MelandGame3.MapChunk.Parser, new[]{ "Id", "MapId", "OriginR", "OriginC", "Width", "Height", "Blocks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Terrain), global::MelandGame3.Terrain.Parser, new[]{ "Id", "Cid", "Z", "Zindex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapBlocksData), global::MelandGame3.MapBlocksData.Parser, new[]{ "RcIndex", "Obj" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TerrainsData), global::MelandGame3.TerrainsData.Parser, new[]{ "RcIndex", "Cid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.MapSign), global::MelandGame3.MapSign.Parser, new[]{ "R", "C", "SignIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -119,7 +120,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -425,7 +426,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -725,7 +726,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -839,29 +840,29 @@ namespace Bian {
 
     /// <summary>Field number for the "objs" field.</summary>
     public const int ObjsFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Bian.BlockObj> _repeated_objs_codec
-        = pb::FieldCodec.ForMessage(58, global::Bian.BlockObj.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BlockObj> objs_ = new pbc::RepeatedField<global::Bian.BlockObj>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BlockObj> _repeated_objs_codec
+        = pb::FieldCodec.ForMessage(58, global::MelandGame3.BlockObj.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BlockObj> objs_ = new pbc::RepeatedField<global::MelandGame3.BlockObj>();
     /// <summary>
     ///该格子上的对象(从低到高)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BlockObj> Objs {
+    public pbc::RepeatedField<global::MelandGame3.BlockObj> Objs {
       get { return objs_; }
     }
 
     /// <summary>Field number for the "resource_points" field.</summary>
     public const int ResourcePointsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Bian.BlockResourcePoint> _repeated_resourcePoints_codec
-        = pb::FieldCodec.ForMessage(66, global::Bian.BlockResourcePoint.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BlockResourcePoint> resourcePoints_ = new pbc::RepeatedField<global::Bian.BlockResourcePoint>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BlockResourcePoint> _repeated_resourcePoints_codec
+        = pb::FieldCodec.ForMessage(66, global::MelandGame3.BlockResourcePoint.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BlockResourcePoint> resourcePoints_ = new pbc::RepeatedField<global::MelandGame3.BlockResourcePoint>();
     /// <summary>
     ///刷新点
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BlockResourcePoint> ResourcePoints {
+    public pbc::RepeatedField<global::MelandGame3.BlockResourcePoint> ResourcePoints {
       get { return resourcePoints_; }
     }
 
@@ -1160,7 +1161,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1192,12 +1193,12 @@ namespace Bian {
 
     /// <summary>Field number for the "chunks" field.</summary>
     public const int ChunksFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.MapChunk> _repeated_chunks_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.MapChunk.Parser);
-    private readonly pbc::RepeatedField<global::Bian.MapChunk> chunks_ = new pbc::RepeatedField<global::Bian.MapChunk>();
+    private static readonly pb::FieldCodec<global::MelandGame3.MapChunk> _repeated_chunks_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.MapChunk.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.MapChunk> chunks_ = new pbc::RepeatedField<global::MelandGame3.MapChunk>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.MapChunk> Chunks {
+    public pbc::RepeatedField<global::MelandGame3.MapChunk> Chunks {
       get { return chunks_; }
     }
 
@@ -1341,7 +1342,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1460,15 +1461,15 @@ namespace Bian {
 
     /// <summary>Field number for the "blocks" field.</summary>
     public const int BlocksFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Bian.BlockSettings> _repeated_blocks_codec
-        = pb::FieldCodec.ForMessage(58, global::Bian.BlockSettings.Parser);
-    private readonly pbc::RepeatedField<global::Bian.BlockSettings> blocks_ = new pbc::RepeatedField<global::Bian.BlockSettings>();
+    private static readonly pb::FieldCodec<global::MelandGame3.BlockSettings> _repeated_blocks_codec
+        = pb::FieldCodec.ForMessage(58, global::MelandGame3.BlockSettings.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.BlockSettings> blocks_ = new pbc::RepeatedField<global::MelandGame3.BlockSettings>();
     /// <summary>
     /// 分块上的格子（没有特殊配置的格子暂时不会输出在这里）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.BlockSettings> Blocks {
+    public pbc::RepeatedField<global::MelandGame3.BlockSettings> Blocks {
       get { return blocks_; }
     }
 
@@ -1756,7 +1757,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2059,7 +2060,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2106,10 +2107,10 @@ namespace Bian {
 
     /// <summary>Field number for the "obj" field.</summary>
     public const int ObjFieldNumber = 2;
-    private global::Bian.Terrain obj_;
+    private global::MelandGame3.Terrain obj_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Terrain Obj {
+    public global::MelandGame3.Terrain Obj {
       get { return obj_; }
       set {
         obj_ = value;
@@ -2209,7 +2210,7 @@ namespace Bian {
       rcIndex_.Add(other.rcIndex_);
       if (other.obj_ != null) {
         if (obj_ == null) {
-          Obj = new global::Bian.Terrain();
+          Obj = new global::MelandGame3.Terrain();
         }
         Obj.MergeFrom(other.Obj);
       }
@@ -2235,7 +2236,7 @@ namespace Bian {
           }
           case 18: {
             if (obj_ == null) {
-              Obj = new global::Bian.Terrain();
+              Obj = new global::MelandGame3.Terrain();
             }
             input.ReadMessage(Obj);
             break;
@@ -2262,7 +2263,7 @@ namespace Bian {
           }
           case 18: {
             if (obj_ == null) {
-              Obj = new global::Bian.Terrain();
+              Obj = new global::MelandGame3.Terrain();
             }
             input.ReadMessage(Obj);
             break;
@@ -2288,7 +2289,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2508,7 +2509,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.MapBlockReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MelandGame3.MapBlockReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

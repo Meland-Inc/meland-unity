@@ -51,7 +51,7 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
 
     protected GameChannelPacket CreatePacket(TReq req)
     {
-        Bian.Envelope envelope = new();
+        MelandGame3.Envelope envelope = new();
         envelope.Type = GetEnvelopeType();
         envelope.GetType().GetProperty(GetEnvelopeReqName()).SetValue(envelope, req);
         GameChannelPacket packet = new();
@@ -94,10 +94,10 @@ public abstract class GameChannelNetMsgRActionBase<TReq, TRsp> : GameChannelNetM
         (sender as INetworkChannel).UnRegisterHandler(this);
 
         // 获取请求数据
-        Bian.Envelope reqEnvelope = _reqPacket.TransferData;
+        MelandGame3.Envelope reqEnvelope = _reqPacket.TransferData;
         TReq req = (TReq)reqEnvelope.GetType().GetProperty(GetEnvelopeReqName()).GetValue(reqEnvelope);
 
-        Bian.Envelope envelope = (packet as GameChannelPacket).TransferData;
+        MelandGame3.Envelope envelope = (packet as GameChannelPacket).TransferData;
         string propertyName = envelope.PayloadCase.ToString();
         try
         {

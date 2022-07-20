@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5533880070429717973}
   - component: {fileID: 6220575467374519911}
-  - component: {fileID: -8547866455972079298}
+  - component: {fileID: 986971058772457118}
   m_Layer: 5
-  m_Name: TooltipSyntheticMatDetail
+  m_Name: TooltipItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024553ecf96a65649b929ee08c9214fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  packageName: Synthetic
-  componentName: TooltipSyntheticMatDetail
+  packageName: Common
+  componentName: TooltipItem
   fitScreen: 0
   sortingOrder: 0
-  packagePath: Assets/Res/Fairygui/Synthetic
+  packagePath: Assets/Res/Fairygui/Common
   renderMode: 0
   renderCamera: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   cachedUISize: {x: 0, y: 0}
   hitTestMode: 0
   setNativeChildrenOrder: 0
---- !u!114 &-8547866455972079298
+--- !u!114 &986971058772457118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

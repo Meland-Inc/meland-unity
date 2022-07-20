@@ -1,4 +1,5 @@
 using FairyGUI;
+using System;
 using System.Collections.Generic;
 public class TaskSubmitViewLogic : FGUILogicCpt
 {
@@ -15,11 +16,13 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     private GList _lstBpItems;
     // 提交按钮
     private GButton _btnSubmit;
+    private GButton _btnClose;
     protected override void OnAdd()
     {
         base.OnAdd();
         _tfSelectCount = GCom.GetChild("tfSelectCount") as GTextField;
         _btnSubmit = GCom.GetChild("btnSubmit") as GButton;
+        _btnClose = GCom.GetChild("btnClose") as GButton;
 
         // 需要提交的列表
         _lstSubmitItems = GCom.GetChild("lstSubmitItems") as GList;
@@ -41,10 +44,24 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         AddDataAction();
     }
 
+    private void ResetUI()
+    {
+        if (_btnSubmit != null)
+        {
+            _btnSubmit.GetController("ctrColor").selectedPage = "gray";
+        }
+        if (_lstBpItems != null)
+        {
+            _lstBpItems.SelectNone();
+        }
+
+    }
+
     public override void OnClose()
     {
         RemoveUIEvent();
         RemoveDataAction();
+        UICenter.CloseUIForm<TooltipNFTItem>();
         base.OnClose();
     }
 
@@ -53,6 +70,12 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         _lstBpItems.onClickItem.Add(OnBpItemClick);
         // _lstSubmitItems.onClickItem.Add(OnSubmitItemClick);
         _btnSubmit.onClick.Add(OnBtnSubmitClick);
+        _btnClose.onClick.Add(CloseSubmitView);
+    }
+
+    private void CloseSubmitView()
+    {
+        UICenter.CloseUIForm<FormTaskSubmit>();
     }
 
     private void RemoveUIEvent()
@@ -60,6 +83,7 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         _lstBpItems.onClickItem.Remove(OnBpItemClick);
         // _lstSubmitItems.onClickItem.Remove(OnSubmitItemClick);
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
+        _btnClose.onClick.Remove(CloseSubmitView);
     }
 
     private void AddDataAction()
@@ -79,6 +103,8 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     public void SetData(TaskChainData taskChainData)
     {
         _taskChainData = taskChainData;
+
+        ResetUI();
         OnUpdateUI();
     }
 
@@ -86,18 +112,28 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     {
         RefreshBpItem();
         RefreshSubmitItem();
+        OnUpdateSelectCount();
     }
 
     private void RefreshBpItem()
     {
-        List<BpNftItem> bpItemList = DataManager.Backpack.ItemList;
+        List<BpNftItem> bpNftItems = DataManager.Backpack.ItemList;
+        List<RewardNftData> submitItems = _taskChainData.TaskSubmitItems;
 
         // 处理堆叠，把相同的nft集合到一起
         _bpItemData.Clear();
         _selectedBpItemData.Clear();
-        bpItemList.ForEach(bpItem =>
+        bpNftItems.ForEach(bpItem =>
         {
-            RewardNftData sameItem = _bpItemData.Find(item => item.Cid == bpItem.Cid);
+            // 仅筛选出当前与需要提交道具同cid的 背包道具
+            RewardNftData sameSubmitCidItem = submitItems.Find(item => item.Cid == bpItem.Cid);
+            if (sameSubmitCidItem == null)
+            {
+                return;
+            }
+
+            // 同nftId的道具,记录到 _bpItemData，且堆叠起来 
+            RewardNftData sameItem = _bpItemData.Find(item => item.NftId == bpItem.Id);
             if (sameItem == null)
             {
                 _bpItemData.Add(new RewardNftData()
@@ -116,6 +152,12 @@ public class TaskSubmitViewLogic : FGUILogicCpt
             }
         });
 
+        // 按品质排序
+        _bpItemData.Sort((RewardNftData a, RewardNftData b) =>
+        {
+            return a.Quality - b.Quality;
+        });
+
         _lstBpItems.numItems = _bpItemData.Count;
     }
 
@@ -128,7 +170,11 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     {
         RewardNftItemRenderer render = (RewardNftItemRenderer)context.data;
         UpdateSelectedItemData(render);
-        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(render, render.ItemData.BpItemData));
+        UICenter.CloseUIForm<TooltipNFTItem>();
+        if (render.selected)
+        {
+            _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(GCom, render.ItemData.BpItemData, eTooltipDir.Left, -30, 0, false));
+        }
     }
 
     private void UpdateSelectedItemData(RewardNftItemRenderer item)
@@ -149,37 +195,48 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     // {
     // }
 
-    private void OnBtnSubmitClick(EventContext context)
-    {
-        TaskUpgradeTaskProgressAction.ReqItem(_taskChainData.TaskChainKind, _selectedBpItemData);
-        UICenter.CloseUIForm<FormTaskSubmit>();
-    }
     // 刷新选中的数量
     private void OnUpdateSelectCount()
     {
         int selectCount = 0;
-        if (_selectedBpItemData.Count > 0)
-        {
-            _selectedBpItemData.ForEach((item) =>
-            {
-                selectCount += item.Count;
-            });
-        }
+        _selectedBpItemData.ForEach(item => selectCount += item.Count);
         _tfSelectCount.SetVar("count", selectCount.ToString()).FlushVars();
     }
+
     // 检查是否满足提交条件
-    private bool checkMeetSubmitCondition()
+    private bool checkIfMeetSubmit()
     {
         List<RewardNftData> submitItems = _taskChainData.TaskSubmitItems;
-
         for (int i = 0; i < submitItems.Count; i++)
         {
             RewardNftData submitItem = submitItems[i];
-            RewardNftData selectedItem = _selectedBpItemData.Find(bpItem => bpItem.NftId == submitItem.NftId);
-            // 没有选到，或者选到的数量不足
-            if (selectedItem == null || selectedItem.Count < submitItem.Count)
+            List<RewardNftData> selectedItems = _selectedBpItemData.FindAll(bpItem => bpItem.Cid == submitItem.Cid);
+            if (selectedItems.Count <= 0)
             {
                 return false;
+            }
+            // 统计该cid道具 已选中的总数
+            int selectedSumCount = 0;
+            selectedItems.ForEach(selectedItem =>
+            {
+                selectedSumCount += selectedItem.Count;
+            });
+
+            // 如果是非同质化道具，选中数量得刚刚好
+            if (BackpackUtil.IsNonFungible(selectedItems[0].BpItemData))
+            {
+                if (selectedSumCount != submitItem.Count)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                // 同质化道具数量 可以多出所需
+                if (selectedSumCount < submitItem.Count)
+                {
+                    return false;
+                }
             }
         }
 
@@ -188,14 +245,14 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     // 更新提交按钮状态
     private void OnUpdateBtnSubmit()
     {
-        if (checkMeetSubmitCondition())
+        if (checkIfMeetSubmit())
         {
-            _btnSubmit.GetController("color").selectedPage = "yellow";
-            _btnSubmit.enabled = true;
+            _btnSubmit.GetController("ctrColor").selectedPage = "yellow";
+            _btnSubmit.touchable = true;
             return;
         }
-        _btnSubmit.GetController("color").selectedPage = "gray";
-        _btnSubmit.enabled = false;
+        _btnSubmit.GetController("ctrColor").selectedPage = "gray";
+        _btnSubmit.touchable = false;
     }
 
     private void OnRenderBpItem(int index, GObject item)
@@ -208,5 +265,42 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     {
         RewardNftItemRenderer render = (RewardNftItemRenderer)item;
         render.SetData(_taskChainData.TaskSubmitItems[index]);
+    }
+
+
+    private void OnBtnSubmitClick(EventContext context)
+    {
+        // 用于提交的数据
+        List<RewardNftData> reqItemDatas = new();
+
+        // 需要提交的数据
+        List<RewardNftData> submitItems = _taskChainData.TaskSubmitItems;
+
+        // 从选中的数据中，选取需要提交的数据（只能提交所需的数据，数量得刚刚好，不能超出）
+        for (int i = 0; i < submitItems.Count; i++)
+        {
+            RewardNftData submitItem = submitItems[i];
+            List<RewardNftData> selectedItems = _selectedBpItemData.FindAll(bpItem => bpItem.Cid == submitItem.Cid);
+            int needSubmitCount = submitItem.Count;
+            for (int j = 0; j < selectedItems.Count; j++)
+            {
+                int curCount = selectedItems[j].Count >= needSubmitCount ? needSubmitCount : selectedItems[j].Count;
+                reqItemDatas.Add(new RewardNftData()
+                {
+                    NftId = selectedItems[j].NftId,
+                    Cid = selectedItems[j].Cid,
+                    Count = curCount,
+                });
+
+                needSubmitCount -= curCount;
+                if (needSubmitCount <= 0)
+                {
+                    break;
+                }
+            }
+        }
+
+        TaskUpgradeTaskProgressAction.ReqItem(_taskChainData.TaskChainKind, reqItemDatas);
+        UICenter.CloseUIForm<FormTaskSubmit>();
     }
 }

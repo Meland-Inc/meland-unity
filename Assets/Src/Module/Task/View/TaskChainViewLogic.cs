@@ -56,18 +56,24 @@ public class TaskChainViewLogic : FGUILogicCpt
     {
         if (taskChainData == null)
         {
+            _ctrShow.selectedPage = "false";
             return;
         }
         _taskChainData = taskChainData;
         _chainState = _taskChainData.TaskChainState;
 
+        checkFrameTimer();
+        OnUpdateTimeUI(0);
+        OnUpdateUI();
+    }
+
+    private void checkFrameTimer()
+    {
         Message.OnEnterFrame -= OnFrameTimer;
         if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == Bian.TaskListType.TaskListTypeDaily)
         {
             Message.OnEnterFrame += OnFrameTimer;
         }
-        OnUpdateTimeUI(0);
-        OnUpdateUI();
     }
 
     private void onBtnBoxClick(EventContext context)
@@ -82,7 +88,8 @@ public class TaskChainViewLogic : FGUILogicCpt
         if (_chainState == TaskDefine.eTaskChainState.ONDOING)
         {
             DRLanguage dRLanguage = GFEntry.DataTable.GetDataTable<DRLanguage>().GetDataRow(10090018);
-            AlertRewardData alertVo = new("REWARDS", dRLanguage.Value, null, null, _taskChainData.TaskChainRewards);
+            string content = dRLanguage != null ? dRLanguage.Value : "";
+            AlertRewardData alertVo = new("REWARDS", content, null, null, _taskChainData.TaskChainRewards);
             _ = UICenter.OpenUIAlert<AlertReward>(alertVo);
             return;
         }

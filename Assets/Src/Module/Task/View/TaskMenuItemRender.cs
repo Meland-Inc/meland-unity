@@ -37,6 +37,11 @@ public class TaskMenuItemRender : GButton
         _ctrSelected.selectedPage = isSelected ? "true" : "false";
     }
 
+    public bool IsSelected()
+    {
+        return _ctrSelected.selectedPage == "true";
+    }
+
     private void OnUpdateUI()
     {
         _tfSelectedTitle.text = TaskChainData.TaskChainName;

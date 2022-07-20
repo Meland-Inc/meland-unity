@@ -7,7 +7,7 @@ using Google.Protobuf.Collections;
 public class TaskChainData
 {
     // 服务器下发原始数据
-    private TaskList _rawSvrData;
+    public TaskList RawSvrData;
     public DRTaskList DRTaskList { get; private set; }
     // 对应任务配置
     public DRTask DRTask { get; private set; }
@@ -15,6 +15,8 @@ public class TaskChainData
     public string TaskChainName { get; private set; }
     // 任务链结束时间
     public long TaskChainEndTimeStamp { get; private set; }
+    // 任务可放弃的结束时间
+    public long TaskCanAbandonTimeStamp { get; private set; }
     // 任务链奖励
     public readonly List<RewardNftData> TaskChainRewards = new();
     // 任务需要提交的道具
@@ -24,69 +26,54 @@ public class TaskChainData
     // 子任务集合
     public readonly List<TaskDefine.TaskSubItemData> CurTaskSubItems = new();
     // 子寻路任务
-    public TaskDefine.TaskSubItemData CurTaskSubPathFindItem
-    {
-        get
-        {
-            TaskDefine.TaskSubItemData curTaskSubPathFindItem = null;
-            if (CurTaskSubItems.Count > 0)
-            {
-                curTaskSubPathFindItem = CurTaskSubItems.Find(obj => obj.Option.OptionCnf.DataCase == TaskOptionCnf.DataOneofCase.TarPos);
-            }
-            return curTaskSubPathFindItem;
-        }
-    }
+    public TaskDefine.TaskSubItemData CurTaskSubPathFindItem => CurTaskSubItems.Find(obj => obj.Option.OptionCnf.DataCase == TaskOptionCnf.DataOneofCase.TarPos);
+    public TaskDefine.TaskSubItemData CurTaskSubSubmitItem => CurTaskSubItems.Find(obj => obj.Option.OptionCnf.DataCase == TaskOptionCnf.DataOneofCase.Item);
+
     // 最大进度
     public int MaxTaskChainRate => TaskChainKind == TaskListType.TaskListTypeDaily ? TaskDefine.DAILY_MAX_RATE : TaskDefine.REWARD_MAX_RATE;
     // 当前进度
-    public int CurTaskChainRate => _rawSvrData.Rate;
+    public int CurTaskChainRate => RawSvrData.Rate;
     // 当前任务
-    public Task CurTask => _rawSvrData.CurTask;
+    public Task CurTask => RawSvrData.CurTask;
     // 任务链类型
-    public TaskListType TaskChainKind => _rawSvrData.Kind;
+    public TaskListType TaskChainKind => RawSvrData.Kind;
     // 任务链ID
-    public int TaskChainId => _rawSvrData.Id;
+    public int TaskChainId => RawSvrData.Id;
     // 任务链状态
     public TaskDefine.eTaskChainState TaskChainState
     {
         get
         {
             // 未开始 todo
-            if (false)
-            {
-                return TaskDefine.eTaskChainState.NONE;
-            }
-            long curTime = TimeUtil.GetServerTimeStamp();
-            // 超时结束
-            if (curTime > TaskChainEndTimeStamp)
+            if (!RawSvrData.Doing)
             {
                 return TaskDefine.eTaskChainState.NONE;
             }
 
-            if (_rawSvrData.Kind == TaskListType.TaskListTypeDaily)
+            if (RawSvrData.Kind == TaskListType.TaskListTypeDaily)
             {
                 // 是否已领取
-                if (_rawSvrData.ReceiveReward > 0)
+                if (RawSvrData.ReceiveReward > 0)
                 {
                     return TaskDefine.eTaskChainState.HADRECEIVE;
                 }
                 // 未领取且可领取
-                if (_rawSvrData.Rate >= MaxTaskChainRate)
+                if (RawSvrData.Rate >= MaxTaskChainRate)
                 {
                     return TaskDefine.eTaskChainState.AVAILABLE;
                 }
             }
-            else if (_rawSvrData.Kind == TaskListType.TaskListTypeRewarded)
+            else if (RawSvrData.Kind == TaskListType.TaskListTypeRewarded)
             {
                 // 是否已经领取
-                if (_rawSvrData.ReceiveReward >= MaxTaskChainRate)
+                if (RawSvrData.ReceiveReward >= 2)
                 {
                     return TaskDefine.eTaskChainState.HADRECEIVE;
                 }
 
                 // 未领取且可领取
-                if ((_rawSvrData.ReceiveReward == 0 && _rawSvrData.Rate >= 50)
-                    || (_rawSvrData.ReceiveReward == 50 && _rawSvrData.Rate >= MaxTaskChainRate)
+                if ((RawSvrData.ReceiveReward == 0 && RawSvrData.Rate >= 50)
+                    || (RawSvrData.ReceiveReward == 1 && RawSvrData.Rate >= MaxTaskChainRate)
                 )
                 {
                     return TaskDefine.eTaskChainState.AVAILABLE;
@@ -96,25 +83,27 @@ public class TaskChainData
             return TaskDefine.eTaskChainState.ONDOING;
         }
     }
+
     // 任务状态
     public TaskDefine.eTaskState TaskState
     {
         get
         {
-            if (_rawSvrData.CurTask == null)
-            {
-                return TaskDefine.eTaskState.UNSTART;
-            }
-            long curTime = TimeUtil.GetServerTimeStamp();
-            // 任务链超时
-            if (curTime > TaskChainEndTimeStamp)
-            {
-                return TaskDefine.eTaskState.UNSTART;
-            }
             // 任务链奖励已经领取
-            if (_rawSvrData.ReceiveReward >= MaxTaskChainRate)
+            // if (RawSvrData.ReceiveReward >= MaxTaskChainRate)
+            // {
+            //     return TaskDefine.eTaskState.FINISH;
+            // }
+            // 任务链已到达最大进度 finish || 任务未开始并且不能再接
+            if (CurTaskChainRate >= MaxTaskChainRate || (!RawSvrData.Doing && !RawSvrData.CanReceive))
             {
                 return TaskDefine.eTaskState.FINISH;
+            }
+
+            // 未开始，且可以领取  || 已经开启，未领取
+            if ((!RawSvrData.Doing && RawSvrData.CanReceive) || (RawSvrData.Doing && RawSvrData.CurTask == null))
+            {
+                return TaskDefine.eTaskState.UNSTART;
             }
 
             return TaskDefine.eTaskState.ONDOING;
@@ -123,13 +112,19 @@ public class TaskChainData
 
     public TaskChainData UpdateData(TaskList rawSvrData)
     {
-        _rawSvrData = rawSvrData;
+        RawSvrData = rawSvrData;
         // 任务链配置
         DRTaskList = GFEntry.DataTable.GetDataTable<DRTaskList>().GetDataRow(rawSvrData.Id);
         // 任务链名称
         TaskChainName = TaskDefine.TaskSystemId2Name[DRTaskList.System];
         // 任务链结束时间
-        TaskChainEndTimeStamp = TimeUtil.DataTime2TimeStamp(rawSvrData.Kind == TaskListType.TaskListTypeDaily ? TimeUtil.GetDayEndTime() : TimeUtil.GetWeekEndTime());
+        TaskChainEndTimeStamp = 0;
+        if (RawSvrData.Doing && rawSvrData.Kind == TaskListType.TaskListTypeDaily)
+        {
+            TaskChainEndTimeStamp = TimeUtil.DataTime2TimeStamp(TimeUtil.GetDayEndTime());
+            // TaskChainEndTimeStamp = TimeUtil.DataTime2TimeStamp(rawSvrData.Kind == TaskListType.TaskListTypeDaily ? TimeUtil.GetDayEndTime() : TimeUtil.GetWeekEndTime());
+        }
+
         // 任务链奖励
         List<RewardNftData> taskChainRewards = TaskUtil.GetRewardNftData(DRTaskList.ItemReward, DRTaskList.ExpReward);
         TaskUtil.TaskListAddRange(TaskChainRewards, taskChainRewards);
@@ -137,6 +132,8 @@ public class TaskChainData
         // 具体任务
         if (rawSvrData.CurTask != null)
         {
+            // 可放弃时间 （任务领取往后5分钟）
+            TaskCanAbandonTimeStamp = (rawSvrData.CurTask.CreatedAtSec + (5 * TimeUtil.SecondsOfMinute)) * 1000;
             // 当前任务配置
             DRTask = GFEntry.DataTable.GetDataTable<DRTask>().GetDataRow(rawSvrData.CurTask.TaskId);
             // 当前任务需要提交的物品

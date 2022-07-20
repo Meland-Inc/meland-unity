@@ -1,5 +1,6 @@
 
 
+using System;
 using FairyGUI;
 using FairyGUI.Utils;
 
@@ -21,7 +22,22 @@ public class TaskTrackerItemRender : GComponent
 
         _lstObject.numItems = 0;
         _lstObject.itemRenderer = ObjectiveRender;
+
+        onClick.Add(OnItemClick);
     }
+
+    private void OnItemClick(EventContext context)
+    {
+        SceneModule.TaskMgr.OpenTask(_chainData);
+    }
+
+    public override void Dispose()
+    {
+        onClick.Remove(OnItemClick);
+        base.Dispose();
+    }
+
+
 
     private void ObjectiveRender(int index, GObject item)
     {
@@ -30,7 +46,8 @@ public class TaskTrackerItemRender : GComponent
         Controller ctrState = gItem.GetController("ctrState");
         GTextField tfTitle = gItem.GetChild("title") as GTextField;
 
-        tfTitle.SetVar("title", objectData.Decs)
+
+        tfTitle.SetVar("title", objectData.Decs.Length > 20 ? objectData.Decs[..20] + "..." : objectData.Decs)
             .SetVar("cur", objectData.CurRate.ToString())
             .SetVar("max", objectData.MaxRate.ToString())
             .FlushVars();
@@ -52,5 +69,6 @@ public class TaskTrackerItemRender : GComponent
             .FlushVars();
         // 小任务列表
         _lstObject.numItems = chainData.CurTaskSubItems.Count;
+        _lstObject.ResizeToFit();
     }
 }

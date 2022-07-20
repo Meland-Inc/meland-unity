@@ -9,6 +9,7 @@ public class TaskContentViewLogic : FGUILogicCpt
 {
     private TaskChainData _taskChainData;
     private Controller _ctrTaskState;
+    private Controller _ctrShow;
     private GTextField _tfTitle;
     private GTextField _tfDesc;
     private GList _lstTaskSubItem;
@@ -21,8 +22,9 @@ public class TaskContentViewLogic : FGUILogicCpt
     {
         base.OnAdd();
         _ctrTaskState = GCom.GetController("ctrTaskState");
+        _ctrShow = GCom.GetController("ctrShow");
         _tfTitle = GCom.GetChild("tfTitle") as GTextField;
-        _tfDesc = GCom.GetChild("fDesc") as GTextField;
+        _tfDesc = GCom.GetChild("tfDesc") as GTextField;
         _lstTaskSubItem = GCom.GetChild("lstObject") as GList;
         _lstTaskChainReward = GCom.GetChild("lstTaskChainReward") as GList;
         _lstTaskReward = GCom.GetChild("lstTaskReward") as GList;
@@ -43,21 +45,29 @@ public class TaskContentViewLogic : FGUILogicCpt
     {
         if (taskChainData == null)
         {
+            _ctrShow.selectedPage = "false";
             return;
         }
+        _ctrShow.selectedPage = "true";
         _taskChainData = taskChainData;
 
-        // 寻路任务，开启定时检查坐标
-        Message.OnEnterFrame -= OnFramePathFind;
-        if (_taskChainData.CurTaskSubPathFindItem != null)
-        {
-            Message.OnEnterFrame += OnFramePathFind;
-        }
-
+        checkPathFindTaskTimer();
         OnUpdateUI();
     }
 
-    private void OnFramePathFind(float obj)
+
+    private void checkPathFindTaskTimer()
+    {
+        // 寻路任务，开启定时检查坐标
+        Message.OnEnterFrame -= OnFrameCheckPathFind;
+        TaskDefine.TaskSubItemData curTaskSubPathFindItem = _taskChainData.CurTaskSubPathFindItem;
+        if (curTaskSubPathFindItem != null && curTaskSubPathFindItem.CurRate < curTaskSubPathFindItem.MaxRate)
+        {
+            Message.OnEnterFrame += OnFrameCheckPathFind;
+        }
+    }
+
+    private void OnFrameCheckPathFind(float obj)
     {
         OnUpdateBtnSubmit();
     }
@@ -65,61 +75,50 @@ public class TaskContentViewLogic : FGUILogicCpt
     // 更新提交按钮状态
     private void OnUpdateBtnSubmit()
     {
-        bool isMeet = CheckMeetSubmitCondition();
+        bool isMeet;
+        string btnName = TaskDefine.eTaskButton.RECEIVE.ToString();
 
-        string btnName = "RECEIVE";
-        // 任务为提交道具，名称为 SUBMIT
-        List<TaskDefine.TaskSubItemData> curTaskSubItems = _taskChainData.CurTaskSubItems;
-        if (curTaskSubItems.Count == 1 && curTaskSubItems[0].Option.OptionCnf.Kind == TaskType.TaskTypeGetItem)
+        TaskDefine.TaskSubItemData curTaskSubPathFindItem = _taskChainData.CurTaskSubPathFindItem;
+        TaskDefine.TaskSubItemData curTaskSubSubmitItem = _taskChainData.CurTaskSubSubmitItem;
+        // 子任务有 提交道具类型，且任务未完成，名称为 SUBMIT
+        if (curTaskSubSubmitItem != null && curTaskSubSubmitItem.CurRate < curTaskSubSubmitItem.MaxRate)
         {
-            btnName = "SUBMIT";
+            btnName = TaskDefine.eTaskButton.SUBMIT.ToString();
+            isMeet = true;
+        }
+        else if (curTaskSubPathFindItem != null && curTaskSubPathFindItem.CurRate < curTaskSubPathFindItem.MaxRate)
+        {
+            btnName = TaskDefine.eTaskButton.ARRIVE.ToString();
+            // DataManager.MainPlayer.Role.Transform.position.x
+            // DataManager.MainPlayer.Role.Transform.position.y
+            int RoleR = TaskDefine.TEST_R;
+            int RoleC = TaskDefine.TEST_C;
+            TaskOptionMoveTo moveTo = _taskChainData.CurTaskSubPathFindItem.Option.OptionCnf.TarPos;
+            isMeet = moveTo.R == RoleR && moveTo.C == RoleC;
+        }
+        else
+        {
+            isMeet = CheckIfAllSubItemMeet();
         }
 
-        _btnSubmit.GetController("color").selectedPage = isMeet ? "yellow" : "gray";
-        _btnSubmit.GetController("str").selectedPage = btnName;
-        _btnSubmit.enabled = isMeet;
+        _btnSubmit.GetController("ctrColor").selectedPage = isMeet ? "yellow" : "gray";
+        _btnSubmit.GetController("ctrStr").selectedPage = btnName;
+        _btnSubmit.touchable = isMeet;
     }
 
-    private bool CheckMeetSubmitCondition()
+    // 检查所有子任务是否全部完成
+    private bool CheckIfAllSubItemMeet()
     {
-        bool isMeet = false;
-
         List<TaskDefine.TaskSubItemData> curTaskSubItems = _taskChainData.CurTaskSubItems;
         for (int i = 0; i < curTaskSubItems.Count; i++)
         {
             TaskDefine.TaskSubItemData objectData = curTaskSubItems[i];
-            TaskOptionCnf optionCfg = objectData.Option.OptionCnf;
-
-            switch (optionCfg.Kind)
+            if (objectData.CurRate < objectData.MaxRate)
             {
-                case TaskType.TaskTypeQuiz:
-                case TaskType.TaskTypeKillMonster:
-                case TaskType.TaskTypeUseItem:
-                case TaskType.TaskTypeOccupiedLand:
-                    isMeet = objectData.CurRate >= objectData.MaxRate;
-                    break;
-                case TaskType.TaskTypeMoveTo:
-                    if (DataManager.MainPlayer.Role != null)
-                    {
-                        // todo RC
-                        // DataManager.MainPlayer.Role.Transform.position.x
-                        // DataManager.MainPlayer.Role.Transform.position.y
-                        int RoleR = 1;
-                        int RoleC = 1;
-                        TaskOptionMoveTo moveTo = _taskChainData.CurTaskSubPathFindItem.Option.OptionCnf.TarPos;
-                        isMeet = moveTo.R == RoleR && moveTo.C == RoleC;
-                    }
-                    break;
-                case TaskType.TaskTypeGetItem:
-                    isMeet = true;
-                    break;
-                case TaskType.TaskTypeUnknown:
-                default:
-                    isMeet = false;
-                    break;
+                return false;
             }
         }
-        return isMeet;
+        return true;
     }
 
     private void OnUpdateUI()
@@ -144,14 +143,18 @@ public class TaskContentViewLogic : FGUILogicCpt
         {
             return;
         }
+        OnUpdateBtnSubmit();
         _tfTitle.SetVar("title", _taskChainData.DRTask.Name)
             .SetVar("cur", _taskChainData.CurTaskChainRate.ToString())
             .SetVar("max", _taskChainData.MaxTaskChainRate.ToString())
             .FlushVars();
 
-        _tfDesc.text = _taskChainData.DRTask.Decs;
+        _tfDesc.text = _taskChainData.DRTask.Details;
         _lstTaskSubItem.numItems = _taskChainData.CurTaskSubItems.Count;
-        _lstTaskChainReward.numItems = _taskChainData.CurTaskRewards.Count;
+        _lstTaskReward.numItems = _taskChainData.CurTaskRewards.Count;
+
+        _lstTaskReward.ResizeToFit();
+        _lstTaskSubItem.ResizeToFit();
     }
 
     private void UpdateUnstart()
@@ -199,12 +202,18 @@ public class TaskContentViewLogic : FGUILogicCpt
     {
         base.OnOpen();
         AddEvent();
+        ResetUI();
     }
 
     public override void OnClose()
     {
         RemoveEvent();
         base.OnClose();
+    }
+
+    private void ResetUI()
+    {
+        _btnSubmit.GetController("ctrColor").selectedPage = "gray";
     }
 
     private void AddEvent()
@@ -219,23 +228,44 @@ public class TaskContentViewLogic : FGUILogicCpt
         _btnReceive.onClick.Remove(OnBtnReceiveClick);
         _btnAbandon.onClick.Remove(OnBtnAbandonClick);
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
-        Message.OnEnterFrame -= OnFramePathFind;
+        Message.OnEnterFrame -= OnFrameCheckPathFind;
     }
 
     private void OnBtnSubmitClick(EventContext context)
     {
-        if (_taskChainData.CurTask.TaskKind == TaskType.TaskTypeGetItem)
+        // 提交道具类型（且未完成），打开提交界面
+        TaskDefine.TaskSubItemData curTaskSubSubmitItem = _taskChainData.CurTaskSubSubmitItem;
+        if (curTaskSubSubmitItem != null && curTaskSubSubmitItem.CurRate < curTaskSubSubmitItem.MaxRate)
         {
             SceneModule.TaskMgr.OpenTaskSubmit(_taskChainData);
             return;
         }
+
+        TaskDefine.TaskSubItemData curTaskSubPathFindItem = _taskChainData.CurTaskSubPathFindItem;
+        if (curTaskSubPathFindItem != null && curTaskSubPathFindItem.CurRate < curTaskSubPathFindItem.MaxRate)
+        {
+            TaskUpgradeTaskProgressAction.ReqPos(_taskChainData.TaskChainKind, TaskDefine.TEST_R, TaskDefine.TEST_C);
+            return;
+        }
+
+
+        // 直接请求完成
         TaskRewardReceiveAction.Req(_taskChainData.TaskChainKind);
     }
 
     private void OnBtnAbandonClick(EventContext context)
     {
-        AlertData alertData = new("ABANDON", "Are you sure you want to abort the mission?", "", () =>
+        DRLanguage dRLanguage = GFEntry.DataTable.GetDataTable<DRLanguage>().GetDataRow(10090020);
+        string content = dRLanguage != null ? dRLanguage.Value : "";
+        AlertData alertData = new("ABANDON", content, "", () =>
         {
+            if (TimeUtil.GetServerTimeStamp() <= _taskChainData.TaskCanAbandonTimeStamp)
+            {
+                DRLanguage fiveMinRLanguage = GFEntry.DataTable.GetDataTable<DRLanguage>().GetDataRow(10090021);
+                string fiveMincontent = fiveMinRLanguage != null ? fiveMinRLanguage.Value : "";
+                _ = UICenter.OpenUIToast<ToastCommon>(fiveMincontent);
+                return;
+            }
             TaskAbandonAction.Req(_taskChainData.TaskChainKind);
         });
         _ = UICenter.OpenUIAlert<AlertCommon>(alertData);
@@ -244,6 +274,17 @@ public class TaskContentViewLogic : FGUILogicCpt
 
     private void OnBtnReceiveClick()
     {
-        TaskAcceptAction.Req(_taskChainData.TaskChainKind);
+        // 主动领取任务，需要进行meld检查
+        if ((!_taskChainData.RawSvrData.Doing && _taskChainData.RawSvrData.CanReceive)
+            || (_taskChainData.RawSvrData.Doing && _taskChainData.RawSvrData.CurTask == null))
+        {
+            // todo
+            // if (_taskChainData.DRTaskList.CostMELD > SceneModule.Craft.MeldCount)
+            // {
+            //     _ = UICenter.OpenUIToast<ToastCommon>("Meld insufficient"); 
+            //     return;
+            // }
+            TaskAcceptAction.Req(_taskChainData.TaskChainKind);
+        }
     }
 }

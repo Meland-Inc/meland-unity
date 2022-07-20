@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using FairyGUI;
+
 public class FormTask : FGUIForm
 {
     private List<TaskChainData> _taskChains;
@@ -24,6 +25,7 @@ public class FormTask : FGUIForm
         base.OnOpen(userData);
         AddUIEvent();
         AddDataAction();
+        InitData(userData as TaskChainData);
         UpdateData();
     }
 
@@ -34,16 +36,22 @@ public class FormTask : FGUIForm
         base.OnClose(isShutdown, userData);
     }
 
+    private void InitData(TaskChainData taskChain)
+    {
+        _curSelectedTaskChain = taskChain;
+    }
+
     private void UpdateData()
     {
         _taskChains = DataManager.TaskModel.TaskChainList;
-        if (_taskChains == null || _taskChains.Count <= 0)
+
+        if (_curSelectedTaskChain != null)
         {
-            return;
+            _curSelectedTaskChain = _taskChains.Find(item => item.TaskChainId == _curSelectedTaskChain.TaskChainId);
         }
+
         if (_curSelectedTaskChain == null)
         {
-            // select default
             _curSelectedTaskChain = _taskChains[0];
         }
 
@@ -74,18 +82,17 @@ public class FormTask : FGUIForm
     private void OnTaskMenuItemClick(EventContext context)
     {
         TaskMenuItemRender render = (TaskMenuItemRender)context.data;
-        render.SetSelected(true);
-
+        if (render.IsSelected())
+        {
+            return;
+        }
+        // render.SetSelected(true);
         _curSelectedTaskChain = render.TaskChainData;
         OnUpdateUI();
     }
 
     private void OnUpdateUI()
     {
-        if (_taskChains == null)
-        {
-            return;
-        }
         _lstTaskMenu.numItems = _taskChains.Count;
         _taskContentViewLogic.SetData(_curSelectedTaskChain);
         _taskChainViewLogic.SetData(_curSelectedTaskChain);
@@ -94,8 +101,12 @@ public class FormTask : FGUIForm
     private void ListMenuItemRenderer(int index, GObject item)
     {
         TaskChainData taskChainData = _taskChains[index];
+        if (taskChainData == null)
+        {
+            return;
+        }
         TaskMenuItemRender taskMenuItemRender = (TaskMenuItemRender)item;
         taskMenuItemRender.SetData(taskChainData);
-        taskMenuItemRender.SetSelected(taskChainData == _curSelectedTaskChain);
+        taskMenuItemRender.SetSelected(taskChainData.TaskChainId == _curSelectedTaskChain.TaskChainId);
     }
 }

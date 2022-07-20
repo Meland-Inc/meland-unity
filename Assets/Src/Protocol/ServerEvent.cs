@@ -9,1384 +9,1359 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace MelandGame3
-{
+namespace MelandGame3 {
 
-    /// <summary>Holder for reflection information generated from server_event.proto</summary>
-    public static partial class ServerEventReflection
-    {
+  /// <summary>Holder for reflection information generated from server_event.proto</summary>
+  public static partial class ServerEventReflection {
 
-        #region Descriptor
-        /// <summary>File descriptor for server_event.proto</summary>
-        public static pbr::FileDescriptor Descriptor
-        {
-            get { return descriptor; }
-        }
-        private static pbr::FileDescriptor descriptor;
-
-        static ServerEventReflection()
-        {
-            byte[] descriptorData = global::System.Convert.FromBase64String(
-                string.Concat(
-                  "ChJzZXJ2ZXJfZXZlbnQucHJvdG8SBEJpYW4q3wEKElNlcnZlck1zZ0V2ZW50",
-                  "VHlwZRIvCitTZXJ2ZXJNc2dFdmVudFR5cGVfU2VydmVyTXNnRXZlbnRUeXBl",
-                  "VW5rbm93EAASMwovU2VydmVyTXNnRXZlbnRUeXBlX1NlcnZlck1zZ0V2ZW50",
-                  "VHlwZVJlY2VpdmVNc2cQARIxCi1TZXJ2ZXJNc2dFdmVudFR5cGVfU2VydmVy",
-                  "TXNnRXZlbnRUeXBlQ2FsbEJhY2sQAhIwCixTZXJ2ZXJNc2dFdmVudFR5cGVf",
-                  "U2VydmVyTXNnRXZlbnRUeXBlVGltZU91dBADKsonCg9TZXJ2ZXJFdmVudFR5",
-                  "cGUSMAosU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVNlcnZlclVu",
-                  "a25vd24QABI0CjBTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlU2Vy",
-                  "dmVyQWZ0ZXJDb25maWcQChIxCi1TZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZl",
-                  "bnRUeXBlU2VydmVyTWludXRlbHkQCxIvCitTZXJ2ZXJFdmVudFR5cGVfU2Vy",
-                  "dmVyRXZlbnRUeXBlU2VydmVySG91cmx5EAwSLgoqU2VydmVyRXZlbnRUeXBl",
-                  "X1NlcnZlckV2ZW50VHlwZVNlcnZlckRhaWx5EA0SMgouU2VydmVyRXZlbnRU",
-                  "eXBlX1NlcnZlckV2ZW50VHlwZVNlcnZlckNvbm5DbG9zZRAOEjQKMFNlcnZl",
-                  "ckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVTZXJ2ZXJDb25uQ29ubmVjdBAP",
-                  "Ei4KKlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVTZXJ2ZXJUaW1l",
-                  "chAQEi4KKlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVTcWxSb2xs",
-                  "QmFjaxAREjIKLlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVTZXJ2",
-                  "ZXJFdmVudENhbGwQEhIwCixTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRU",
-                  "eXBlUGxheWVyQ3JlYXRlZBBkEi8KK1NlcnZlckV2ZW50VHlwZV9TZXJ2ZXJF",
-                  "dmVudFR5cGVQbGF5ZXJPbmxpbmUQZRIwCixTZXJ2ZXJFdmVudFR5cGVfU2Vy",
-                  "dmVyRXZlbnRUeXBlUGxheWVyT2ZmbGluZRBmEi8KK1NlcnZlckV2ZW50VHlw",
-                  "ZV9TZXJ2ZXJFdmVudFR5cGVQbGF5ZXJOZXdEYXkQZxItCilTZXJ2ZXJFdmVu",
-                  "dFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyTHZVcBBoEjUKMVNlcnZlckV2",
-                  "ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVQbGF5ZXJSZXNldFByb2ZpbGUQaRI0",
-                  "CjBTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyVXBkYXRl",
-                  "U2tpbGwQahIvCitTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxh",
-                  "eWVyQWRkRXhwEGsSMgouU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlw",
-                  "ZVBsYXllckRlZHVjdEV4cBBsEjAKLFNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJF",
-                  "dmVudFR5cGVQbGF5ZXJSZXBseUhwEG0SOQo1U2VydmVyRXZlbnRUeXBlX1Nl",
-                  "cnZlckV2ZW50VHlwZUNhbGN1bGF0ZVBsYXllclByb2ZpbGUQbhIxCi1TZXJ2",
-                  "ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyVXNlU2tpbGwQbxIx",
-                  "Ci1TZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyQmVBdHRh",
-                  "Y2sQcBIuCipTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlRGVzdG9y",
-                  "eUl0ZW0QchIxCi1TZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlRGVz",
-                  "dG9yeUFsbEl0ZW0QcxIqCiZTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRU",
-                  "eXBlQWRkSXRlbRB0Ei4KKlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5",
-                  "cGVSZWRlZW1DREtleRB1EioKJlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVu",
-                  "dFR5cGVEdW5nZW9uEHYSLgoqU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50",
-                  "VHlwZVNlbmRDaGF0TXNnEHcSNgoyU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2",
-                  "ZW50VHlwZVNlbmRVcGRhdGVDaGF0U3RhdGUQeBI0CjBTZXJ2ZXJFdmVudFR5",
-                  "cGVfU2VydmVyRXZlbnRUeXBlU2VuZFJlbW92ZUNoYXRNc2cQeRIwCitTZXJ2",
-                  "ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRab25lU2VuZFRvUGxheWVyEMgBEiUK",
-                  "IFNlcnZlckV2ZW50VHlwZV9aMlNab25lQnJvYWRjYXN0EMoBEjUKMFNlcnZl",
-                  "ckV2ZW50VHlwZV9TZXJ2ZXJFdmVudEVudGl0eUFuaW1hdGlvbkNyZWF0ZRDL",
-                  "ARI1CjBTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRFbnRpdHlBbmltYXRp",
-                  "b25VcGRhdGUQzAESMgotU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50RW50",
-                  "aXR5QW5pbWF0aW9uRGVsEM0BEiIKHVNlcnZlckV2ZW50VHlwZV9aMlNHb2JN",
-                  "YXBTYXZlEM4BEjIKLVNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudEVudGl0",
-                  "eVBsYXllclVwZGF0ZRDPARIqCiVTZXJ2ZXJFdmVudFR5cGVfWjJTRW50aXR5",
-                  "VGVtcGxhdGVTYXZlENABEiUKIFNlcnZlckV2ZW50VHlwZV9aMlNQbGF5ZXJP",
-                  "ZmZsaW5lENIBEicKIlNlcnZlckV2ZW50VHlwZV9aMlNQbGF5ZXJNYW5vckRh",
-                  "dGEQ0wESKgolU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50RW50aXR5U2F2",
-                  "ZRDVARIjCh5TZXJ2ZXJFdmVudFR5cGVfWjJTQnVpbGREZWxldGUQ8gESJQog",
-                  "U2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50QnVpbGQQ8wESJAofU2VydmVy",
-                  "RXZlbnRUeXBlX1oyU1B1cHBldERlbGV0ZRD0ARIiCh1TZXJ2ZXJFdmVudFR5",
-                  "cGVfWjJTUGxheWVyU2F2ZRCPAxIiCh1TZXJ2ZXJFdmVudFR5cGVfWjJTRW50",
-                  "aXR5U2F2ZRCQAxIjCh5TZXJ2ZXJFdmVudFR5cGVfWjJTTWFub3JQYWNrZXQQ",
-                  "kQMSKwomU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50Q29kZUV4ZWN1dGUQ",
-                  "9AMSLwoqU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VXNlSXRlbUZyb21a",
-                  "b25lEPUDEjAKK1NlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudERyb3BJdGVt",
-                  "RnJvbVpvbmUQ9gMSMAorU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50Qm90",
-                  "QnVpbGRGcm9tWm9uZRD3AxIwCitTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZl",
-                  "bnRNYWtlSXRlbUZyb21ab25lEPkDEj4KOVNlcnZlckV2ZW50VHlwZV9TZXJ2",
-                  "ZXJFdmVudFRha2VXb3JrYmVuY2hJdGVtQnlDaWRGcm9tWm9uZRD6AxI+CjlT",
-                  "ZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRHaXZlV29ya2JlbmNoSXRlbUJ5",
-                  "Q2lkRnJvbVpvbmUQ+wMSNQowU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50",
-                  "UGxheWVyQ29tcGxldGVDaGFwdGVyEPwDEiwKJ1NlcnZlckV2ZW50VHlwZV9T",
-                  "ZXJ2ZXJFdmVudE1pc3Npb25FbnRlchD9AxIqCiVTZXJ2ZXJFdmVudFR5cGVf",
-                  "U2VydmVyRXZlbnRBY2NlcHRUYXNrEP4DEioKJVNlcnZlckV2ZW50VHlwZV9T",
-                  "ZXJ2ZXJFdmVudFN1Ym1pdFRhc2sQ/wMSLAonU2VydmVyRXZlbnRUeXBlX1Nl",
-                  "cnZlckV2ZW50Q29tcGxhdGVUYXNrEIAEEjgKM1NlcnZlckV2ZW50VHlwZV9T",
-                  "ZXJ2ZXJFdmVudE1pc3Npb25FbnRlclNjZW5lTW9uaXRvchCBBBIjCh5TZXJ2",
-                  "ZXJFdmVudFR5cGVfWjJTX1BsYXllckRlYWQQyAUSLgopU2VydmVyRXZlbnRU",
-                  "eXBlX1NlcnZlckV2ZW50WjJTQWRkRXhwVG9Cb3QQywUSKgolU2VydmVyRXZl",
-                  "bnRUeXBlX1NlcnZlckV2ZW50WjJTQm90RGVhZBDbBRI4CjNTZXJ2ZXJFdmVu",
-                  "dFR5cGVfU2VydmVyRXZlbnRXb3JrYmVuY2hDb21wb25lbnRDYW5jZWwQ7gUS",
-                  "NQowU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50V29ya2JlbmNoQ29tcG9u",
-                  "ZW50RW5kEO8FEi8KKlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFdvcmti",
-                  "ZW5jaERlbGV0ZRDwBRIjCh5TZXJ2ZXJFdmVudFR5cGVfWjJTUGxhbnREZWxl",
-                  "dGUQ8QUSIQocU2VydmVyRXZlbnRUeXBlX1oyU1BldERlbGV0ZRDyBRIlCiBT",
-                  "ZXJ2ZXJFdmVudFR5cGVfWjJTV29ya2JlbmNoU2F2ZRDzBRIuCilTZXJ2ZXJF",
-                  "dmVudFR5cGVfU2VydmVyRXZlbnRUeXBlQm90Q3JlYXRlZBCgBhIrCiZTZXJ2",
-                  "ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlQm90THZVcBChBhI2CjFTZXJ2",
-                  "ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlVXBkYXRlQm90RXF1aXBtZW50",
-                  "EKIGEi0KKFNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVCb3RBZGRF",
-                  "eHAQowYSLgopU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZUJvdFJl",
-                  "cGx5SHAQpAYSMAorU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZUJv",
-                  "dEFkZE9iamVjdBClBhItCihTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRU",
-                  "eXBlUmVjYWxsQm90EKYGEi8KKlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVu",
-                  "dFR5cGVCb3RVc2VTa2lsbBCnBhIvCipTZXJ2ZXJFdmVudFR5cGVfU2VydmVy",
-                  "RXZlbnRUeXBlQm90QmVBdHRhY2sQqAYSLgopU2VydmVyRXZlbnRUeXBlX1Nl",
-                  "cnZlckV2ZW50VHlwZUJvdEFkZEl0ZW0QqQYSNwoyU2VydmVyRXZlbnRUeXBl",
-                  "X1NlcnZlckV2ZW50VHlwZVBsYXllclVzZUNvbnN1bWFibGUQhgcSMwouU2Vy",
-                  "dmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVBsYXllckFkZE9iamVjdBCH",
-                  "BxIjCh5TZXJ2ZXJFdmVudFR5cGVfWjJTUGlja0ZhbGxpbmcQiAcSJgohU2Vy",
-                  "dmVyRXZlbnRUeXBlX1oyU1BpY2tGYWxsaW5nQm94EIkHEjMKLlNlcnZlckV2",
-                  "ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVQbGF5ZXJVc2VPYmplY3QQiwcSOgo1",
-                  "U2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZUFkZEl0ZW1CeU9wZXJh",
-                  "dGVCdWJibGUQjAcSOwo2U2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlw",
-                  "ZVRha2VJdGVtQnlPcGVyYXRlQnViYmxlEI0HEj4KOVNlcnZlckV2ZW50VHlw",
-                  "ZV9TZXJ2ZXJFdmVudFR5cGVSZXBsYWNlSXRlbUJ5T3BlcmF0ZUJ1YmJsZRCO",
-                  "BxI4CjNTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUmVzZXRQbGF5",
-                  "ZXJOZnRTdGF0dXMQjwcSNAovU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50",
-                  "VHlwZVVwZGF0ZVBsYXllck5GVHMQkAcSOQo0U2VydmVyRXZlbnRUeXBlX1Nl",
-                  "cnZlckV2ZW50VHlwZVVwZGF0ZVRoaXJkTmZ0VGltZU91dBCTBxI2CjFTZXJ2",
-                  "ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyQWNjZXB0ZWRUYXNr",
-                  "EOkHEjcKMlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVQbGF5ZXJT",
-                  "dWJtaXR0ZWRUYXNrEOoHEjsKNlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVu",
-                  "dFR5cGVVcGRhdGVOcGNUYXNrTm90aWNlVHlwZRDrBxI5CjRTZXJ2ZXJFdmVu",
-                  "dFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyVGFza1N0YXRlVXBkYXRlEO0H",
-                  "EjIKLVNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFRhc2tQcm9ncmVzc0No",
-                  "YW5nZRCZCBIxCixTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxh",
-                  "eWVyQWRkTWFpbBCbCBI+CjlTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRU",
-                  "eXBlU2VydmVyU2VuZE1haWxCeVRlbXBsYXRlSWQQnAgSMwouU2VydmVyRXZl",
-                  "bnRUeXBlX1NlcnZlckV2ZW50VHlwZUxhbmRHcm91cENyZWF0ZRCoRhIzCi5T",
-                  "ZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlTGFuZEdyb3VwVXBkYXRl",
-                  "EKlGEjMKLlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVMYW5kR3Jv",
-                  "dXBSZW1vdmUQqkYSKwolU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlw",
-                  "ZU51bU1heBD//wMq6iYKDldvcmxkRXZlbnRUeXBlEigKJFdvcmxkRXZlbnRU",
-                  "eXBlX1dvcmxkRXZlbnRUeXBlVW5rbm93bhAAEisKJ1dvcmxkRXZlbnRUeXBl",
-                  "X1dvcmxkRXZlbnRUeXBlU2VuZFRvWm9uZRABEikKJVdvcmxkRXZlbnRUeXBl",
-                  "X1dvcmxkRXZlbnRUeXBlRW50ZXJNYXAQAhIpCiVXb3JsZEV2ZW50VHlwZV9X",
-                  "b3JsZEV2ZW50VHlwZUxlYXZlTWFwEAMSJQohV29ybGRFdmVudFR5cGVfV29y",
-                  "bGRFdmVudFR5cGVNb3ZlEAQSKAokV29ybGRFdmVudFR5cGVfV29ybGRFdmVu",
-                  "dFR5cGVNYXBTYXZlEAUSNAowV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5",
-                  "cGVSZWxvYWRSZXNvdXJjZVBvaW50EAYSLworV29ybGRFdmVudFR5cGVfV29y",
-                  "bGRFdmVudFR5cGVJbml0TWFwRWxlbWVudBAHEisKJ1dvcmxkRXZlbnRUeXBl",
-                  "X1dvcmxkRXZlbnRUeXBlRW50aXR5U2F2ZRAIEiwKKFdvcmxkRXZlbnRUeXBl",
-                  "X1dvcmxkRXZlbnRUeXBlUGxheWVyUmVzZXQQCRIvCitXb3JsZEV2ZW50VHlw",
-                  "ZV9Xb3JsZEV2ZW50VHlwZVJlc2V0QXJlYVN0YXRlEAoSMwovV29ybGRFdmVu",
-                  "dFR5cGVfV29ybGRFdmVudFR5cGVEaXVybmFsQ3ljbGVDaGFuZ2UQHhIwCixX",
-                  "b3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUVudGl0eUV2ZW50Q2FsbBBl",
-                  "EjUKMVdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlQWRkRW50aXR5VG9D",
-                  "aHVua0dyaWQQZhIqCiZXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUdl",
-                  "dEVudGl0eRBoEjgKNFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlRW50",
-                  "aXR5RXZlbnRDYWxsTm9SZXR1cm4QaRI8CjhXb3JsZEV2ZW50VHlwZV9Xb3Js",
-                  "ZEV2ZW50VHlwZVJlc3RhcnRBbGxFbnRpdGllc0NvZGVCbG9jaxBqEjMKL1dv",
-                  "cmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUmVzb3VyY2VMb2FkRmluaXNo",
-                  "EGsSMQotV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVVcGRhdGVXaWRn",
-                  "ZXRBdHRyEGwSOQo1V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVSdW5D",
-                  "b2RlQmxvY2tCeVBsYXllckFyZWEQbRI5CjVXb3JsZEV2ZW50VHlwZV9Xb3Js",
-                  "ZEV2ZW50VHlwZUVudGl0aWVzUmVzdGFydENvZGVCbG9jaxBuEjYKMldvcmxk",
-                  "RXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUHVibGljQXJlYVJlc3RhcnRDb2Rl",
-                  "EHASNgoyV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVQbGF5ZXJBcmVh",
-                  "UmVzdGFydENvZGUQcRIzCi9Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlw",
-                  "ZVJlbW92ZUVudGl0eUNoYW5nZRByEi0KKVdvcmxkRXZlbnRUeXBlX1dvcmxk",
-                  "RXZlbnRUeXBlUmV2aXZlRW50aXR5EHMSMgouV29ybGRFdmVudFR5cGVfV29y",
-                  "bGRFdmVudFR5cGVSZXN0YXJ0RHVuZ2Vvbk1hcBB0EjoKNldvcmxkRXZlbnRU",
-                  "eXBlX1dvcmxkRXZlbnRUeXBlRW50aXRpZXNFeGVjdXRlU3RhcnRFdmVudBB1",
-                  "EjYKMldvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlRW50aXRpZXNTdG9w",
-                  "Q29kZUJsb2NrEHYSMwovV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVU",
-                  "ZWxlcG9ydEFsbFN0dWRlbnQQdxI0CjBXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2",
-                  "ZW50VHlwZUFwcGx5RW50aXR5VGVtcGxhdGUQeBI1CjFXb3JsZEV2ZW50VHlw",
-                  "ZV9Xb3JsZEV2ZW50VHlwZUFkZENhbWVyYVRvQ2h1bmtHcmlkEHkSNAowV29y",
-                  "bGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVab25lQXJlYVJlc3RhcnRDb2Rl",
-                  "EHoSQAo8V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVBZGRFbnRpdHlX",
-                  "aXRob3V0Vmlld1RvQ2h1bmtHcmlkEHsSNgoyV29ybGRFdmVudFR5cGVfV29y",
-                  "bGRFdmVudFR5cGVDb2RlRXZlbnROb3RpZmljYXRpb24QfBI5CjVXb3JsZEV2",
-                  "ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVB1YmxpY0FyZWFSZXNldENvZGVCbG9j",
-                  "axB9EkMKP1dvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlRW50aXRpZXNF",
-                  "eGVjdXRlUXVpY2tDb2RlU3RhcnRFdmVudBB+EjwKOFdvcmxkRXZlbnRUeXBl",
-                  "X1dvcmxkRXZlbnRUeXBlUmVzZXRFbnRpdGllc1F1aWNrQ29kZVN0YXRlEH8S",
-                  "Owo2V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVFbnRpdGllc1F1aWNr",
-                  "Q29kZVRhYkRhdGFzEIABEi0KKFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRU",
-                  "eXBlVG9HcmlkRXZlbnQQlgESKwomV29ybGRFdmVudFR5cGVfV29ybGRFdmVu",
-                  "dFR5cGVab29tRXZlbnQQlwESMQosV29ybGRFdmVudFR5cGVfV29ybGRFdmVu",
-                  "dFR5cGVQbGF5ZXJBZGRFbnRpdHkQyQESMQosV29ybGRFdmVudFR5cGVfV29y",
-                  "bGRFdmVudFR5cGVQbGF5ZXJEZWxFbnRpdHkQygESMgotV29ybGRFdmVudFR5",
-                  "cGVfV29ybGRFdmVudFR5cGVQbGF5ZXJNb3ZlRW50aXR5EMsBEi4KKVdvcmxk",
-                  "RXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlQm90QWRkRW50aXR5EMwBEjgKM1dv",
-                  "cmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUGxheWVyRGVsRW50aXR5QnlT",
-                  "Y2VuZRDNARIzCi5Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVBsYXll",
-                  "ckFkZFRlcnJhaW5zEM4BEjMKLldvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRU",
-                  "eXBlUGxheWVyRGVsVGVycmFpbnMQzwESOAozV29ybGRFdmVudFR5cGVfV29y",
-                  "bGRFdmVudFR5cGVQbGF5ZXJBZGRSZXNvdXJjZVBvaW50ENIBEjgKM1dvcmxk",
-                  "RXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUGxheWVyRGVsUmVzb3VyY2VQb2lu",
-                  "dBDTARI0Ci9Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVBsYXllckFk",
-                  "ZEJvcm5Qb2ludBDUARI0Ci9Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlw",
-                  "ZVBsYXllckRlbEJvcm5Qb2ludBDVARInCiJXb3JsZEV2ZW50VHlwZV9TMlpM",
-                  "ZXNzb25BcmVhQ3JlYXRlENYBEiQKH1dvcmxkRXZlbnRUeXBlX1MyWkxlc3Nv",
-                  "bkFyZWFEZWwQ1wESJgohV29ybGRFdmVudFR5cGVfUzJaTGVzc29uQXJlYVF1",
-                  "ZXJ5ENgBEicKIldvcmxkRXZlbnRUeXBlX1MyWkxlc3NvbkFyZWFVcGRhdGUQ",
-                  "2QESJwoiV29ybGRFdmVudFR5cGVfUzJaQmVhdXR5QXJlYVVwZGF0ZRDaARIl",
-                  "CiBXb3JsZEV2ZW50VHlwZV9TMlpMZXNzb25BcmVhQ29weRDbARIsCidXb3Js",
-                  "ZEV2ZW50VHlwZV9TMlpMZXNzb25BcmVhSW5kZXhVcGRhdGUQ3AESJwoiV29y",
-                  "bGRFdmVudFR5cGVfUzJaTGVzc29uQXJlYVVubG9jaxDdARIuCilXb3JsZEV2",
-                  "ZW50VHlwZV9TMlpMZXNzb25QbGF5ZXJBcnJpdmVkQXJlYRDeARIyCi1Xb3Js",
-                  "ZEV2ZW50VHlwZV9TMlpMZXNzb25BcmVhUnVuUXVpY2tDb2RlU3RhcnQQ3wES",
-                  "MAorV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVBZGRUaWxlTWFwU2ln",
-                  "bhDgARIzCi5Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVJlbW92ZVRp",
-                  "bGVNYXBTaWduEOEBEioKJVdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBl",
-                  "U3Bhd25Cb3QQrQISKwomV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVS",
-                  "ZWNhbGxCb3QQrgISLQooV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVT",
-                  "MlpCb3RCdXJzdBCvAhItCihXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlw",
-                  "ZUlzc3VlU2V0dGxlEJEDEjAKK1dvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRU",
-                  "eXBlR2V0RW50aXR5SXNzdWUQkgMSNAovV29ybGRFdmVudFR5cGVfV29ybGRF",
-                  "dmVudFR5cGVXb3JrYmVuY2hVcGRhdGVTdWIQ+gMSNwoyV29ybGRFdmVudFR5",
-                  "cGVfV29ybGRFdmVudFR5cGVXb3JrYmVuY2hVcGRhdGVGYXRoZXIQ+wMSMQos",
-                  "V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVTcGF3blBhbHllckFyZWEQ",
-                  "2AQSMAorV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVNb3ZlUGFseWVy",
-                  "QXJlYRDZBBIyCi1Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVJlbW92",
-                  "ZVBhbHllckFyZWEQ2gQSMwouV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5",
-                  "cGVRdWVyeU15UGFseWVyQXJlYRDbBBIuCilXb3JsZEV2ZW50VHlwZV9Xb3Js",
-                  "ZEV2ZW50VHlwZVNldEdsb2JhbFZhchDcBBIyCi1Xb3JsZEV2ZW50VHlwZV9X",
-                  "b3JsZEV2ZW50VHlwZVF1ZXJ5UGFseWVyQXJlYXMQ3QQSNQowV29ybGRFdmVu",
-                  "dFR5cGVfV29ybGRFdmVudFR5cGVRdWVyeVBhbHllckFyZWFCeVJjEN4EEh8K",
-                  "GldvcmxkRXZlbnRUeXBlX1MyWk1hbm9yQnV5EOIEEicKIldvcmxkRXZlbnRU",
-                  "eXBlX1MyWk1hbm9yQnV5TWFya1N5bmMQ4wQSKgolV29ybGRFdmVudFR5cGVf",
-                  "UzJaTWFub3JUZW1wbGF0ZVBhY2tldBDkBBInCiJXb3JsZEV2ZW50VHlwZV9T",
-                  "MlpNYW5vclRlbXBsYXRlVXNlEOUEEjkKNFdvcmxkRXZlbnRUeXBlX1dvcmxk",
-                  "RXZlbnRUeXBlVGVhY2hlclJlc2V0UHVibGljTWFub3IQ5gQSNgoxV29ybGRF",
-                  "dmVudFR5cGVfV29ybGRFdmVudFR5cGVDcmVhdEFyZWFCeUVtcHR5QXJlYRDn",
-                  "BBI0Ci9Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZU1hbm9yVGVtcGxh",
-                  "dGVDaGVjaxDoBBI0Ci9Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUFy",
-                  "ZWFVcGRhdGVUZW1wbGF0ZRDpBBItCihXb3JsZEV2ZW50VHlwZV9TMlpQbGF5",
-                  "ZXJBcmVhTG9hZE1hbm9yTWFwEOoEEi4KKVdvcmxkRXZlbnRUeXBlX1MyWk1h",
-                  "bm9yVGVtcGxhdGVDaGFuZ2VTaXplEOsEEioKJVdvcmxkRXZlbnRUeXBlX1My",
-                  "WlBsYXllck1hbm9yVGFrZUJhY2sQ7AQSNwoyV29ybGRFdmVudFR5cGVfV29y",
-                  "bGRFdmVudFR5cGVVcGRhdGVBcmVhUmVjb3ZlclRpbWUQ7QQSJgohV29ybGRF",
-                  "dmVudFR5cGVfV29ybGRFdmVudFR5cGVVbmRvEL0FEiYKIVdvcmxkRXZlbnRU",
-                  "eXBlX1dvcmxkRXZlbnRUeXBlUmVkbxC+BRI0Ci9Xb3JsZEV2ZW50VHlwZV9X",
-                  "b3JsZEV2ZW50VHlwZUNvZGVibG9ja0FkZEVudGl0eRChBhI0Ci9Xb3JsZEV2",
-                  "ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUNvZGVibG9ja0RlbEVudGl0eRCiBhIr",
-                  "CiZXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUNsaWVudE1zZxDJTBIt",
-                  "CihXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUdtQWRkRW50aXR5EK1N",
-                  "Ej0KOFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUGxheWVyQWRkQmln",
-                  "V29ybGRTeXN0ZW1BcmVhEKhGEj0KOFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZl",
-                  "bnRUeXBlUGxheWVyRGVsQmlnV29ybGRTeXN0ZW1BcmVhEKlGEikKI1dvcmxk",
-                  "RXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlTnVtTWF4EP//AypjCg1HcmlkRXZl",
-                  "bnRUeXBlEiYKIkdyaWRFdmVudFR5cGVfR3JpZEV2ZW50VHlwZVVua25vd24Q",
-                  "ABIqCiZHcmlkRXZlbnRUeXBlX0dyaWRFdmVudFR5cGVFbnRpdHlFdmVudBAB",
-                  "KuAuCg9FbnRpdHlFdmVudFR5cGUSKgomRW50aXR5RXZlbnRUeXBlX0VudGl0",
-                  "eUV2ZW50VHlwZVVua25vd24QABIpCiVFbnRpdHlFdmVudFR5cGVfRW50aXR5",
-                  "RXZlbnRUeXBlTW92ZVRvEAESKwonRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
-                  "ZW50VHlwZVVzZVNraWxsEAISMAosRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
-                  "ZW50VHlwZUNoYW5nZUF2YXRhcnMQAxIwCixFbnRpdHlFdmVudFR5cGVfRW50",
-                  "aXR5RXZlbnRUeXBlVXBkYXRlUHJvZmlsZRAEEi4KKkVudGl0eUV2ZW50VHlw",
-                  "ZV9FbnRpdHlFdmVudFR5cGVVcGRhdGVTa2lsbBAFEi4KKkVudGl0eUV2ZW50",
-                  "VHlwZV9FbnRpdHlFdmVudFR5cGVVcGRhdGVMZXZlbBAGEi0KKUVudGl0eUV2",
-                  "ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVSZWNvdmVyeUhwEAcSKwonRW50aXR5",
-                  "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVRlbGVwb3J0EAkSLgoqRW50aXR5",
-                  "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUdldExvY2F0aW9uEAoSLgoqRW50",
-                  "aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVBpY2tGYWxsaW5nEAsSKgom",
-                  "RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVBpY2tCb3gQDBIvCitF",
-                  "bnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlSG9tZVRlbGVwb3J0EA0S",
-                  "KgomRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUFkZEJ1ZmYQDhIt",
-                  "CilFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUmVtb3ZlQnVmZhAP",
-                  "EjEKLUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVTMlpQbGF5ZXJC",
-                  "dXJzdBAQEjAKLEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVQbGF5",
-                  "ZXJSZXNwYXduEBISOgo2RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlw",
-                  "ZVBsYXllclNoYXJlQm90Vmlld1N0YXJ0EBMSOQo1RW50aXR5RXZlbnRUeXBl",
-                  "X0VudGl0eUV2ZW50VHlwZVBsYXllclNoYXJlQm90Vmlld1N0b3AQFBI0CjBF",
-                  "bnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUzJaUGlja0ZhbGxpbmdC",
-                  "b3gQFRIwCixFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGxheWVy",
-                  "VW5TdHVjaxAXEi8KK0VudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVF",
-                  "bnRlckdvZFZpZXcQGBIvCitFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRU",
-                  "eXBlTGVhdmVHb2RWaWV3EBkSNQoxRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
-                  "ZW50VHlwZVRlbGVwb3J0QW5kVHJpZ2dlchAaEi4KKkVudGl0eUV2ZW50VHlw",
-                  "ZV9FbnRpdHlFdmVudFR5cGVTdGFydE9yU3RvcBBgEjAKLEVudGl0eUV2ZW50",
-                  "VHlwZV9FbnRpdHlFdmVudFR5cGVFbnRlcklkZU1vZGVsEGESLworRW50aXR5",
-                  "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVF1aXRJZGVNb2RlbBBiEiwKKEVu",
-                  "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDbGllbnRNc2cQZBIyCi5F",
-                  "bnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlSW5wdXRCeUtleXByZXNz",
-                  "EG4SMgouRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUlucHV0QnlT",
-                  "cGVjaWZpYxBvEioKJkVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVV",
-                  "c2VJdGVtEHASKwonRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZURy",
-                  "b3BJdGVtEHESNgoyRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVBs",
-                  "YXllckR1bmdlb25VcGRhdGUQchI0CjBFbnRpdHlFdmVudFR5cGVfRW50aXR5",
-                  "RXZlbnRUeXBlUGxheWVySXNzdWVTZXR0bGUQcxIvCitFbnRpdHlFdmVudFR5",
-                  "cGVfRW50aXR5RXZlbnRUeXBlUGxheWVyVmlld1VwEHQSLworRW50aXR5RXZl",
-                  "bnRUeXBlX0VudGl0eUV2ZW50VHlwZUNhbWVyYU1vdmVUbxB2EjIKLkVudGl0",
-                  "eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDYW1lcmFTaGFyZVZpZXcQdxIy",
-                  "Ci5FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGxheWVyU2hhcmVW",
-                  "aWV3EHgSMwovRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNhbWVy",
-                  "YVR5cGVDaGFuZ2UQeRIxCi1FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRU",
-                  "eXBlQ2FtZXJhUHVsbFZpZXcQehIuCipFbnRpdHlFdmVudFR5cGVfRW50aXR5",
-                  "RXZlbnRUeXBlUmVzZXRQbGF5ZXIQfRI0CjBFbnRpdHlFdmVudFR5cGVfRW50",
-                  "aXR5RXZlbnRUeXBlUmVzZXRMb2NrZWRFbnRpdHkQfhIzCi5FbnRpdHlFdmVu",
-                  "dFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZU1vdmVBcnJpdmVkEMgBEjEKLEVu",
-                  "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlRXZlbnRDYWxsEM0B",
-                  "EjkKNEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlT25Db21w",
-                  "b25lbnRPYmplY3QQ1QESLwoqRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50",
-                  "VHlwZVByb2dyYW1TYXZlENYBEjIKLUVudGl0eUV2ZW50VHlwZV9FbnRpdHlF",
-                  "dmVudFR5cGVDb2RlU2NyZWVuU2F2ZRDXARIvCipFbnRpdHlFdmVudFR5cGVf",
-                  "RW50aXR5RXZlbnRUeXBlQ29kZVJlc3RhcnQQ2AESNQowRW50aXR5RXZlbnRU",
-                  "eXBlX0VudGl0eUV2ZW50VHlwZUNvZGVPbkVuZXJneUVtcHR5ENkBEjEKLEVu",
-                  "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlT25Db3B5TmV3ENoB",
-                  "EjEKLEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlT25Db3B5",
-                  "RGVsENsBEjYKMUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2Rl",
-                  "UXVlc3Rpb25SZXBsYXkQ3AESOQo0RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
-                  "ZW50VHlwZUNvZGVFeGVjdXRlU3RhcnRFdmVudBDdARI1CjBFbnRpdHlFdmVu",
-                  "dFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZVN0b3BDb2RlQmxvY2sQ3gESMQos",
-                  "RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVFbnRpdHlBZGQQ",
-                  "4AESNwoyRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVPbkVu",
-                  "dGl0eU92ZXJsYXAQ4QESMgotRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50",
-                  "VHlwZUNvZGVPblN0YW1wZWRlEOQBEjUKMEVudGl0eUV2ZW50VHlwZV9FbnRp",
-                  "dHlFdmVudFR5cGVDb2RlT25TdGFtcGVkZUVuZBDlARI2CjFFbnRpdHlFdmVu",
-                  "dFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZVNldENhblN0YW1wZWRlEOYBEjUK",
-                  "MEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlU2V0Q2FuT3Bl",
-                  "cmF0ZRDnARIzCi5FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29k",
-                  "ZU9uQnlDbGlja2VkEO0BEjMKLkVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVu",
-                  "dFR5cGVDb2RlT25FbnRlclJvb20Q7gESNgoxRW50aXR5RXZlbnRUeXBlX0Vu",
-                  "dGl0eUV2ZW50VHlwZUNvZGVDb3B5RmF0aGVyRGVhZBDvARI0Ci9FbnRpdHlF",
-                  "dmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZUVkaXRUaW1lTGluZRDwARI0",
-                  "Ci9FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlVGltZUxpbmVTaG93",
-                  "VGV4dBDxARI1CjBFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlVGlt",
-                  "ZUxpbmVNb3ZlVG9Qb3MQ8gESNQowRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
-                  "ZW50VHlwZVRpbWVMaW5lUGxheUF1ZGlvEPMBEjgKM0VudGl0eUV2ZW50VHlw",
-                  "ZV9FbnRpdHlFdmVudFR5cGVUaW1lTGluZVNob3dTdWJ0aXRsZRD0ARIyCi1F",
-                  "bnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZUNHVmlkZW9FbmQQ",
-                  "9QESNAovRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVF1aWNrQ29k",
-                  "ZVJlc3RhcnQQ9gESKAojRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlw",
-                  "ZUhpZGUQ9wESPQo4RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNv",
-                  "ZGVFdmVudENvZGVOb3RpZmljYXRpb24Q4wISMgotRW50aXR5RXZlbnRUeXBl",
-                  "X0VudGl0eUV2ZW50VHlwZUNvZGVTZXRQcm9maWxlEOUCEjQKL0VudGl0eUV2",
-                  "ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlU2V0dGluZ1BhbmVsEOYCEjIK",
-                  "LUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlTWlzc2lvbkVu",
-                  "ZBDnAhI2CjFFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ2xpY2tP",
-                  "cGVyYXRlQnViYmxlEOgCEjQKL0VudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVu",
-                  "dFR5cGVDb2RlQ2FtZXJhQWN0aW9uEOkCEjQKL0VudGl0eUV2ZW50VHlwZV9F",
-                  "bnRpdHlFdmVudFR5cGVQb3BDb21wbGV4RGlnbG9nEOoCEjUKMEVudGl0eUV2",
-                  "ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlU2V0Q2FycnlDbGFzcxDrAhI1",
-                  "CjBFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQm90U2hhcmVWaWV3",
-                  "U3RhcnQQkAMSNAovRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUJv",
-                  "dFNoYXJlVmlld1N0b3AQkQMSKwomRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
-                  "ZW50VHlwZUFkZEZ1ZWwQkwMSMQosRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
-                  "ZW50VHlwZUJvdENoYW5nZVNraW4QlAMSLQooRW50aXR5RXZlbnRUeXBlX0Vu",
-                  "dGl0eUV2ZW50VHlwZUJvdFJlbmFtZRCVAxIyCi1FbnRpdHlFdmVudFR5cGVf",
-                  "RW50aXR5RXZlbnRUeXBlQnVpbGRpbmdTd2l0Y2gQwgMSOQo0RW50aXR5RXZl",
-                  "bnRUeXBlX0VudGl0eUV2ZW50VHlwZUJ1aWxkaW5nTW9kZVBvc1VwZGF0ZRDD",
-                  "AxI2CjFFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUXVpdEJ1aWxk",
-                  "aW5nU3RhdHVzEMQDEjkKNEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5",
-                  "cGVXb3JrYmVuY2hPYmplY3RVcGRhdGUQ9QMSOAozRW50aXR5RXZlbnRUeXBl",
-                  "X0VudGl0eUV2ZW50VHlwZUJ1aWxkaW5nV2lkZ2V0VXBkYXRlEPYDEjQKL0Vu",
-                  "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVXb3JrYmVuY2hBZGRGdWVs",
-                  "EIAEEjYKMUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVXb3JrYmVu",
-                  "Y2hDb21wb25lbnQQgQQSOwo2RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50",
-                  "VHlwZVdvcmtiZW5jaFJlc2V0Q29tcG9uZW50EIIEEjYKMUVudGl0eUV2ZW50",
-                  "VHlwZV9FbnRpdHlFdmVudFR5cGVXb3JrYmVuY2hTZXRQcm9tcHQQgwQSNgox",
-                  "RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVdvcmtiZW5jaFVwZGF0",
-                  "ZVN1YhCEBBI5CjRFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlV29y",
-                  "a2JlbmNoVXBkYXRlRmF0aGVyEIUEEi4KKUVudGl0eUV2ZW50VHlwZV9FbnRp",
-                  "dHlFdmVudFR5cGVFbnRpdHlMb2NrENgEEjAKK0VudGl0eUV2ZW50VHlwZV9F",
-                  "bnRpdHlFdmVudFR5cGVFbnRpdHlVbkxvY2sQ2QQSOwo2RW50aXR5RXZlbnRU",
-                  "eXBlX0VudGl0eUV2ZW50VHlwZVJlZ2lzdGVyRW50aXR5Q29kZUV2ZW50ENoE",
-                  "EjoKNUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVEZXN0cm95RW50",
-                  "aXR5Q29kZUV2ZW50ENsEEisKJkVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVu",
-                  "dFR5cGVCZUNsaWNrENwEEjMKLkVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVu",
-                  "dFR5cGVVcGRhdGVBbmltYXRpb24Q3QQSLgopRW50aXR5RXZlbnRUeXBlX0Vu",
-                  "dGl0eUV2ZW50VHlwZUJlT3BlcmF0ZWQQ3gQSNAovRW50aXR5RXZlbnRUeXBl",
-                  "X0VudGl0eUV2ZW50VHlwZUVudGl0eUxvY2tVcGRhdGUQ3wQSLwoqRW50aXR5",
-                  "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVVwZGF0ZUF1ZGlvEOAEEjUKMEVu",
-                  "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVQbGF5ZXJBZGREaXlBdWRp",
-                  "bxDhBBI1CjBFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGxheWVy",
-                  "R2V0RGl5QXVkaW8Q4gQSMgotRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50",
-                  "VHlwZVVwZGF0ZVVzZUVtb2ppEOMEEjcKMkVudGl0eUV2ZW50VHlwZV9FbnRp",
-                  "dHlFdmVudFR5cGVBcHBseUVudGl0eVRlbXBsYXRlEOQEEjUKMEVudGl0eUV2",
-                  "ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVVcGRhdGVNYXBUZW1wbGF0ZRDlBBI1",
-                  "CjBFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlTW9uc3RlckxvY2tQ",
-                  "bGF5ZXIQ5gQSOAozRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVBs",
-                  "YXllckZvcmNlRXhpdEZpZ2h0EOcEEjIKLUVudGl0eUV2ZW50VHlwZV9FbnRp",
-                  "dHlFdmVudFR5cGVTZW5kTmVhcmJ5Q2hhdBDoBxI+CjlFbnRpdHlFdmVudFR5",
-                  "cGVfRW50aXR5RXZlbnRUeXBlU2VuZE5lYXJUb0NvZGVFbnRpdHlieUNoYXQQ",
-                  "6QcSKwolRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZU51bU1heBD/",
-                  "/wMq5gEKDUV2ZW50Q29kZVR5cGUSJgoiRXZlbnRDb2RlVHlwZV9FdmVudENv",
-                  "ZGVUeXBlVW5rbm93bhAAEiUKIUV2ZW50Q29kZVR5cGVfRXZlbnRDb2RlVHlw",
-                  "ZVNlcnZlchABEioKJkV2ZW50Q29kZVR5cGVfRXZlbnRDb2RlVHlwZUVudGl0",
-                  "eUV2ZW50EAISLworRXZlbnRDb2RlVHlwZV9FdmVudENvZGVUeXBlUmVjZWl2",
-                  "ZUV2ZW50Q2FsbBADEikKJUV2ZW50Q29kZVR5cGVfRXZlbnRDb2RlVHlwZUVu",
-                  "dGl0eVR5cGUQBCqHDgoTRW50aXR5Q29kZUV2ZW50VHlwZRIyCi5FbnRpdHlD",
-                  "b2RlRXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVVbmtub3duEAASNAow",
-                  "RW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlQmVDbGlj",
-                  "a2VkEGUSNAowRW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRU",
-                  "eXBlUG9zVXBkYXRlEGYSMwovRW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlD",
-                  "b2RlRXZlbnRUeXBlQmVBdHRhY2sQZxIxCi1FbnRpdHlDb2RlRXZlbnRUeXBl",
-                  "X0VudGl0eUNvZGVFdmVudFR5cGVBdHRhY2sQaBIvCitFbnRpdHlDb2RlRXZl",
-                  "bnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVEZWFkEGkSMgouRW50aXR5Q29k",
-                  "ZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlT25Ub3VjaBBqEjYKMkVu",
-                  "dGl0eUNvZGVFdmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZUZyYW1lVXBk",
-                  "YXRlEGsSNQoxRW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRU",
-                  "eXBlRnVlbFVwZGF0ZRBsEjMKL0VudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5",
-                  "Q29kZUV2ZW50VHlwZVVzZVNraWxsEG0SNQoxRW50aXR5Q29kZUV2ZW50VHlw",
-                  "ZV9FbnRpdHlDb2RlRXZlbnRUeXBlQ2FuT3BlcmF0ZRBuEjEKLUVudGl0eUNv",
-                  "ZGVFdmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZU1pcnJvchBwEjQKMEVu",
-                  "dGl0eUNvZGVFdmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZUNvbXBvbmVu",
-                  "dBBxEjsKN0VudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlw",
-                  "ZVJlY2VpdmVFdmVudENhbGwQchI0CjBFbnRpdHlDb2RlRXZlbnRUeXBlX0Vu",
-                  "dGl0eUNvZGVFdmVudFR5cGVWYXJDaGFuZ2UQcxI7CjdFbnRpdHlDb2RlRXZl",
-                  "bnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVFbnRpdHlCZVN0YW1wZWRlEHQS",
-                  "Pwo7RW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlRW50",
-                  "aXR5T3ZlckJlU3RhbXBlZGUQdRIyCi5FbnRpdHlDb2RlRXZlbnRUeXBlX0Vu",
-                  "dGl0eUNvZGVFdmVudFR5cGVPbkJ1aWxkEHYSNAowRW50aXR5Q29kZUV2ZW50",
-                  "VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlRW50ZXJSb29tEHcSOQo1RW50aXR5",
-                  "Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlSW5wdXRLZXlBY3Rp",
-                  "b24QeRIzCi9FbnRpdHlDb2RlRXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5",
-                  "cGVLZXlwcmVzcxB6EjIKLkVudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5Q29k",
-                  "ZUV2ZW50VHlwZVVzZUl0ZW0QfBIzCi9FbnRpdHlDb2RlRXZlbnRUeXBlX0Vu",
-                  "dGl0eUNvZGVFdmVudFR5cGVEcm9wSXRlbRB9EjUKMUVudGl0eUNvZGVFdmVu",
-                  "dFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZVBpY2t1cEl0ZW0QfhIzCi5FbnRp",
-                  "dHlDb2RlRXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVPbkNyYXNoEIEB",
-                  "EjoKNUVudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZURy",
-                  "b3BJdGVtV2l0aElkEIIBEjYKMUVudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5",
-                  "Q29kZUV2ZW50VHlwZU9uQ2xvbmVEZWwQgwESNgoxRW50aXR5Q29kZUV2ZW50",
-                  "VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlT25CZVBpY2tVcBCHARI3CjJFbnRp",
-                  "dHlDb2RlRXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVPbkJlUHV0RG93",
-                  "bhCIARI3CjJFbnRpdHlDb2RlRXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNv",
-                  "ZGVPbkJlRGVzdHJveRCJARI9CjhFbnRpdHlDb2RlRXZlbnRUeXBlX0VudGl0",
-                  "eUV2ZW50VHlwZUNvZGVQbGF5ZXJJc3N1ZVNldHRsZRCKARJCCj1FbnRpdHlD",
-                  "b2RlRXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUVudGl0aWVzUXVpY2tDb2Rl",
-                  "UnVuT3JTdG9wEIsBKloKDERhdGFTYXZlVHlwZRIkCiBEYXRhU2F2ZVR5cGVf",
-                  "RGF0YVNhdmVUeXBlVW5rbm93bhAAEiQKH0RhdGFTYXZlVHlwZV9EYXRhU2F2",
-                  "ZVR5cGVNYXBHb2IQ6QcqpAIKFFNjZW5lRm9yY2VSZW1vdmVUaW1lEjQKMFNj",
-                  "ZW5lRm9yY2VSZW1vdmVUaW1lX1NjZW5lRm9yY2VSZW1vdmVUaW1lVW5rbm93",
-                  "bhAAEjMKLlNjZW5lRm9yY2VSZW1vdmVUaW1lX1NjZW5lRm9yY2VSZW1vdmVU",
-                  "aW1lTGVhdmUQ0Q8SNgoxU2NlbmVGb3JjZVJlbW92ZVRpbWVfU2NlbmVGb3Jj",
-                  "ZVJlbW92ZVRpbWVUYXJnZXRSQxDSDxI1CjBTY2VuZUZvcmNlUmVtb3ZlVGlt",
-                  "ZV9TY2VuZUZvcmNlUmVtb3ZlVGltZVJ1blRpbWUQ0w8SMgotU2NlbmVGb3Jj",
-                  "ZVJlbW92ZVRpbWVfU2NlbmVGb3JjZVJlbW92ZVRpbWVEaXN0ENQPYgZwcm90",
-                  "bzM="));
-            descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-                new pbr::FileDescriptor[] { },
-                new pbr::GeneratedClrTypeInfo(new[] { typeof(global::MelandGame3.ServerMsgEventType), typeof(global::MelandGame3.ServerEventType), typeof(global::MelandGame3.WorldEventType), typeof(global::MelandGame3.GridEventType), typeof(global::MelandGame3.EntityEventType), typeof(global::MelandGame3.EventCodeType), typeof(global::MelandGame3.EntityCodeEventType), typeof(global::MelandGame3.DataSaveType), typeof(global::MelandGame3.SceneForceRemoveTime), }, null, null));
-        }
-        #endregion
-
+    #region Descriptor
+    /// <summary>File descriptor for server_event.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor; }
     }
-    #region Enums
-    public enum ServerMsgEventType
-    {
-        /// <summary>
-        /// 未知类型
-        /// </summary>
-        [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeUnknow")] ServerMsgEventTypeUnknow = 0,
-        /// <summary>
-        /// 收到消息
-        /// </summary>
-        [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeReceiveMsg")] ServerMsgEventTypeReceiveMsg = 1,
-        /// <summary>
-        /// 触发回调
-        /// </summary>
-        [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeCallBack")] ServerMsgEventTypeCallBack = 2,
-        /// <summary>
-        /// 消息超时
-        /// </summary>
-        [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeTimeOut")] ServerMsgEventTypeTimeOut = 3,
-    }
+    private static pbr::FileDescriptor descriptor;
 
-    public enum ServerEventType
-    {
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerUnknown")] ServerEventTypeServerUnknown = 0,
-        /// <summary>
-        /// 服务器驱动事件 10-99
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerAfterConfig")] ServerEventTypeServerAfterConfig = 10,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerMinutely")] ServerEventTypeServerMinutely = 11,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerHourly")] ServerEventTypeServerHourly = 12,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerDaily")] ServerEventTypeServerDaily = 13,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerConnClose")] ServerEventTypeServerConnClose = 14,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerConnConnect")] ServerEventTypeServerConnConnect = 15,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerTimer")] ServerEventTypeServerTimer = 16,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeSqlRollBack")] ServerEventTypeSqlRollBack = 17,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerEventCall")] ServerEventTypeServerEventCall = 18,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 角色事件 100-199
-        /// -------------------------------------------------------------------------
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerCreated")] ServerEventTypePlayerCreated = 100,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerOnline")] ServerEventTypePlayerOnline = 101,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerOffline")] ServerEventTypePlayerOffline = 102,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerNewDay")] ServerEventTypePlayerNewDay = 103,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerLvUp")] ServerEventTypePlayerLvUp = 104,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerResetProfile")] ServerEventTypePlayerResetProfile = 105,
-        /// <summary>
-        /// 技能更新
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUpdateSkill")] ServerEventTypePlayerUpdateSkill = 106,
-        /// <summary>
-        /// exp增加
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAddExp")] ServerEventTypePlayerAddExp = 107,
-        /// <summary>
-        /// exp扣除
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerDeductExp")] ServerEventTypePlayerDeductExp = 108,
-        /// <summary>
-        /// HP回复
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerReplyHp")] ServerEventTypePlayerReplyHp = 109,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeCalculatePlayerProfile")] ServerEventTypeCalculatePlayerProfile = 110,
-        /// <summary>
-        /// 玩家使用技能
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUseSkill")] ServerEventTypePlayerUseSkill = 111,
-        /// <summary>
-        /// 玩家被攻击
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerBeAttack")] ServerEventTypePlayerBeAttack = 112,
-        /// <summary>
-        /// 销毁item
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeDestoryItem")] ServerEventTypeDestoryItem = 114,
-        /// <summary>
-        /// 销毁所有item
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeDestoryAllItem")] ServerEventTypeDestoryAllItem = 115,
-        /// <summary>
-        /// 添加item
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeAddItem")] ServerEventTypeAddItem = 116,
-        /// <summary>
-        /// 玩家兑换cdkey
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeRedeemCDKey")] ServerEventTypeRedeemCdkey = 117,
-        /// <summary>
-        /// 玩家神庙等级升级
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeDungeon")] ServerEventTypeDungeon = 118,
-        /// <summary>
-        /// send chat message
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeSendChatMsg")] ServerEventTypeSendChatMsg = 119,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeSendUpdateChatState")] ServerEventTypeSendUpdateChatState = 120,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeSendRemoveChatMsg")] ServerEventTypeSendRemoveChatMsg = 121,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 来自场景的通知 200-1000
-        /// -------------------------------------------------------------------------
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventZoneSendToPlayer")] ServerEventZoneSendToPlayer = 200,
-        [pbr::OriginalName("ServerEventType_Z2SZoneBroadcast")] Z2SzoneBroadcast = 202,
-        [pbr::OriginalName("ServerEventType_ServerEventEntityAnimationCreate")] ServerEventEntityAnimationCreate = 203,
-        [pbr::OriginalName("ServerEventType_ServerEventEntityAnimationUpdate")] ServerEventEntityAnimationUpdate = 204,
-        [pbr::OriginalName("ServerEventType_ServerEventEntityAnimationDel")] ServerEventEntityAnimationDel = 205,
-        [pbr::OriginalName("ServerEventType_Z2SGobMapSave")] Z2SgobMapSave = 206,
-        [pbr::OriginalName("ServerEventType_ServerEventEntityPlayerUpdate")] ServerEventEntityPlayerUpdate = 207,
-        [pbr::OriginalName("ServerEventType_Z2SEntityTemplateSave")] Z2SentityTemplateSave = 208,
-        [pbr::OriginalName("ServerEventType_Z2SPlayerOffline")] Z2SplayerOffline = 210,
-        [pbr::OriginalName("ServerEventType_Z2SPlayerManorData")] Z2SplayerManorData = 211,
-        /// <summary>
-        ///保存实体
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventEntitySave")] ServerEventEntitySave = 213,
-        /// <summary>
-        /// 建造
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_Z2SBuildDelete")] Z2SbuildDelete = 242,
-        [pbr::OriginalName("ServerEventType_ServerEventBuild")] ServerEventBuild = 243,
-        [pbr::OriginalName("ServerEventType_Z2SPuppetDelete")] Z2SpuppetDelete = 244,
-        /// <summary>
-        ///数据落地
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_Z2SPlayerSave")] Z2SplayerSave = 399,
-        [pbr::OriginalName("ServerEventType_Z2SEntitySave")] Z2SentitySave = 400,
-        [pbr::OriginalName("ServerEventType_Z2SManorPacket")] Z2SmanorPacket = 401,
-        /// <summary>
-        /// 代码块 500-700
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventCodeExecute")] ServerEventCodeExecute = 500,
-        [pbr::OriginalName("ServerEventType_ServerEventUseItemFromZone")] ServerEventUseItemFromZone = 501,
-        [pbr::OriginalName("ServerEventType_ServerEventDropItemFromZone")] ServerEventDropItemFromZone = 502,
-        [pbr::OriginalName("ServerEventType_ServerEventBotBuildFromZone")] ServerEventBotBuildFromZone = 503,
-        [pbr::OriginalName("ServerEventType_ServerEventMakeItemFromZone")] ServerEventMakeItemFromZone = 505,
-        [pbr::OriginalName("ServerEventType_ServerEventTakeWorkbenchItemByCidFromZone")] ServerEventTakeWorkbenchItemByCidFromZone = 506,
-        [pbr::OriginalName("ServerEventType_ServerEventGiveWorkbenchItemByCidFromZone")] ServerEventGiveWorkbenchItemByCidFromZone = 507,
-        [pbr::OriginalName("ServerEventType_ServerEventPlayerCompleteChapter")] ServerEventPlayerCompleteChapter = 508,
-        [pbr::OriginalName("ServerEventType_ServerEventMissionEnter")] ServerEventMissionEnter = 509,
-        [pbr::OriginalName("ServerEventType_ServerEventAcceptTask")] ServerEventAcceptTask = 510,
-        [pbr::OriginalName("ServerEventType_ServerEventSubmitTask")] ServerEventSubmitTask = 511,
-        [pbr::OriginalName("ServerEventType_ServerEventComplateTask")] ServerEventComplateTask = 512,
-        [pbr::OriginalName("ServerEventType_ServerEventMissionEnterSceneMonitor")] ServerEventMissionEnterSceneMonitor = 513,
-        /// <summary>
-        /// 战斗
-        ///ServerEventType_Z2S_PickItem = 711;
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_Z2S_PlayerDead")] Z2SPlayerDead = 712,
-        [pbr::OriginalName("ServerEventType_ServerEventZ2SAddExpToBot")] ServerEventZ2SaddExpToBot = 715,
-        /// <summary>
-        /// 机器人
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventZ2SBotDead")] ServerEventZ2SbotDead = 731,
-        /// <summary>
-        /// 工作台
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_Z2SPlantDelete")] Z2SplantDelete = 753,
-        [pbr::OriginalName("ServerEventType_Z2SPetDelete")] Z2SpetDelete = 754,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// (机器人)事件 800-899
-        /// -------------------------------------------------------------------------
-        /// (机器人)更换装备
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotCreated")] ServerEventTypeBotCreated = 800,
-        /// <summary>
-        /// (机器人)升级
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotLvUp")] ServerEventTypeBotLvUp = 801,
-        /// <summary>
-        /// (机器人)更换装备
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeUpdateBotEquipment")] ServerEventTypeUpdateBotEquipment = 802,
-        /// <summary>
-        /// exp增加
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotAddExp")] ServerEventTypeBotAddExp = 803,
-        /// <summary>
-        /// HP回复
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotReplyHp")] ServerEventTypeBotReplyHp = 804,
-        /// <summary>
-        /// bot背包添加物品
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotAddObject")] ServerEventTypeBotAddObject = 805,
-        /// <summary>
-        /// 召回机器人
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeRecallBot")] ServerEventTypeRecallBot = 806,
-        /// <summary>
-        /// 机器人使用技能
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotUseSkill")] ServerEventTypeBotUseSkill = 807,
-        /// <summary>
-        /// 玩家被攻击
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotBeAttack")] ServerEventTypeBotBeAttack = 808,
-        /// <summary>
-        /// 添加物品（带属性的）
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeBotAddItem")] ServerEventTypeBotAddItem = 809,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 背包event协议号 900 - 999
-        /// -------------------------------------------------------------------------
-        /// 使用消耗品
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUseConsumable")] ServerEventTypePlayerUseConsumable = 902,
-        /// <summary>
-        /// 添加物品
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAddObject")] ServerEventTypePlayerAddObject = 903,
-        /// <summary>
-        /// 拾取物品
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_Z2SPickFalling")] Z2SpickFalling = 904,
-        /// <summary>
-        /// 拾取包裹
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_Z2SPickFallingBox")] Z2SpickFallingBox = 905,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUseObject")] ServerEventTypePlayerUseObject = 907,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeAddItemByOperateBubble")] ServerEventTypeAddItemByOperateBubble = 908,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeTakeItemByOperateBubble")] ServerEventTypeTakeItemByOperateBubble = 909,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeReplaceItemByOperateBubble")] ServerEventTypeReplaceItemByOperateBubble = 910,
-        /// <summary>
-        /// 重置玩家nft道具的使用状态
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeResetPlayerNftStatus")] ServerEventTypeResetPlayerNftStatus = 911,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeUpdatePlayerNFTs")] ServerEventTypeUpdatePlayerNfts = 912,
-        /// <summary>
-        /// 更新第三方nft道具的过期时间
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeUpdateThirdNftTimeOut")] ServerEventTypeUpdateThirdNftTimeOut = 915,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 任务系统 1000-1050
-        /// -------------------------------------------------------------------------
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAcceptedTask")] ServerEventTypePlayerAcceptedTask = 1001,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerSubmittedTask")] ServerEventTypePlayerSubmittedTask = 1002,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeUpdateNpcTaskNoticeType")] ServerEventTypeUpdateNpcTaskNoticeType = 1003,
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerTaskStateUpdate")] ServerEventTypePlayerTaskStateUpdate = 1005,
-        /// <summary>
-        /// 任务
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTaskProgressChange")] ServerEventTaskProgressChange = 1049,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 邮件event协议号 1050 - 1100
-        /// -------------------------------------------------------------------------
-        /// 添加个人邮件
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAddMail")] ServerEventTypePlayerAddMail = 1051,
-        /// <summary>
-        /// 添加全服邮件
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeServerSendMailByTemplateId")] ServerEventTypeServerSendMailByTemplateId = 1052,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 大世界event协议号 9000 - 10000
-        /// -------------------------------------------------------------------------
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeLandGroupCreate")] ServerEventTypeLandGroupCreate = 9000,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeLandGroupUpdate")] ServerEventTypeLandGroupUpdate = 9001,
-        [pbr::OriginalName("ServerEventType_ServerEventTypeLandGroupRemove")] ServerEventTypeLandGroupRemove = 9002,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 最大事件数
-        /// </summary>
-        [pbr::OriginalName("ServerEventType_ServerEventTypeNumMax")] ServerEventTypeNumMax = 65535,
+    static ServerEventReflection() {
+      byte[] descriptorData = global::System.Convert.FromBase64String(
+          string.Concat(
+            "ChJzZXJ2ZXJfZXZlbnQucHJvdG8SC01lbGFuZEdhbWUzKt8BChJTZXJ2ZXJN",
+            "c2dFdmVudFR5cGUSLworU2VydmVyTXNnRXZlbnRUeXBlX1NlcnZlck1zZ0V2",
+            "ZW50VHlwZVVua25vdxAAEjMKL1NlcnZlck1zZ0V2ZW50VHlwZV9TZXJ2ZXJN",
+            "c2dFdmVudFR5cGVSZWNlaXZlTXNnEAESMQotU2VydmVyTXNnRXZlbnRUeXBl",
+            "X1NlcnZlck1zZ0V2ZW50VHlwZUNhbGxCYWNrEAISMAosU2VydmVyTXNnRXZl",
+            "bnRUeXBlX1NlcnZlck1zZ0V2ZW50VHlwZVRpbWVPdXQQAyqBJgoPU2VydmVy",
+            "RXZlbnRUeXBlEjAKLFNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVT",
+            "ZXJ2ZXJVbmtub3duEAASNAowU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50",
+            "VHlwZVNlcnZlckFmdGVyQ29uZmlnEAoSMQotU2VydmVyRXZlbnRUeXBlX1Nl",
+            "cnZlckV2ZW50VHlwZVNlcnZlck1pbnV0ZWx5EAsSLworU2VydmVyRXZlbnRU",
+            "eXBlX1NlcnZlckV2ZW50VHlwZVNlcnZlckhvdXJseRAMEi4KKlNlcnZlckV2",
+            "ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVTZXJ2ZXJEYWlseRANEjIKLlNlcnZl",
+            "ckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVTZXJ2ZXJDb25uQ2xvc2UQDhI0",
+            "CjBTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlU2VydmVyQ29ubkNv",
+            "bm5lY3QQDxIuCipTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlU2Vy",
+            "dmVyVGltZXIQEBIuCipTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBl",
+            "U3FsUm9sbEJhY2sQERIyCi5TZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRU",
+            "eXBlU2VydmVyRXZlbnRDYWxsEBISMAosU2VydmVyRXZlbnRUeXBlX1NlcnZl",
+            "ckV2ZW50VHlwZVBsYXllckNyZWF0ZWQQZBIvCitTZXJ2ZXJFdmVudFR5cGVf",
+            "U2VydmVyRXZlbnRUeXBlUGxheWVyT25saW5lEGUSMAosU2VydmVyRXZlbnRU",
+            "eXBlX1NlcnZlckV2ZW50VHlwZVBsYXllck9mZmxpbmUQZhIvCitTZXJ2ZXJF",
+            "dmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyTmV3RGF5EGcSLQopU2Vy",
+            "dmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVBsYXllckx2VXAQaBI1CjFT",
+            "ZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyUmVzZXRQcm9m",
+            "aWxlEGkSNAowU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVBsYXll",
+            "clVwZGF0ZVNraWxsEGoSLworU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50",
+            "VHlwZVBsYXllckFkZEV4cBBrEjIKLlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJF",
+            "dmVudFR5cGVQbGF5ZXJEZWR1Y3RFeHAQbBIwCixTZXJ2ZXJFdmVudFR5cGVf",
+            "U2VydmVyRXZlbnRUeXBlUGxheWVyUmVwbHlIcBBtEjkKNVNlcnZlckV2ZW50",
+            "VHlwZV9TZXJ2ZXJFdmVudFR5cGVDYWxjdWxhdGVQbGF5ZXJQcm9maWxlEG4S",
+            "MQotU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVBsYXllclVzZVNr",
+            "aWxsEG8SMQotU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVBsYXll",
+            "ckJlQXR0YWNrEHASLgoqU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlw",
+            "ZURlc3RvcnlJdGVtEHISMQotU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50",
+            "VHlwZURlc3RvcnlBbGxJdGVtEHMSKgomU2VydmVyRXZlbnRUeXBlX1NlcnZl",
+            "ckV2ZW50VHlwZUFkZEl0ZW0QdBIuCipTZXJ2ZXJFdmVudFR5cGVfU2VydmVy",
+            "RXZlbnRUeXBlUmVkZWVtQ0RLZXkQdRIqCiZTZXJ2ZXJFdmVudFR5cGVfU2Vy",
+            "dmVyRXZlbnRUeXBlRHVuZ2VvbhB2Ei4KKlNlcnZlckV2ZW50VHlwZV9TZXJ2",
+            "ZXJFdmVudFR5cGVTZW5kQ2hhdE1zZxB3EjYKMlNlcnZlckV2ZW50VHlwZV9T",
+            "ZXJ2ZXJFdmVudFR5cGVTZW5kVXBkYXRlQ2hhdFN0YXRlEHgSNAowU2VydmVy",
+            "RXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVNlbmRSZW1vdmVDaGF0TXNnEHkS",
+            "MAorU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50Wm9uZVNlbmRUb1BsYXll",
+            "chDIARIlCiBTZXJ2ZXJFdmVudFR5cGVfWjJTWm9uZUJyb2FkY2FzdBDKARI1",
+            "CjBTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRFbnRpdHlBbmltYXRpb25D",
+            "cmVhdGUQywESNQowU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50RW50aXR5",
+            "QW5pbWF0aW9uVXBkYXRlEMwBEjIKLVNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJF",
+            "dmVudEVudGl0eUFuaW1hdGlvbkRlbBDNARIiCh1TZXJ2ZXJFdmVudFR5cGVf",
+            "WjJTR29iTWFwU2F2ZRDOARIyCi1TZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZl",
+            "bnRFbnRpdHlQbGF5ZXJVcGRhdGUQzwESKgolU2VydmVyRXZlbnRUeXBlX1oy",
+            "U0VudGl0eVRlbXBsYXRlU2F2ZRDQARIlCiBTZXJ2ZXJFdmVudFR5cGVfWjJT",
+            "UGxheWVyT2ZmbGluZRDSARInCiJTZXJ2ZXJFdmVudFR5cGVfWjJTUGxheWVy",
+            "TWFub3JEYXRhENMBEioKJVNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudEVu",
+            "dGl0eVNhdmUQ1QESIwoeU2VydmVyRXZlbnRUeXBlX1oyU0J1aWxkRGVsZXRl",
+            "EPIBEiUKIFNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudEJ1aWxkEPMBEiQK",
+            "H1NlcnZlckV2ZW50VHlwZV9aMlNQdXBwZXREZWxldGUQ9AESIgodU2VydmVy",
+            "RXZlbnRUeXBlX1oyU1BsYXllclNhdmUQjwMSIgodU2VydmVyRXZlbnRUeXBl",
+            "X1oyU0VudGl0eVNhdmUQkAMSIwoeU2VydmVyRXZlbnRUeXBlX1oyU01hbm9y",
+            "UGFja2V0EJEDEisKJlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudENvZGVF",
+            "eGVjdXRlEPQDEi8KKlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFVzZUl0",
+            "ZW1Gcm9tWm9uZRD1AxIwCitTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRE",
+            "cm9wSXRlbUZyb21ab25lEPYDEjAKK1NlcnZlckV2ZW50VHlwZV9TZXJ2ZXJF",
+            "dmVudEJvdEJ1aWxkRnJvbVpvbmUQ9wMSMAorU2VydmVyRXZlbnRUeXBlX1Nl",
+            "cnZlckV2ZW50TWFrZUl0ZW1Gcm9tWm9uZRD5AxI+CjlTZXJ2ZXJFdmVudFR5",
+            "cGVfU2VydmVyRXZlbnRUYWtlV29ya2JlbmNoSXRlbUJ5Q2lkRnJvbVpvbmUQ",
+            "+gMSPgo5U2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50R2l2ZVdvcmtiZW5j",
+            "aEl0ZW1CeUNpZEZyb21ab25lEPsDEjUKMFNlcnZlckV2ZW50VHlwZV9TZXJ2",
+            "ZXJFdmVudFBsYXllckNvbXBsZXRlQ2hhcHRlchD8AxIsCidTZXJ2ZXJFdmVu",
+            "dFR5cGVfU2VydmVyRXZlbnRNaXNzaW9uRW50ZXIQ/QMSKgolU2VydmVyRXZl",
+            "bnRUeXBlX1NlcnZlckV2ZW50QWNjZXB0VGFzaxD+AxIqCiVTZXJ2ZXJFdmVu",
+            "dFR5cGVfU2VydmVyRXZlbnRTdWJtaXRUYXNrEP8DEiwKJ1NlcnZlckV2ZW50",
+            "VHlwZV9TZXJ2ZXJFdmVudENvbXBsYXRlVGFzaxCABBI4CjNTZXJ2ZXJFdmVu",
+            "dFR5cGVfU2VydmVyRXZlbnRNaXNzaW9uRW50ZXJTY2VuZU1vbml0b3IQgQQS",
+            "IwoeU2VydmVyRXZlbnRUeXBlX1oyU19QbGF5ZXJEZWFkEMgFEi4KKVNlcnZl",
+            "ckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFoyU0FkZEV4cFRvQm90EMsFEioKJVNl",
+            "cnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFoyU0JvdERlYWQQ2wUSIwoeU2Vy",
+            "dmVyRXZlbnRUeXBlX1oyU1BsYW50RGVsZXRlEPEFEiEKHFNlcnZlckV2ZW50",
+            "VHlwZV9aMlNQZXREZWxldGUQ8gUSLgopU2VydmVyRXZlbnRUeXBlX1NlcnZl",
+            "ckV2ZW50VHlwZUJvdENyZWF0ZWQQoAYSKwomU2VydmVyRXZlbnRUeXBlX1Nl",
+            "cnZlckV2ZW50VHlwZUJvdEx2VXAQoQYSNgoxU2VydmVyRXZlbnRUeXBlX1Nl",
+            "cnZlckV2ZW50VHlwZVVwZGF0ZUJvdEVxdWlwbWVudBCiBhItCihTZXJ2ZXJF",
+            "dmVudFR5cGVfU2VydmVyRXZlbnRUeXBlQm90QWRkRXhwEKMGEi4KKVNlcnZl",
+            "ckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVCb3RSZXBseUhwEKQGEjAKK1Nl",
+            "cnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVCb3RBZGRPYmplY3QQpQYS",
+            "LQooU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVJlY2FsbEJvdBCm",
+            "BhIvCipTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlQm90VXNlU2tp",
+            "bGwQpwYSLwoqU2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZUJvdEJl",
+            "QXR0YWNrEKgGEi4KKVNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVC",
+            "b3RBZGRJdGVtEKkGEjcKMlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5",
+            "cGVQbGF5ZXJVc2VDb25zdW1hYmxlEIYHEjMKLlNlcnZlckV2ZW50VHlwZV9T",
+            "ZXJ2ZXJFdmVudFR5cGVQbGF5ZXJBZGRPYmplY3QQhwcSIwoeU2VydmVyRXZl",
+            "bnRUeXBlX1oyU1BpY2tGYWxsaW5nEIgHEiYKIVNlcnZlckV2ZW50VHlwZV9a",
+            "MlNQaWNrRmFsbGluZ0JveBCJBxIzCi5TZXJ2ZXJFdmVudFR5cGVfU2VydmVy",
+            "RXZlbnRUeXBlUGxheWVyVXNlT2JqZWN0EIsHEjoKNVNlcnZlckV2ZW50VHlw",
+            "ZV9TZXJ2ZXJFdmVudFR5cGVBZGRJdGVtQnlPcGVyYXRlQnViYmxlEIwHEjsK",
+            "NlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVUYWtlSXRlbUJ5T3Bl",
+            "cmF0ZUJ1YmJsZRCNBxI+CjlTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRU",
+            "eXBlUmVwbGFjZUl0ZW1CeU9wZXJhdGVCdWJibGUQjgcSOAozU2VydmVyRXZl",
+            "bnRUeXBlX1NlcnZlckV2ZW50VHlwZVJlc2V0UGxheWVyTmZ0U3RhdHVzEI8H",
+            "EjQKL1NlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVVcGRhdGVQbGF5",
+            "ZXJORlRzEJAHEjkKNFNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVV",
+            "cGRhdGVUaGlyZE5mdFRpbWVPdXQQkwcSNgoxU2VydmVyRXZlbnRUeXBlX1Nl",
+            "cnZlckV2ZW50VHlwZVBsYXllckFjY2VwdGVkVGFzaxDpBxI3CjJTZXJ2ZXJF",
+            "dmVudFR5cGVfU2VydmVyRXZlbnRUeXBlUGxheWVyU3VibWl0dGVkVGFzaxDq",
+            "BxI7CjZTZXJ2ZXJFdmVudFR5cGVfU2VydmVyRXZlbnRUeXBlVXBkYXRlTnBj",
+            "VGFza05vdGljZVR5cGUQ6wcSOQo0U2VydmVyRXZlbnRUeXBlX1NlcnZlckV2",
+            "ZW50VHlwZVBsYXllclRhc2tTdGF0ZVVwZGF0ZRDtBxIyCi1TZXJ2ZXJFdmVu",
+            "dFR5cGVfU2VydmVyRXZlbnRUYXNrUHJvZ3Jlc3NDaGFuZ2UQmQgSMQosU2Vy",
+            "dmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVBsYXllckFkZE1haWwQmwgS",
+            "Pgo5U2VydmVyRXZlbnRUeXBlX1NlcnZlckV2ZW50VHlwZVNlcnZlclNlbmRN",
+            "YWlsQnlUZW1wbGF0ZUlkEJwIEjMKLlNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJF",
+            "dmVudFR5cGVMYW5kR3JvdXBDcmVhdGUQqEYSMwouU2VydmVyRXZlbnRUeXBl",
+            "X1NlcnZlckV2ZW50VHlwZUxhbmRHcm91cFVwZGF0ZRCpRhIzCi5TZXJ2ZXJF",
+            "dmVudFR5cGVfU2VydmVyRXZlbnRUeXBlTGFuZEdyb3VwUmVtb3ZlEKpGEisK",
+            "JVNlcnZlckV2ZW50VHlwZV9TZXJ2ZXJFdmVudFR5cGVOdW1NYXgQ//8DKpwl",
+            "Cg5Xb3JsZEV2ZW50VHlwZRIoCiRXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50",
+            "VHlwZVVua25vd24QABIrCidXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlw",
+            "ZVNlbmRUb1pvbmUQARIpCiVXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlw",
+            "ZUVudGVyTWFwEAISKQolV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVM",
+            "ZWF2ZU1hcBADEiUKIVdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlTW92",
+            "ZRAEEigKJFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlTWFwU2F2ZRAF",
+            "EjQKMFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUmVsb2FkUmVzb3Vy",
+            "Y2VQb2ludBAGEi8KK1dvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlSW5p",
+            "dE1hcEVsZW1lbnQQBxIrCidXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlw",
+            "ZUVudGl0eVNhdmUQCBIsCihXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlw",
+            "ZVBsYXllclJlc2V0EAkSLworV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5",
+            "cGVSZXNldEFyZWFTdGF0ZRAKEjMKL1dvcmxkRXZlbnRUeXBlX1dvcmxkRXZl",
+            "bnRUeXBlRGl1cm5hbEN5Y2xlQ2hhbmdlEB4SMAosV29ybGRFdmVudFR5cGVf",
+            "V29ybGRFdmVudFR5cGVFbnRpdHlFdmVudENhbGwQZRI1CjFXb3JsZEV2ZW50",
+            "VHlwZV9Xb3JsZEV2ZW50VHlwZUFkZEVudGl0eVRvQ2h1bmtHcmlkEGYSKgom",
+            "V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVHZXRFbnRpdHkQaBI4CjRX",
+            "b3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUVudGl0eUV2ZW50Q2FsbE5v",
+            "UmV0dXJuEGkSPAo4V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVSZXN0",
+            "YXJ0QWxsRW50aXRpZXNDb2RlQmxvY2sQahIzCi9Xb3JsZEV2ZW50VHlwZV9X",
+            "b3JsZEV2ZW50VHlwZVJlc291cmNlTG9hZEZpbmlzaBBrEjEKLVdvcmxkRXZl",
+            "bnRUeXBlX1dvcmxkRXZlbnRUeXBlVXBkYXRlV2lkZ2V0QXR0chBsEjkKNVdv",
+            "cmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUnVuQ29kZUJsb2NrQnlQbGF5",
+            "ZXJBcmVhEG0SOQo1V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVFbnRp",
+            "dGllc1Jlc3RhcnRDb2RlQmxvY2sQbhI2CjJXb3JsZEV2ZW50VHlwZV9Xb3Js",
+            "ZEV2ZW50VHlwZVB1YmxpY0FyZWFSZXN0YXJ0Q29kZRBwEjYKMldvcmxkRXZl",
+            "bnRUeXBlX1dvcmxkRXZlbnRUeXBlUGxheWVyQXJlYVJlc3RhcnRDb2RlEHES",
+            "MwovV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVSZW1vdmVFbnRpdHlD",
+            "aGFuZ2UQchItCilXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVJldml2",
+            "ZUVudGl0eRBzEjIKLldvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlUmVz",
+            "dGFydER1bmdlb25NYXAQdBI6CjZXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50",
+            "VHlwZUVudGl0aWVzRXhlY3V0ZVN0YXJ0RXZlbnQQdRI2CjJXb3JsZEV2ZW50",
+            "VHlwZV9Xb3JsZEV2ZW50VHlwZUVudGl0aWVzU3RvcENvZGVCbG9jaxB2EjQK",
+            "MFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlQXBwbHlFbnRpdHlUZW1w",
+            "bGF0ZRB4EjUKMVdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlQWRkQ2Ft",
+            "ZXJhVG9DaHVua0dyaWQQeRI0CjBXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50",
+            "VHlwZVpvbmVBcmVhUmVzdGFydENvZGUQehJACjxXb3JsZEV2ZW50VHlwZV9X",
+            "b3JsZEV2ZW50VHlwZUFkZEVudGl0eVdpdGhvdXRWaWV3VG9DaHVua0dyaWQQ",
+            "exI2CjJXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUNvZGVFdmVudE5v",
+            "dGlmaWNhdGlvbhB8EjkKNVdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBl",
+            "UHVibGljQXJlYVJlc2V0Q29kZUJsb2NrEH0SQwo/V29ybGRFdmVudFR5cGVf",
+            "V29ybGRFdmVudFR5cGVFbnRpdGllc0V4ZWN1dGVRdWlja0NvZGVTdGFydEV2",
+            "ZW50EH4SPAo4V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVSZXNldEVu",
+            "dGl0aWVzUXVpY2tDb2RlU3RhdGUQfxI7CjZXb3JsZEV2ZW50VHlwZV9Xb3Js",
+            "ZEV2ZW50VHlwZUVudGl0aWVzUXVpY2tDb2RlVGFiRGF0YXMQgAESLQooV29y",
+            "bGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVUb0dyaWRFdmVudBCWARIrCiZX",
+            "b3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVpvb21FdmVudBCXARIxCixX",
+            "b3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVBsYXllckFkZEVudGl0eRDJ",
+            "ARIxCixXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVBsYXllckRlbEVu",
+            "dGl0eRDKARIyCi1Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVBsYXll",
+            "ck1vdmVFbnRpdHkQywESLgopV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5",
+            "cGVCb3RBZGRFbnRpdHkQzAESOAozV29ybGRFdmVudFR5cGVfV29ybGRFdmVu",
+            "dFR5cGVQbGF5ZXJEZWxFbnRpdHlCeVNjZW5lEM0BEjgKM1dvcmxkRXZlbnRU",
+            "eXBlX1dvcmxkRXZlbnRUeXBlUGxheWVyQWRkUmVzb3VyY2VQb2ludBDSARI4",
+            "CjNXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVBsYXllckRlbFJlc291",
+            "cmNlUG9pbnQQ0wESNAovV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVQ",
+            "bGF5ZXJBZGRCb3JuUG9pbnQQ1AESNAovV29ybGRFdmVudFR5cGVfV29ybGRF",
+            "dmVudFR5cGVQbGF5ZXJEZWxCb3JuUG9pbnQQ1QESJwoiV29ybGRFdmVudFR5",
+            "cGVfUzJaTGVzc29uQXJlYUNyZWF0ZRDWARIkCh9Xb3JsZEV2ZW50VHlwZV9T",
+            "MlpMZXNzb25BcmVhRGVsENcBEiYKIVdvcmxkRXZlbnRUeXBlX1MyWkxlc3Nv",
+            "bkFyZWFRdWVyeRDYARInCiJXb3JsZEV2ZW50VHlwZV9TMlpMZXNzb25BcmVh",
+            "VXBkYXRlENkBEicKIldvcmxkRXZlbnRUeXBlX1MyWkJlYXV0eUFyZWFVcGRh",
+            "dGUQ2gESJQogV29ybGRFdmVudFR5cGVfUzJaTGVzc29uQXJlYUNvcHkQ2wES",
+            "LAonV29ybGRFdmVudFR5cGVfUzJaTGVzc29uQXJlYUluZGV4VXBkYXRlENwB",
+            "EicKIldvcmxkRXZlbnRUeXBlX1MyWkxlc3NvbkFyZWFVbmxvY2sQ3QESLgop",
+            "V29ybGRFdmVudFR5cGVfUzJaTGVzc29uUGxheWVyQXJyaXZlZEFyZWEQ3gES",
+            "MgotV29ybGRFdmVudFR5cGVfUzJaTGVzc29uQXJlYVJ1blF1aWNrQ29kZVN0",
+            "YXJ0EN8BEjAKK1dvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlQWRkVGls",
+            "ZU1hcFNpZ24Q4AESMwouV29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVS",
+            "ZW1vdmVUaWxlTWFwU2lnbhDhARIqCiVXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2",
+            "ZW50VHlwZVNwYXduQm90EK0CEisKJldvcmxkRXZlbnRUeXBlX1dvcmxkRXZl",
+            "bnRUeXBlUmVjYWxsQm90EK4CEi0KKFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZl",
+            "bnRUeXBlSXNzdWVTZXR0bGUQkQMSMAorV29ybGRFdmVudFR5cGVfV29ybGRF",
+            "dmVudFR5cGVHZXRFbnRpdHlJc3N1ZRCSAxI0Ci9Xb3JsZEV2ZW50VHlwZV9X",
+            "b3JsZEV2ZW50VHlwZVdvcmtiZW5jaFVwZGF0ZVN1YhD6AxI3CjJXb3JsZEV2",
+            "ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVdvcmtiZW5jaFVwZGF0ZUZhdGhlchD7",
+            "AxIxCixXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVNwYXduUGFseWVy",
+            "QXJlYRDYBBIwCitXb3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZU1vdmVQ",
+            "YWx5ZXJBcmVhENkEEjIKLVdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBl",
+            "UmVtb3ZlUGFseWVyQXJlYRDaBBIzCi5Xb3JsZEV2ZW50VHlwZV9Xb3JsZEV2",
+            "ZW50VHlwZVF1ZXJ5TXlQYWx5ZXJBcmVhENsEEi4KKVdvcmxkRXZlbnRUeXBl",
+            "X1dvcmxkRXZlbnRUeXBlU2V0R2xvYmFsVmFyENwEEjIKLVdvcmxkRXZlbnRU",
+            "eXBlX1dvcmxkRXZlbnRUeXBlUXVlcnlQYWx5ZXJBcmVhcxDdBBI1CjBXb3Js",
+            "ZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVF1ZXJ5UGFseWVyQXJlYUJ5UmMQ",
+            "3gQSHwoaV29ybGRFdmVudFR5cGVfUzJaTWFub3JCdXkQ4gQSJwoiV29ybGRF",
+            "dmVudFR5cGVfUzJaTWFub3JCdXlNYXJrU3luYxDjBBIqCiVXb3JsZEV2ZW50",
+            "VHlwZV9TMlpNYW5vclRlbXBsYXRlUGFja2V0EOQEEicKIldvcmxkRXZlbnRU",
+            "eXBlX1MyWk1hbm9yVGVtcGxhdGVVc2UQ5QQSOQo0V29ybGRFdmVudFR5cGVf",
+            "V29ybGRFdmVudFR5cGVUZWFjaGVyUmVzZXRQdWJsaWNNYW5vchDmBBI2CjFX",
+            "b3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZUNyZWF0QXJlYUJ5RW1wdHlB",
+            "cmVhEOcEEjQKL1dvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlTWFub3JU",
+            "ZW1wbGF0ZUNoZWNrEOgEEjQKL1dvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRU",
+            "eXBlQXJlYVVwZGF0ZVRlbXBsYXRlEOkEEi0KKFdvcmxkRXZlbnRUeXBlX1My",
+            "WlBsYXllckFyZWFMb2FkTWFub3JNYXAQ6gQSLgopV29ybGRFdmVudFR5cGVf",
+            "UzJaTWFub3JUZW1wbGF0ZUNoYW5nZVNpemUQ6wQSKgolV29ybGRFdmVudFR5",
+            "cGVfUzJaUGxheWVyTWFub3JUYWtlQmFjaxDsBBI3CjJXb3JsZEV2ZW50VHlw",
+            "ZV9Xb3JsZEV2ZW50VHlwZVVwZGF0ZUFyZWFSZWNvdmVyVGltZRDtBBImCiFX",
+            "b3JsZEV2ZW50VHlwZV9Xb3JsZEV2ZW50VHlwZVVuZG8QvQUSJgohV29ybGRF",
+            "dmVudFR5cGVfV29ybGRFdmVudFR5cGVSZWRvEL4FEjQKL1dvcmxkRXZlbnRU",
+            "eXBlX1dvcmxkRXZlbnRUeXBlQ29kZWJsb2NrQWRkRW50aXR5EKEGEjQKL1dv",
+            "cmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlQ29kZWJsb2NrRGVsRW50aXR5",
+            "EKIGEisKJldvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlQ2xpZW50TXNn",
+            "EMlMEi0KKFdvcmxkRXZlbnRUeXBlX1dvcmxkRXZlbnRUeXBlR21BZGRFbnRp",
+            "dHkQrU0SPQo4V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVQbGF5ZXJB",
+            "ZGRCaWdXb3JsZFN5c3RlbUFyZWEQqEYSPQo4V29ybGRFdmVudFR5cGVfV29y",
+            "bGRFdmVudFR5cGVQbGF5ZXJEZWxCaWdXb3JsZFN5c3RlbUFyZWEQqUYSKQoj",
+            "V29ybGRFdmVudFR5cGVfV29ybGRFdmVudFR5cGVOdW1NYXgQ//8DKmMKDUdy",
+            "aWRFdmVudFR5cGUSJgoiR3JpZEV2ZW50VHlwZV9HcmlkRXZlbnRUeXBlVW5r",
+            "bm93bhAAEioKJkdyaWRFdmVudFR5cGVfR3JpZEV2ZW50VHlwZUVudGl0eUV2",
+            "ZW50EAEq/S0KD0VudGl0eUV2ZW50VHlwZRIqCiZFbnRpdHlFdmVudFR5cGVf",
+            "RW50aXR5RXZlbnRUeXBlVW5rbm93bhAAEikKJUVudGl0eUV2ZW50VHlwZV9F",
+            "bnRpdHlFdmVudFR5cGVNb3ZlVG8QARIrCidFbnRpdHlFdmVudFR5cGVfRW50",
+            "aXR5RXZlbnRUeXBlVXNlU2tpbGwQAhIwCixFbnRpdHlFdmVudFR5cGVfRW50",
+            "aXR5RXZlbnRUeXBlQ2hhbmdlQXZhdGFycxADEjAKLEVudGl0eUV2ZW50VHlw",
+            "ZV9FbnRpdHlFdmVudFR5cGVVcGRhdGVQcm9maWxlEAQSLgoqRW50aXR5RXZl",
+            "bnRUeXBlX0VudGl0eUV2ZW50VHlwZVVwZGF0ZVNraWxsEAUSLgoqRW50aXR5",
+            "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVVwZGF0ZUxldmVsEAYSLQopRW50",
+            "aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVJlY292ZXJ5SHAQBxIrCidF",
+            "bnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlVGVsZXBvcnQQCRIuCipF",
+            "bnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGlja0ZhbGxpbmcQCxIq",
+            "CiZFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGlja0JveBAMEi8K",
+            "K0VudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVIb21lVGVsZXBvcnQQ",
+            "DRIqCiZFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQWRkQnVmZhAO",
+            "Ei0KKUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVSZW1vdmVCdWZm",
+            "EA8SMAosRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVBsYXllclJl",
+            "c3Bhd24QEhI6CjZFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGxh",
+            "eWVyU2hhcmVCb3RWaWV3U3RhcnQQExI5CjVFbnRpdHlFdmVudFR5cGVfRW50",
+            "aXR5RXZlbnRUeXBlUGxheWVyU2hhcmVCb3RWaWV3U3RvcBAUEjQKMEVudGl0",
+            "eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVTMlpQaWNrRmFsbGluZ0JveBAV",
+            "EjAKLEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVQbGF5ZXJVblN0",
+            "dWNrEBcSLworRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUVudGVy",
+            "R29kVmlldxAYEi8KK0VudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVM",
+            "ZWF2ZUdvZFZpZXcQGRI1CjFFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRU",
+            "eXBlVGVsZXBvcnRBbmRUcmlnZ2VyEBoSLgoqRW50aXR5RXZlbnRUeXBlX0Vu",
+            "dGl0eUV2ZW50VHlwZVN0YXJ0T3JTdG9wEGASMAosRW50aXR5RXZlbnRUeXBl",
+            "X0VudGl0eUV2ZW50VHlwZUVudGVySWRlTW9kZWwQYRIvCitFbnRpdHlFdmVu",
+            "dFR5cGVfRW50aXR5RXZlbnRUeXBlUXVpdElkZU1vZGVsEGISLAooRW50aXR5",
+            "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNsaWVudE1zZxBkEjIKLkVudGl0",
+            "eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVJbnB1dEJ5S2V5cHJlc3MQbhIy",
+            "Ci5FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlSW5wdXRCeVNwZWNp",
+            "ZmljEG8SKgomRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVVzZUl0",
+            "ZW0QcBIrCidFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlRHJvcEl0",
+            "ZW0QcRI2CjJFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGxheWVy",
+            "RHVuZ2VvblVwZGF0ZRByEjQKMEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVu",
+            "dFR5cGVQbGF5ZXJJc3N1ZVNldHRsZRBzEi8KK0VudGl0eUV2ZW50VHlwZV9F",
+            "bnRpdHlFdmVudFR5cGVQbGF5ZXJWaWV3VXAQdBIvCitFbnRpdHlFdmVudFR5",
+            "cGVfRW50aXR5RXZlbnRUeXBlQ2FtZXJhTW92ZVRvEHYSMgouRW50aXR5RXZl",
+            "bnRUeXBlX0VudGl0eUV2ZW50VHlwZUNhbWVyYVNoYXJlVmlldxB3EjIKLkVu",
+            "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVQbGF5ZXJTaGFyZVZpZXcQ",
+            "eBIzCi9FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ2FtZXJhVHlw",
+            "ZUNoYW5nZRB5EjEKLUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVD",
+            "YW1lcmFQdWxsVmlldxB6Ei4KKkVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVu",
+            "dFR5cGVSZXNldFBsYXllchB9EjQKMEVudGl0eUV2ZW50VHlwZV9FbnRpdHlF",
+            "dmVudFR5cGVSZXNldExvY2tlZEVudGl0eRB+EjMKLkVudGl0eUV2ZW50VHlw",
+            "ZV9FbnRpdHlFdmVudFR5cGVDb2RlTW92ZUFycml2ZWQQyAESMQosRW50aXR5",
+            "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVFdmVudENhbGwQzQESOQo0",
+            "RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVPbkNvbXBvbmVu",
+            "dE9iamVjdBDVARIvCipFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBl",
+            "UHJvZ3JhbVNhdmUQ1gESMgotRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50",
+            "VHlwZUNvZGVTY3JlZW5TYXZlENcBEi8KKkVudGl0eUV2ZW50VHlwZV9FbnRp",
+            "dHlFdmVudFR5cGVDb2RlUmVzdGFydBDYARI1CjBFbnRpdHlFdmVudFR5cGVf",
+            "RW50aXR5RXZlbnRUeXBlQ29kZU9uRW5lcmd5RW1wdHkQ2QESMQosRW50aXR5",
+            "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVPbkNvcHlOZXcQ2gESMQos",
+            "RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVPbkNvcHlEZWwQ",
+            "2wESNgoxRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVRdWVz",
+            "dGlvblJlcGxheRDcARI5CjRFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRU",
+            "eXBlQ29kZUV4ZWN1dGVTdGFydEV2ZW50EN0BEjUKMEVudGl0eUV2ZW50VHlw",
+            "ZV9FbnRpdHlFdmVudFR5cGVDb2RlU3RvcENvZGVCbG9jaxDeARIxCixFbnRp",
+            "dHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZUVudGl0eUFkZBDgARI3",
+            "CjJFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZU9uRW50aXR5",
+            "T3ZlcmxhcBDhARIyCi1FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBl",
+            "Q29kZU9uU3RhbXBlZGUQ5AESNQowRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
+            "ZW50VHlwZUNvZGVPblN0YW1wZWRlRW5kEOUBEjYKMUVudGl0eUV2ZW50VHlw",
+            "ZV9FbnRpdHlFdmVudFR5cGVDb2RlU2V0Q2FuU3RhbXBlZGUQ5gESNQowRW50",
+            "aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVTZXRDYW5PcGVyYXRl",
+            "EOcBEjMKLkVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlT25C",
+            "eUNsaWNrZWQQ7QESMwouRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlw",
+            "ZUNvZGVPbkVudGVyUm9vbRDuARI2CjFFbnRpdHlFdmVudFR5cGVfRW50aXR5",
+            "RXZlbnRUeXBlQ29kZUNvcHlGYXRoZXJEZWFkEO8BEjQKL0VudGl0eUV2ZW50",
+            "VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlRWRpdFRpbWVMaW5lEPABEjQKL0Vu",
+            "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVUaW1lTGluZVNob3dUZXh0",
+            "EPEBEjUKMEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVUaW1lTGlu",
+            "ZU1vdmVUb1BvcxDyARI1CjBFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRU",
+            "eXBlVGltZUxpbmVQbGF5QXVkaW8Q8wESOAozRW50aXR5RXZlbnRUeXBlX0Vu",
+            "dGl0eUV2ZW50VHlwZVRpbWVMaW5lU2hvd1N1YnRpdGxlEPQBEjIKLUVudGl0",
+            "eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDb2RlQ0dWaWRlb0VuZBD1ARI0",
+            "Ci9FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUXVpY2tDb2RlUmVz",
+            "dGFydBD2ARIoCiNFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlSGlk",
+            "ZRD3ARI9CjhFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZUV2",
+            "ZW50Q29kZU5vdGlmaWNhdGlvbhDjAhIyCi1FbnRpdHlFdmVudFR5cGVfRW50",
+            "aXR5RXZlbnRUeXBlQ29kZVNldFByb2ZpbGUQ5QISNAovRW50aXR5RXZlbnRU",
+            "eXBlX0VudGl0eUV2ZW50VHlwZUNvZGVTZXR0aW5nUGFuZWwQ5gISMgotRW50",
+            "aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZUNvZGVNaXNzaW9uRW5kEOcC",
+            "EjYKMUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVDbGlja09wZXJh",
+            "dGVCdWJibGUQ6AISNAovRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlw",
+            "ZUNvZGVDYW1lcmFBY3Rpb24Q6QISNAovRW50aXR5RXZlbnRUeXBlX0VudGl0",
+            "eUV2ZW50VHlwZVBvcENvbXBsZXhEaWdsb2cQ6gISNQowRW50aXR5RXZlbnRU",
+            "eXBlX0VudGl0eUV2ZW50VHlwZUNvZGVTZXRDYXJyeUNsYXNzEOsCEjUKMEVu",
+            "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVCb3RTaGFyZVZpZXdTdGFy",
+            "dBCQAxI0Ci9FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQm90U2hh",
+            "cmVWaWV3U3RvcBCRAxIrCiZFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRU",
+            "eXBlQWRkRnVlbBCTAxIxCixFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRU",
+            "eXBlQm90Q2hhbmdlU2tpbhCUAxItCihFbnRpdHlFdmVudFR5cGVfRW50aXR5",
+            "RXZlbnRUeXBlQm90UmVuYW1lEJUDEjIKLUVudGl0eUV2ZW50VHlwZV9FbnRp",
+            "dHlFdmVudFR5cGVCdWlsZGluZ1N3aXRjaBDCAxI5CjRFbnRpdHlFdmVudFR5",
+            "cGVfRW50aXR5RXZlbnRUeXBlQnVpbGRpbmdNb2RlUG9zVXBkYXRlEMMDEjYK",
+            "MUVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVRdWl0QnVpbGRpbmdT",
+            "dGF0dXMQxAMSOQo0RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVdv",
+            "cmtiZW5jaE9iamVjdFVwZGF0ZRD1AxI4CjNFbnRpdHlFdmVudFR5cGVfRW50",
+            "aXR5RXZlbnRUeXBlQnVpbGRpbmdXaWRnZXRVcGRhdGUQ9gMSNAovRW50aXR5",
+            "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVdvcmtiZW5jaEFkZEZ1ZWwQgAQS",
+            "NgoxRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVdvcmtiZW5jaENv",
+            "bXBvbmVudBCBBBI7CjZFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBl",
+            "V29ya2JlbmNoUmVzZXRDb21wb25lbnQQggQSNgoxRW50aXR5RXZlbnRUeXBl",
+            "X0VudGl0eUV2ZW50VHlwZVdvcmtiZW5jaFNldFByb21wdBCDBBI2CjFFbnRp",
+            "dHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlV29ya2JlbmNoVXBkYXRlU3Vi",
+            "EIQEEjkKNEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVXb3JrYmVu",
+            "Y2hVcGRhdGVGYXRoZXIQhQQSLgopRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
+            "ZW50VHlwZUVudGl0eUxvY2sQ2AQSMAorRW50aXR5RXZlbnRUeXBlX0VudGl0",
+            "eUV2ZW50VHlwZUVudGl0eVVuTG9jaxDZBBI7CjZFbnRpdHlFdmVudFR5cGVf",
+            "RW50aXR5RXZlbnRUeXBlUmVnaXN0ZXJFbnRpdHlDb2RlRXZlbnQQ2gQSOgo1",
+            "RW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZURlc3Ryb3lFbnRpdHlD",
+            "b2RlRXZlbnQQ2wQSKwomRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlw",
+            "ZUJlQ2xpY2sQ3AQSMwouRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlw",
+            "ZVVwZGF0ZUFuaW1hdGlvbhDdBBIuCilFbnRpdHlFdmVudFR5cGVfRW50aXR5",
+            "RXZlbnRUeXBlQmVPcGVyYXRlZBDeBBI0Ci9FbnRpdHlFdmVudFR5cGVfRW50",
+            "aXR5RXZlbnRUeXBlRW50aXR5TG9ja1VwZGF0ZRDfBBIvCipFbnRpdHlFdmVu",
+            "dFR5cGVfRW50aXR5RXZlbnRUeXBlVXBkYXRlQXVkaW8Q4AQSNQowRW50aXR5",
+            "RXZlbnRUeXBlX0VudGl0eUV2ZW50VHlwZVBsYXllckFkZERpeUF1ZGlvEOEE",
+            "EjUKMEVudGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVQbGF5ZXJHZXRE",
+            "aXlBdWRpbxDiBBIyCi1FbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBl",
+            "VXBkYXRlVXNlRW1vamkQ4wQSNwoyRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
+            "ZW50VHlwZUFwcGx5RW50aXR5VGVtcGxhdGUQ5AQSNQowRW50aXR5RXZlbnRU",
+            "eXBlX0VudGl0eUV2ZW50VHlwZVVwZGF0ZU1hcFRlbXBsYXRlEOUEEjUKMEVu",
+            "dGl0eUV2ZW50VHlwZV9FbnRpdHlFdmVudFR5cGVNb25zdGVyTG9ja1BsYXll",
+            "chDmBBI4CjNFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlUGxheWVy",
+            "Rm9yY2VFeGl0RmlnaHQQ5wQSMgotRW50aXR5RXZlbnRUeXBlX0VudGl0eUV2",
+            "ZW50VHlwZVNlbmROZWFyYnlDaGF0EOgHEj4KOUVudGl0eUV2ZW50VHlwZV9F",
+            "bnRpdHlFdmVudFR5cGVTZW5kTmVhclRvQ29kZUVudGl0eWJ5Q2hhdBDpBxIr",
+            "CiVFbnRpdHlFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlTnVtTWF4EP//Ayrm",
+            "AQoNRXZlbnRDb2RlVHlwZRImCiJFdmVudENvZGVUeXBlX0V2ZW50Q29kZVR5",
+            "cGVVbmtub3duEAASJQohRXZlbnRDb2RlVHlwZV9FdmVudENvZGVUeXBlU2Vy",
+            "dmVyEAESKgomRXZlbnRDb2RlVHlwZV9FdmVudENvZGVUeXBlRW50aXR5RXZl",
+            "bnQQAhIvCitFdmVudENvZGVUeXBlX0V2ZW50Q29kZVR5cGVSZWNlaXZlRXZl",
+            "bnRDYWxsEAMSKQolRXZlbnRDb2RlVHlwZV9FdmVudENvZGVUeXBlRW50aXR5",
+            "VHlwZRAEKocOChNFbnRpdHlDb2RlRXZlbnRUeXBlEjIKLkVudGl0eUNvZGVF",
+            "dmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZVVua25vd24QABI0CjBFbnRp",
+            "dHlDb2RlRXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVCZUNsaWNrZWQQ",
+            "ZRI0CjBFbnRpdHlDb2RlRXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVQ",
+            "b3NVcGRhdGUQZhIzCi9FbnRpdHlDb2RlRXZlbnRUeXBlX0VudGl0eUNvZGVF",
+            "dmVudFR5cGVCZUF0dGFjaxBnEjEKLUVudGl0eUNvZGVFdmVudFR5cGVfRW50",
+            "aXR5Q29kZUV2ZW50VHlwZUF0dGFjaxBoEi8KK0VudGl0eUNvZGVFdmVudFR5",
+            "cGVfRW50aXR5Q29kZUV2ZW50VHlwZURlYWQQaRIyCi5FbnRpdHlDb2RlRXZl",
+            "bnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVPblRvdWNoEGoSNgoyRW50aXR5",
+            "Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlRnJhbWVVcGRhdGUQ",
+            "axI1CjFFbnRpdHlDb2RlRXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVG",
+            "dWVsVXBkYXRlEGwSMwovRW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2Rl",
+            "RXZlbnRUeXBlVXNlU2tpbGwQbRI1CjFFbnRpdHlDb2RlRXZlbnRUeXBlX0Vu",
+            "dGl0eUNvZGVFdmVudFR5cGVDYW5PcGVyYXRlEG4SMQotRW50aXR5Q29kZUV2",
+            "ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlTWlycm9yEHASNAowRW50aXR5",
+            "Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlQ29tcG9uZW50EHES",
+            "Owo3RW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlUmVj",
+            "ZWl2ZUV2ZW50Q2FsbBByEjQKMEVudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5",
+            "Q29kZUV2ZW50VHlwZVZhckNoYW5nZRBzEjsKN0VudGl0eUNvZGVFdmVudFR5",
+            "cGVfRW50aXR5Q29kZUV2ZW50VHlwZUVudGl0eUJlU3RhbXBlZGUQdBI/CjtF",
+            "bnRpdHlDb2RlRXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVFbnRpdHlP",
+            "dmVyQmVTdGFtcGVkZRB1EjIKLkVudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5",
+            "Q29kZUV2ZW50VHlwZU9uQnVpbGQQdhI0CjBFbnRpdHlDb2RlRXZlbnRUeXBl",
+            "X0VudGl0eUNvZGVFdmVudFR5cGVFbnRlclJvb20QdxI5CjVFbnRpdHlDb2Rl",
+            "RXZlbnRUeXBlX0VudGl0eUNvZGVFdmVudFR5cGVJbnB1dEtleUFjdGlvbhB5",
+            "EjMKL0VudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZUtl",
+            "eXByZXNzEHoSMgouRW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZl",
+            "bnRUeXBlVXNlSXRlbRB8EjMKL0VudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5",
+            "Q29kZUV2ZW50VHlwZURyb3BJdGVtEH0SNQoxRW50aXR5Q29kZUV2ZW50VHlw",
+            "ZV9FbnRpdHlDb2RlRXZlbnRUeXBlUGlja3VwSXRlbRB+EjMKLkVudGl0eUNv",
+            "ZGVFdmVudFR5cGVfRW50aXR5Q29kZUV2ZW50VHlwZU9uQ3Jhc2gQgQESOgo1",
+            "RW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2RlRXZlbnRUeXBlRHJvcEl0",
+            "ZW1XaXRoSWQQggESNgoxRW50aXR5Q29kZUV2ZW50VHlwZV9FbnRpdHlDb2Rl",
+            "RXZlbnRUeXBlT25DbG9uZURlbBCDARI2CjFFbnRpdHlDb2RlRXZlbnRUeXBl",
+            "X0VudGl0eUV2ZW50VHlwZUNvZGVPbkJlUGlja1VwEIcBEjcKMkVudGl0eUNv",
+            "ZGVFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZU9uQmVQdXREb3duEIgB",
+            "EjcKMkVudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5RXZlbnRUeXBlQ29kZU9u",
+            "QmVEZXN0cm95EIkBEj0KOEVudGl0eUNvZGVFdmVudFR5cGVfRW50aXR5RXZl",
+            "bnRUeXBlQ29kZVBsYXllcklzc3VlU2V0dGxlEIoBEkIKPUVudGl0eUNvZGVF",
+            "dmVudFR5cGVfRW50aXR5RXZlbnRUeXBlRW50aXRpZXNRdWlja0NvZGVSdW5P",
+            "clN0b3AQiwEqWgoMRGF0YVNhdmVUeXBlEiQKIERhdGFTYXZlVHlwZV9EYXRh",
+            "U2F2ZVR5cGVVbmtub3duEAASJAofRGF0YVNhdmVUeXBlX0RhdGFTYXZlVHlw",
+            "ZU1hcEdvYhDpByqkAgoUU2NlbmVGb3JjZVJlbW92ZVRpbWUSNAowU2NlbmVG",
+            "b3JjZVJlbW92ZVRpbWVfU2NlbmVGb3JjZVJlbW92ZVRpbWVVbmtub3duEAAS",
+            "MwouU2NlbmVGb3JjZVJlbW92ZVRpbWVfU2NlbmVGb3JjZVJlbW92ZVRpbWVM",
+            "ZWF2ZRDRDxI2CjFTY2VuZUZvcmNlUmVtb3ZlVGltZV9TY2VuZUZvcmNlUmVt",
+            "b3ZlVGltZVRhcmdldFJDENIPEjUKMFNjZW5lRm9yY2VSZW1vdmVUaW1lX1Nj",
+            "ZW5lRm9yY2VSZW1vdmVUaW1lUnVuVGltZRDTDxIyCi1TY2VuZUZvcmNlUmVt",
+            "b3ZlVGltZV9TY2VuZUZvcmNlUmVtb3ZlVGltZURpc3QQ1A9iBnByb3RvMw=="));
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.ServerMsgEventType), typeof(global::MelandGame3.ServerEventType), typeof(global::MelandGame3.WorldEventType), typeof(global::MelandGame3.GridEventType), typeof(global::MelandGame3.EntityEventType), typeof(global::MelandGame3.EventCodeType), typeof(global::MelandGame3.EntityCodeEventType), typeof(global::MelandGame3.DataSaveType), typeof(global::MelandGame3.SceneForceRemoveTime), }, null, null));
     }
-
-    public enum WorldEventType
-    {
-        /// <summary>
-        /// 场景事件
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeUnknown")] WorldEventTypeUnknown = 0,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeSendToZone")] WorldEventTypeSendToZone = 1,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEnterMap")] WorldEventTypeEnterMap = 2,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeLeaveMap")] WorldEventTypeLeaveMap = 3,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeMove")] WorldEventTypeMove = 4,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeMapSave")] WorldEventTypeMapSave = 5,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeReloadResourcePoint")] WorldEventTypeReloadResourcePoint = 6,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeInitMapElement")] WorldEventTypeInitMapElement = 7,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntitySave")] WorldEventTypeEntitySave = 8,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerReset")] WorldEventTypePlayerReset = 9,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeResetAreaState")] WorldEventTypeResetAreaState = 10,
-        /// <summary>
-        /// 环境
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeDiurnalCycleChange")] WorldEventTypeDiurnalCycleChange = 30,
-        /// <summary>
-        /// chunk事件
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntityEventCall")] WorldEventTypeEntityEventCall = 101,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeAddEntityToChunkGrid")] WorldEventTypeAddEntityToChunkGrid = 102,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeGetEntity")] WorldEventTypeGetEntity = 104,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntityEventCallNoReturn")] WorldEventTypeEntityEventCallNoReturn = 105,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRestartAllEntitiesCodeBlock")] WorldEventTypeRestartAllEntitiesCodeBlock = 106,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeResourceLoadFinish")] WorldEventTypeResourceLoadFinish = 107,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeUpdateWidgetAttr")] WorldEventTypeUpdateWidgetAttr = 108,
-        /// <summary>
-        ///领地物件运行代码块事件
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRunCodeBlockByPlayerArea")] WorldEventTypeRunCodeBlockByPlayerArea = 109,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesRestartCodeBlock")] WorldEventTypeEntitiesRestartCodeBlock = 110,
-        /// <summary>
-        ///公共领地所有实体重启代码块
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypePublicAreaRestartCode")] WorldEventTypePublicAreaRestartCode = 112,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAreaRestartCode")] WorldEventTypePlayerAreaRestartCode = 113,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRemoveEntityChange")] WorldEventTypeRemoveEntityChange = 114,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeReviveEntity")] WorldEventTypeReviveEntity = 115,
-        /// <summary>
-        ///副本地图回溯 事件
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRestartDungeonMap")] WorldEventTypeRestartDungeonMap = 116,
-        /// <summary>
-        ///  触发实体的开始事件代码块
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesExecuteStartEvent")] WorldEventTypeEntitiesExecuteStartEvent = 117,
-        /// <summary>
-        /// 停止实体的所有代码块(重置到事件等待触发状态)
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesStopCodeBlock")] WorldEventTypeEntitiesStopCodeBlock = 118,
-        /// <summary>
-        /// 应用组件模板到实体
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeApplyEntityTemplate")] WorldEventTypeApplyEntityTemplate = 120,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeAddCameraToChunkGrid")] WorldEventTypeAddCameraToChunkGrid = 121,
-        /// <summary>
-        /// 场景区域重新运行代码块
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeZoneAreaRestartCode")] WorldEventTypeZoneAreaRestartCode = 122,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeAddEntityWithoutViewToChunkGrid")] WorldEventTypeAddEntityWithoutViewToChunkGrid = 123,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeCodeEventNotification")] WorldEventTypeCodeEventNotification = 124,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePublicAreaResetCodeBlock")] WorldEventTypePublicAreaResetCodeBlock = 125,
-        /// <summary>
-        /// 场景区域运行开始代码块
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesExecuteQuickCodeStartEvent")] WorldEventTypeEntitiesExecuteQuickCodeStartEvent = 126,
-        /// <summary>
-        /// 运行或停止区域中可编码实体的快速编码状态
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeResetEntitiesQuickCodeState")] WorldEventTypeResetEntitiesQuickCodeState = 127,
-        /// <summary>
-        /// 区域所有多实体快速编码标签页信息
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesQuickCodeTabDatas")] WorldEventTypeEntitiesQuickCodeTabDatas = 128,
-        /// <summary>
-        /// grid 事件
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeToGridEvent")] WorldEventTypeToGridEvent = 150,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeZoomEvent")] WorldEventTypeZoomEvent = 151,
-        /// <summary>
-        /// build
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddEntity")] WorldEventTypePlayerAddEntity = 201,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelEntity")] WorldEventTypePlayerDelEntity = 202,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerMoveEntity")] WorldEventTypePlayerMoveEntity = 203,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeBotAddEntity")] WorldEventTypeBotAddEntity = 204,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelEntityByScene")] WorldEventTypePlayerDelEntityByScene = 205,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddResourcePoint")] WorldEventTypePlayerAddResourcePoint = 210,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelResourcePoint")] WorldEventTypePlayerDelResourcePoint = 211,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddBornPoint")] WorldEventTypePlayerAddBornPoint = 212,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelBornPoint")] WorldEventTypePlayerDelBornPoint = 213,
-        /// <summary>
-        ///s2z
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaCreate")] S2ZlessonAreaCreate = 214,
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaDel")] S2ZlessonAreaDel = 215,
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaQuery")] S2ZlessonAreaQuery = 216,
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaUpdate")] S2ZlessonAreaUpdate = 217,
-        [pbr::OriginalName("WorldEventType_S2ZBeautyAreaUpdate")] S2ZbeautyAreaUpdate = 218,
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaCopy")] S2ZlessonAreaCopy = 219,
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaIndexUpdate")] S2ZlessonAreaIndexUpdate = 220,
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaUnlock")] S2ZlessonAreaUnlock = 221,
-        [pbr::OriginalName("WorldEventType_S2ZLessonPlayerArrivedArea")] S2ZlessonPlayerArrivedArea = 222,
-        [pbr::OriginalName("WorldEventType_S2ZLessonAreaRunQuickCodeStart")] S2ZlessonAreaRunQuickCodeStart = 223,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeAddTileMapSign")] WorldEventTypeAddTileMapSign = 224,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRemoveTileMapSign")] WorldEventTypeRemoveTileMapSign = 225,
-        /// <summary>
-        /// bot
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeSpawnBot")] WorldEventTypeSpawnBot = 301,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRecallBot")] WorldEventTypeRecallBot = 302,
-        /// <summary>
-        /// 功能实体事件
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeIssueSettle")] WorldEventTypeIssueSettle = 401,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeGetEntityIssue")] WorldEventTypeGetEntityIssue = 402,
-        /// <summary>
-        ///工作台事件
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeWorkbenchUpdateSub")] WorldEventTypeWorkbenchUpdateSub = 506,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeWorkbenchUpdateFather")] WorldEventTypeWorkbenchUpdateFather = 507,
-        /// <summary>
-        /// 玩家领地
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeSpawnPalyerArea")] WorldEventTypeSpawnPalyerArea = 600,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeMovePalyerArea")] WorldEventTypeMovePalyerArea = 601,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRemovePalyerArea")] WorldEventTypeRemovePalyerArea = 602,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeQueryMyPalyerArea")] WorldEventTypeQueryMyPalyerArea = 603,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeSetGlobalVar")] WorldEventTypeSetGlobalVar = 604,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeQueryPalyerAreas")] WorldEventTypeQueryPalyerAreas = 605,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeQueryPalyerAreaByRc")] WorldEventTypeQueryPalyerAreaByRc = 606,
-        [pbr::OriginalName("WorldEventType_S2ZManorBuy")] S2ZmanorBuy = 610,
-        [pbr::OriginalName("WorldEventType_S2ZManorBuyMarkSync")] S2ZmanorBuyMarkSync = 611,
-        /// <summary>
-        ///领地打包成模板
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_S2ZManorTemplatePacket")] S2ZmanorTemplatePacket = 612,
-        /// <summary>
-        ///应用领地模
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_S2ZManorTemplateUse")] S2ZmanorTemplateUse = 613,
-        /// <summary>
-        /// B端 老师重置公共领地
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeTeacherResetPublicManor")] WorldEventTypeTeacherResetPublicManor = 614,
-        /// <summary>
-        /// 领取空领地
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeCreatAreaByEmptyArea")] WorldEventTypeCreatAreaByEmptyArea = 615,
-        /// <summary>
-        /// 检测领地
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeManorTemplateCheck")] WorldEventTypeManorTemplateCheck = 616,
-        /// <summary>
-        /// 广播
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeAreaUpdateTemplate")] WorldEventTypeAreaUpdateTemplate = 617,
-        /// <summary>
-        /// 将地图数据加载到领地中
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_S2ZPlayerAreaLoadManorMap")] S2ZplayerAreaLoadManorMap = 618,
-        /// <summary>
-        ///领地改变大小
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_S2ZManorTemplateChangeSize")] S2ZmanorTemplateChangeSize = 619,
-        /// <summary>
-        /// 领地回收
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_S2ZPlayerManorTakeBack")] S2ZplayerManorTakeBack = 620,
-        /// <summary>
-        /// 更新领地回收时间
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeUpdateAreaRecoverTime")] WorldEventTypeUpdateAreaRecoverTime = 621,
-        /// <summary>
-        /// 撤销重做
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeUndo")] WorldEventTypeUndo = 701,
-        /// <summary>
-        /// 重做
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeRedo")] WorldEventTypeRedo = 702,
-        /// <summary>
-        ///--------------代码块事件   800 ~ 899   -----------------
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeCodeblockAddEntity")] WorldEventTypeCodeblockAddEntity = 801,
-        [pbr::OriginalName("WorldEventType_WorldEventTypeCodeblockDelEntity")] WorldEventTypeCodeblockDelEntity = 802,
-        /// <summary>
-        ///透传过来的客户端消息
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeClientMsg")] WorldEventTypeClientMsg = 9801,
-        /// <summary>
-        /// gm 9901~9999
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeGmAddEntity")] WorldEventTypeGmAddEntity = 9901,
-        /// <summary>
-        /// -------------------------------------------------------------------------
-        /// 大世界event协议号 9000 - 10000
-        /// -------------------------------------------------------------------------
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddBigWorldSystemArea")] WorldEventTypePlayerAddBigWorldSystemArea = 9000,
-        [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelBigWorldSystemArea")] WorldEventTypePlayerDelBigWorldSystemArea = 9001,
-        /// <summary>
-        /// 最大事件数
-        /// </summary>
-        [pbr::OriginalName("WorldEventType_WorldEventTypeNumMax")] WorldEventTypeNumMax = 65535,
-    }
-
-    public enum GridEventType
-    {
-        /// <summary>
-        /// 场景事件
-        /// </summary>
-        [pbr::OriginalName("GridEventType_GridEventTypeUnknown")] GridEventTypeUnknown = 0,
-        [pbr::OriginalName("GridEventType_GridEventTypeEntityEvent")] GridEventTypeEntityEvent = 1,
-    }
-
-    public enum EntityEventType
-    {
-        /// <summary>
-        /// 场景事件
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUnknown")] EntityEventTypeUnknown = 0,
-        /// <summary>
-        /// --------------- 玩家事件 ----------------------------
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeMoveTo")] EntityEventTypeMoveTo = 1,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUseSkill")] EntityEventTypeUseSkill = 2,
-        /// <summary>
-        /// 换装
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeChangeAvatars")] EntityEventTypeChangeAvatars = 3,
-        /// <summary>
-        /// 玩家属性更新
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateProfile")] EntityEventTypeUpdateProfile = 4,
-        /// <summary>
-        /// 玩家技能更新(skillId=0->当前没有技能)
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateSkill")] EntityEventTypeUpdateSkill = 5,
-        /// <summary>
-        /// 玩家等级更新
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateLevel")] EntityEventTypeUpdateLevel = 6,
-        /// <summary>
-        /// 玩家恢复hp(快速)
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeRecoveryHp")] EntityEventTypeRecoveryHp = 7,
-        /// <summary>
-        /// 传送
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeTeleport")] EntityEventTypeTeleport = 9,
-        /// <summary>
-        /// 拾取掉落物品
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePickFalling")] EntityEventTypePickFalling = 11,
-        /// <summary>
-        /// 拾取掉落包裹(FallingBox)
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePickBox")] EntityEventTypePickBox = 12,
-        /// <summary>
-        ///传送回家
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeHomeTeleport")] EntityEventTypeHomeTeleport = 13,
-        /// <summary>
-        ///添加buff
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeAddBuff")] EntityEventTypeAddBuff = 14,
-        /// <summary>
-        ///删除buff
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeRemoveBuff")] EntityEventTypeRemoveBuff = 15,
-        /// <summary>
-        ///角色复活(客户端消息)
-        ///EntityEventType_EntityEventTypeC2ZPlayerRelive = 17;
-        ///角色复活(逻辑层检测完复活区域后发送给场景层)
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerRespawn")] EntityEventTypePlayerRespawn = 18,
-        /// <summary>
-        ///通知玩家开始共享机器人视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerShareBotViewStart")] EntityEventTypePlayerShareBotViewStart = 19,
-        /// <summary>
-        ///通知玩家停止共享机器人视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerShareBotViewStop")] EntityEventTypePlayerShareBotViewStop = 20,
-        /// <summary>
-        ///拾取包裹返回
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeS2ZPickFallingBox")] EntityEventTypeS2ZpickFallingBox = 21,
-        /// <summary>
-        ///一键解卡
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerUnStuck")] EntityEventTypePlayerUnStuck = 23,
-        /// <summary>
-        ///进入上帝视角
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeEnterGodView")] EntityEventTypeEnterGodView = 24,
-        /// <summary>
-        ///离开上帝视角
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeLeaveGodView")] EntityEventTypeLeaveGodView = 25,
-        /// <summary>
-        ///tp实体并触发事件
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeTeleportAndTrigger")] EntityEventTypeTeleportAndTrigger = 26,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeStartOrStop")] EntityEventTypeStartOrStop = 96,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeEnterIdeModel")] EntityEventTypeEnterIdeModel = 97,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeQuitIdeModel")] EntityEventTypeQuitIdeModel = 98,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeClientMsg")] EntityEventTypeClientMsg = 100,
-        /// <summary>
-        /// 按键输入事件
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeInputByKeypress")] EntityEventTypeInputByKeypress = 110,
-        /// <summary>
-        /// 其他输入事件
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeInputBySpecific")] EntityEventTypeInputBySpecific = 111,
-        /// <summary>
-        /// 实体使用物件
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUseItem")] EntityEventTypeUseItem = 112,
-        /// <summary>
-        /// 实体丢弃物件
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeDropItem")] EntityEventTypeDropItem = 113,
-        /// <summary>
-        /// 更新玩家副本闯关信息
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerDungeonUpdate")] EntityEventTypePlayerDungeonUpdate = 114,
-        /// <summary>
-        /// 玩家完成答题（添加积分和执行后续代码块）
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerIssueSettle")] EntityEventTypePlayerIssueSettle = 115,
-        /// <summary>
-        /// 更新玩家视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerViewUp")] EntityEventTypePlayerViewUp = 116,
-        /// <summary>
-        /// 玩家镜头移动
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCameraMoveTo")] EntityEventTypeCameraMoveTo = 118,
-        /// <summary>
-        ///通知镜头是否使用摄像头视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCameraShareView")] EntityEventTypeCameraShareView = 119,
-        /// <summary>
-        ///通知玩家是否使用镜头视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerShareView")] EntityEventTypePlayerShareView = 120,
-        /// <summary>
-        ///客户端预览镜头
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCameraTypeChange")] EntityEventTypeCameraTypeChange = 121,
-        /// <summary>
-        ///预览镜头拉取视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCameraPullView")] EntityEventTypeCameraPullView = 122,
-        /// <summary>
-        /// 重置玩家
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeResetPlayer")] EntityEventTypeResetPlayer = 125,
-        /// <summary>
-        /// 重置玩家实体锁定状态
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeResetLockedEntity")] EntityEventTypeResetLockedEntity = 126,
-        /// <summary>
-        /// --------------- 代码块 200-399 ------------------------
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeMoveArrived")] EntityEventTypeCodeMoveArrived = 200,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEventCall")] EntityEventTypeCodeEventCall = 205,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnComponentObject")] EntityEventTypeCodeOnComponentObject = 213,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeProgramSave")] EntityEventTypeProgramSave = 214,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeScreenSave")] EntityEventTypeCodeScreenSave = 215,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeRestart")] EntityEventTypeCodeRestart = 216,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnEnergyEmpty")] EntityEventTypeCodeOnEnergyEmpty = 217,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnCopyNew")] EntityEventTypeCodeOnCopyNew = 218,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnCopyDel")] EntityEventTypeCodeOnCopyDel = 219,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeQuestionReplay")] EntityEventTypeCodeQuestionReplay = 220,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeExecuteStartEvent")] EntityEventTypeCodeExecuteStartEvent = 221,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeStopCodeBlock")] EntityEventTypeCodeStopCodeBlock = 222,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEntityAdd")] EntityEventTypeCodeEntityAdd = 224,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnEntityOverlap")] EntityEventTypeCodeOnEntityOverlap = 225,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnStampede")] EntityEventTypeCodeOnStampede = 228,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnStampedeEnd")] EntityEventTypeCodeOnStampedeEnd = 229,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetCanStampede")] EntityEventTypeCodeSetCanStampede = 230,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetCanOperate")] EntityEventTypeCodeSetCanOperate = 231,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnByClicked")] EntityEventTypeCodeOnByClicked = 237,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnEnterRoom")] EntityEventTypeCodeOnEnterRoom = 238,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeCopyFatherDead")] EntityEventTypeCodeCopyFatherDead = 239,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEditTimeLine")] EntityEventTypeCodeEditTimeLine = 240,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLineShowText")] EntityEventTypeTimeLineShowText = 241,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLineMoveToPos")] EntityEventTypeTimeLineMoveToPos = 242,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLinePlayAudio")] EntityEventTypeTimeLinePlayAudio = 243,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLineShowSubtitle")] EntityEventTypeTimeLineShowSubtitle = 244,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeCGVideoEnd")] EntityEventTypeCodeCgvideoEnd = 245,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeQuickCodeRestart")] EntityEventTypeQuickCodeRestart = 246,
-        /// <summary>
-        /// 隐藏实体
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeHide")] EntityEventTypeHide = 247,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEventCodeNotification")] EntityEventTypeCodeEventCodeNotification = 355,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetProfile")] EntityEventTypeCodeSetProfile = 357,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSettingPanel")] EntityEventTypeCodeSettingPanel = 358,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeMissionEnd")] EntityEventTypeCodeMissionEnd = 359,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeClickOperateBubble")] EntityEventTypeClickOperateBubble = 360,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeCameraAction")] EntityEventTypeCodeCameraAction = 361,
-        [pbr::OriginalName("EntityEventType_EntityEventTypePopComplexDiglog")] EntityEventTypePopComplexDiglog = 362,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetCarryClass")] EntityEventTypeCodeSetCarryClass = 363,
-        /// <summary>
-        /// --------------- 机器人 400-409 ----------------------------
-        ///通知机器人开始共享机器人视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBotShareViewStart")] EntityEventTypeBotShareViewStart = 400,
-        /// <summary>
-        ///通知机器人停止共享机器人视野
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBotShareViewStop")] EntityEventTypeBotShareViewStop = 401,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeAddFuel")] EntityEventTypeAddFuel = 403,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBotChangeSkin")] EntityEventTypeBotChangeSkin = 404,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBotRename")] EntityEventTypeBotRename = 405,
-        /// <summary>
-        /// --------------- 建造 450-459 ------------------------------
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBuildingSwitch")] EntityEventTypeBuildingSwitch = 450,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBuildingModePosUpdate")] EntityEventTypeBuildingModePosUpdate = 451,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeQuitBuildingStatus")] EntityEventTypeQuitBuildingStatus = 452,
-        /// <summary>
-        /// --------------- 建筑物和工作台 500~549 --------------------
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchObjectUpdate")] EntityEventTypeWorkbenchObjectUpdate = 501,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBuildingWidgetUpdate")] EntityEventTypeBuildingWidgetUpdate = 502,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchAddFuel")] EntityEventTypeWorkbenchAddFuel = 512,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchComponent")] EntityEventTypeWorkbenchComponent = 513,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchResetComponent")] EntityEventTypeWorkbenchResetComponent = 514,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchSetPrompt")] EntityEventTypeWorkbenchSetPrompt = 515,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchUpdateSub")] EntityEventTypeWorkbenchUpdateSub = 516,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchUpdateFather")] EntityEventTypeWorkbenchUpdateFather = 517,
-        /// <summary>
-        /// --------------- entity场景事件 600 ~ 699 -----------------
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeEntityLock")] EntityEventTypeEntityLock = 600,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeEntityUnLock")] EntityEventTypeEntityUnLock = 601,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeRegisterEntityCodeEvent")] EntityEventTypeRegisterEntityCodeEvent = 602,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeDestroyEntityCodeEvent")] EntityEventTypeDestroyEntityCodeEvent = 603,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBeClick")] EntityEventTypeBeClick = 604,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateAnimation")] EntityEventTypeUpdateAnimation = 605,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeBeOperated")] EntityEventTypeBeOperated = 606,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeEntityLockUpdate")] EntityEventTypeEntityLockUpdate = 607,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateAudio")] EntityEventTypeUpdateAudio = 608,
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerAddDiyAudio")] EntityEventTypePlayerAddDiyAudio = 609,
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerGetDiyAudio")] EntityEventTypePlayerGetDiyAudio = 610,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateUseEmoji")] EntityEventTypeUpdateUseEmoji = 611,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeApplyEntityTemplate")] EntityEventTypeApplyEntityTemplate = 612,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateMapTemplate")] EntityEventTypeUpdateMapTemplate = 613,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeMonsterLockPlayer")] EntityEventTypeMonsterLockPlayer = 614,
-        [pbr::OriginalName("EntityEventType_EntityEventTypePlayerForceExitFight")] EntityEventTypePlayerForceExitFight = 615,
-        /// <summary>
-        /// --------------- 聊天 1000~1050 ---------------------------
-        /// 附近chat 信息
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeSendNearbyChat")] EntityEventTypeSendNearbyChat = 1000,
-        [pbr::OriginalName("EntityEventType_EntityEventTypeSendNearToCodeEntitybyChat")] EntityEventTypeSendNearToCodeEntitybyChat = 1001,
-        /// <summary>
-        /// --------------- 事件号最大值 ---------------
-        /// </summary>
-        [pbr::OriginalName("EntityEventType_EntityEventTypeNumMax")] EntityEventTypeNumMax = 65535,
-    }
-
-    public enum EventCodeType
-    {
-        /// <summary>
-        /// 指定实体的代码块事件
-        /// </summary>
-        [pbr::OriginalName("EventCodeType_EventCodeTypeUnknown")] EventCodeTypeUnknown = 0,
-        /// <summary>
-        /// 指定实体的代码块事件
-        /// </summary>
-        [pbr::OriginalName("EventCodeType_EventCodeTypeServer")] EventCodeTypeServer = 1,
-        /// <summary>
-        /// 不指定某个实体的代码块事件
-        /// </summary>
-        [pbr::OriginalName("EventCodeType_EventCodeTypeEntityEvent")] EventCodeTypeEntityEvent = 2,
-        /// <summary>
-        /// 接收实体发送的广播呼叫
-        /// </summary>
-        [pbr::OriginalName("EventCodeType_EventCodeTypeReceiveEventCall")] EventCodeTypeReceiveEventCall = 3,
-        /// <summary>
-        /// 某类型的实体的事件
-        /// </summary>
-        [pbr::OriginalName("EventCodeType_EventCodeTypeEntityType")] EventCodeTypeEntityType = 4,
-    }
-
-    public enum EntityCodeEventType
-    {
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeUnknown")] EntityCodeEventTypeUnknown = 0,
-        /// <summary>
-        /// 实体点击事件
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeBeClicked")] EntityCodeEventTypeBeClicked = 101,
-        /// <summary>
-        /// 实体坐标变更
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypePosUpdate")] EntityCodeEventTypePosUpdate = 102,
-        /// <summary>
-        /// 实体被攻击
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeBeAttack")] EntityCodeEventTypeBeAttack = 103,
-        /// <summary>
-        /// 实体攻击
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeAttack")] EntityCodeEventTypeAttack = 104,
-        /// <summary>
-        /// 实体死亡
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeDead")] EntityCodeEventTypeDead = 105,
-        /// <summary>
-        /// 实体被操作
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnTouch")] EntityCodeEventTypeOnTouch = 106,
-        /// <summary>
-        /// 实体当前帧更新
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeFrameUpdate")] EntityCodeEventTypeFrameUpdate = 107,
-        /// <summary>
-        /// 实体能源变更
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeFuelUpdate")] EntityCodeEventTypeFuelUpdate = 108,
-        /// <summary>
-        /// 实体使用技能
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeUseSkill")] EntityCodeEventTypeUseSkill = 109,
-        /// <summary>
-        /// 操作失效/生效
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeCanOperate")] EntityCodeEventTypeCanOperate = 110,
-        /// <summary>
-        /// 镜像
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeMirror")] EntityCodeEventTypeMirror = 112,
-        /// <summary>
-        /// 合成物品
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeComponent")] EntityCodeEventTypeComponent = 113,
-        /// <summary>
-        /// 接收广播
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeReceiveEventCall")] EntityCodeEventTypeReceiveEventCall = 114,
-        /// <summary>
-        /// 变量改变
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeVarChange")] EntityCodeEventTypeVarChange = 115,
-        /// <summary>
-        /// 实体被实体踩踏
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeEntityBeStampede")] EntityCodeEventTypeEntityBeStampede = 116,
-        /// <summary>
-        /// 实体被实体踩踏结束
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeEntityOverBeStampede")] EntityCodeEventTypeEntityOverBeStampede = 117,
-        /// <summary>
-        /// 实体被建造 || 任意实体被建造
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnBuild")] EntityCodeEventTypeOnBuild = 118,
-        /// <summary>
-        /// 实体进入房间
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeEnterRoom")] EntityCodeEventTypeEnterRoom = 119,
-        /// <summary>
-        /// 输入事件
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeInputKeyAction")] EntityCodeEventTypeInputKeyAction = 121,
-        /// <summary>
-        /// 按键事件
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeKeypress")] EntityCodeEventTypeKeypress = 122,
-        /// <summary>
-        /// 实体使用物件
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeUseItem")] EntityCodeEventTypeUseItem = 124,
-        /// <summary>
-        /// 实体丢弃物件
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeDropItem")] EntityCodeEventTypeDropItem = 125,
-        /// <summary>
-        /// 实体拾取物件
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypePickupItem")] EntityCodeEventTypePickupItem = 126,
-        /// <summary>
-        /// 实体碰撞
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnCrash")] EntityCodeEventTypeOnCrash = 129,
-        /// <summary>
-        /// 实体丢弃物件返回物品id
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeDropItemWithId")] EntityCodeEventTypeDropItemWithId = 130,
-        /// <summary>
-        /// xx克隆体被删除
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnCloneDel")] EntityCodeEventTypeOnCloneDel = 131,
-        /// <summary>
-        /// 实体被拿起
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodeOnBePickUp")] EntityEventTypeCodeOnBePickUp = 135,
-        /// <summary>
-        /// 实体被放下
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodeOnBePutDown")] EntityEventTypeCodeOnBePutDown = 136,
-        /// <summary>
-        /// 实体被销毁
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodeOnBeDestroy")] EntityEventTypeCodeOnBeDestroy = 137,
-        /// <summary>
-        /// 玩家完成答题
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodePlayerIssueSettle")] EntityEventTypeCodePlayerIssueSettle = 138,
-        /// <summary>
-        /// 当实体快速编码运行/停止时触发（需打开可编码属性生效）
-        /// </summary>
-        [pbr::OriginalName("EntityCodeEventType_EntityEventTypeEntitiesQuickCodeRunOrStop")] EntityEventTypeEntitiesQuickCodeRunOrStop = 139,
-    }
-
-    /// <summary>
-    /// 数据保存事件TYPE
-    /// </summary>
-    public enum DataSaveType
-    {
-        [pbr::OriginalName("DataSaveType_DataSaveTypeUnknown")] DataSaveTypeUnknown = 0,
-        [pbr::OriginalName("DataSaveType_DataSaveTypeMapGob")] DataSaveTypeMapGob = 1001,
-    }
-
-    /// <summary>
-    /// 场景作用力消失时机
-    /// </summary>
-    public enum SceneForceRemoveTime
-    {
-        [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeUnknown")] SceneForceRemoveTimeUnknown = 0,
-        /// <summary>
-        /// 离开指定区域
-        /// </summary>
-        [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeLeave")] SceneForceRemoveTimeLeave = 2001,
-        /// <summary>
-        /// 到达指定目标点
-        /// </summary>
-        [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeTargetRC")] SceneForceRemoveTimeTargetRc = 2002,
-        /// <summary>
-        /// 持续多少时间
-        /// </summary>
-        [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeRunTime")] SceneForceRemoveTimeRunTime = 2003,
-        /// <summary>
-        /// 移动多少距离
-        /// </summary>
-        [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeDist")] SceneForceRemoveTimeDist = 2004,
-    }
-
     #endregion
+
+  }
+  #region Enums
+  public enum ServerMsgEventType {
+    /// <summary>
+    /// 未知类型
+    /// </summary>
+    [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeUnknow")] ServerMsgEventTypeUnknow = 0,
+    /// <summary>
+    /// 收到消息
+    /// </summary>
+    [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeReceiveMsg")] ServerMsgEventTypeReceiveMsg = 1,
+    /// <summary>
+    /// 触发回调
+    /// </summary>
+    [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeCallBack")] ServerMsgEventTypeCallBack = 2,
+    /// <summary>
+    /// 消息超时
+    /// </summary>
+    [pbr::OriginalName("ServerMsgEventType_ServerMsgEventTypeTimeOut")] ServerMsgEventTypeTimeOut = 3,
+  }
+
+  public enum ServerEventType {
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerUnknown")] ServerEventTypeServerUnknown = 0,
+    /// <summary>
+    /// 服务器驱动事件 10-99
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerAfterConfig")] ServerEventTypeServerAfterConfig = 10,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerMinutely")] ServerEventTypeServerMinutely = 11,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerHourly")] ServerEventTypeServerHourly = 12,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerDaily")] ServerEventTypeServerDaily = 13,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerConnClose")] ServerEventTypeServerConnClose = 14,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerConnConnect")] ServerEventTypeServerConnConnect = 15,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerTimer")] ServerEventTypeServerTimer = 16,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeSqlRollBack")] ServerEventTypeSqlRollBack = 17,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerEventCall")] ServerEventTypeServerEventCall = 18,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 角色事件 100-199
+    /// -------------------------------------------------------------------------
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerCreated")] ServerEventTypePlayerCreated = 100,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerOnline")] ServerEventTypePlayerOnline = 101,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerOffline")] ServerEventTypePlayerOffline = 102,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerNewDay")] ServerEventTypePlayerNewDay = 103,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerLvUp")] ServerEventTypePlayerLvUp = 104,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerResetProfile")] ServerEventTypePlayerResetProfile = 105,
+    /// <summary>
+    /// 技能更新
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUpdateSkill")] ServerEventTypePlayerUpdateSkill = 106,
+    /// <summary>
+    /// exp增加
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAddExp")] ServerEventTypePlayerAddExp = 107,
+    /// <summary>
+    /// exp扣除
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerDeductExp")] ServerEventTypePlayerDeductExp = 108,
+    /// <summary>
+    /// HP回复
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerReplyHp")] ServerEventTypePlayerReplyHp = 109,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeCalculatePlayerProfile")] ServerEventTypeCalculatePlayerProfile = 110,
+    /// <summary>
+    /// 玩家使用技能
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUseSkill")] ServerEventTypePlayerUseSkill = 111,
+    /// <summary>
+    /// 玩家被攻击
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerBeAttack")] ServerEventTypePlayerBeAttack = 112,
+    /// <summary>
+    /// 销毁item
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeDestoryItem")] ServerEventTypeDestoryItem = 114,
+    /// <summary>
+    /// 销毁所有item
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeDestoryAllItem")] ServerEventTypeDestoryAllItem = 115,
+    /// <summary>
+    /// 添加item
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeAddItem")] ServerEventTypeAddItem = 116,
+    /// <summary>
+    /// 玩家兑换cdkey
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeRedeemCDKey")] ServerEventTypeRedeemCdkey = 117,
+    /// <summary>
+    /// 玩家神庙等级升级
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeDungeon")] ServerEventTypeDungeon = 118,
+    /// <summary>
+    /// send chat message
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeSendChatMsg")] ServerEventTypeSendChatMsg = 119,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeSendUpdateChatState")] ServerEventTypeSendUpdateChatState = 120,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeSendRemoveChatMsg")] ServerEventTypeSendRemoveChatMsg = 121,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 来自场景的通知 200-1000
+    /// -------------------------------------------------------------------------
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventZoneSendToPlayer")] ServerEventZoneSendToPlayer = 200,
+    [pbr::OriginalName("ServerEventType_Z2SZoneBroadcast")] Z2SzoneBroadcast = 202,
+    [pbr::OriginalName("ServerEventType_ServerEventEntityAnimationCreate")] ServerEventEntityAnimationCreate = 203,
+    [pbr::OriginalName("ServerEventType_ServerEventEntityAnimationUpdate")] ServerEventEntityAnimationUpdate = 204,
+    [pbr::OriginalName("ServerEventType_ServerEventEntityAnimationDel")] ServerEventEntityAnimationDel = 205,
+    [pbr::OriginalName("ServerEventType_Z2SGobMapSave")] Z2SgobMapSave = 206,
+    [pbr::OriginalName("ServerEventType_ServerEventEntityPlayerUpdate")] ServerEventEntityPlayerUpdate = 207,
+    [pbr::OriginalName("ServerEventType_Z2SEntityTemplateSave")] Z2SentityTemplateSave = 208,
+    [pbr::OriginalName("ServerEventType_Z2SPlayerOffline")] Z2SplayerOffline = 210,
+    [pbr::OriginalName("ServerEventType_Z2SPlayerManorData")] Z2SplayerManorData = 211,
+    /// <summary>
+    ///保存实体
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventEntitySave")] ServerEventEntitySave = 213,
+    /// <summary>
+    /// 建造
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_Z2SBuildDelete")] Z2SbuildDelete = 242,
+    [pbr::OriginalName("ServerEventType_ServerEventBuild")] ServerEventBuild = 243,
+    [pbr::OriginalName("ServerEventType_Z2SPuppetDelete")] Z2SpuppetDelete = 244,
+    /// <summary>
+    ///数据落地
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_Z2SPlayerSave")] Z2SplayerSave = 399,
+    [pbr::OriginalName("ServerEventType_Z2SEntitySave")] Z2SentitySave = 400,
+    [pbr::OriginalName("ServerEventType_Z2SManorPacket")] Z2SmanorPacket = 401,
+    /// <summary>
+    /// 代码块 500-700
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventCodeExecute")] ServerEventCodeExecute = 500,
+    [pbr::OriginalName("ServerEventType_ServerEventUseItemFromZone")] ServerEventUseItemFromZone = 501,
+    [pbr::OriginalName("ServerEventType_ServerEventDropItemFromZone")] ServerEventDropItemFromZone = 502,
+    [pbr::OriginalName("ServerEventType_ServerEventBotBuildFromZone")] ServerEventBotBuildFromZone = 503,
+    [pbr::OriginalName("ServerEventType_ServerEventMakeItemFromZone")] ServerEventMakeItemFromZone = 505,
+    [pbr::OriginalName("ServerEventType_ServerEventTakeWorkbenchItemByCidFromZone")] ServerEventTakeWorkbenchItemByCidFromZone = 506,
+    [pbr::OriginalName("ServerEventType_ServerEventGiveWorkbenchItemByCidFromZone")] ServerEventGiveWorkbenchItemByCidFromZone = 507,
+    [pbr::OriginalName("ServerEventType_ServerEventPlayerCompleteChapter")] ServerEventPlayerCompleteChapter = 508,
+    [pbr::OriginalName("ServerEventType_ServerEventMissionEnter")] ServerEventMissionEnter = 509,
+    [pbr::OriginalName("ServerEventType_ServerEventAcceptTask")] ServerEventAcceptTask = 510,
+    [pbr::OriginalName("ServerEventType_ServerEventSubmitTask")] ServerEventSubmitTask = 511,
+    [pbr::OriginalName("ServerEventType_ServerEventComplateTask")] ServerEventComplateTask = 512,
+    [pbr::OriginalName("ServerEventType_ServerEventMissionEnterSceneMonitor")] ServerEventMissionEnterSceneMonitor = 513,
+    /// <summary>
+    /// 战斗
+    ///ServerEventType_Z2S_PickItem = 711;
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_Z2S_PlayerDead")] Z2SPlayerDead = 712,
+    [pbr::OriginalName("ServerEventType_ServerEventZ2SAddExpToBot")] ServerEventZ2SaddExpToBot = 715,
+    /// <summary>
+    /// 机器人
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventZ2SBotDead")] ServerEventZ2SbotDead = 731,
+    /// <summary>
+    /// 工作台
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_Z2SPlantDelete")] Z2SplantDelete = 753,
+    [pbr::OriginalName("ServerEventType_Z2SPetDelete")] Z2SpetDelete = 754,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// (机器人)事件 800-899
+    /// -------------------------------------------------------------------------
+    /// (机器人)更换装备
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotCreated")] ServerEventTypeBotCreated = 800,
+    /// <summary>
+    /// (机器人)升级
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotLvUp")] ServerEventTypeBotLvUp = 801,
+    /// <summary>
+    /// (机器人)更换装备
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeUpdateBotEquipment")] ServerEventTypeUpdateBotEquipment = 802,
+    /// <summary>
+    /// exp增加
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotAddExp")] ServerEventTypeBotAddExp = 803,
+    /// <summary>
+    /// HP回复
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotReplyHp")] ServerEventTypeBotReplyHp = 804,
+    /// <summary>
+    /// bot背包添加物品
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotAddObject")] ServerEventTypeBotAddObject = 805,
+    /// <summary>
+    /// 召回机器人
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeRecallBot")] ServerEventTypeRecallBot = 806,
+    /// <summary>
+    /// 机器人使用技能
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotUseSkill")] ServerEventTypeBotUseSkill = 807,
+    /// <summary>
+    /// 玩家被攻击
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotBeAttack")] ServerEventTypeBotBeAttack = 808,
+    /// <summary>
+    /// 添加物品（带属性的）
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeBotAddItem")] ServerEventTypeBotAddItem = 809,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 背包event协议号 900 - 999
+    /// -------------------------------------------------------------------------
+    /// 使用消耗品
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUseConsumable")] ServerEventTypePlayerUseConsumable = 902,
+    /// <summary>
+    /// 添加物品
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAddObject")] ServerEventTypePlayerAddObject = 903,
+    /// <summary>
+    /// 拾取物品
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_Z2SPickFalling")] Z2SpickFalling = 904,
+    /// <summary>
+    /// 拾取包裹
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_Z2SPickFallingBox")] Z2SpickFallingBox = 905,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerUseObject")] ServerEventTypePlayerUseObject = 907,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeAddItemByOperateBubble")] ServerEventTypeAddItemByOperateBubble = 908,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeTakeItemByOperateBubble")] ServerEventTypeTakeItemByOperateBubble = 909,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeReplaceItemByOperateBubble")] ServerEventTypeReplaceItemByOperateBubble = 910,
+    /// <summary>
+    /// 重置玩家nft道具的使用状态
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeResetPlayerNftStatus")] ServerEventTypeResetPlayerNftStatus = 911,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeUpdatePlayerNFTs")] ServerEventTypeUpdatePlayerNfts = 912,
+    /// <summary>
+    /// 更新第三方nft道具的过期时间
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeUpdateThirdNftTimeOut")] ServerEventTypeUpdateThirdNftTimeOut = 915,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 任务系统 1000-1050
+    /// -------------------------------------------------------------------------
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAcceptedTask")] ServerEventTypePlayerAcceptedTask = 1001,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerSubmittedTask")] ServerEventTypePlayerSubmittedTask = 1002,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeUpdateNpcTaskNoticeType")] ServerEventTypeUpdateNpcTaskNoticeType = 1003,
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerTaskStateUpdate")] ServerEventTypePlayerTaskStateUpdate = 1005,
+    /// <summary>
+    /// 任务
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTaskProgressChange")] ServerEventTaskProgressChange = 1049,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 邮件event协议号 1050 - 1100
+    /// -------------------------------------------------------------------------
+    /// 添加个人邮件
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypePlayerAddMail")] ServerEventTypePlayerAddMail = 1051,
+    /// <summary>
+    /// 添加全服邮件
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeServerSendMailByTemplateId")] ServerEventTypeServerSendMailByTemplateId = 1052,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 大世界event协议号 9000 - 10000
+    /// -------------------------------------------------------------------------
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeLandGroupCreate")] ServerEventTypeLandGroupCreate = 9000,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeLandGroupUpdate")] ServerEventTypeLandGroupUpdate = 9001,
+    [pbr::OriginalName("ServerEventType_ServerEventTypeLandGroupRemove")] ServerEventTypeLandGroupRemove = 9002,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 最大事件数
+    /// </summary>
+    [pbr::OriginalName("ServerEventType_ServerEventTypeNumMax")] ServerEventTypeNumMax = 65535,
+  }
+
+  public enum WorldEventType {
+    /// <summary>
+    /// 场景事件
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeUnknown")] WorldEventTypeUnknown = 0,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeSendToZone")] WorldEventTypeSendToZone = 1,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEnterMap")] WorldEventTypeEnterMap = 2,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeLeaveMap")] WorldEventTypeLeaveMap = 3,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeMove")] WorldEventTypeMove = 4,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeMapSave")] WorldEventTypeMapSave = 5,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeReloadResourcePoint")] WorldEventTypeReloadResourcePoint = 6,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeInitMapElement")] WorldEventTypeInitMapElement = 7,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntitySave")] WorldEventTypeEntitySave = 8,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerReset")] WorldEventTypePlayerReset = 9,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeResetAreaState")] WorldEventTypeResetAreaState = 10,
+    /// <summary>
+    /// 环境
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeDiurnalCycleChange")] WorldEventTypeDiurnalCycleChange = 30,
+    /// <summary>
+    /// chunk事件
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntityEventCall")] WorldEventTypeEntityEventCall = 101,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeAddEntityToChunkGrid")] WorldEventTypeAddEntityToChunkGrid = 102,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeGetEntity")] WorldEventTypeGetEntity = 104,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntityEventCallNoReturn")] WorldEventTypeEntityEventCallNoReturn = 105,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRestartAllEntitiesCodeBlock")] WorldEventTypeRestartAllEntitiesCodeBlock = 106,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeResourceLoadFinish")] WorldEventTypeResourceLoadFinish = 107,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeUpdateWidgetAttr")] WorldEventTypeUpdateWidgetAttr = 108,
+    /// <summary>
+    ///领地物件运行代码块事件
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRunCodeBlockByPlayerArea")] WorldEventTypeRunCodeBlockByPlayerArea = 109,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesRestartCodeBlock")] WorldEventTypeEntitiesRestartCodeBlock = 110,
+    /// <summary>
+    ///公共领地所有实体重启代码块
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypePublicAreaRestartCode")] WorldEventTypePublicAreaRestartCode = 112,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAreaRestartCode")] WorldEventTypePlayerAreaRestartCode = 113,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRemoveEntityChange")] WorldEventTypeRemoveEntityChange = 114,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeReviveEntity")] WorldEventTypeReviveEntity = 115,
+    /// <summary>
+    ///副本地图回溯 事件
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRestartDungeonMap")] WorldEventTypeRestartDungeonMap = 116,
+    /// <summary>
+    ///  触发实体的开始事件代码块
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesExecuteStartEvent")] WorldEventTypeEntitiesExecuteStartEvent = 117,
+    /// <summary>
+    /// 停止实体的所有代码块(重置到事件等待触发状态)
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesStopCodeBlock")] WorldEventTypeEntitiesStopCodeBlock = 118,
+    /// <summary>
+    /// 应用组件模板到实体
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeApplyEntityTemplate")] WorldEventTypeApplyEntityTemplate = 120,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeAddCameraToChunkGrid")] WorldEventTypeAddCameraToChunkGrid = 121,
+    /// <summary>
+    /// 场景区域重新运行代码块
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeZoneAreaRestartCode")] WorldEventTypeZoneAreaRestartCode = 122,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeAddEntityWithoutViewToChunkGrid")] WorldEventTypeAddEntityWithoutViewToChunkGrid = 123,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeCodeEventNotification")] WorldEventTypeCodeEventNotification = 124,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePublicAreaResetCodeBlock")] WorldEventTypePublicAreaResetCodeBlock = 125,
+    /// <summary>
+    /// 场景区域运行开始代码块
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesExecuteQuickCodeStartEvent")] WorldEventTypeEntitiesExecuteQuickCodeStartEvent = 126,
+    /// <summary>
+    /// 运行或停止区域中可编码实体的快速编码状态
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeResetEntitiesQuickCodeState")] WorldEventTypeResetEntitiesQuickCodeState = 127,
+    /// <summary>
+    /// 区域所有多实体快速编码标签页信息
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeEntitiesQuickCodeTabDatas")] WorldEventTypeEntitiesQuickCodeTabDatas = 128,
+    /// <summary>
+    /// grid 事件
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeToGridEvent")] WorldEventTypeToGridEvent = 150,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeZoomEvent")] WorldEventTypeZoomEvent = 151,
+    /// <summary>
+    /// build
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddEntity")] WorldEventTypePlayerAddEntity = 201,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelEntity")] WorldEventTypePlayerDelEntity = 202,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerMoveEntity")] WorldEventTypePlayerMoveEntity = 203,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeBotAddEntity")] WorldEventTypeBotAddEntity = 204,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelEntityByScene")] WorldEventTypePlayerDelEntityByScene = 205,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddResourcePoint")] WorldEventTypePlayerAddResourcePoint = 210,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelResourcePoint")] WorldEventTypePlayerDelResourcePoint = 211,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddBornPoint")] WorldEventTypePlayerAddBornPoint = 212,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelBornPoint")] WorldEventTypePlayerDelBornPoint = 213,
+    /// <summary>
+    ///s2z
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaCreate")] S2ZlessonAreaCreate = 214,
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaDel")] S2ZlessonAreaDel = 215,
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaQuery")] S2ZlessonAreaQuery = 216,
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaUpdate")] S2ZlessonAreaUpdate = 217,
+    [pbr::OriginalName("WorldEventType_S2ZBeautyAreaUpdate")] S2ZbeautyAreaUpdate = 218,
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaCopy")] S2ZlessonAreaCopy = 219,
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaIndexUpdate")] S2ZlessonAreaIndexUpdate = 220,
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaUnlock")] S2ZlessonAreaUnlock = 221,
+    [pbr::OriginalName("WorldEventType_S2ZLessonPlayerArrivedArea")] S2ZlessonPlayerArrivedArea = 222,
+    [pbr::OriginalName("WorldEventType_S2ZLessonAreaRunQuickCodeStart")] S2ZlessonAreaRunQuickCodeStart = 223,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeAddTileMapSign")] WorldEventTypeAddTileMapSign = 224,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRemoveTileMapSign")] WorldEventTypeRemoveTileMapSign = 225,
+    /// <summary>
+    /// bot
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeSpawnBot")] WorldEventTypeSpawnBot = 301,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRecallBot")] WorldEventTypeRecallBot = 302,
+    /// <summary>
+    /// 功能实体事件
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeIssueSettle")] WorldEventTypeIssueSettle = 401,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeGetEntityIssue")] WorldEventTypeGetEntityIssue = 402,
+    /// <summary>
+    ///工作台事件
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeWorkbenchUpdateSub")] WorldEventTypeWorkbenchUpdateSub = 506,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeWorkbenchUpdateFather")] WorldEventTypeWorkbenchUpdateFather = 507,
+    /// <summary>
+    /// 玩家领地
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeSpawnPalyerArea")] WorldEventTypeSpawnPalyerArea = 600,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeMovePalyerArea")] WorldEventTypeMovePalyerArea = 601,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRemovePalyerArea")] WorldEventTypeRemovePalyerArea = 602,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeQueryMyPalyerArea")] WorldEventTypeQueryMyPalyerArea = 603,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeSetGlobalVar")] WorldEventTypeSetGlobalVar = 604,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeQueryPalyerAreas")] WorldEventTypeQueryPalyerAreas = 605,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeQueryPalyerAreaByRc")] WorldEventTypeQueryPalyerAreaByRc = 606,
+    [pbr::OriginalName("WorldEventType_S2ZManorBuy")] S2ZmanorBuy = 610,
+    [pbr::OriginalName("WorldEventType_S2ZManorBuyMarkSync")] S2ZmanorBuyMarkSync = 611,
+    /// <summary>
+    ///领地打包成模板
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_S2ZManorTemplatePacket")] S2ZmanorTemplatePacket = 612,
+    /// <summary>
+    ///应用领地模
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_S2ZManorTemplateUse")] S2ZmanorTemplateUse = 613,
+    /// <summary>
+    /// B端 老师重置公共领地
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeTeacherResetPublicManor")] WorldEventTypeTeacherResetPublicManor = 614,
+    /// <summary>
+    /// 领取空领地
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeCreatAreaByEmptyArea")] WorldEventTypeCreatAreaByEmptyArea = 615,
+    /// <summary>
+    /// 检测领地
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeManorTemplateCheck")] WorldEventTypeManorTemplateCheck = 616,
+    /// <summary>
+    /// 广播
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeAreaUpdateTemplate")] WorldEventTypeAreaUpdateTemplate = 617,
+    /// <summary>
+    /// 将地图数据加载到领地中
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_S2ZPlayerAreaLoadManorMap")] S2ZplayerAreaLoadManorMap = 618,
+    /// <summary>
+    ///领地改变大小
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_S2ZManorTemplateChangeSize")] S2ZmanorTemplateChangeSize = 619,
+    /// <summary>
+    /// 领地回收
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_S2ZPlayerManorTakeBack")] S2ZplayerManorTakeBack = 620,
+    /// <summary>
+    /// 更新领地回收时间
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeUpdateAreaRecoverTime")] WorldEventTypeUpdateAreaRecoverTime = 621,
+    /// <summary>
+    /// 撤销重做
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeUndo")] WorldEventTypeUndo = 701,
+    /// <summary>
+    /// 重做
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeRedo")] WorldEventTypeRedo = 702,
+    /// <summary>
+    ///--------------代码块事件   800 ~ 899   -----------------
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeCodeblockAddEntity")] WorldEventTypeCodeblockAddEntity = 801,
+    [pbr::OriginalName("WorldEventType_WorldEventTypeCodeblockDelEntity")] WorldEventTypeCodeblockDelEntity = 802,
+    /// <summary>
+    ///透传过来的客户端消息
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeClientMsg")] WorldEventTypeClientMsg = 9801,
+    /// <summary>
+    /// gm 9901~9999
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeGmAddEntity")] WorldEventTypeGmAddEntity = 9901,
+    /// <summary>
+    /// -------------------------------------------------------------------------
+    /// 大世界event协议号 9000 - 10000
+    /// -------------------------------------------------------------------------
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerAddBigWorldSystemArea")] WorldEventTypePlayerAddBigWorldSystemArea = 9000,
+    [pbr::OriginalName("WorldEventType_WorldEventTypePlayerDelBigWorldSystemArea")] WorldEventTypePlayerDelBigWorldSystemArea = 9001,
+    /// <summary>
+    /// 最大事件数
+    /// </summary>
+    [pbr::OriginalName("WorldEventType_WorldEventTypeNumMax")] WorldEventTypeNumMax = 65535,
+  }
+
+  public enum GridEventType {
+    /// <summary>
+    /// 场景事件
+    /// </summary>
+    [pbr::OriginalName("GridEventType_GridEventTypeUnknown")] GridEventTypeUnknown = 0,
+    [pbr::OriginalName("GridEventType_GridEventTypeEntityEvent")] GridEventTypeEntityEvent = 1,
+  }
+
+  public enum EntityEventType {
+    /// <summary>
+    /// 场景事件
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUnknown")] EntityEventTypeUnknown = 0,
+    /// <summary>
+    /// --------------- 玩家事件 ----------------------------
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeMoveTo")] EntityEventTypeMoveTo = 1,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUseSkill")] EntityEventTypeUseSkill = 2,
+    /// <summary>
+    /// 换装
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeChangeAvatars")] EntityEventTypeChangeAvatars = 3,
+    /// <summary>
+    /// 玩家属性更新
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateProfile")] EntityEventTypeUpdateProfile = 4,
+    /// <summary>
+    /// 玩家技能更新(skillId=0->当前没有技能)
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateSkill")] EntityEventTypeUpdateSkill = 5,
+    /// <summary>
+    /// 玩家等级更新
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateLevel")] EntityEventTypeUpdateLevel = 6,
+    /// <summary>
+    /// 玩家恢复hp(快速)
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeRecoveryHp")] EntityEventTypeRecoveryHp = 7,
+    /// <summary>
+    /// 传送
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeTeleport")] EntityEventTypeTeleport = 9,
+    /// <summary>
+    /// 拾取掉落物品
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePickFalling")] EntityEventTypePickFalling = 11,
+    /// <summary>
+    /// 拾取掉落包裹(FallingBox)
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePickBox")] EntityEventTypePickBox = 12,
+    /// <summary>
+    ///传送回家
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeHomeTeleport")] EntityEventTypeHomeTeleport = 13,
+    /// <summary>
+    ///添加buff
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeAddBuff")] EntityEventTypeAddBuff = 14,
+    /// <summary>
+    ///删除buff
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeRemoveBuff")] EntityEventTypeRemoveBuff = 15,
+    /// <summary>
+    ///角色复活(客户端消息)
+    ///EntityEventType_EntityEventTypeC2ZPlayerRelive = 17;
+    ///角色复活(逻辑层检测完复活区域后发送给场景层)
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerRespawn")] EntityEventTypePlayerRespawn = 18,
+    /// <summary>
+    ///通知玩家开始共享机器人视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerShareBotViewStart")] EntityEventTypePlayerShareBotViewStart = 19,
+    /// <summary>
+    ///通知玩家停止共享机器人视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerShareBotViewStop")] EntityEventTypePlayerShareBotViewStop = 20,
+    /// <summary>
+    ///拾取包裹返回
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeS2ZPickFallingBox")] EntityEventTypeS2ZpickFallingBox = 21,
+    /// <summary>
+    ///一键解卡
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerUnStuck")] EntityEventTypePlayerUnStuck = 23,
+    /// <summary>
+    ///进入上帝视角
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeEnterGodView")] EntityEventTypeEnterGodView = 24,
+    /// <summary>
+    ///离开上帝视角
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeLeaveGodView")] EntityEventTypeLeaveGodView = 25,
+    /// <summary>
+    ///tp实体并触发事件
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeTeleportAndTrigger")] EntityEventTypeTeleportAndTrigger = 26,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeStartOrStop")] EntityEventTypeStartOrStop = 96,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeEnterIdeModel")] EntityEventTypeEnterIdeModel = 97,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeQuitIdeModel")] EntityEventTypeQuitIdeModel = 98,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeClientMsg")] EntityEventTypeClientMsg = 100,
+    /// <summary>
+    /// 按键输入事件
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeInputByKeypress")] EntityEventTypeInputByKeypress = 110,
+    /// <summary>
+    /// 其他输入事件
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeInputBySpecific")] EntityEventTypeInputBySpecific = 111,
+    /// <summary>
+    /// 实体使用物件
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUseItem")] EntityEventTypeUseItem = 112,
+    /// <summary>
+    /// 实体丢弃物件
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeDropItem")] EntityEventTypeDropItem = 113,
+    /// <summary>
+    /// 更新玩家副本闯关信息
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerDungeonUpdate")] EntityEventTypePlayerDungeonUpdate = 114,
+    /// <summary>
+    /// 玩家完成答题（添加积分和执行后续代码块）
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerIssueSettle")] EntityEventTypePlayerIssueSettle = 115,
+    /// <summary>
+    /// 更新玩家视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerViewUp")] EntityEventTypePlayerViewUp = 116,
+    /// <summary>
+    /// 玩家镜头移动
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCameraMoveTo")] EntityEventTypeCameraMoveTo = 118,
+    /// <summary>
+    ///通知镜头是否使用摄像头视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCameraShareView")] EntityEventTypeCameraShareView = 119,
+    /// <summary>
+    ///通知玩家是否使用镜头视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerShareView")] EntityEventTypePlayerShareView = 120,
+    /// <summary>
+    ///客户端预览镜头
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCameraTypeChange")] EntityEventTypeCameraTypeChange = 121,
+    /// <summary>
+    ///预览镜头拉取视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCameraPullView")] EntityEventTypeCameraPullView = 122,
+    /// <summary>
+    /// 重置玩家
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeResetPlayer")] EntityEventTypeResetPlayer = 125,
+    /// <summary>
+    /// 重置玩家实体锁定状态
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeResetLockedEntity")] EntityEventTypeResetLockedEntity = 126,
+    /// <summary>
+    /// --------------- 代码块 200-399 ------------------------
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeMoveArrived")] EntityEventTypeCodeMoveArrived = 200,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEventCall")] EntityEventTypeCodeEventCall = 205,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnComponentObject")] EntityEventTypeCodeOnComponentObject = 213,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeProgramSave")] EntityEventTypeProgramSave = 214,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeScreenSave")] EntityEventTypeCodeScreenSave = 215,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeRestart")] EntityEventTypeCodeRestart = 216,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnEnergyEmpty")] EntityEventTypeCodeOnEnergyEmpty = 217,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnCopyNew")] EntityEventTypeCodeOnCopyNew = 218,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnCopyDel")] EntityEventTypeCodeOnCopyDel = 219,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeQuestionReplay")] EntityEventTypeCodeQuestionReplay = 220,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeExecuteStartEvent")] EntityEventTypeCodeExecuteStartEvent = 221,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeStopCodeBlock")] EntityEventTypeCodeStopCodeBlock = 222,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEntityAdd")] EntityEventTypeCodeEntityAdd = 224,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnEntityOverlap")] EntityEventTypeCodeOnEntityOverlap = 225,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnStampede")] EntityEventTypeCodeOnStampede = 228,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnStampedeEnd")] EntityEventTypeCodeOnStampedeEnd = 229,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetCanStampede")] EntityEventTypeCodeSetCanStampede = 230,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetCanOperate")] EntityEventTypeCodeSetCanOperate = 231,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnByClicked")] EntityEventTypeCodeOnByClicked = 237,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeOnEnterRoom")] EntityEventTypeCodeOnEnterRoom = 238,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeCopyFatherDead")] EntityEventTypeCodeCopyFatherDead = 239,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEditTimeLine")] EntityEventTypeCodeEditTimeLine = 240,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLineShowText")] EntityEventTypeTimeLineShowText = 241,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLineMoveToPos")] EntityEventTypeTimeLineMoveToPos = 242,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLinePlayAudio")] EntityEventTypeTimeLinePlayAudio = 243,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeTimeLineShowSubtitle")] EntityEventTypeTimeLineShowSubtitle = 244,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeCGVideoEnd")] EntityEventTypeCodeCgvideoEnd = 245,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeQuickCodeRestart")] EntityEventTypeQuickCodeRestart = 246,
+    /// <summary>
+    /// 隐藏实体
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeHide")] EntityEventTypeHide = 247,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeEventCodeNotification")] EntityEventTypeCodeEventCodeNotification = 355,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetProfile")] EntityEventTypeCodeSetProfile = 357,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSettingPanel")] EntityEventTypeCodeSettingPanel = 358,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeMissionEnd")] EntityEventTypeCodeMissionEnd = 359,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeClickOperateBubble")] EntityEventTypeClickOperateBubble = 360,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeCameraAction")] EntityEventTypeCodeCameraAction = 361,
+    [pbr::OriginalName("EntityEventType_EntityEventTypePopComplexDiglog")] EntityEventTypePopComplexDiglog = 362,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeCodeSetCarryClass")] EntityEventTypeCodeSetCarryClass = 363,
+    /// <summary>
+    /// --------------- 机器人 400-409 ----------------------------
+    ///通知机器人开始共享机器人视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBotShareViewStart")] EntityEventTypeBotShareViewStart = 400,
+    /// <summary>
+    ///通知机器人停止共享机器人视野
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBotShareViewStop")] EntityEventTypeBotShareViewStop = 401,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeAddFuel")] EntityEventTypeAddFuel = 403,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBotChangeSkin")] EntityEventTypeBotChangeSkin = 404,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBotRename")] EntityEventTypeBotRename = 405,
+    /// <summary>
+    /// --------------- 建造 450-459 ------------------------------
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBuildingSwitch")] EntityEventTypeBuildingSwitch = 450,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBuildingModePosUpdate")] EntityEventTypeBuildingModePosUpdate = 451,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeQuitBuildingStatus")] EntityEventTypeQuitBuildingStatus = 452,
+    /// <summary>
+    /// --------------- 建筑物和工作台 500~549 --------------------
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchObjectUpdate")] EntityEventTypeWorkbenchObjectUpdate = 501,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBuildingWidgetUpdate")] EntityEventTypeBuildingWidgetUpdate = 502,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchAddFuel")] EntityEventTypeWorkbenchAddFuel = 512,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchComponent")] EntityEventTypeWorkbenchComponent = 513,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchResetComponent")] EntityEventTypeWorkbenchResetComponent = 514,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchSetPrompt")] EntityEventTypeWorkbenchSetPrompt = 515,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchUpdateSub")] EntityEventTypeWorkbenchUpdateSub = 516,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeWorkbenchUpdateFather")] EntityEventTypeWorkbenchUpdateFather = 517,
+    /// <summary>
+    /// --------------- entity场景事件 600 ~ 699 -----------------
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeEntityLock")] EntityEventTypeEntityLock = 600,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeEntityUnLock")] EntityEventTypeEntityUnLock = 601,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeRegisterEntityCodeEvent")] EntityEventTypeRegisterEntityCodeEvent = 602,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeDestroyEntityCodeEvent")] EntityEventTypeDestroyEntityCodeEvent = 603,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBeClick")] EntityEventTypeBeClick = 604,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateAnimation")] EntityEventTypeUpdateAnimation = 605,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeBeOperated")] EntityEventTypeBeOperated = 606,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeEntityLockUpdate")] EntityEventTypeEntityLockUpdate = 607,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateAudio")] EntityEventTypeUpdateAudio = 608,
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerAddDiyAudio")] EntityEventTypePlayerAddDiyAudio = 609,
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerGetDiyAudio")] EntityEventTypePlayerGetDiyAudio = 610,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateUseEmoji")] EntityEventTypeUpdateUseEmoji = 611,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeApplyEntityTemplate")] EntityEventTypeApplyEntityTemplate = 612,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeUpdateMapTemplate")] EntityEventTypeUpdateMapTemplate = 613,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeMonsterLockPlayer")] EntityEventTypeMonsterLockPlayer = 614,
+    [pbr::OriginalName("EntityEventType_EntityEventTypePlayerForceExitFight")] EntityEventTypePlayerForceExitFight = 615,
+    /// <summary>
+    /// --------------- 聊天 1000~1050 ---------------------------
+    /// 附近chat 信息
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeSendNearbyChat")] EntityEventTypeSendNearbyChat = 1000,
+    [pbr::OriginalName("EntityEventType_EntityEventTypeSendNearToCodeEntitybyChat")] EntityEventTypeSendNearToCodeEntitybyChat = 1001,
+    /// <summary>
+    /// --------------- 事件号最大值 ---------------
+    /// </summary>
+    [pbr::OriginalName("EntityEventType_EntityEventTypeNumMax")] EntityEventTypeNumMax = 65535,
+  }
+
+  public enum EventCodeType {
+    /// <summary>
+    /// 指定实体的代码块事件
+    /// </summary>
+    [pbr::OriginalName("EventCodeType_EventCodeTypeUnknown")] EventCodeTypeUnknown = 0,
+    /// <summary>
+    /// 指定实体的代码块事件
+    /// </summary>
+    [pbr::OriginalName("EventCodeType_EventCodeTypeServer")] EventCodeTypeServer = 1,
+    /// <summary>
+    /// 不指定某个实体的代码块事件
+    /// </summary>
+    [pbr::OriginalName("EventCodeType_EventCodeTypeEntityEvent")] EventCodeTypeEntityEvent = 2,
+    /// <summary>
+    /// 接收实体发送的广播呼叫
+    /// </summary>
+    [pbr::OriginalName("EventCodeType_EventCodeTypeReceiveEventCall")] EventCodeTypeReceiveEventCall = 3,
+    /// <summary>
+    /// 某类型的实体的事件
+    /// </summary>
+    [pbr::OriginalName("EventCodeType_EventCodeTypeEntityType")] EventCodeTypeEntityType = 4,
+  }
+
+  public enum EntityCodeEventType {
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeUnknown")] EntityCodeEventTypeUnknown = 0,
+    /// <summary>
+    /// 实体点击事件
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeBeClicked")] EntityCodeEventTypeBeClicked = 101,
+    /// <summary>
+    /// 实体坐标变更
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypePosUpdate")] EntityCodeEventTypePosUpdate = 102,
+    /// <summary>
+    /// 实体被攻击
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeBeAttack")] EntityCodeEventTypeBeAttack = 103,
+    /// <summary>
+    /// 实体攻击
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeAttack")] EntityCodeEventTypeAttack = 104,
+    /// <summary>
+    /// 实体死亡
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeDead")] EntityCodeEventTypeDead = 105,
+    /// <summary>
+    /// 实体被操作
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnTouch")] EntityCodeEventTypeOnTouch = 106,
+    /// <summary>
+    /// 实体当前帧更新
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeFrameUpdate")] EntityCodeEventTypeFrameUpdate = 107,
+    /// <summary>
+    /// 实体能源变更
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeFuelUpdate")] EntityCodeEventTypeFuelUpdate = 108,
+    /// <summary>
+    /// 实体使用技能
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeUseSkill")] EntityCodeEventTypeUseSkill = 109,
+    /// <summary>
+    /// 操作失效/生效
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeCanOperate")] EntityCodeEventTypeCanOperate = 110,
+    /// <summary>
+    /// 镜像
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeMirror")] EntityCodeEventTypeMirror = 112,
+    /// <summary>
+    /// 合成物品
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeComponent")] EntityCodeEventTypeComponent = 113,
+    /// <summary>
+    /// 接收广播
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeReceiveEventCall")] EntityCodeEventTypeReceiveEventCall = 114,
+    /// <summary>
+    /// 变量改变
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeVarChange")] EntityCodeEventTypeVarChange = 115,
+    /// <summary>
+    /// 实体被实体踩踏
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeEntityBeStampede")] EntityCodeEventTypeEntityBeStampede = 116,
+    /// <summary>
+    /// 实体被实体踩踏结束
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeEntityOverBeStampede")] EntityCodeEventTypeEntityOverBeStampede = 117,
+    /// <summary>
+    /// 实体被建造 || 任意实体被建造
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnBuild")] EntityCodeEventTypeOnBuild = 118,
+    /// <summary>
+    /// 实体进入房间
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeEnterRoom")] EntityCodeEventTypeEnterRoom = 119,
+    /// <summary>
+    /// 输入事件
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeInputKeyAction")] EntityCodeEventTypeInputKeyAction = 121,
+    /// <summary>
+    /// 按键事件
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeKeypress")] EntityCodeEventTypeKeypress = 122,
+    /// <summary>
+    /// 实体使用物件
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeUseItem")] EntityCodeEventTypeUseItem = 124,
+    /// <summary>
+    /// 实体丢弃物件
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeDropItem")] EntityCodeEventTypeDropItem = 125,
+    /// <summary>
+    /// 实体拾取物件
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypePickupItem")] EntityCodeEventTypePickupItem = 126,
+    /// <summary>
+    /// 实体碰撞
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnCrash")] EntityCodeEventTypeOnCrash = 129,
+    /// <summary>
+    /// 实体丢弃物件返回物品id
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeDropItemWithId")] EntityCodeEventTypeDropItemWithId = 130,
+    /// <summary>
+    /// xx克隆体被删除
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityCodeEventTypeOnCloneDel")] EntityCodeEventTypeOnCloneDel = 131,
+    /// <summary>
+    /// 实体被拿起
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodeOnBePickUp")] EntityEventTypeCodeOnBePickUp = 135,
+    /// <summary>
+    /// 实体被放下
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodeOnBePutDown")] EntityEventTypeCodeOnBePutDown = 136,
+    /// <summary>
+    /// 实体被销毁
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodeOnBeDestroy")] EntityEventTypeCodeOnBeDestroy = 137,
+    /// <summary>
+    /// 玩家完成答题
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityEventTypeCodePlayerIssueSettle")] EntityEventTypeCodePlayerIssueSettle = 138,
+    /// <summary>
+    /// 当实体快速编码运行/停止时触发（需打开可编码属性生效）
+    /// </summary>
+    [pbr::OriginalName("EntityCodeEventType_EntityEventTypeEntitiesQuickCodeRunOrStop")] EntityEventTypeEntitiesQuickCodeRunOrStop = 139,
+  }
+
+  /// <summary>
+  /// 数据保存事件TYPE
+  /// </summary>
+  public enum DataSaveType {
+    [pbr::OriginalName("DataSaveType_DataSaveTypeUnknown")] DataSaveTypeUnknown = 0,
+    [pbr::OriginalName("DataSaveType_DataSaveTypeMapGob")] DataSaveTypeMapGob = 1001,
+  }
+
+  /// <summary>
+  /// 场景作用力消失时机
+  /// </summary>
+  public enum SceneForceRemoveTime {
+    [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeUnknown")] SceneForceRemoveTimeUnknown = 0,
+    /// <summary>
+    /// 离开指定区域
+    /// </summary>
+    [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeLeave")] SceneForceRemoveTimeLeave = 2001,
+    /// <summary>
+    /// 到达指定目标点
+    /// </summary>
+    [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeTargetRC")] SceneForceRemoveTimeTargetRc = 2002,
+    /// <summary>
+    /// 持续多少时间
+    /// </summary>
+    [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeRunTime")] SceneForceRemoveTimeRunTime = 2003,
+    /// <summary>
+    /// 移动多少距离
+    /// </summary>
+    [pbr::OriginalName("SceneForceRemoveTime_SceneForceRemoveTimeDist")] SceneForceRemoveTimeDist = 2004,
+  }
+
+  #endregion
 
 }
 

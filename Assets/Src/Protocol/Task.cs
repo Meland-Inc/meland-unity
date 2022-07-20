@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Bian {
+namespace MelandGame3 {
 
   /// <summary>Holder for reflection information generated from task.proto</summary>
   public static partial class TaskReflection {
@@ -24,47 +24,49 @@ namespace Bian {
     static TaskReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgp0YXNrLnByb3RvEgRCaWFuIj8KDlRhc2tPcHRpb25JdGVtEhAKCGl0ZW1f",
-            "Y2lkGAEgASgFEgsKA251bRgCIAEoBRIOCgZuZnRfaWQYAyABKAkiMQoRVGFz",
-            "a09wdGlvbk1vbnN0ZXISDwoHbW9uX2NpZBgBIAEoBRILCgNudW0YAiABKAUi",
-            "KAoQVGFza09wdGlvbk1vdmVUbxIJCgFyGAEgASgFEgkKAWMYAiABKAUiNQoO",
-            "VGFza09wdGlvblF1aXoSEQoJcXVpel90eXBlGAEgASgFEhAKCHF1aXpfbnVt",
-            "GAIgASgFIu0BCg1UYXNrT3B0aW9uQ25mEhwKBGtpbmQYASABKA4yDi5CaWFu",
-            "LlRhc2tUeXBlEg0KA251bRgLIAEoBUgAEiQKBGl0ZW0YDCABKAsyFC5CaWFu",
-            "LlRhc2tPcHRpb25JdGVtSAASKwoIbW9uX2luZm8YDSABKAsyFy5CaWFuLlRh",
-            "c2tPcHRpb25Nb25zdGVySAASKQoHdGFyX3BvcxgOIAEoCzIWLkJpYW4uVGFz",
-            "a09wdGlvbk1vdmVUb0gAEikKCXF1aXpfaW5mbxgPIAEoCzIULkJpYW4uVGFz",
-            "a09wdGlvblF1aXpIAEIGCgRkYXRhIkMKClRhc2tPcHRpb24SJwoKb3B0aW9u",
-            "X2NuZhgBIAEoCzITLkJpYW4uVGFza09wdGlvbkNuZhIMCgRyYXRlGAIgASgF",
-            "InUKBFRhc2sSDwoHdGFza19pZBgBIAEoBRIhCgl0YXNrX2tpbmQYAiABKA4y",
-            "Di5CaWFuLlRhc2tUeXBlEhYKDmNyZWF0ZWRfYXRfc2VjGAMgASgDEiEKB29w",
-            "dGlvbnMYBCADKAsyEC5CaWFuLlRhc2tPcHRpb24ioAEKCFRhc2tMaXN0EgoK",
-            "AmlkGAEgASgFEiAKBGtpbmQYAiABKA4yEi5CaWFuLlRhc2tMaXN0VHlwZRIT",
-            "CgtjYW5fcmVjZWl2ZRgDIAEoCBINCgVkb2luZxgEIAEoCBIMCgRyYXRlGAUg",
-            "ASgFEhwKCGN1cl90YXNrGAYgASgLMgouQmlhbi5UYXNrEhYKDnJlY2VpdmVf",
-            "cmV3YXJkGAcgASgFIjAKClBsYXllclRhc2sSIgoKdGFza19saXN0cxgBIAMo",
-            "CzIOLkJpYW4uVGFza0xpc3Qq4QEKCFRhc2tUeXBlEhwKGFRhc2tUeXBlX1Rh",
-            "c2tUeXBlVW5rbm93bhAAEhwKGFRhc2tUeXBlX1Rhc2tUeXBlR2V0SXRlbRAB",
-            "EhwKGFRhc2tUeXBlX1Rhc2tUeXBlVXNlSXRlbRACEiAKHFRhc2tUeXBlX1Rh",
-            "c2tUeXBlS2lsbE1vbnN0ZXIQAxIbChdUYXNrVHlwZV9UYXNrVHlwZU1vdmVU",
-            "bxAEEhkKFVRhc2tUeXBlX1Rhc2tUeXBlUXVpehAFEiEKHVRhc2tUeXBlX1Rh",
-            "c2tUeXBlT2NjdXBpZWRMYW5kEAYqowEKDFRhc2tMaXN0VHlwZRIkCiBUYXNr",
-            "TGlzdFR5cGVfVGFza0xpc3RUeXBlVW5rbm93bhAAEiIKHlRhc2tMaXN0VHlw",
-            "ZV9UYXNrTGlzdFR5cGVEYWlseRABEiUKIVRhc2tMaXN0VHlwZV9UYXNrTGlz",
-            "dFR5cGVSZXdhcmRlZBACEiIKHlRhc2tMaXN0VHlwZV9UYXNrTGlzdFR5cGVP",
-            "dGhlchADYgZwcm90bzM="));
+            "Cgp0YXNrLnByb3RvEgtNZWxhbmRHYW1lMyI/Cg5UYXNrT3B0aW9uSXRlbRIQ",
+            "CghpdGVtX2NpZBgBIAEoBRILCgNudW0YAiABKAUSDgoGbmZ0X2lkGAMgASgJ",
+            "IjEKEVRhc2tPcHRpb25Nb25zdGVyEg8KB21vbl9jaWQYASABKAUSCwoDbnVt",
+            "GAIgASgFIigKEFRhc2tPcHRpb25Nb3ZlVG8SCQoBchgBIAEoBRIJCgFjGAIg",
+            "ASgFIjUKDlRhc2tPcHRpb25RdWl6EhEKCXF1aXpfdHlwZRgBIAEoBRIQCghx",
+            "dWl6X251bRgCIAEoBSKQAgoNVGFza09wdGlvbkNuZhIjCgRraW5kGAEgASgO",
+            "MhUuTWVsYW5kR2FtZTMuVGFza1R5cGUSDQoDbnVtGAsgASgFSAASKwoEaXRl",
+            "bRgMIAEoCzIbLk1lbGFuZEdhbWUzLlRhc2tPcHRpb25JdGVtSAASMgoIbW9u",
+            "X2luZm8YDSABKAsyHi5NZWxhbmRHYW1lMy5UYXNrT3B0aW9uTW9uc3RlckgA",
+            "EjAKB3Rhcl9wb3MYDiABKAsyHS5NZWxhbmRHYW1lMy5UYXNrT3B0aW9uTW92",
+            "ZVRvSAASMAoJcXVpel9pbmZvGA8gASgLMhsuTWVsYW5kR2FtZTMuVGFza09w",
+            "dGlvblF1aXpIAEIGCgRkYXRhIkoKClRhc2tPcHRpb24SLgoKb3B0aW9uX2Nu",
+            "ZhgBIAEoCzIaLk1lbGFuZEdhbWUzLlRhc2tPcHRpb25DbmYSDAoEcmF0ZRgC",
+            "IAEoBSKDAQoEVGFzaxIPCgd0YXNrX2lkGAEgASgFEigKCXRhc2tfa2luZBgC",
+            "IAEoDjIVLk1lbGFuZEdhbWUzLlRhc2tUeXBlEhYKDmNyZWF0ZWRfYXRfc2Vj",
+            "GAMgASgDEigKB29wdGlvbnMYBCADKAsyFy5NZWxhbmRHYW1lMy5UYXNrT3B0",
+            "aW9uIq4BCghUYXNrTGlzdBIKCgJpZBgBIAEoBRInCgRraW5kGAIgASgOMhku",
+            "TWVsYW5kR2FtZTMuVGFza0xpc3RUeXBlEhMKC2Nhbl9yZWNlaXZlGAMgASgI",
+            "Eg0KBWRvaW5nGAQgASgIEgwKBHJhdGUYBSABKAUSIwoIY3VyX3Rhc2sYBiAB",
+            "KAsyES5NZWxhbmRHYW1lMy5UYXNrEhYKDnJlY2VpdmVfcmV3YXJkGAcgASgF",
+            "IjcKClBsYXllclRhc2sSKQoKdGFza19saXN0cxgBIAMoCzIVLk1lbGFuZEdh",
+            "bWUzLlRhc2tMaXN0KuEBCghUYXNrVHlwZRIcChhUYXNrVHlwZV9UYXNrVHlw",
+            "ZVVua25vd24QABIcChhUYXNrVHlwZV9UYXNrVHlwZUdldEl0ZW0QARIcChhU",
+            "YXNrVHlwZV9UYXNrVHlwZVVzZUl0ZW0QAhIgChxUYXNrVHlwZV9UYXNrVHlw",
+            "ZUtpbGxNb25zdGVyEAMSGwoXVGFza1R5cGVfVGFza1R5cGVNb3ZlVG8QBBIZ",
+            "ChVUYXNrVHlwZV9UYXNrVHlwZVF1aXoQBRIhCh1UYXNrVHlwZV9UYXNrVHlw",
+            "ZU9jY3VwaWVkTGFuZBAGKqMBCgxUYXNrTGlzdFR5cGUSJAogVGFza0xpc3RU",
+            "eXBlX1Rhc2tMaXN0VHlwZVVua25vd24QABIiCh5UYXNrTGlzdFR5cGVfVGFz",
+            "a0xpc3RUeXBlRGFpbHkQARIlCiFUYXNrTGlzdFR5cGVfVGFza0xpc3RUeXBl",
+            "UmV3YXJkZWQQAhIiCh5UYXNrTGlzdFR5cGVfVGFza0xpc3RUeXBlT3RoZXIQ",
+            "A2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.TaskType), typeof(global::Bian.TaskListType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionItem), global::Bian.TaskOptionItem.Parser, new[]{ "ItemCid", "Num", "NftId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionMonster), global::Bian.TaskOptionMonster.Parser, new[]{ "MonCid", "Num" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionMoveTo), global::Bian.TaskOptionMoveTo.Parser, new[]{ "R", "C" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionQuiz), global::Bian.TaskOptionQuiz.Parser, new[]{ "QuizType", "QuizNum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionCnf), global::Bian.TaskOptionCnf.Parser, new[]{ "Kind", "Num", "Item", "MonInfo", "TarPos", "QuizInfo" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOption), global::Bian.TaskOption.Parser, new[]{ "OptionCnf", "Rate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Task), global::Bian.Task.Parser, new[]{ "TaskId", "TaskKind", "CreatedAtSec", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskList), global::Bian.TaskList.Parser, new[]{ "Id", "Kind", "CanReceive", "Doing", "Rate", "CurTask", "ReceiveReward" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerTask), global::Bian.PlayerTask.Parser, new[]{ "TaskLists" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MelandGame3.TaskType), typeof(global::MelandGame3.TaskListType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TaskOptionItem), global::MelandGame3.TaskOptionItem.Parser, new[]{ "ItemCid", "Num", "NftId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TaskOptionMonster), global::MelandGame3.TaskOptionMonster.Parser, new[]{ "MonCid", "Num" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TaskOptionMoveTo), global::MelandGame3.TaskOptionMoveTo.Parser, new[]{ "R", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TaskOptionQuiz), global::MelandGame3.TaskOptionQuiz.Parser, new[]{ "QuizType", "QuizNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TaskOptionCnf), global::MelandGame3.TaskOptionCnf.Parser, new[]{ "Kind", "Num", "Item", "MonInfo", "TarPos", "QuizInfo" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TaskOption), global::MelandGame3.TaskOption.Parser, new[]{ "OptionCnf", "Rate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.Task), global::MelandGame3.Task.Parser, new[]{ "TaskId", "TaskKind", "CreatedAtSec", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.TaskList), global::MelandGame3.TaskList.Parser, new[]{ "Id", "Kind", "CanReceive", "Doing", "Rate", "CurTask", "ReceiveReward" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.PlayerTask), global::MelandGame3.PlayerTask.Parser, new[]{ "TaskLists" }, null, null, null, null)
           }));
     }
     #endregion
@@ -132,7 +134,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -398,7 +400,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -624,7 +626,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -850,7 +852,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1076,7 +1078,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1126,10 +1128,10 @@ namespace Bian {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 1;
-    private global::Bian.TaskType kind_ = global::Bian.TaskType.TaskTypeUnknown;
+    private global::MelandGame3.TaskType kind_ = global::MelandGame3.TaskType.TaskTypeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskType Kind {
+    public global::MelandGame3.TaskType Kind {
       get { return kind_; }
       set {
         kind_ = value;
@@ -1152,8 +1154,8 @@ namespace Bian {
     public const int ItemFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskOptionItem Item {
-      get { return dataCase_ == DataOneofCase.Item ? (global::Bian.TaskOptionItem) data_ : null; }
+    public global::MelandGame3.TaskOptionItem Item {
+      get { return dataCase_ == DataOneofCase.Item ? (global::MelandGame3.TaskOptionItem) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Item;
@@ -1164,8 +1166,8 @@ namespace Bian {
     public const int MonInfoFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskOptionMonster MonInfo {
-      get { return dataCase_ == DataOneofCase.MonInfo ? (global::Bian.TaskOptionMonster) data_ : null; }
+    public global::MelandGame3.TaskOptionMonster MonInfo {
+      get { return dataCase_ == DataOneofCase.MonInfo ? (global::MelandGame3.TaskOptionMonster) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.MonInfo;
@@ -1176,8 +1178,8 @@ namespace Bian {
     public const int TarPosFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskOptionMoveTo TarPos {
-      get { return dataCase_ == DataOneofCase.TarPos ? (global::Bian.TaskOptionMoveTo) data_ : null; }
+    public global::MelandGame3.TaskOptionMoveTo TarPos {
+      get { return dataCase_ == DataOneofCase.TarPos ? (global::MelandGame3.TaskOptionMoveTo) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.TarPos;
@@ -1188,8 +1190,8 @@ namespace Bian {
     public const int QuizInfoFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskOptionQuiz QuizInfo {
-      get { return dataCase_ == DataOneofCase.QuizInfo ? (global::Bian.TaskOptionQuiz) data_ : null; }
+    public global::MelandGame3.TaskOptionQuiz QuizInfo {
+      get { return dataCase_ == DataOneofCase.QuizInfo ? (global::MelandGame3.TaskOptionQuiz) data_ : null; }
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.QuizInfo;
@@ -1249,7 +1251,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) hash ^= Kind.GetHashCode();
+      if (Kind != global::MelandGame3.TaskType.TaskTypeUnknown) hash ^= Kind.GetHashCode();
       if (dataCase_ == DataOneofCase.Num) hash ^= Num.GetHashCode();
       if (dataCase_ == DataOneofCase.Item) hash ^= Item.GetHashCode();
       if (dataCase_ == DataOneofCase.MonInfo) hash ^= MonInfo.GetHashCode();
@@ -1274,7 +1276,7 @@ namespace Bian {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (Kind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Kind);
       }
@@ -1308,7 +1310,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (Kind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Kind);
       }
@@ -1342,7 +1344,7 @@ namespace Bian {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Kind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (Kind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       if (dataCase_ == DataOneofCase.Num) {
@@ -1372,7 +1374,7 @@ namespace Bian {
       if (other == null) {
         return;
       }
-      if (other.Kind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (other.Kind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         Kind = other.Kind;
       }
       switch (other.DataCase) {
@@ -1381,25 +1383,25 @@ namespace Bian {
           break;
         case DataOneofCase.Item:
           if (Item == null) {
-            Item = new global::Bian.TaskOptionItem();
+            Item = new global::MelandGame3.TaskOptionItem();
           }
           Item.MergeFrom(other.Item);
           break;
         case DataOneofCase.MonInfo:
           if (MonInfo == null) {
-            MonInfo = new global::Bian.TaskOptionMonster();
+            MonInfo = new global::MelandGame3.TaskOptionMonster();
           }
           MonInfo.MergeFrom(other.MonInfo);
           break;
         case DataOneofCase.TarPos:
           if (TarPos == null) {
-            TarPos = new global::Bian.TaskOptionMoveTo();
+            TarPos = new global::MelandGame3.TaskOptionMoveTo();
           }
           TarPos.MergeFrom(other.TarPos);
           break;
         case DataOneofCase.QuizInfo:
           if (QuizInfo == null) {
-            QuizInfo = new global::Bian.TaskOptionQuiz();
+            QuizInfo = new global::MelandGame3.TaskOptionQuiz();
           }
           QuizInfo.MergeFrom(other.QuizInfo);
           break;
@@ -1421,7 +1423,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Kind = (global::Bian.TaskType) input.ReadEnum();
+            Kind = (global::MelandGame3.TaskType) input.ReadEnum();
             break;
           }
           case 88: {
@@ -1429,7 +1431,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.TaskOptionItem subBuilder = new global::Bian.TaskOptionItem();
+            global::MelandGame3.TaskOptionItem subBuilder = new global::MelandGame3.TaskOptionItem();
             if (dataCase_ == DataOneofCase.Item) {
               subBuilder.MergeFrom(Item);
             }
@@ -1438,7 +1440,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.TaskOptionMonster subBuilder = new global::Bian.TaskOptionMonster();
+            global::MelandGame3.TaskOptionMonster subBuilder = new global::MelandGame3.TaskOptionMonster();
             if (dataCase_ == DataOneofCase.MonInfo) {
               subBuilder.MergeFrom(MonInfo);
             }
@@ -1447,7 +1449,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.TaskOptionMoveTo subBuilder = new global::Bian.TaskOptionMoveTo();
+            global::MelandGame3.TaskOptionMoveTo subBuilder = new global::MelandGame3.TaskOptionMoveTo();
             if (dataCase_ == DataOneofCase.TarPos) {
               subBuilder.MergeFrom(TarPos);
             }
@@ -1456,7 +1458,7 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.TaskOptionQuiz subBuilder = new global::Bian.TaskOptionQuiz();
+            global::MelandGame3.TaskOptionQuiz subBuilder = new global::MelandGame3.TaskOptionQuiz();
             if (dataCase_ == DataOneofCase.QuizInfo) {
               subBuilder.MergeFrom(QuizInfo);
             }
@@ -1480,7 +1482,7 @@ namespace Bian {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Kind = (global::Bian.TaskType) input.ReadEnum();
+            Kind = (global::MelandGame3.TaskType) input.ReadEnum();
             break;
           }
           case 88: {
@@ -1488,7 +1490,7 @@ namespace Bian {
             break;
           }
           case 98: {
-            global::Bian.TaskOptionItem subBuilder = new global::Bian.TaskOptionItem();
+            global::MelandGame3.TaskOptionItem subBuilder = new global::MelandGame3.TaskOptionItem();
             if (dataCase_ == DataOneofCase.Item) {
               subBuilder.MergeFrom(Item);
             }
@@ -1497,7 +1499,7 @@ namespace Bian {
             break;
           }
           case 106: {
-            global::Bian.TaskOptionMonster subBuilder = new global::Bian.TaskOptionMonster();
+            global::MelandGame3.TaskOptionMonster subBuilder = new global::MelandGame3.TaskOptionMonster();
             if (dataCase_ == DataOneofCase.MonInfo) {
               subBuilder.MergeFrom(MonInfo);
             }
@@ -1506,7 +1508,7 @@ namespace Bian {
             break;
           }
           case 114: {
-            global::Bian.TaskOptionMoveTo subBuilder = new global::Bian.TaskOptionMoveTo();
+            global::MelandGame3.TaskOptionMoveTo subBuilder = new global::MelandGame3.TaskOptionMoveTo();
             if (dataCase_ == DataOneofCase.TarPos) {
               subBuilder.MergeFrom(TarPos);
             }
@@ -1515,7 +1517,7 @@ namespace Bian {
             break;
           }
           case 122: {
-            global::Bian.TaskOptionQuiz subBuilder = new global::Bian.TaskOptionQuiz();
+            global::MelandGame3.TaskOptionQuiz subBuilder = new global::MelandGame3.TaskOptionQuiz();
             if (dataCase_ == DataOneofCase.QuizInfo) {
               subBuilder.MergeFrom(QuizInfo);
             }
@@ -1544,7 +1546,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1577,13 +1579,13 @@ namespace Bian {
 
     /// <summary>Field number for the "option_cnf" field.</summary>
     public const int OptionCnfFieldNumber = 1;
-    private global::Bian.TaskOptionCnf optionCnf_;
+    private global::MelandGame3.TaskOptionCnf optionCnf_;
     /// <summary>
     /// 配置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskOptionCnf OptionCnf {
+    public global::MelandGame3.TaskOptionCnf OptionCnf {
       get { return optionCnf_; }
       set {
         optionCnf_ = value;
@@ -1705,7 +1707,7 @@ namespace Bian {
       }
       if (other.optionCnf_ != null) {
         if (optionCnf_ == null) {
-          OptionCnf = new global::Bian.TaskOptionCnf();
+          OptionCnf = new global::MelandGame3.TaskOptionCnf();
         }
         OptionCnf.MergeFrom(other.OptionCnf);
       }
@@ -1729,7 +1731,7 @@ namespace Bian {
             break;
           case 10: {
             if (optionCnf_ == null) {
-              OptionCnf = new global::Bian.TaskOptionCnf();
+              OptionCnf = new global::MelandGame3.TaskOptionCnf();
             }
             input.ReadMessage(OptionCnf);
             break;
@@ -1755,7 +1757,7 @@ namespace Bian {
             break;
           case 10: {
             if (optionCnf_ == null) {
-              OptionCnf = new global::Bian.TaskOptionCnf();
+              OptionCnf = new global::MelandGame3.TaskOptionCnf();
             }
             input.ReadMessage(OptionCnf);
             break;
@@ -1788,7 +1790,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1838,13 +1840,13 @@ namespace Bian {
 
     /// <summary>Field number for the "task_kind" field.</summary>
     public const int TaskKindFieldNumber = 2;
-    private global::Bian.TaskType taskKind_ = global::Bian.TaskType.TaskTypeUnknown;
+    private global::MelandGame3.TaskType taskKind_ = global::MelandGame3.TaskType.TaskTypeUnknown;
     /// <summary>
     /// 任务类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskType TaskKind {
+    public global::MelandGame3.TaskType TaskKind {
       get { return taskKind_; }
       set {
         taskKind_ = value;
@@ -1868,15 +1870,15 @@ namespace Bian {
 
     /// <summary>Field number for the "options" field.</summary>
     public const int OptionsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Bian.TaskOption> _repeated_options_codec
-        = pb::FieldCodec.ForMessage(34, global::Bian.TaskOption.Parser);
-    private readonly pbc::RepeatedField<global::Bian.TaskOption> options_ = new pbc::RepeatedField<global::Bian.TaskOption>();
+    private static readonly pb::FieldCodec<global::MelandGame3.TaskOption> _repeated_options_codec
+        = pb::FieldCodec.ForMessage(34, global::MelandGame3.TaskOption.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.TaskOption> options_ = new pbc::RepeatedField<global::MelandGame3.TaskOption>();
     /// <summary>
     /// 子项信息
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.TaskOption> Options {
+    public pbc::RepeatedField<global::MelandGame3.TaskOption> Options {
       get { return options_; }
     }
 
@@ -1907,7 +1909,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (TaskId != 0) hash ^= TaskId.GetHashCode();
-      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) hash ^= TaskKind.GetHashCode();
+      if (TaskKind != global::MelandGame3.TaskType.TaskTypeUnknown) hash ^= TaskKind.GetHashCode();
       if (CreatedAtSec != 0L) hash ^= CreatedAtSec.GetHashCode();
       hash ^= options_.GetHashCode();
       if (_unknownFields != null) {
@@ -1932,7 +1934,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(TaskId);
       }
-      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (TaskKind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) TaskKind);
       }
@@ -1955,7 +1957,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(TaskId);
       }
-      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (TaskKind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) TaskKind);
       }
@@ -1977,7 +1979,7 @@ namespace Bian {
       if (TaskId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TaskId);
       }
-      if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (TaskKind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskKind);
       }
       if (CreatedAtSec != 0L) {
@@ -1999,7 +2001,7 @@ namespace Bian {
       if (other.TaskId != 0) {
         TaskId = other.TaskId;
       }
-      if (other.TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
+      if (other.TaskKind != global::MelandGame3.TaskType.TaskTypeUnknown) {
         TaskKind = other.TaskKind;
       }
       if (other.CreatedAtSec != 0L) {
@@ -2026,7 +2028,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            TaskKind = (global::Bian.TaskType) input.ReadEnum();
+            TaskKind = (global::MelandGame3.TaskType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -2057,7 +2059,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            TaskKind = (global::Bian.TaskType) input.ReadEnum();
+            TaskKind = (global::MelandGame3.TaskType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -2089,7 +2091,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2142,13 +2144,13 @@ namespace Bian {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 2;
-    private global::Bian.TaskListType kind_ = global::Bian.TaskListType.TaskListTypeUnknown;
+    private global::MelandGame3.TaskListType kind_ = global::MelandGame3.TaskListType.TaskListTypeUnknown;
     /// <summary>
     /// task list type
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.TaskListType Kind {
+    public global::MelandGame3.TaskListType Kind {
       get { return kind_; }
       set {
         kind_ = value;
@@ -2202,13 +2204,13 @@ namespace Bian {
 
     /// <summary>Field number for the "cur_task" field.</summary>
     public const int CurTaskFieldNumber = 6;
-    private global::Bian.Task curTask_;
+    private global::MelandGame3.Task curTask_;
     /// <summary>
     /// current task
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Bian.Task CurTask {
+    public global::MelandGame3.Task CurTask {
       get { return curTask_; }
       set {
         curTask_ = value;
@@ -2260,7 +2262,7 @@ namespace Bian {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Kind != global::Bian.TaskListType.TaskListTypeUnknown) hash ^= Kind.GetHashCode();
+      if (Kind != global::MelandGame3.TaskListType.TaskListTypeUnknown) hash ^= Kind.GetHashCode();
       if (CanReceive != false) hash ^= CanReceive.GetHashCode();
       if (Doing != false) hash ^= Doing.GetHashCode();
       if (Rate != 0) hash ^= Rate.GetHashCode();
@@ -2288,7 +2290,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Kind != global::Bian.TaskListType.TaskListTypeUnknown) {
+      if (Kind != global::MelandGame3.TaskListType.TaskListTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Kind);
       }
@@ -2326,7 +2328,7 @@ namespace Bian {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Kind != global::Bian.TaskListType.TaskListTypeUnknown) {
+      if (Kind != global::MelandGame3.TaskListType.TaskListTypeUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Kind);
       }
@@ -2363,7 +2365,7 @@ namespace Bian {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Kind != global::Bian.TaskListType.TaskListTypeUnknown) {
+      if (Kind != global::MelandGame3.TaskListType.TaskListTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       if (CanReceive != false) {
@@ -2396,7 +2398,7 @@ namespace Bian {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Kind != global::Bian.TaskListType.TaskListTypeUnknown) {
+      if (other.Kind != global::MelandGame3.TaskListType.TaskListTypeUnknown) {
         Kind = other.Kind;
       }
       if (other.CanReceive != false) {
@@ -2410,7 +2412,7 @@ namespace Bian {
       }
       if (other.curTask_ != null) {
         if (curTask_ == null) {
-          CurTask = new global::Bian.Task();
+          CurTask = new global::MelandGame3.Task();
         }
         CurTask.MergeFrom(other.CurTask);
       }
@@ -2437,7 +2439,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Kind = (global::Bian.TaskListType) input.ReadEnum();
+            Kind = (global::MelandGame3.TaskListType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -2454,7 +2456,7 @@ namespace Bian {
           }
           case 50: {
             if (curTask_ == null) {
-              CurTask = new global::Bian.Task();
+              CurTask = new global::MelandGame3.Task();
             }
             input.ReadMessage(CurTask);
             break;
@@ -2483,7 +2485,7 @@ namespace Bian {
             break;
           }
           case 16: {
-            Kind = (global::Bian.TaskListType) input.ReadEnum();
+            Kind = (global::MelandGame3.TaskListType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -2500,7 +2502,7 @@ namespace Bian {
           }
           case 50: {
             if (curTask_ == null) {
-              CurTask = new global::Bian.Task();
+              CurTask = new global::MelandGame3.Task();
             }
             input.ReadMessage(CurTask);
             break;
@@ -2533,7 +2535,7 @@ namespace Bian {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Bian.TaskReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MelandGame3.TaskReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2565,12 +2567,12 @@ namespace Bian {
 
     /// <summary>Field number for the "task_lists" field.</summary>
     public const int TaskListsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Bian.TaskList> _repeated_taskLists_codec
-        = pb::FieldCodec.ForMessage(10, global::Bian.TaskList.Parser);
-    private readonly pbc::RepeatedField<global::Bian.TaskList> taskLists_ = new pbc::RepeatedField<global::Bian.TaskList>();
+    private static readonly pb::FieldCodec<global::MelandGame3.TaskList> _repeated_taskLists_codec
+        = pb::FieldCodec.ForMessage(10, global::MelandGame3.TaskList.Parser);
+    private readonly pbc::RepeatedField<global::MelandGame3.TaskList> taskLists_ = new pbc::RepeatedField<global::MelandGame3.TaskList>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Bian.TaskList> TaskLists {
+    public pbc::RepeatedField<global::MelandGame3.TaskList> TaskLists {
       get { return taskLists_; }
     }
 

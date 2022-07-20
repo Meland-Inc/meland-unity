@@ -36,22 +36,23 @@ namespace Bian {
             "a09wdGlvbk1vdmVUb0gAEikKCXF1aXpfaW5mbxgPIAEoCzIULkJpYW4uVGFz",
             "a09wdGlvblF1aXpIAEIGCgRkYXRhIkMKClRhc2tPcHRpb24SJwoKb3B0aW9u",
             "X2NuZhgBIAEoCzITLkJpYW4uVGFza09wdGlvbkNuZhIMCgRyYXRlGAIgASgF",
-            "Il0KBFRhc2sSDwoHdGFza19pZBgBIAEoBRIhCgl0YXNrX2tpbmQYAiABKA4y",
-            "Di5CaWFuLlRhc2tUeXBlEiEKB29wdGlvbnMYAyADKAsyEC5CaWFuLlRhc2tP",
-            "cHRpb24ioAEKCFRhc2tMaXN0EgoKAmlkGAEgASgFEiAKBGtpbmQYAiABKA4y",
-            "Ei5CaWFuLlRhc2tMaXN0VHlwZRITCgtjYW5fcmVjZWl2ZRgDIAEoCBINCgVk",
-            "b2luZxgEIAEoCBIMCgRyYXRlGAUgASgFEhwKCGN1cl90YXNrGAYgASgLMgou",
-            "Qmlhbi5UYXNrEhYKDnJlY2VpdmVfcmV3YXJkGAcgASgFIjAKClBsYXllclRh",
-            "c2sSIgoKdGFza19saXN0cxgBIAMoCzIOLkJpYW4uVGFza0xpc3Qq4QEKCFRh",
-            "c2tUeXBlEhwKGFRhc2tUeXBlX1Rhc2tUeXBlVW5rbm93bhAAEhwKGFRhc2tU",
-            "eXBlX1Rhc2tUeXBlR2V0SXRlbRABEhwKGFRhc2tUeXBlX1Rhc2tUeXBlVXNl",
-            "SXRlbRACEiAKHFRhc2tUeXBlX1Rhc2tUeXBlS2lsbE1vbnN0ZXIQAxIbChdU",
-            "YXNrVHlwZV9UYXNrVHlwZU1vdmVUbxAEEhkKFVRhc2tUeXBlX1Rhc2tUeXBl",
-            "UXVpehAFEiEKHVRhc2tUeXBlX1Rhc2tUeXBlT2NjdXBpZWRMYW5kEAYqowEK",
-            "DFRhc2tMaXN0VHlwZRIkCiBUYXNrTGlzdFR5cGVfVGFza0xpc3RUeXBlVW5r",
-            "bm93bhAAEiIKHlRhc2tMaXN0VHlwZV9UYXNrTGlzdFR5cGVEYWlseRABEiUK",
-            "IVRhc2tMaXN0VHlwZV9UYXNrTGlzdFR5cGVSZXdhcmRlZBACEiIKHlRhc2tM",
-            "aXN0VHlwZV9UYXNrTGlzdFR5cGVPdGhlchADYgZwcm90bzM="));
+            "InUKBFRhc2sSDwoHdGFza19pZBgBIAEoBRIhCgl0YXNrX2tpbmQYAiABKA4y",
+            "Di5CaWFuLlRhc2tUeXBlEhYKDmNyZWF0ZWRfYXRfc2VjGAMgASgDEiEKB29w",
+            "dGlvbnMYBCADKAsyEC5CaWFuLlRhc2tPcHRpb24ioAEKCFRhc2tMaXN0EgoK",
+            "AmlkGAEgASgFEiAKBGtpbmQYAiABKA4yEi5CaWFuLlRhc2tMaXN0VHlwZRIT",
+            "CgtjYW5fcmVjZWl2ZRgDIAEoCBINCgVkb2luZxgEIAEoCBIMCgRyYXRlGAUg",
+            "ASgFEhwKCGN1cl90YXNrGAYgASgLMgouQmlhbi5UYXNrEhYKDnJlY2VpdmVf",
+            "cmV3YXJkGAcgASgFIjAKClBsYXllclRhc2sSIgoKdGFza19saXN0cxgBIAMo",
+            "CzIOLkJpYW4uVGFza0xpc3Qq4QEKCFRhc2tUeXBlEhwKGFRhc2tUeXBlX1Rh",
+            "c2tUeXBlVW5rbm93bhAAEhwKGFRhc2tUeXBlX1Rhc2tUeXBlR2V0SXRlbRAB",
+            "EhwKGFRhc2tUeXBlX1Rhc2tUeXBlVXNlSXRlbRACEiAKHFRhc2tUeXBlX1Rh",
+            "c2tUeXBlS2lsbE1vbnN0ZXIQAxIbChdUYXNrVHlwZV9UYXNrVHlwZU1vdmVU",
+            "bxAEEhkKFVRhc2tUeXBlX1Rhc2tUeXBlUXVpehAFEiEKHVRhc2tUeXBlX1Rh",
+            "c2tUeXBlT2NjdXBpZWRMYW5kEAYqowEKDFRhc2tMaXN0VHlwZRIkCiBUYXNr",
+            "TGlzdFR5cGVfVGFza0xpc3RUeXBlVW5rbm93bhAAEiIKHlRhc2tMaXN0VHlw",
+            "ZV9UYXNrTGlzdFR5cGVEYWlseRABEiUKIVRhc2tMaXN0VHlwZV9UYXNrTGlz",
+            "dFR5cGVSZXdhcmRlZBACEiIKHlRhc2tMaXN0VHlwZV9UYXNrTGlzdFR5cGVP",
+            "dGhlchADYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Bian.TaskType), typeof(global::Bian.TaskListType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,7 +62,7 @@ namespace Bian {
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionQuiz), global::Bian.TaskOptionQuiz.Parser, new[]{ "QuizType", "QuizNum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOptionCnf), global::Bian.TaskOptionCnf.Parser, new[]{ "Kind", "Num", "Item", "MonInfo", "TarPos", "QuizInfo" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskOption), global::Bian.TaskOption.Parser, new[]{ "OptionCnf", "Rate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Task), global::Bian.Task.Parser, new[]{ "TaskId", "TaskKind", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Bian.Task), global::Bian.Task.Parser, new[]{ "TaskId", "TaskKind", "CreatedAtSec", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.TaskList), global::Bian.TaskList.Parser, new[]{ "Id", "Kind", "CanReceive", "Doing", "Rate", "CurTask", "ReceiveReward" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Bian.PlayerTask), global::Bian.PlayerTask.Parser, new[]{ "TaskLists" }, null, null, null, null)
           }));
@@ -1809,6 +1810,7 @@ namespace Bian {
     public Task(Task other) : this() {
       taskId_ = other.taskId_;
       taskKind_ = other.taskKind_;
+      createdAtSec_ = other.createdAtSec_;
       options_ = other.options_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1849,10 +1851,25 @@ namespace Bian {
       }
     }
 
+    /// <summary>Field number for the "created_at_sec" field.</summary>
+    public const int CreatedAtSecFieldNumber = 3;
+    private long createdAtSec_;
+    /// <summary>
+    /// 任务的接取时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long CreatedAtSec {
+      get { return createdAtSec_; }
+      set {
+        createdAtSec_ = value;
+      }
+    }
+
     /// <summary>Field number for the "options" field.</summary>
-    public const int OptionsFieldNumber = 3;
+    public const int OptionsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Bian.TaskOption> _repeated_options_codec
-        = pb::FieldCodec.ForMessage(26, global::Bian.TaskOption.Parser);
+        = pb::FieldCodec.ForMessage(34, global::Bian.TaskOption.Parser);
     private readonly pbc::RepeatedField<global::Bian.TaskOption> options_ = new pbc::RepeatedField<global::Bian.TaskOption>();
     /// <summary>
     /// 子项信息
@@ -1880,6 +1897,7 @@ namespace Bian {
       }
       if (TaskId != other.TaskId) return false;
       if (TaskKind != other.TaskKind) return false;
+      if (CreatedAtSec != other.CreatedAtSec) return false;
       if(!options_.Equals(other.options_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1890,6 +1908,7 @@ namespace Bian {
       int hash = 1;
       if (TaskId != 0) hash ^= TaskId.GetHashCode();
       if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) hash ^= TaskKind.GetHashCode();
+      if (CreatedAtSec != 0L) hash ^= CreatedAtSec.GetHashCode();
       hash ^= options_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1917,6 +1936,10 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteEnum((int) TaskKind);
       }
+      if (CreatedAtSec != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(CreatedAtSec);
+      }
       options_.WriteTo(output, _repeated_options_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1936,6 +1959,10 @@ namespace Bian {
         output.WriteRawTag(16);
         output.WriteEnum((int) TaskKind);
       }
+      if (CreatedAtSec != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(CreatedAtSec);
+      }
       options_.WriteTo(ref output, _repeated_options_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1952,6 +1979,9 @@ namespace Bian {
       }
       if (TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskKind);
+      }
+      if (CreatedAtSec != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatedAtSec);
       }
       size += options_.CalculateSize(_repeated_options_codec);
       if (_unknownFields != null) {
@@ -1971,6 +2001,9 @@ namespace Bian {
       }
       if (other.TaskKind != global::Bian.TaskType.TaskTypeUnknown) {
         TaskKind = other.TaskKind;
+      }
+      if (other.CreatedAtSec != 0L) {
+        CreatedAtSec = other.CreatedAtSec;
       }
       options_.Add(other.options_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1996,7 +2029,11 @@ namespace Bian {
             TaskKind = (global::Bian.TaskType) input.ReadEnum();
             break;
           }
-          case 26: {
+          case 24: {
+            CreatedAtSec = input.ReadInt64();
+            break;
+          }
+          case 34: {
             options_.AddEntriesFrom(input, _repeated_options_codec);
             break;
           }
@@ -2023,7 +2060,11 @@ namespace Bian {
             TaskKind = (global::Bian.TaskType) input.ReadEnum();
             break;
           }
-          case 26: {
+          case 24: {
+            CreatedAtSec = input.ReadInt64();
+            break;
+          }
+          case 34: {
             options_.AddEntriesFrom(ref input, _repeated_options_codec);
             break;
           }

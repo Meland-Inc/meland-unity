@@ -12,15 +12,19 @@ using GameFramework;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Meland.Editor.ServerScene
 {
     public class ServerSceneWindow : EditorWindow
     {
-        private const string SERVER_SCENE_FILE_PATH = "Assets/RawResource/ServerScene/WorldServer.unity";
-        private const string SERVER_SCENE_PATH = "Assets/RawResource/ServerScene";
-        private const string SERVER_SCENE_JSON_FILE_PATH = "Assets/RawResource/ServerScene/WorldServer.json";
+        private const string SERVER_SCENE_FILE_PATH = "Assets/RawResource/ServerScene/ServerWorldConfigScene.unity";
+        private const string SERVER_SCENE_CONFIG_PATH = "Assets/Plugins/SharedCore/Res/Config/";
+        private const string SERVER_SCENE_JSON_FILE_PATH = "Assets/Plugins/SharedCore/Res/Config/ServerWorldConfig.json";
         private const string SERVER_SCENE_ROOT_NAME = "ServerDataNodeRoot";
+        private const string SERVER_WORLD_SCENE_FILE_PATH = "Assets/Plugins/SharedCore/Res/Scene/ServerWorldScene.unity";
+        private const string SERVER_WORLD_SCENE_NAV_MESH_FILE_PATH = "Assets/Plugins/SharedCore/Res/Scene/ServerWorldScene/NavMesh.asset";
+
         [MenuItem("devtool/serverScene")]
         public static void Init()
         {
@@ -28,20 +32,20 @@ namespace Meland.Editor.ServerScene
         }
         private void OnGUI()
         {
-            if (GUILayout.Button("打开服务器场景"))
+            if (GUILayout.Button("打开配置场景"))
             {
                 _ = EditorSceneManager.OpenScene(SERVER_SCENE_FILE_PATH, OpenSceneMode.Additive);
             }
-            if (GUILayout.Button("关闭并保存服务器场景"))
+            if (GUILayout.Button("关闭并保存配置场景"))
             {
                 UnityEngine.SceneManagement.Scene serverScene = EditorSceneManager.OpenScene(SERVER_SCENE_FILE_PATH, OpenSceneMode.Additive);
                 _ = EditorSceneManager.SaveScene(serverScene);
                 _ = EditorSceneManager.CloseScene(serverScene, true);
             }
-            if (GUILayout.Button("导出服务器场景数据"))
+            if (GUILayout.Button("导出配置场景"))
             {
-                UnityEngine.SceneManagement.Scene serverScene = UnityEditor.SceneManagement.EditorSceneManager.GetSceneByName(SERVER_SCENE_FILE_PATH);
-                _ = UnityEditor.SceneManagement.EditorSceneManager.SaveScene(serverScene);
+                Scene serverScene = EditorSceneManager.OpenScene(SERVER_SCENE_FILE_PATH, OpenSceneMode.Additive);
+                _ = EditorSceneManager.SaveScene(serverScene);
                 GameObject rootObject = GameObject.Find(SERVER_SCENE_ROOT_NAME);
                 if (rootObject == null)
                 {
@@ -52,7 +56,6 @@ namespace Meland.Editor.ServerScene
                     object data = dataCpt.GetServerData();
                     string dataJson = Unity.Plastic.Newtonsoft.Json.JsonConvert.SerializeObject(data);
                     string outputFileName = Utility.Path.GetRegularPath(Path.Combine(SERVER_SCENE_JSON_FILE_PATH));
-
                     try
                     {
                         StringBuilder stringBuilder = new(dataJson);
@@ -64,7 +67,8 @@ namespace Meland.Editor.ServerScene
                                 stream.Write(stringBuilder.ToString());
                             }
                         }
-                        UnityGameFramework.Editor.OpenFolder.Execute(SERVER_SCENE_PATH);
+                        UnityGameFramework.Editor.OpenFolder.Execute(SERVER_SCENE_CONFIG_PATH);
+                        SharedCoresVersionTool.UpdateConfigVersion();
                         AssetDatabase.Refresh();
 
                         Debug.Log(Utility.Text.Format("Generate Server Data file '{0}' success.", outputFileName));
@@ -73,6 +77,56 @@ namespace Meland.Editor.ServerScene
                     {
                         Debug.LogError(Utility.Text.Format("Generate Server Data file '{0}' failure, exception is '{1}'.", outputFileName, exception));
                     }
+                }
+                _ = EditorSceneManager.CloseScene(serverScene, true);
+            }
+
+            if (GUILayout.Button("导出当前场景碰撞数据"))
+            {
+                try
+                {
+                    Scene serverWorldScene = EditorSceneManager.OpenScene(SERVER_WORLD_SCENE_FILE_PATH, OpenSceneMode.Additive);
+                    GameObject[] serverObjectArray = serverWorldScene.GetRootGameObjects();
+                    for (int i = 0; i < serverObjectArray.Length; i++)
+                    {
+                        DestroyImmediate(serverObjectArray[i]);
+                    }
+                    Scene scene = SceneManager.GetActiveScene();
+                    GameObject[] gameObjectArray = scene.GetRootGameObjects();
+                    for (int i = 0; i < gameObjectArray.Length; i++)
+                    {
+                        GameObject gameObject = gameObjectArray[i];
+                        GameObject newObject = Instantiate(gameObject);
+                        newObject.name = gameObject.name;
+                        SceneManager.MoveGameObjectToScene(newObject, serverWorldScene);
+                        ServerSceneUtil.RetainCollisionComponent(newObject);
+                    }
+                    _ = EditorSceneManager.SaveScene(serverWorldScene);
+                    _ = EditorSceneManager.CloseScene(serverWorldScene, true);
+                    SharedCoresVersionTool.UpdateSceneVersion();
+                    EditorUtility.DisplayDialog("Info", "导出场景碰撞数据成功", "OK");
+                }
+                catch (System.Exception)
+                {
+                    EditorUtility.DisplayDialog("Error", "导出场景碰撞数据错误", "OK");
+                    throw;
+                }
+            }
+
+            if (GUILayout.Button("导出当前场景寻路数据"))
+            {
+                try
+                {
+                    Scene scene = SceneManager.GetActiveScene();
+                    string navMesh = Path.Combine(scene.path.Substring(0, scene.path.LastIndexOf('.')), "NavMesh.asset");
+                    File.Copy(navMesh, SERVER_WORLD_SCENE_NAV_MESH_FILE_PATH, true);
+                    SharedCoresVersionTool.UpdateNavMeshVersion();
+                    EditorUtility.DisplayDialog("Info", "导出寻路数据成功", "OK");
+                }
+                catch (System.Exception)
+                {
+                    EditorUtility.DisplayDialog("Error", "导出寻路数据错误", "OK");
+                    throw;
                 }
             }
         }

@@ -4,7 +4,7 @@ public class MainRoleEntity : SceneEntity
 {
     public MainRoleEntity() : base()
     {
-        AddComponent<MoveNetRequest>().enabled = false;
+        AddComponent<NetReqMove>().enabled = false;
     }
     protected override void InitRoot()
     {

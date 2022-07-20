@@ -144,10 +144,7 @@ public class TaskContentViewLogic : FGUILogicCpt
             return;
         }
         OnUpdateBtnSubmit();
-        _tfTitle.SetVar("title", _taskChainData.DRTask.Name)
-            .SetVar("cur", _taskChainData.CurTaskChainRate.ToString())
-            .SetVar("max", _taskChainData.MaxTaskChainRate.ToString())
-            .FlushVars();
+        _tfTitle.text = _taskChainData.DRTask.Name;
 
         _tfDesc.text = _taskChainData.DRTask.Details;
         _lstTaskSubItem.numItems = _taskChainData.CurTaskSubItems.Count;

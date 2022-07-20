@@ -1,6 +1,6 @@
 
 
-using Bian;
+using MelandGame3;
 public class TaskAbandonAction : GameChannelNetMsgRActionBase<AbandonmentTaskRequest, AbandonmentTaskResponse>
 {
     protected override EnvelopeType GetEnvelopeType()

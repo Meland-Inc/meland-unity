@@ -2,7 +2,7 @@
 
 
 using System.Collections.Generic;
-using Bian;
+using MelandGame3;
 using Cysharp.Threading.Tasks;
 
 public class TBroadCastTaskReward : GameChannelNetMsgTActionBase<TBroadCastTaskRewardResponse>

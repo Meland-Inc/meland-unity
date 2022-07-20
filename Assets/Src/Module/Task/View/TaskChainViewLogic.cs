@@ -70,7 +70,7 @@ public class TaskChainViewLogic : FGUILogicCpt
     private void checkFrameTimer()
     {
         Message.OnEnterFrame -= OnFrameTimer;
-        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == Bian.TaskListType.TaskListTypeDaily)
+        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == MelandGame3.TaskListType.TaskListTypeDaily)
         {
             Message.OnEnterFrame += OnFrameTimer;
         }
@@ -137,7 +137,7 @@ public class TaskChainViewLogic : FGUILogicCpt
             return;
         }
         // 宝箱展示倒计时
-        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == Bian.TaskListType.TaskListTypeDaily)
+        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == MelandGame3.TaskListType.TaskListTypeDaily)
         {
             _tfTime.text = TimeUtil.SecondsToHMS(seconds);
             return;

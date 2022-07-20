@@ -1,6 +1,6 @@
 
 using System.Collections.Generic;
-using Bian;
+using MelandGame3;
 
 public class TaskUpgradeTaskProgressAction : GameChannelNetMsgRActionBase<UpgradeTaskProgressRequest, UpgradeTaskProgressResponse>
 {

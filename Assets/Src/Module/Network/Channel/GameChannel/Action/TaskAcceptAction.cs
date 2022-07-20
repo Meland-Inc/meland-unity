@@ -1,6 +1,6 @@
 
 
-using Bian;
+using MelandGame3;
 public class TaskAcceptAction : GameChannelNetMsgRActionBase<AcceptTaskRequest, AcceptTaskResponse>
 {
     protected override EnvelopeType GetEnvelopeType()

@@ -1,7 +1,7 @@
 
 
 
-using Bian;
+using MelandGame3;
 public class TTaskChainUpdateAction : GameChannelNetMsgTActionBase<TUpdateTaskListResponse>
 {
     protected override EnvelopeType GetEnvelopeType()

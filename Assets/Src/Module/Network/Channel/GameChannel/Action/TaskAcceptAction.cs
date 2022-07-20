@@ -23,6 +23,6 @@ public class TaskAcceptAction : GameChannelNetMsgRActionBase<AcceptTaskRequest, 
     {
         AcceptTaskRequest req = GenerateReq();
         req.Kind = taskListType;
-        SendAction<TaskAcceptAction>(req);
+        _ = SendAction<TaskAcceptAction>(req);
     }
 }

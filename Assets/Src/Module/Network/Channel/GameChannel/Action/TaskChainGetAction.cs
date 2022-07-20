@@ -20,6 +20,6 @@ public class TaskChainGetAction : GameChannelNetMsgRActionBase<SelfTasksRequest,
     public static void Req()
     {
         SelfTasksRequest req = GenerateReq();
-        SendAction<TaskChainGetAction>(req);
+        _ = SendAction<TaskChainGetAction>(req);
     }
 }

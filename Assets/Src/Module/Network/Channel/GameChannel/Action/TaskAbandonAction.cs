@@ -13,6 +13,7 @@ public class TaskAbandonAction : GameChannelNetMsgRActionBase<AbandonmentTaskReq
         if (!base.Receive(errorCode, errorMsg, rsp, req))
         {
             return false;
+            _ = UICenter.OpenUIToast<ToastCommon>(errorMsg);
         }
         DataManager.TaskModel.UpdateData(rsp.TaskListInfo);
 
@@ -23,6 +24,6 @@ public class TaskAbandonAction : GameChannelNetMsgRActionBase<AbandonmentTaskReq
     {
         AbandonmentTaskRequest req = GenerateReq();
         req.Kind = taskListType;
-        SendAction<TaskAbandonAction>(req);
+        _ = SendAction<TaskAbandonAction>(req);
     }
 }

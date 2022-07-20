@@ -218,6 +218,8 @@ public class TaskContentViewLogic : FGUILogicCpt
         _btnReceive.onClick.Add(OnBtnReceiveClick);
         _btnAbandon.onClick.Add(OnBtnAbandonClick);
         _btnSubmit.onClick.Add(OnBtnSubmitClick);
+        _lstTaskChainReward.onClickItem.Add(OnListRewardItemClick);
+        _lstTaskReward.onClickItem.Add(OnListRewardItemClick);
     }
 
     private void RemoveEvent()
@@ -226,6 +228,14 @@ public class TaskContentViewLogic : FGUILogicCpt
         _btnAbandon.onClick.Remove(OnBtnAbandonClick);
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
         Message.OnEnterFrame -= OnFrameCheckPathFind;
+        _lstTaskChainReward.onClickItem.Remove(OnListRewardItemClick);
+        _lstTaskReward.onClickItem.Remove(OnListRewardItemClick);
+    }
+
+    private void OnListRewardItemClick(EventContext context)
+    {
+        RewardNftItemRenderer itemRenderer = (RewardNftItemRenderer)context.data;
+        _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(itemRenderer, itemRenderer.ItemData.Cid, eTooltipDir.Left));
     }
 
     private void OnBtnSubmitClick(EventContext context)

@@ -56,10 +56,7 @@ public class SceneModule : MonoBehaviour
 
         Root = gameObject;
 
-        EntityMgr = Root.AddComponent<SceneEntityMgr>();
-        SceneRender = Root.AddComponent<SceneRender>();
-        BackpackMgr = Root.AddComponent<BackpackMgr>();
-        TaskMgr = Root.AddComponent<TaskMgr>();
+
     }
 
     private void OnDestroy()
@@ -71,6 +68,7 @@ public class SceneModule : MonoBehaviour
         RoleLevel = null;
         Craft = null;
         Recharge = null;
+        TaskMgr = null;
     }
 
     /// <summary>
@@ -84,7 +82,7 @@ public class SceneModule : MonoBehaviour
         RoleLevel = Root.AddComponent<RoleLevelModule>();
         Craft = Root.AddComponent<PlayerCraftModule>();
         Recharge = Root.AddComponent<RechargeCenter>();
-        TaskMgr = null;
+        TaskMgr = Root.AddComponent<TaskMgr>();
     }
 
     private void Update()

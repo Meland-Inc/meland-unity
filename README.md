@@ -34,7 +34,10 @@ meland client main project make by unity
 #### environment
 
 - git use LFS :<https://git-lfs.github.com/>
-- unity 2021.3.1f1 or 2021.3.1f1c1
+- 2021.3.1f1c1
+  - form https://unity.cn/releases/lts
+  - select 2021.3.1f1
+  - will show 2021.3.1f1c1 in unityhub，if not, you should close network proxy
 - vscode
   - enable setting config : "Format On Save"
   - extension:

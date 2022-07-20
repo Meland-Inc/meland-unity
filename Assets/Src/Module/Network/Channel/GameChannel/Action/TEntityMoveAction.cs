@@ -1,3 +1,4 @@
+using System;
 using MelandGame3;
 
 /// <summary>
@@ -21,7 +22,7 @@ public class TEntityMoveAction : GameChannelNetMsgTActionBase<TEntityMoveRespons
         {
             try
             {
-                SceneEntity entity = SceneModule.EntityMgr.GetSceneEntity(entityMove.EntityId);
+                SceneEntity entity = SceneModule.EntityMgr.GetEntity(Convert.ToInt64(entityMove.EntityId));
                 if (entity == null)
                 {
                     MLog.Error(eLogTag.entity, $"not find scene entity =[{entityMove.EntityId},{entityMove.EntityType}]");

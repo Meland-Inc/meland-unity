@@ -173,12 +173,12 @@ public static class NetUtil
         };
     }
 
-    public static eEntityType SvrEntityType2Client(EntityType type)
+    public static eEntityType SvrEntityType2Client(MelandGame3.EntityType type)
     {
         return type switch
         {
-            EntityType.EntityTypePlayer => eEntityType.player,
-            EntityType.EntityTypeMonster => eEntityType.monster,
+            MelandGame3.EntityType.EntityTypePlayer => eEntityType.player,
+            MelandGame3.EntityType.EntityTypeMonster => eEntityType.monster,
             _ => eEntityType.unknown,
         };
     }

@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditors: mangit
+ * @LastEditors: wym
  * @Description: tooltip 信息
  * @Date: 2022-06-22 14:40:08
  * @FilePath: /Assets/Src/Framework/UI/Data/TooltipInfo.cs
@@ -13,6 +13,7 @@ public class TooltipInfo
     public eTooltipDir Dir { get; private set; }
     public int OffsetX { get; private set; }
     public int OffsetY { get; private set; }
+    public bool IsTouchRootClose { get; private set; }
 
     /// <summary>
     /// 
@@ -22,12 +23,14 @@ public class TooltipInfo
     /// <param name="dir">默认是Auto，tooltip相对参照物方向</param>
     /// <param name="offsetX">tooltip x偏移值</param>
     /// <param name="offsetY">tooltip y偏移值</param>
-    public TooltipInfo(GObject reference, object data, eTooltipDir dir = eTooltipDir.Auto, int offsetX = 0, int offsetY = 0)
+    /// <param name="isTouchRootClose">点击到根 自动关闭Tooltip</param>
+    public TooltipInfo(GObject reference, object data, eTooltipDir dir = eTooltipDir.Auto, int offsetX = 0, int offsetY = 0, bool isTouchRootClose = true)
     {
         Reference = reference;
         Data = data;
         Dir = dir;
         OffsetX = offsetX;
         OffsetY = offsetY;
+        IsTouchRootClose = isTouchRootClose;
     }
 }

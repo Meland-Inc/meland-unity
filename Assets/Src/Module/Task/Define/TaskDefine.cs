@@ -22,6 +22,16 @@ public static class TaskDefine
         ONDOING,
     }
 
+    public enum eTaskButton
+    {
+        ABANDON,
+        RECEIVE,
+        SUBMIT,
+        UPGRADE,
+        ARRIVE,
+        NONE,
+    }
+
     public static Dictionary<int, string> TaskSystemId2Name = new()
     {
          {1, "Daily Quest"},
@@ -52,11 +62,9 @@ public static class TaskDefine
 
     }
 
-    // public class TaskBpItemData
-    // {
-    //     public BpItemData ItemData;
-    //     public int Count;
-    // }
 
+    // test code
+    public const int TEST_R = 222;
+    public const int TEST_C = 222;
 
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using Bian;
@@ -22,10 +23,23 @@ public static class TaskUtil
             int[] drop = dropList[i];
             int itemId = drop[0];
             int count = drop[2];
-            taskRewards.Add(CreateRewardNftDataByItemId(itemId, count));
+            RewardNftData data = CreateRewardNftDataByItemId(itemId, count);
+            if (data != null)
+            {
+                taskRewards.Add(data);
+            }
+
         }
 
-        taskRewards.Add(CreateRewardNftDataByItemId(AssetDefine.ITEMID_EXP, exp));
+        if (exp > 0)
+        {
+            RewardNftData data = CreateRewardNftDataByItemId(AssetDefine.ITEMID_EXP, exp);
+            if (data != null)
+            {
+                taskRewards.Add(data);
+            }
+        }
+
         return taskRewards;
     }
 
@@ -39,8 +53,23 @@ public static class TaskUtil
     public static RewardNftData CreateRewardNftDataByItemId(int itemId, int count, NFT.eNFTQuality quality = NFT.eNFTQuality.Basic)
     {
         DRItem item = GFEntry.DataTable.GetDataTable<DRItem>().GetDataRow(itemId);
+        if (item == null)
+        {
+            return null;
+        }
+
         string icon = Path.Combine(AssetDefine.PATH_ITEM_ICON, $"{item.Icon}.png");
-        // todo item.Quality 
+
+        // NFT.eNFTQuality itemQuantity;
+        // if (quality == null)
+        // {
+        //     itemQuantity = item.Quality.Length > 0 ? (NFT.eNFTQuality)item.Quality[0] : NFT.eNFTQuality.Basic;
+        // }
+        // else
+        // {
+        //     itemQuantity = (NFT.eNFTQuality)quality;
+        // }
+
         RewardNftData data = new()
         {
             Cid = itemId,

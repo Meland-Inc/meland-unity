@@ -1,7 +1,7 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-06-20 20:11:56
- * @LastEditors: mangit
+ * @LastEditTime: 2022-07-20 14:37:00
+ * @LastEditors: wym
  * @Description: 背包工具类
  * @Date: 2022-06-16 16:36:05
  * @FilePath: /Assets/Src/Module/Backpack/BackpackUtil.cs
@@ -116,5 +116,15 @@ public static class BackpackUtil
         }
 
         return (int)uiPriorityA - (int)uiPriorityB;
+    }
+
+    /// <summary>
+    /// 检查一个道具是不是 非同质化（目前消耗品与材料是同质化，其他都是非同质化）
+    /// </summary>
+    /// <param name="bpNftItem"></param>
+    /// <returns></returns>
+    public static bool IsNonFungible(BpItemData bpNftItem)
+    {
+        return bpNftItem is not BpFoodNftItem and not BpMaterialNftItem;
     }
 }

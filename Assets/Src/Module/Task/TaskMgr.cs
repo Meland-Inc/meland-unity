@@ -74,10 +74,10 @@ public class TaskMgr : MonoBehaviour
         });
     }
 
-    public void OpenTask()
+    public void OpenTask(TaskChainData chainData = null)
     {
         ReqData();
-        _ = UICenter.OpenUIForm<FormTask>();
+        _ = UICenter.OpenUIForm<FormTask>(chainData);
     }
 
     public void OpenTaskSubmit(TaskChainData taskChainData)

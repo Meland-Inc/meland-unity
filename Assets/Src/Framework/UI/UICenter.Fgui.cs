@@ -1,6 +1,6 @@
 /*
 * @Author: mangit
- * @LastEditTime: 2022-07-18 16:42:38
+ * @LastEditTime: 2022-07-20 17:23:15
  * @LastEditors: wym
 * @Description: fairygui 处理中心
 * @Date: 2022-06-16 20:48:53
@@ -27,8 +27,7 @@ public partial class UICenter
     };
 
     private readonly string[] _fontCfg = {
-        "SourceHanSansCN-Heavy.ttf",
-        "FangFang.ttf",
+        "HermanoAlto_Round.ttf"
     };
     public void InitFguiExtension()
     {

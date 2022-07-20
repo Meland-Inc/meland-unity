@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cc8b6181429e5455fb071250a17cbfa3
+guid: feb8ffd0616a4423a860c1b44d9e84f2
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - zihun100hao-fangfangxianfengti
+  - HermanoAlto Round
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

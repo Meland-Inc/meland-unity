@@ -141,7 +141,7 @@ public class ComSkillInfLogic : FGUILogicCpt
     private void OnMatItemClick(EventContext context)
     {
         GObject obj = context.data as GObject;
-        _ = UICenter.OpenUITooltip<TooltipSyntheticMatDetail>(new TooltipInfo(obj, obj.data, eTooltipDir.Left));
+        _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(obj, obj.data, eTooltipDir.Left));
     }
 
     private void OnUpgradeClick(EventContext context)

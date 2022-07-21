@@ -164,7 +164,8 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     {
         AddSelectedItemData(render);
         UICenter.CloseUIForm<TooltipNFTItem>();
-        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(GCom, render.ItemData.BpItemData, eTooltipDir.Left, -30, 0, false));
+        TooltipNFTItemParam toolTipVo = new() { ItemData = render.ItemData.BpItemData };
+        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(GCom, toolTipVo, eTooltipDir.Left, -30, 0, false));
     }
 
     private void OnBpItemCloseClick(RewardNftItemRenderer render)

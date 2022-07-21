@@ -9,7 +9,7 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     // 当选中的数据
     private readonly List<RewardNftData> _selectedBpItemData = new();
     // 用于提交的数据
-    private List<RewardNftData> _reqItemDatas = new();
+    private readonly List<RewardNftData> _reqItemDatas = new();
     // 展示选中数量
     private GTextField _tfSelectCount;
     // 需要提交的item

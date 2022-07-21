@@ -7,5 +7,14 @@ public class MonsterAssembleLogic : IEntityTypeAssembleLogic
     {
         _ = entity.AddComponent<NetInputMove>();
         _ = entity.AddComponent<MonsterSvrDataProcess>();
+        _ = entity.AddComponent<SpineAnimationCpt>();
+        _ = entity.AddComponent<EntityBattleData>();
+
+        EntityStatusCtrl statusCpt = entity.AddComponent<EntityStatusCtrl>();
+        statusCpt.InitFsm(
+            EntityStatusCtrl.CreateStatus<IdleStatus>(),
+            EntityStatusCtrl.CreateStatus<MoveStatus>()
+        );
+        statusCpt.StartStatus<IdleStatus>();
     }
 }

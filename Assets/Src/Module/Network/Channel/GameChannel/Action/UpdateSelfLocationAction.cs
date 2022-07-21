@@ -33,8 +33,11 @@ public class UpdateSelfLocationAction : GameChannelNetMsgRActionBase<UpdateSelfL
                 Stamp = req.Movement.CurLocation.Stamp + (long)(targetTime * TimeDefine.S_2_MS)
             };
         }
-        MLog.Debug(eLogTag.move, $"req move ={req.Movement}");
-        SendAction<UpdateSelfLocationAction>(req);
+        if (TestUtil.ShowMoveLog)
+        {
+            MLog.Debug(eLogTag.move, $"req move ={req.Movement}");
+        }
+        _ = SendAction<UpdateSelfLocationAction>(req);
     }
 
     protected override string GetEnvelopeReqName()

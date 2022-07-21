@@ -20,6 +20,12 @@ public class TEntityMoveAction : GameChannelNetMsgTActionBase<TEntityMoveRespons
 
         foreach (EntityMovement entityMove in rsp.Moves)
         {
+            if (entityMove.EntityType is not EntityType.EntityTypePlayer and not EntityType.EntityTypeMonster)
+            {
+                // MLog.Warning(eLogTag.entity, $"should not move not sync entity,type:{entityMove.EntityType}");
+                continue;
+            }
+
             try
             {
                 SceneEntity entity = SceneModule.EntityMgr.GetEntity(Convert.ToInt64(entityMove.EntityId));

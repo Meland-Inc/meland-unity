@@ -10,13 +10,13 @@ using MelandGame3;
 /// <summary>
 /// monster怪物的服务器数据处理 monster是有攻击行为
 /// </summary>
-public class MonsterSvrDataProcess : RoleSvrDataProcess
+public class MonsterSvrDataProcess : EntitySvrDataProcess
 {
     public override void SvrDataInit(SceneEntity sceneEntity, EntityWithLocation svrEntity)
     {
-        base.SvrDataInit(sceneEntity, svrEntity);
-
         Monster svrMonster = svrEntity.Monster;
+
+        sceneEntity.GetComponent<EntityBattleData>().Init(svrMonster.Profile);
 
         DRMonster drMonseter = GFEntry.DataTable.GetDataTable<DRMonster>().GetDataRow(svrMonster.Cid);
         if (drMonseter == null)

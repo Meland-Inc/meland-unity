@@ -17,6 +17,8 @@ public class PlayerRoleSvrDataProcess : EntitySvrDataProcess
     {
         Player svrPlayer = svrEntity.Player;
 
+        sceneEntity.GetComponent<EntityBattleData>().Init(svrPlayer.Profile);
+
         if (Mathf.Approximately(svrPlayer.Profile.MoveSpeed, 0f))
         {
             MLog.Error(eLogTag.entity, $"PlayerRoleSvrDataProcess init svr data move speed invalid");

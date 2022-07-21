@@ -9,6 +9,7 @@ public class PlayerRoleAssembleLogic : IEntityTypeAssembleLogic
         _ = entity.AddComponent<PlayerRoleSvrDataProcess>();
         _ = entity.AddComponent<EntityMoveData>();
         _ = entity.AddComponent<SpineAnimationCpt>();
+        _ = entity.AddComponent<EntityBattleData>();
 
         EntityStatusCtrl statusCpt = entity.AddComponent<EntityStatusCtrl>();
         statusCpt.InitFsm(

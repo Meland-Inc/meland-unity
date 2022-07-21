@@ -16,6 +16,8 @@ public class MonsterSvrDataProcess : EntitySvrDataProcess
     {
         Monster svrMonster = svrEntity.Monster;
 
+        sceneEntity.GetComponent<EntityBattleData>().Init(svrMonster.Profile);
+
         DRMonster drMonseter = GFEntry.DataTable.GetDataTable<DRMonster>().GetDataRow(svrMonster.Cid);
         if (drMonseter == null)
         {

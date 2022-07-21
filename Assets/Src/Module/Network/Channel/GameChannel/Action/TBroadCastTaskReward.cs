@@ -43,8 +43,8 @@ public class TBroadCastTaskReward : GameChannelNetMsgTActionBase<TBroadCastTaskR
             //todo 任务链奖励 等待迁移完成 再使用奖励弹框
             DRLanguage dRLanguage = GFEntry.DataTable.GetDataTable<DRLanguage>().GetDataRow(10090019);
             string content = dRLanguage != null ? dRLanguage.Value : "";
-            AlertRewardData alertVo = new("REWARDS", content, null, null, curTaskRewards);
-            _ = UICenter.OpenUIAlert<AlertReward>(alertVo);
+            FormRewardData formVo = new("REWARDS", content, null, null, curTaskRewards);
+            _ = UICenter.OpenUIForm<FormReward>(formVo);
         }
         else
         {

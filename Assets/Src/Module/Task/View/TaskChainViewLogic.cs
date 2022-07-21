@@ -94,8 +94,8 @@ public class TaskChainViewLogic : FGUILogicCpt
         {
             DRLanguage dRLanguage = GFEntry.DataTable.GetDataTable<DRLanguage>().GetDataRow(10090018);
             string content = dRLanguage != null ? dRLanguage.Value : "";
-            AlertRewardData alertVo = new("REWARDS", content, null, null, _taskChainData.TaskChainRewards);
-            _ = UICenter.OpenUIAlert<AlertReward>(alertVo);
+            FormRewardData formVo = new("REWARDS", content, null, null, _taskChainData.TaskChainRewards);
+            _ = UICenter.OpenUIForm<FormReward>(formVo);
             return;
         }
     }

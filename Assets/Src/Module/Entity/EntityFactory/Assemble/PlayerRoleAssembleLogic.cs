@@ -3,10 +3,18 @@
 /// </summary>
 public class PlayerRoleAssembleLogic : IEntityTypeAssembleLogic
 {
-    public void AssembleSceneEntity(SceneEntity entity, eEntityType entityType)
+    public virtual void AssembleSceneEntity(SceneEntity entity, eEntityType entityType)
     {
         _ = entity.AddComponent<NetInputMove>();
         _ = entity.AddComponent<PlayerRoleSvrDataProcess>();
         _ = entity.AddComponent<EntityMoveData>();
+        _ = entity.AddComponent<SpineAnimationCpt>();
+
+        EntityStatusCtrl statusCpt = entity.AddComponent<EntityStatusCtrl>();
+        statusCpt.InitFsm(
+            EntityStatusCtrl.CreateStatus<IdleStatus>(),
+            EntityStatusCtrl.CreateStatus<MoveStatus>()
+        );
+        statusCpt.StartStatus<IdleStatus>();
     }
 }

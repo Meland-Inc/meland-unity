@@ -17,6 +17,11 @@ public class SceneEntity : EntityBase
     /// </summary>
     public SceneEntityRenderBase SurfaceRender => Surface != null ? Surface.GetSurfaceRender() as SceneEntityRenderBase : null;
 
+    public SceneEntity() : base()
+    {
+        EntityEvent = Root.AddComponent<SceneEntityEvent>();
+    }
+
     public override void Dispose()
     {
         if (Surface)

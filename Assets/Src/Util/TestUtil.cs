@@ -7,6 +7,7 @@ using UnityEngine;
 public static class TestUtil
 {
     public static bool ShowMoveDebug = true;
+    public static bool ShowMoveLog = false;
 
     /// <summary>
     /// 画一个场景矩形 场景矩形中都是场景坐标

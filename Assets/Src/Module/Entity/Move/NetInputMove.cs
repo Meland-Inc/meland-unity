@@ -67,12 +67,14 @@ public class NetInputMove : MonoBehaviour
 
         _curMoveType = moveType;
 
-        //TODO:临时的切动画
-        SceneEntity role = SceneModule.EntityMgr.GetEntityWithRoot(gameObject);
-        if (role != null)
+        EntityEvent entityEvent = gameObject.GetComponent<EntityEvent>();
+        if (moveType == MovementType.MovementTypeRun)
         {
-            string animName = moveType == MovementType.MovementTypeRun ? EntityDefine.ANIM_NAME_RUN : EntityDefine.ANIM_NAME_IDLE;
-            role.GetComponent<IAnimationCpt>().PlayAnim(animName, true);
+            entityEvent.StartMove?.Invoke();
+        }
+        else
+        {
+            entityEvent.StopMove?.Invoke();
         }
     }
 

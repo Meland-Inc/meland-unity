@@ -1,8 +1,6 @@
 
-using System;
 using System.Collections.Generic;
 using MelandGame3;
-using Google.Protobuf.Collections;
 
 public class TaskChainData
 {
@@ -25,8 +23,7 @@ public class TaskChainData
     public readonly List<RewardNftData> CurTaskRewards = new();
     // 子任务集合
     public readonly List<TaskDefine.TaskSubItemData> CurTaskSubItems = new();
-    // 子寻路任务
-    public TaskDefine.TaskSubItemData CurTaskSubPathFindItem => CurTaskSubItems.Find(obj => obj.Option.OptionCnf.DataCase == TaskOptionCnf.DataOneofCase.TarPos);
+    // 子提交任务
     public TaskDefine.TaskSubItemData CurTaskSubSubmitItem => CurTaskSubItems.Find(obj => obj.Option.OptionCnf.DataCase == TaskOptionCnf.DataOneofCase.Item);
 
     // 最大进度
@@ -40,75 +37,9 @@ public class TaskChainData
     // 任务链ID
     public int TaskChainId => RawSvrData.Id;
     // 任务链状态
-    public TaskDefine.eTaskChainState TaskChainState
-    {
-        get
-        {
-            // 未开始 todo
-            if (!RawSvrData.Doing)
-            {
-                return TaskDefine.eTaskChainState.NONE;
-            }
-
-            if (RawSvrData.Kind == TaskListType.TaskListTypeDaily)
-            {
-                // 是否已领取
-                if (RawSvrData.ReceiveReward > 0)
-                {
-                    return TaskDefine.eTaskChainState.HADRECEIVE;
-                }
-                // 未领取且可领取
-                if (RawSvrData.Rate >= MaxTaskChainRate)
-                {
-                    return TaskDefine.eTaskChainState.AVAILABLE;
-                }
-            }
-            else if (RawSvrData.Kind == TaskListType.TaskListTypeRewarded)
-            {
-                // 是否已经领取
-                if (RawSvrData.ReceiveReward >= 2)
-                {
-                    return TaskDefine.eTaskChainState.HADRECEIVE;
-                }
-
-                // 未领取且可领取
-                if ((RawSvrData.ReceiveReward == 0 && RawSvrData.Rate >= 50)
-                    || (RawSvrData.ReceiveReward == 1 && RawSvrData.Rate >= MaxTaskChainRate)
-                )
-                {
-                    return TaskDefine.eTaskChainState.AVAILABLE;
-                }
-            }
-
-            return TaskDefine.eTaskChainState.ONDOING;
-        }
-    }
-
+    public TaskDefine.eTaskChainState TaskChainState;
     // 任务状态
-    public TaskDefine.eTaskState TaskState
-    {
-        get
-        {
-            // 任务链奖励已经领取
-            // if (RawSvrData.ReceiveReward >= MaxTaskChainRate)
-            // {
-            //     return TaskDefine.eTaskState.FINISH;
-            // }
-            // 任务链已到达最大进度 finish || 任务未开始并且不能再接
-            if (CurTaskChainRate >= MaxTaskChainRate || (!RawSvrData.Doing && !RawSvrData.CanReceive))
-            {
-                return TaskDefine.eTaskState.FINISH;
-            }
-
-            // 未开始，且可以领取  || 已经开启，未领取
-            if ((!RawSvrData.Doing && RawSvrData.CanReceive) || (RawSvrData.Doing && RawSvrData.CurTask == null))
-            {
-                return TaskDefine.eTaskState.UNSTART;
-            }
-
-            return TaskDefine.eTaskState.ONDOING;
-        }
-    }
+    public TaskDefine.eTaskState TaskState;
 
     public TaskChainData UpdateData(TaskList rawSvrData)
     {
@@ -128,6 +59,12 @@ public class TaskChainData
         // 任务链奖励
         List<RewardNftData> taskChainRewards = TaskUtil.GetRewardNftData(DRTaskList.ItemReward, DRTaskList.ExpReward);
         TaskUtil.TaskListAddRange(TaskChainRewards, taskChainRewards);
+
+        // 任务链状态获取
+        TaskChainState = TaskUtil.getTaskChainState(RawSvrData, MaxTaskChainRate);
+
+        // 当前任务状态获取
+        TaskState = TaskUtil.getTaskState(RawSvrData, CurTaskChainRate, MaxTaskChainRate);
 
         // 具体任务
         if (rawSvrData.CurTask != null)

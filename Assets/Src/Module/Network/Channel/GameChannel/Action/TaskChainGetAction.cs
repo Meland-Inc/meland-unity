@@ -11,6 +11,12 @@ public class TaskChainGetAction : GameChannelNetMsgRActionBase<SelfTasksRequest,
     {
         if (!base.Receive(errorCode, errorMsg, rsp, req))
         {
+            _ = UICenter.OpenUIToast<ToastCommon>(errorMsg);
+            return false;
+        }
+        if (rsp == null)
+        {
+            _ = UICenter.OpenUIToast<ToastCommon>("Server error, could not get the task");
             return false;
         }
         DataManager.TaskModel.InitData(rsp.Tasks.TaskLists);

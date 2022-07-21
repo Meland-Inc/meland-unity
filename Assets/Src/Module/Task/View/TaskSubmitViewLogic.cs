@@ -8,6 +8,8 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     private readonly List<RewardNftData> _bpItemData = new();
     // 当选中的数据
     private readonly List<RewardNftData> _selectedBpItemData = new();
+    // 用于提交的数据
+    private List<RewardNftData> _reqItemDatas = new();
     // 展示选中数量
     private GTextField _tfSelectCount;
     // 需要提交的item
@@ -27,13 +29,11 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         // 需要提交的列表
         _lstSubmitItems = GCom.GetChild("lstSubmitItems") as GList;
         _lstSubmitItems.numItems = 0;
-        _lstSubmitItems.SetVirtual();
         _lstSubmitItems.itemRenderer = OnRenderSubmitItem;
 
         // 背包列表
         _lstBpItems = GCom.GetChild("lstBpItems") as GList;
         _lstBpItems.numItems = 0;
-        _lstBpItems.SetVirtual();
         _lstBpItems.itemRenderer = OnRenderBpItem;
     }
 
@@ -44,17 +44,15 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         AddDataAction();
     }
 
-    private void ResetUI()
+    private void ResetUIData()
     {
+        SingleFocusBpItem(null);
+        ClearSelectedItemData();
+        _bpItemData.Clear();
         if (_btnSubmit != null)
         {
             _btnSubmit.GetController("ctrColor").selectedPage = "gray";
         }
-        if (_lstBpItems != null)
-        {
-            _lstBpItems.SelectNone();
-        }
-
     }
 
     public override void OnClose()
@@ -62,13 +60,12 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         RemoveUIEvent();
         RemoveDataAction();
         UICenter.CloseUIForm<TooltipNFTItem>();
+        ResetUIData();
         base.OnClose();
     }
 
     private void AddUIEvent()
     {
-        _lstBpItems.onClickItem.Add(OnBpItemClick);
-        // _lstSubmitItems.onClickItem.Add(OnSubmitItemClick);
         _btnSubmit.onClick.Add(OnBtnSubmitClick);
         _btnClose.onClick.Add(CloseSubmitView);
     }
@@ -80,8 +77,6 @@ public class TaskSubmitViewLogic : FGUILogicCpt
 
     private void RemoveUIEvent()
     {
-        _lstBpItems.onClickItem.Remove(OnBpItemClick);
-        // _lstSubmitItems.onClickItem.Remove(OnSubmitItemClick);
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
         _btnClose.onClick.Remove(CloseSubmitView);
     }
@@ -103,8 +98,6 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     public void SetData(TaskChainData taskChainData)
     {
         _taskChainData = taskChainData;
-
-        ResetUI();
         OnUpdateUI();
     }
 
@@ -123,6 +116,7 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         // 处理堆叠，把相同的nft集合到一起
         _bpItemData.Clear();
         _selectedBpItemData.Clear();
+        UpdateSelectBpItemdUI();
         bpNftItems.ForEach(bpItem =>
         {
             // 仅筛选出当前与需要提交道具同cid的 背包道具
@@ -166,34 +160,77 @@ public class TaskSubmitViewLogic : FGUILogicCpt
         _lstSubmitItems.numItems = _taskChainData.TaskSubmitItems.Count;
     }
 
-    private void OnBpItemClick(EventContext context)
+    private void OnBpItemClick(RewardNftItemRenderer render)
     {
-        RewardNftItemRenderer render = (RewardNftItemRenderer)context.data;
-        UpdateSelectedItemData(render);
+        AddSelectedItemData(render);
         UICenter.CloseUIForm<TooltipNFTItem>();
-        if (render.selected)
-        {
-            _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(GCom, render.ItemData.BpItemData, eTooltipDir.Left, -30, 0, false));
-        }
+        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(GCom, render.ItemData.BpItemData, eTooltipDir.Left, -30, 0, false));
     }
 
-    private void UpdateSelectedItemData(RewardNftItemRenderer item)
+    private void OnBpItemCloseClick(RewardNftItemRenderer render)
     {
-        if (item.selected)
+        RemoveSelectedItemData(render);
+    }
+
+    private void ClearSelectedItemData()
+    {
+
+        _selectedBpItemData.Clear();
+        UpdateSelectBpItemdUI();
+        UpdateReqItemDatas();
+    }
+
+    // 添加一个选中数据
+    private void AddSelectedItemData(RewardNftItemRenderer item)
+    {
+        if (!_selectedBpItemData.Contains(item.ItemData))
         {
             _selectedBpItemData.Add(item.ItemData);
+            UpdateSelectBpItemdUI();
+            UpdateReqItemDatas();
         }
-        else
-        {
-            _ = _selectedBpItemData.Remove(item.ItemData);
-        }
+
+        SingleFocusBpItem(item);
         OnUpdateSelectCount();
         OnUpdateBtnSubmit();
     }
 
-    // private void OnSubmitItemClick(EventContext context)
-    // {
-    // }
+    // 移除一个选中数据
+    private void RemoveSelectedItemData(RewardNftItemRenderer item)
+    {
+        if (_selectedBpItemData.Contains(item.ItemData))
+        {
+            _ = _selectedBpItemData.Remove(item.ItemData);
+            UpdateSelectBpItemdUI();
+            UpdateReqItemDatas();
+        }
+
+        OnUpdateSelectCount();
+        OnUpdateBtnSubmit();
+    }
+
+
+    // 更新item被选中
+    private void UpdateSelectBpItemdUI()
+    {
+        for (int i = 0; i < _lstBpItems.numChildren; i++)
+        {
+            RewardNftItemRenderer render = (RewardNftItemRenderer)_lstBpItems.GetChildAt(i);
+            bool isSelected = _selectedBpItemData.Contains(render.ItemData);
+            render.SetSelected(isSelected);
+            render.SetBtnCancel(isSelected);
+        }
+    }
+    // 单选聚焦某个Item
+    private void SingleFocusBpItem(RewardNftItemRenderer focusItem)
+    {
+
+        for (int i = 0; i < _lstBpItems.numChildren; i++)
+        {
+            RewardNftItemRenderer render = (RewardNftItemRenderer)_lstBpItems.GetChildAt(i);
+            render.SetFocus(render == focusItem);
+        }
+    }
 
     // 刷新选中的数量
     private void OnUpdateSelectCount()
@@ -259,19 +296,27 @@ public class TaskSubmitViewLogic : FGUILogicCpt
     {
         RewardNftItemRenderer renderer = (RewardNftItemRenderer)item;
         renderer.SetData(_bpItemData[index]);
+        renderer.SetCloseCb(OnBpItemCloseClick);
+        renderer.SetItemCb(OnBpItemClick);
     }
 
     private void OnRenderSubmitItem(int index, GObject item)
     {
         RewardNftItemRenderer render = (RewardNftItemRenderer)item;
-        render.SetData(_taskChainData.TaskSubmitItems[index]);
+        render.SetData(_taskChainData.TaskSubmitItems[index], 0);
     }
 
 
     private void OnBtnSubmitClick(EventContext context)
     {
-        // 用于提交的数据
-        List<RewardNftData> reqItemDatas = new();
+        UpdateReqItemDatas();
+        TaskUpgradeTaskProgressAction.ReqItem(_taskChainData.TaskChainKind, _reqItemDatas);
+        UICenter.CloseUIForm<FormTaskSubmit>();
+    }
+
+    private void UpdateReqItemDatas()
+    {
+        _reqItemDatas.Clear();
 
         // 需要提交的数据
         List<RewardNftData> submitItems = _taskChainData.TaskSubmitItems;
@@ -285,7 +330,7 @@ public class TaskSubmitViewLogic : FGUILogicCpt
             for (int j = 0; j < selectedItems.Count; j++)
             {
                 int curCount = selectedItems[j].Count >= needSubmitCount ? needSubmitCount : selectedItems[j].Count;
-                reqItemDatas.Add(new RewardNftData()
+                _reqItemDatas.Add(new RewardNftData()
                 {
                     NftId = selectedItems[j].NftId,
                     Cid = selectedItems[j].Cid,
@@ -300,7 +345,21 @@ public class TaskSubmitViewLogic : FGUILogicCpt
             }
         }
 
-        TaskUpgradeTaskProgressAction.ReqItem(_taskChainData.TaskChainKind, reqItemDatas);
-        UICenter.CloseUIForm<FormTaskSubmit>();
+        UpdateReqItemsUI();
+    }
+
+    private void UpdateReqItemsUI()
+    {
+        for (int i = 0; i < _lstSubmitItems.numChildren; i++)
+        {
+            RewardNftItemRenderer render = (RewardNftItemRenderer)_lstSubmitItems.GetChildAt(i);
+            RewardNftData reqItem = _reqItemDatas.Find(reqItem => reqItem.Cid == render.ItemData.Cid);
+            int count = 0;
+            if (reqItem != null)
+            {
+                count = reqItem.Count;
+            }
+            render.SetData(render.ItemData, count);
+        }
     }
 }

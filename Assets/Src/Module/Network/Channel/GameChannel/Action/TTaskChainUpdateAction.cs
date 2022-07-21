@@ -13,7 +13,13 @@ public class TTaskChainUpdateAction : GameChannelNetMsgTActionBase<TUpdateTaskLi
     {
         if (!base.Receive(errorCode, errorMsg, rsp))
         {
+            _ = UICenter.OpenUIToast<ToastCommon>(errorMsg);
             return false;
+        }
+        if (rsp.TaskListInfo == null)
+        {
+            DataManager.TaskModel.RemoveData(rsp.Kind);
+            return true;
         }
         DataManager.TaskModel.UpdateData(rsp.TaskListInfo);
 

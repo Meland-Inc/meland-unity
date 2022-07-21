@@ -33,4 +33,15 @@ public class TaskModel : DataModelBase
 
         SceneModule.TaskMgr.OnUpdateTaskChainData.Invoke();
     }
+
+    public void RemoveData(TaskListType taskListType)
+    {
+
+        TaskChainData chainData = TaskChainList.Find(chain => chain.TaskChainKind == taskListType);
+        if (chainData != null)
+        {
+            _ = TaskChainList.Remove(chainData);
+            SceneModule.TaskMgr.OnUpdateTaskChainData.Invoke();
+        }
+    }
 }

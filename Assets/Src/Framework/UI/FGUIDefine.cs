@@ -43,4 +43,5 @@ public static class FGUIDefine
     public const string UI_AVATAR_RES = "ComUIAvatar";
     public const string TASK_MENU_ITEM_RES = "TaskMenuItemRender";
     public const string TASK_TRACKER_ITEM_RES = "ComTaskTrackerItem";
+    public const string COM_LABEL_CUR_MAX_RES = "comLabelCurMax";
 }

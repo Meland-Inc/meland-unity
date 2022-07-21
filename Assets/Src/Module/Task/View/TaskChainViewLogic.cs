@@ -1,5 +1,4 @@
 
-using System;
 using FairyGUI;
 
 /// <summary>
@@ -16,6 +15,10 @@ public class TaskChainViewLogic : FGUILogicCpt
     private GProgressBar _progressBar;
     // 任务倒计时
     private GTextField _tfTime;
+    // 小摇晃动画
+    private Transition _transLittleRock;
+    // 大摇晃动画
+    private Transition _transBigRock;
 
     protected override void OnAdd()
     {
@@ -26,6 +29,8 @@ public class TaskChainViewLogic : FGUILogicCpt
 
         _ctrShow = GCom.GetController("ctrShow");
         _progressBar = GCom.GetChild("progress") as GProgressBar;
+        _transLittleRock = GCom.GetTransition("littleRock");
+        _transBigRock = GCom.GetTransition("bigRock");
     }
 
     public override void OnOpen()
@@ -108,9 +113,19 @@ public class TaskChainViewLogic : FGUILogicCpt
         // 进度条
         _progressBar.max = _taskChainData.MaxTaskChainRate;
         _progressBar.value = _taskChainData.CurTaskChainRate;
-
         // 宝箱展示样式
         _ctrBtnBoxState.selectedIndex = (int)_chainState;
+
+        _transLittleRock.Stop();
+        _transBigRock.Stop();
+        if (_chainState == TaskDefine.eTaskChainState.ONDOING)
+        {
+            _transLittleRock.Play(-1, 0.2f, null);
+        }
+        else if (_chainState == TaskDefine.eTaskChainState.AVAILABLE)
+        {
+            _transBigRock.Play(-1, 0.2f, null);
+        }
     }
 
     private void OnFrameTimer(float deltaTime)

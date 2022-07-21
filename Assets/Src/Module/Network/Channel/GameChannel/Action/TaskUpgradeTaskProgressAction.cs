@@ -13,6 +13,7 @@ public class TaskUpgradeTaskProgressAction : GameChannelNetMsgRActionBase<Upgrad
     {
         if (!base.Receive(errorCode, errorMsg, rsp, req))
         {
+            _ = UICenter.OpenUIToast<ToastCommon>(errorMsg);
             return false;
         }
         // DataManager.TaskModel.UpdateData(rsp.TaskListInfo);
@@ -37,17 +38,6 @@ public class TaskUpgradeTaskProgressAction : GameChannelNetMsgRActionBase<Upgrad
 
         _ = SendAction<TaskUpgradeTaskProgressAction>(req);
     }
-    public static void ReqPos(TaskListType taskListType, int r, int c)
-    {
-        UpgradeTaskProgressRequest req = GenerateReq();
-        req.TaskListKind = taskListType;
-        req.Pos = new TaskOptionMoveTo
-        {
-            R = r,
-            C = c
-        };
-        _ = SendAction<TaskUpgradeTaskProgressAction>(req);
-    }
 
     public static void ReqQuiz(TaskListType taskListType, int quizType)
     {
@@ -57,4 +47,16 @@ public class TaskUpgradeTaskProgressAction : GameChannelNetMsgRActionBase<Upgrad
         req.Quiz.QuizNum = 1;
         _ = SendAction<TaskUpgradeTaskProgressAction>(req);
     }
+
+    // public static void ReqPos(TaskListType taskListType, int r, int c)
+    // {
+    //     UpgradeTaskProgressRequest req = GenerateReq();
+    //     req.TaskListKind = taskListType;
+    //     req.Pos = new TaskOptionMoveTo
+    //     {
+    //         R = r,
+    //         C = c
+    //     };
+    //     _ = SendAction<TaskUpgradeTaskProgressAction>(req);
+    // }
 }

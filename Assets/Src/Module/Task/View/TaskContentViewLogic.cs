@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using MelandGame3;
 using FairyGUI;
 /// <summary>
 /// 任务内容面板逻辑
@@ -50,60 +48,30 @@ public class TaskContentViewLogic : FGUILogicCpt
         }
         _ctrShow.selectedPage = "true";
         _taskChainData = taskChainData;
-
-        checkPathFindTaskTimer();
         OnUpdateUI();
-    }
-
-
-    private void checkPathFindTaskTimer()
-    {
-        // 寻路任务，开启定时检查坐标
-        Message.OnEnterFrame -= OnFrameCheckPathFind;
-        TaskDefine.TaskSubItemData curTaskSubPathFindItem = _taskChainData.CurTaskSubPathFindItem;
-        if (curTaskSubPathFindItem != null && curTaskSubPathFindItem.CurRate < curTaskSubPathFindItem.MaxRate)
-        {
-            Message.OnEnterFrame += OnFrameCheckPathFind;
-        }
-    }
-
-    private void OnFrameCheckPathFind(float obj)
-    {
-        OnUpdateBtnSubmit();
     }
 
     // 更新提交按钮状态
     private void OnUpdateBtnSubmit()
     {
-        bool isMeet;
+        bool isCanTouch;
         string btnName = TaskDefine.eTaskButton.RECEIVE.ToString();
 
-        TaskDefine.TaskSubItemData curTaskSubPathFindItem = _taskChainData.CurTaskSubPathFindItem;
         TaskDefine.TaskSubItemData curTaskSubSubmitItem = _taskChainData.CurTaskSubSubmitItem;
-        // 子任务有 提交道具类型，且任务未完成，名称为 SUBMIT
+        // 子任务有 提交道具类型，且任务未完成，需要打开界面去提交，名称为 SUBMIT
         if (curTaskSubSubmitItem != null && curTaskSubSubmitItem.CurRate < curTaskSubSubmitItem.MaxRate)
         {
             btnName = TaskDefine.eTaskButton.SUBMIT.ToString();
-            isMeet = true;
-        }
-        else if (curTaskSubPathFindItem != null && curTaskSubPathFindItem.CurRate < curTaskSubPathFindItem.MaxRate)
-        {
-            btnName = TaskDefine.eTaskButton.ARRIVE.ToString();
-            // DataManager.MainPlayer.Role.Transform.position.x
-            // DataManager.MainPlayer.Role.Transform.position.y
-            int RoleR = TaskDefine.TEST_R;
-            int RoleC = TaskDefine.TEST_C;
-            TaskOptionMoveTo moveTo = _taskChainData.CurTaskSubPathFindItem.Option.OptionCnf.TarPos;
-            isMeet = moveTo.R == RoleR && moveTo.C == RoleC;
+            isCanTouch = true;
         }
         else
         {
-            isMeet = CheckIfAllSubItemMeet();
+            isCanTouch = CheckIfAllSubItemMeet();
         }
 
-        _btnSubmit.GetController("ctrColor").selectedPage = isMeet ? "yellow" : "gray";
+        _btnSubmit.GetController("ctrColor").selectedPage = isCanTouch ? "yellow" : "gray";
         _btnSubmit.GetController("ctrStr").selectedPage = btnName;
-        _btnSubmit.touchable = isMeet;
+        _btnSubmit.touchable = isCanTouch;
     }
 
     // 检查所有子任务是否全部完成
@@ -181,11 +149,15 @@ public class TaskContentViewLogic : FGUILogicCpt
 
     private void ListTaskSubItemRenderer(int index, GObject item)
     {
-
         TaskDefine.TaskSubItemData objectData = _taskChainData.CurTaskSubItems[index];
         GComponent gItem = item.asCom;
         Controller ctrState = gItem.GetController("ctrState");
         GTextField tfTitle = gItem.GetChild("title") as GTextField;
+        GLoader glIcon = gItem.GetChild("icon") as GLoader;
+        Controller ctrHasIcon = gItem.GetController("ctrHasIcon");
+
+        ctrHasIcon.selectedPage = string.IsNullOrEmpty(objectData.Icon) ? "false" : "true";
+        glIcon.icon = objectData.Icon;
 
         tfTitle.SetVar("title", objectData.Decs)
             .SetVar("cur", objectData.CurRate.ToString())
@@ -227,7 +199,6 @@ public class TaskContentViewLogic : FGUILogicCpt
         _btnReceive.onClick.Remove(OnBtnReceiveClick);
         _btnAbandon.onClick.Remove(OnBtnAbandonClick);
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
-        Message.OnEnterFrame -= OnFrameCheckPathFind;
         _lstTaskChainReward.onClickItem.Remove(OnListRewardItemClick);
         _lstTaskReward.onClickItem.Remove(OnListRewardItemClick);
     }
@@ -235,7 +206,7 @@ public class TaskContentViewLogic : FGUILogicCpt
     private void OnListRewardItemClick(EventContext context)
     {
         RewardNftItemRenderer itemRenderer = (RewardNftItemRenderer)context.data;
-        _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(itemRenderer, itemRenderer.ItemData.Cid, eTooltipDir.Left));
+        _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(itemRenderer, itemRenderer.ItemData.Cid, eTooltipDir.Right));
     }
 
     private void OnBtnSubmitClick(EventContext context)
@@ -247,15 +218,6 @@ public class TaskContentViewLogic : FGUILogicCpt
             SceneModule.TaskMgr.OpenTaskSubmit(_taskChainData);
             return;
         }
-
-        TaskDefine.TaskSubItemData curTaskSubPathFindItem = _taskChainData.CurTaskSubPathFindItem;
-        if (curTaskSubPathFindItem != null && curTaskSubPathFindItem.CurRate < curTaskSubPathFindItem.MaxRate)
-        {
-            TaskUpgradeTaskProgressAction.ReqPos(_taskChainData.TaskChainKind, TaskDefine.TEST_R, TaskDefine.TEST_C);
-            return;
-        }
-
-
         // 直接请求完成
         TaskRewardReceiveAction.Req(_taskChainData.TaskChainKind);
     }
@@ -285,10 +247,9 @@ public class TaskContentViewLogic : FGUILogicCpt
         if ((!_taskChainData.RawSvrData.Doing && _taskChainData.RawSvrData.CanReceive)
             || (_taskChainData.RawSvrData.Doing && _taskChainData.RawSvrData.CurTask == null))
         {
-            // todo
-            // if (_taskChainData.DRTaskList.CostMELD > SceneModule.Craft.MeldCount)
+            // if (_taskChainData.DRTaskList.CostMELD > SceneModule.Recharge.Meld)
             // {
-            //     _ = UICenter.OpenUIToast<ToastCommon>("Meld insufficient"); 
+            //     _ = UICenter.OpenUIToast<ToastCommon>("Meld insufficient");
             //     return;
             // }
             TaskAcceptAction.Req(_taskChainData.TaskChainKind);

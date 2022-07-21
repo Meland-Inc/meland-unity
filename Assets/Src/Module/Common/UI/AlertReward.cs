@@ -50,6 +50,6 @@ public class AlertReward : AlertBase
     private void OnListRewardItemClick(EventContext context)
     {
         RewardNftItemRenderer itemRenderer = (RewardNftItemRenderer)context.data;
-        _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(itemRenderer, itemRenderer.ItemData.Cid, eTooltipDir.Left));
+        _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(itemRenderer, itemRenderer.ItemData.Cid, eTooltipDir.Right));
     }
 }

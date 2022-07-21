@@ -55,6 +55,7 @@ public static class TaskDefine
 
     public class TaskSubItemData
     {
+        public string Icon;
         public string Decs;
         public int CurRate;
         public int MaxRate;

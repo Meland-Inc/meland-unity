@@ -12,6 +12,7 @@ public class TaskAcceptAction : GameChannelNetMsgRActionBase<AcceptTaskRequest, 
     {
         if (!base.Receive(errorCode, errorMsg, rsp, req))
         {
+            _ = UICenter.OpenUIToast<ToastCommon>(errorMsg);
             return false;
         }
 

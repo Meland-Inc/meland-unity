@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using MelandGame3;
 using Google.Protobuf.Collections;
+using System;
 
 public static class TaskUtil
 {
@@ -102,6 +103,28 @@ public static class TaskUtil
         return taskSubmitItems;
     }
 
+    internal static TaskDefine.eTaskState getTaskState(TaskList rawSvrData, int curTaskChainRate, int maxTaskChainRate)
+    {
+        // 任务链奖励已经领取
+        // if (RawSvrData.ReceiveReward >= MaxTaskChainRate)
+        // {
+        //     return TaskDefine.eTaskState.FINISH;
+        // }
+        // 任务链已到达最大进度 finish || 任务未开始并且不能再接
+        if (curTaskChainRate >= maxTaskChainRate || (!rawSvrData.Doing && !rawSvrData.CanReceive))
+        {
+            return TaskDefine.eTaskState.FINISH;
+        }
+
+        // 未开始，且可以领取  || 已经开启，未领取
+        if ((!rawSvrData.Doing && rawSvrData.CanReceive) || (rawSvrData.Doing && rawSvrData.CurTask == null))
+        {
+            return TaskDefine.eTaskState.UNSTART;
+        }
+
+        return TaskDefine.eTaskState.ONDOING;
+    }
+
     /// <summary>
     /// 根据服务器下发的数据 生成任务子项数据列表
     /// </summary>
@@ -114,6 +137,7 @@ public static class TaskUtil
         RepeatedField<TaskOption> options = rawTaskList.CurTask.Options;
         string templateStr = dRTask.Decs; // todo
         int maxRate = 1;
+        string icon = null;
         for (int i = 0; i < options.Count; i++)
         {
             TaskDefine.TaskSubItemData taskSubItem = new();
@@ -129,11 +153,13 @@ public static class TaskUtil
                 case TaskOptionCnf.DataOneofCase.Item:
                     maxRate = optionCfg.Item.Num;
                     DRItem dRItem = GFEntry.DataTable.GetDataTable<DRItem>().GetDataRow(optionCfg.Item.ItemCid);
+                    icon = Path.Combine(AssetDefine.PATH_ITEM_ICON, $"{dRItem.Icon}.png");
                     templateStr = StringUtil.ReplaceTemplate(templateStr, dRItem.Name, maxRate.ToString());
                     break;
                 case TaskOptionCnf.DataOneofCase.MonInfo:
                     maxRate = optionCfg.MonInfo.Num;
                     DRMonster dRMonster = GFEntry.DataTable.GetDataTable<DRMonster>().GetDataRow(optionCfg.MonInfo.MonCid);
+                    icon = Path.Combine(AssetDefine.PATH_ITEM_ICON, $"{dRMonster.Icon}.png");
                     templateStr = StringUtil.ReplaceTemplate(templateStr, dRMonster.Name, maxRate.ToString());
                     break;
                 case TaskOptionCnf.DataOneofCase.TarPos:
@@ -149,6 +175,7 @@ public static class TaskUtil
                 default:
                     break;
             }
+            taskSubItem.Icon = icon;
             taskSubItem.Decs = templateStr;
             taskSubItem.CurRate = option.Rate;
             taskSubItem.MaxRate = maxRate;
@@ -156,6 +183,47 @@ public static class TaskUtil
             taskSubItems.Add(taskSubItem);
         }
         return taskSubItems;
+    }
+
+    internal static TaskDefine.eTaskChainState getTaskChainState(TaskList rawSvrData, int maxChainRate)
+    {
+        // 未开始 todo
+        if (!rawSvrData.Doing)
+        {
+            return TaskDefine.eTaskChainState.NONE;
+        }
+
+        if (rawSvrData.Kind == TaskListType.TaskListTypeDaily)
+        {
+            // 是否已领取
+            if (rawSvrData.ReceiveReward > 0)
+            {
+                return TaskDefine.eTaskChainState.HADRECEIVE;
+            }
+            // 未领取且可领取
+            if (rawSvrData.Rate >= maxChainRate)
+            {
+                return TaskDefine.eTaskChainState.AVAILABLE;
+            }
+        }
+        else if (rawSvrData.Kind == TaskListType.TaskListTypeRewarded)
+        {
+            // 是否已经领取
+            if (rawSvrData.ReceiveReward >= 2)
+            {
+                return TaskDefine.eTaskChainState.HADRECEIVE;
+            }
+
+            // 未领取且可领取
+            if ((rawSvrData.ReceiveReward == 0 && rawSvrData.Rate >= 50)
+                || (rawSvrData.ReceiveReward == 1 && rawSvrData.Rate >= maxChainRate)
+            )
+            {
+                return TaskDefine.eTaskChainState.AVAILABLE;
+            }
+        }
+
+        return TaskDefine.eTaskChainState.ONDOING;
     }
 
     public static void TaskListAddRange<T>(List<T> originList, List<T> beAddLsit)

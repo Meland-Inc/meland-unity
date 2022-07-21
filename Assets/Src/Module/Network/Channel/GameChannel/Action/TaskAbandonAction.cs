@@ -12,8 +12,8 @@ public class TaskAbandonAction : GameChannelNetMsgRActionBase<AbandonmentTaskReq
     {
         if (!base.Receive(errorCode, errorMsg, rsp, req))
         {
-            return false;
             _ = UICenter.OpenUIToast<ToastCommon>(errorMsg);
+            return false;
         }
         DataManager.TaskModel.UpdateData(rsp.TaskListInfo);
 

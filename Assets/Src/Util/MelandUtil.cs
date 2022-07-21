@@ -47,4 +47,20 @@ public static class MelandUtil
     {
         return (T)Enum.Parse(typeof(T), str);
     }
+
+    /// <summary>
+    /// 清除委托列表。
+    /// </summary>
+    /// <param name="action"></param>
+    public static void ClearDelegage<T>(Action<T> action)
+    {
+        if (action != null)
+        {
+            Delegate[] delegates = action.GetInvocationList();
+            for (int i = 0; i < delegates.Length; i++)
+            {
+                action -= delegates[i] as Action<T>;
+            }
+        }
+    }
 }

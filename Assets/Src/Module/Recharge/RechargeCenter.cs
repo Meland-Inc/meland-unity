@@ -1,7 +1,7 @@
 using System;
 /*
  * @Author: mangit
- * @LastEditors: mangit
+ * @LastEditors: wym
  * @Description: 充值中心
  * @Date: 2022-07-07 10:44:30
  * @FilePath: /Assets/Src/Module/Recharge/RechargeCenter.cs
@@ -9,6 +9,7 @@ using System;
 using UnityGameFramework.Runtime;
 using Cysharp.Threading.Tasks;
 using Runtime;
+using MelandGame3;
 
 public class RechargeCenter : GameFrameworkComponent
 {
@@ -29,6 +30,22 @@ public class RechargeCenter : GameFrameworkComponent
 
     private UniTaskCompletionSource _meldRechargeTask;
     private int _meldRechargeBlockNum;
+    public int Meld { get; set; } = 0;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        BasicModule.Login.LoginChannel.OnLoginSuccess += OnLoginSuccess;
+    }
+
+    public void OnDestroy()
+    {
+        BasicModule.Login.LoginChannel.OnLoginSuccess -= OnLoginSuccess;
+    }
+    private void OnLoginSuccess()
+    {
+        GetUserGameInternalTokenAction.Req();
+    }
 
     public UniTask RechargeMeld(int count)
     {

@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using FairyGUI;
+using MelandGame3;
 /// <summary>
 /// 任务内容面板逻辑
 /// </summary>
@@ -150,21 +152,9 @@ public class TaskContentViewLogic : FGUILogicCpt
     private void ListTaskSubItemRenderer(int index, GObject item)
     {
         TaskDefine.TaskSubItemData objectData = _taskChainData.CurTaskSubItems[index];
-        GComponent gItem = item.asCom;
-        Controller ctrState = gItem.GetController("ctrState");
-        GTextField tfTitle = gItem.GetChild("title") as GTextField;
-        GLoader glIcon = gItem.GetChild("icon") as GLoader;
-        Controller ctrHasIcon = gItem.GetController("ctrHasIcon");
+        TaskSubItemRender render = (TaskSubItemRender)item;
+        render.SetData(objectData);
 
-        ctrHasIcon.selectedPage = string.IsNullOrEmpty(objectData.Icon) ? "false" : "true";
-        glIcon.icon = objectData.Icon;
-
-        tfTitle.SetVar("title", objectData.Decs)
-            .SetVar("cur", objectData.CurRate.ToString())
-            .SetVar("max", objectData.MaxRate.ToString())
-            .FlushVars();
-
-        ctrState.selectedPage = objectData.CurRate >= objectData.MaxRate ? "finished" : "unfinished";
     }
 
     public override void OnOpen()
@@ -192,6 +182,7 @@ public class TaskContentViewLogic : FGUILogicCpt
         _btnSubmit.onClick.Add(OnBtnSubmitClick);
         _lstTaskChainReward.onClickItem.Add(OnListRewardItemClick);
         _lstTaskReward.onClickItem.Add(OnListRewardItemClick);
+        _lstTaskSubItem.onClickItem.Add(OnListTaskSubItemClick);
     }
 
     private void RemoveEvent()
@@ -201,6 +192,18 @@ public class TaskContentViewLogic : FGUILogicCpt
         _btnSubmit.onClick.Remove(OnBtnSubmitClick);
         _lstTaskChainReward.onClickItem.Remove(OnListRewardItemClick);
         _lstTaskReward.onClickItem.Remove(OnListRewardItemClick);
+        _lstTaskSubItem.onClickItem.Remove(OnListTaskSubItemClick);
+    }
+
+    private void OnListTaskSubItemClick(EventContext context)
+    {
+        TaskSubItemRender itemRenderer = (TaskSubItemRender)context.data;
+        TaskOptionCnf optionCnf = itemRenderer.subItemData.Option.OptionCnf;
+        if (optionCnf.DataCase == TaskOptionCnf.DataOneofCase.Item)
+        {
+            _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(itemRenderer.glIcon, optionCnf.Item.ItemCid, eTooltipDir.Right));
+        }
+
     }
 
     private void OnListRewardItemClick(EventContext context)
@@ -247,6 +250,7 @@ public class TaskContentViewLogic : FGUILogicCpt
         if ((!_taskChainData.RawSvrData.Doing && _taskChainData.RawSvrData.CanReceive)
             || (_taskChainData.RawSvrData.Doing && _taskChainData.RawSvrData.CurTask == null))
         {
+            // todo 正式需要打开
             // if (_taskChainData.DRTaskList.CostMELD > SceneModule.Recharge.Meld)
             // {
             //     _ = UICenter.OpenUIToast<ToastCommon>("Meld insufficient");

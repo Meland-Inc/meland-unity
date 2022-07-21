@@ -1,6 +1,6 @@
 /*
 * @Author: mangit
- * @LastEditTime: 2022-07-21 17:01:37
+ * @LastEditTime: 2022-07-21 20:12:09
  * @LastEditors: wym
 * @Description: fairygui 处理中心
 * @Date: 2022-06-16 20:48:53
@@ -25,6 +25,7 @@ public partial class UICenter
         new (eFUIPackage.Common, FGUIDefine.COM_LABEL_CUR_MAX_RES,typeof( ComLabelCurMax)),
         new (eFUIPackage.Task, FGUIDefine.TASK_MENU_ITEM_RES,typeof( TaskMenuItemRender)),
         new (eFUIPackage.Task, FGUIDefine.TASK_TRACKER_ITEM_RES,typeof( TaskTrackerItemRender)),
+        new (eFUIPackage.Task, FGUIDefine.TASK_SUB_ITEM_RES,typeof( TaskSubItemRender)),
     };
 
     private readonly string[] _fontCfg = {

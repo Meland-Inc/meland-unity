@@ -9,6 +9,7 @@ public class SceneEntityFactory : EntityFactory<SceneEntity>
     //各实体类型的初始装配逻辑
     private readonly Dictionary<eEntityType, IEntityTypeAssembleLogic> _assembleLogic = new()
     {
+        { eEntityType.mainPlayer, new MainPlayerRoleAssembleLogic() },
         { eEntityType.player, new PlayerRoleAssembleLogic() },
         { eEntityType.monster, new MonsterAssembleLogic() },
     };
@@ -34,7 +35,7 @@ public class SceneEntityFactory : EntityFactory<SceneEntity>
     public SceneEntity CreateMainRoleEntity(long id)
     {
         MainRoleEntity entity = new();
-        entity.InitBaseInfo(id, eEntityType.player);
+        entity.InitBaseInfo(id, eEntityType.mainPlayer);
         return AssemblyEntity(entity);
     }
 }

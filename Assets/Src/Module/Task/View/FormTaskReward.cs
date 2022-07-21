@@ -4,6 +4,9 @@ using System;
 using System.Collections.Generic;
 using FairyGUI;
 
+/// <summary>
+/// 任务奖励弹框
+/// </summary>
 public class FormTaskReward : FGUIForm
 {
     private List<RewardNftData> _itemDatas;

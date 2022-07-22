@@ -25,6 +25,7 @@ public enum eFUIPackage
     CreateRole,
     Backpack,
     Player,
+    Craft,
 }
 
 public static class UIDefine

@@ -8,6 +8,7 @@ public class FormMain : FGUIForm
         base.OnInit(userData);
         MLog.Debug(eLogTag.ui, userData);
         _ = GCom.AddSubUILogic<ComMainBagShortcut>();
+        _ = GCom.AddSubUILogic<ComMainBigWorld>("comMainBigWorld");
 
         FairyGUI.GTextInput rowInput = GCom.GetChild("rowInput").asTextInput;
         FairyGUI.GTextInput colInput = GCom.GetChild("colInput").asTextInput;

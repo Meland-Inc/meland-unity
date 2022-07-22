@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5533880070429717973}
   - component: {fileID: 6220575467374519911}
-  - component: {fileID: -4378678160212634465}
+  - component: {fileID: -5395278154370467316}
   m_Layer: 5
-  m_Name: TooltipItem
+  m_Name: FormCraft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024553ecf96a65649b929ee08c9214fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  packageName: Common
-  componentName: TooltipItem
-  fitScreen: 0
+  packageName: Craft
+  componentName: FormCraft
+  fitScreen: 1
   sortingOrder: 0
-  packagePath: Assets/Res/Fairygui/Common
+  packagePath: Assets/Res/Fairygui/Craft
   renderMode: 0
   renderCamera: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   cachedUISize: {x: 0, y: 0}
   hitTestMode: 0
   setNativeChildrenOrder: 0
---- !u!114 &-4378678160212634465
+--- !u!114 &-5395278154370467316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,6 +69,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6166636570649332682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0435a649fcc4c44c0902fc295cef48b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f9443175b74d4c958a3d20ba76ef6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -31,7 +31,7 @@ public abstract class FGUIForm : FGUIBase
         }
     }
 
-    private void OnBtnCloseClick()
+    protected virtual void OnBtnCloseClick()
     {
         Close();
     }

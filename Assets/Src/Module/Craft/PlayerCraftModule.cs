@@ -9,8 +9,10 @@ using UnityEngine;
 using System;
 using Runtime;
 
-public class PlayerCraftModule : MonoBehaviour
+public partial class PlayerCraftModule : MonoBehaviour
 {
+    public const int CRAFT_MAX_LEVEL = 10;
+
     public Action OnSkillInfoUpdated = delegate { };
     public Action OnUnlockedRecipesUpdated = delegate { };
     public Action<int> OnGameMeldCountUpdated = delegate { };
@@ -21,12 +23,22 @@ public class PlayerCraftModule : MonoBehaviour
     public int[] UnlockedRecipes { get; private set; }
     public int MeldCount { get; private set; }
 
+    private int _recipeID;
+    private int _craftCount;
+
     public void OpenFormPlayerInfo()
     {
         _ = UICenter.OpenUIForm<FormPlayerInfo>();
         GetUserSkillInfoAction.Req();
         GetUserGameInternalTokenAction.Req();
         GetUnlockedRecipesAction.Req();
+    }
+
+    public void OpenFormCraft()
+    {
+        _ = UICenter.OpenUIForm<FormCraft>();
+        GetUnlockedRecipesAction.Req();
+        GetUserGameInternalTokenAction.Req();
     }
 
     public void UpgradeSkill(string skillID, int meldCost)
@@ -44,9 +56,9 @@ public class PlayerCraftModule : MonoBehaviour
 
     public void UseRecipes(int recipesID, int num, int meldCost)
     {
+        _recipeID = recipesID;
+        _craftCount = num;
         HandleUseRecipes(recipesID, num, meldCost);
-        // _useRecipesTask = new();
-        // return _useRecipesTask.Task;
     }
 
     private async void HandleUseRecipes(int recipesID, int num, int meldCost)
@@ -63,15 +75,6 @@ public class PlayerCraftModule : MonoBehaviour
             MLog.Error(eLogTag.craft, $"recharge meld {meldCost} failed,req use recipes {recipesID}");
         }
     }
-
-    // public UniTask<int> RechargeMeld(int meld)
-    // {
-    //     _rechargeMeldTask = new();
-    //     MeldRecharging = true;
-    //     OnRechargeMeld.Invoke();
-    //     RechargeTokenAction.Req(meld).SetCB(OnChargeMeldResponse);
-    //     return _rechargeMeldTask.Task;
-    // }
 
     public void GetUserGameMeld()
     {
@@ -95,7 +98,8 @@ public class PlayerCraftModule : MonoBehaviour
     private void OnUseRecipes(UseRecipesResponse rsp)
     {
         GetUserGameInternalTokenAction.Req();
-        _ = UICenter.OpenUIToast<ToastCommon>("Synthetic successfully");
+        DRRecipes drRecipe = GFEntry.DataTable.GetDataTable<DRRecipes>().GetDataRow(_recipeID);
+        _ = UICenter.OpenUIForm<FormCraftSuccess>(new CraftResultData(drRecipe.ProductId[0][0], _craftCount));
     }
 
     public void SetUnlockedRecipes(int[] unlockedRecipes)

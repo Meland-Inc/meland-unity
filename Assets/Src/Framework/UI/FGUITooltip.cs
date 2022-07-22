@@ -14,6 +14,7 @@ public class FGUITooltip : FGUIBase
 {
     protected override FitScreen FitScreenMode => FitScreen.None;
     protected TooltipInfo TooltipInfo;
+    private bool _touchBegin;
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
@@ -31,12 +32,14 @@ public class FGUITooltip : FGUIBase
         }
 
         FitPos();
-        Stage.inst.onClick.Add(OnRootClick);
+        Stage.inst.onTouchBegin.Add(OnStageTouchBegin);
+        Stage.inst.onClick.Add(OnStageClick);
     }
 
     protected override void OnClose(bool isShutdown, object userData)
     {
-        Stage.inst.onClick.Remove(OnRootClick);
+        Stage.inst.onClick.Remove(OnStageClick);
+        Stage.inst.onTouchBegin.Remove(OnStageTouchBegin);
         base.OnClose(isShutdown, userData);
     }
 
@@ -97,8 +100,17 @@ public class FGUITooltip : FGUIBase
         GCom.y += TooltipInfo.OffsetY;
     }
 
-    private void OnRootClick()
+    private void OnStageTouchBegin()
     {
-        Close();
+        _touchBegin = true;
+    }
+
+    private void OnStageClick()
+    {
+        if (_touchBegin)
+        {
+            Close();
+        }
+        _touchBegin = false;
     }
 }

@@ -1,9 +1,9 @@
 /*
  * @Author: mangit
- * @LastEditors Please set LastEditors
+ * @LastEditors: mangit
  * @Description: 背包角色视图逻辑
  * @Date: 2022-06-21 13:54:14
- * @FilePath /Assets/Src/Module/Backpack/BackpackRoleViewLogic.cs
+ * @FilePath: /Assets/Src/Module/Backpack/BackpackRoleViewLogic.cs
  */
 using MelandGame3;
 using FairyGUI;
@@ -93,7 +93,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
         {
             _ = DataManager.Backpack.WearableItemDic.TryGetValue(item.Key, out BpWearableNftItem avatarItem);
             item.Value.SetNftData(avatarItem);
-            item.Value.SetSlotData(DataManager.MainPlayer.ItemSlotDic[item.Key]);
+            // item.Value.SetSlotData(DataManager.MainPlayer.ItemSlotDic[item.Key]);
         }
     }
     private void OnAvatarDataUpdated()

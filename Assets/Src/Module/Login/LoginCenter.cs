@@ -24,7 +24,7 @@ public class LoginCenter : GameFrameworkComponent
 
     public void InitLoginChannel()
     {
-        LoginChannel = new LoginChannelDebug();
+        LoginChannel = new LoginChannelRuntime();
         LoginChannel.OnLoginSuccess += OnLoginSuccess;
     }
 

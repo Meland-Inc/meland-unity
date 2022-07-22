@@ -24,6 +24,7 @@ public partial class UICenter
     };
 
     private readonly string[] _fontCfg = {
+        "HermanoAlto_Round.ttf",
         "SourceHanSansCN-Heavy.ttf",
         "FangFang.ttf",
     };

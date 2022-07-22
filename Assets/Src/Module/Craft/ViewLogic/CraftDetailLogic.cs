@@ -24,6 +24,8 @@ public class CraftDetailLogic : FGUILogicCpt
     private List<int> _recipesIdList;
     private int[][] _matIdList;
 
+    private bool _isAddMessage = false;
+
     protected override void OnAdd()
     {
         base.OnAdd();
@@ -47,7 +49,6 @@ public class CraftDetailLogic : FGUILogicCpt
     {
         base.OnOpen();
         AddUIEvent();
-        AddMessage();
     }
 
     public override void OnClose()
@@ -79,28 +80,42 @@ public class CraftDetailLogic : FGUILogicCpt
 
     private void AddMessage()
     {
+        if (_isAddMessage)
+        {
+            return;
+        }
+        _isAddMessage = true;
         SceneModule.BackpackMgr.OnDataUpdated += OnBackpackChanged;
         SceneModule.BackpackMgr.OnDataAdded += OnBackpackChanged;
         SceneModule.BackpackMgr.OnDataRemoved += OnBackpackChanged;
         Craft.OnGameMeldCountUpdated += OnMeldCountUpdated;
-        Craft.OnUnlockedRecipesUpdated += OnUnlockedRecipesUpdated;
         Recharge.OnRechargeMeldStatusChanged += OnRechargeMeldStatusChanged;
     }
 
     private void RemoveMessage()
     {
+        if (!_isAddMessage)
+        {
+            return;
+        }
+        _isAddMessage = false;
         SceneModule.BackpackMgr.OnDataUpdated -= OnBackpackChanged;
         SceneModule.BackpackMgr.OnDataAdded -= OnBackpackChanged;
         SceneModule.BackpackMgr.OnDataRemoved -= OnBackpackChanged;
         Craft.OnGameMeldCountUpdated -= OnMeldCountUpdated;
-        Craft.OnUnlockedRecipesUpdated -= OnUnlockedRecipesUpdated;
         Recharge.OnRechargeMeldStatusChanged -= OnRechargeMeldStatusChanged;
     }
 
     public void UpdateView(List<int> recipeIDList)
     {
+        AddMessage();
         _recipesIdList = recipeIDList;
         UpdateProductsList();
+    }
+
+    public void UpdateView(int recipeID)
+    {
+        UpdateView(new List<int>() { recipeID });
     }
 
     private void OnProductItemRenderer(int index, GObject item)
@@ -120,18 +135,15 @@ public class CraftDetailLogic : FGUILogicCpt
         int itemID = _matIdList[index][0];
         int itemNeed = _matIdList[index][1] * (int)_sldQuantity.value;
         int itemHas = DataManager.Backpack.GetItemCount(itemID);
-        DRItem drItem = GFEntry.DataTable.GetDataTable<DRItem>().GetDataRow(itemID);
         GButton btn = (GButton)item.asCom;
-        if (drItem != null)
-        {
-            btn.data = drItem.Id;
-            btn.icon = Path.Combine(AssetDefine.PATH_ITEM_ICON, $"{drItem.Icon}.png");
-            btn.GetController("ctrlTextColor").SetSelectedPage(itemHas >= itemNeed ? "green" : "red");
-            btn.GetChild("title").asTextField
-                .SetVar("cur", itemHas.ToString())
-                .SetVar("need", itemNeed.ToString())
-                .FlushVars();
-        }
+        DRItem drItem = GFEntry.DataTable.GetDataTable<DRItem>().GetDataRow(itemID);
+        btn.data = drItem?.Id;
+        btn.icon = Path.Combine(AssetDefine.PATH_ITEM_ICON, $"{drItem?.Icon}.png");
+        btn.GetController("ctrlTextColor").SetSelectedPage(itemHas >= itemNeed ? "green" : "red");
+        btn.GetChild("title").asTextField
+            .SetVar("cur", itemHas.ToString())
+            .SetVar("need", itemNeed.ToString())
+            .FlushVars();
     }
 
     private void OnProductItemClick(EventContext context)
@@ -142,7 +154,7 @@ public class CraftDetailLogic : FGUILogicCpt
     private void OnMatItemClick(EventContext context)
     {
         GObject obj = context.data as GObject;
-        _ = UICenter.OpenUITooltip<TooltipSyntheticMatDetail>(new TooltipInfo(obj, obj.data, eTooltipDir.Left));
+        _ = UICenter.OpenUITooltip<TooltipItem>(new TooltipInfo(obj, obj.data, eTooltipDir.Left));
     }
 
     private void OnConfirmClick(EventContext context)
@@ -187,7 +199,6 @@ public class CraftDetailLogic : FGUILogicCpt
         _recipesCfg = GFEntry.DataTable.GetDataTable<DRRecipes>().GetDataRow(_recipesIdList[index]);
         InitQuantity();
         UpdateQuantity();
-        UpdateMaterial();
         UpdateRecipesMeldCost();
         UpdateConfirmBtn();
     }
@@ -260,10 +271,5 @@ public class CraftDetailLogic : FGUILogicCpt
     private void OnRechargeMeldStatusChanged(bool isRecharging)
     {
         UIUtil.SetBtnLoadingStatus(_btnConfirm, isRecharging);
-    }
-
-    private void OnUnlockedRecipesUpdated()
-    {
-        UpdateProductsList();
     }
 }

@@ -27,7 +27,7 @@ public class RoleProfileData : MonoBehaviour
     /// <param name="field"></param>
     /// <param name="value"></param>
     /// <param name="strValue"></param>
-    public void UpdateProfile(EntityProfileField field, int value, string strValue = "")
+    public void UpdateProfile(EntityProfileField field, int value, string strValue = "", bool triggerMsg = true)
     {
         PropertyInfo propertyInfo;
         try
@@ -49,15 +49,19 @@ public class RoleProfileData : MonoBehaviour
             propertyInfo.SetValue(Profile, strValue);
         }
 
-        Message.RoleProfileUpdated.Invoke(field);//TODO:需要优化，可能一次性更新多个属性，没必要每次都触发
+        if (triggerMsg)
+        {
+            Message.RoleProfileUpdated.Invoke(field);
+        }
     }
 
     public void UpdateProfile(IEnumerable<EntityProfileUpdate> profileUpdate)
     {
         foreach (EntityProfileUpdate update in profileUpdate)
         {
-            UpdateProfile(update.Field, update.CurValue, update.CurValueStr);
+            UpdateProfile(update.Field, update.CurValue, update.CurValueStr, false);
         }
+        Message.RoleProfileUpdated.Invoke(EntityProfileField.EntityProfileFieldUnKnown);
     }
 
     public void UpdateProfile(EntityProfile profile)

@@ -8,7 +8,6 @@
 using Bian;
 using FairyGUI;
 using System.Collections.Generic;
-using System.IO;
 
 public class BackpackRoleViewLogic : FGUILogicCpt
 {
@@ -18,7 +17,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
     private GComponent _comDef;
     private GComponent _comAttack;
     private GComponent _comAttackSpeed;
-    private Dictionary<AvatarPosition, EquipmentSlot> slotDic;
+    private Dictionary<AvatarPosition, EquipmentSlot> _slotDic;
 
     protected override void OnAdd()
     {
@@ -72,7 +71,7 @@ public class BackpackRoleViewLogic : FGUILogicCpt
 
     private void InitSlotDic()
     {
-        slotDic = new();
+        _slotDic = new();
         AddSlot(AvatarPosition.AvatarPositionHead, "equipHead");
         AddSlot(AvatarPosition.AvatarPositionCoat, "equipCoat");
         AddSlot(AvatarPosition.AvatarPositionPant, "equipPant");
@@ -84,13 +83,13 @@ public class BackpackRoleViewLogic : FGUILogicCpt
     private void AddSlot(AvatarPosition pos, string slotName)
     {
         EquipmentSlot slot = GCom.GetChild(slotName) as EquipmentSlot;
-        slotDic.Add(pos, slot);
+        _slotDic.Add(pos, slot);
     }
 
     private void UpdateSlotView()
     {
         Dictionary<AvatarPosition, ItemSlot> slotDic = DataManager.MainPlayer.Role.GetComponent<MainRoleSlotData>().ItemSlotDic;
-        foreach (KeyValuePair<AvatarPosition, EquipmentSlot> item in this.slotDic)
+        foreach (KeyValuePair<AvatarPosition, EquipmentSlot> item in this._slotDic)
         {
             _ = DataManager.Backpack.WearableItemDic.TryGetValue(item.Key, out BpWearableNftItem avatarItem);
             item.Value.SetNftData(avatarItem);

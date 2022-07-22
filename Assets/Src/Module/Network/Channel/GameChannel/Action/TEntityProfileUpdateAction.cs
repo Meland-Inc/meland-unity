@@ -23,10 +23,7 @@ public class TEntityProfileUpdateAction : GameChannelNetMsgTActionBase<TEntityPr
         if (rsp.EntityId.Id == DataManager.MainPlayer.RoleID)
         {
             RoleProfileData profileData = DataManager.MainPlayer.Role.GetComponent<RoleProfileData>();
-            foreach (EntityProfileUpdate item in rsp.Profiles)
-            {
-                profileData.UpdateProfile(item.Field, item.CurValue, item.CurValueStr);
-            }
+            profileData.UpdateProfile(rsp.Profiles);
         }
         return true;
     }

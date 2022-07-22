@@ -53,7 +53,7 @@ public class TBroadCastTaskReward : GameChannelNetMsgTActionBase<TBroadCastTaskR
         return true;
     }
 
-    // todo 需要为 ToastCommon 添加消息队列功能
+    // todo 需要为 ToastCommon 添加消息队列功能，就可以去掉此方法了
     private async void ShowRewardsToast(List<RewardNftData> curTaskRewards)
     {
 

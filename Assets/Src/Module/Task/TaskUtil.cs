@@ -135,7 +135,7 @@ public static class TaskUtil
     {
         List<TaskDefine.TaskSubItemData> taskSubItems = new();
         RepeatedField<TaskOption> options = rawTaskList.CurTask.Options;
-        string templateStr = dRTask.Decs; // todo
+        string templateStr = dRTask.Decs; // todo 之后这个字段可能会重新被配置为数组 根据策划的来改
         int maxRate = 1;
         string icon = null;
         for (int i = 0; i < options.Count; i++)
@@ -187,7 +187,6 @@ public static class TaskUtil
 
     internal static TaskDefine.eTaskChainState getTaskChainState(TaskList rawSvrData, int maxChainRate)
     {
-        // 未开始 todo
         if (!rawSvrData.Doing)
         {
             return TaskDefine.eTaskChainState.NONE;

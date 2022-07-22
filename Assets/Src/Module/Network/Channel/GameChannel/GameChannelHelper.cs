@@ -33,6 +33,8 @@ public class GameChannelHelper : SocketProtobufChannelHelper<MelandGame3.Envelop
         networkChannel.RegisterHandler(TPlayerProfileUpdateByFieldIdAction.GetAction<TPlayerProfileUpdateByFieldIdAction>());
         networkChannel.RegisterHandler(TEntityProfileUpdateByFieldIdAction.GetAction<TEntityProfileUpdateByFieldIdAction>());
         networkChannel.RegisterHandler(TEntityMoveAction.GetAction<TEntityMoveAction>());
+        networkChannel.RegisterHandler(TBroadCastTaskReward.GetAction<TBroadCastTaskReward>());
+        networkChannel.RegisterHandler(TTaskChainUpdateAction.GetAction<TTaskChainUpdateAction>());
     }
 
     public override void PrepareForConnecting()

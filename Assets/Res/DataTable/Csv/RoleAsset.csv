@@ -1,0 +1,12 @@
+id,ÃèÊö,¹Ç¼Ü×ÊÔ´,ÏĞÖÃ½ĞÉù,ÆÕÍ¨¹¥»÷ÉùÒô,ÊÜÉË±©»÷ÉùÒô,ÊÜÉËÉùÒô,ËÀÍöÉùÒô
+id,desc,armatureRes,idleSound,attackSound,hurtedCritSound,hurtedSound,deathSound
+int,string,string,string,string,string,string,string
+10001,ÄĞÍæ¼Ò,boy_armature,,GGGrasslands - Box Destroy (Split) - Hit_mp3,GGGrasslands - Jump (Land)_mp3,GGGrasslands - Hit 2_mp3,GGGrasslands - Death_mp3
+10002,Å®Íæ¼Ò,girl_armature,,GGGrasslands - Box Destroy (Split) - Hit_mp3,GGGrasslands - Jump (Land)_mp3,GGGrasslands - Hit 2_mp3,GGGrasslands - Death_mp3
+20001,Boar,wildboar,wildboarout_mp3,GGGrasslands - Spikes (Split) - 2_mp3,GGGrasslands - Hit 2_mp3,meethited_mp3,GGGrasslands - Carrot Death_mp3
+20002,Cucco,CuckooChicken,chikenOut_mp3,GGGrasslands - Spikes (Split) - 2_mp3,GGGrasslands - Hit 2_mp3,meethited_mp3,GGGrasslands - Carrot Death_mp3
+20003,Goat,MountainSheep,,GGGrasslands - Spikes (Split) - 2_mp3,GGGrasslands - Hit 2_mp3,meethited_mp3,GGGrasslands - Carrot Death_mp3
+20004,Bull,MudOx,buffaloout_mp3,GGGrasslands - Spikes (Split) - 2_mp3,GGGrasslands - Hit 2_mp3,meethited_mp3,GGGrasslands - Carrot Death_mp3
+20005,Barbarian,bin_MV01_bg_animal_01_FerociousSavage,,GGGrasslands - Spikes (Split) - 2_mp3,GGGrasslands - Hit 2_mp3,meethited_mp3,GGGrasslands - Carrot Death_mp3
+20006,Wolf,wolf,wolfOut_mp3,GGGrasslands - Spikes (Split) - 2_mp3,GGGrasslands - Hit 2_mp3,meethited_mp3,GGGrasslands - Carrot Death_mp3
+20007,Tyrannosaurus,bin_MV01_bg_animal_02_AncientTyrannosaurus,,GGGrasslands - Spikes (Split) - 2_mp3,GGGrasslands - Hit 2_mp3,meethited_mp3,GGGrasslands - Carrot Death_mp3

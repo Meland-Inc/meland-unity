@@ -8,6 +8,7 @@ public class FormMain : FGUIForm
         base.OnInit(userData);
         MLog.Debug(eLogTag.ui, userData);
         _ = GCom.AddSubUILogic<ComMainBagShortcut>();
+        _ = GCom.AddSubUILogic<TaskTrackerViewLogic>("comTaskTracker");
 
         FairyGUI.GTextInput rowInput = GCom.GetChild("rowInput").asTextInput;
         FairyGUI.GTextInput colInput = GCom.GetChild("colInput").asTextInput;
@@ -29,6 +30,10 @@ public class FormMain : FGUIForm
         GCom.GetChild("comMainBigWorld").asCom.GetChild("comRoleInfo").onClick.Add(() =>
         {
             SceneModule.Craft.OpenFormPlayerInfo();
+        });
+        GCom.GetChild("comMainBigWorld").asCom.GetChild("lstBtnMenu").asList.GetChild("btnTask").onClick.Add(() =>
+        {
+            SceneModule.TaskMgr.OpenTask();
         });
     }
 }

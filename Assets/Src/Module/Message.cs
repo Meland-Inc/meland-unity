@@ -4,6 +4,11 @@ using MelandGame3;
 
 public static class Message
 {
+
+    #region 通用
+    public static Action<float> OnEnterFrame = delegate { };
+    #endregion
+
     #region  地图场景
 
     /// <summary>
@@ -23,6 +28,7 @@ public static class Message
     public static Action<string> RuntimeMessageEmitted = delegate { };
 
     public static Action<Runtime.TUserAssetResponse> RuntimeUserAssetUpdate = delegate { };
+    public static Action<Runtime.TQuizAnswerResultResponse> RuntimeQuizAnswerResult = delegate { };
 
     #endregion
 

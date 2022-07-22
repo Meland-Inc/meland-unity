@@ -1,7 +1,7 @@
 /*
  * @Author: mangit
- * @LastEditTime: 2022-07-05 14:00:52
- * @LastEditors: mangit
+ * @LastEditTime: 2022-07-21 19:46:12
+ * @LastEditors: wym
  * @Description: 背包界面
  * @Date: 2022-06-15 11:32:37
  * @FilePath: /Assets/Src/Module/Backpack/FormBackpack.cs
@@ -135,7 +135,7 @@ public class FormBackpack : FGUIForm
         {
             return;
         }
-        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(item, item.ItemData));
+        _ = UICenter.OpenUITooltip<TooltipNFTItem>(new TooltipInfo(item, new TooltipNFTItemParam() { ItemData = item.ItemData }));
     }
 
     private void OnTagClick(EventContext context)

@@ -22,6 +22,7 @@ namespace Runtime
                 return false;
             }
 
+            SceneModule.Recharge.Meld = rsp.TokenCount;
             SceneModule.Craft.SetMeldCount(rsp.TokenCount);
             return true;
         }

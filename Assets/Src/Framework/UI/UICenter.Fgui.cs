@@ -1,7 +1,7 @@
 /*
 * @Author: mangit
- * @LastEditTime: 2022-07-08 16:25:51
- * @LastEditors: mangit
+ * @LastEditTime: 2022-07-21 20:12:09
+ * @LastEditors: wym
 * @Description: fairygui 处理中心
 * @Date: 2022-06-16 20:48:53
  * @FilePath: /Assets/Src/Framework/UI/UICenter.Fgui.cs
@@ -19,13 +19,17 @@ public partial class UICenter
     {
         new (eFUIPackage.Backpack, FGUIDefine.NFT_ITEM_RES,typeof( BpNftItemRenderer)),
         new (eFUIPackage.Backpack, FGUIDefine.NFT_EQUIP_ITEM_RES,typeof( BpNftItemRenderer)),
+        new (eFUIPackage.Backpack, FGUIDefine.NFT_REWARD_ITEM_RES,typeof( RewardNftItemRenderer)),
         new (eFUIPackage.Backpack, FGUIDefine.EQUIPMENT_SLOT_RES,typeof( EquipmentSlot)),
         new (eFUIPackage.Common, FGUIDefine.UI_AVATAR_RES,typeof( ComUIAvatar)),
+        new (eFUIPackage.Common, FGUIDefine.COM_LABEL_CUR_MAX_RES,typeof( ComLabelCurMax)),
+        new (eFUIPackage.Task, FGUIDefine.TASK_MENU_ITEM_RES,typeof( TaskMenuItemRender)),
+        new (eFUIPackage.Task, FGUIDefine.TASK_TRACKER_ITEM_RES,typeof( TaskTrackerItemRender)),
+        new (eFUIPackage.Task, FGUIDefine.TASK_SUB_ITEM_RES,typeof( TaskSubItemRender)),
     };
 
     private readonly string[] _fontCfg = {
-        "SourceHanSansCN-Heavy.ttf",
-        "FangFang.ttf",
+        "HermanoAlto_Round.ttf"
     };
     public void InitFguiExtension()
     {

@@ -2,7 +2,7 @@ using GameFramework.Network;
 /// <summary>
 /// 渠道包
 /// </summary>
-/// <typeparam name="T">具体渠道的消息类型 例如Bian.Envelope</typeparam>
+/// <typeparam name="T">具体渠道的消息类型 例如MelandGame3.Envelope</typeparam>
 public abstract class ChannelPacket<T> : Packet where T : class
 {
     public T TransferData;

@@ -54,7 +54,7 @@ namespace MelandGame3 {
             "aWQYASABKAUSGQoRZXhfdHlwZV9ub3RfYnVpbGQYAiABKAUSGQoRZXhfY2lk",
             "c19ub3RfYnVpbGQYAyABKAkSEwoLZXhfdHlwZV9kZWwYBCABKAUSEwoLZXhf",
             "Y2lkc19kZWwYBSABKAkSFAoMZXhfdHlwZV9tb3ZlGAYgASgFEhQKDGV4X2Np",
-            "ZHNfbW92ZRgHIAEoCSLeEAoSQ29uZmlnRGF0YVNldHRpbmdzEjQKD3dpZGdl",
+            "ZHNfbW92ZRgHIAEoCSKsEAoSQ29uZmlnRGF0YVNldHRpbmdzEjQKD3dpZGdl",
             "dF9zZXR0aW5ncxgBIAMoCzIbLk1lbGFuZEdhbWUzLldpZGdldFNldHRpbmdz",
             "EjQKD29iamVjdF9zZXR0aW5ncxgCIAMoCzIbLk1lbGFuZEdhbWUzLk9iamVj",
             "dFNldHRpbmdzEjoKEW9ial9nZWFyX3NldHRpbmdzGAMgAygLMh8uTWVsYW5k",
@@ -83,26 +83,25 @@ namespace MelandGame3 {
             "KAsyHC5NZWxhbmRHYW1lMy5XZWF0aGVyU2V0dGluZ3MSNgoQYWNoaWV2ZV9z",
             "ZXR0aW5ncxgYIAMoCzIcLk1lbGFuZEdhbWUzLkFjaGlldmVTZXR0aW5ncxI5",
             "ChZtYWlsX3RlbXBsYXRlX3NldHRpbmdzGBkgAygLMhkuTWVsYW5kR2FtZTMu",
-            "TWFpbFRlbXBsYXRlEjAKDXRhc2tfc2V0dGluZ3MYGiADKAsyGS5NZWxhbmRH",
-            "YW1lMy5UYXNrU2V0dGluZ3MSOQoSY29uZGl0aW9uX3NldHRpbmdzGBsgAygL",
-            "Mh0uTWVsYW5kR2FtZTMuQ29uZGl0aW9uU2V0dGluZxIrCgtjZF9zZXR0aW5n",
-            "cxgcIAMoCzIWLk1lbGFuZEdhbWUzLkNkU2V0dGluZxIxCg5xdW90YV9zZXR0",
-            "aW5ncxgdIAMoCzIZLk1lbGFuZEdhbWUzLlF1b3RhU2V0dGluZxI5ChJtYW5v",
-            "cl9idXlfc2V0dGluZ3MYHiADKAsyHS5NZWxhbmRHYW1lMy5NYW5vckJ1eVNl",
-            "dHRpbmdzEjQKD2VudGl0eV9zZXR0aW5ncxgfIAMoCzIbLk1lbGFuZEdhbWUz",
-            "Lk9iamVjdFNldHRpbmdzEjYKEGR1bmdlb25fc2V0dGluZ3MYICADKAsyHC5N",
-            "ZWxhbmRHYW1lMy5EdW5nZW9uU2V0dGluZ3MSLAoLZHVuZ2Vvbl9tYXAYISAD",
-            "KAsyFy5NZWxhbmRHYW1lMy5EdW5nZW9uTWFwEjsKE2dhbWVfdmFsdWVfc2V0",
-            "dGluZ3MYIiADKAsyHi5NZWxhbmRHYW1lMy5HYW1lVmFsdWVTZXR0aW5ncxI2",
-            "ChBtb25zdGVyX3NldHRpbmdzGCMgAygLMhwuTWVsYW5kR2FtZTMuTW9uc3Rl",
-            "clNldHRpbmdzEjsKE3JhbmRvbV9tYXBfc2V0dGluZ3MYJCADKAsyHi5NZWxh",
-            "bmRHYW1lMy5SYW5kb21NYXBTZXR0aW5ncxIqCgdyZXNfdGFnGCUgASgLMhku",
-            "TWVsYW5kR2FtZTMuUmVzb3VyY2VzVGFnEkUKGGV4Y2x1c2lvbl9lbnRpdHlf",
-            "c2V0dGluZxgmIAMoCzIjLk1lbGFuZEdhbWUzLkV4Y2x1c2lvbkVudGl0eVNl",
-            "dHRpbmcSRAoYcGxhY2VhYmxlX3NraWxsX3NldHRpbmdzGCcgAygLMiIuTWVs",
-            "YW5kR2FtZTMuUGxhY2VhYmxlU2tpbGxTZXR0aW5nEjgKEml0ZW1fc2xvdF9z",
-            "ZXR0aW5ncxgoIAMoCzIcLk1lbGFuZEdhbWUzLkl0ZW1TbG90U2V0dGluZ2IG",
-            "cHJvdG8z"));
+            "TWFpbFRlbXBsYXRlEjkKEmNvbmRpdGlvbl9zZXR0aW5ncxgbIAMoCzIdLk1l",
+            "bGFuZEdhbWUzLkNvbmRpdGlvblNldHRpbmcSKwoLY2Rfc2V0dGluZ3MYHCAD",
+            "KAsyFi5NZWxhbmRHYW1lMy5DZFNldHRpbmcSMQoOcXVvdGFfc2V0dGluZ3MY",
+            "HSADKAsyGS5NZWxhbmRHYW1lMy5RdW90YVNldHRpbmcSOQoSbWFub3JfYnV5",
+            "X3NldHRpbmdzGB4gAygLMh0uTWVsYW5kR2FtZTMuTWFub3JCdXlTZXR0aW5n",
+            "cxI0Cg9lbnRpdHlfc2V0dGluZ3MYHyADKAsyGy5NZWxhbmRHYW1lMy5PYmpl",
+            "Y3RTZXR0aW5ncxI2ChBkdW5nZW9uX3NldHRpbmdzGCAgAygLMhwuTWVsYW5k",
+            "R2FtZTMuRHVuZ2VvblNldHRpbmdzEiwKC2R1bmdlb25fbWFwGCEgAygLMhcu",
+            "TWVsYW5kR2FtZTMuRHVuZ2Vvbk1hcBI7ChNnYW1lX3ZhbHVlX3NldHRpbmdz",
+            "GCIgAygLMh4uTWVsYW5kR2FtZTMuR2FtZVZhbHVlU2V0dGluZ3MSNgoQbW9u",
+            "c3Rlcl9zZXR0aW5ncxgjIAMoCzIcLk1lbGFuZEdhbWUzLk1vbnN0ZXJTZXR0",
+            "aW5ncxI7ChNyYW5kb21fbWFwX3NldHRpbmdzGCQgAygLMh4uTWVsYW5kR2Ft",
+            "ZTMuUmFuZG9tTWFwU2V0dGluZ3MSKgoHcmVzX3RhZxglIAEoCzIZLk1lbGFu",
+            "ZEdhbWUzLlJlc291cmNlc1RhZxJFChhleGNsdXNpb25fZW50aXR5X3NldHRp",
+            "bmcYJiADKAsyIy5NZWxhbmRHYW1lMy5FeGNsdXNpb25FbnRpdHlTZXR0aW5n",
+            "EkQKGHBsYWNlYWJsZV9za2lsbF9zZXR0aW5ncxgnIAMoCzIiLk1lbGFuZEdh",
+            "bWUzLlBsYWNlYWJsZVNraWxsU2V0dGluZxI4ChJpdGVtX3Nsb3Rfc2V0dGlu",
+            "Z3MYKCADKAsyHC5NZWxhbmRHYW1lMy5JdGVtU2xvdFNldHRpbmdiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MelandGame3.ModelReflection.Descriptor, global::MelandGame3.FallingObjectReflection.Descriptor, global::MelandGame3.BuffReflection.Descriptor, global::MelandGame3.SkillReflection.Descriptor, global::MelandGame3.ResourcePointReflection.Descriptor, global::MelandGame3.AstReflection.Descriptor, global::MelandGame3.ConditionReflection.Descriptor, global::MelandGame3.CdReflection.Descriptor, global::MelandGame3.QuotaReflection.Descriptor, global::MelandGame3.MonsterReflection.Descriptor, global::MelandGame3.WidgetReflection.Descriptor, global::MelandGame3.RandomMapReflection.Descriptor, global::MelandGame3.BigWorldReflection.Descriptor, global::MelandGame3.ItemSlotReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,7 +114,7 @@ namespace MelandGame3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.CodeResource), global::MelandGame3.CodeResource.Parser, new[]{ "CodeCid", "Category", "CanIndex", "CanIndexType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ResourcesTag), global::MelandGame3.ResourcesTag.Parser, new[]{ "TarCodeRes", "TarWidgetType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ExclusionEntitySetting), global::MelandGame3.ExclusionEntitySetting.Parser, new[]{ "Cid", "ExTypeNotBuild", "ExCidsNotBuild", "ExTypeDel", "ExCidsDel", "ExTypeMove", "ExCidsMove" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ConfigDataSettings), global::MelandGame3.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "SpecialBuildSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "TaskSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings", "ItemSlotSettings" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MelandGame3.ConfigDataSettings), global::MelandGame3.ConfigDataSettings.Parser, new[]{ "WidgetSettings", "ObjectSettings", "ObjGearSettings", "FllingObjRecipets", "BotSettings", "BotLevelSettings", "BuffSettings", "SkillSettings", "NpcSettings", "ResourcePointSettings", "CodeSettings", "CodeLibSettings", "PlayerLevelSettings", "RoleSettings", "ChatSettings", "SpecialBuildSettings", "SpawnPointSettings", "ConsumableItemSettings", "RewardSettings", "SceneWeatherSettings", "WeatherSettingsList", "AchieveSettings", "MailTemplateSettings", "ConditionSettings", "CdSettings", "QuotaSettings", "ManorBuySettings", "EntitySettings", "DungeonSettings", "DungeonMap", "GameValueSettings", "MonsterSettings", "RandomMapSettings", "ResTag", "ExclusionEntitySetting", "PlaceableSkillSettings", "ItemSlotSettings" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3224,7 +3223,6 @@ namespace MelandGame3 {
       weatherSettingsList_ = other.weatherSettingsList_.Clone();
       achieveSettings_ = other.achieveSettings_.Clone();
       mailTemplateSettings_ = other.mailTemplateSettings_.Clone();
-      taskSettings_ = other.taskSettings_.Clone();
       conditionSettings_ = other.conditionSettings_.Clone();
       cdSettings_ = other.cdSettings_.Clone();
       quotaSettings_ = other.quotaSettings_.Clone();
@@ -3504,17 +3502,6 @@ namespace MelandGame3 {
       get { return mailTemplateSettings_; }
     }
 
-    /// <summary>Field number for the "task_settings" field.</summary>
-    public const int TaskSettingsFieldNumber = 26;
-    private static readonly pb::FieldCodec<global::MelandGame3.TaskSettings> _repeated_taskSettings_codec
-        = pb::FieldCodec.ForMessage(210, global::MelandGame3.TaskSettings.Parser);
-    private readonly pbc::RepeatedField<global::MelandGame3.TaskSettings> taskSettings_ = new pbc::RepeatedField<global::MelandGame3.TaskSettings>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::MelandGame3.TaskSettings> TaskSettings {
-      get { return taskSettings_; }
-    }
-
     /// <summary>Field number for the "condition_settings" field.</summary>
     public const int ConditionSettingsFieldNumber = 27;
     private static readonly pb::FieldCodec<global::MelandGame3.ConditionSetting> _repeated_conditionSettings_codec
@@ -3708,7 +3695,6 @@ namespace MelandGame3 {
       if(!weatherSettingsList_.Equals(other.weatherSettingsList_)) return false;
       if(!achieveSettings_.Equals(other.achieveSettings_)) return false;
       if(!mailTemplateSettings_.Equals(other.mailTemplateSettings_)) return false;
-      if(!taskSettings_.Equals(other.taskSettings_)) return false;
       if(!conditionSettings_.Equals(other.conditionSettings_)) return false;
       if(!cdSettings_.Equals(other.cdSettings_)) return false;
       if(!quotaSettings_.Equals(other.quotaSettings_)) return false;
@@ -3753,7 +3739,6 @@ namespace MelandGame3 {
       hash ^= weatherSettingsList_.GetHashCode();
       hash ^= achieveSettings_.GetHashCode();
       hash ^= mailTemplateSettings_.GetHashCode();
-      hash ^= taskSettings_.GetHashCode();
       hash ^= conditionSettings_.GetHashCode();
       hash ^= cdSettings_.GetHashCode();
       hash ^= quotaSettings_.GetHashCode();
@@ -3809,7 +3794,6 @@ namespace MelandGame3 {
       weatherSettingsList_.WriteTo(output, _repeated_weatherSettingsList_codec);
       achieveSettings_.WriteTo(output, _repeated_achieveSettings_codec);
       mailTemplateSettings_.WriteTo(output, _repeated_mailTemplateSettings_codec);
-      taskSettings_.WriteTo(output, _repeated_taskSettings_codec);
       conditionSettings_.WriteTo(output, _repeated_conditionSettings_codec);
       cdSettings_.WriteTo(output, _repeated_cdSettings_codec);
       quotaSettings_.WriteTo(output, _repeated_quotaSettings_codec);
@@ -3860,7 +3844,6 @@ namespace MelandGame3 {
       weatherSettingsList_.WriteTo(ref output, _repeated_weatherSettingsList_codec);
       achieveSettings_.WriteTo(ref output, _repeated_achieveSettings_codec);
       mailTemplateSettings_.WriteTo(ref output, _repeated_mailTemplateSettings_codec);
-      taskSettings_.WriteTo(ref output, _repeated_taskSettings_codec);
       conditionSettings_.WriteTo(ref output, _repeated_conditionSettings_codec);
       cdSettings_.WriteTo(ref output, _repeated_cdSettings_codec);
       quotaSettings_.WriteTo(ref output, _repeated_quotaSettings_codec);
@@ -3911,7 +3894,6 @@ namespace MelandGame3 {
       size += weatherSettingsList_.CalculateSize(_repeated_weatherSettingsList_codec);
       size += achieveSettings_.CalculateSize(_repeated_achieveSettings_codec);
       size += mailTemplateSettings_.CalculateSize(_repeated_mailTemplateSettings_codec);
-      size += taskSettings_.CalculateSize(_repeated_taskSettings_codec);
       size += conditionSettings_.CalculateSize(_repeated_conditionSettings_codec);
       size += cdSettings_.CalculateSize(_repeated_cdSettings_codec);
       size += quotaSettings_.CalculateSize(_repeated_quotaSettings_codec);
@@ -3963,7 +3945,6 @@ namespace MelandGame3 {
       weatherSettingsList_.Add(other.weatherSettingsList_);
       achieveSettings_.Add(other.achieveSettings_);
       mailTemplateSettings_.Add(other.mailTemplateSettings_);
-      taskSettings_.Add(other.taskSettings_);
       conditionSettings_.Add(other.conditionSettings_);
       cdSettings_.Add(other.cdSettings_);
       quotaSettings_.Add(other.quotaSettings_);
@@ -4088,10 +4069,6 @@ namespace MelandGame3 {
           }
           case 202: {
             mailTemplateSettings_.AddEntriesFrom(input, _repeated_mailTemplateSettings_codec);
-            break;
-          }
-          case 210: {
-            taskSettings_.AddEntriesFrom(input, _repeated_taskSettings_codec);
             break;
           }
           case 218: {
@@ -4258,10 +4235,6 @@ namespace MelandGame3 {
           }
           case 202: {
             mailTemplateSettings_.AddEntriesFrom(ref input, _repeated_mailTemplateSettings_codec);
-            break;
-          }
-          case 210: {
-            taskSettings_.AddEntriesFrom(ref input, _repeated_taskSettings_codec);
             break;
           }
           case 218: {

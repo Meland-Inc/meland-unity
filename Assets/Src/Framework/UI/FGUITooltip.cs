@@ -1,6 +1,6 @@
 /*
  * @Author: mangit
- * @LastEditors: mangit
+ * @LastEditors: wym
  * @Description: tooltip
  * @Date: 2022-06-22 14:25:03
  * @FilePath: /Assets/Src/Framework/UI/FGUITooltip.cs
@@ -99,6 +99,10 @@ public class FGUITooltip : FGUIBase
 
     private void OnRootClick()
     {
-        Close();
+        if (TooltipInfo.IsTouchRootClose)
+        {
+            Close();
+        }
+
     }
 }

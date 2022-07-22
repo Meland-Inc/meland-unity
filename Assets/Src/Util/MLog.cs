@@ -26,6 +26,7 @@ public enum eLogTag
     craft,
     recharge,
     move,
+    hud, //场景UI
 }
 
 /// <summary>

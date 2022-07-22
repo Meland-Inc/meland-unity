@@ -21,6 +21,8 @@ public class BasicModule : MonoBehaviour
     public static RuntimeGameCenter RuntimeGameCenter;
     public static TerritoryCenter TerritoryCenter;
 
+    public static HUDCenter HUDCenter;
+
     private void Start()
     {
         NetMsgCenter = GameEntry.GetComponent<NetMessageCenter>();
@@ -29,5 +31,6 @@ public class BasicModule : MonoBehaviour
         RuntimeGameCenter = GameEntry.GetComponent<RuntimeGameCenter>();
         Asset = GameEntry.GetComponent<AssetLoader>();
         TerritoryCenter = GameEntry.GetComponent<TerritoryCenter>();
+        HUDCenter = GameEntry.GetComponent<HUDCenter>();
     }
 }

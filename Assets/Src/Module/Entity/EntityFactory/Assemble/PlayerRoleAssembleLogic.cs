@@ -8,5 +8,6 @@ public class PlayerRoleAssembleLogic : IEntityTypeAssembleLogic
         _ = entity.AddComponent<NetInputMove>();
         _ = entity.AddComponent<PlayerRoleSvrDataProcess>();
         _ = entity.AddComponent<EntityMoveData>();
+        _ = entity.AddComponent<EntityHeadInfoCpt>();
     }
 }

@@ -2,7 +2,7 @@
  * @Author: xiang huan
  * @Date: 2022-06-14 14:11:43
  * @Description: spine动画组件
- * @FilePath: /meland-unity/Assets/Src/Module/Animation/SpineAnimationCpt.cs
+ * @FilePath: /Assets/Src/Module/Animation/SpineAnimationCpt.cs
  * 
  */
 using System.Collections.Generic;
@@ -86,7 +86,7 @@ public class SpineAnimationCpt : UnityEngine.MonoBehaviour, IAnimationCpt
 
     public void PlayAnimQueued(string animationName, bool loop = false, float timeScale = 1f, float delay = 0f)
     {
-        PlayAnimQueued(DEFAULT_TRACK_INDEX, animationName, loop, delay, timeScale);
+        PlayAnimQueued(DEFAULT_TRACK_INDEX, animationName, loop, timeScale, delay);
     }
     public void PlayAnimQueued(int trackIndex, string animationName, bool loop = false, float timeScale = 1f, float delay = 0f)
     {

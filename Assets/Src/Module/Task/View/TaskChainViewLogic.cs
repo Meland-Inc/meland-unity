@@ -7,7 +7,6 @@ using FairyGUI;
 public class TaskChainViewLogic : FGUILogicCpt
 {
     private TaskChainData _taskChainData;
-    private TaskDefine.eTaskChainState _chainState;
     private GButton _btnBox;
     private Controller _ctrBtnBoxState;
     private Controller _ctrShow;
@@ -29,8 +28,8 @@ public class TaskChainViewLogic : FGUILogicCpt
 
         _ctrShow = GCom.GetController("ctrShow");
         _progressBar = GCom.GetChild("progress") as GProgressBar;
-        _transLittleRock = GCom.GetTransition("littleRock");
-        _transBigRock = GCom.GetTransition("bigRock");
+        _transLittleRock = _btnBox.GetTransition("littleRock");
+        _transBigRock = _btnBox.GetTransition("bigRock");
     }
 
     public override void OnOpen()
@@ -65,7 +64,6 @@ public class TaskChainViewLogic : FGUILogicCpt
             return;
         }
         _taskChainData = taskChainData;
-        _chainState = _taskChainData.TaskChainState;
 
         checkFrameTimer();
         OnUpdateTimeUI(0);
@@ -75,7 +73,7 @@ public class TaskChainViewLogic : FGUILogicCpt
     private void checkFrameTimer()
     {
         Message.OnEnterFrame -= OnFrameTimer;
-        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == MelandGame3.TaskListType.TaskListTypeDaily)
+        if (_taskChainData.TaskChainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == MelandGame3.TaskListType.TaskListTypeDaily)
         {
             Message.OnEnterFrame += OnFrameTimer;
         }
@@ -83,14 +81,15 @@ public class TaskChainViewLogic : FGUILogicCpt
 
     private void onBtnBoxClick(EventContext context)
     {
+        StopRock();
         // 可领取 请求领取
-        if (_chainState == TaskDefine.eTaskChainState.AVAILABLE)
+        if (_taskChainData.TaskChainState == TaskDefine.eTaskChainState.AVAILABLE)
         {
             TaskChainRewardReceiveAction.Req(_taskChainData.TaskChainKind);
             return;
         }
         // 正在进行 弹框展示奖励
-        if (_chainState == TaskDefine.eTaskChainState.ONDOING)
+        if (_taskChainData.TaskChainState == TaskDefine.eTaskChainState.ONDOING)
         {
             DRLanguage dRLanguage = GFEntry.DataTable.GetDataTable<DRLanguage>().GetDataRow(10090018);
             string content = dRLanguage != null ? dRLanguage.Value : "";
@@ -103,7 +102,7 @@ public class TaskChainViewLogic : FGUILogicCpt
     private void OnUpdateUI()
     {
         // show or hide
-        if (_chainState == TaskDefine.eTaskChainState.NONE)
+        if (_taskChainData.TaskChainState == TaskDefine.eTaskChainState.NONE)
         {
             _ctrShow.selectedPage = "false";
             return;
@@ -114,18 +113,28 @@ public class TaskChainViewLogic : FGUILogicCpt
         _progressBar.max = _taskChainData.MaxTaskChainRate;
         _progressBar.value = _taskChainData.CurTaskChainRate;
         // 宝箱展示样式
-        _ctrBtnBoxState.selectedIndex = (int)_chainState;
+        _ctrBtnBoxState.selectedIndex = (int)_taskChainData.TaskChainState;
 
+        PlayRock();
+    }
+
+    public void PlayRock()
+    {
+        StopRock();
+        if (_taskChainData.TaskChainState == TaskDefine.eTaskChainState.ONDOING)
+        {
+            _transLittleRock.Play(-1, 2f, null);
+        }
+        else if (_taskChainData.TaskChainState == TaskDefine.eTaskChainState.AVAILABLE)
+        {
+            _transBigRock.Play(-1, 2f, null);
+        }
+    }
+
+    public void StopRock()
+    {
         _transLittleRock.Stop();
         _transBigRock.Stop();
-        if (_chainState == TaskDefine.eTaskChainState.ONDOING)
-        {
-            _transLittleRock.Play(-1, 0.2f, null);
-        }
-        else if (_chainState == TaskDefine.eTaskChainState.AVAILABLE)
-        {
-            _transBigRock.Play(-1, 0.2f, null);
-        }
     }
 
     private void OnFrameTimer(float deltaTime)
@@ -152,7 +161,7 @@ public class TaskChainViewLogic : FGUILogicCpt
             return;
         }
         // 宝箱展示倒计时
-        if (_chainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == MelandGame3.TaskListType.TaskListTypeDaily)
+        if (_taskChainData.TaskChainState == TaskDefine.eTaskChainState.ONDOING && _taskChainData.TaskChainKind == MelandGame3.TaskListType.TaskListTypeDaily)
         {
             _tfTime.text = TimeUtil.SecondsToHMS(seconds);
             return;

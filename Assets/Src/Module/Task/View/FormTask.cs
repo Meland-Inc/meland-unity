@@ -89,6 +89,7 @@ public class FormTask : FGUIForm
         // render.SetSelected(true);
         _curSelectedTaskChain = render.TaskChainData;
         OnUpdateUI();
+        // _taskChainViewLogic.PlayRock();
     }
 
     private void OnUpdateUI()

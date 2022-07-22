@@ -2,10 +2,6 @@ using UnityEngine;
 
 public class MainRoleEntity : SceneEntity
 {
-    public MainRoleEntity() : base()
-    {
-        AddComponent<NetReqMove>().enabled = false;
-    }
     protected override void InitRoot()
     {
         //为了能和美术场景预览使用同一个预制件脚本配置 空物体主角的放在resource下当做配置同步加载上来

@@ -11,12 +11,10 @@ using UnityEngine;
 /// <summary>
 /// 玩家服务器数据处理 包括主角和其他玩家
 /// </summary>
-public class PlayerRoleSvrDataProcess : RoleSvrDataProcess
+public class PlayerRoleSvrDataProcess : EntitySvrDataProcess
 {
     public override void SvrDataInit(SceneEntity sceneEntity, EntityWithLocation svrEntity)
     {
-        base.SvrDataInit(sceneEntity, svrEntity);
-
         Player svrPlayer = svrEntity.Player;
 
         if (Mathf.Approximately(svrPlayer.Profile.MoveSpeed, 0f))

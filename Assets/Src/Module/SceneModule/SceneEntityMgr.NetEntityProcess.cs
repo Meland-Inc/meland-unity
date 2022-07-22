@@ -42,7 +42,7 @@ public partial class SceneEntityMgr : EntityMgr<SceneEntity, SceneEntityFactory>
         {
             if (svrEntity.Type is not EntityType.EntityTypePlayer and not EntityType.EntityTypeMonster)
             {
-                MLog.Warning(eLogTag.entity, $"should not update not sync entity,type:{svrEntity.Type}");
+                // MLog.Warning(eLogTag.entity, $"should not update not sync entity,type:{svrEntity.Type}");
                 continue;
             }
 
@@ -72,7 +72,7 @@ public partial class SceneEntityMgr : EntityMgr<SceneEntity, SceneEntityFactory>
         {
             if (idInfo.Type is not EntityType.EntityTypePlayer and not EntityType.EntityTypeMonster)
             {
-                MLog.Warning(eLogTag.entity, $"should not remove not sync entity,type:{idInfo.Type}");
+                // MLog.Warning(eLogTag.entity, $"should not remove not sync entity,type:{idInfo.Type}");
                 continue;
             }
 
